@@ -1,0 +1,65 @@
+.logo {
+    width: 162px;
+    height: auto;
+}
+.persistence .navbar-light .navbar-nav .nav-link{
+    color: #fff;
+    padding: 26px 0;
+    margin: 0 10px;
+}
+.persistence .nav_align {
+    width: 100%;
+    justify-content: flex-end;
+}
+.persistence .navbar {
+    padding: 0 0;
+}
+.row_height {
+    margin-top: 5%;
+}
+.nav_align li {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.persistence .navbar-light .navbar-toggler-icon {
+    background-image: url(../../assets/hamberger.svg);
+}
+.nav-item .social_icons{
+    padding: 26px 0;
+}
+.nav-item .social_icons li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.nav-item .social_icons  li a{
+    color:#ccc;
+}
+.social_icons li a:hover, .social_icons li a:active {
+    color: #ff214f;
+    text-decoration: none;
+}
+
+
+@media (max-width: 767px){
+
+.persistence .nav_align { 
+    backface-visibility: hidden;
+    background-color: rgba(23, 23, 23, 0.95);
+    position: relative;
+    top: 20px;
+}
+.persistence .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    padding: 10px 10px;
+    margin: 0 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.logo {
+    width: 162px;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+}

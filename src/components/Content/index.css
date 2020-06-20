@@ -1,0 +1,53 @@
+.head_title {
+    padding-top: 75px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    visibility: visible;
+    animation-name: fadeIn;
+}
+.sub_title {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 18px;
+}
+.sub_title span {
+    color: #e50913;
+}
+.head_sub_title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+}
+.head_sub_title span {
+    color: #e50913;
+    font-weight: 300;
+}
+.aside_img {
+    max-width: 100%;
+}
+.content_section {
+    height: 100vh;
+}
+
+.button:focus {
+    outline: 0px dotted !important;
+    outline: 0px auto -webkit-focus-ring-color !important;
+  }
+
+
+  @media (max-width: 767px){
+    .sub_title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .content_section {
+        height: auto;
+    }
+    .head_title {
+        text-align: center;
+    }
+    }
