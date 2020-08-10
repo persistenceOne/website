@@ -61,7 +61,7 @@ class Team extends React.Component {
 
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
                                     <ul className="nav navbar-nav navbar-left">
-
+  
                                         <li>
 
                                             <div className="header-buttons">

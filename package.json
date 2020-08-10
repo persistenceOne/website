@@ -1,7 +1,7 @@
 {
   "name": "Persistence",
   "version": "0.1.0",
-  "homepage": "https://persistence.one/",
+  "homepage": "https://persistence.one/", 
   "private": true,
   "dependencies": {
     "@mdi/font": "^5.4.55",

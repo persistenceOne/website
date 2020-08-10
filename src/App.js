@@ -17,7 +17,7 @@ class App extends Component {
             <Route exact path="/" component={homepage} />
             <Route path="/team" component={Team} />
             <Route path="/content" component={AppContainer} />
-          </Switch>
+          </Switch>   
         </React.Suspense>
       </Router>
     );
