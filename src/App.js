@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, BrowserRouter as Router, HashRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import './css/style.css';
 import './App.css';
 const Team = React.lazy(() => import('./webpages/components/team'));
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
 
     return (
-      <HashRouter>
+      <Router>
         <React.Suspense fallback={<div>&nbsp;</div>}>
           <Switch>
             <Route exact path="/" component={homepage} />
@@ -19,7 +19,7 @@ class App extends Component {
             <Route path="/content" component={AppContainer} />
           </Switch>
         </React.Suspense>
-      </HashRouter>
+      </Router>
     );
   }
 }
