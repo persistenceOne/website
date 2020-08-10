@@ -1,14 +1,7 @@
 .App {
   text-align: center;
 }
-body {
-  font-family: 'Montserrat', sans-serif!important;
-}
 
-.button:focus {
-  outline: 0px dotted !important;
-  outline: 0px auto -webkit-focus-ring-color !important;
-}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
