@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollspyNav from "react-scrollspy-nav";
 import logo from '../../assets/logo.png'
-// import NavDropdown from 'react-bootstrap/NavDropdown'
+
 
 class Header extends Component {
 
@@ -59,15 +59,6 @@ class Header extends Component {
                                     <li className="nav-item"><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</a></li>
                                     <li className="nav-item"> <Link className="nav-link" to="team">Team</Link></li>
                                     <li className="nav-item"> <Link className="nav-link" to="roadmap">Roadmap</Link></li>
-                                    {/* <li class="nav-item dropdown">
-                                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-        </li> */}
                                 </ul>
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
                                     <ul className="nav navbar-nav navbar-left">
