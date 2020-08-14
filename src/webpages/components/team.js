@@ -53,10 +53,11 @@ class Team extends React.Component {
 
                                 <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
                                     <li className="nav-item active"><Link className="nav-link" to="/">Products</Link></li>
-                                    <li className="nav-item"><Link className="nav-link" to="/">Use cases</Link></li>
+                                    <li className="nav-item"><Link className="nav-link" to="/" data-target="#useCases">Use cases</Link></li>
                                     <li className="nav-item"><Link className="nav-link" to="/">Validators</Link></li>
                                     <li className="nav-item"><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</a></li>
                                     <li className="nav-item"> <Link className="nav-link" to="team">Team</Link></li>
+                                    <li className="nav-item"> <Link className="nav-link" to="roadmap">Roadmap</Link></li>
                                 </ul>
 
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
@@ -109,10 +110,8 @@ class Team extends React.Component {
                                         </div>
                                         <div className="margin-l-40 margin-left-xs">
                                             <p className="profile-name">Tushar Aggarwal</p>
-                                            <p className="designation-name">CEO, Persistence</p>
-                                            <p className="company-name"> Tushar helped to set up LuneX Ventures - first regulated Crypto VC fund in Southeast Asia
-                                            (Crypto arm of a ’Traditional’ Singapore VC called Golden Gate Ventures).
-                                            Written extensively on Blockchain/Crypto on Tech in Asia and previously host of Decrypt Asia Podcast
+                                            <p className="designation-name name-xs">CEO, Persistence</p>
+                                            <p className="company-name">Tushar helped to set up LuneX Ventures - Southeast Asia's first regulated Crypto VC fund (Crypto arm of a ’Traditional’ Singapore VC called Golden Gate Ventures). He has also written extensively on Blockchain/Crypto on Tech in Asia and was previously the host of Decrypt Asia Podcast
                                     </p>
                                         </div>
 
@@ -127,10 +126,8 @@ class Team extends React.Component {
                                         </div>
                                         <div className="margin-l-40 margin-left-xs">
                                             <p className="profile-name">Deepanshu Tripati</p>
-                                            <p className="designation-name">CTO, Persistence</p>
-                                            <p className="company-name">
-                                                Part of a three-person team to create a unified payment acceptance platform. White-labeled to Reliance (invested by Facebook, etc) eventually sold to African Fintech for $9M USD. Performed world’s first ever Inter-Blockchain NFT transfer
-                                    </p>
+                                            <p className="designation-name name-xs">CTO, Persistence</p>
+                                            <p className="company-name">Part of a three-person team to create a unified payment acceptance platform. White-labeled to Reliance (invested by Facebook, etc) eventually sold to African Fintech for $9M USD. Executed world’s first ever Inter-Blockchain NFT transfer</p>
                                         </div>
 
                                     </div>

@@ -28,7 +28,7 @@ class Products extends Component {
                         <div className="row media-blocks">
                             <div className="col-lg-7">
                                 <div className="row">
-                                    <div class="margin-t-20 col-lg-6 media-block first-div"><div class="services-list"><div class="media">
+                                    <div class="margin-t-20 col-md-6 col-lg-6 media-block first-div"><div class="services-list"><div class="media">
                                         <div class="media-body">
                                             <h5>30M+</h5>
                                             <p>Transaction Volume</p>
@@ -36,20 +36,20 @@ class Products extends Component {
                                     </div>
                                     </div>
                                     </div>
-                                    <div class="margin-t-20 col-lg-6 media-block first-div"><div class="services-list"><div class="media">
+                                    <div class="margin-t-20 col-md-6 col-lg-6 media-block first-div"><div class="services-list"><div class="media">
                                         <div class="media-body "><h5>10+</h5>
                                             <p>Trading Organizations</p>
                                         </div></div></div></div>
-                                    <div class="margin-t-20 col-lg-6 media-block"><div class="services-list"><div class="media">
+                                    <div class="margin-t-20 col-md-6 col-lg-6 media-block"><div class="services-list"><div class="media">
                                         <div class="media-body"><h5>30+</h5>
                                             <p>Institutional Traders</p>
                                         </div></div></div></div>
-                                    <div class="margin-t-20 col-lg-6 media-block"><div class="services-list"><div class="media">
+                                    <div class="margin-t-20 col-md-6 col-lg-6 media-block"><div class="services-list"><div class="media">
                                         <div class="media-body"><h5>$200M+</h5>
                                             <p>Projected Volume</p></div></div></div></div>
                                 </div>
                             </div>
-                            <div className="map-section col-lg-5">
+                            <div className="map-section col-md-12 col-lg-5">
                                 <img src={map} alt="map" title="map"></img>
                             </div>
 
