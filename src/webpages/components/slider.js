@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Col } from 'reactstrap';
-import layer from '../../assets/Layer.svg'
-import layer1 from '../../assets/Layer01.png'
-import layer2 from '../../assets/Layer02.png'
-import layer3 from '../../assets/Layer03.png'
+import Animate from '../components/animate';
 import {
     Carousel,
     CarouselItem,
@@ -12,33 +9,47 @@ import {
     CarouselCaption
 } from 'reactstrap';
 
-const items = [
-    {
-        src: layer,
-        altText: 'Slide 1',
-        caption: 'The Persistence technology stack is a full suite of products covering the end-to-end journey of facilitating borrowing of cryptoassets using real-world assets as collateral and removes all complexities of using Public Blockchains to allow for easier institutional adoption while catering to easy use for crypto-native users'
-
-    },
-    {
-        src: layer1,
-        altText: 'Slide 2',
-        caption: 'The Persistence dApp is a crypto user-facing dApp to aggregate liquidity from crypto investors/lenders.',
-        caption2: 'The Comdex dApp Is an institutional user-facing dApp that aggregates liquidity from institutional investors/lenders and has facilitated $30 Million worth of transactions'
-
-    },
-    {
-        src: layer2,
-        altText: 'Slide 3',
-        caption: 'The Persistence SDK contains the building blocks (modules) for Asset Tokenization, Decentralized Exchange of Assets and Financing against real-world assets as collateral'
-    },
-    {
-        src: layer3,
-        altText: 'Slide 4',
-        caption: 'The Persistence chain is a natively interoperable chain that facilitates auditable, verifiable logging of information'
-    }
-];
-
 const Slider = (props) => {
+
+    const [selectedCaption, setSelectedCaption] = useState('caption');
+    const items = [
+        {
+            animate: <Animate selectedCaption={selectedCaption} enter={(caption) => onEnter.bind(this, caption)} leave={(caption) => onLeave.bind(this, caption)} />,
+            altText: 'Slide 1',
+            caption: 'The Persistence technology stack is a full suite of products covering the end-to-end journey of facilitating borrowing of cryptoassets using real-world assets as collateral and removes all complexities of using Public Blockchains to allow for easier institutional adoption while catering to easy use for crypto-native users',
+            caption1: 'The Comdex dApp Is an institutional user-facing dApp that aggregates liquidity from institutional investors/lenders and has facilitated $30 Million worth of transactions',
+            caption2: 'The Persistence dApp is a crypto user-facing dApp to aggregate liquidity from crypto investors/lenders.',
+            caption3: 'The Persistence SDK contains the building blocks (modules) for Asset Tokenization, Decentralized Exchange of Assets and Financing against real-world assets as collateral',
+            caption4: 'The Persistence chain is a natively interoperable chain that facilitates auditable, verifiable logging of information',
+
+        }
+        // ,
+        // {
+        //     src: layer1,
+        //     altText: 'Slide 2',
+        //     caption: 'The Persistence dApp is a crypto user-facing dApp to aggregate liquidity from crypto investors/lenders.',
+        //     comdexCap: 'The Comdex dApp Is an institutional user-facing dApp that aggregates liquidity from institutional investors/lenders and has facilitated $30 Million worth of transactions'
+
+        // },
+        // {
+        //     src: layer2,
+        //     altText: 'Slide 3',
+        //     caption: 'The Persistence SDK contains the building blocks (modules) for Asset Tokenization, Decentralized Exchange of Assets and Financing against real-world assets as collateral'
+        // },
+        // {
+        //     src: layer3,
+        //     altText: 'Slide 4',
+        //     caption: 'The Persistence chain is a natively interoperable chain that facilitates auditable, verifiable logging of information'
+        // }
+    ];
+
+    const onEnter = (caption) => {
+        console.log('onenter')
+        setSelectedCaption(caption);
+    }
+    const onLeave = (caption) => {
+        setSelectedCaption('caption');
+    }
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -59,23 +70,22 @@ const Slider = (props) => {
         setActiveIndex(newIndex);
     }
 
-    const slides = items.map((item) => {
+    const slides = items.map((item, index) => {
         return (
-            <CarouselItem
+            <CarouselItem key={index}
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
-                key={item.src}
+            // key={item.src}
             ><div className="row">
                     <div className="col-lg-6">
-                        <Col lg="12" className="slider-title"><CarouselCaption captionText={item.caption} /></Col>
-                        <Col lg="12" className="slider-title2"><CarouselCaption captionText={item.caption2} /></Col>
+                        <Col lg="12" className="slider-title" ><CarouselCaption captionText={item[selectedCaption]} /></Col>
+                        <Col lg="12" className="persistence-caption"><CarouselCaption captionText={item.persistenceCaption} /></Col>
+                        <Col lg="12" className="slider-title2"><CarouselCaption captionText={item.comdexCap} /></Col>
                     </div>
                     <div className="col-lg-6">
-                        <Col lg="12" className="slider-width"><img src={item.src} alt={item.altText} /></Col>
+                        <Col lg="12" className="slider-width"><span>{item.animate}</span></Col>
                     </div>
                 </div>
-
-
             </CarouselItem>
         );
     });
@@ -86,10 +96,10 @@ const Slider = (props) => {
             next={next}
             previous={previous}
         >
-            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+            {/* <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} /> */}
             {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+            {/* <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={next} /> */}
         </Carousel >
     );
 

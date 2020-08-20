@@ -6,7 +6,7 @@ class mailChimp extends Component {
   render() {
     return (
         <Mailchimp
-        action='#' 
+        action='https://one.us17.list-manage.com/subscribe/post?u=fd70c7f5c39a43acbedb49253&amp;id=7f8e2dbc48' 
         
         //Adding multiple fields:
         fields={[

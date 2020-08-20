@@ -21,6 +21,10 @@ a {
   color: #fff;
 }
 
+.dropdown-menu {
+  background-color: #2C2C2C;
+}
+
 .form-control:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
@@ -111,8 +115,10 @@ input:focus {
 
 .media-blocks .map-section img {
   width: 100%;
-  height: 100%;
-  padding-top: 15px;
+  height: auto;
+  margin-top: 10px;
+  -webkit-box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.06);
 }
 
 /*---Navbar---*/
@@ -166,6 +172,10 @@ input:focus {
 
 .navbar-custom .navbar-nav li a:active {
   color: #fff;
+}
+
+.navbar-custom .navbar-nav a.nav-link-custom {
+  margin-left: 25px;
 }
 
 .navbar-custom .navbar-nav li.active a {
@@ -318,6 +328,11 @@ input:focus {
   color: #D4D4D4;
 }
 
+.section-slider .main-svg .pflow, .section-slider .main-svg .pflow-1 {
+  fill: #222020;
+  stroke: #d03239;
+}
+
 .section-slider .slider-width {
   text-align: center;
 }
@@ -386,6 +401,7 @@ input:focus {
 
 .section-products .section-subtitle {
   margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .section-products .comdex-section .comdex-button {
@@ -412,13 +428,15 @@ input:focus {
 }
 
 .section-products .media-blocks .media-block {
-  margin-top: 15px;
+  margin-top: 10px;
+  padding: 0;
+  padding-right: 10px;
 }
 
 .section-products .media-blocks .media-block .services-list {
   -webkit-box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.06);
           box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.06);
-  padding: 25px 30px;
+  padding: 21px 30px;
   position: relative;
   z-index: 2;
   text-align: center;
@@ -440,6 +458,7 @@ input:focus {
   text-align: center;
   border-radius: 2px;
   margin-top: 0;
+  padding-left: 0;
 }
 
 .section-products .map-section img {
@@ -468,11 +487,19 @@ input:focus {
   color: #575757;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.section-1 .first-section-social-icons li.whitepaper:hover {
+  color: #E50913;
+}
+
+.section-1 .first-section-social-icons li.whitepaper:hover .icon {
+  fill: #E50913;
 }
 
 .section-1 .first-section-social-icons li.whitepaper span {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .section-1 .first-section-social-icons a:hover li .icon {
@@ -491,12 +518,12 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 40px;
+  width: 35px;
   background: #1E1E1E;
-  height: 40px;
-  padding: 15px;
+  height: 35px;
+  padding: 10px;
   border-radius: 50%;
-  margin: 0px 15px;
+  margin: 0px 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -762,6 +789,14 @@ input:focus {
   font-size: 18px;
   font-weight: 500;
   color: #D4D4D4;
+}
+
+.papp-color {
+  fill: #222020;
+}
+
+.slider-width .custom-icon .icon {
+  width: auto;
 }
 
 .roadmap-section {
@@ -1446,7 +1481,15 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 50px;
+}
+
+.adviser-section .proileContainer .profile-picture {
+  text-align: left;
 }
 
 .adviser-section .proileContainer .profile-name {
@@ -1473,7 +1516,7 @@ input:focus {
 }
 
 .adviser-section .proileContainer .profile-picture .social-icons {
-  text-align: center;
+  text-align: left;
   margin: 15px;
 }
 

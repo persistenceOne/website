@@ -19,6 +19,9 @@ class Footer extends Component {
                             <div className="text-muted margin-t-20">
                                 <ul className="list-unstyled footer-list">
                                     <li><Link to="/team">Team</Link></li>
+                                    <li><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank">Blog</a></li>
+                                    <li><Link to="/roadmap">Roadmap</Link></li>
+
 
                                 </ul>
                                 <h6 className="resources">Resources</h6>

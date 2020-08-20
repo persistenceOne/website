@@ -31,25 +31,25 @@ class homePage extends Component {
                                 <h1 className="title">Protocol Powering Institutional Decentralized Finance</h1>
                                 <p className="sub-title title-line">Persistence bridges DeFi and Traditional Finance by
                                  facilitating borrowing of Cryptoassets using Real-world assets as collateral</p>
-                                 <div className="col-lg-12">
-                                <div className="row text-muted mob-text-align">
-                                    <ul className="list-unstyled first-section-social-icons">
-                                    <a href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank" title="Announcements"><li><Icon viewClass="social_icon_imgg" icon="telegram-plane" /></li></a>
-                                    <a href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank" title="Community Chat"><li><Icon viewClass="social_icon_imgg" icon="telegram-plane" /></li></a>
-                                    <a href="https://github.com/persistenceOne" rel="noopener noreferrer" target="_blank" title="Github"> <li> <Icon viewClass="social_icon_imgg" icon="github-alt" /></li></a>
-                                    <a href="https://www.linkedin.com/company/persistenceone/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><li><Icon viewClass="social_icon_imgg" icon="linkedin" /></li></a>
-                                    <a href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank" title="Twitter"><li><Icon viewClass="social_icon_imgg" icon="twitter-logo" /></li></a>
-                                    <a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" title="Medium"><li><Icon viewClass="social_icon_imgg" icon="medium-m" /></li></a>
-                                    <span className="line"></span>
-                                    <a href={whitepaper} target="_blank" rel="noopener noreferrer" title="Whitepaper"><li className="whitepaper"><Icon viewClass="social_icon_imgg" icon="whitepaper" />Whitepaper</li></a>
-                                    </ul>
+                                <div className="col-lg-12">
+                                    <div className="row text-muted mob-text-align">
+                                        <ul className="list-unstyled first-section-social-icons">
+                                            <a href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank" title="Announcements"><li><Icon viewClass="social_icon_imgg" icon="telegram-plane" /></li></a>
+                                            <a href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank" title="Community Chat"><li><Icon viewClass="social_icon_imgg" icon="telegram-plane" /></li></a>
+                                            <a href="https://github.com/persistenceOne" rel="noopener noreferrer" target="_blank" title="Github"> <li> <Icon viewClass="social_icon_imgg" icon="github-alt" /></li></a>
+                                            <a href="https://www.linkedin.com/company/persistenceone/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><li><Icon viewClass="social_icon_imgg" icon="linkedin" /></li></a>
+                                            <a href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank" title="Twitter"><li><Icon viewClass="social_icon_imgg" icon="twitter-logo" /></li></a>
+                                            <a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" title="Medium"><li><Icon viewClass="social_icon_imgg" icon="medium-m" /></li></a>
+                                            <span className="line"></span>
+                                            <a href={whitepaper} target="_blank" rel="noopener noreferrer" title="Whitepaper"><li className="whitepaper"><Icon viewClass="social_icon_imgg" icon="whitepaper" />Whitepaper</li></a>
+                                        </ul>
+                                    </div>
                                 </div>
-                             </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="sub-section">
+                <section className="sub-section">
                     <div className="container">
                         <div className="row">
                             <div className="margin-t-20 col-lg-4">
@@ -84,7 +84,7 @@ class homePage extends Component {
                                         <img className="sub-service-icons" src={liquidpools} alt="liquidpools" />
                                         <div className="media-body ml-4">
                                             <h5>Liquidity Aggregation</h5>
-                                            <p className="pt-2">Invest/lend to a variety of diversified real-world asset backed Stablecoin liquidity pools</p>
+                                            <p className="pt-2">Invest/lend to a variety of diversified real-world asset-backed Stablecoin liquidity pools</p>
                                         </div>
 
                                     </div>
@@ -108,10 +108,10 @@ class homePage extends Component {
 
                 <section className="validators-section" id="validators">
                     <h3>Validators</h3>
-                    <div class="container">
+                    <div className="container">
                         <img className="img-width" src={validator} alt="validator" title="validator" />
                     </div>
-                    <p>Selected list of top validators in our ecosystem</p> <p className="second-p">secure more than US $700M worth of assets collectively</p>
+                    <p>Selected list of top validators in our ecosystem</p> <p className="second-p">secure more than $700M USD worth of assets collectively</p>
                 </section>
 
                 <section className="contact-section">

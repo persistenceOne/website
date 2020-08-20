@@ -5,8 +5,7 @@ import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
 import link from '../../assets/link.png'
 import Icon from '../icon';
-
-
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 class Roadmap extends React.Component {
     constructor(props) {
@@ -43,9 +42,13 @@ class Roadmap extends React.Component {
                                     <li className="nav-item active"><Link className="nav-link" to="/">Products</Link></li>
                                     <li className="nav-item"><Link className="nav-link" to="/" data-target="#useCases">Use cases</Link></li>
                                     <li className="nav-item"><Link className="nav-link" to="/">Validators</Link></li>
-                                    <li className="nav-item"><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</a></li>
-                                    <li className="nav-item"> <Link className="nav-link" to="team">Team</Link></li>
-                                    <li className="nav-item"> <Link className="nav-link" to="roadmap">Roadmap</Link></li>
+                                    <li class="nav-item dropdown">
+                                    <NavDropdown title="About" id="basic-nav-dropdown">
+                                        <NavDropdown.Item><Link to="team">Team</Link></NavDropdown.Item>
+                                        <NavDropdown.Item href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</NavDropdown.Item>
+                                        <NavDropdown.Item><Link to="roadmap">Roadmap</Link></NavDropdown.Item>
+                                    </NavDropdown>
+                                        </li>
                                 </ul>
 
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
