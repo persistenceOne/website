@@ -28,10 +28,10 @@ class AppContainer extends React.Component {
             <div className="app-body">
                 <div>
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
-                        <div className="container">
-                            <Link className="navbar-brand logo text-uppercase" to="/">
-                                <img src={logo} alt="logo" /></Link>
-                            <ul className="nav navbar-nav navbar-left">
+                        <div className="container app-container">
+                            <Link className="navbar-brand logo text-uppercase app-logo" to="/">
+                                <img className="app-logo" src={logo} alt="logo" /></Link>
+                            <ul className="nav navbar-nav navbar-left app-nav">
                                 <li>
 
                                     <div className="header-buttons">

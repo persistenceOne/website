@@ -1,4 +1,5 @@
 import React from 'react';
+import NavDropdown from 'react-bootstrap/NavDropdown'
 import quotes1 from '../../assets/quotes1.png'
 import quotes2 from '../../assets/quotes2.png'
 import Footer from '../components/footer'
@@ -53,20 +54,21 @@ class Team extends React.Component {
 
                                 <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
                                     <li className="nav-item active"><Link className="nav-link" to="/">Products</Link></li>
-                                    <li className="nav-item"><Link className="nav-link" to="/">Use cases</Link></li>
+                                    <li className="nav-item"><Link className="nav-link" to="/" data-target="#useCases">Use cases</Link></li>
                                     <li className="nav-item"><Link className="nav-link" to="/">Validators</Link></li>
-                                    <li className="nav-item"><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</a></li>
-                                    <li className="nav-item"> <Link className="nav-link" to="team">Team</Link></li>
+                                     <li class="nav-item dropdown">
+                                    <NavDropdown title="About" id="basic-nav-dropdown">
+                                        <NavDropdown.Item><Link to="team">Team</Link></NavDropdown.Item>
+                                        <NavDropdown.Item href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link-custom">Blog</NavDropdown.Item>
+                                        <NavDropdown.Item><Link to="roadmap">Roadmap</Link></NavDropdown.Item>
+                                    </NavDropdown>
+                                        </li>
                                 </ul>
-
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
                                     <ul className="nav navbar-nav navbar-left">
-
                                         <li>
-
                                             <div className="header-buttons">
                                                 <a href="https://explorer.persistence.one/" className="button-explorer" rel="noopener noreferrer" target="_blank">Explorer</a>
-
                                                 <Link className="button-app" to="content">App</Link>
 
                                             </div>
@@ -109,10 +111,8 @@ class Team extends React.Component {
                                         </div>
                                         <div className="margin-l-40 margin-left-xs">
                                             <p className="profile-name">Tushar Aggarwal</p>
-                                            <p className="designation-name">CEO, Persistence</p>
-                                            <p className="company-name"> Tushar helped to set up LuneX Ventures - first regulated Crypto VC fund in Southeast Asia
-                                            (Crypto arm of a ’Traditional’ Singapore VC called Golden Gate Ventures).
-                                            Written extensively on Blockchain/Crypto on Tech in Asia and previously host of Decrypt Asia Podcast
+                                            <p className="designation-name name-xs">CEO, Persistence</p>
+                                            <p className="company-name">Tushar helped to set up LuneX Ventures - Southeast Asia's first regulated Crypto VC fund (Crypto arm of a ’Traditional’ Singapore VC called Golden Gate Ventures). He has also written extensively on Blockchain/Crypto on Tech in Asia and was previously host of Decrypt Asia Podcast
                                     </p>
                                         </div>
 
@@ -127,10 +127,8 @@ class Team extends React.Component {
                                         </div>
                                         <div className="margin-l-40 margin-left-xs">
                                             <p className="profile-name">Deepanshu Tripati</p>
-                                            <p className="designation-name">CTO, Persistence</p>
-                                            <p className="company-name">
-                                                Part of a three-person team to create a unified payment acceptance platform. White-labeled to Reliance (invested by Facebook, etc) eventually sold to African Fintech for $9M USD. Performed world’s first ever Inter-Blockchain NFT transfer
-                                    </p>
+                                            <p className="designation-name name-xs">CTO, Persistence</p>
+                                            <p className="company-name">Part of a three-person team to create a unified payment acceptance platform. White-labeled to Reliance (invested by Facebook, etc) eventually sold to African Fintech for $9M USD. Performed world’s first ever Inter-Blockchain NFT transfer</p>
                                         </div>
 
                                     </div>
@@ -215,7 +213,7 @@ class Team extends React.Component {
                         </div>
 
                         <div className="row">
-                            <div class="margin-t-20 col-lg-6 proileContainer">
+                            <div class="margin-t-20 col-lg-4 proileContainer">
                                 <div className="profile-picture">
                                     <img src={pic3} alt="pic1" />
                                     <div className="social-icons">
@@ -223,7 +221,7 @@ class Team extends React.Component {
                                         <a href="https://www.linkedin.com/in/jasonhtchoi/" rel="noopener noreferrer" target="_blank"><i class="mdi mdi-linkedin icon"></i></a>
                                     </div>
                                 </div>
-                                <div className="margin-l-40 margin-left-xs">
+                                <div className="margin-left-xs">
                                     <p className="profile-name">Jason Choi</p>
                                     <p className="designation-name"> Head of Research, Spartan Capital </p>
                                     <p className="company-name"> Jason is a host of the most popular Asian Crypto Podcast called The Blockcrunch.
@@ -232,7 +230,7 @@ class Team extends React.Component {
                                 </div>
 
                             </div>
-                            <div class="margin-t-20 col-lg-6 proileContainer">
+                            <div class="margin-t-20 col-lg-4 proileContainer">
                                 <div className="profile-picture">
                                     <img src={pic4} alt="pic2" />
                                     <div className="social-icons">
@@ -240,7 +238,7 @@ class Team extends React.Component {
                                         <a href="https://www.linkedin.com/in/sandeep-nailwal-60709a33/" rel="noopener noreferrer" target="_blank"><i class="mdi mdi-linkedin icon" /></a>
                                     </div>
                                 </div>
-                                <div className="margin-l-40 margin-left-xs">
+                                <div className="margin-left-xs">
                                     <p className="profile-name">Sandeep Nailwal</p>
                                     <p className="designation-name">Co-founder and COO, Matic Network</p>
                                     <p className="company-name">
@@ -250,7 +248,7 @@ class Team extends React.Component {
                                 </div>
 
                             </div>
-                            <div class="margin-t-20 col-lg-6  proileContainer">
+                            <div class="margin-t-20 col-lg-4  proileContainer">
                                 <div className="profile-picture">
                                     <img src={pic5} alt="pic2" />
                                     <div className="social-icons">
@@ -258,9 +256,9 @@ class Team extends React.Component {
                                         {/* <a href="#" target="_blank"><i class="mdi mdi-linkedin icon" /></a> */}
                                     </div>
                                 </div>
-                                <div className="margin-l-40 margin-left-xs">
+                                <div className="margin-left-xs">
                                     <p className="profile-name">Jeffrey Hu</p>
-                                    <p className="designation-name">Director, Iris Network</p>
+                                    <p className="designation-name">Director of Research, IRIS Network</p>
                                     <p className="company-name">
                                         Jeffrey is the Director of Research at IRISnet (China hub of Cosmos) and is primarily helping
                                         on giving exposure to Persistence in China as a fellow Tendermint Project
@@ -268,7 +266,7 @@ class Team extends React.Component {
                                 </div>
 
                             </div>
-                            <div class="margin-t-20 col-lg-6  proileContainer">
+                            {/* <div class="margin-t-20 col-lg-6  proileContainer">
                                 <div className="profile-picture profile-xs">
                                     <div className="other-team"><p>More to Come</p></div>
 
@@ -280,7 +278,7 @@ class Team extends React.Component {
                                     </p>
                                 </div>
 
-                            </div>
+                            </div> */}
                         </div>
 
 

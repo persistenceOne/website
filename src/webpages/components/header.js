@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollspyNav from "react-scrollspy-nav";
 import logo from '../../assets/logo.png'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 class Header extends Component {
 
@@ -44,25 +45,25 @@ class Header extends Component {
                                     scrollDuration="800"
                                     headerBackground="true"
                                     className={this.state.isOpen ? "navbar-nav ml-0 float-left" : "navbar-nav navbar-center"} >
-
                                     <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
                                         <li className="nav-item active"><a href="#products" className="nav-link">Products</a></li>
                                         <li className="nav-item"><a href="#useCases" className="nav-link">Use cases</a></li>
                                         <li className="nav-item"><a href="#validators" className="nav-link">Validators</a></li>
-
-
                                     </ul>
 
                                 </ScrollspyNav>
                                 <ul className="navbar-nav navbar-left team-link">
-                                    <li className="nav-item"><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</a></li>
-                                    <li className="nav-item"> <Link className="nav-link" to="team">Team</Link></li>
+                                    <li class="nav-item dropdown">
+                                    <NavDropdown title="About" id="basic-nav-dropdown">
+                                        <NavDropdown.Item><Link to="team">Team</Link></NavDropdown.Item>
+                                        <NavDropdown.Item href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link-custom">Blog</NavDropdown.Item>
+                                        <NavDropdown.Item><Link to="roadmap">Roadmap</Link></NavDropdown.Item>
+                                    </NavDropdown>
+                                        </li>
                                 </ul>
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
                                     <ul className="nav navbar-nav navbar-left">
-
                                         <li>
-
                                             <div className="header-buttons">
                                                 <a href="https://explorer.persistence.one/" className="button-explorer" rel="noopener noreferrer" target="_blank">Explorer</a>
 
