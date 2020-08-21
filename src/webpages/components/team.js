@@ -212,8 +212,9 @@ class Team extends React.Component {
                                          Positioning, Marketing to Token Management to help us move in the right direction</p>
                         </div>
 
-                        <div className="row">
+                        <div className="card-deck">
                             <div class="margin-t-20 col-lg-4 proileContainer">
+                                <div className="col-lg-12 bg-advisors">
                                 <div className="profile-picture">
                                     <img src={pic3} alt="pic1" />
                                     <div className="social-icons">
@@ -228,9 +229,10 @@ class Team extends React.Component {
                                     Jason has been and will be providing inputs on positioning of product, branding, marketing
                                     </p>
                                 </div>
-
+                                </div>
                             </div>
                             <div class="margin-t-20 col-lg-4 proileContainer">
+                                <div className="col-lg-12 bg-advisors">
                                 <div className="profile-picture">
                                     <img src={pic4} alt="pic2" />
                                     <div className="social-icons">
@@ -246,9 +248,10 @@ class Team extends React.Component {
                                         Launchpad initiative. Sandeep is helping bridge connections to media and assist on token management
                                     </p>
                                 </div>
-
+                                </div>
                             </div>
                             <div class="margin-t-20 col-lg-4  proileContainer">
+                                <div className="col-lg-12 bg-advisors">
                                 <div className="profile-picture">
                                     <img src={pic5} alt="pic2" />
                                     <div className="social-icons">
@@ -264,7 +267,7 @@ class Team extends React.Component {
                                         on giving exposure to Persistence in China as a fellow Tendermint Project
                                     </p>
                                 </div>
-
+                                </div>
                             </div>
                             {/* <div class="margin-t-20 col-lg-6  proileContainer">
                                 <div className="profile-picture profile-xs">

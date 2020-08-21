@@ -273,7 +273,48 @@ input:focus {
 		margin: 0;
 	}
 }
+//Map Css
+.live-map {
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
 
+@-webkit-keyframes flash {
+    0%,50%,to {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
+@keyframes flash {
+    0%,50%,to {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash
+}
+
+.canada-map .canada-hover, .germany-map .germany-hover, .romania-map .romania-hover, .russia-map .russia-hover, .hongkong-map .hongkong-hover, .singapore-map .singapore-hover, .india-map .india-hover, .usa-map .usamap-hover, .southkorea-map .southkoreamap-hover {
+		transition:0.5s ease-in-out;
+		opacity: 0;
+		
+	}
+.canada-map:hover .canada-hover, .germany-map:hover .germany-hover, .romania-map:hover .romania-hover, .russia-map:hover .russia-hover, .hongkong-map:hover .hongkong-hover, .singapore-map:hover .singapore-hover, .india-map:hover .india-hover, .usa-map:hover .usamap-hover, .southkorea-map:hover .southkoreamap-hover{
+	opacity: 1;
+	
+}
 // Product Section Css
 .section-1 {
 	.title {
@@ -1272,11 +1313,18 @@ input:focus {
 	}
 	.proileContainer {
 		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		margin-bottom: 50px;
+    flex-direction: column;
+    margin-bottom: 50px;
+    
+    text-align: center;
+	
+	.bg-advisors {
+		background: #2C2C2C;
+		border-radius: 5px;
+		padding: 40px 15px 15px;
+	}
 		.profile-picture {
-			text-align:left;
+			text-align:center;
 		}
 		.profile-name {
 			color: #F5F5F5;
@@ -1299,7 +1347,6 @@ input:focus {
 				mix-blend-mode: luminosity;
 			}
 			.social-icons {
-				text-align: left;
 				margin: 15px;
 				a {
 					padding: 0px 5px;

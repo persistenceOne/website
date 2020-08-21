@@ -1,6 +1,5 @@
 import React from 'react';
 import { Form } from 'react-bootstrap'
-
 import exchangeIcon from '../../assets/exchange-icon.png'
 
 class SecondTab extends React.Component {
@@ -22,7 +21,7 @@ class SecondTab extends React.Component {
                         </Form.Group>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label>Name</Form.Label>
-                            <Form.Control type="email" placeholder="0" />
+                            <Form.Control type="name" placeholder="0" />
                         </Form.Group>
 
 
@@ -40,7 +39,7 @@ class SecondTab extends React.Component {
                         </Form.Group>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Label>Name</Form.Label>
-                            <Form.Control type="email" placeholder="0" />
+                            <Form.Control type="name" placeholder="0" />
                         </Form.Group>
 
 
