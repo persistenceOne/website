@@ -19,7 +19,7 @@ class Firsttab extends React.Component {
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlInput1">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="email" placeholder="Enter Name" />
+                    <Form.Control type="name" placeholder="Enter Name" />
                 </Form.Group>
                 <button type="submit" class="btn">Tokenize</button>
             </Form>

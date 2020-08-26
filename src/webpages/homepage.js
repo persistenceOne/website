@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Header from './components/header';
+import Validator from './components/validator'
 import MailChimp from './components/mailChimp'
 import Products from './components/products'
 import Slider from './components/slider'
 import Footer from './components/footer'
 import proudctBg from '../assets/product_bg.jpg'
-import validator from '../assets/validator.svg'
 import nfts from '../assets/nfts.png'
 import colloterals from '../assets/colloterals.png'
 import liquidpools from '../assets/liquidpools.png'
@@ -109,7 +109,7 @@ class homePage extends Component {
                 <section className="validators-section" id="validators">
                     <h3>Validators</h3>
                     <div className="container">
-                        <img className="img-width" src={validator} alt="validator" title="validator" />
+                        <Validator />
                     </div>
                     <p>Selected list of top validators in our ecosystem</p> <p className="second-p">secure more than $700M USD worth of assets collectively</p>
                 </section>

@@ -28,6 +28,7 @@ class Footer extends Component {
                                 <ul className="list-unstyled footer-list">
                                     <li><a href={whitepaper} target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
                                     <li><a href="https://github.com/persistenceOne" rel="noopener noreferrer" target="_blank">Github</a></li>
+                                    <li><a href="https://drive.google.com/drive/folders/1cciqYsxlfbk0OlELPKgdGkXC91Clk8yl" rel="noopener noreferrer" target="_blank">Press Kit</a></li>
                                 </ul>
                             </div>
                         </div>
