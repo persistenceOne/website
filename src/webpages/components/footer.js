@@ -10,11 +10,12 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <div className="container">
+                    <div className="col-xs-12 col-md-12 col-lg-12">
                     <div className="row">
-                        <div className="col-md-2 col-lg-3 margin-t-20">
+                        <div className="col-xs-12 col-md-2 col-lg-3 margin-t-20">
                             <img className="dark-logo" src={icon} alt="icon-logo" title="logo" />
                         </div>
-                        <div className="col-md-2 col-lg-2 margin-t-20">
+                        <div className="col-xs-6 col-md-2 col-lg-2 margin-t-20">
                             <h6>About</h6>
                             <div className="text-muted margin-t-20">
                                 <ul className="list-unstyled footer-list">
@@ -32,7 +33,7 @@ class Footer extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-md-2 col-lg-2 margin-t-20">
+                        <div className="col-xs-6 col-md-2 col-lg-2 margin-t-20">
                             <h6>Products</h6>
                             <div className="text-muted margin-t-20">
                                 <ul className="list-unstyled footer-list">
@@ -63,6 +64,7 @@ class Footer extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <div className="footer-alt">
                     <div className="container">

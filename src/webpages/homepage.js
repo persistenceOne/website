@@ -111,7 +111,7 @@ class homePage extends Component {
                     <div className="container">
                         <Validator />
                     </div>
-                    <p>Selected list of top validators in our ecosystem</p> <p className="second-p">secure more than $700M USD worth of assets collectively</p>
+                    <p>Selected list of top validators in our ecosystem <span className="second-p">secure more than $700M USD worth of assets collectively</span></p> 
                 </section>
 
                 <section className="contact-section">

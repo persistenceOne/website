@@ -23,24 +23,6 @@ const Slider = (props) => {
             caption4: 'The Persistence chain is a natively interoperable chain that facilitates auditable, verifiable logging of information',
 
         }
-        // ,
-        // {
-        //     src: layer1,
-        //     altText: 'Slide 2',
-        //     caption: 'The Persistence dApp is a crypto user-facing dApp to aggregate liquidity from crypto investors/lenders.',
-        //     comdexCap: 'The Comdex dApp Is an institutional user-facing dApp that aggregates liquidity from institutional investors/lenders and has facilitated $30 Million worth of transactions'
-
-        // },
-        // {
-        //     src: layer2,
-        //     altText: 'Slide 3',
-        //     caption: 'The Persistence SDK contains the building blocks (modules) for Asset Tokenization, Decentralized Exchange of Assets and Financing against real-world assets as collateral'
-        // },
-        // {
-        //     src: layer3,
-        //     altText: 'Slide 4',
-        //     caption: 'The Persistence chain is a natively interoperable chain that facilitates auditable, verifiable logging of information'
-        // }
     ];
 
     const onEnter = (caption) => {
