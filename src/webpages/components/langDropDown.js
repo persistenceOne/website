@@ -33,10 +33,10 @@ class LangDropDown extends Component {
         return (
             <li className="lang-dropdown">
             <NavDropdown title={lang} id="basic-nav-dropdown">
-                <NavDropdown.Item className={lang ==='en' ? "active" :''} id='en' onClick={this.handleLanguage}>
+                <NavDropdown.Item className={lang ==='en' ? "active" :''} id='en' onClick={this.handleLanguage}>&nbsp;&nbsp;
                             English
                 </NavDropdown.Item>
-                <NavDropdown.Item className={lang ==='vi' ? "active" :''} id='vi' onClick={this.handleLanguage}>Vietnamese</NavDropdown.Item>
+                <NavDropdown.Item className={lang ==='vi' ? "active" :''} id='vi' onClick={this.handleLanguage}>&nbsp;&nbsp;Vietnamese</NavDropdown.Item>
               
             </NavDropdown>
                 </li>

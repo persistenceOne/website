@@ -396,6 +396,331 @@ input:focus {
   text-align: center;
 }
 
+.app-body {
+  background: #E5E5E5;
+  height: 100vh;
+}
+
+.app-body .navbar-custom {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
+}
+
+.app-body .navbar-custom .navbar-nav li a:hover {
+  color: #414141;
+  font-weight: 500;
+}
+
+.app-body .tabSection {
+  padding-top: 100px;
+}
+
+.app-body .tabSection .col-lg-4 {
+  background-color: #FFFFFF;
+  padding: 0;
+}
+
+.app-body .tabSection .wallet-container {
+  padding-bottom: 20px;
+}
+
+.app-body .tabSection .wallet-container .title-section {
+  padding: 15px 25px;
+  color: #414141;
+  font-weight: bold;
+}
+
+.app-body .tabSection .wallet-container .title-section img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .wallet-container .title-section p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance {
+  padding: 15px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F7F7F7;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance p {
+  margin: 0;
+  color: #E50913;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance .form-group label {
+  display: none;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance .form-group .form-control {
+  background: #F9F9F9;
+  padding: .475rem .75rem;
+  height: 45px;
+  font-weight: 500;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance .form-group .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-deeds {
+  margin: 15px 25px;
+  background: #F7F7F7;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-deeds p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-deeds p img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .wallet-container .wallet-invoice {
+  background: #F7F7F7;
+  margin: 15px 25px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-invoice p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-invoice p img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .wallet-container .wallet-obl {
+  margin: 15px 25px;
+  background: #F7F7F7;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-obl p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-obl p img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .tabs-container {
+  background-color: #ffffff;
+}
+
+.app-body .tabSection .tabs-container .tab-content form {
+  padding: 80px 0;
+  width: 255px;
+  margin: auto;
+}
+
+.app-body .tabSection .tabs-container .tab-content form label {
+  color: #414141;
+  font-weight: 500;
+}
+
+.app-body .tabSection .tabs-container .tab-content form .form-control {
+  background: #F9F9F9;
+  border: 0;
+  color: #636363;
+  padding: .475rem .75rem;
+  height: 45px;
+  font-weight: 500;
+}
+
+.app-body .tabSection .tabs-container .tab-content form .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: 0;
+}
+
+.app-body .tabSection .tabs-container .tab-content form button {
+  background: #FFFFFF;
+  border: 1px solid #E50913;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 58px;
+  width: 100%;
+  color: #E50913;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form {
+  position: relative;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .icon {
+  position: absolute;
+  top: 210px;
+  left: -25px;
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section {
+  background: #F6F6F6;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .receive-section {
+  background: #FFFFFF;
+  border: 1px solid #EFE7E7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:first-child,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:first-child {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  margin-right: 10px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:first-child label,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:first-child label {
+  color: #414141;
+  font-size: 14px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child label,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child label {
+  visibility: hidden;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child input,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child input {
+  color: #414141;
+  font-weight: 600;
+  font-size: 20px;
+  background: #FFFFFF;
+  -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-body .tabSection .tabs-container .lending-container {
+  padding: 50px 30px;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #F5F5F5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #414141;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard p:first-child {
+  color: #E50913;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard p:last-child {
+  color: #414141;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-link {
+  color: #414141;
+  font-weight: bold;
+  padding: 15px 30px;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-link:focus {
+  outline: 0;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-item.show .nav-link,
+.app-body .tabSection .tabs-container .nav-tabs .nav-link.active {
+  color: #E50913;
+  font-weight: bold;
+  border-bottom: 3px solid #E50913;
+  border-color: #fff #fff #E50913;
+  outline: 0;
+}
+
 .section-1 .title {
   color: #F9F9F9;
   font-weight: 800;
@@ -1230,14 +1555,20 @@ input:focus {
   min-height: 100vh;
 }
 
-.app-body .navbar-custom {
-  background-color: #FFFFFF !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 .app-body .navbar-custom .navbar-toggler {
   color: #2C2525;
+}
+
+.app-body .navbar-custom .navbar-nav.app-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .app-body .navbar-custom .navbar-nav li.app-nav li a {
@@ -2052,6 +2383,10 @@ input:focus {
   padding: 0;
   border: none;
   margin-top: 0;
+}
+
+.app-body .footer .row div {
+  padding: 0;
 }
 
 .app-body .footer .copyright {

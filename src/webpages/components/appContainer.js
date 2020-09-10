@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, Form } from 'react-bootstrap'
-import logo from '../../assets/app-logo.svg'
+import LangDropDown from './langDropDown';
+import {connect} from 'react-redux';
+import language from '../translationlang';
+import logo from '../../assets/PApp.svg'
 import wallet from '../../assets/wallet.png'
 import deeds from '../../assets/deeds.png'
 import obl from '../../assets/obl.png'
@@ -10,12 +13,6 @@ import SecondTab from '../components/tab2'
 import ThirdTab from '../components/tab3'
 import invoices from '../../assets/invoices.png'
 import ethereum from '../../assets/ethereum.png'
-import arrowLeft from '../../assets/arrow-left.png'
-import arrowRight from '../../assets/arrow-right.png'
-import success from '../../assets/success.png'
-import usdc from '../../assets/usdc.png'
-import tether from '../../assets/tether.png'
-import usdx from '../../assets/usdx.png'
 import arrow from '../../assets/arrow1.png'
 class AppContainer extends React.Component {
     constructor(props) {
@@ -29,7 +26,7 @@ class AppContainer extends React.Component {
         this.handleSelect = this.handleSelect.bind(this);
     }
     render() {
-
+        const { lang } = this.props;
         return (
             <div className="app-body">
                 <div>
@@ -38,112 +35,75 @@ class AppContainer extends React.Component {
                             <Link className="navbar-brand logo text-uppercase app-logo" to="/">
                                 <img className="app-logo" src={logo} alt="logo" /></Link>
                             <ul className="nav navbar-nav navbar-left app-nav">
+                            <li className="nav-item"><LangDropDown /></li>
                                 <li>
 
                                     <div className="header-buttons">
-                                        <Link className="goto-button" to="/">
-                                            Go to main website <img src={arrow} alt="go to website arrow" /></Link>
+                              
+                                        <Link className="button-explorer" to="/">
+                                        {language[lang].go_to_main_site} <img src={arrow} alt="go to website arrow" /></Link>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </nav>
                 </div>
-                <div className="tab-section">
+                <div className="tabSection">
                     <div className="container">
                         <div className="row">
-                        <div className="col-lg-4">
-                                <div className="wallet-container">
-                                    <div className="wallet-top-section">
-                                    <div className="title-section">
-                                        <p>Wallet</p>
-                                    </div>
-                                    <div className="wallet-top-section-body">
-                                    <div className="list">
-                                        <p className="title"><img src={usdc} alt="wallet" /> USDC</p>
-                                        <div className="list-value-section">
-                                                <p className="list-value">54124.10</p>
-                                                <p className="sub-item">$1.1 USD</p>
-                                        </div>
-                                    </div>
-                                    <div className="list">
-                                        <p className="title"><img src={tether} alt="wallet" /> USDT</p>
-                                        <div className="list-value-section">
-                                                <p className="list-value">1540.10</p>
-                                                <p className="sub-item">$1.02 USD</p>
-                                        </div>
-                                    </div>
-                                    <div className="list">
-                                        <p className="title"><img src={usdx} alt="wallet" /> USDX</p>
-                                        <div className="list-value-section">
-                                                <p className="list-value">514400.2154</p>
-                                                <p className="sub-item">$1.01 USD</p>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    <div className="wallet-bottom-section">
-                                        <div className="tabs-container">
+                            <div className="col-lg-8">
+                                <div className="tabs-container">
                                     <Tabs activeKey={this.state.activeTab} onSelect={this.handleSelect}>
-                                        <Tab eventKey={1} title="Invest">
-                                        <Form>
-                                                <Form.Group controlId="exampleForm.ControlSelect1">
-                                                    <Form.Control as="Select">
-                                                        <option>USDC</option>
-                                                        <option>USDC</option>
-                                                        <option>DAI</option>
-
-                                                    </Form.Control>
-                                                </Form.Group>
-                                                <Form.Group controlId="exampleForm.ControlInput1">
-                                                    <div className="label-section">
-                                                    <Form.Label>Amount</Form.Label>
-                                                    </div>
-                                                    <Form.Control type="name" placeholder="Enter Amount" />
-                                                </Form.Group>
-                                                <div className="form-group-submit">
-                                                <button type="submit" class="btn">INVEST</button>
-                                                </div>
-                                            </Form>
+                                        <Tab eventKey={1} title={language[lang].app_asset_tokenization}>
+                                            <Firsttab />
                                         </Tab>
-                                        <Tab eventKey={2} title="Withdraw">
-                                            
+                                        <Tab eventKey={2} title={language[lang].exchange}>
+                                            <SecondTab />
                                         </Tab>
-                                      
+                                        <Tab eventKey={5} title={language[lang].lending}>
+                                            <ThirdTab />
+                                        </Tab>
                                     </Tabs>
-                                    </div>
-                                    </div>
-                                  
                                 </div>
                             </div>
-                            <div className="col-lg-8 right-section">
-                               <div className="header-section">       
-                                    <div className="navigation-arrows">
+                            <div className="col-lg-4">
+                                <div className="wallet-container">
+                                    <div className="title-section">
+                                        <p><img src={wallet} alt="wallet" />{language[lang].wallet}</p>
+                                    </div>
+                                    <div className="wallet-balance">
+                                        <p>$00.00</p>
                                         <div>
-                                            <img src={arrowLeft} alt="wallet" />
-                                            <img src={arrowRight} alt="wallet" />
+                                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                                <Form.Label>You Recive</Form.Label>
+                                                <Form.Control as="Select">
+                                                    <option>USDC</option>
+                                                    <option>USDT</option>
+                                                    <option>DAI</option>
+                                                </Form.Control>
+                                            </Form.Group>
                                         </div>
                                     </div>
-                                    <div className="header-info">
-                                    <span className="result">connected</span>
-                                    <img src={success} alt="wallet" />
-                                     <Form>
-                                        <Form.Group controlId="exampleForm.ControlSelect1">
-                                            <Form.Control as="Select">
-                                                <option>0x4.....7er7d</option>
-                                                <option>0x433.....7e3r7d</option>
-
-                                            </Form.Control>
-                                        </Form.Group>
-                                          
-                                    </Form>
-                                    
+                                    <div className="wallet-deeds">
+                                        <p>  <img src={deeds} alt="deeds" />0</p><p>{language[lang].deeds}</p>
                                     </div>
-                               </div>
-                               <SecondTab />
+                                    <div className="wallet-invoice">
+                                        <p>  <img src={obl} alt="invoice" />0</p><p>{language[lang].obl}</p>
+                                    </div>
+                                    <div className="wallet-obl">
+                                        <p>  <img src={invoices} alt="OBL" />0</p><p>{language[lang].invoices}</p>
+                                    </div>
+                                    <div className="wallet-obl">
+                                        <p>  <img src={ethereum} alt="OBL" />0</p> <div>
+                                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                                <Form.Control as="Select">
+                                                    <option>ETH</option>
+                                                </Form.Control>
+                                            </Form.Group>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
- 
-                            
                         </div>
 
                     </div>
@@ -161,4 +121,11 @@ class AppContainer extends React.Component {
 }
 
 
-export default AppContainer 
+ 
+const mapStateToProps = state => {
+    return {
+        lang: state.language.language,
+    }
+};
+
+export default connect(mapStateToProps)(AppContainer);

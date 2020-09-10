@@ -70,6 +70,8 @@ export default {
         'invoices': 'Invoices',
         'obl': 'OBL',
         'go_to_main_site': 'Go to main website',
+       
+
 
 
        'project_roadmap_milestones': 'Project Roadmap and Milestones',
@@ -176,6 +178,8 @@ export default {
         'obl': 'Hóa Đơn Vận Đơn',
         'go_to_main_site': 'Tới trang chính',
         
+
+
         'project_roadmap_milestones': 'Lộ trình dự án và các mốc quan trọng',
         'persistence_established': 'THÀNH LẬP PERSISTENCE ONE!',
         'comdex_onboarded': 'Tích hợp Comdex',
