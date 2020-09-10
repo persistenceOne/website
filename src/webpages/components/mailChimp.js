@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import language from '../translationlang';
 // import the component
 import Mailchimp from 'react-mailchimp-form'
  
 class mailChimp extends Component {
   render() {
+    const { lang } = this.props;
     return (
         <Mailchimp
-        action='#' 
+        action='https://one.us17.list-manage.com/subscribe/post?u=fd70c7f5c39a43acbedb49253&amp;id=7f8e2dbc48' 
         
         //Adding multiple fields:
         fields={[
           {
             name: 'EMAIL',
-            placeholder: 'Enter Your Email',
+            placeholder: language[lang].enter_your_mail,
             type: 'email',
             required: true
           }
@@ -25,7 +28,7 @@ class mailChimp extends Component {
             error: "An unexpected internal error has occurred.",
             empty: "You must write an e-mail.",
             duplicate: "Too many subscribe attempts for this email address",
-            button: "SUBSCRIBE"
+            button: language[lang].subscribe,
           }
         }
         // Add a personalized class
@@ -35,4 +38,11 @@ class mailChimp extends Component {
   }
 }
  
-export default mailChimp;
+
+const mapStateToProps = state => {
+  return {
+      lang: state.language.language,
+  }
+};
+
+export default connect(mapStateToProps)(mailChimp);

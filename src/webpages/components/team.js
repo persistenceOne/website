@@ -1,5 +1,8 @@
 import React from 'react';
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import LangDropDown from './langDropDown';
+import language from '../translationlang';
+import { connect } from 'react-redux';
 import quotes1 from '../../assets/quotes1.png'
 import quotes2 from '../../assets/quotes2.png'
 import Footer from '../components/footer'
@@ -20,7 +23,6 @@ class Team extends React.Component {
     constructor(props) {
         super(props);
         this.state = { Tab: '', isOpen: false };
-
         this.toggleMenu = this.toggleMenu.bind(this);
     }
 
@@ -38,7 +40,7 @@ class Team extends React.Component {
         this.setState({ Tab: tab });
     }
     render() {
-
+        const { lang } = this.props;
         return (
             <div>
                 <div id="sdis-sticky">
@@ -53,23 +55,24 @@ class Team extends React.Component {
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
 
                                 <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                    <li className="nav-item active"><Link className="nav-link" to="/">Products</Link></li>
-                                    <li className="nav-item"><Link className="nav-link" to="/" data-target="#useCases">Use cases</Link></li>
-                                    <li className="nav-item"><Link className="nav-link" to="/">Validators</Link></li>
+                                <li className="nav-item active"><Link className="nav-link" to="/">{language[lang].products}</Link></li>
+                                    <li className="nav-item"><Link className="nav-link" to="/" data-target="#useCases">{language[lang].usecase}</Link></li>
+                                    <li className="nav-item"><Link className="nav-link" to="/">{language[lang].validators}</Link></li>
                                      <li class="nav-item dropdown">
-                                    <NavDropdown title="About" id="basic-nav-dropdown">
-                                        <NavDropdown.Item><Link to="team">Team</Link></NavDropdown.Item>
+                                    <NavDropdown title={language[lang].about} id="basic-nav-dropdown">
+                                        <NavDropdown.Item><Link to="team">{language[lang].team}</Link></NavDropdown.Item>
                                         <NavDropdown.Item href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link-custom">Blog</NavDropdown.Item>
-                                        <NavDropdown.Item><Link to="roadmap">Roadmap</Link></NavDropdown.Item>
+                                        <NavDropdown.Item><Link to="roadmap">{language[lang].roadmap}</Link></NavDropdown.Item>
                                     </NavDropdown>
                                         </li>
+                                        <li className="nav-item"><LangDropDown /></li>
                                 </ul>
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
                                     <ul className="nav navbar-nav navbar-left">
                                         <li>
                                             <div className="header-buttons">
-                                                <a href="https://explorer.persistence.one/" className="button-explorer" rel="noopener noreferrer" target="_blank">Explorer</a>
-                                                <Link className="button-app" to="content">App</Link>
+                                                <a href="https://explorer.persistence.one/" className="button-explorer" rel="noopener noreferrer" target="_blank">{language[lang].explorer}</a>
+                                                <Link className="button-app" to="app">{language[lang].app}</Link>
 
                                             </div>
                                         </li>
@@ -83,14 +86,9 @@ class Team extends React.Component {
                     <div className="container">
                         <div className="quote-box">
                             <div className="quote-intial"><img src={quotes1} alt="quote1" /></div>
-                            <p>Persistence, as the name suggests, is a team that values long term efforts and believes in the power of
-                            determination. To fulfill Persistence's Vision of bridging DeFi and Traditional Finance, we needed a team
-                        with technical expertise and a deep understanding of the pain points in the Traditional Finance Industry.</p>
-                            <p>
-                                Our CTO, Deepanshu Tripathi has a substantial amount of experience in developing legacy finance applications.
-                                Our CEO, Tushar Aggarwal has worked closely with the Financial Services Industry and believes that there are
-                                three core elements that lead to the success of a project: Capital, Technology and Media. Our team strikes the
-                                perfect balance between these core principles.
+                            <p>{language[lang].team_page_title}</p>
+                            <p>{language[lang].our_cto}
+                                
                         </p>
                             <div className="quote-final"><img src={quotes2} alt="quote2" /></div>
                         </div>
@@ -112,7 +110,7 @@ class Team extends React.Component {
                                         <div className="margin-l-40 margin-left-xs">
                                             <p className="profile-name">Tushar Aggarwal</p>
                                             <p className="designation-name name-xs">CEO, Persistence</p>
-                                            <p className="company-name">Tushar helped to set up LuneX Ventures - Southeast Asia's first regulated Crypto VC fund (Crypto arm of a ’Traditional’ Singapore VC called Golden Gate Ventures). He has also written extensively on Blockchain/Crypto on Tech in Asia and was previously host of Decrypt Asia Podcast
+                                            <p className="company-name">{language[lang].tushar_helped}
                                     </p>
                                         </div>
 
@@ -128,16 +126,14 @@ class Team extends React.Component {
                                         <div className="margin-l-40 margin-left-xs">
                                             <p className="profile-name">Deepanshu Tripati</p>
                                             <p className="designation-name name-xs">CTO, Persistence</p>
-                                            <p className="company-name">Part of a three-person team to create a unified payment acceptance platform. White-labeled to Reliance (invested by Facebook, etc) eventually sold to African Fintech for $9M USD. Performed world’s first ever Inter-Blockchain NFT transfer</p>
+                                            <p className="company-name">{language[lang].part_of_three}</p>
                                         </div>
 
                                     </div>
                                 </div>
 
                                 <div className="developer-text">
-                                    <p>People in our team come from highly respected Institutions and Colleges which equips them with the right set of skills to build a project of this stature.
-                                    This can be highlighted from the fact that our Blockchain Developers come from the Indian Institute of Technology, Bombay (IIT-B), which is the most prestigious
-                                engineering college of India with an acceptance rate of less than 1%.</p>
+                                    <p>{language[lang].people_in_team}</p>
                                 </div>
 
 
@@ -204,12 +200,10 @@ class Team extends React.Component {
                 <section className="adviser-section">
                     <div className="container">
                         <h3>
-                            Advisors
+                        {language[lang].advisors}
                             </h3>
                         <div className="adviser-text">
-                            <p> Our Advisors are well respected and highly reputed Crypto native people who have built
-                            successful projects in the past. They will provide advice on matters ranging from Branding,
-                                         Positioning, Marketing to Token Management to help us move in the right direction</p>
+                            <p> {language[lang].our_advisors}</p>
                         </div>
 
                         <div className="card-deck">
@@ -224,9 +218,9 @@ class Team extends React.Component {
                                 </div>
                                 <div className="margin-left-xs">
                                     <p className="profile-name">Jason Choi</p>
-                                    <p className="designation-name"> Head of Research, Spartan Capital </p>
-                                    <p className="company-name"> Jason is a host of the most popular Asian Crypto Podcast called The Blockcrunch.
-                                    Jason has been and will be providing inputs on positioning of product, branding, marketing
+                                    <p className="designation-name"> {language[lang].head_of_research} </p>
+                                    <p className="company-name"> {language[lang].jason_is_host} 
+                                    
                                     </p>
                                 </div>
                                 </div>
@@ -242,10 +236,8 @@ class Team extends React.Component {
                                 </div>
                                 <div className="margin-left-xs">
                                     <p className="profile-name">Sandeep Nailwal</p>
-                                    <p className="designation-name">Co-founder and COO, Matic Network</p>
-                                    <p className="company-name">
-                                        Matic Network is a very successful project from India which was also part of the Binance
-                                        Launchpad initiative. Sandeep is helping bridge connections to media and assist on token management
+                                    <p className="designation-name">{language[lang].co_founder_and_coo}</p>
+                                    <p className="company-name">{language[lang].matic_network}
                                     </p>
                                 </div>
                                 </div>
@@ -256,32 +248,16 @@ class Team extends React.Component {
                                     <img src={pic5} alt="pic2" />
                                     <div className="social-icons">
                                         <a href="https://twitter.com/hu_zhiwei" rel="noopener noreferrer" target="_blank"><i class="mdi mdi-twitter icon" /></a>
-                                        {/* <a href="#" target="_blank"><i class="mdi mdi-linkedin icon" /></a> */}
                                     </div>
                                 </div>
                                 <div className="margin-left-xs">
                                     <p className="profile-name">Jeffrey Hu</p>
-                                    <p className="designation-name">Director of Research, IRIS Network</p>
-                                    <p className="company-name">
-                                        Jeffrey is the Director of Research at IRISnet (China hub of Cosmos) and is primarily helping
-                                        on giving exposure to Persistence in China as a fellow Tendermint Project
+                                    <p className="designation-name">{language[lang].director_of_research}</p>
+                                    <p className="company-name">{language[lang].jeffrey_is_director}
                                     </p>
                                 </div>
                                 </div>
                             </div>
-                            {/* <div class="margin-t-20 col-lg-6  proileContainer">
-                                <div className="profile-picture profile-xs">
-                                    <div className="other-team"><p>More to Come</p></div>
-
-                                </div>
-                                <div className="margin-l-40 margin-left-xs">
-                                    <p className="profile-name">See yourself here?</p>
-                                    <p className="company-name">
-                                        If you aligned to our mission and think you can contribute to the growth of this project, please reach out to us at hello@persistence.one
-                                    </p>
-                                </div>
-
-                            </div> */}
                         </div>
 
 
@@ -295,5 +271,11 @@ class Team extends React.Component {
 
 }
 
+const mapStateToProps = state => {
+    return {
+        lang: state.language.language,
+    }
+};
 
-export default Team 
+export default (connect(mapStateToProps)(Team));
+

@@ -1,32 +1,30 @@
 import React, { useState } from 'react';
 import { Col } from 'reactstrap';
 import Animate from '../components/animate';
+import language from '../translationlang';
+import {connect} from 'react-redux';
 import {
     Carousel,
     CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
     CarouselCaption
 } from 'reactstrap';
 
 const Slider = (props) => {
-
     const [selectedCaption, setSelectedCaption] = useState('caption');
     const items = [
         {
             animate: <Animate selectedCaption={selectedCaption} enter={(caption) => onEnter.bind(this, caption)} leave={(caption) => onLeave.bind(this, caption)} />,
             altText: 'Slide 1',
-            caption: 'The Persistence technology stack is a full suite of products covering the end-to-end journey of facilitating borrowing of cryptoassets using real-world assets as collateral and removes all complexities of using Public Blockchains to allow for easier institutional adoption while catering to easy use for crypto-native users',
-            caption1: 'The Comdex dApp Is an institutional user-facing dApp that aggregates liquidity from institutional investors/lenders and has facilitated $30 Million worth of transactions',
-            caption2: 'The Persistence dApp is a crypto user-facing dApp to aggregate liquidity from crypto investors/lenders.',
-            caption3: 'The Persistence SDK contains the building blocks (modules) for Asset Tokenization, Decentralized Exchange of Assets and Financing against real-world assets as collateral',
-            caption4: 'The Persistence chain is a natively interoperable chain that facilitates auditable, verifiable logging of information',
+            caption: language[props.lang].persistence_technology,
+            caption1: language[props.lang].comdex_dapp,
+            caption2: language[props.lang].persistence_dapp,
+            caption3: language[props.lang].p_sdk,
+            caption4: language[props.lang].p_chanin,
 
         }
     ];
 
     const onEnter = (caption) => {
-        console.log('onenter')
         setSelectedCaption(caption);
     }
     const onLeave = (caption) => {
@@ -47,10 +45,7 @@ const Slider = (props) => {
         setActiveIndex(nextIndex);
     }
 
-    const goToIndex = (newIndex) => {
-        if (animating) return;
-        setActiveIndex(newIndex);
-    }
+   
 
     const slides = items.map((item, index) => {
         return (
@@ -86,5 +81,10 @@ const Slider = (props) => {
     );
 
 }
+const mapStateToProps = state => {
+    return {
+        lang: state.language.language,
+    }
+};
 
-export default Slider;
+export default connect(mapStateToProps)(Slider);
