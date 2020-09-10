@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import the component
-import Mailchimp from 'react-mailchimp-form'
+import Mailchimp from 'react-mailchimp-form' 
  
 class mailChimp extends Component {
   render() {
