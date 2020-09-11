@@ -3,13 +3,18 @@ import {connect} from 'react-redux';
 import language from '../translationlang';
 // import the component
 import Mailchimp from 'react-mailchimp-form'
- 
+
+
+let mailURl = process.env.REACT_APP_MAIL_CHIMP_URL
+
 class mailChimp extends Component {
+  
   render() {
     const { lang } = this.props;
     return (
+      
         <Mailchimp
-        action='' 
+        action={`${mailURl}`}
         
         //Adding multiple fields:
         fields={[
