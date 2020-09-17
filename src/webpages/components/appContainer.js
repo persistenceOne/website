@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, Form } from 'react-bootstrap'
+import LangDropDown from './langDropDown';
+import {connect} from 'react-redux';
+import language from '../translationlang';
 import logo from '../../assets/PApp.svg'
 import wallet from '../../assets/wallet.png'
 import deeds from '../../assets/deeds.png'
@@ -23,7 +26,7 @@ class AppContainer extends React.Component {
         this.handleSelect = this.handleSelect.bind(this);
     }
     render() {
-
+        const { lang } = this.props;
         return (
             <div className="app-body">
                 <div>
@@ -32,11 +35,13 @@ class AppContainer extends React.Component {
                             <Link className="navbar-brand logo text-uppercase app-logo" to="/">
                                 <img className="app-logo" src={logo} alt="logo" /></Link>
                             <ul className="nav navbar-nav navbar-left app-nav">
+                            <li className="nav-item"><LangDropDown /></li>
                                 <li>
 
                                     <div className="header-buttons">
+                              
                                         <Link className="button-explorer" to="/">
-                                            Go to main website <img src={arrow} alt="go to website arrow" /></Link>
+                                        {language[lang].go_to_main_site} <img src={arrow} alt="go to website arrow" /></Link>
                                     </div>
                                 </li>
                             </ul>
@@ -49,13 +54,13 @@ class AppContainer extends React.Component {
                             <div className="col-lg-8">
                                 <div className="tabs-container">
                                     <Tabs activeKey={this.state.activeTab} onSelect={this.handleSelect}>
-                                        <Tab eventKey={1} title="Asset Tokenization">
+                                        <Tab eventKey={1} title={language[lang].app_asset_tokenization}>
                                             <Firsttab />
                                         </Tab>
-                                        <Tab eventKey={2} title="Exchange">
+                                        <Tab eventKey={2} title={language[lang].exchange}>
                                             <SecondTab />
                                         </Tab>
-                                        <Tab eventKey={5} title="Lending">
+                                        <Tab eventKey={5} title={language[lang].lending}>
                                             <ThirdTab />
                                         </Tab>
                                     </Tabs>
@@ -64,7 +69,7 @@ class AppContainer extends React.Component {
                             <div className="col-lg-4">
                                 <div className="wallet-container">
                                     <div className="title-section">
-                                        <p><img src={wallet} alt="wallet" /> Wallet</p>
+                                        <p><img src={wallet} alt="wallet" />{language[lang].wallet}</p>
                                     </div>
                                     <div className="wallet-balance">
                                         <p>$00.00</p>
@@ -80,13 +85,13 @@ class AppContainer extends React.Component {
                                         </div>
                                     </div>
                                     <div className="wallet-deeds">
-                                        <p>  <img src={deeds} alt="deeds" />0</p><p>Deeds</p>
+                                        <p>  <img src={deeds} alt="deeds" />0</p><p>{language[lang].deeds}</p>
                                     </div>
                                     <div className="wallet-invoice">
-                                        <p>  <img src={obl} alt="invoice" />0</p><p>OBL</p>
+                                        <p>  <img src={obl} alt="invoice" />0</p><p>{language[lang].obl}</p>
                                     </div>
                                     <div className="wallet-obl">
-                                        <p>  <img src={invoices} alt="OBL" />0</p><p>Invoices</p>
+                                        <p>  <img src={invoices} alt="OBL" />0</p><p>{language[lang].invoices}</p>
                                     </div>
                                     <div className="wallet-obl">
                                         <p>  <img src={ethereum} alt="OBL" />0</p> <div>
@@ -116,4 +121,11 @@ class AppContainer extends React.Component {
 }
 
 
-export default AppContainer 
+ 
+const mapStateToProps = state => {
+    return {
+        lang: state.language.language,
+    }
+};
+
+export default connect(mapStateToProps)(AppContainer);

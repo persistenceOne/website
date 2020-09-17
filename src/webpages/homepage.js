@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header';
+import {connect} from 'react-redux';
+import language from '../webpages/translationlang';
 import Validator from './components/validator'
 import MailChimp from './components/mailChimp'
 import Products from './components/products'
@@ -20,6 +22,8 @@ class homePage extends Component {
     }
 
     render() {
+        
+        const { lang } = this.props;
         return (
             <React.Fragment>
                 <Header />
@@ -28,9 +32,8 @@ class homePage extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 text-white mobile-head">
-                                <h1 className="title">Protocol Powering Institutional Decentralized Finance</h1>
-                                <p className="sub-title title-line">Persistence bridges DeFi and Traditional Finance by
-                                 facilitating borrowing of Cryptoassets using Real-world assets as collateral</p>
+                                <h1 className="title">{language[lang].protocal_powering}</h1>
+                                <p className="sub-title title-line">{language[lang].persistence_bridges_defi}</p>
                                 <div className="col-lg-12">
                                     <div className="row text-muted mob-text-align">
                                         <ul className="list-unstyled first-section-social-icons">
@@ -41,7 +44,7 @@ class homePage extends Component {
                                             <a href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank" title="Twitter"><li><Icon viewClass="social_icon_imgg" icon="twitter-logo" /></li></a>
                                             <a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" title="Medium"><li><Icon viewClass="social_icon_imgg" icon="medium-m" /></li></a>
                                             <span className="line"></span>
-                                            <a href={whitepaper} target="_blank" rel="noopener noreferrer" title="Whitepaper"><li className="whitepaper"><Icon viewClass="social_icon_imgg" icon="whitepaper" />Whitepaper</li></a>
+                                            <a href={whitepaper} target="_blank" rel="noopener noreferrer" title="Whitepaper"><li className="whitepaper"><Icon viewClass="social_icon_imgg" icon="whitepaper" />{language[lang].whitepaper}</li></a>
                                         </ul>
                                     </div>
                                 </div>
@@ -57,8 +60,8 @@ class homePage extends Component {
                                     <div className="media">
                                         <img className="sub-service-icons" src={nfts} alt="nfts" />
                                         <div className="media-body ml-4">
-                                            <h5>Asset Tokenization</h5>
-                                            <p className="pt-2">Tokenize real-world assets using NFTs to bring them on-chain into the DeFi ecosystem</p>
+                                            <h5>{language[lang].asset_tokenization}</h5>
+                                            <p className="pt-2">{language[lang].tokenize_real_world_assets}</p>
                                         </div>
 
                                     </div>
@@ -70,8 +73,8 @@ class homePage extends Component {
                                     <div className="media">
                                         <img className="sub-service-icons" src={colloterals} alt="colloterals" />
                                         <div className="media-body ml-4">
-                                            <h5>Asset Exchange</h5>
-                                            <p className="pt-2">Cross-chain exchange of crypto and real-world assets (NFT marketplaces)</p>
+                                            <h5>{language[lang].asset_exchange}</h5>
+                                            <p className="pt-2">{language[lang].cross_chanin_exchange}</p>
                                         </div>
 
                                     </div>
@@ -83,8 +86,8 @@ class homePage extends Component {
                                     <div className="media">
                                         <img className="sub-service-icons" src={liquidpools} alt="liquidpools" />
                                         <div className="media-body ml-4">
-                                            <h5>Liquidity Aggregation</h5>
-                                            <p className="pt-2">Invest/lend to a variety of diversified real-world asset-backed Stablecoin liquidity pools</p>
+                                            <h5>{language[lang].liquidity_aggregation}</h5>
+                                            <p className="pt-2">{language[lang].invest_lend}</p>
                                         </div>
 
                                     </div>
@@ -96,7 +99,7 @@ class homePage extends Component {
 
                 </section>
                 <section className="section-slider" id="products">
-                    <h3>Products</h3>
+                    <h3>{language[lang].products}</h3>
                     <div className="container">
                         <div className="row head-slider">
                             <Slider />
@@ -107,18 +110,18 @@ class homePage extends Component {
                 <Products />
 
                 <section className="validators-section" id="validators">
-                    <h3>Validators</h3>
+                    <h3>{language[lang].validators}</h3>
                     <div className="container">
                         <Validator />
                     </div>
-                    <p>Selected list of top validators in our ecosystem <span className="second-p">secure more than $700M USD worth of assets collectively</span></p> 
+                    <p>{language[lang].selected_list}<span className="second-p">{language[lang].selected_list_2}</span></p> 
                 </section>
 
                 <section className="contact-section">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
-                                <p>Join our Community</p>
+                                <p>{language[lang].join_our_community}</p>
                             </div>
                             <div className="col-lg-6 form-container form-md">
                                 <MailChimp />
@@ -137,4 +140,11 @@ class homePage extends Component {
 
 
 }
-export default homePage;
+
+const mapStateToProps = state => {
+    return {
+        lang: state.language.language,
+    }
+};
+
+export default connect(mapStateToProps)(homePage);

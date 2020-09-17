@@ -18,7 +18,7 @@ class App extends Component {
             <Route exact path="/" component={homepage} />
             <Route path="/team" component={Team} />
             <Route path="/roadmap" component={Roadmap} />
-            <Route path="/content" component={AppContainer} />
+            <Route path="/app" component={AppContainer} />
           </Switch>   
         </React.Suspense>
       </Router>

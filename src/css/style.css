@@ -1,5 +1,6 @@
-body {
+html, body, .persistence {
   font-family: 'Montserrat', sans-serif;
+  height: 100%;
 }
 
 ::-moz-selection {
@@ -242,10 +243,7 @@ input:focus {
 
 .navbar-custom .navbar-nav li a {
   color: #F9F9F9 !important;
-}
-
-.navbar-custom .navbar-nav li li:last-child a {
-  margin: 0 0;
+  text-transform: capitalize;
 }
 
 .navbar-custom .navbar-brand {
@@ -277,6 +275,11 @@ input:focus {
   border: 1px solid #E50913;
   background: #E50913;
   color: #F9F9F9;
+}
+
+.navbar-custom .header-buttons .goto-button {
+  color: #000000 !important;
+  font-weight: 500;
 }
 
 .navbar-custom .team-link {
@@ -391,6 +394,331 @@ input:focus {
 
 .overview {
   text-align: center;
+}
+
+.app-body {
+  background: #E5E5E5;
+  height: 100vh;
+}
+
+.app-body .navbar-custom {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
+}
+
+.app-body .navbar-custom .navbar-nav li a:hover {
+  color: #414141;
+  font-weight: 500;
+}
+
+.app-body .tabSection {
+  padding-top: 100px;
+}
+
+.app-body .tabSection .col-lg-4 {
+  background-color: #FFFFFF;
+  padding: 0;
+}
+
+.app-body .tabSection .wallet-container {
+  padding-bottom: 20px;
+}
+
+.app-body .tabSection .wallet-container .title-section {
+  padding: 15px 25px;
+  color: #414141;
+  font-weight: bold;
+}
+
+.app-body .tabSection .wallet-container .title-section img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .wallet-container .title-section p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance {
+  padding: 15px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F7F7F7;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance p {
+  margin: 0;
+  color: #E50913;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance .form-group label {
+  display: none;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance .form-group .form-control {
+  background: #F9F9F9;
+  padding: .475rem .75rem;
+  height: 45px;
+  font-weight: 500;
+}
+
+.app-body .tabSection .wallet-container .wallet-balance .form-group .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-deeds {
+  margin: 15px 25px;
+  background: #F7F7F7;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-deeds p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-deeds p img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .wallet-container .wallet-invoice {
+  background: #F7F7F7;
+  margin: 15px 25px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-invoice p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-invoice p img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .wallet-container .wallet-obl {
+  margin: 15px 25px;
+  background: #F7F7F7;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .tabSection .wallet-container .wallet-obl p {
+  margin: 0;
+}
+
+.app-body .tabSection .wallet-container .wallet-obl p img {
+  margin-right: 15px;
+}
+
+.app-body .tabSection .tabs-container {
+  background-color: #ffffff;
+}
+
+.app-body .tabSection .tabs-container .tab-content form {
+  padding: 80px 0;
+  width: 255px;
+  margin: auto;
+}
+
+.app-body .tabSection .tabs-container .tab-content form label {
+  color: #414141;
+  font-weight: 500;
+}
+
+.app-body .tabSection .tabs-container .tab-content form .form-control {
+  background: #F9F9F9;
+  border: 0;
+  color: #636363;
+  padding: .475rem .75rem;
+  height: 45px;
+  font-weight: 500;
+}
+
+.app-body .tabSection .tabs-container .tab-content form .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: 0;
+}
+
+.app-body .tabSection .tabs-container .tab-content form button {
+  background: #FFFFFF;
+  border: 1px solid #E50913;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 58px;
+  width: 100%;
+  color: #E50913;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form {
+  position: relative;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .icon {
+  position: absolute;
+  top: 210px;
+  left: -25px;
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section {
+  background: #F6F6F6;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .receive-section {
+  background: #FFFFFF;
+  border: 1px solid #EFE7E7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:first-child,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:first-child {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  margin-right: 10px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:first-child label,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:first-child label {
+  color: #414141;
+  font-size: 14px;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child label,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child label {
+  visibility: hidden;
+}
+
+.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child input,
+.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child input {
+  color: #414141;
+  font-weight: 600;
+  font-size: 20px;
+  background: #FFFFFF;
+  -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-body .tabSection .tabs-container .lending-container {
+  padding: 50px 30px;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #F5F5F5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #414141;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard p:first-child {
+  color: #E50913;
+}
+
+.app-body .tabSection .tabs-container .lending-container .listCard p:last-child {
+  color: #414141;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-link {
+  color: #414141;
+  font-weight: bold;
+  padding: 15px 30px;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-link:focus {
+  outline: 0;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+
+.app-body .tabSection .tabs-container .nav-tabs .nav-item.show .nav-link,
+.app-body .tabSection .tabs-container .nav-tabs .nav-link.active {
+  color: #E50913;
+  font-weight: bold;
+  border-bottom: 3px solid #E50913;
+  border-color: #fff #fff #E50913;
+  outline: 0;
 }
 
 .section-1 .title {
@@ -1092,7 +1420,7 @@ input:focus {
 
 .roadmap-section .icon-bg {
   background: #2C2525;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 
 .roadmap-section .content {
@@ -1222,14 +1550,95 @@ input:focus {
 }
 
 .app-body {
-  background: #E5E5E5;
-  height: 100vh;
+  background: #EDF0F5;
+  position: relative;
+  min-height: 100vh;
 }
 
-.app-body .navbar-custom {
-  background: #FFFFFF;
-  -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
+.app-body .navbar-custom .navbar-toggler {
+  color: #2C2525;
+}
+
+.app-body .navbar-custom .navbar-nav.app-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-body .navbar-custom .navbar-nav li.app-nav li a {
+  color: #414141 !important;
+  text-transform: capitalize;
+  margin: 0 15px;
+}
+
+.app-body .navbar-custom .navbar-nav li.app-nav li .dropdown-menu {
+  background-color: #fff;
+}
+
+.app-body .profile-picture {
+  width: 31px;
+  height: 31px;
+  background: #E4E4E4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  color: #2C2525;
+  font-weight: bold;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5px;
+}
+
+.app-body .header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+}
+
+.app-body .header-info li {
+  margin-bottom: 5px;
+}
+
+.app-body .header-info .result {
+  color: #63B036;
+  font-weight: 500;
+  padding-right: 5px;
+}
+
+.app-body .header-info .profile {
+  width: 20px;
+  height: 20px;
+  padding: 2px 5px;
+  margin-left: 15px;
+  border-radius: 3px;
+  background-color: #7A8093;
+}
+
+.app-body .header-info .form-group {
+  margin: 0 0 0 10px;
+}
+
+.app-body .header-info .form-group select {
+  background-color: #FFFFFF;
+  border: 1px solid #EFF1F6;
+  color: #000000;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .app-body .navbar-custom .navbar-nav li a:hover {
@@ -1237,34 +1646,103 @@ input:focus {
   font-weight: 500;
 }
 
-.app-body .tabSection {
-  padding-top: 100px;
+.app-body .tab-section {
+  padding: 70px 0px 3.5rem 0;
+  height: inherit;
 }
 
-.app-body .tabSection .col-lg-4 {
+.app-body .tab-section .col-lg-4 {
   background-color: #FFFFFF;
   padding: 0;
+  border: 1px solid #E8EAF1;
 }
 
-.app-body .tabSection .wallet-container {
-  padding-bottom: 20px;
+.app-body .tab-section .col-lg-8 {
+  border: 1px solid #E8EAF1;
+  border-left: 0px solid;
 }
 
-.app-body .tabSection .wallet-container .title-section {
+.app-body .tab-section .wallet-container .wallet-top-section .title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+}
+
+.app-body .tab-section .wallet-container .wallet-top-section .wallet-top-section-body {
+  padding: 15px;
+}
+
+.app-body .tab-section .wallet-container .title-section {
   padding: 15px 25px;
-  color: #414141;
+  color: #2C2525;
   font-weight: bold;
+  border-bottom: 1px solid #E8EAF1;
 }
 
-.app-body .tabSection .wallet-container .title-section img {
+.app-body .tab-section .wallet-container .title-section img {
   margin-right: 15px;
 }
 
-.app-body .tabSection .wallet-container .title-section p {
+.app-body .tab-section .wallet-container .title-section p {
   margin: 0;
+  margin: 0;
+  font-size: 14px;
 }
 
-.app-body .tabSection .wallet-container .wallet-balance {
+.app-body .tab-section .wallet-container .list {
+  padding: 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  background: #FCFCFC;
+}
+
+.app-body .tab-section .wallet-container .list .title {
+  color: #7A8093;
+  margin: 0px;
+  font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.app-body .tab-section .wallet-container .list .title img {
+  padding-right: 10px;
+}
+
+.app-body .tab-section .wallet-container .list .list-value-section {
+  text-align: right;
+}
+
+.app-body .tab-section .wallet-container .list .list-value {
+  font-size: 18px;
+  color: #2C2525;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.app-body .tab-section .wallet-container .list .sub-item {
+  font-size: 10px;
+  color: #7B7B7B;
+  margin: 0px;
+}
+
+.app-body .tab-section .wallet-container .wallet-balance {
   padding: 15px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1278,32 +1756,32 @@ input:focus {
           justify-content: space-between;
 }
 
-.app-body .tabSection .wallet-container .wallet-balance p {
+.app-body .tab-section .wallet-container .wallet-balance p {
   margin: 0;
   color: #E50913;
   font-weight: bold;
   font-size: 22px;
 }
 
-.app-body .tabSection .wallet-container .wallet-balance .form-group label {
+.app-body .tab-section .wallet-container .wallet-balance .form-group label {
   display: none;
 }
 
-.app-body .tabSection .wallet-container .wallet-balance .form-group .form-control {
+.app-body .tab-section .wallet-container .wallet-balance .form-group .form-control {
   background: #F9F9F9;
   padding: .475rem .75rem;
   height: 45px;
   font-weight: 500;
 }
 
-.app-body .tabSection .wallet-container .wallet-balance .form-group .form-control:focus {
+.app-body .tab-section .wallet-container .wallet-balance .form-group .form-control:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-color: 0;
 }
 
-.app-body .tabSection .wallet-container .wallet-deeds {
+.app-body .tab-section .wallet-container .wallet-deeds {
   margin: 15px 25px;
   background: #F7F7F7;
   padding: 15px;
@@ -1315,15 +1793,15 @@ input:focus {
           justify-content: space-between;
 }
 
-.app-body .tabSection .wallet-container .wallet-deeds p {
+.app-body .tab-section .wallet-container .wallet-deeds p {
   margin: 0;
 }
 
-.app-body .tabSection .wallet-container .wallet-deeds p img {
+.app-body .tab-section .wallet-container .wallet-deeds p img {
   margin-right: 15px;
 }
 
-.app-body .tabSection .wallet-container .wallet-invoice {
+.app-body .tab-section .wallet-container .wallet-invoice {
   background: #F7F7F7;
   margin: 15px 25px;
   padding: 15px;
@@ -1335,15 +1813,15 @@ input:focus {
           justify-content: space-between;
 }
 
-.app-body .tabSection .wallet-container .wallet-invoice p {
+.app-body .tab-section .wallet-container .wallet-invoice p {
   margin: 0;
 }
 
-.app-body .tabSection .wallet-container .wallet-invoice p img {
+.app-body .tab-section .wallet-container .wallet-invoice p img {
   margin-right: 15px;
 }
 
-.app-body .tabSection .wallet-container .wallet-obl {
+.app-body .tab-section .wallet-container .wallet-obl {
   margin: 15px 25px;
   background: #F7F7F7;
   padding: 15px;
@@ -1355,62 +1833,97 @@ input:focus {
           justify-content: space-between;
 }
 
-.app-body .tabSection .wallet-container .wallet-obl p {
+.app-body .tab-section .wallet-container .wallet-obl p {
   margin: 0;
 }
 
-.app-body .tabSection .wallet-container .wallet-obl p img {
+.app-body .tab-section .wallet-container .wallet-obl p img {
   margin-right: 15px;
 }
 
-.app-body .tabSection .tabs-container {
+.app-body .tab-section .tabs-container {
   background-color: #ffffff;
 }
 
-.app-body .tabSection .tabs-container .tab-content form {
-  padding: 80px 0;
-  width: 255px;
-  margin: auto;
+.app-body .tab-section .tabs-container .tab-content {
+  padding: 15px 15px 30px 15px;
 }
 
-.app-body .tabSection .tabs-container .tab-content form label {
+.app-body .tab-section .tabs-container .tab-content form label {
   color: #414141;
   font-weight: 500;
 }
 
-.app-body .tabSection .tabs-container .tab-content form .form-control {
-  background: #F9F9F9;
-  border: 0;
+.app-body .tab-section .tabs-container .tab-content form .form-control {
+  background: #FFFFFF;
+  border: 1px solid #E8EAF1;
   color: #636363;
   padding: .475rem .75rem;
   height: 45px;
   font-weight: 500;
 }
 
-.app-body .tabSection .tabs-container .tab-content form .form-control:focus {
+.app-body .tab-section .tabs-container .tab-content form .form-control:focus {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-color: 0;
 }
 
-.app-body .tabSection .tabs-container .tab-content form button {
-  background: #FFFFFF;
-  border: 1px solid #E50913;
+.app-body .tab-section .tabs-container .tab-content form button {
+  background: #2A2A29;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 58px;
-  width: 100%;
-  color: #E50913;
+  border-radius: 0px;
+  color: #FFFFFF;
+  width: 150px;
   font-weight: bold;
   margin-top: 20px;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form {
+.app-body .tab-section .tabs-container .tab-content form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.app-body .tab-section .tabs-container .tab-content form .form-group .label-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FCFCFC;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 15px;
+  border: 1px solid #E8EAF1;
+}
+
+.app-body .tab-section .tabs-container .tab-content form .form-group .label-section label {
+  margin: 0;
+  color: #999999;
+}
+
+.app-body .tab-section .tabs-container .tab-content form .form-group select, .app-body .tab-section .tabs-container .tab-content form .form-group input {
+  font-size: 14px;
+}
+
+.app-body .tab-section .tabs-container .tab-content form .form-group-submit {
+  text-align: center;
+}
+
+.app-body .tab-section .tabs-container .tab-content form .form-group-submit button {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.app-body .tab-section .tabs-container .exchange-container form {
   position: relative;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .icon {
+.app-body .tab-section .tabs-container .exchange-container form .icon {
   position: absolute;
   top: 210px;
   left: -25px;
@@ -1431,53 +1944,53 @@ input:focus {
           box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .paying-section {
+.app-body .tab-section .tabs-container .exchange-container form .paying-section {
   background: #F6F6F6;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .receive-section {
+.app-body .tab-section .tabs-container .exchange-container form .receive-section {
   background: #FFFFFF;
   border: 1px solid #EFE7E7;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .paying-section,
-.app-body .tabSection .tabs-container .exchange-container form .receive-section {
+.app-body .tab-section .tabs-container .exchange-container form .paying-section,
+.app-body .tab-section .tabs-container .exchange-container form .receive-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 30px;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:first-child,
-.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:first-child {
+.app-body .tab-section .tabs-container .exchange-container form .paying-section .form-group:first-child,
+.app-body .tab-section .tabs-container .exchange-container form .receive-section .form-group:first-child {
   -webkit-box-flex: 40%;
       -ms-flex: 40%;
           flex: 40%;
   margin-right: 10px;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:first-child label,
-.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:first-child label {
+.app-body .tab-section .tabs-container .exchange-container form .paying-section .form-group:first-child label,
+.app-body .tab-section .tabs-container .exchange-container form .receive-section .form-group:first-child label {
   color: #414141;
   font-size: 14px;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child,
-.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child {
+.app-body .tab-section .tabs-container .exchange-container form .paying-section .form-group:last-child,
+.app-body .tab-section .tabs-container .exchange-container form .receive-section .form-group:last-child {
   -webkit-box-flex: 20%;
       -ms-flex: 20%;
           flex: 20%;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child label,
-.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child label {
+.app-body .tab-section .tabs-container .exchange-container form .paying-section .form-group:last-child label,
+.app-body .tab-section .tabs-container .exchange-container form .receive-section .form-group:last-child label {
   visibility: hidden;
 }
 
-.app-body .tabSection .tabs-container .exchange-container form .paying-section .form-group:last-child input,
-.app-body .tabSection .tabs-container .exchange-container form .receive-section .form-group:last-child input {
+.app-body .tab-section .tabs-container .exchange-container form .paying-section .form-group:last-child input,
+.app-body .tab-section .tabs-container .exchange-container form .receive-section .form-group:last-child input {
   color: #414141;
   font-weight: 600;
   font-size: 20px;
@@ -1486,11 +1999,11 @@ input:focus {
           box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.app-body .tabSection .tabs-container .lending-container {
+.app-body .tab-section .tabs-container .lending-container {
   padding: 50px 30px;
 }
 
-.app-body .tabSection .tabs-container .lending-container .listCard {
+.app-body .tab-section .tabs-container .lending-container .listCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1508,42 +2021,388 @@ input:focus {
   margin-bottom: 10px;
 }
 
-.app-body .tabSection .tabs-container .lending-container .listCard p {
+.app-body .tab-section .tabs-container .lending-container .listCard p {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
   color: #414141;
 }
 
-.app-body .tabSection .tabs-container .lending-container .listCard p:first-child {
+.app-body .tab-section .tabs-container .lending-container .listCard p:first-child {
   color: #E50913;
 }
 
-.app-body .tabSection .tabs-container .lending-container .listCard p:last-child {
+.app-body .tab-section .tabs-container .lending-container .listCard p:last-child {
   color: #414141;
 }
 
-.app-body .tabSection .tabs-container .nav-tabs .nav-link {
-  color: #414141;
-  font-weight: bold;
+.app-body .tab-section .tabs-container .nav-tabs .nav-link {
+  border-radius: 0;
+  color: #2C2525;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  background-color: #FCFCFC;
   padding: 15px 30px;
+  border: 1px solid #E8EAF1;
+  width: 50%;
 }
 
-.app-body .tabSection .tabs-container .nav-tabs .nav-link:focus {
+.app-body .tab-section .tabs-container .nav-tabs .nav-link:focus {
   outline: 0;
 }
 
-.app-body .tabSection .tabs-container .nav-tabs .nav-link:hover {
-  border-color: transparent;
+.app-body .tab-section .tabs-container .nav-tabs .nav-link:first-child {
+  border-right: none;
+  border-left: none;
 }
 
-.app-body .tabSection .tabs-container .nav-tabs .nav-item.show .nav-link,
-.app-body .tabSection .tabs-container .nav-tabs .nav-link.active {
-  color: #E50913;
+.app-body .tab-section .tabs-container .nav-tabs .nav-link:last-child {
+  border-right: none;
+}
+
+.app-body .tab-section .tabs-container .nav-tabs .nav-item.show .nav-link,
+.app-body .tab-section .tabs-container .nav-tabs .nav-link.active {
+  background: #FFFFFF;
+  color: #393333;
+  font-weight: 600;
+  outline: 0;
+}
+
+.app-body .right-section {
+  background: #F5F7FA;
+  padding: 0px;
+}
+
+.app-body .right-section .header-section {
+  height: 65px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-body .right-section .header-section .navigation-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+}
+
+.app-body .right-section .header-section .navigation-arrows img:first-child {
+  margin-right: 20px;
+}
+
+.app-body .right-section .header-section .navigation-arrows div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-body .right-section .header-section .navigation-arrows div a {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #2C2525;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.app-body .right-section .right-section-body {
+  padding: 10px 30px 60px 30px;
+}
+
+.app-body .right-section .right-section-body .info {
+  color: #231F20;
+  font-weight: 500;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 2;
+  padding-top: 20px;
+}
+
+.app-body .right-section .right-section-body table thead tr th {
+  border-bottom: 0px solid;
+}
+
+.app-body .right-section .right-section-body table th {
+  font-weight: 500;
+  color: #7A8093;
+  font-size: 12px;
+}
+
+.app-body .right-section .right-section-body table tr td {
+  padding: 20px .85rem;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  color: #7A8093;
+  font-size: 12px;
+}
+
+.app-body .right-section .right-section-body table tr td:first-child {
+  padding-left: 25px;
+  font-weight: 600;
+  border-left: 1px solid #dee2e6;
+}
+
+.app-body .right-section .right-section-body table tr td:nth-child(2) {
   font-weight: bold;
-  border-bottom: 3px solid #E50913;
-  border-color: #fff #fff #E50913;
-  outline: 0;
+  color: #231F20;
+  font-weight: 600;
+}
+
+.app-body .right-section .right-section-body table tr td:last-child {
+  border-right: 1px solid #dee2e6;
+}
+
+.app-body .right-section .right-section-body table tr td:last-child .button-app {
+  color: #E50913;
+  font-weight: 500;
+  border: 1px solid #EFF1F6;
+  padding: 7px 20px;
+}
+
+.app-body .right-section .right-section-body table tr th:first-child {
+  padding-left: 25px;
+}
+
+.app-body .right-section .right-section-body table tbody {
+  background: #FFFFFF;
+}
+
+.app-body .right-section .right-section-body .pool-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #E50913;
+}
+
+.app-body .right-section .right-section-body .poolCards .col-lg-6 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.app-body .right-section .right-section-body .poolCards .col-lg-6:last-child {
+  margin-top: 15px;
+}
+
+.app-body .right-section .right-section-body .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 30px;
+}
+
+.app-body .right-section .right-section-body .card-body .icon-part img {
+  padding: 0px 35px 0 0;
+}
+
+.app-body .right-section .right-section-body .card-body .content-part h4 {
+  color: #2C2525;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.app-body .right-section .right-section-body .card-body .content-part p {
+  margin: 0;
+  color: #7A8093;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 0 10px 0;
+}
+
+.app-body .right-section .right-section-body .card-body .content-part p:last-child {
+  padding: 0;
+}
+
+.app-body .right-section .right-section-body .card-footer {
+  padding: 15px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app-body .right-section .right-section-body .card-footer p {
+  margin: 0;
+  padding: 0;
+  color: #E50913;
+  font-weight: 600;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom p {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #E8EAF1;
+  margin: 30px 0px;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom p span {
+  color: #7A8093;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .pool-select {
+  font-size: 14px;
+  color: #AFAFAF;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content {
+  padding: 15px 15px 30px 15px;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-fields .form-group:first-child {
+  margin: 0 0 -5px 0;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-fields .form-group:first-child select {
+  border-radius: 0px;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form label {
+  color: #414141;
+  font-weight: 500;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-control {
+  background: #FFFFFF;
+  border: 1px solid #E8EAF1;
+  color: #636363;
+  padding: .475rem .75rem;
+  height: 45px;
+  font-weight: 500;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: 0;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form button {
+  background: #2A2A29;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0px;
+  color: #FFFFFF;
+  width: 150px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group {
+  font-size: 14px;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group .label-section label {
+  margin: 0;
+  color: #999999;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group select, .app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group input {
+  font-size: 14px;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group .input-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group .input-section span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FCFCFC;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 15px;
+  font-weight: 600;
+  color: #999999;
+  border: 1px solid #E8EAF1;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group .input-section input {
+  border-radius: 0;
+  border-left: 0px solid;
+}
+
+.app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group-submit button {
+  width: 320px;
+  margin-left: 220px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.app-body .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7B7B7B;
+  padding: 0;
+  border: none;
+  margin-top: 0;
+}
+
+.app-body .footer .row div {
+  padding: 0;
+}
+
+.app-body .footer .copyright {
+  margin: 0;
+  float: left;
+  left: 50%;
+  position: relative;
+}
+
+.app-body .footer .footer-button {
+  float: right;
+}
+
+.app-body .footer .footer-button .goto-button {
+  color: #000000 !important;
+  font-weight: 500;
 }
 
 .quote-section {
@@ -1889,8 +2748,18 @@ input:focus {
   .persistence .carousel-item .d-none {
     display: block !important;
   }
-  .persistence .app-body .tabSection .col-lg-4 {
-    margin: 15px;
+  .persistence .app-body {
+    height: auto;
+  }
+  .persistence .app-body .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .persistence .app-body .tab-section .col-lg-4 {
+    margin: 15px 0;
+  }
+  .persistence .app-body .tab-section .col-lg-8 {
+    margin: 0;
   }
   .persistence .section-products .comdex-section .comdex-button {
     display: block;
@@ -1970,6 +2839,21 @@ input:focus {
   .section-1 .first-section-social-icons li.whitepaper {
     display: none;
   }
+  .app-body .right-section .right-section-body {
+    padding: 10px 15px;
+  }
+  .app-body .right-section .right-section-body .card-body {
+    padding: 20px 20px;
+  }
+  .app-body .right-section .right-section-body .card-body .icon-part img {
+    padding: 0px 25px 0 0;
+  }
+  .app-body .right-section .right-section-body .card-body .content-part h4 {
+    font-size: 16px;
+  }
+  .right-section-body .poolCards .col-lg-6:first-child {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
@@ -1977,7 +2861,6 @@ input:focus {
     font-size: 12px;
   }
   .navbar-custom .navbar-brand img {
-    height: auto;
     width: 135px;
   }
 }
@@ -2005,7 +2888,55 @@ input:focus {
   }
 }
 
+@media (max-width: 390px) {
+  .navbar-custom .navbar-nav.app-nav {
+    margin-left: 0;
+  }
+  .app-body .tab-section {
+    padding: 70px 0px;
+  }
+}
+
+@media (max-width: 495px) {
+  .app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-fields {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-fields .form-group {
+    width: 100% !important;
+  }
+  .app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-fields .form-group:first-child {
+    margin: 0 0 10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .roadmap-section .icon-bg {
+    padding: 5px 10px;
+    width: 55px;
+  }
+  .roadmap-section .ixo {
+    height: 20px;
+  }
+  .roadmap-section .terra, .roadmap-section .wu {
+    width: 50px;
+    height: 20px;
+  }
+}
+
 @media (max-width: 767px) {
+  .app-body .footer .copyright {
+    left: 0;
+  }
+  .app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group-submit {
+    text-align: center;
+  }
+  .app-body .right-section .right-section-body .right-section-body-bottom .tab-content form .form-group-submit button {
+    width: 200px;
+    margin-left: auto;
+  }
   .roadmap-section .roadmap-head {
     color: #dadada;
     font-weight: 700;
@@ -2041,7 +2972,6 @@ input:focus {
             box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.5);
   }
   .navbar-custom .navbar-brand img {
-    height: auto;
     width: 150px;
   }
 }
