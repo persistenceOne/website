@@ -1,11 +1,14 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Deploy to Production
 
 on:
   push:
-    branches: [master]
+    tags:
+      - "v*"
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -21,18 +24,21 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build --if-present
+      - name: Install dependencies
+        run: npm ci
+      - name: Build react project
+        run: npm run build --if-present
         env:
           REACT_APP_MAIL_CHIMP_URL: ${{ secrets.MAILCHIMP }}
-      - uses: montudor/action-zip@v0.1.0
+      - name: zip up the build
+        uses: montudor/action-zip@v0.1.0
         with:
           args: zip -qq -r build.zip build
       - name: Operations
         uses: alinz/ssh-scp-action@master
         with:
-          key: ${{ secrets.SSH_KEY }}
-          host: ${{ secrets.HOST }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          host: ${{ secrets.PROD_HOST }}
           port: 22
           user: ${{ secrets.USERNAME }}
           # runs this on remove server
@@ -40,7 +46,7 @@ jobs:
             rm -r build.zip
           # then uploads these 2 files
           scp: |
-            build.zip ${{ secrets.USERNAME }}@${{ secrets.HOST }}:~/build.zip
+            build.zip ${{ secrets.USERNAME }}@${{ secrets.PROD_HOST }}:~/build.zip
 
           # then run these commands
           ssh_after: |
