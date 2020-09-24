@@ -4,9 +4,6 @@
 name: Deploy to Production
 
 on:
-  push:
-    tags:
-      - "v*"
   release:
     types: [created]
 
