@@ -8,6 +8,7 @@ import LangDropDown from './langDropDown';
 import language from '../translationlang';
 
 
+
 class Header extends Component {
 
     constructor(props) {
@@ -53,10 +54,13 @@ class Header extends Component {
                                         <li className="nav-item active"><a href="#products" className="nav-link">{language[lang].products}</a></li>
                                         <li className="nav-item"><a href="#useCases" className="nav-link">{language[lang].usecase}</a></li>
                                         <li className="nav-item"><a href="#validators" className="nav-link">{language[lang].validators}</a></li>
+                                         
                                     </ul>
 
                                 </ScrollspyNav>
                                 <ul className="navbar-nav navbar-left team-link">
+                                {/* <li className="nav-item"><Link className="nav-link" to="stakedrop">Stakedrop</Link></li>  */}
+                                   
                                     <li className="nav-item dropdown">
                                     <NavDropdown title={language[lang].about} id="basic-nav-dropdown">
                                         <NavDropdown.Item><Link to="team">{language[lang].team}</Link></NavDropdown.Item>
