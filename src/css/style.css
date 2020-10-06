@@ -396,6 +396,18 @@ input:focus {
   text-align: center;
 }
 
+.stakedrop-section {
+  background: #000000;
+  padding-top: 240px;
+  padding-bottom: 120px;
+}
+
+.stakedrop-section .stake-title {
+  color: #fff;
+  font-weight: 800;
+  width: 90%;
+}
+
 .app-body {
   background: #E5E5E5;
   height: 100vh;

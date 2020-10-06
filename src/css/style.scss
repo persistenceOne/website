@@ -364,6 +364,17 @@ input:focus {
   .overview {
 	  text-align: center;
   }
+  // stakedrop css
+  .stakedrop-section {
+	background: #000000;
+	padding-top: 240px;
+	padding-bottom: 120px;
+	.stake-title {
+		color:#fff;
+		font-weight: 800;
+		width: 90%;
+	}
+}
 //   app body old design css
 .app-body {
 	background: #E5E5E5;
@@ -2075,6 +2086,7 @@ input:focus {
 			}
 		}
 	}
+	
 	.footer {
 		position: absolute;
     bottom: 0;

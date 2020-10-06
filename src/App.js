@@ -6,6 +6,7 @@ const Team = React.lazy(() => import('./webpages/components/team'));
 const Roadmap = React.lazy(() => import('./webpages/components/roadmap'));
 const AppContainer = React.lazy(() => import('./webpages/components/appContainer'));
 const homepage = React.lazy(() => import('./webpages/homepage'));
+const stakedrop = React.lazy(() => import('./webpages/components/stakedrop'));
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/team" component={Team} />
             <Route path="/roadmap" component={Roadmap} />
             <Route path="/app" component={AppContainer} />
+            <Route path="/stakedrop" component={stakedrop} />
           </Switch>   
         </React.Suspense>
       </Router>
