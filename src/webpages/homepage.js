@@ -29,6 +29,7 @@ import sgone from '../assets/backers/sg-1.svg';
 import Spark from '../assets/backers/Spark.svg';
 import terra from '../assets/backers/terra.svg';
 import woodstock from '../assets/backers/woodstock.svg';
+import icf from '../assets/backers/ICF.svg';
 
 
 
@@ -161,7 +162,7 @@ class homePage extends Component {
                         <img className="logo-img" src={alamedaresearch} alt="Alameda" />
                         <img className="logo-img" src={arrington} alt="Arrington" />
                         <img className="logo-img" src={terra} alt="Terra" />
-                        <img className="logo-img" src={terra} alt="ICF" />
+                        <img className="logo-img" src={icf} alt="ICF" />
                         </div>
                         <div className="common-row second-row">
                         <img className="logo-img" src={lunex} alt="LuneX" />
