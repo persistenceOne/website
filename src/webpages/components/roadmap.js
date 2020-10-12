@@ -1,17 +1,16 @@
 import React from 'react';
-import LangDropDown from './langDropDown';
+
 import language from '../translationlang';
 import { connect } from 'react-redux';
 import Footer from '../components/footer'
-import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom'
+import Header from '../components/header';
 import link from '../../assets/link.png'
 import roadmapComdex from '../../assets/roadmap-comdex.svg'
 import comdexIcon from '../../assets/comdex-icon.svg'
 import terraIcon from '../../assets/terra-icon.svg'
 import ixoIcon from '../../assets/ixo-icon.svg'
 import wuIcon from '../../assets/WU-icon.svg'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+
 
 class Roadmap extends React.Component {
     constructor(props) {
@@ -21,13 +20,13 @@ class Roadmap extends React.Component {
             isOpen: false
         };
 
-        this.toggleMenu = this.toggleMenu.bind(this);
+       
     }
 
-    toggleMenu = () => {
-        this.setState({ isOpen: !this.state.isOpen });
-    }
+   
     componentDidMount() {
+        document.body.classList = "";
+       
         var today = new Date();
         var year = today.getFullYear();
         var month = today.getMonth() + 1;
@@ -38,54 +37,16 @@ class Roadmap extends React.Component {
         // if(element){
         //     document.getElementById("timeline-"+year+"-"+quarter).classList.add('active');
         // }
-        document.getElementById('nav-bar-team').classList.add('navbar-white');
+        
     }
 
     render() {
         const { lang } = this.props;
         return (
             <div>
-                <div id="sdis-sticky">
-                    <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar-team">
-                        <div className="container">
-                            <Link className="navbar-brand logo text-uppercase" to="/">
-                                <img src={logo} alt="logo" /></Link>
-
-                            <button className="navbar-toggler" onClick={this.toggleMenu} type="button">
-                                <i className="mdi mdi-menu"></i>
-                            </button>
-                            <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
-                                <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                    <li className="nav-item active"><Link className="nav-link" to="/">{language[lang].products}</Link></li>
-                                    <li className="nav-item"><Link className="nav-link" to="/" data-target="#useCases">{language[lang].usecase}</Link></li>
-                                    <li className="nav-item"><Link className="nav-link" to="/">{language[lang].validators}</Link></li>
-                                    <li class="nav-item dropdown">
-                                        <NavDropdown title={language[lang].about} id="basic-nav-dropdown">
-                                            <NavDropdown.Item><Link to="team">{language[lang].team}</Link></NavDropdown.Item>
-                                            <NavDropdown.Item href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link-custom">{language[lang].blog}</NavDropdown.Item>
-                                            <NavDropdown.Item><Link to="roadmap">{language[lang].roadmap}</Link></NavDropdown.Item>
-                                        </NavDropdown>
-                                    </li>
-                                    <li className="nav-item"><LangDropDown /></li>
-                                </ul>
-
-                                <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
-                                    <ul className="nav navbar-nav navbar-left">
-
-                                        <li>
-
-                                            <div className="header-buttons">
-                                                <a href="https://explorer.persistence.one/" className="button-explorer" rel="noopener noreferrer" target="_blank">{language[lang].explorer}</a>
-                                                <Link className="button-app" to="app">{language[lang].app}</Link>
-
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
+                
+                
+                <Header />
                 <section className="roadmap-section">
                     <div className="container">
 
