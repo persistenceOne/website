@@ -1,8 +1,8 @@
 import React from 'react';
 import language from '../translationlang';
 import { connect } from 'react-redux';
-import quotes1 from '../../assets/quotes1.png'
-import quotes2 from '../../assets/quotes2.png'
+// import quotes1 from '../../assets/quotes1.png'
+// import quotes2 from '../../assets/quotes2.png'
 import Footer from '../components/footer';
 import Header from '../components/header';
 import pic1 from '../../assets/pics/pic1.png'
@@ -34,18 +34,19 @@ class Team extends React.Component {
     render() {
         const { lang } = this.props;
         return (
-            <div>
+            <div className="team-bglines">
                  <Header />
                 
                 <section className="quote-section">
                     <div className="container">
                         <div className="quote-box">
-                            <div className="quote-intial"><img src={quotes1} alt="quote1" /></div>
+                            <div className="quote-box-side">
                             <p>{language[lang].team_page_title}</p>
                             <p>{language[lang].our_cto}
                                 
                         </p>
-                            <div className="quote-final"><img src={quotes2} alt="quote2" /></div>
+                        </div>
+                           
                         </div>
                     </div>
                 </section>

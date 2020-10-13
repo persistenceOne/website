@@ -30,19 +30,19 @@ const Slider = (props) => {
         {
             src: layer1,
             altText: 'Slide 2',
-            captionalt: 'The Persistence dApp is a crypto user-facing dApp to aggregate liquidity from crypto investors/lenders.',
-            caption5: 'The Comdex dApp Is an institutional user-facing dApp that aggregates liquidity from institutional investors/lenders and has facilitated $30 Million worth of transactions'
+            captionalt: language[props.lang].persistence_dapp,
+            caption5: language[props.lang].comdex_dapp,
     
         },
         {
             src: layer2,
             altText: 'Slide 3',
-            captionalt: 'The Persistence SDK contains the building blocks (modules) for Asset Tokenization, Decentralized Exchange of Assets and Financing against real-world assets as collateral'
+            captionalt:language[props.lang].p_sdk,
         },
         {
             src: layer3,
             altText: 'Slide 4',
-            captionalt: 'The Persistence chain is a natively interoperable chain that facilitates auditable, verifiable logging of information'
+            captionalt: language[props.lang].p_chanin,
         }
     ];
 
