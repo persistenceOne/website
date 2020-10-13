@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import mapvideo from '../../assets/map.mp4'
+import mapvideo from '../../assets/map.mp4';
 import language from '../translationlang';
 import comdex from '../../assets/comdex.svg'
 import arrow from '../../assets/arrow2.png'

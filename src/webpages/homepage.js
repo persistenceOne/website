@@ -12,7 +12,7 @@ import proudctBg from '../assets/product_bg.jpg';
 import nfts from '../assets/nfts.png';
 import colloterals from '../assets/colloterals.svg';
 import liquidpools from '../assets/liquidpools.png';
-import liquidpools1 from '../assets/liquidpools1.png';
+// import liquidpools1 from '../assets/liquidpools1.png';
 import rightarrow from '../assets/right-arrow.svg';
 import threecommas from '../assets/backers/three-commas.svg';
 import alamedaresearch from '../assets/backers/alameda-research.svg';
@@ -51,6 +51,7 @@ class homePage extends Component {
             <React.Fragment>
                 <Header />
                 {/* Products Section */}
+                <div className="bg-section-1">
                 <section className="section-1 bg-product product-padding" id="home" data-image-src={proudctBg}>
                     <div className="container">
                         <div className="row">
@@ -71,6 +72,7 @@ class homePage extends Component {
                         </div>
                     </div>
                 </section>
+                </div>
                 <section className="sub-section">
                     <div className="container">
                         <div className="row row-margin-nft">
@@ -122,7 +124,7 @@ class homePage extends Component {
 
                                 </div>
                             </div>
-                            <div className="margin-t-20 col-lg-6">
+                            {/* <div className="margin-t-20 col-lg-6">
                                 <div className="services-list">
                                     <div className="serviceBody">
                                         <img className="sub-service-icons" src={liquidpools1} alt="liquidpools" />
@@ -134,7 +136,7 @@ class homePage extends Component {
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                     </div>

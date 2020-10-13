@@ -3,6 +3,7 @@ import language from '../translationlang';
 import { connect } from 'react-redux';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import pstakevideo from '../../assets/PStakedrop.mp4';
 import Accordion from '../components/accordion'
 import Icon from '../icon';
 import atom_icon from '../../assets/atom.svg';
@@ -14,6 +15,7 @@ import kava_icon from '../../assets/kava.svg';
 import iris_icon from '../../assets/iris.svg';
 
 
+
 class stakedrop extends React.Component {
     constructor(props) {
         super(props);
@@ -22,10 +24,10 @@ class stakedrop extends React.Component {
             isOpen: false
         };
 
-       
+
     }
 
-   
+
 
 
     render() {
@@ -34,53 +36,66 @@ class stakedrop extends React.Component {
             <React.Fragment>
                 <Header />
                 <div>
-                    
+
                     <section className="stakedrop-section">
                         <div className="container">
                             <div className="row">
-                                <h1 className="stake-title">{language[lang].stake_drop_title} 
-                                <p className="sub-text">{language[lang].stake_drop_sub_title_1} <span>{language[lang].stake_drop_sub_title_2}</span></p></h1>
-                                <p className="sub-title title-line">{language[lang].stake_drip_des}</p>
-                                <div className="col-lg-12 title-cards">
-                                         <div className="row row-common">
-                                    <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
-                               
-                                    <div className="col-lg-12 common-cards card-one">
-                                       
-                                        <p>{language[lang].total_xprt}</p>
-                                        <h5>1,000,000 XPRT</h5>
-                                    </div>
-                                    </div>
-                                   
-                                    
-                                    <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
-                                  
-                                    <div className="col-lg-12 common-cards card-one">
-                                    
-                                        <p>{language[lang].dropped_fis}</p>
-                                        <h5>--</h5>
+                                <div className="col-lg-12">
+                                    <div className="row">
+                                        <div className="col-lg-8">
+                                            <h1 className="stake-title">{language[lang].stake_drop_title}
+                                                <p className="sub-text">{language[lang].stake_drop_sub_title_1} <span>{language[lang].stake_drop_sub_title_2}</span></p></h1>
+                                            <p className="sub-title title-line">{language[lang].stake_drip_des}</p>
+                                        </div>
+                                        <div className="col-lg-4">
+                                        <video className="pmedia-element" autoPlay="autoplay" preload loop="loop" muted src={pstakevideo}>
+                                <source type="video/webm" src={pstakevideo}/>
+                                <source type="video/mp4" src={pstakevideo}/>
+                                    <source type="video/ogg" src={pstakevideo}/>
+                            </video>
                                         </div>
                                     </div>
-                                  
-                                   
-                                    <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
-                                  
-                                    <div className="col-lg-12 common-cards card-one">
-                                   
-                                        <p>{language[lang].staked_tokens}</p>
-                                        <h5>--</h5>
-                                    </div>
-                                    </div>
-                                   
-                                  
-                                    <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
-                                   
-                                    <div className="col-lg-12 common-cards card-one">
-                                   
-                                        <p>{language[lang].unique_wallet_address}</p>
-                                        <h5>--</h5>
-                                    </div>
-                                    </div>
+                                </div>
+                                <div className="col-lg-12 title-cards">
+                                    <div className="row row-common">
+                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
+
+                                            <div className="col-lg-12 common-cards card-one">
+
+                                                <p>{language[lang].total_xprt}</p>
+                                                <h5>1,000,000 XPRT</h5>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
+
+                                            <div className="col-lg-12 common-cards card-one">
+
+                                                <p>{language[lang].dropped_fis}</p>
+                                                <h5>--</h5>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
+
+                                            <div className="col-lg-12 common-cards card-one">
+
+                                                <p>{language[lang].staked_tokens}</p>
+                                                <h5>--</h5>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
+
+                                            <div className="col-lg-12 common-cards card-one">
+
+                                                <p>{language[lang].unique_wallet_address}</p>
+                                                <h5>--</h5>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -104,17 +119,17 @@ class stakedrop extends React.Component {
                                                     <p>200,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
-                                                <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_atom}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_atom}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
-                                            <div className="icon-div">
+                                                <div className="icon-div">
                                                     <img src={dot_icon} alt="atom" />
                                                     <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
                                                 </div>
@@ -123,17 +138,17 @@ class stakedrop extends React.Component {
                                                     <p>200,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
-                                                <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_dot}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_dot}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
-                                            <div className="icon-div">
+                                                <div className="icon-div">
                                                     <img src={mat_icon} alt="atom" />
                                                     <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
                                                 </div>
@@ -142,17 +157,17 @@ class stakedrop extends React.Component {
                                                     <p>200,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
-                                                <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_matic}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_matic}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
-                                            <div className="icon-div">
+                                                <div className="icon-div">
                                                     <img src={xtz_icon} alt="atom" />
                                                     <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
                                                 </div>
@@ -161,17 +176,17 @@ class stakedrop extends React.Component {
                                                     <p>200,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
-                                                <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_xtx}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_xtx}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
-                                            <div className="icon-div">
+                                                <div className="icon-div">
                                                     <img src={luna_icon} alt="atom" />
                                                     <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
                                                 </div>
@@ -180,17 +195,17 @@ class stakedrop extends React.Component {
                                                     <p>200,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
-                                                <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_luna_terra}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_luna_terra}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
-                                            <div className="icon-div">
+                                                <div className="icon-div">
                                                     <img src={kava_icon} alt="atom" />
                                                     <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
                                                 </div>
@@ -199,17 +214,17 @@ class stakedrop extends React.Component {
                                                     <p>200,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
-                                                <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_kava}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_kava}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
-                                            <div className="icon-div">
+                                                <div className="icon-div">
                                                     <img src={iris_icon} alt="atom" />
                                                     <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
                                                 </div>
@@ -218,11 +233,11 @@ class stakedrop extends React.Component {
                                                     <p>200,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
-                                                <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_iris_net}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_iris_net}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,34 +250,54 @@ class stakedrop extends React.Component {
                         <div className="container">
                             <h2 className="text-center">{language[lang].stake_drop_mechanism}</h2>
                             <div className="drop-sub">
-                            <h3 className="text-center drop">{language[lang].stake_drop_per_person}</h3>
-                            <p className="text-center">{language[lang].stake_drop_num_of_tokens}</p>
-                        </div>
+                                <h3 className="text-center drop">{language[lang].stake_drop_per_person}</h3>
+                                <p className="text-center">{language[lang].stake_drop_num_of_tokens}</p>
+                            </div>
                         </div>
                     </section>
                     <section className="faq-section">
-                    <h2 className="text-center">{language[lang].stake_drop_faq}</h2>
-            <div className="container">
-                <div className="row acc-row">
-                                    <Accordion
+                        <h2 className="text-center">{language[lang].stake_drop_faq}</h2>
+                        <div className="container">
+                            <div className="row acc-row">
+                                <Accordion
                                     title={language[lang].stake_drop_faq_1}
                                     content={language[lang].stake_drop_faq_1_content}
                                 />
                                 <Accordion
-                                    title={language[lang].stake_drop_faq_1}
-                                    content={language[lang].stake_drop_faq_1_content}/>
-                                <Accordion
-                                    title="At least how many tokens do i need to receive FIS airdrop?"
-                                    content="
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </br>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </br>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    "
+                                    title={language[lang].stake_drop_faq_2}
+                                    content={language[lang].stake_drop_faq_2_content}
                                 />
-                                </div>
-                                </div>
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_3}
+                                    content={language[lang].stake_drop_faq_3_content}
+                                />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_3}
+                                    content={language[lang].stake_drop_faq_3_content}
+                                />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_4}
+                                    content={language[lang].stake_drop_faq_4_content}
+                                />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_5}
+                                    content={language[lang].stake_drop_faq_5_content}
+                                />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_6}
+                                    content={language[lang].stake_drop_faq_6_content}
+                                />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_7}
+                                    content={language[lang].stake_drop_faq_7_content}
+                                />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_8}
+                                    content={language[lang].stake_drop_faq_8_content}
+                                />
+
+                            </div>
+                        </div>
                     </section>
 
 
