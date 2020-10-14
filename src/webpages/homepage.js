@@ -80,7 +80,7 @@ class homePage extends Component {
                                 <div className="features-section">
                                     <h3>Features</h3>
                                     {/* <p>Lorem Ipsum dolar set amet</p> */}
-                                    <button className="btn">Know More <img className="sub-service-icons" src={rightarrow} alt="arrow" /></button>
+                                    <a href="https://github.com/persistenceOne" target="_blank" rel="noopener noreferrer"> <button className="btn">Know More <img className="sub-service-icons" src={rightarrow} alt="arrow" /></button></a>
                                 </div>
                             </div>
                             <div className="margin-t-20 col-lg-8">
