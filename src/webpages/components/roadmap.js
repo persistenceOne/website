@@ -1,9 +1,6 @@
 import React from 'react';
-
 import language from '../translationlang';
 import { connect } from 'react-redux';
-import Footer from '../components/footer'
-import Header from '../components/header';
 import link from '../../assets/link.png'
 import roadmapComdex from '../../assets/roadmap-comdex.svg'
 import comdexIcon from '../../assets/comdex-icon.svg'
@@ -46,7 +43,7 @@ class Roadmap extends React.Component {
             <div>
                 
                 
-                <Header />
+              
                 <section className="roadmap-section">
                     <div className="container">
 
@@ -511,9 +508,6 @@ class Roadmap extends React.Component {
                         </div>
                     </div>
                 </section>
-
-
-                <Footer />
             </div>
         );
     }

@@ -3,8 +3,7 @@ import language from '../translationlang';
 import { connect } from 'react-redux';
 // import quotes1 from '../../assets/quotes1.png'
 // import quotes2 from '../../assets/quotes2.png'
-import Footer from '../components/footer';
-import Header from '../components/header';
+
 import pic1 from '../../assets/pics/pic1.png'
 import pic2 from '../../assets/pics/pic2.png'
 import pic3 from '../../assets/pics/pic3.png'
@@ -35,7 +34,7 @@ class Team extends React.Component {
         const { lang } = this.props;
         return (
             <div className="team-bglines">
-                 <Header />
+                
                 
                 <section className="quote-section">
                     <div className="container">
@@ -219,7 +218,7 @@ class Team extends React.Component {
 
                     </div>
                 </section>
-                <Footer />
+               
             </div>
         );
     }

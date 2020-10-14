@@ -27,7 +27,7 @@ class Header extends Component {
     render() {
 
         return (
-            <React.Fragment>
+            <div>
                 <div id="is-sticky">
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
                         <div className="container">
@@ -65,7 +65,7 @@ class Header extends Component {
                         </div>
                     </nav>
                 </div>
-            </React.Fragment >
+            </div >
         );
     }
 }
