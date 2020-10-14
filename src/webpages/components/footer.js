@@ -40,7 +40,7 @@ class Footer extends Component {
                             <div className="text-muted margin-t-20">
                                 <ul className="list-unstyled footer-list">
                                     <li><a href="https://explorer.persistence.one" rel="noopener noreferrer" target="_blank">{language[lang].explorer}</a></li>
-                                    <li><Link to="/content">{language[lang].app}</Link></li>
+                                    <li><Link to="/stakedrop">{language[lang].stake_drop}</Link></li>
                                 </ul>
                             </div>
                         </div>

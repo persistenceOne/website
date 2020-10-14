@@ -16,7 +16,7 @@ class Products extends Component {
         const { lang } = this.props;
        
         return (
-            <React.Fragment>
+            <div>
                 <section className="section-products" id="useCases">
                     <h3>{language[lang].usecase}</h3>
                     <div className="container">
@@ -62,7 +62,7 @@ class Products extends Component {
                                 </div>
                     </div>
                 </section>
-            </React.Fragment>
+            </div>
         );
     }
 }

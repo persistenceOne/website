@@ -1,8 +1,6 @@
 import React from 'react';
 import language from '../translationlang';
 import { connect } from 'react-redux';
-import Footer from '../components/footer';
-import Header from '../components/header';
 import pstakevideo from '../../assets/PStakedrop.mp4';
 import Accordion from '../components/accordion'
 import Icon from '../icon';
@@ -33,8 +31,8 @@ class stakedrop extends React.Component {
     render() {
         const { lang } = this.props;
         return (
-            <React.Fragment>
-                <Header />
+            <div>
+               
                 <div>
 
                     <section className="stakedrop-section">
@@ -73,7 +71,7 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].dropped_fis}</p>
-                                                <h5>--</h5>
+                                                <h5>XPRT</h5>
                                             </div>
                                         </div>
 
@@ -83,16 +81,6 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].staked_tokens}</p>
-                                                <h5>--</h5>
-                                            </div>
-                                        </div>
-
-
-                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
-
-                                            <div className="col-lg-12 common-cards card-one">
-
-                                                <p>{language[lang].unique_wallet_address}</p>
                                                 <h5>--</h5>
                                             </div>
                                         </div>
@@ -106,13 +94,17 @@ class stakedrop extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12">
+                                    <div className="stakedrop-title-head">
                                     <h2 className="title">{language[lang].stake_drop_campaigns}</h2>
+                                    <p className="text-center">Stake tokens, earn $XPRT tokens</p>
+                                    <p className="text-center">Delegate to our AUDIT.one validator and earn even more $XPRT tokens</p>
+                                    </div>
                                     <div className="row">
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom" />
-                                                    <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
+                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_atom_cosmos}</h4>
@@ -120,6 +112,25 @@ class stakedrop extends React.Component {
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_atom}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration} 30 Days</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6 col-lg-4 campaign-sec">
+                                            <div className="col-md-12 campaign-card">
+                                                <div className="icon-div">
+                                                    <img src={luna_icon} alt="atom" />
+                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
+                                                </div>
+                                                <div className="about-campaign">
+                                                    <h4>{language[lang].stake_drop_luna_terra}</h4>
+                                                    <p>100,000 $XPRT</p>
+                                                </div>
+                                                <div className="stake-to">
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_luna_terra}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
@@ -130,8 +141,48 @@ class stakedrop extends React.Component {
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
+                                                    <img src={kava_icon} alt="atom" />
+                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
+                                                </div>
+                                                <div className="about-campaign">
+                                                    <h4>{language[lang].stake_drop_kava_labs}</h4>
+                                                    <p>100,000 $XPRT</p>
+                                                </div>
+                                                <div className="stake-to">
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_kava}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6 col-lg-4 campaign-sec">
+                                            <div className="col-md-12 campaign-card">
+                                                <div className="icon-div">
+                                                    <img src={iris_icon} alt="atom" />
+                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
+                                                </div>
+                                                <div className="about-campaign">
+                                                    <h4>{language[lang].stake_drop_iris_net}</h4>
+                                                    <p>100,000 $XPRT</p>
+                                                </div>
+                                                <div className="stake-to">
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_iris_net}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="col-md-6 col-lg-4 campaign-sec">
+                                            <div className="col-md-12 campaign-card">
+                                                <div className="icon-div">
                                                     <img src={dot_icon} alt="atom" />
-                                                    <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
+                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_dot_polkadot}</h4>
@@ -150,7 +201,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={mat_icon} alt="atom" />
-                                                    <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
+                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_matic_network}</h4>
@@ -169,11 +220,11 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={xtz_icon} alt="atom" />
-                                                    <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
+                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_stake_xtx_tezos}</h4>
-                                                    <p>200,000 $XPRT</p>
+                                                    <p>100,000 $XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_xtx}</p>
@@ -184,69 +235,15 @@ class stakedrop extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-md-6 col-lg-4 campaign-sec">
-                                            <div className="col-md-12 campaign-card">
-                                                <div className="icon-div">
-                                                    <img src={luna_icon} alt="atom" />
-                                                    <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
-                                                </div>
-                                                <div className="about-campaign">
-                                                    <h4>{language[lang].stake_drop_luna_terra}</h4>
-                                                    <p>200,000 $XPRT</p>
-                                                </div>
-                                                <div className="stake-to">
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_luna_terra}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-lg-4 campaign-sec">
-                                            <div className="col-md-12 campaign-card">
-                                                <div className="icon-div">
-                                                    <img src={kava_icon} alt="atom" />
-                                                    <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
-                                                </div>
-                                                <div className="about-campaign">
-                                                    <h4>{language[lang].stake_drop_kava_labs}</h4>
-                                                    <p>200,000 $XPRT</p>
-                                                </div>
-                                                <div className="stake-to">
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_kava}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-lg-4 campaign-sec">
-                                            <div className="col-md-12 campaign-card">
-                                                <div className="icon-div">
-                                                    <img src={iris_icon} alt="atom" />
-                                                    <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a>
-                                                </div>
-                                                <div className="about-campaign">
-                                                    <h4>{language[lang].stake_drop_iris_net}</h4>
-                                                    <p>200,000 $XPRT</p>
-                                                </div>
-                                                <div className="stake-to">
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_iris_net}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
+                                       
+                                       
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section className="stake-drop-mechanism">
+                    {/* <section className="stake-drop-mechanism">
                         <div className="container">
                             <h2 className="text-center">{language[lang].stake_drop_mechanism}</h2>
                             <div className="drop-sub">
@@ -254,7 +251,7 @@ class stakedrop extends React.Component {
                                 <p className="text-center">{language[lang].stake_drop_num_of_tokens}</p>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     <section className="faq-section">
                         <h2 className="text-center">{language[lang].stake_drop_faq}</h2>
                         <div className="container">
@@ -266,10 +263,6 @@ class stakedrop extends React.Component {
                                 <Accordion
                                     title={language[lang].stake_drop_faq_2}
                                     content={language[lang].stake_drop_faq_2_content}
-                                />
-                                <Accordion
-                                    title={language[lang].stake_drop_faq_3}
-                                    content={language[lang].stake_drop_faq_3_content}
                                 />
                                 <Accordion
                                     title={language[lang].stake_drop_faq_3}
@@ -295,16 +288,17 @@ class stakedrop extends React.Component {
                                     title={language[lang].stake_drop_faq_8}
                                     content={language[lang].stake_drop_faq_8_content}
                                 />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_9}
+                                    content={language[lang].stake_drop_faq_9_content}
+                                />
 
                             </div>
                         </div>
                     </section>
 
-
-                    <Footer />
-
                 </div>
-            </React.Fragment>
+            </div>
         );
     }
 
