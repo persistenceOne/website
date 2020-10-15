@@ -42,23 +42,23 @@ class Products extends Component {
                         <div className="row media-blocks">
                                     <div className="margin-t-20 col-md-3 col-lg-3 media-block first-div"><div className="services-list"><div className="media">
                                         <div className="media-body">
-                                            <h5>$30M+</h5>                                         
+                                            <h5>$41M+</h5>                                         
                                             <p>{language[lang].transform_volume}</p>
                                         </div>
                                     </div>
                                     </div>
                                     </div>
                                     <div className="margin-t-20 col-md-3 col-lg-3 media-block first-div"><div className="services-list"><div className="media">
-                                        <div className="media-body "><h5>10+</h5>
+                                        <div className="media-body "><h5>12+</h5>
                                             <p>{language[lang].trading_organizations}</p>
                                         </div></div></div></div>
                                     <div className="margin-t-20 col-md-3 col-lg-3 media-block"><div className="services-list"><div className="media">
-                                        <div className="media-body"><h5>30+</h5>
+                                        <div className="media-body"><h5>35+</h5>
                                             <p>{language[lang].institutional_traders}</p>
                                         </div></div></div></div>
                                     <div className="margin-t-20 col-md-3 col-lg-3 media-block"><div className="services-list"><div className="media">
                                         <div className="media-body"><h5>$200M+</h5>
-                                            <p>{language[lang].project_volume}</p></div></div></div></div>
+                                            <p>{language[lang].project_volume} 2021</p></div></div></div></div>
                                 </div>
                     </div>
                 </section>

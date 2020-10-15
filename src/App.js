@@ -9,7 +9,7 @@ import homepage from './webpages/homepage';
 import stakedrop from './webpages/components/stakedrop';
 import Header from './webpages/components/header';
 import Footer from './webpages/components/footer';
-import InfoPdf from './webpages/components/pdf';
+// import InfoPdf from './webpages/components/pdf';
 
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
             <Route path="/roadmap" component={Roadmap} />
             <Route path="/app" component={AppContainer} />
             <Route path="/stakedrop" component={stakedrop} />
-            <Route path="/stakedropinfo" component={InfoPdf} />
+            {/* <Route path="/stakedropinfo" component={InfoPdf} /> */}
       </Switch>)
     return (
       <div className={window.location.pathname ?

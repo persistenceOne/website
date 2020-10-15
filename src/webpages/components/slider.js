@@ -28,11 +28,9 @@ const Slider = (props) => {
 
         },
         {
-            src: layer1,
-            altText: 'Slide 2',
-            captionalt: language[props.lang].persistence_dapp,
-            caption5: language[props.lang].comdex_dapp,
-    
+            src: layer3,
+            altText: 'Slide 4',
+            captionalt: language[props.lang].p_chanin,
         },
         {
             src: layer2,
@@ -40,10 +38,14 @@ const Slider = (props) => {
             captionalt:language[props.lang].p_sdk,
         },
         {
-            src: layer3,
-            altText: 'Slide 4',
-            captionalt: language[props.lang].p_chanin,
+            src: layer1,
+            altText: 'Slide 2',
+            captionalt: language[props.lang].persistence_dapp,
+            caption5: language[props.lang].comdex_dapp,
+    
         }
+        
+        
     ];
 
     const onEnter = (caption) => {

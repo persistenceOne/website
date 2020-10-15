@@ -41,7 +41,7 @@ class stakedrop extends React.Component {
                                 <div className="col-lg-12">
                                     <div className="row">
                                         <div className="col-lg-8">
-                                            <h1 className="stake-title">{language[lang].stake_drop_title}
+                                            <h1 className="stake-title">{language[lang].stake_drop_title} 
                                                 <p className="sub-text">{language[lang].stake_drop_sub_title_1} <span>{language[lang].stake_drop_sub_title_2}</span></p></h1>
                                             <p className="sub-title title-line">{language[lang].stake_drip_des}</p>
                                         </div>
@@ -71,7 +71,7 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].dropped_fis}</p>
-                                                <h5>XPRT</h5>
+                                                <h5>--</h5>
                                             </div>
                                         </div>
 
@@ -96,8 +96,6 @@ class stakedrop extends React.Component {
                                 <div className="col-md-12">
                                     <div className="stakedrop-title-head">
                                     <h2 className="title">{language[lang].stake_drop_campaigns}</h2>
-                                    <p className="text-center">Stake tokens, earn $XPRT tokens</p>
-                                    <p className="text-center">Delegate to our AUDIT.one validator and earn even more $XPRT tokens</p>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6 col-lg-4 campaign-sec">
@@ -269,10 +267,6 @@ class stakedrop extends React.Component {
                                     content={language[lang].stake_drop_faq_3_content}
                                 />
                                 <Accordion
-                                    title={language[lang].stake_drop_faq_4}
-                                    content={language[lang].stake_drop_faq_4_content}
-                                />
-                                <Accordion
                                     title={language[lang].stake_drop_faq_5}
                                     content={language[lang].stake_drop_faq_5_content}
                                 />
@@ -291,6 +285,10 @@ class stakedrop extends React.Component {
                                 <Accordion
                                     title={language[lang].stake_drop_faq_9}
                                     content={language[lang].stake_drop_faq_9_content}
+                                />
+                                <Accordion
+                                    title={language[lang].stake_drop_faq_10}
+                                    content={language[lang].stake_drop_faq_10_content}
                                 />
 
                             </div>
