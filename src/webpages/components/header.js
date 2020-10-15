@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import LangDropDown from './langDropDown';
+// import LangDropDown from './langDropDown';
 import logo from '../../assets/logo.png'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+// import NavDropdown from 'react-bootstrap/NavDropdown'
 
 class Header extends Component {
 

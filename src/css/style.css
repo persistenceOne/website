@@ -1440,11 +1440,15 @@ input:focus {
   margin: 40px;
 }
 
+.feacturedon img {
+  margin: 25px 0;
+}
+
 .feacturedon h3 {
   text-align: center;
   color: #191616;
   font-weight: 700;
-  padding: 80px 0;
+  padding: 80px 0 50px 0;
   font-size: 32px;
 }
 
@@ -3417,6 +3421,7 @@ input:focus {
   .persistence .contact-section p {
     font-size: 24px;
     text-align: center;
+    margin-bottom: 25px;
   }
   .persistence .section-products h3 {
     padding-bottom: 30px;
@@ -3687,7 +3692,7 @@ input:focus {
   }
   .stakedrop-section .stake-title {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0 0 20px;
   }
   .stakedrop-section .stake-title .sub-text span {
     display: inline;
