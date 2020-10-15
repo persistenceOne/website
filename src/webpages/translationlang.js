@@ -111,7 +111,7 @@ export default {
         'stake_drop_sub_title_1': 'Stake tokens, earn $XPRT',
         'stake_drop_sub_title_2': 'Stake tokens with our AUDIT.one validator, earn additional $XPRT rewards.',
         'stake_drip_des': 'We have allocated 1% of our total supply at genesis for Stakedrop.',
-        'stake_drop_des_1': '1,000,000 $XPRT tokens will be distributed to stakers of some of the most prominent dPoS/nPos networks.',
+        'stake_drop_des_1': '1,000,000 $XPRT tokens will be distributed to stakers of some of the most prominent dPoS/nPoS networks.',
         'stake_drop_learn_more': 'Learn more',
         'total_xprt': 'Total $XPRT to be dropped',
         'dropped_fis': 'Dropped $XPRT',
