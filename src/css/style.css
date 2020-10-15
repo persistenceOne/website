@@ -407,9 +407,6 @@ input:focus {
   transition: -webkit-transform 1s, -webkit-filter 0.5s ease-out;
   transition: transform 1s, filter 0.5s ease-out;
   transition: transform 1s, filter 0.5s ease-out, -webkit-transform 1s, -webkit-filter 0.5s ease-out;
-  mix-blend-mode: luminosity;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
 }
 
 .canada-map:hover .canada-hover,
@@ -471,6 +468,24 @@ input:focus {
   color: #9d9d9d;
   margin-top: 1rem;
   width: 100%;
+}
+
+.stakedrop-section .sub-title span {
+  display: block;
+}
+
+.stakedrop-section .sub-title span span {
+  display: inline-block;
+}
+
+.stakedrop-section .sub-title span span a {
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.stakedrop-section .sub-title span span a:hover {
+  color: #e50913;
 }
 
 .stakedrop-section .stake-title {
@@ -1072,7 +1087,8 @@ input:focus {
 .sub-section h3 {
   padding-bottom: 50px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 32px;
 }
 
 .sub-section .mdi {
@@ -1088,11 +1104,18 @@ input:focus {
   padding: 100px 0 200px 0;
 }
 
+.section-slider h3.product-head {
+  font-size: 32px;
+  font-weight: 700;
+}
+
 .section-slider h3 {
   color: #dadada;
   padding-bottom: 50px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2;
 }
 
 .section-slider .head-slider > div {
@@ -1101,10 +1124,10 @@ input:focus {
 
 .section-slider .slider-title > div > p {
   text-align: left;
-  line-height: 1.8;
+  line-height: 2;
   font-size: 18px;
-  font-weight: 500;
-  color: #d4d4d4;
+  font-weight: 400;
+  color: #dadada;
 }
 
 .section-slider .main-svg .pflow,
@@ -1155,7 +1178,7 @@ input:focus {
   color: #fff;
   margin-left: 15px;
   text-align: center;
-  top: 0;
+  top: -25px;
 }
 
 .section-slider .carousel-indicators {
@@ -1179,8 +1202,9 @@ input:focus {
 .section-products h3 {
   text-align: center;
   color: #fafafa;
-  font-weight: bold;
+  font-weight: 700;
   padding-bottom: 80px;
+  font-size: 32px;
 }
 
 .section-products .section-subtitle {
@@ -1202,6 +1226,8 @@ input:focus {
 .section-products .comdex-section p {
   font-size: 18px;
   color: #acacac;
+  line-height: 2;
+  font-weight: 400;
 }
 
 .section-products .media-blocks .media-block {
@@ -1211,7 +1237,7 @@ input:focus {
 }
 
 .section-products .media-blocks .media-block .services-list {
-  padding: 20px 0px;
+  padding: 20px 15px;
   position: relative;
   z-index: 2;
   text-align: left;
@@ -1222,7 +1248,7 @@ input:focus {
 .section-products .media-blocks .media-block .services-list .media-body h5 {
   font-size: 40px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .section-products .media-blocks .media-block .services-list .media-body p {
@@ -1243,8 +1269,6 @@ input:focus {
   width: 100%;
   height: auto;
   margin-top: 10px;
-  -webkit-box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.06);
 }
 
 .product-padding {
@@ -1335,6 +1359,7 @@ input:focus {
 
 .sub-section {
   padding: 100px 0;
+  background: #fafafa;
 }
 
 .sub-section .features {
@@ -1392,6 +1417,7 @@ input:focus {
 .sub-section .services-list .media-body h5 {
   color: #1d1e22;
   font-size: 22px;
+  font-weight: 600;
 }
 
 .sub-section .services-list .media-body p {
@@ -1417,8 +1443,9 @@ input:focus {
 .feacturedon h3 {
   text-align: center;
   color: #191616;
-  font-weight: bold;
+  font-weight: 700;
   padding: 80px 0;
+  font-size: 32px;
 }
 
 .ourbackers {
@@ -1429,8 +1456,9 @@ input:focus {
 .ourbackers h3 {
   text-align: center;
   color: #fafafa;
-  font-weight: bold;
+  font-weight: 700;
   padding: 80px 0;
+  font-size: 32px;
 }
 
 .ourbackers .backers-row {
@@ -1520,8 +1548,9 @@ input:focus {
 .stay-updated h3 {
   text-align: center;
   color: #191616;
-  font-weight: bold;
+  font-weight: 700;
   padding: 80px 0;
+  font-size: 32px;
 }
 
 .stay-updated .blog-head {
@@ -1531,9 +1560,6 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .stay-updated .card-body {
@@ -1576,9 +1602,9 @@ input:focus {
 }
 
 .section-internft .info-box p {
-  font-weight: 500;
+  font-weight: 400;
   color: #80808e;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 25px;
   line-height: 2;
 }
@@ -1593,7 +1619,8 @@ input:focus {
 }
 
 .section-internft .network-group p {
-  font-weight: 800;
+  font-weight: 500;
+  color: #80808e;
   margin: 0;
 }
 
@@ -1636,8 +1663,9 @@ input:focus {
 .validators-section h3 {
   padding-bottom: 50px;
   color: #dadada;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
+  font-size: 32px;
 }
 
 .validators-section p {
@@ -1825,8 +1853,10 @@ input:focus {
   text-align: left;
   line-height: 1.8;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #d4d4d4;
+  margin-top: 35px;
+  margin-bottom: 0;
 }
 
 .papp-color {
