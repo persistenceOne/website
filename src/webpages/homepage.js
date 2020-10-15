@@ -194,7 +194,7 @@ class homePage extends Component {
                     <h3>Highlights</h3>
                     <div className="container">
                         <div className="row">
-                            <a href="https://medium.com/@PersistenceOne/d5f6ca6ddc40" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
+                            <a href="https://medium.com/@PersistenceOne/pos-token-holders-prepare-yourselves-for-persistence-stakedrop-the-grand-unveiling-d5f6ca6ddc40" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
                                 <div className="row blog-section">
                                     <div className="col-lg-4">
                                     <Card style={{ width: '100%' }}>
