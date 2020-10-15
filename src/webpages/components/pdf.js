@@ -9,8 +9,8 @@ import samplePDF from "../../assets/info.pdf";
 
 export default function App() {
   return (
-    <div className="App">
-       <iframe title="stakedrop" src={samplePDF} width="100%" height="900px" >  </iframe>
+    <div className="container">
+       <iframe title="stakedrop" src={samplePDF} width="100%" height="900px" overflow="scroll">  </iframe>
 
      
     </div>

@@ -11,14 +11,13 @@ import proudctBg from '../assets/product_bg.jpg';
 import nfts from '../assets/nfts.png';
 import colloterals from '../assets/colloterals.svg';
 import liquidpools from '../assets/liquidpools.png';
-// import liquidpools1 from '../assets/liquidpools1.png';
-import rightarrow from '../assets/right-arrow.svg';
 import threecommas from '../assets/backers/three-commas.svg';
 import alamedaresearch from '../assets/backers/alameda-research.svg';
 import amplificapital from '../assets/backers/amplifi-capital.svg';
 import arrington from '../assets/backers/arrington.svg';
 import au21 from '../assets/backers/au21.svg';
 import Cosmostation from '../assets/backers/Cosmostation.svg';
+import genesisblock from '../assets/backers/genesis-block.svg';
 import dokia_capital from '../assets/backers/dokia_capital.svg';
 import incrypt from '../assets/backers/incrypt.svg';
 import iosg from '../assets/backers/iosg.svg';
@@ -30,10 +29,10 @@ import terra from '../assets/backers/terra.svg';
 import woodstock from '../assets/backers/woodstock.svg';
 import icf from '../assets/backers/ICF.svg';
 import medium from '../assets/medium.svg';
-
-
-
-
+import cointelegraph from '../assets/CT.svg';
+import coindesk from '../assets/coindesk01.svg';
+import financemagnet from '../assets/FM.svg';
+import yahoofinance from '../assets/YF.svg';
 import whitepaper from '../whitepaper.pdf'
 import Icon from './icon';
 
@@ -74,18 +73,12 @@ class homePage extends Component {
                     </section>
                 </div>
                 <section className="sub-section">
+                <h3>Features</h3>
                     <div className="container">
                         <div className="row row-margin-nft">
-                            <div className="margin-t-20 col-lg-4 features">
-                                <div className="features-section">
-                                    <h3>Features</h3>
-                                    {/* <p>Lorem Ipsum dolar set amet</p> */}
-                                    <a href="https://github.com/persistenceOne" target="_blank" rel="noopener noreferrer"> <button className="btn">Know More <img className="sub-service-icons" src={rightarrow} alt="arrow" /></button></a>
-                                </div>
-                            </div>
-                            <div className="margin-t-20 col-lg-8">
+                            <div className="margin-t-20 col-lg-12">
                                 <div className="row row-margin-nft">
-                                    <div className="margin-t-20 col-lg-6">
+                                    <div className="margin-t-20 col-lg-4">
                                         <div className="services-list">
                                             <div className="serviceBody">
                                                 <img className="sub-service-icons" src={nfts} alt="nfts" />
@@ -93,12 +86,10 @@ class homePage extends Component {
                                                     <h5>1.&nbsp;{language[lang].asset_tokenization}</h5>
                                                     <p className="pt-2">{language[lang].tokenize_real_world_assets}</p>
                                                 </div>
-
                                             </div>
-
                                         </div>
                                     </div>
-                                    <div className="margin-t-20 col-lg-6">
+                                    <div className="margin-t-20 col-lg-4">
                                         <div className="services-list">
                                             <div className="serviceBody">
                                                 <img className="sub-service-icons" src={colloterals} alt="colloterals" />
@@ -111,7 +102,7 @@ class homePage extends Component {
 
                                         </div>
                                     </div>
-                                    <div className="margin-t-20 col-lg-6">
+                                    <div className="margin-t-20 col-lg-4">
                                         <div className="services-list">
                                             <div className="serviceBody">
                                                 <img className="sub-service-icons" src={liquidpools} alt="liquidpools" />
@@ -156,6 +147,13 @@ class homePage extends Component {
                 </section>
                 <Products />
                 <InterNFT />
+                <section className="validators-section" id="validators">
+                    <h3>{language[lang].validators}</h3>
+                    <div className="container">
+                        <Validator />
+                    </div>
+                    <p>{language[lang].selected_list}<span className="second-p">{language[lang].selected_list_2}</span></p>
+                </section>
                 <section className="ourbackers">
                     <h3>Our Backers</h3>
                     <div className="container">
@@ -176,7 +174,7 @@ class homePage extends Component {
                                 <img className="logo-img" src={au21} alt="Au21" />
                                 <img className="logo-img" src={Spark} alt="Spark" />
                                 <img className="logo-img" src={iosg} alt="IOSG" />
-                                <img className="logo-img" src={Cosmostation} alt="Cosmostation" />
+                                <img className="logo-img" src={genesisblock} alt="genesisblock" />
                             </div>
                             <div className="common-row fourth-row">
                                 <img className="logo-img" src={incrypt} alt="Incrypt" />
@@ -192,22 +190,22 @@ class homePage extends Component {
                     </div>
                 </section>
                 <section className="stay-updated">
-                    <h3>Stay Updated</h3>
+                    <h3>Highlights</h3>
                     <div className="container">
                         <div className="row">
-                            <a href="https://medium.com/persistence-blog/issue-01-introducing-persistence-ff778a9b7022" rel="noopener noreferrer" target="_blank"><div className="col-lg-12 blog-section">
-                                <div className="row">
+                            <a href="https://medium.com/@PersistenceOne/d5f6ca6ddc40" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
+                                <div className="row blog-section">
                                     <div className="col-lg-4">
                                     <Card style={{ width: '100%' }}>
-                                        <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*r_U0ADtapoBgpDnv-DIkOg.jpeg" />
+                                        <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*uq0DuFsYc0LaKdaEoZBT-g.png" />
                                     </Card>
                                     </div>
                                     <div className="col-lg-8 blog-head">
                                     <Card.Body>
-                                            <Card.Title>Introducing Persistence — Focus on ‘Real-World’ Adoption!</Card.Title>
+                                            <Card.Title>PoS Token Holders, Prepare Yourself for Persistence StakeDrop! The Grand Unveiling</Card.Title>
                                             
-                                            <p className="blog-year">3 JAN 2020</p>
-                                            <img className="blog-medium" src={medium} alt="Medium" />
+                                            <p className="blog-medium">15 OCT 2020</p>
+                                            <img className="blog-year" src={medium} alt="Medium" />
                                         </Card.Body>
                                     </div>
                                 </div>
@@ -237,12 +235,12 @@ class homePage extends Component {
                                         </Card></a>
                                         </div>
                                         <div className="col-lg-4">
-                                        <a href="https://medium.com/persistence-blog/persistence-raises-3-7m-from-industry-heavyweights-to-bridge-traditional-finance-and-defi-via-nfts-a30256cdb428" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://blog.cosmos.network/leading-interoperability-protocol-cosmos-network-partners-with-persistence-one-to-launch-hackatom-d06c1a234885" target="_blank" rel="noopener noreferrer">
                                     <Card style={{ width: '100%' }}>
-                                        <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*AZJNWxGWyyF1VdQLHVuA-Q.jpeg"/>
+                                        <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*B19-vbybSwSoc2qTzS73-g.png"/>
                                         <Card.Body>
-                                            <Card.Title title="Persistence’s focus on Open Finance — Asset-Based Lending">Persistence’s focus on Open Finance — Asset-Based Lending</Card.Title>
-                                            <p className="blog-medium">8 APR 2020</p>
+                                            <Card.Title title="Persistence’s focus on Open Finance — Asset-Based Lending">Cosmos Network Partners with Persistence One to launch ‘HackAtom India: Build the Cosmos’</Card.Title>
+                                            <p className="blog-medium">4 SEP 2020</p>
                                             <img className="blog-year" src={medium} alt="Medium" />
                                         </Card.Body>
                                         </Card></a>
@@ -252,13 +250,22 @@ class homePage extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="validators-section" id="validators">
-                    <h3>{language[lang].validators}</h3>
+                <section className="feacturedon">
+                    <h3>Featured On</h3>
                     <div className="container">
-                        <Validator />
+                        <div className="row">
+                            <div className="col-lg-12">
+                            <div className="common-row first-row">
+                                <a href="https://t.co/HJjAp73SSb" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={coindesk} alt="Coindesk" /></a> 
+                                <a href="https://cointelegraph.com/news/blockchain-interoperability-the-holy-grail-for-cross-chain-deployment" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={cointelegraph} alt="Cointelegraph" /></a> 
+                                <a href="https://finance.yahoo.com/news/comdex-completes-over-10m-worth-070800123.html?guccounter=1" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={yahoofinance} alt="Yahoo Finance" /></a>
+                                <a href="https://www.financemagnates.com/cryptocurrency/news/all-eyes-on-india-as-supreme-court-crypto-case-advances/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={financemagnet} alt="Finance Magnates" /></a> 
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>{language[lang].selected_list}<span className="second-p">{language[lang].selected_list_2}</span></p>
                 </section>
+             
 
                 <section className="contact-section">
                     <div className="container">

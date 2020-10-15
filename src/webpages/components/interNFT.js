@@ -26,9 +26,8 @@ class InterNFT extends Component {
                             <div className="col-lg-6">
                             <div className="align-center info-box">
                                <h1>interNFT</h1>
-                               <p>InterNFT is a natively implemented NFT structure for Blockchain applications that implement interoperability protocols. 
-                                   The interNFT is defined by a basic interface that any NFT structure has to implement to be called an interNFT.</p>
-                                <a className="btn-link" href="https://comdex.sg/" rel="noopener noreferrer" target="_blank">internft.org&emsp;
+                               <p>interNFT is a working group consisting of the leading interoperable projects and protocols building inter-chain standards for Non-Fungible Tokens and Metadata. This open collaboration was initiated by the Interchain Foundation and is being facilitated by Persistence One together with ixo. </p>
+                                <a className="btn-link" href="http://internft.org/" rel="noopener noreferrer" target="_blank">internft.org&emsp;
                                 <img className="sub-service-icons" src={rightarrow} alt="arrow" /></a>
                             </div>
                             </div>
@@ -54,6 +53,7 @@ class InterNFT extends Component {
                                    
                                     
                                     <img className="logo-img" src={regen} alt="regen" />
+                                    <p>Many More</p>
                                     
 
                                 </div>

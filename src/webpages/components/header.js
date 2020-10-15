@@ -37,17 +37,17 @@ class Header extends Component {
                             <button className="navbar-toggler" onClick={this.toggleMenu} type="button">
                                 <i className="mdi mdi-menu"></i>
                             </button>
-                            <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">  
+                            <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                                 <ul className="navbar-nav navbar-right team-link">
-                                <li className="nav-item"><NavLink to="roadmap" className="nav-link">Roadmap</NavLink></li>
-                                <li className="nav-item"><NavLink to="stakedrop" className="nav-link">Stakedrop</NavLink></li>
                                     <li className="nav-item dropdown">
-                                    <NavDropdown title="About" id="basic-nav-dropdown">
-                                        <NavDropdown.Item><Link to="team">Team</Link></NavDropdown.Item>
-                                        <NavDropdown.Item href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link-custom">Blog</NavDropdown.Item>
-                                    </NavDropdown>
-                                        </li>
-                                        <li className="nav-item"><LangDropDown /></li>
+                                        <NavDropdown title="About" id="basic-nav-dropdown">
+                                            <NavDropdown.Item><Link to="team">Team</Link></NavDropdown.Item>
+
+                                        </NavDropdown>
+                                    </li>
+                                    <li className="nav-item"><NavLink to="roadmap" className="nav-link">Roadmap</NavLink></li>
+                                    <li className="nav-item"><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</a></li>
+                                    <li className="nav-item"><LangDropDown /></li>
                                 </ul>
                                 <div className={this.state.isOpen ? "nav-button" : "nav-button"}>
                                     <ul className="nav navbar-nav navbar-left">
@@ -55,7 +55,7 @@ class Header extends Component {
                                             <div className="header-buttons">
                                                 <a href="https://explorer.persistence.one/" className="button-explorer" rel="noopener noreferrer" target="_blank">Explorer</a>
 
-                                                <Link className="button-app" to="app">App</Link>
+                                                <Link className="button-app" to="stakedrop">Stakedrop</Link>
 
                                             </div>
                                         </li>

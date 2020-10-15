@@ -48,10 +48,7 @@ class Roadmap extends React.Component {
                     <div className="container">
 
                         <div className="col-md-12">
-                            <span className="vertical-line line-1"></span>
-                            <span className="vertical-line line-2"></span>
-                            <span className="vertical-line line-3"></span>
-                            <span className="vertical-line line-4"></span>
+                          
 
                             <div className="row">
                                 <div className="col-md-4">
@@ -338,13 +335,13 @@ class Roadmap extends React.Component {
                                         <div class="timeline">
                                             <div class="roadmap left">
                                                 <div class="content">
-                                                    <div className="text-right">&nbsp;</div>
+                                                    <div className="text-right"><img src={comdexIcon} alt="comdex" /></div>
                                                 </div>
                                             </div>
-                                            <span className="diamond-dark"></span>
+                                            <span className="tick-complete"></span>
                                             <div class="roadmap right">
                                                 <div class="content">
-                                                    <p className="dark-text">{language[lang].mainnet_launch}</p>
+                                                    <p>{language[lang].mainnet_launch_1}</p>
                                                 </div>
                                             </div>
                                         </div>

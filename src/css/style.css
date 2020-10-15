@@ -477,7 +477,7 @@ input:focus {
   color: #fff;
   font-weight: 800;
   width: 100%;
-  padding-left: 15px;
+  padding-left: 20px;
   position: relative;
 }
 
@@ -1069,6 +1069,12 @@ input:focus {
   font-weight: 600;
 }
 
+.sub-section h3 {
+  padding-bottom: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .sub-section .mdi {
   font-size: 2rem;
   line-height: 1;
@@ -1080,10 +1086,6 @@ input:focus {
 
 .section-slider .inner_section-line {
   padding: 100px 0 200px 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#212225), to(#212225)) calc(1 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#212225), to(#212225)) calc(3 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#212225), to(#212225)) calc(5 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#212225), to(#212225)) calc(7 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#212225), to(#212225)) calc(9 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#212225), to(#212225)) calc(11 * 100% / 12);
-  background: linear-gradient(#212225, #212225) calc(1 * 100% / 12), linear-gradient(#212225, #212225) calc(3 * 100% / 12), linear-gradient(#212225, #212225) calc(5 * 100% / 12), linear-gradient(#212225, #212225) calc(7 * 100% / 12), linear-gradient(#212225, #212225) calc(9 * 100% / 12), linear-gradient(#212225, #212225) calc(11 * 100% / 12);
-  background-size: 1px 100%;
-  background-repeat: no-repeat;
 }
 
 .section-slider h3 {
@@ -1209,7 +1211,7 @@ input:focus {
 }
 
 .section-products .media-blocks .media-block .services-list {
-  padding: 20px 15px;
+  padding: 20px 0px;
   position: relative;
   z-index: 2;
   text-align: left;
@@ -1398,6 +1400,27 @@ input:focus {
   line-height: 2;
 }
 
+.feacturedon {
+  background: #fff;
+  padding: 65px 0 115px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.feacturedon .common-row.first-row {
+  text-align: center;
+}
+
+.feacturedon .common-row.first-row a {
+  margin: 40px;
+}
+
+.feacturedon h3 {
+  text-align: center;
+  color: #191616;
+  font-weight: bold;
+  padding: 80px 0;
+}
+
 .ourbackers {
   background: #212226;
   padding: 65px 0 115px 0;
@@ -1433,6 +1456,11 @@ input:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
+  margin: 0;
+}
+
+.stay-updated .blog-section .col-lg-4 {
+  padding-left: 0;
 }
 
 .stay-updated .blog-section .card {
@@ -1524,7 +1552,7 @@ input:focus {
 .stay-updated .blog-year {
   position: absolute;
   bottom: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: 600;
   font-size: 14px;
   color: #7b7b7b;
@@ -1532,20 +1560,19 @@ input:focus {
 
 .stay-updated .blog-medium {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 22px;
+  bottom: 3px;
+  color: #7b7b7b;
+  font-weight: 600;
 }
 
 .section-internft {
   padding: 100px 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#eef0f6), to(#eef0f6)) calc(1 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#eef0f6), to(#eef0f6)) calc(3 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#eef0f6), to(#eef0f6)) calc(5 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#eef0f6), to(#eef0f6)) calc(7 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#eef0f6), to(#eef0f6)) calc(9 * 100% / 12), -webkit-gradient(linear, left top, left bottom, from(#eef0f6), to(#eef0f6)) calc(11 * 100% / 12);
-  background: linear-gradient(#eef0f6, #eef0f6) calc(1 * 100% / 12), linear-gradient(#eef0f6, #eef0f6) calc(3 * 100% / 12), linear-gradient(#eef0f6, #eef0f6) calc(5 * 100% / 12), linear-gradient(#eef0f6, #eef0f6) calc(7 * 100% / 12), linear-gradient(#eef0f6, #eef0f6) calc(9 * 100% / 12), linear-gradient(#eef0f6, #eef0f6) calc(11 * 100% / 12);
-  background-size: 1px 100%;
-  background-repeat: no-repeat;
 }
 
 .section-internft .info-box h1 {
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .section-internft .info-box p {
@@ -1560,6 +1587,14 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-internft .network-group p {
+  font-weight: 800;
+  margin: 0;
 }
 
 .section-internft .network-group img {
@@ -1728,12 +1763,16 @@ input:focus {
 
 .contact-section .row {
   padding: 80px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact-section p {
   color: #191616;
   font-weight: bold;
   font-size: 34px;
+  margin: 0;
 }
 
 .contact-section .form-container form {
