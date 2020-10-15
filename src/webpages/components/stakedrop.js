@@ -14,6 +14,7 @@ import iris_icon from '../../assets/iris.svg';
 
 
 
+
 class stakedrop extends React.Component {
     constructor(props) {
         super(props);
@@ -32,7 +33,7 @@ class stakedrop extends React.Component {
         const { lang } = this.props;
         return (
             <div>
-               
+
                 <div>
 
                     <section className="stakedrop-section">
@@ -41,16 +42,17 @@ class stakedrop extends React.Component {
                                 <div className="col-lg-12">
                                     <div className="row">
                                         <div className="col-lg-8">
-                                            <h1 className="stake-title">{language[lang].stake_drop_title} 
+                                            <h1 className="stake-title">{language[lang].stake_drop_title}
                                                 <p className="sub-text">{language[lang].stake_drop_sub_title_1} <span>{language[lang].stake_drop_sub_title_2}</span></p></h1>
-                                            <p className="sub-title title-line">{language[lang].stake_drip_des}</p>
+                                            <p className="sub-title title-line">{language[lang].stake_drip_des} <span>{language[lang].stake_drop_des_1} <span><a href="/stakedropinfo.pdf">{language[lang].stake_drop_learn_more}</a></span></span></p>
+
                                         </div>
                                         <div className="col-lg-4">
-                                        <video className="pmedia-element" autoPlay="autoplay" preload loop="loop" muted src={pstakevideo}>
-                                <source type="video/webm" src={pstakevideo}/>
-                                <source type="video/mp4" src={pstakevideo}/>
-                                    <source type="video/ogg" src={pstakevideo}/>
-                            </video>
+                                            <video className="pmedia-element" autoPlay="autoplay" preload loop="loop" muted src={pstakevideo}>
+                                                <source type="video/webm" src={pstakevideo} />
+                                                <source type="video/mp4" src={pstakevideo} />
+                                                <source type="video/ogg" src={pstakevideo} />
+                                            </video>
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +97,7 @@ class stakedrop extends React.Component {
                             <div className="row">
                                 <div className="col-md-12">
                                     <div className="stakedrop-title-head">
-                                    <h2 className="title">{language[lang].stake_drop_campaigns}</h2>
+                                        <h2 className="title">{language[lang].stake_drop_campaigns}</h2>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6 col-lg-4 campaign-sec">
@@ -233,9 +235,9 @@ class stakedrop extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                       
-                                       
+
+
+
                                     </div>
                                 </div>
                             </div>

@@ -136,7 +136,7 @@ class homePage extends Component {
                 </section>
                 <section className="section-slider" id="products">
                     <div className="inner_section-line">
-                        <h3>{language[lang].products}</h3>
+                        <h3 className="product-head">{language[lang].products}</h3>
                         <div className="container">
                             <div className="row head-slider">
                                 <Slider />

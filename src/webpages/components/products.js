@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import mapvideo from '../../assets/map.mp4';
 import language from '../translationlang';
 import comdex from '../../assets/comdex.svg'
-import arrow from '../../assets/arrow2.png'
+import rightarrow from '../../assets/right-arrow.svg'
 
 class Products extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class Products extends Component {
                                 <img src={comdex} alt="comdex" title="comdex"></img>
                                 <div className="comdex-button">
                                     <p className="section-subtitle">Decentralised commodities trading and trade financing platform  </p>
-                                    <a className="btn-link" href="https://comdex.sg/" rel="noopener noreferrer" target="_blank">comdex.sg  <img src={arrow} alt="go to website arrow" /></a>
+                                    <a className="btn-link" href="https://comdex.sg/" rel="noopener noreferrer" target="_blank">comdex.sg&emsp;<img className="sub-service-icons" src={rightarrow} alt="go to website arrow" /></a>
                                 </div>
                             </div>
                             </div>

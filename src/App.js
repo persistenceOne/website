@@ -18,7 +18,7 @@ class App extends Component {
     const routes = (
       <Switch>
         <Route exact path="/" component={homepage} />
-            <Route path="/team" component={Team} />
+            <Route path="/about" component={Team} />
             <Route path="/roadmap" component={Roadmap} />
             <Route path="/app" component={AppContainer} />
             <Route path="/stakedrop" component={stakedrop} />

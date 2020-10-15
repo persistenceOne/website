@@ -335,13 +335,13 @@ class Roadmap extends React.Component {
                                         <div class="timeline">
                                             <div class="roadmap left">
                                                 <div class="content">
-                                                    <div className="text-right"><img src={comdexIcon} alt="comdex" /></div>
+                                                    <div className="text-right">&nbsp;</div>
                                                 </div>
                                             </div>
-                                            <span className="tick-complete"></span>
+                                            <span className="circle-dark"></span>
                                             <div class="roadmap right">
                                                 <div class="content">
-                                                    <p>{language[lang].mainnet_launch_1}</p>
+                                                    <p className="dark-text">{language[lang].mainnet_launch_1}</p>
                                                 </div>
                                             </div>
                                         </div>
