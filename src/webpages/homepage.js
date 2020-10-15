@@ -33,6 +33,7 @@ import cointelegraph from '../assets/CT.svg';
 import coindesk from '../assets/coindesk01.svg';
 import financemagnet from '../assets/FM.svg';
 import yahoofinance from '../assets/YF.svg';
+import chainnews from '../assets/chainnews.svg';
 import whitepaper from '../whitepaper.pdf'
 import Icon from './icon';
 
@@ -260,6 +261,7 @@ class homePage extends Component {
                                 <a href="https://cointelegraph.com/news/blockchain-interoperability-the-holy-grail-for-cross-chain-deployment" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={cointelegraph} alt="Cointelegraph" /></a> 
                                 <a href="https://finance.yahoo.com/news/comdex-completes-over-10m-worth-070800123.html?guccounter=1" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={yahoofinance} alt="Yahoo Finance" /></a>
                                 <a href="https://www.financemagnates.com/cryptocurrency/news/all-eyes-on-india-as-supreme-court-crypto-case-advances/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={financemagnet} alt="Finance Magnates" /></a> 
+                                <a href="https://www.chainnews.com/news/244436790135.htm" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={chainnews} alt="ChainNews" /></a> 
                             </div>
                             </div>
                         </div>
