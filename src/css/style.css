@@ -43,6 +43,23 @@ a.btn-link:hover {
           transform: translateY(-5px);
 }
 
+.stakedrop-line {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background: #fff;
+  top: 0;
+}
+
+.stakedrop-line span {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #000;
+  font-weight: 600;
+}
+
 .dropdown-menu {
   background-color: #2c2c2c;
 }
@@ -143,9 +160,91 @@ input:focus {
           box-shadow: 0px -3px 17px 3px rgba(0, 0, 0, 0.06);
 }
 
+.participate-stakedrop {
+  padding: 150px 0;
+  background: #f4f5f7;
+}
+
+.participate-stakedrop .campaign-maintwo {
+  margin-top: 35px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  padding: 0 25px;
+}
+
+.participate-stakedrop .campaign-maintwo .card-content {
+  border-bottom: 1px solid #EEEEEE;
+  padding-top: 30px;
+}
+
+.participate-stakedrop .campaign-maintwo .participate-cardtwo h6 {
+  font-size: 14px;
+  color: #838c9f;
+  margin-bottom: 5px;
+}
+
+.participate-stakedrop .campaign-maintwo .participate-cardtwo h1 {
+  font-size: 24px;
+  color: #231f20;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.participate-stakedrop .campaign-main {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.participate-stakedrop .campaign-main .campaign-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  padding: 35px 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.participate-stakedrop .campaign-main .campaign-card::before {
+  content: "";
+  height: 100%;
+  width: 8px;
+  background: #e50913;
+  position: absolute;
+  left: 0px;
+}
+
+.participate-stakedrop .campaign-main .campaign-card .icon.icon-social_icon_imgg {
+  width: 35px;
+}
+
+.participate-stakedrop .campaign-main .campaign-card .card-inner h6 {
+  font-size: 14px;
+  color: #838c9f;
+  margin-bottom: 5px;
+}
+
+.participate-stakedrop .campaign-main .campaign-card .card-inner h1 {
+  font-size: 24px;
+  color: #231f20;
+  font-weight: 600;
+}
+
 /*---Navbar---*/
 .navbar-custom {
   padding: 20px 0px;
+  padding-top: 0px;
   width: 100%;
   border-radius: 0px;
   z-index: 999;
@@ -258,8 +357,49 @@ input:focus {
 .navbar-custom {
   background-color: #1d1e22 !important;
   padding: 10px 0;
+  padding-top: 0px;
   -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar-custom .nav-banner {
+  padding-top: 10px;
+}
+
+.navbar-custom .alert-dismissible {
+  background: #07c331;
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.navbar-custom .alert-dismissible .close {
+  color: #fff;
+  top: -5px;
+}
+
+.navbar-custom .alert-dismissible .close:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.navbar-custom .alert-dismissible p {
+  margin: 0;
+  font-weight: 800;
+  font-size: 12px;
+  color: #fff;
+}
+
+.navbar-custom .alert-dismissible p span {
+  font-weight: 500;
 }
 
 .navbar-custom .navbar-nav li a {
@@ -295,6 +435,11 @@ input:focus {
 .navbar-custom .header-buttons .button-explorer:hover,
 .navbar-custom .header-buttons .button-app:hover {
   text-decoration: none;
+}
+
+.navbar-custom .header-buttons .button-app {
+  background: #e50913;
+  border: 1px solid #e50913;
 }
 
 .navbar-custom .header-buttons .button-explorer:hover,
@@ -656,6 +801,35 @@ input:focus {
   background: #f4f5f7;
 }
 
+.stake-drop-campaigns .campaign-card.learnmore_card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.stake-drop-campaigns .campaign-card.learnmore_card .about-campaign {
+  margin: 35px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .stake-drop-campaigns .campaign-card {
   background: #fff;
   padding: 30px;
@@ -682,6 +856,10 @@ input:focus {
   background: #000;
   font-weight: bold;
   padding: 15px 30px;
+}
+
+.stake-drop-campaigns .campaign-card .mechanism-btn {
+  padding-bottom: 83px;
 }
 
 .stake-drop-campaigns .campaign-card:hover {
@@ -723,6 +901,11 @@ input:focus {
   color: #838c9f;
 }
 
+.stake-drop-campaigns .about-campaign p span {
+  color: #000;
+  font-weight: 600;
+}
+
 .stake-drop-campaigns .title {
   text-align: center;
   font-weight: bold;
@@ -746,6 +929,7 @@ input:focus {
 
 .app-body .navbar-custom {
   background: #ffffff;
+  padding-top: 0px;
   -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
           box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
 }

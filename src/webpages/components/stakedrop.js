@@ -235,6 +235,24 @@ class stakedrop extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div className="col-md-6 col-lg-8 campaign-sec">
+                                            <div className="col-md-12 campaign-card learnmore_card">
+                                                <div className="col-lg-6 about-campaign learn_more">
+                                                    <h4>Want to learn more?</h4>
+                                                    <p>Read the StakeDrop mechanism in detail. In case of any further questions, feel free to drop an email to <span>hello@persisence.one.</span></p>
+                                                    <div className="icon-div mechanism-btn">
+                                                    <a href="stakedropinfo.pdf" target="_blank" rel="noopener noreferrer">Mechanism Paper</a>
+                                                   </div>
+                                                </div>
+                                                {/* <div className="stake-to">
+                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_xtx}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                </div> */}
+                                            </div>
+                                        </div>
 
 
 

@@ -37,6 +37,21 @@ a.btn-link {
 		transform: translateY(-5px);
 	}
 }
+.stakedrop-line {
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	background: #fff;
+	top: 0;
+	span {
+		text-align: center;
+		display: block;
+		font-size: 14px;
+		margin-top: 5px;
+		color: #000;
+		font-weight: 600;
+	}
+}
 .dropdown-menu {
 	background-color: #2c2c2c;
 }
@@ -122,6 +137,76 @@ input:focus {
 	}
 }
 
+// Participate css
+
+.participate-stakedrop {
+	padding: 150px 0;
+	background: #f4f5f7;
+	.campaign-maintwo {
+		margin-top: 35px;
+		background: #ffffff;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+		border-radius: 8px;
+		padding: 0 25px;
+		.card-content {
+			border-bottom: 1px solid #EEEEEE;
+			padding-top: 30px;
+		}
+		.participate-cardtwo {
+			h6 {
+				font-size: 14px;
+				color: #838c9f;
+				margin-bottom: 5px;
+				
+			}
+			h1 {
+				font-size: 24px;
+				color: #231f20;
+				font-weight: 600;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.campaign-main {
+		background: #ffffff;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+		border-radius: 8px;
+
+		.campaign-card {
+			display: flex;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+			border-radius: 8px;
+			padding: 35px 30px;
+			justify-content: space-between;
+			align-items: center;
+			overflow: hidden;
+			&::before {
+				content: "";
+				height: 100%;
+				width: 8px;
+				background: #e50913;
+				position: absolute;
+				left: 0px;
+			}
+			.icon.icon-social_icon_imgg {
+				width: 35px;
+			}
+			.card-inner {
+				h6 {
+					font-size: 14px;
+					color: #838c9f;
+					margin-bottom: 5px;
+				}
+				h1 {
+					font-size: 24px;
+					color: #231f20;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
 // .title-line::after {
 // 	content: '';
 //     position: absolute;
@@ -138,6 +223,7 @@ input:focus {
 
 .navbar-custom {
 	padding: 20px 0px;
+	padding-top: 0px;
 	width: 100%;
 	border-radius: 0px;
 	z-index: 999;
@@ -249,7 +335,37 @@ input:focus {
 .navbar-custom {
 	background-color: #1d1e22 !important;
 	padding: 10px 0;
+	padding-top: 0px;
 	box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	.nav-banner {
+		padding-top: 10px;
+	}
+	.alert-dismissible {
+		background: #07c331;
+		width: 100%;
+		text-align: center;
+		border-radius: 0;
+		padding: 10px 0;
+		margin: 0;
+		.close {
+			color: #fff;
+			top: -5px;
+			&:focus {
+				outline: 0px auto -webkit-focus-ring-color;
+			}
+		}
+		p {
+			margin: 0;
+			font-weight: 800;
+			font-size: 12px;
+			color: #fff;
+			span {
+				font-weight: 500;
+			}
+		}
+	}
 	.navbar-nav {
 		li {
 			a {
@@ -281,6 +397,10 @@ input:focus {
 			&:hover {
 				text-decoration: none;
 			}
+		}
+		.button-app {
+			background: #e50913;
+			border: 1px solid #e50913;
 		}
 		.button-explorer:hover,
 		.button-app:hover {
@@ -432,11 +552,11 @@ input:focus {
 			display: block;
 			span {
 				display: inline-block;
-				a{
-					color:#fff;
-					transition:all 0.5s ease-in-out;
+				a {
+					color: #fff;
+					transition: all 0.5s ease-in-out;
 					&:hover {
-						color:#e50913;
+						color: #e50913;
 					}
 				}
 			}
@@ -486,7 +606,7 @@ input:focus {
 }
 .faq-section {
 	background-color: #191616;
-	padding:150px;
+	padding: 150px;
 	h2 {
 		font-weight: bold;
 		color: #f4f5f7;
@@ -575,6 +695,18 @@ input:focus {
 .stake-drop-campaigns {
 	padding: 150px 0;
 	background: #f4f5f7;
+	.campaign-card.learnmore_card {
+		align-items: center;
+    justify-content: center;
+	display: flex;
+	.about-campaign {
+		margin: 35px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+	}
+	}
 	.campaign-card {
 		.icon-div {
 			display: flex;
@@ -589,6 +721,9 @@ input:focus {
 				font-weight: bold;
 				padding: 15px 30px;
 			}
+		}
+		.mechanism-btn {
+			padding-bottom: 83px;
 		}
 		background: #fff;
 		padding: 30px;
@@ -622,6 +757,10 @@ input:focus {
 		p {
 			font-size: 14px;
 			color: #838c9f;
+			span {
+				color: #000;
+				font-weight: 600;
+			}
 		}
 	}
 	.title {
@@ -629,13 +768,12 @@ input:focus {
 		font-weight: bold;
 		color: #100c15;
 		margin-bottom: 10px;
-		
 	}
 	.stakedrop-title-head {
 		margin-bottom: 75px;
-		p{
+		p {
 			margin: 0 0 10px 0;
-    font-weight: 500;
+			font-weight: 500;
 		}
 	}
 }
@@ -646,6 +784,7 @@ input:focus {
 	height: 100vh;
 	.navbar-custom {
 		background: #ffffff;
+		padding-top: 0px;
 		box-shadow: 0 10px 33px rgba(0, 0, 0, 0.5);
 	}
 	.navbar-custom .navbar-nav li a:hover {
@@ -915,19 +1054,18 @@ input:focus {
 
 	.inner_section-line {
 		padding: 100px 0 200px 0;
-		
 	}
 	h3.product-head {
 		font-size: 32px;
-    font-weight: 700;
+		font-weight: 700;
 	}
 	h3 {
 		color: #dadada;
-    padding-bottom: 50px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 2;
+		padding-bottom: 50px;
+		text-align: center;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 2;
 	}
 	.head-slider > div {
 		width: 100%;
@@ -1005,10 +1143,10 @@ input:focus {
 	background-position: 0 50px;
 	h3 {
 		text-align: center;
-    color: #fafafa;
-    font-weight: 700;
-    padding-bottom: 80px;
-    font-size: 32px;
+		color: #fafafa;
+		font-weight: 700;
+		padding-bottom: 80px;
+		font-size: 32px;
 	}
 	padding: 100px 0;
 	.section-subtitle {
@@ -1062,7 +1200,6 @@ input:focus {
 			width: 100%;
 			height: auto;
 			margin-top: 10px;
-			
 		}
 	}
 }
@@ -1214,7 +1351,7 @@ input:focus {
 	border-bottom: 1px solid #e2e2e2;
 	.common-row.first-row {
 		text-align: center;
-		a{
+		a {
 			margin: 40px;
 		}
 	}
@@ -1234,10 +1371,10 @@ input:focus {
 	padding: 65px 0 115px 0;
 	h3 {
 		text-align: center;
-    color: #fafafa;
-    font-weight: 700;
-    padding: 80px 0;
-    font-size: 32px;
+		color: #fafafa;
+		font-weight: 700;
+		padding: 80px 0;
+		font-size: 32px;
 	}
 	.backers-row {
 		justify-content: center;
@@ -1263,8 +1400,8 @@ input:focus {
 			border: 0;
 			img {
 				border-radius: 8px;
-	border: 0;
-	height: 198px
+				border: 0;
+				height: 198px;
 			}
 		}
 	}
@@ -1313,7 +1450,6 @@ input:focus {
 	.blog-head {
 		display: flex;
 		justify-content: center;
-		
 	}
 	.card-body {
 		padding: 1.25rem 0;
@@ -1328,11 +1464,11 @@ input:focus {
 	}
 	.blog-year {
 		position: absolute;
-    bottom: 0;
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #7b7b7b;
+		bottom: 0;
+		margin-bottom: 15px;
+		font-weight: 600;
+		font-size: 14px;
+		color: #7b7b7b;
 	}
 	.blog-medium {
 		position: absolute;
@@ -1344,7 +1480,7 @@ input:focus {
 }
 .section-internft {
 	padding: 100px 0;
-	
+
 	.info-box {
 		h1 {
 			font-weight: 600;
@@ -1361,10 +1497,10 @@ input:focus {
 	.network-group {
 		justify-content: center;
 		align-items: center;
-		p{
+		p {
 			font-weight: 500;
 			color: #80808e;
-			margin:0;
+			margin: 0;
 		}
 		img {
 			margin: 20px 40px;
@@ -1558,12 +1694,12 @@ input:focus {
 	div {
 		p {
 			text-align: left;
-    line-height: 1.8;
-    font-size: 18px;
-    font-weight: 400;
-	color: #d4d4d4;
-	margin-top: 35px;
-    margin-bottom: 0;
+			line-height: 1.8;
+			font-size: 18px;
+			font-weight: 400;
+			color: #d4d4d4;
+			margin-top: 35px;
+			margin-bottom: 0;
 		}
 	}
 }
@@ -3101,7 +3237,7 @@ input:focus {
 		display: block;
 		line-height: 1.5;
 	}
-	
+
 	.dark-logo {
 		width: 100px;
 	}
