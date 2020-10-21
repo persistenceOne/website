@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 // import LangDropDown from './langDropDown';
+import Alert from 'react-bootstrap/Alert'
 import logo from '../../assets/logo.png'
+import rightarrow from '../../assets/right-arrow.svg'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
 
 class Header extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { Tab: '', isOpen: false };
+        this.state = { 
+            Tab: '', 
+            isOpen: false,
+            show: true 
+        };
 
         this.toggleMenu = this.toggleMenu.bind(this);
     }
@@ -28,9 +34,21 @@ class Header extends Component {
 
         return (
             <div>
+               
                 <div id="is-sticky">
+                
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
-                        <div className="container">
+                
+                    {/* <p className="stakedrop-line"><span>Prepare Yourselves for Persistence StakeDrop! The Grand Unveiling <img src={rightarrow} alt="arrow"/></span></p> */}
+                    { this.state.show ? 
+                    <Alert dismissible onClose={() => this.setState({show:false})}>
+					<p>
+                        Earn additional $XPRT <span>for staking on</span> AUDIT.One <span>Validator</span>&emsp;<Link to="stakedrop"><img src={rightarrow} alt="arrow"/></Link>
+  				</p>
+				</Alert>:''
+    } 
+                        
+                        <div className="container nav-banner">
                             <Link className="navbar-brand logo text-uppercase" to="/">
                                 <img src={logo} alt="logo" /></Link>
 
@@ -39,7 +57,7 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                                 <ul className="navbar-nav navbar-right team-link">
-                                    <li className="nav-item"><NavLink to="about" className="nav-link">About</NavLink></li>
+                                    <li className="nav-item"><NavLink to="team" className="nav-link">Team</NavLink></li>
                                     <li className="nav-item"><NavLink to="roadmap" className="nav-link">Roadmap</NavLink></li>
                                     <li className="nav-item"><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank" className="nav-link">Blog</a></li>
                                     {/* <li className="nav-item"><LangDropDown /></li> */}

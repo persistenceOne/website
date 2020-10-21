@@ -7,6 +7,7 @@ import Roadmap from './webpages/components/roadmap';
 import AppContainer from './webpages/components/appContainer';
 import homepage from './webpages/homepage';
 import stakedrop from './webpages/components/stakedrop';
+// import participate from './webpages/components/participate';
 import Header from './webpages/components/header';
 import Footer from './webpages/components/footer';
 // import InfoPdf from './webpages/components/pdf';
@@ -18,11 +19,12 @@ class App extends Component {
     const routes = (
       <Switch>
         <Route exact path="/" component={homepage} />
-            <Route path="/about" component={Team} />
+            <Route path="/team" component={Team} />
             <Route path="/roadmap" component={Roadmap} />
             <Route path="/app" component={AppContainer} />
             <Route path="/stakedrop" component={stakedrop} />
-            {/* <Route path="/stakedropinfo" component={InfoPdf} /> */}
+            {/* <Route path="/participate" component={participate} /> */}
+            
       </Switch>)
     return (
       <div className={window.location.pathname ?

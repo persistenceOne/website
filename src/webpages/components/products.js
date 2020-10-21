@@ -42,7 +42,7 @@ class Products extends Component {
                         <div className="row media-blocks">
                                     <div className="margin-t-20 col-md-3 col-lg-3 media-block first-div"><div className="services-list"><div className="media">
                                         <div className="media-body">
-                                            <h5>$41M+</h5>                                         
+                                            <h5 class="">$41M+</h5>                                         
                                             <p>{language[lang].transform_volume}</p>
                                         </div>
                                     </div>
