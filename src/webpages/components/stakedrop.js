@@ -1,6 +1,7 @@
 import React from 'react';
 import language from '../translationlang';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import pstakevideo from '../../assets/PStakedrop.mp4';
 import Accordion from '../components/accordion'
 import Icon from '../icon';
@@ -104,7 +105,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom" />
-                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
+                                                  <Link to="/participate">{language[lang].stake_drop_participants}</Link>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_atom_cosmos}</h4>
@@ -123,8 +124,8 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={luna_icon} alt="atom" />
-                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
-                                                </div>
+                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                     </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_luna_terra}</h4>
                                                     <p>100,000 $XPRT</p>
@@ -142,8 +143,8 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={kava_icon} alt="atom" />
-                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
-                                                </div>
+                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_kava_labs}</h4>
                                                     <p>100,000 $XPRT</p>
@@ -161,8 +162,8 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={iris_icon} alt="atom" />
-                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
-                                                </div>
+                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                      </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_iris_net}</h4>
                                                     <p>100,000 $XPRT</p>
@@ -182,8 +183,8 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={dot_icon} alt="atom" />
-                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
-                                                </div>
+                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_dot_polkadot}</h4>
                                                     <p>200,000 $XPRT</p>
@@ -201,8 +202,8 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={mat_icon} alt="atom" />
-                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
-                                                </div>
+                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_matic_network}</h4>
                                                     <p>200,000 $XPRT</p>
@@ -220,8 +221,8 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={xtz_icon} alt="atom" />
-                                                    {/* <a href="https://app.lunie.io/cosmos-hub/validators/cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_participants}</a> */}
-                                                </div>
+                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                      </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_stake_xtx_tezos}</h4>
                                                     <p>100,000 $XPRT</p>

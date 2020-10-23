@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 // import LangDropDown from './langDropDown';
 import Alert from 'react-bootstrap/Alert'
+import ScrollToTop from '../components/scrollToTop';
 import logo from '../../assets/logo.png'
 import rightarrow from '../../assets/right-arrow.svg'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
@@ -34,7 +35,7 @@ class Header extends Component {
 
         return (
             <div>
-               
+               <ScrollToTop />
                 <div id="is-sticky">
                 
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
