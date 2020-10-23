@@ -321,17 +321,24 @@ input:focus {
   width: 100%;
 }
 
-.participate-stakedrop .staking-second-section .delegate-buttons {
+.participate-stakedrop .staking-second-section .participate-buttons {
   margin: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.participate-stakedrop .staking-second-section .delegate-buttons .btn-delegate .btn {
-  background: red;
+.participate-stakedrop .staking-second-section .participate-buttons .btn-delegate .btn {
+  background: #E50913;
   color: #fff;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .participate-stakedrop .staking-second-section .btn-magic-txs {
@@ -344,14 +351,17 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 25px 0;
 }
 
 .participate-stakedrop .staking-second-section .btn-magic-txs .btn {
-  background: red;
+  background: #E50913;
   color: #fff;
+  font-weight: bold;
   margin-right: 10px;
-  padding: 10px 20px;
+}
+
+.participate-stakedrop .staking-right-bottom {
+  height: 100%;
 }
 
 .participate-stakedrop .staking-right-bottom .btn-calculate {
@@ -372,8 +382,8 @@ input:focus {
   font-weight: 600;
 }
 
-.participate-stakedrop .campaign-maintwo.second {
-  margin-top: 20px;
+.participate-stakedrop .section-campaign {
+  padding-bottom: 10px;
 }
 
 .participate-stakedrop .campaign-maintwo {
@@ -428,7 +438,7 @@ input:focus {
 }
 
 .participate-stakedrop .campaign-maintwo .participate-cardtwo.end {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .participate-stakedrop .campaign-maintwo .participate-cardtwo h6 {
@@ -598,11 +608,11 @@ input:focus {
 }
 
 .navbar-custom .alert-dismissible {
-  background: #07c331;
+  background: #4FB573;
   width: 100%;
   text-align: center;
   border-radius: 0;
-  padding: 10px 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -620,6 +630,7 @@ input:focus {
   font-weight: 800;
   font-size: 12px;
   color: #fff;
+  padding: 10px 0;
 }
 
 .navbar-custom .alert-dismissible p span {
@@ -1025,18 +1036,6 @@ input:focus {
   background: #f4f5f7;
 }
 
-.stake-drop-campaigns .campaign-card.learnmore_card {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .stake-drop-campaigns .campaign-card.learnmore_card .about-campaign {
   margin: 35px 0;
   -webkit-box-align: center;
@@ -1073,17 +1072,26 @@ input:focus {
           align-items: center;
 }
 
-.stake-drop-campaigns .campaign-card .icon-div a {
+.stake-drop-campaigns .campaign-card .icon-div a, .stake-drop-campaigns .campaign-card .icon-div button {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  color: #fff;
   background: #000;
   font-weight: bold;
   padding: 15px 30px;
 }
 
 .stake-drop-campaigns .campaign-card .mechanism-btn {
-  padding-bottom: 83px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
 .stake-drop-campaigns .campaign-card:hover {
@@ -4164,16 +4172,83 @@ input:focus {
   }
 }
 
+.staking-wallet-section .title {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #231F20;
+}
+
+.staking-wallet-section .continue-text {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #231F20;
+}
+
+.staking-wallet-section .wallet-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.staking-wallet-section .wallet-method .cli-box {
+  background: #FFFFFF;
+  padding: 20px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.staking-wallet-section .wallet-method .cli-box .icon {
+  fill: red;
+  width: 24px;
+  height: 24px;
+}
+
+.staking-wallet-section .wallet-method .cli-box .card-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.staking-wallet-section .wallet-method .cli-box .card-inner p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .staking-wallet-section .row {
   margin-bottom: 10px;
 }
 
 .staking-wallet-section .wallet-card {
-  background: #f4f5f7;
-  padding: 10px;
+  background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
   border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  width: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 125px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .staking-wallet-section .wallet-card .icon {
@@ -4187,9 +4262,14 @@ input:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 .staking-wallet-section .wallet-card .card-inner p {
@@ -4235,5 +4315,25 @@ input:focus {
 
 .range-slider .rangeslider-horizontal .rangeslider__handle-tooltip {
   display: none;
+}
+
+.stake-drop {
+  display: none;
+}
+
+.section-participate .other-pages, .section-stake-drop .other-pages {
+  display: none;
+}
+
+.section-participate .stake-drop, .section-stake-drop .stake-drop {
+  display: block;
+}
+
+.accountInfoModel .modal-content {
+  background-color: #F4F5F7;
+}
+
+.accountInfoModel .modal-content .modal-body {
+  padding: 40px;
 }
 /*# sourceMappingURL=style.css.map */

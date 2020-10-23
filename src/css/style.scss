@@ -253,29 +253,32 @@ input:focus {
 				width: 100%;
 			}
 		}
-		.delegate-buttons {
+		.participate-buttons {
 			margin: 15px 0;
 			display: flex;
+			align-items: center;
+			justify-content: center;
 			.btn-delegate .btn {
-				background: red;
+				background: #E50913;
 				color: #fff;
 				margin-right: 10px;
+				font-weight: bold;
 			}
 		}
 		.btn-magic-txs {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: 25px 0;
 			.btn {
-				background: red;
+				background: #E50913;
 				color: #fff;
+				font-weight: bold;
 				margin-right: 10px;
-				padding: 10px 20px;
 			}
 		}
 	}
 	.staking-right-bottom {
+		height: 100%;
 		.btn-calculate {
 			margin-bottom: 15px;
 		}
@@ -288,8 +291,8 @@ input:focus {
 			}
 		}
 	}
-	.campaign-maintwo.second {
-		margin-top: 20px;
+	.section-campaign{
+		padding-bottom: 10px;
 	}
 	.campaign-maintwo {
 		background: #ffffff;
@@ -337,7 +340,7 @@ input:focus {
 			padding-top: 30px;
 		}
 		.participate-cardtwo.end {
-			margin-bottom: 30px;
+			margin-bottom: 40px;
 		}
 		.participate-cardtwo {
 			h6 {
@@ -508,11 +511,11 @@ input:focus {
 		padding-top: 10px;
 	}
 	.alert-dismissible {
-		background: #07c331;
+		background: #4FB573;
 		width: 100%;
 		text-align: center;
 		border-radius: 0;
-		padding: 10px 0;
+		padding: 0;
 		margin: 0;
 		.close {
 			color: #fff;
@@ -526,6 +529,7 @@ input:focus {
 			font-weight: 800;
 			font-size: 12px;
 			color: #fff;
+			padding: 10px 0;
 			span {
 				font-weight: 500;
 			}
@@ -861,9 +865,6 @@ input:focus {
 	padding: 150px 0;
 	background: #f4f5f7;
 	.campaign-card.learnmore_card {
-		align-items: center;
-		justify-content: center;
-		display: flex;
 		.about-campaign {
 			margin: 35px 0;
 			align-items: center;
@@ -878,17 +879,20 @@ input:focus {
 			justify-content: space-between;
 
 			align-items: center;
-			a {
+			a, button {
 				opacity: 1;
 				transition: all 0.5s ease-in-out;
-
+				color:#fff;
 				background: #000;
 				font-weight: bold;
 				padding: 15px 30px;
 			}
 		}
 		.mechanism-btn {
-			padding-bottom: 83px;
+			display: flex;
+			flex-direction: column;
+			padding: 20px;
+			border: 1px solid #ccc;
 		}
 		background: #fff;
 		padding: 30px;
@@ -3598,21 +3602,66 @@ input:focus {
 }
 
 .staking-wallet-section {
+	.title{
+		font-weight: 600;
+		font-size: 18px;
+		text-align: center;
+		color: #231F20;
+	}
+	.continue-text{
+		font-weight: 600;
+		font-size: 14px;
+		text-align: center;
+		color: #231F20;
+	}
+	.wallet-method{
+		display: flex;
+    justify-content: center;
+		.cli-box {
+			background: #FFFFFF;
+			padding: 20px;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+			border-radius: 8px;
+			.icon {
+				fill: red;
+				width: 24px;
+				height: 24px;
+			}
+			.card-inner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				p{
+					margin: 0;
+					font-weight: 600;
+					font-size: 14px;
+				}
+		}
+	}
+}
 	.row {
 		margin-bottom: 10px;
 	}
 	.wallet-card {
-		background: #f4f5f7;
-		padding: 10px;
+		background: #FFFFFF;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
 		border-radius: 8px;
+		padding: 10px;
+		margin: 10px;
+		width: 125px;
+		display: flex;
+		align-items: center;
+		height: 125px;
+		justify-content: center;
 		.icon {
 			fill: red;
 		}
 		.card-inner {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
 			p {
 				margin: 0;
 			}
@@ -3653,6 +3702,26 @@ input:focus {
 		}
 		.rangeslider__handle-tooltip {
 			display: none;
+		}
+	}
+}
+.stake-drop{
+	display: none;
+}
+.section-participate, .section-stake-drop{
+	.other-pages{
+		display:none;
+	}
+	.stake-drop{
+		display: block;
+	}
+}
+
+.accountInfoModel{
+	.modal-content{
+		background-color: #F4F5F7;
+		.modal-body{
+			padding:40px;
 		}
 	}
 }

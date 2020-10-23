@@ -12,7 +12,9 @@ import xtz_icon from '../../assets/xtz.svg';
 import luna_icon from '../../assets/luna.svg';
 import kava_icon from '../../assets/kava.svg';
 import iris_icon from '../../assets/iris.svg';
-
+import cosmos_tutorial from '../../assets/cosmos-tutorial.svg';
+import mechanism from '../../assets/mechanism.svg';
+import Header from '../../webpages/components/header';
 
 
 
@@ -33,8 +35,8 @@ class stakedrop extends React.Component {
     render() {
         const { lang } = this.props;
         return (
-            <div>
-
+            <div className="section-stake-drop">
+                <Header />
                 <div>
 
                     <section className="stakedrop-section">
@@ -124,7 +126,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={luna_icon} alt="atom" />
-                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    <button>Coming Soon</button>
                                                      </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_luna_terra}</h4>
@@ -143,7 +145,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={kava_icon} alt="atom" />
-                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    <button>Coming Soon</button>
                                                     </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_kava_labs}</h4>
@@ -162,7 +164,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={iris_icon} alt="atom" />
-                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    <button>Coming Soon</button>
                                                       </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_iris_net}</h4>
@@ -183,7 +185,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={dot_icon} alt="atom" />
-                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    <button>Coming Soon</button>
                                                     </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_dot_polkadot}</h4>
@@ -202,7 +204,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={mat_icon} alt="atom" />
-                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    <button>Coming Soon</button>
                                                  </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_matic_network}</h4>
@@ -221,7 +223,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={xtz_icon} alt="atom" />
-                                                    <Link to="/participate">{language[lang].stake_drop_participants}</Link>
+                                                    <button>Coming Soon</button>
                                                       </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_stake_xtx_tezos}</h4>
@@ -238,12 +240,22 @@ class stakedrop extends React.Component {
                                         </div>
                                         <div className="col-md-6 col-lg-8 campaign-sec">
                                             <div className="col-md-12 campaign-card learnmore_card">
+                                            <h4>Want to learn more?</h4>
                                                 <div className="col-lg-6 about-campaign learn_more">
-                                                    <h4>Want to learn more?</h4>
-                                                    <p>Read the StakeDrop mechanism in detail. In case of any further questions, feel free to drop an email to <span>hello@persisence.one.</span></p>
                                                     <div className="icon-div mechanism-btn">
-                                                    <a href="stakedropinfo.pdf" target="_blank" rel="noopener noreferrer">Mechanism Paper</a>
+                                                    <img src={cosmos_tutorial} alt="Lunie" />
+                                                    <p>Mechanism Paper</p>
+                                                    {/* <a href="stakedropinfo.pdf" target="_blank" rel="noopener noreferrer"></a> */}
                                                    </div>
+                                                   <div className="icon-div mechanism-btn">
+                                                   <img src={mechanism} alt="Lunie" />
+                                                   <p>Cosmos Tutorial</p>
+                                                    {/* <a href="https://notes.persistence.one/s/SzZKebecO" target="_blank" rel="noopener noreferrer">Cosmos Tutorial</a> */}
+                                                   </div>
+                                                   {/* <div className="icon-div mechanism-btn">
+                                                    <a href="https://medium.com/persistence-blog/pos-token-holders-prepare-yourselves-for-persistence-stakedrop-the-grand-unveiling-d5f6ca6ddc40" target="_blank" rel="noopener noreferrer">Official Announcement</a>
+                                                   </div> */}
+                                                   
                                                 </div>
                                                 {/* <div className="stake-to">
                                                      <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_xtx}</p>
