@@ -24,7 +24,16 @@ a {
   color: #fff;
 }
 
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+}
+
+button.btn-link,
 a.btn-link {
+  border: none;
   font-weight: 500;
   padding: 15px 25px;
   color: #fff;
@@ -36,6 +45,7 @@ a.btn-link {
   display: inline-block;
 }
 
+button.btn-link:hover,
 a.btn-link:hover {
   text-decoration: none;
   color: #fff;
@@ -165,48 +175,227 @@ input:focus {
   background: #f4f5f7;
 }
 
-.participate-stakedrop .campaign-maintwo {
-  margin-top: 35px;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
-  border-radius: 8px;
-  padding: 0 25px;
-}
-
-.participate-stakedrop .campaign-maintwo .card-content {
-  border-bottom: 1px solid #EEEEEE;
-  padding-top: 30px;
-}
-
-.participate-stakedrop .campaign-maintwo .participate-cardtwo h6 {
-  font-size: 14px;
-  color: #838c9f;
-  margin-bottom: 5px;
-}
-
-.participate-stakedrop .campaign-maintwo .participate-cardtwo h1 {
-  font-size: 24px;
-  color: #231f20;
+.participate-stakedrop .heading-participate {
+  font-size: 18px;
+  margin: 0;
   font-weight: 600;
-  margin-bottom: 15px;
+  color: #231f20;
 }
 
-.participate-stakedrop .campaign-main {
-  background: #ffffff;
+.participate-stakedrop .staking-second-section .stakerow {
+  background: #fff;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
   border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 0;
 }
 
-.participate-stakedrop .campaign-main .campaign-card {
+.participate-stakedrop .staking-second-section .stakerow .header-section {
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.participate-stakedrop .staking-second-section .stakerow .header-section h5 {
+  margin: 0;
+}
+
+.participate-stakedrop .staking-second-section .stakerow .body-section {
+  padding: 0 20px 20px 20px;
+}
+
+.participate-stakedrop .staking-second-section .stakerow .body-section .delegate-sec {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.participate-stakedrop .staking-second-section .stakerow .body-section .delegate-sec .inputstaking.bottom {
+  margin-right: 35px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.participate-stakedrop .staking-second-section .stakerow .body-section .delegate-sec .inputstaking.bottom h5 {
+  width: auto;
+}
+
+.participate-stakedrop .staking-second-section .stakerow .body-section form .valid-add {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 12px;
+  color: #e50913;
+}
+
+.participate-stakedrop .staking-second-section .btn-calculate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.participate-stakedrop .staking-second-section .btn-calculate .btn {
+  font-weight: 500;
+  background: transparent;
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  padding: 7px 25px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.participate-stakedrop .staking-second-section .btn-calculate .btn:hover {
+  background: #e50913;
+  border: 1px solid #e50913;
+  color: #fff;
+}
+
+.participate-stakedrop .staking-second-section .row.common-cards {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking.bottom {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking.bottom .value {
+  color: #000;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking.justify-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking.justify-start h5.text-color {
+  width: auto;
+  color: #000;
+  font-weight: 600;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking h5 {
+  color: #838c9f;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  width: 230px;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking input {
+  border: 1px solid #f4f5f7;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.participate-stakedrop .staking-second-section .delegate-buttons {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.participate-stakedrop .staking-second-section .delegate-buttons .btn-delegate .btn {
+  background: red;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.participate-stakedrop .staking-second-section .btn-magic-txs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 0;
+}
+
+.participate-stakedrop .staking-second-section .btn-magic-txs .btn {
+  background: red;
+  color: #fff;
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+.participate-stakedrop .staking-right-bottom .btn-calculate {
+  margin-bottom: 15px;
+}
+
+.participate-stakedrop .staking-right-bottom .range-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.participate-stakedrop .staking-right-bottom .range-data .range-value {
+  color: #231f20;
+  font-weight: 600;
+}
+
+.participate-stakedrop .campaign-maintwo.second {
+  margin-top: 20px;
+}
+
+.participate-stakedrop .campaign-maintwo {
+  background: #ffffff;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
   border-radius: 8px;
-  padding: 35px 30px;
+}
+
+.participate-stakedrop .campaign-maintwo .header-section {
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px;
+}
+
+.participate-stakedrop .campaign-maintwo .body-section {
+  padding: 0 25px;
+}
+
+.participate-stakedrop .campaign-maintwo .campaign-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -216,29 +405,64 @@ input:focus {
   overflow: hidden;
 }
 
-.participate-stakedrop .campaign-main .campaign-card::before {
-  content: "";
-  height: 100%;
-  width: 8px;
-  background: #e50913;
-  position: absolute;
-  left: 0px;
+.participate-stakedrop .campaign-maintwo .campaign-card .icon.icon-social_icon_imgg {
+  width: 25px;
 }
 
-.participate-stakedrop .campaign-main .campaign-card .icon.icon-social_icon_imgg {
-  width: 35px;
-}
-
-.participate-stakedrop .campaign-main .campaign-card .card-inner h6 {
+.participate-stakedrop .campaign-maintwo .campaign-card .card-inner h6 {
   font-size: 14px;
   color: #838c9f;
   margin-bottom: 5px;
 }
 
-.participate-stakedrop .campaign-main .campaign-card .card-inner h1 {
-  font-size: 24px;
+.participate-stakedrop .campaign-maintwo .campaign-card .card-inner h1 {
+  font-size: 20px;
   color: #231f20;
   font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.participate-stakedrop .campaign-maintwo .card-content {
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 30px;
+}
+
+.participate-stakedrop .campaign-maintwo .participate-cardtwo.end {
+  margin-bottom: 30px;
+}
+
+.participate-stakedrop .campaign-maintwo .participate-cardtwo h6 {
+  font-size: 14px;
+  color: #838c9f;
+  margin-bottom: 5px;
+}
+
+.participate-stakedrop .campaign-maintwo .participate-cardtwo h1.countdown span {
+  font-size: 20px;
+  color: #231f20;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.participate-stakedrop .campaign-maintwo .participate-cardtwo h1 {
+  font-size: 20px;
+  color: #231f20;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.participate-stakedrop .campaign-maintwo .participate-cardtwo h1 span {
+  display: block;
+  font-size: 14px;
+  color: #838c9f;
+  margin-top: 5px;
+}
+
+.participate-stakedrop .campaign-main {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
 }
 
 /*---Navbar---*/
@@ -3938,5 +4162,78 @@ input:focus {
     display: block;
     line-height: 1.5;
   }
+}
+
+.staking-wallet-section .row {
+  margin-bottom: 10px;
+}
+
+.staking-wallet-section .wallet-card {
+  background: #f4f5f7;
+  padding: 10px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.staking-wallet-section .wallet-card .icon {
+  fill: red;
+}
+
+.staking-wallet-section .wallet-card .card-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.staking-wallet-section .wallet-card .card-inner p {
+  margin: 0;
+}
+
+.range-slider .rangeslider {
+  background: rgba(229, 9, 19, 0.11);
+  height: 9px;
+  border-radius: 0;
+}
+
+.range-slider .rangeslider-horizontal .rangeslider__fill {
+  background-color: #e50913;
+  border-radius: 0;
+}
+
+.range-slider .rangeslider-horizontal .rangeslider__handle {
+  border-radius: 0;
+  width: 16px;
+  height: 16px;
+  top: -55%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.range-slider .rangeslider-horizontal .rangeslider__handle::after {
+  width: 10px;
+  height: 10px;
+  top: 2px;
+  left: 2px;
+  border-radius: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: #e50913;
+}
+
+.range-slider .rangeslider-horizontal .rangeslider__handle:focus {
+  outline: none;
+}
+
+.range-slider .rangeslider-horizontal .rangeslider__handle-tooltip {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
