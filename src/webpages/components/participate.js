@@ -144,8 +144,6 @@ class Participate extends Component {
             const calculatedata = result.data;
             if (calculatedata.success === true) {
                 const currentEarned = (calculatedata.received / 1000000);
-                const yourDelegations = calculatedata.globalDelegation;
-                const yourAuditDelegation = calculatedata.globalDelegation;
                 const yourEstimatedRewards = (calculatedata.estimated /1000000);
                 this.setState({ ercAddress: calculatedata.ercAddress })
                 this.setState({ blockHeight: calculatedata.magicTxHeight })
