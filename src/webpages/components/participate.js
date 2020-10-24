@@ -7,15 +7,10 @@ import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import Header from '../../webpages/components/header';
-import wetez from '../../assets/wetez.svg'
-import lunie from '../../assets/Lunie.svg'
-import cosmos_station from '../../assets/Cosmostation.svg'
-import rainbow from '../../assets/rainbow.svg'
-import math from '../../assets/math.svg'
-import keplr from '../../assets/keplr.svg'
-import imtoken from '../../assets/imtoken.svg'
+import copy from '../../assets/copy.svg'
 import { getCalculateComsmos, getStatusURL } from "../../constants/url";
-
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import Wallets from './wallets'
 class Participate extends Component {
 
     constructor(props, context) {
@@ -35,23 +30,37 @@ class Participate extends Component {
             totalDistributed: 0,
             delegateAudit:0,
             delegateOther:0,
-            errorAddress: false
+            errorAddress: false,
+            copied: false,
+            copyValue:false,
+            notParticipantAddress:false,
+            showDelegateModal:false
         }
         this.handleCalculate = this.handleCalculate.bind(this);
     }
+    onCopy = () => {
+        this.setState({copyValue : true})
+        this.setState({copied: true});
+        setTimeout(() => {
+            this.setState({copyValue : false})
+          }, 1000);
+      };
     handleOnChange = (value) => {
         this.setState({ volume: value })
-        const delegateAudit = (0.25 * value)/(this.state.globalAuditStaked + value) + (0.75* value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
-        const delegateOther =  (0.75 * value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
-        this.setState({ delegateAudit: delegateAudit })
-        this.setState({ delegateOther: delegateOther })
-
+        var delegateAudit = (0.25 * value)/(this.state.globalAuditStaked + value) + (0.75* value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
+        var delegateOther =  (0.75 * value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
+        this.setState({ delegateAudit:(Math.round(delegateAudit * 100) / 100).toFixed(2) })
+        this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2)})
     }
     handleClose = () => {
         this.setState({ show: false });
+        this.setState({ showDelegateModal: false });
     };
     handleModel = () => {
         this.setState({ show: true });
+    };
+    handleDelegateModel = () => {
+        this.setState({ showDelegateModal: true });
     };
     handleTerms = () => {
         this.setState({ tcShow: false });
@@ -74,7 +83,7 @@ class Participate extends Component {
             const totalDistributed = 200000-(statusResponse.data.totalDistributed / 1000000) 
             const worldTotalDelegations = statusResponse.data.worldGlobalDelegation;
             const worldAuditDelegations = statusResponse.data.worldAuditDelegation;
-            this.setState({ totalDistributed: totalDistributed })
+            this.setState({ totalDistributed: (Math.round(totalDistributed * 100) / 100).toFixed(2) })   
             this.setState({ globalTotalStaked: worldTotalDelegations })
             this.setState({ globalAuditStaked: worldAuditDelegations })
 
@@ -84,17 +93,16 @@ class Participate extends Component {
 
     handleCalculate = e => {
         e.preventDefault();
+        this.setState({ errorAddress: false })
+        this.setState({ notParticipantAddress: false })
         const calAddress = e.target.cosmosAddress.value;
         var addressPrefix = calAddress.startsWith("cosmos");
 
     if (addressPrefix === true && calAddress.length === 45) {
         const url = getCalculateComsmos(calAddress)
-       
         axios.get(url).then((result) => {
             const calculatedata = result.data;
             if (calculatedata.success === true) {
-
-                this.setState({ errorAddress: false })
                 const currentEarned = calculatedata.received;
                 const yourDelegations = calculatedata.globalDelegation;
                 const yourAuditDelegation = calculatedata.globalDelegation;
@@ -107,7 +115,7 @@ class Participate extends Component {
                 this.setState({ estimatedRewards: estimatedRewards })
 
             } else {
-                this.setState({ errorAddress: true })
+                this.setState({ notParticipantAddress: true })
             }
         });
     }else {
@@ -122,9 +130,11 @@ class Participate extends Component {
         return (
             <div className="section-participate"> 
                 <Header />
-           
+               
             <section className="participate-stakedrop">
                 <div className="container">
+                  
+              
                     <div className="col-lg-12">
                         <div className="row">
                             <div className="col-lg-4 section-campaign">
@@ -157,7 +167,7 @@ class Participate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo end">
                                                 <h6>End</h6>
-                                                <h1>25 Novemeber 2020<span>Block Height: 4206000</span></h1>
+                                                <h1>25th of Novemeber 2020<span>Block Height: 4206000</span></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -190,8 +200,14 @@ class Participate extends Component {
                                                 />
 
                                             </div>
+                                            
                                             {this.state.errorAddress ?
                                                 <h6 className="valid-add">Enter Valid Address</h6>
+                                                :
+                                                ""
+                                            }
+                                              {this.state.notParticipantAddress ?
+                                                <h6 className="valid-add">Not a stakedrop participant address, please send the magic transaction</h6>
                                                 :
                                                 ""
                                             }
@@ -249,14 +265,14 @@ class Participate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo">
                                                 <h6>Tokens left:</h6>
-                                                 <h1>{this.state.totalDistributed} $XPRT</h1>
+                                                 <h1>{this.state.totalDistributed} XPRT</h1>
                                             </div>
                                         </div>
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo">
                                                 <h6>Time left:</h6>
                                                 <h1 className="countdown"><Countdown
-                                                    date={1603670400000}
+                                                    date={1606348800000}
                                                     autoStart={true}
                                                 /></h1>
                                             </div>
@@ -283,7 +299,7 @@ class Participate extends Component {
                                         </div>
                                         <div className="body-section">
                                             <div className="range-data">
-                                                <p>How many ATOMs you want to stake ?</p>
+                                                <p>How many ATOMs would you like to stake?</p>
                                                 <p className="range-value">{this.state.volume}</p>
                                             </div>
                                             <div className="range-slider">
@@ -292,7 +308,7 @@ class Participate extends Component {
                                                     onChange={this.handleOnChange}
                                                     min={0}
                                                     max={this.state.globalTotalStaked}
-                                                    step={1}
+                                                    step={500}
                                                 />
                                             </div>
 
@@ -300,7 +316,7 @@ class Participate extends Component {
                                                 <div className="row">
                                                     <div className="col-lg-12 delegate-sec">
                                                         <div className="inputstaking bottom">
-                                                            <h5>If you delegate to to AUDIT.one</h5>
+                                                            <h5>If you delegate to AUDIT.one</h5>
                                                             <h5 className="value">{this.state.delegateAudit}</h5>
                                                         </div>
                                                       
@@ -318,7 +334,7 @@ class Participate extends Component {
                                                     <button className="btn" onClick={this.handleModel}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
                                                 </div>
                                                 <div className="btn-delegate">
-                                                    <button className="btn" onClick={this.handleModel}>Delegate</button>
+                                                    <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>
                                                 </div>
                                             </div>
                                             
@@ -350,10 +366,19 @@ class Participate extends Component {
                     centered
                 >
                     <Modal.Body>
-                        <div className="staking-wallet-section">
+                    <div className="staking-wallet-section">
                             <h4 className="title">Available Methods to Participate in Stakedrop</h4>
                             <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
                             <div className="row wallet-method">
+                            <div className="section-magic-address">
+                                    <p><b>Magic Txn Address: </b>cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22</p>
+                                    <CopyToClipboard onCopy={this.onCopy} text={'cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22'}>
+                                    <img src={copy} alt="copy" className="copy-icon"/>
+                                    </CopyToClipboard>
+                                    <section className="copy-result">
+                                    {this.state.copyValue ? <span>Copied.</span> : null}
+                                    </section>
+                                </div>
                             <div className="col-lg-6">
                                     <div className="cli-box">
                                         <div className="card-inner">
@@ -364,53 +389,47 @@ class Participate extends Component {
                                 </div>
                                 </div>
                                 <p className="continue-text">Or choose wallet to continue</p>
-                            <div className="row">
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                        <img src={lunie} alt="Lunie" />
-                                            <p>Lunie</p>
-                                        </div>
-                                    </div>
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                        <img src={cosmos_station} alt="Cosmostation" />
-                                            <p>Cosmostation</p>
-                                        </div>
-                                    </div>
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                        <img src={imtoken} alt="imToken" />
-                                            <p>imToken</p>
-                                        </div>
-                                    </div>
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                        <img src={wetez} alt="Wetez" />
-                                            <p>Wetez</p>
-                                        </div>
-                                    </div>
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                            <img src={math} alt="Math" />
-                                            <p>Math Wallet</p>
-                                        </div>
-                                    </div>
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                            <img src={rainbow} alt="Rainbow" />
-                                            <p>Rainbow Wallet</p>
-                                        </div>
-                                    </div>
-                                    <div className="wallet-card">
-                                        
-                                        <div className="card-inner">
-                                        <img src={keplr} alt="Keplr" />
-                                            <p>Keplr Wallet</p>
-                                        </div>
-                                    </div>
+                           
+                            <Wallets />
                             </div>
-                            
-                        </div>
+                    </Modal.Body>
+                </Modal>
+
+                <Modal
+                    size="lg"
+                    show={this.state.showDelegateModal}
+                    onHide={this.handleClose}
+                    className="accountInfoModel"
+                    centered
+                >
+                    <Modal.Body>
+                    <div className="staking-wallet-section">
+                            <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                            <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
+                            <div className="row wallet-method">
+                            <div className="section-validator-address">
+                                    
+                                    <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
+                                    <CopyToClipboard onCopy={this.onCopy} text={'cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny'}>
+                                        <img src={copy} alt="copy" className="copy-icon"/>
+                                    </CopyToClipboard>
+                                    <section className="copy-result">
+                                    {this.state.copyValue ? <span>Copied.</span> : null}
+                                    </section>
+                                </div>
+                            <div className="col-lg-6">
+                                    <div className="cli-box">
+                                        <div className="card-inner">
+                                            <p>Continue with CLI</p>
+                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <p className="continue-text">Or choose wallet to continue</p>
+                               
+                            <Wallets />
+                            </div>
                     </Modal.Body>
                 </Modal>
             </section>

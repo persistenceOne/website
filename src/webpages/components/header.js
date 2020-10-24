@@ -6,7 +6,8 @@ import ScrollToTop from '../components/scrollToTop';
 import logo from '../../assets/logo.png'
 import rightarrow from '../../assets/right-arrow.svg'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
-
+import Wallets from '../components/wallets'
+import { Modal } from "react-bootstrap";
 class Header extends Component {
 
     constructor(props) {
@@ -14,7 +15,8 @@ class Header extends Component {
         this.state = { 
             Tab: '', 
             isOpen: false,
-            show: true 
+            showAlert: true ,
+            modalShow:false
         };
 
         this.toggleMenu = this.toggleMenu.bind(this);
@@ -30,7 +32,9 @@ class Header extends Component {
     setActiveTab = (tab, e) => {
         this.setState({ Tab: tab });
     }
-
+    handleClose = () => {
+        this.setState({ modalShow: false });
+    };
     render() {
 
         return (
@@ -41,18 +45,16 @@ class Header extends Component {
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
                 
                     {/* <p className="stakedrop-line"><span>Prepare Yourselves for Persistence StakeDrop! The Grand Unveiling <img src={rightarrow} alt="arrow"/></span></p> */}
-                    { this.state.show ? 
-                    <Alert className="alert-dismissible" >
+                    { this.state.showAlert ? 
+                    <Alert dismissible onClose={() => this.setState({showAlert:false})} >
                         <Link to="stakedrop">
 					<p className="other-pages">
-                    Grab the chance to earn $250,000 worth of $XPRT tokens. Cosmos campaign starts on 26 October. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
+                    Grab the chance to earn $250,000 worth of XPRT tokens. Cosmos campaign starts on 26 October. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
                     </Link>
-                    <Link to="stakedrop">
-                    <p className="stake-drop">
-                        Earn additional $XPRT <span>for staking on</span> AUDIT.One <span>Validator</span>&emsp;<img src={rightarrow} alt="arrow"/>
+                    <p className="stake-drop stake-drop-banner" onClick={() => this.setState({modalShow:true})}>
+                        Earn additional XPRT <span>for staking on</span> AUDIT.One <span>Validator</span>&emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
-                    </Link>
                     </Alert>:''
                     } 
                         
@@ -86,6 +88,17 @@ class Header extends Component {
                         </div>
                     </nav>
                 </div>
+                <Modal
+                    size="lg"
+                    show={this.state.modalShow}
+                    onHide={this.handleClose}
+                    className="accountInfoModel"
+                    centered
+                >
+                    <Modal.Body>
+                        <Wallets />
+                    </Modal.Body>
+                </Modal>
             </div >
         );
     }
