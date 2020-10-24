@@ -24,7 +24,7 @@ class App extends Component {
             <Route path="/roadmap" component={Roadmap} />
             <Route path="/app" component={AppContainer} />
             <Route path="/stakedrop" component={stakedrop} />
-            <Route path="/participate" component={participate} />
+            <Route path="/StakeDropCosmos" component={participate} />
             
       </Switch>)
     return (

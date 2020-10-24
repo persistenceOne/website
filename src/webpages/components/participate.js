@@ -6,13 +6,23 @@ import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
+import Header from '../../webpages/components/header';
+import wetez from '../../assets/wetez.svg'
+import lunie from '../../assets/Lunie.svg'
+import cosmos_station from '../../assets/Cosmostation.svg'
+import rainbow from '../../assets/rainbow.svg'
+import math from '../../assets/math.svg'
+import keplr from '../../assets/keplr.svg'
+import imtoken from '../../assets/imtoken.svg'
 import { getCalculateComsmos, getStatusURL } from "../../constants/url";
+
 class Participate extends Component {
 
     constructor(props, context) {
         super(props, context);
         this.state = {
             show: false,
+            tcShow:false,
             volume: 0,
             ercAddress: '--',
             blockHeight: '--',
@@ -20,15 +30,22 @@ class Participate extends Component {
             statkedOnAudit: '--',
             totalRewards: '--',
             estimatedRewards: '--',
-            globalTotalStaked: '',
+            globalTotalStaked: 0,
             globalAuditStaked: '',
             totalDistributed: 0,
+            delegateAudit:0,
+            delegateOther:0,
             errorAddress: false
         }
         this.handleCalculate = this.handleCalculate.bind(this);
     }
     handleOnChange = (value) => {
         this.setState({ volume: value })
+        const delegateAudit = (0.25 * value)/(this.state.globalAuditStaked + value) + (0.75* value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
+        const delegateOther =  (0.75 * value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
+        this.setState({ delegateAudit: delegateAudit })
+        this.setState({ delegateOther: delegateOther })
+
     }
     handleClose = () => {
         this.setState({ show: false });
@@ -36,7 +53,22 @@ class Participate extends Component {
     handleModel = () => {
         this.setState({ show: true });
     };
+    handleTerms = () => {
+        this.setState({ tcShow: false });
+        localStorage.setItem('accepted',  true);
+    };
+    handleCancelTerms = () => {
+        this.setState({ tcShow: false });
+        this.props.history.push('/stakedrop');
+    };
     componentDidMount = () => {
+        const acceptance = localStorage.getItem('accepted');
+        if(acceptance){
+        this.setState({ tcShow: false });
+        }
+        else{
+            this.setState({ tcShow: true });
+        }
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 200000-(statusResponse.data.totalDistributed / 1000000) 
@@ -82,25 +114,20 @@ class Participate extends Component {
         this.setState({ errorAddress: true })
     }
     
-
-       
-
     };
 
-    // handleAddressChangehandleAddressChange = () =>{
-    // const nameRe = /^[a-zA-Z\b]+$/;
-    //     if (event.target.value === '' || nameRe.test(event.target.value)) {
-
-    //     }
-    // }
     render() {
         const { volume } = this.state
+       
         return (
+            <div className="section-participate"> 
+                <Header />
+           
             <section className="participate-stakedrop">
                 <div className="container">
                     <div className="col-lg-12">
                         <div className="row">
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 section-campaign">
                                 <div className="row campaign-maintwo">
                                     <div className="col-lg-12  header-section">
                                         <h5 className="heading-participate">Cosmos Stake Drop Campaign</h5>
@@ -136,42 +163,12 @@ class Participate extends Component {
                                     </div>
 
                                 </div>
-                                <div className="row campaign-maintwo second">
-                                    <div className="col-lg-12  header-section">
-                                        <h5 className="heading-participate two">Campaign Status</h5>
-                                    </div>
-                                    <div className="row body-section">
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo">
-                                                <h6>Tokens left:</h6>
-                                                 <h1>{this.state.totalDistributed} $XPRT</h1>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo">
-                                                <h6>Time left:</h6>
-                                                <h1 className="countdown"><Countdown
-                                                    date={1603670400000}
-                                                    autoStart={true}
-                                                /></h1>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo">
-                                                <h6>Total Staked:</h6>
-                                                <h1>{this.state.globalTotalStaked}</h1>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo end">
-                                                <h6>Total Staked on AUDIT.one:</h6>
-                                                <h1>{this.state.globalAuditStaked}</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                
                             </div>
                             <div className="col-lg-8 staking-second-section">
+                                <div className="col-lg-12  cosmos-tutorial-section">
+                                        <p className="">Cosmos StakeDrop Tutorial: <a href="https://notes.persistence.one/s/SzZKebecO"  target="_blank" rel="noopener noreferrer">How ATOM Holders Can Participate in StakeDrop? </a></p>
+                                    </div>
                                 <div className="col-lg-12 stakerow">
                                     <div className="col-lg-12  header-section">
                                         <h5 className="heading-participate">Your Rewards</h5>
@@ -239,8 +236,48 @@ class Participate extends Component {
                                     </div>
 
                                 </div>
-                                <div className="staking-right-bottom">
-                                    <div className="col-lg-12 stakerow">
+                        
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-4">
+                        <div className="row campaign-maintwo second">
+                                    <div className="col-lg-12  header-section">
+                                        <h5 className="heading-participate two">Campaign Status</h5>
+                                    </div>
+                                    <div className="row body-section">
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo">
+                                                <h6>Tokens left:</h6>
+                                                 <h1>{this.state.totalDistributed} $XPRT</h1>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo">
+                                                <h6>Time left:</h6>
+                                                <h1 className="countdown"><Countdown
+                                                    date={1603670400000}
+                                                    autoStart={true}
+                                                /></h1>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo">
+                                                <h6>Total Staked:</h6>
+                                                <h1>{this.state.globalTotalStaked}</h1>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo end">
+                                                <h6>Total Staked on AUDIT.one:</h6>
+                                                <h1>{this.state.globalAuditStaked}</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div className="col-lg-8 staking-second-section">
+                                    <div className="col-lg-12 staking-right-bottom stakerow">
                                         <div className="col-lg-12  header-section">
                                             <h5 className="heading-participate">Participate</h5>
                                         </div>
@@ -254,8 +291,8 @@ class Participate extends Component {
                                                     value={volume}
                                                     onChange={this.handleOnChange}
                                                     min={0}
-                                                    max={200}
-                                                    step={5}
+                                                    max={this.state.globalTotalStaked}
+                                                    step={1}
                                                 />
                                             </div>
 
@@ -264,137 +301,120 @@ class Participate extends Component {
                                                     <div className="col-lg-12 delegate-sec">
                                                         <div className="inputstaking bottom">
                                                             <h5>If you delegate to to AUDIT.one</h5>
-                                                            <h5 className="value">--</h5>
+                                                            <h5 className="value">{this.state.delegateAudit}</h5>
                                                         </div>
                                                       
                                                         <div className="inputstaking bottom">
                                                             <h5>to Other Validators</h5>
-                                                            <h5 className="value">--</h5>
+                                                            <h5 className="value">{this.state.delegateOther}</h5>
                                                         </div>
                                                   
                                                     </div>
                                                     
                                                 </div>
                                             </div>
-                                            {/* <h5>Delegate</h5>
-                                            <div className="delegate-buttons">
+                                            <div className="participate-buttons">
+                                                <div className="btn-magic-txs">
+                                                    <button className="btn" onClick={this.handleModel}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
+                                                </div>
                                                 <div className="btn-delegate">
-                                                    <button className="btn">Delegate</button>
-                                                </div>
-                                                <div className="btn-delegate audits">
-                                                    <button className="btn">Delegate to Audit.one</button>
+                                                    <button className="btn" onClick={this.handleModel}>Delegate</button>
                                                 </div>
                                             </div>
-                                            <h5>Start</h5> */}
-                                            <div className="btn-magic-txs">
-                                                <button className="btn" onClick={this.handleModel}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                                </div>
                     </div>
                 </div>
                 <Modal
+                    show={this.state.tcShow}
+                    onHide={this.handleClose}
+                    className="accountInfoModel"
+                    centered
+                >
+                    <Modal.Body>
+                    <p className="tc">Accept Stakedrop Terms & Conditions</p>
+                    <div className="button-section">
+                    <button className="btn accept" onClick = {this.handleTerms}>Accept</button>
+                    <button className="btn decline" onClick = {this.handleCancelTerms} >decline</button>
+                    </div>
+                    </Modal.Body>
+                    </Modal>
+                <Modal
+                    size="lg"
                     show={this.state.show}
                     onHide={this.handleClose}
                     className="accountInfoModel"
                     centered
                 >
-                    <Modal.Header>
-                        Select wallet for staking
-                    </Modal.Header>
                     <Modal.Body>
                         <div className="staking-wallet-section">
+                            <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                            <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
+                            <div className="row wallet-method">
+                            <div className="col-lg-6">
+                                    <div className="cli-box">
+                                        <div className="card-inner">
+                                            <p>Continue with CLI</p>
+                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <p className="continue-text">Or choose wallet to continue</p>
                             <div className="row">
-                                <div className="col-lg-6">
                                     <div className="wallet-card">
                                         <div className="card-inner">
+                                        <img src={lunie} alt="Lunie" />
                                             <p>Lunie</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-6">
                                     <div className="wallet-card">
                                         <div className="card-inner">
+                                        <img src={cosmos_station} alt="Cosmostation" />
                                             <p>Cosmostation</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6">
                                     <div className="wallet-card">
                                         <div className="card-inner">
+                                        <img src={imtoken} alt="imToken" />
                                             <p>imToken</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-6">
                                     <div className="wallet-card">
                                         <div className="card-inner">
+                                        <img src={wetez} alt="Wetez" />
                                             <p>Wetez</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6">
                                     <div className="wallet-card">
                                         <div className="card-inner">
+                                            <img src={math} alt="Math" />
                                             <p>Math Wallet</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-6">
                                     <div className="wallet-card">
                                         <div className="card-inner">
+                                            <img src={rainbow} alt="Rainbow" />
                                             <p>Rainbow Wallet</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6">
                                     <div className="wallet-card">
+                                        
                                         <div className="card-inner">
+                                        <img src={keplr} alt="Keplr" />
                                             <p>Keplr Wallet</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                            <p>Atomic</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <div className="wallet-card">
-                                        <div className="card-inner">
-                                            <p>Trust</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
+                            
                         </div>
                     </Modal.Body>
                 </Modal>
             </section>
-
+            </div>
         );
     }
 }

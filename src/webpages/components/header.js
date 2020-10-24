@@ -42,12 +42,19 @@ class Header extends Component {
                 
                     {/* <p className="stakedrop-line"><span>Prepare Yourselves for Persistence StakeDrop! The Grand Unveiling <img src={rightarrow} alt="arrow"/></span></p> */}
                     { this.state.show ? 
-                    <Alert dismissible onClose={() => this.setState({show:false})}>
-					<p>
-                        Earn additional $XPRT <span>for staking on</span> AUDIT.One <span>Validator</span>&emsp;<Link to="stakedrop"><img src={rightarrow} alt="arrow"/></Link>
-  				</p>
-				</Alert>:''
-    } 
+                    <Alert className="alert-dismissible" >
+                        <Link to="stakedrop">
+					<p className="other-pages">
+                    Grab the chance to earn $250,000 worth of $XPRT tokens. Cosmos campaign starts on 26 October. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
+                    </p>
+                    </Link>
+                    <Link to="stakedrop">
+                    <p className="stake-drop">
+                        Earn additional $XPRT <span>for staking on</span> AUDIT.One <span>Validator</span>&emsp;<img src={rightarrow} alt="arrow"/>
+                    </p>
+                    </Link>
+                    </Alert>:''
+                    } 
                         
                         <div className="container nav-banner">
                             <Link className="navbar-brand logo text-uppercase" to="/">

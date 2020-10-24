@@ -7,7 +7,7 @@ import comdexIcon from '../../assets/comdex-icon.svg'
 import terraIcon from '../../assets/terra-icon.svg'
 import ixoIcon from '../../assets/ixo-icon.svg'
 import wuIcon from '../../assets/WU-icon.svg'
-
+import Header from '../../webpages/components/header';
 
 class Roadmap extends React.Component {
     constructor(props) {
@@ -41,7 +41,7 @@ class Roadmap extends React.Component {
         const { lang } = this.props;
         return (
             <div>
-                
+                <Header />
                 
               
                 <section className="roadmap-section">

@@ -13,7 +13,7 @@ import puneet from '../../assets/pics/puneet.png'
 import abhitej from '../../assets/pics/abhitej.png'
 import abhinav from '../../assets/pics/abhinav.png'
 import prashant from '../../assets/pics/prashant.png'
-
+import Header from '../../webpages/components/header';
 
 class Team extends React.Component {
     constructor(props) {
@@ -33,6 +33,8 @@ class Team extends React.Component {
     render() {
         const { lang } = this.props;
         return (
+            <>
+            <Header />
             <div className="team-bglines">
                 
                 
@@ -220,6 +222,7 @@ class Team extends React.Component {
                 </section>
                
             </div>
+            </>
         );
     }
 

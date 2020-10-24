@@ -13,7 +13,6 @@ import colloterals from '../assets/colloterals.svg';
 import liquidpools from '../assets/liquidpools.png';
 import threecommas from '../assets/backers/three-commas.svg';
 import alamedaresearch from '../assets/backers/alameda-research.svg';
-import amplificapital from '../assets/backers/amplifi-capital.svg';
 import arrington from '../assets/backers/arrington.svg';
 import au21 from '../assets/backers/au21.svg';
 import Cosmostation from '../assets/backers/Cosmostation.svg';
@@ -22,7 +21,6 @@ import dokia_capital from '../assets/backers/dokia_capital.svg';
 import incrypt from '../assets/backers/incrypt.svg';
 import iosg from '../assets/backers/iosg.svg';
 import lunex from '../assets/backers/lunex.svg';
-import moonrock from '../assets/backers/moonrock.svg';
 import sgone from '../assets/backers/sg-1.svg';
 import Spark from '../assets/backers/Spark.svg';
 import terra from '../assets/backers/terra.svg';
@@ -33,10 +31,12 @@ import cointelegraph from '../assets/CT.svg';
 import coindesk from '../assets/coindesk01.svg';
 import financemagnet from '../assets/FM.svg';
 import yahoofinance from '../assets/YF.svg';
+import dsa from '../assets/dsa.svg';
+import e27 from '../assets/e27.svg';
 import chainnews from '../assets/chainnews.svg';
 import whitepaper from '../whitepaper.pdf'
 import Icon from './icon';
-
+import Header from '../webpages/components/header';
 
 class homePage extends Component {
     componentDidMount() {
@@ -49,7 +49,7 @@ class homePage extends Component {
         const { lang } = this.props;
         return (
             <div>
-               
+               <Header />
                 {/* Products Section */}
                 <div className="bg-section-1">
                     <section className="section-1 bg-product product-padding" id="home" data-image-src={proudctBg}>
@@ -182,8 +182,6 @@ class homePage extends Component {
                                 <img className="logo-img" src={incrypt} alt="Incrypt" />
                                 <img className="logo-img" src={threecommas} alt="3commas" />
                                 <img className="logo-img" src={sgone} alt="SG1" />
-                                <img className="logo-img" src={amplificapital} alt="Amplifi Capital" />
-                                <img className="logo-img" src={moonrock} alt="Moonrock" />
                             </div>
 
 
@@ -263,6 +261,8 @@ class homePage extends Component {
                                 <a href="https://finance.yahoo.com/news/comdex-completes-over-10m-worth-070800123.html?guccounter=1" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={yahoofinance} alt="Yahoo Finance" /></a>
                                 <a href="https://www.financemagnates.com/cryptocurrency/news/all-eyes-on-india-as-supreme-court-crypto-case-advances/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={financemagnet} alt="Finance Magnates" /></a> 
                                 <a href="https://www.chainnews.com/news/244436790135.htm" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={chainnews} alt="ChainNews" /></a> 
+                                <a href="https://www.dealstreetasia.com/stories/x-zell-persistence-211639/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={dsa} alt="dsa" /></a> 
+                                <a href="https://e27.co/techcrunch-founders-vc-firm-leads-us3-7m-in-ex-golden-gate-employees-blockchain-startup-persistence-20201015/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={e27} alt="e27" /></a> 
                             </div>
                             </div>
                         </div>
