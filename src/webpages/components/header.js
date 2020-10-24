@@ -42,6 +42,7 @@ class Header extends Component {
     }
     handleClose = () => {
         this.setState({ modalShow: false });
+        this.setState({ showDelegateCliModal: false });
     };
     render() {
 
