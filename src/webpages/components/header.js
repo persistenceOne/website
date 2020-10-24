@@ -106,7 +106,6 @@ class Header extends Component {
                     <Modal.Body>
                     <div className="staking-wallet-section">
                             <h4 className="title">Available Methods to Participate in Stakedrop</h4>
-                            <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
                             <div className="row wallet-method">
                             <div className="section-validator-address">
                                     <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
