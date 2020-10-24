@@ -157,6 +157,34 @@ input:focus {
 		color: #231f20;
 	}
 	.staking-second-section {
+		.cosmos-tutorial-section{
+			background-color: #231F20;
+			background-image: url(../assets/cosmos-tutorial-bg.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0% 1px;
+			padding:20px;
+			margin-bottom: 15px;
+			p{
+				margin:0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #FFFFFF;
+				a{
+					text-decoration: underline;
+					&:hover{
+						color: #FFFFFF;
+						text-decoration: underline;
+					}
+				}
+
+			}
+		}
+		.staking-right-bottom.stakerow {
+			.body-section {
+				padding: 20px;
+			}
+		}
 		.stakerow {
 			background: #fff;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
@@ -186,6 +214,8 @@ input:focus {
 				form {
 					.valid-add {
 						text-align: center;
+						position:absolute;
+						right: 25px;
 						margin: 10px 0;
 						font-size: 12px;
 						color: #e50913;
@@ -254,7 +284,7 @@ input:focus {
 			}
 		}
 		.participate-buttons {
-			margin: 15px 0;
+			margin: 25px 0;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -340,7 +370,7 @@ input:focus {
 			padding-top: 30px;
 		}
 		.participate-cardtwo.end {
-			margin-bottom: 40px;
+			margin-bottom: 115px;
 		}
 		.participate-cardtwo {
 			h6 {
@@ -865,12 +895,25 @@ input:focus {
 	padding: 150px 0;
 	background: #f4f5f7;
 	.campaign-card.learnmore_card {
+		padding:85px 40px;
 		.about-campaign {
-			margin: 35px 0;
-			align-items: center;
-			justify-content: center;
 			display: flex;
-			flex-direction: column;
+			justify-content: center;
+			margin:40px 0;
+			flex-wrap: wrap;
+			.mechanism{
+				margin-right: 35px;
+			}
+		}
+	}
+	.learnmore_card{
+		.heading{
+			text-align: center;
+			font-weight: bold;
+			font-size: 24px;
+			text-align: center;
+
+color: #231F20;
 		}
 	}
 	.campaign-card {
@@ -885,14 +928,53 @@ input:focus {
 				color:#fff;
 				background: #000;
 				font-weight: bold;
-				padding: 15px 30px;
+				padding: 10px 20px;
+				border-radius: 5px;
+				font-size: 14px;
+				border-radius: 5px;
+				line-height: 1;
+			}
+			button{
+
+			}
+			&:hover a {
+				opacity: 1;
+				background: #e50913;
+				color: #fff;
 			}
 		}
 		.mechanism-btn {
 			display: flex;
 			flex-direction: column;
-			padding: 20px;
-			border: 1px solid #ccc;
+			justify-content: center;
+			padding: 25px 35px;
+			background: #FFFFFF;
+			border: 1px solid #E6E6E6;
+			box-sizing: border-box;
+			border-radius: 8px;
+			margin: auto;
+			img{
+				width: 40px;
+    			height: 46px;
+			}
+			p{
+				font-weight: bold;
+				margin: 10px 0 0 0;
+				font-size: 16px;
+				text-align: center;
+				color: #000000;
+			}
+		}
+		.official-announce{
+			text-align: center;
+			a{
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 22px;
+				text-align: center;
+				text-decoration-line: underline;
+				color: #838C9F;
+			}
 		}
 		background: #fff;
 		padding: 30px;
@@ -901,11 +983,7 @@ input:focus {
 		&:hover {
 			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 		}
-		&:hover a {
-			opacity: 1;
-			background: #e50913;
-			color: #fff;
-		}
+		
 	}
 	.stake-to {
 		p.total_drop_allowcated {
@@ -3351,6 +3429,21 @@ input:focus {
 			margin-bottom: 20px;
 		}
 	}
+	.stake-drop-campaigns .campaign-card.learnmore_card{
+		padding: 20px;
+		.about-campaign{
+			margin: 32px 0;
+			.mechanism-btn{
+				margin: 5px 0 0 5px ;
+			}
+			.mechanism{
+				margin:5px 0 0 5px;
+			}
+		}
+	}
+	.staking-right-bottom{
+		margin-top: 20px;
+	}
 }
 @media (min-width: 991px) and (max-width: 1199px) {
 	.navbar-custom .navbar-nav li a {
@@ -3607,19 +3700,27 @@ input:focus {
 		font-size: 18px;
 		text-align: center;
 		color: #231F20;
+		margin-bottom: 10px;
+	}
+	.info{
+		font-weight: 600;
+		font-size: 12px;
+		text-align: center;
+		color: #838C9F;
 	}
 	.continue-text{
 		font-weight: 600;
 		font-size: 14px;
 		text-align: center;
 		color: #231F20;
+		margin-top: 20px;
 	}
 	.wallet-method{
 		display: flex;
     justify-content: center;
 		.cli-box {
 			background: #FFFFFF;
-			padding: 20px;
+			padding:15px 20px;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
 			border-radius: 8px;
 			.icon {
@@ -3663,8 +3764,15 @@ input:focus {
 			flex-direction: column;
 			text-align: center;
 			p {
-				margin: 0;
+				margin:10px 0 0 0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #231F20;
 			}
+		}
+		&:hover {
+			cursor: pointer;
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 		}
 	}
 }
@@ -3723,5 +3831,31 @@ input:focus {
 		.modal-body{
 			padding:40px;
 		}
+	}
+	.tc{
+		color: #000000;
+		font-size: 18px;
+		text-align: center;
+	}
+}
+
+.button-section{
+	text-align: center;
+	.btn{
+		border-radius: 7px;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 5px 25px;
+	}
+	.accept{
+		background: #E50913;
+		box-shadow: 0px 4px 14px rgba(229, 9, 19, 0.25);
+		color: #FFFFFF;
+		margin-right: 15px;
+	}
+	.decline{
+		background: #FFFFFF;
+		border: 1px solid #E6E6E6;
+		color: #000000;
 	}
 }

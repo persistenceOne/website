@@ -31,6 +31,8 @@ import cointelegraph from '../assets/CT.svg';
 import coindesk from '../assets/coindesk01.svg';
 import financemagnet from '../assets/FM.svg';
 import yahoofinance from '../assets/YF.svg';
+import dsa from '../assets/dsa.svg';
+import e27 from '../assets/e27.svg';
 import chainnews from '../assets/chainnews.svg';
 import whitepaper from '../whitepaper.pdf'
 import Icon from './icon';
@@ -259,6 +261,8 @@ class homePage extends Component {
                                 <a href="https://finance.yahoo.com/news/comdex-completes-over-10m-worth-070800123.html?guccounter=1" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={yahoofinance} alt="Yahoo Finance" /></a>
                                 <a href="https://www.financemagnates.com/cryptocurrency/news/all-eyes-on-india-as-supreme-court-crypto-case-advances/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={financemagnet} alt="Finance Magnates" /></a> 
                                 <a href="https://www.chainnews.com/news/244436790135.htm" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={chainnews} alt="ChainNews" /></a> 
+                                <a href="https://www.dealstreetasia.com/stories/x-zell-persistence-211639/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={dsa} alt="dsa" /></a> 
+                                <a href="https://e27.co/techcrunch-founders-vc-firm-leads-us3-7m-in-ex-golden-gate-employees-blockchain-startup-persistence-20201015/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={e27} alt="e27" /></a> 
                             </div>
                             </div>
                         </div>

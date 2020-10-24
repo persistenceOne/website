@@ -22,6 +22,7 @@ class Participate extends Component {
         super(props, context);
         this.state = {
             show: false,
+            tcShow:false,
             volume: 0,
             ercAddress: '--',
             blockHeight: '--',
@@ -29,7 +30,7 @@ class Participate extends Component {
             statkedOnAudit: '--',
             totalRewards: '--',
             estimatedRewards: '--',
-            globalTotalStaked: '',
+            globalTotalStaked: 0,
             globalAuditStaked: '',
             totalDistributed: 0,
             delegateAudit:0,
@@ -44,7 +45,6 @@ class Participate extends Component {
         const delegateOther =  (0.75 * value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
         this.setState({ delegateAudit: delegateAudit })
         this.setState({ delegateOther: delegateOther })
-        console.log(delegateAudit)
 
     }
     handleClose = () => {
@@ -53,7 +53,22 @@ class Participate extends Component {
     handleModel = () => {
         this.setState({ show: true });
     };
+    handleTerms = () => {
+        this.setState({ tcShow: false });
+        localStorage.setItem('accepted',  true);
+    };
+    handleCancelTerms = () => {
+        this.setState({ tcShow: false });
+        this.props.history.push('/stakedrop');
+    };
     componentDidMount = () => {
+        const acceptance = localStorage.getItem('accepted');
+        if(acceptance){
+        this.setState({ tcShow: false });
+        }
+        else{
+            this.setState({ tcShow: true });
+        }
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 200000-(statusResponse.data.totalDistributed / 1000000) 
@@ -99,19 +114,11 @@ class Participate extends Component {
         this.setState({ errorAddress: true })
     }
     
-
-       
-
     };
 
-    // handleAddressChangehandleAddressChange = () =>{
-    // const nameRe = /^[a-zA-Z\b]+$/;
-    //     if (event.target.value === '' || nameRe.test(event.target.value)) {
-
-    //     }
-    // }
     render() {
         const { volume } = this.state
+       
         return (
             <div className="section-participate"> 
                 <Header />
@@ -159,6 +166,9 @@ class Participate extends Component {
                 
                             </div>
                             <div className="col-lg-8 staking-second-section">
+                                <div className="col-lg-12  cosmos-tutorial-section">
+                                        <p className="">Cosmos StakeDrop Tutorial: <a href="https://notes.persistence.one/s/SzZKebecO"  target="_blank" rel="noopener noreferrer">How ATOM Holders Can Participate in StakeDrop? </a></p>
+                                    </div>
                                 <div className="col-lg-12 stakerow">
                                     <div className="col-lg-12  header-section">
                                         <h5 className="heading-participate">Your Rewards</h5>
@@ -305,7 +315,7 @@ class Participate extends Component {
                                             </div>
                                             <div className="participate-buttons">
                                                 <div className="btn-magic-txs">
-                                                    <button className="btn" > <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
+                                                    <button className="btn" onClick={this.handleModel}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
                                                 </div>
                                                 <div className="btn-delegate">
                                                     <button className="btn" onClick={this.handleModel}>Delegate</button>
@@ -318,6 +328,20 @@ class Participate extends Component {
                                 </div>
                     </div>
                 </div>
+                <Modal
+                    show={this.state.tcShow}
+                    onHide={this.handleClose}
+                    className="accountInfoModel"
+                    centered
+                >
+                    <Modal.Body>
+                    <p className="tc">Accept Stakedrop Terms & Conditions</p>
+                    <div className="button-section">
+                    <button className="btn accept" onClick = {this.handleTerms}>Accept</button>
+                    <button className="btn decline" onClick = {this.handleCancelTerms} >decline</button>
+                    </div>
+                    </Modal.Body>
+                    </Modal>
                 <Modal
                     size="lg"
                     show={this.state.show}

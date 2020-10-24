@@ -182,6 +182,36 @@ input:focus {
   color: #231f20;
 }
 
+.participate-stakedrop .staking-second-section .cosmos-tutorial-section {
+  background-color: #231F20;
+  background-image: url(../assets/cosmos-tutorial-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 1px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.participate-stakedrop .staking-second-section .cosmos-tutorial-section p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.participate-stakedrop .staking-second-section .cosmos-tutorial-section p a {
+  text-decoration: underline;
+}
+
+.participate-stakedrop .staking-second-section .cosmos-tutorial-section p a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.participate-stakedrop .staking-second-section .staking-right-bottom.stakerow .body-section {
+  padding: 20px;
+}
+
 .participate-stakedrop .staking-second-section .stakerow {
   background: #fff;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
@@ -223,6 +253,8 @@ input:focus {
 
 .participate-stakedrop .staking-second-section .stakerow .body-section form .valid-add {
   text-align: center;
+  position: absolute;
+  right: 25px;
   margin: 10px 0;
   font-size: 12px;
   color: #e50913;
@@ -322,7 +354,7 @@ input:focus {
 }
 
 .participate-stakedrop .staking-second-section .participate-buttons {
-  margin: 15px 0;
+  margin: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +470,7 @@ input:focus {
 }
 
 .participate-stakedrop .campaign-maintwo .participate-cardtwo.end {
-  margin-bottom: 40px;
+  margin-bottom: 115px;
 }
 
 .participate-stakedrop .campaign-maintwo .participate-cardtwo h6 {
@@ -1036,21 +1068,32 @@ input:focus {
   background: #f4f5f7;
 }
 
+.stake-drop-campaigns .campaign-card.learnmore_card {
+  padding: 85px 40px;
+}
+
 .stake-drop-campaigns .campaign-card.learnmore_card .about-campaign {
-  margin: 35px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 40px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.stake-drop-campaigns .campaign-card.learnmore_card .about-campaign .mechanism {
+  margin-right: 35px;
+}
+
+.stake-drop-campaigns .learnmore_card .heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: #231F20;
 }
 
 .stake-drop-campaigns .campaign-card {
@@ -1079,7 +1122,17 @@ input:focus {
   color: #fff;
   background: #000;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  line-height: 1;
+}
+
+.stake-drop-campaigns .campaign-card .icon-div:hover a {
+  opacity: 1;
+  background: #e50913;
+  color: #fff;
 }
 
 .stake-drop-campaigns .campaign-card .mechanism-btn {
@@ -1090,19 +1143,48 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px;
-  border: 1px solid #ccc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 35px;
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.stake-drop-campaigns .campaign-card .mechanism-btn img {
+  width: 40px;
+  height: 46px;
+}
+
+.stake-drop-campaigns .campaign-card .mechanism-btn p {
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  text-align: center;
+  color: #000000;
+}
+
+.stake-drop-campaigns .campaign-card .official-announce {
+  text-align: center;
+}
+
+.stake-drop-campaigns .campaign-card .official-announce a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #838C9F;
 }
 
 .stake-drop-campaigns .campaign-card:hover {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.stake-drop-campaigns .campaign-card:hover a {
-  opacity: 1;
-  background: #e50913;
-  color: #fff;
 }
 
 .stake-drop-campaigns .stake-to p.total_drop_allowcated {
@@ -3924,6 +4006,21 @@ input:focus {
   .right-section-body .poolCards .col-lg-6:first-child {
     margin-bottom: 20px;
   }
+  .stake-drop-campaigns .campaign-card.learnmore_card {
+    padding: 20px;
+  }
+  .stake-drop-campaigns .campaign-card.learnmore_card .about-campaign {
+    margin: 32px 0;
+  }
+  .stake-drop-campaigns .campaign-card.learnmore_card .about-campaign .mechanism-btn {
+    margin: 5px 0 0 5px;
+  }
+  .stake-drop-campaigns .campaign-card.learnmore_card .about-campaign .mechanism {
+    margin: 5px 0 0 5px;
+  }
+  .staking-right-bottom {
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {
@@ -4177,6 +4274,14 @@ input:focus {
   font-size: 18px;
   text-align: center;
   color: #231F20;
+  margin-bottom: 10px;
+}
+
+.staking-wallet-section .info {
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  color: #838C9F;
 }
 
 .staking-wallet-section .continue-text {
@@ -4184,6 +4289,7 @@ input:focus {
   font-size: 14px;
   text-align: center;
   color: #231F20;
+  margin-top: 20px;
 }
 
 .staking-wallet-section .wallet-method {
@@ -4197,7 +4303,7 @@ input:focus {
 
 .staking-wallet-section .wallet-method .cli-box {
   background: #FFFFFF;
-  padding: 20px;
+  padding: 15px 20px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
   border-radius: 8px;
@@ -4273,7 +4379,16 @@ input:focus {
 }
 
 .staking-wallet-section .wallet-card .card-inner p {
-  margin: 0;
+  margin: 10px 0 0 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #231F20;
+}
+
+.staking-wallet-section .wallet-card:hover {
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .range-slider .rangeslider {
@@ -4335,5 +4450,36 @@ input:focus {
 
 .accountInfoModel .modal-content .modal-body {
   padding: 40px;
+}
+
+.accountInfoModel .tc {
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+}
+
+.button-section {
+  text-align: center;
+}
+
+.button-section .btn {
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 25px;
+}
+
+.button-section .accept {
+  background: #E50913;
+  -webkit-box-shadow: 0px 4px 14px rgba(229, 9, 19, 0.25);
+          box-shadow: 0px 4px 14px rgba(229, 9, 19, 0.25);
+  color: #FFFFFF;
+  margin-right: 15px;
+}
+
+.button-section .decline {
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */
