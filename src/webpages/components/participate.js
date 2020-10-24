@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import Icon from '../icon';
-import { Modal, Form } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
