@@ -487,7 +487,7 @@ class Participate extends Component {
                     <Modal.Body>
                             <div className="cli-section">
                                 <h3>CLI Method</h3>
-                                <p className="info">Awesome, everything that you need is below111</p>
+                                <p className="info">Awesome, everything that you need is below</p>
                                 <div className="cli-address">
                                     <p>gaiacli tx send [from_key_or_address] cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22 1000uatom --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --memo [ERC-Address] --node https://node1.rpc.cosmos.persistence.one</p>
                                 </div>
