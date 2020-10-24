@@ -16,49 +16,48 @@ class Wallets extends Component {
 
          
                                  <div className="row">
-                                    <div className="wallet-card">
+                                    <a href="https://lunie.io/" target="_blank" rel="noopener noreferrer" title="lunie" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={lunie} alt="Lunie" />
                                             <p>Lunie</p>
                                         </div>
-                                    </div>
-                                    <div className="wallet-card">
+                                    </a>
+                                    <a href="https://www.cosmostation.io/" target="_blank" rel="noopener noreferrer" title="cosmostation" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={cosmos_station} alt="Cosmostation" />
                                             <p>Cosmostation</p>
                                         </div>
-                                    </div>
-                                    <div className="wallet-card">
+                                    </a>
+                                    <a href="https://token.im/" target="_blank" rel="noopener noreferrer" title="token" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={imtoken} alt="imToken" />
                                             <p>imToken</p>
                                         </div>
-                                    </div>
-                                    <div className="wallet-card">
+                                    </a>
+                                    <a href="https://www.wetez.io/mwetez" target="_blank" rel="noopener noreferrer" title="wetez" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={wetez} alt="Wetez" />
                                             <p>Wetez</p>
                                         </div>
-                                    </div>
-                                    <div className="wallet-card">
+                                    </a>
+                                    <a href="https://mathwallet.org/en-us/" target="_blank" rel="noopener noreferrer" title="mathwallet" className="wallet-card">
                                         <div className="card-inner">
                                             <img src={math} alt="Math" />
                                             <p>Math Wallet</p>
                                         </div>
-                                    </div>
-                                    <div className="wallet-card">
+                                    </a>
+                                    <a href="https://www.rainbow.one/" target="_blank" rel="noopener noreferrer" title="rainbow" className="wallet-card">
                                         <div className="card-inner">
                                             <img src={rainbow} alt="Rainbow" />
                                             <p>Rainbow Wallet</p>
                                         </div>
-                                    </div>
-                                    <div className="wallet-card">
-                                        
+                                    </a>
+                                    <a href="https://wallet.keplr.app/#/dashboard" target="_blank" rel="noopener noreferrer" title="keplr" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={keplr} alt="Keplr" />
                                             <p>Keplr Wallet</p>
                                         </div>
-                                    </div>
+                                    </a>
                             </div>
                             
               

@@ -42,6 +42,7 @@ class Header extends Component {
     }
     handleClose = () => {
         this.setState({ modalShow: false });
+        this.setState({ showDelegateCliModal: false });
     };
     render() {
 
@@ -106,7 +107,6 @@ class Header extends Component {
                     <Modal.Body>
                     <div className="staking-wallet-section">
                             <h4 className="title">Available Methods to Participate in Stakedrop</h4>
-                            <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
                             <div className="row wallet-method">
                             <div className="section-validator-address">
                                     <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
@@ -143,7 +143,7 @@ class Header extends Component {
                                 <h3>CLI Method</h3>
                                 <p className="info">Awesome, everything that you need is below</p>
                                 <div className="cli-address">
-                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --node tcp://139.59.70.20:26657</p>
+                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --node https://node1.rpc.cosmos.persistence.one</p>
                                 </div>
 
                             </div>
