@@ -4460,7 +4460,24 @@ input:focus {
 .accountInfoModel .tc {
   color: #000000;
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+}
+
+.accountInfoModel .tc .form-group {
+  margin: 0 0 0 10px;
+}
+
+.accountInfoModel .tc a {
+  text-decoration: underline;
+  margin-left: 5px;
+  color: #000000;
+}
+
+.accountInfoModel .tc a:hover {
+  color: #000000;
 }
 
 .button-section {

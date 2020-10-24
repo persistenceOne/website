@@ -1,13 +1,14 @@
 
 import React, { Component } from 'react';
 import Icon from '../icon';
-import { Modal } from "react-bootstrap";
+import { Modal, Form } from "react-bootstrap";
 import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import Header from '../../webpages/components/header';
 import copy from '../../assets/copy.svg'
+import docTerms from '../../assets/PersistenceT&C.pdf'
 import { getCalculateComsmos, getStatusURL } from "../../constants/url";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import Wallets from './wallets'
@@ -26,20 +27,26 @@ class Participate extends Component {
             totalRewards: '--',
             estimatedRewards: '--',
             globalTotalStaked: 0,
-            globalAuditStaked: '',
+            globalAuditStaked: 0,
+            globalAuditStakedInt: 0,
             totalDistributed: 0,
             delegateAudit:0,
+            globalTotalStakedInt:0,
             delegateOther:0,
             errorAddress: false,
             copied: false,
             copyValue:false,
             notParticipantAddress:false,
             showDelegateModal:false,
+            sumbitButtonState: true,
             showDelegateCliModal:false,
-            showMagicTxnClieModel:true
+            showMagicTxnClieModel:false,
+            isChecked: false
         }
+        this.handleChecked = this.handleChecked.bind(this);
         this.handleCalculate = this.handleCalculate.bind(this);
     }
+
     onCopy = () => {
         this.setState({copyValue : true})
         this.setState({copied: true});
@@ -47,21 +54,45 @@ class Participate extends Component {
             this.setState({copyValue : false})
           }, 1000);
       };
+
     handleOnChange = (value) => {
         this.setState({ volume: value })
-        var delegateAudit = (0.25 * value)/(this.state.globalAuditStaked + value) + (0.75* value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
-        var delegateOther =  (0.75 * value)/(this.state.globalTotalStaked + value) * this.state.totalDistributed
-        this.setState({ delegateAudit:(Math.round(delegateAudit * 100) / 100).toFixed(2) })
-        this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2)})
-    }
+        var utomsToDelegate = value * 1000000
+        console.log(this.state.globalAuditStakedInt, this.state.globalTotalStakedInt)
+        var delegateAudit =  ((0.25 * utomsToDelegate/(this.state.globalAuditStakedInt + utomsToDelegate) + 
+            (0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate))* this.state.totalDistributed);
+        console.log(delegateAudit)
+        var delegateOther = ((0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributed;
+        if(delegateAudit > 5000){
+            this.setState({ delegateAudit:5000})
+        }else{
+            this.setState({ delegateAudit:delegateAudit})
+        }
+        if(delegateOther > 5000){
+            this.setState({ delegateOther:5000})
+        }else{
+            this.setState({ delegateOther:delegateOther})
+        }
+    }   
+
+    handleChecked =(e) =>{
+        if (e.target.checked) {
+            this.setState({sumbitButtonState:false});
+        }else{
+            this.setState({sumbitButtonState:true});
+        }
+        this.setState({isChecked: !this.state.isChecked});
+      }
+    
     handleClose = () => {
         this.setState({ show: false });
         this.setState({ showDelegateModal: false });
         this.setState({ showDelegateCliModal: false });
         this.setState({ showMagicTxnClieModel: false });
     };
-    handleModel = () => {
-        this.setState({ show: true });
+
+    handleTcModal = () => {
+        this.setState({ tcShow: true });
     };
     handleDelegateModel = () => {
         this.setState({ showDelegateModal: true });
@@ -77,29 +108,25 @@ class Participate extends Component {
     }
     handleTerms = () => {
         this.setState({ tcShow: false });
-        localStorage.setItem('accepted',  true);
+        this.setState({ show: true });
     };
     handleCancelTerms = () => {
         this.setState({ tcShow: false });
-        this.props.history.push('/stakedrop');
+        this.props.history.push('/StakeDropCosmos');
     };
     componentDidMount = () => {
-        const acceptance = localStorage.getItem('accepted');
-        if(acceptance){
-        this.setState({ tcShow: false });
-        }
-        else{
-            this.setState({ tcShow: true });
-        }
+       
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
-            const totalDistributed = 200000-(statusResponse.data.totalDistributed / 1000000) 
-            const worldTotalDelegations = statusResponse.data.worldGlobalDelegation;
-            const worldAuditDelegations = statusResponse.data.worldAuditDelegation;
-            this.setState({ totalDistributed: (Math.round(totalDistributed * 100) / 100).toFixed(2) })   
-            this.setState({ globalTotalStaked: worldTotalDelegations })
-            this.setState({ globalAuditStaked: worldAuditDelegations })
-
+            const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000) 
+            console.log(totalDistributed)
+            const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
+            const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
+            this.setState({totalDistributed: totalDistributed})  
+            this.setState({globalTotalStakedInt: worldTotalDelegations}) 
+            this.setState({globalAuditStakedInt: worldAuditDelegations }) 
+            this.setState({globalTotalStaked: worldTotalDelegations.toLocaleString()})
+            this.setState({globalAuditStaked: worldAuditDelegations.toLocaleString()})
 
         })
     }
@@ -116,17 +143,16 @@ class Participate extends Component {
         axios.get(url).then((result) => {
             const calculatedata = result.data;
             if (calculatedata.success === true) {
-                const currentEarned = calculatedata.received;
+                const currentEarned = (calculatedata.received / 1000000);
                 const yourDelegations = calculatedata.globalDelegation;
                 const yourAuditDelegation = calculatedata.globalDelegation;
+                const yourEstimatedRewards = (calculatedata.estimated /1000000);
                 this.setState({ ercAddress: calculatedata.ercAddress })
                 this.setState({ blockHeight: calculatedata.magicTxHeight })
                 this.setState({ statkedOnAudit: calculatedata.auditDelegation })
                 this.setState({ totalStaked: calculatedata.globalDelegation })
-                this.setState({ totalRewards: currentEarned / 1000000 })
-                const estimatedRewards = ((currentEarned / 1000000) + yourDelegations / this.state.globalTotalStaked * 0.75 + yourAuditDelegation) / this.state.globalAuditStaked * 0.25;
-                this.setState({ estimatedRewards: estimatedRewards })
-
+                this.setState({ totalRewards: (Math.round(currentEarned * 100) / 100).toFixed(2)})
+                this.setState({ estimatedRewards: (Math.round(yourEstimatedRewards * 100) / 100).toFixed(2)})
             } else {
                 this.setState({ notParticipantAddress: true })
             }
@@ -138,8 +164,10 @@ class Participate extends Component {
     };
 
     render() {
+        
+    
         const { volume } = this.state
-       
+      
         return (
             <div className="section-participate"> 
                 <Header />
@@ -173,7 +201,7 @@ class Participate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo">
                                                 <h6>Start</h6>
-                                                <h1>26th of October 2020 <span>Block Height: 3846000</span></h1>
+                                                <h1>26th of October 2020 <span>Block Height: 3846001</span></h1>
 
                                             </div>
                                         </div>
@@ -320,8 +348,8 @@ class Participate extends Component {
                                                     value={volume}
                                                     onChange={this.handleOnChange}
                                                     min={0}
-                                                    max={this.state.globalTotalStaked}
-                                                    step={500}
+                                                    max={this.state.globalTotalStakedInt}
+                                                    step={5}
                                                 />
                                             </div>
 
@@ -344,7 +372,7 @@ class Participate extends Component {
                                             </div>
                                             <div className="participate-buttons">
                                                 <div className="btn-magic-txs">
-                                                    <button className="btn" onClick={this.handleModel}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
+                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
                                                 </div>
                                                 <div className="btn-delegate">
                                                     <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>
@@ -364,9 +392,15 @@ class Participate extends Component {
                     centered
                 >
                     <Modal.Body>
-                    <p className="tc">Accept Stakedrop Terms & Conditions</p>
+                    <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
+                    <Form.Group controlId="formBasicCheckbox">
+                    <input type="checkbox" 
+                    defaultChecked={this.state.isChecked}
+                    onChange={ this.handleChecked }/>
+                    </Form.Group>
+                    </p>
                     <div className="button-section">
-                    <button className="btn accept" onClick = {this.handleTerms}>Accept</button>
+                    <button className="btn accept" onClick = {this.handleTerms}  disabled={this.state.sumbitButtonState}>Accept</button>
                     <button className="btn decline" onClick = {this.handleCancelTerms} >decline</button>
                     </div>
                     </Modal.Body>
@@ -381,10 +415,10 @@ class Participate extends Component {
                     <Modal.Body>
                     <div className="staking-wallet-section">
                             <h4 className="title">Available Methods to Participate in Stakedrop</h4>
-                            <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
+                            <p className="info">Please choose a method to send the magic transaction</p>
                             <div className="row wallet-method">
                             <div className="section-magic-address">
-                                    <p><b>Magic Txn Address: </b>cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22</p>
+                                    <p><b>Designated address: </b>cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22</p>
                                     <CopyToClipboard onCopy={this.onCopy} text={'cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22'}>
                                     <img src={copy} alt="copy" className="copy-icon"/>
                                     </CopyToClipboard>
@@ -418,7 +452,6 @@ class Participate extends Component {
                     <Modal.Body>
                     <div className="staking-wallet-section">
                             <h4 className="title">Available Methods to Participate in Stakedrop</h4>
-                            <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
                             <div className="row wallet-method">
                             <div className="section-validator-address">
                                     <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
@@ -454,7 +487,7 @@ class Participate extends Component {
                     <Modal.Body>
                             <div className="cli-section">
                                 <h3>CLI Method</h3>
-                                <p className="info">Awesome, everything that you need is below</p>
+                                <p className="info">Awesome, everything that you need is below111</p>
                                 <div className="cli-address">
                                     <p>gaiacli tx send [from_key_or_address] cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22 1000uatom --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --memo [ERC-Address] --node tcp://139.59.70.20:26657</p>
                                 </div>
