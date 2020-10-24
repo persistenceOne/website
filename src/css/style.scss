@@ -3723,6 +3723,7 @@ color: #231F20;
     justify-content: center;
 		.cli-box {
 			background: #FFFFFF;
+			cursor: pointer;
 			padding:15px 20px;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
 			border-radius: 8px;
@@ -3886,6 +3887,33 @@ color: #231F20;
 			color: #000;
 			font-size: 12px;
 			font-weight: 600;
+		}
+	}
+}
+
+.cli-section{
+	p, h3{
+		text-align: center;
+	}
+	h3{
+		font-weight: 600;
+		font-size: 18px;
+		color: #231F20;
+	}
+	.info{
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 131.4%;
+		text-align: center;
+		color: #838C9F;
+	}
+	.cli-address{
+		background-color: #EFE7E7;
+		padding: 20px;
+		p{
+			font-weight: 600;
+			font-size: 14px;
+			color: #231F20;
 		}
 	}
 }
