@@ -29,7 +29,7 @@ class Participate extends Component {
             globalTotalStaked: 0,
             globalAuditStaked: 0,
             globalAuditStakedInt: 0,
-            totalDistributed: 0,
+            totalDistributed: '',
             delegateAudit:0,
             globalTotalStakedInt:0,
             delegateOther:0,
@@ -38,12 +38,10 @@ class Participate extends Component {
             copyValue:false,
             notParticipantAddress:false,
             showDelegateModal:false,
-            sumbitButtonState: true,
             showDelegateCliModal:false,
             showMagicTxnClieModel:false,
-            isChecked: false
+            totalDistributedInt:0
         }
-        this.handleChecked = this.handleChecked.bind(this);
         this.handleCalculate = this.handleCalculate.bind(this);
     }
 
@@ -58,11 +56,10 @@ class Participate extends Component {
     handleOnChange = (value) => {
         this.setState({ volume: value })
         var utomsToDelegate = value * 1000000
-        console.log(this.state.globalAuditStakedInt, this.state.globalTotalStakedInt)
         var delegateAudit =  ((0.25 * utomsToDelegate/(this.state.globalAuditStakedInt + utomsToDelegate) + 
-            (0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate))* this.state.totalDistributed);
+            (0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate))* this.state.totalDistributedInt);
         console.log(delegateAudit)
-        var delegateOther = ((0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributed;
+        var delegateOther = ((0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributedInt;
         if(delegateAudit > 5000){
             this.setState({ delegateAudit:5000})
         }else{
@@ -75,15 +72,6 @@ class Participate extends Component {
         }
     }   
 
-    handleChecked =(e) =>{
-        if (e.target.checked) {
-            this.setState({sumbitButtonState:false});
-        }else{
-            this.setState({sumbitButtonState:true});
-        }
-        this.setState({isChecked: !this.state.isChecked});
-      }
-    
     handleClose = () => {
         this.setState({ show: false });
         this.setState({ showDelegateModal: false });
@@ -122,9 +110,10 @@ class Participate extends Component {
             console.log(totalDistributed)
             const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
-            this.setState({totalDistributed: totalDistributed})  
+            this.setState({totalDistributedInt: totalDistributed})  
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
             this.setState({globalAuditStakedInt: worldAuditDelegations }) 
+            this.setState({totalDistributed: totalDistributed.toLocaleString()})
             this.setState({globalTotalStaked: worldTotalDelegations.toLocaleString()})
             this.setState({globalAuditStaked: worldAuditDelegations.toLocaleString()})
 
@@ -147,8 +136,8 @@ class Participate extends Component {
                 const yourEstimatedRewards = (calculatedata.estimated /1000000);
                 this.setState({ ercAddress: calculatedata.ercAddress })
                 this.setState({ blockHeight: calculatedata.magicTxHeight })
-                this.setState({ statkedOnAudit: calculatedata.auditDelegation })
-                this.setState({ totalStaked: calculatedata.globalDelegation })
+                this.setState({totalStaked: (calculatedata.globalDelegation).toLocaleString()})
+                this.setState({statkedOnAudit: (calculatedata.auditDelegation).toLocaleString()})
                 this.setState({ totalRewards: (Math.round(currentEarned * 100) / 100).toFixed(2)})
                 this.setState({ estimatedRewards: (Math.round(yourEstimatedRewards * 100) / 100).toFixed(2)})
             } else {
@@ -346,8 +335,8 @@ class Participate extends Component {
                                                     value={volume}
                                                     onChange={this.handleOnChange}
                                                     min={0}
-                                                    max={this.state.globalTotalStakedInt}
-                                                    step={5}
+                                                    max={2000000}
+                                                    step={100}
                                                 />
                                             </div>
 
@@ -391,14 +380,9 @@ class Participate extends Component {
                 >
                     <Modal.Body>
                     <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
-                    <Form.Group controlId="formBasicCheckbox">
-                    <input type="checkbox" 
-                    defaultChecked={this.state.isChecked}
-                    onChange={ this.handleChecked }/>
-                    </Form.Group>
                     </p>
                     <div className="button-section">
-                    <button className="btn accept" onClick = {this.handleTerms}  disabled={this.state.sumbitButtonState}>Accept</button>
+                    <button className="btn accept" onClick = {this.handleTerms} >Accept</button>
                     <button className="btn decline" onClick = {this.handleCancelTerms} >decline</button>
                     </div>
                     </Modal.Body>
