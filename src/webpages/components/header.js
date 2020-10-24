@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 // import LangDropDown from './langDropDown';
 import Alert from 'react-bootstrap/Alert'
+import Icon from '../icon';
 import ScrollToTop from '../components/scrollToTop';
 import logo from '../../assets/logo.png'
 import rightarrow from '../../assets/right-arrow.svg'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
 import Wallets from '../components/wallets'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import copy from '../../assets/copy.svg'
 import { Modal } from "react-bootstrap";
 class Header extends Component {
 
@@ -16,7 +19,8 @@ class Header extends Component {
             Tab: '', 
             isOpen: false,
             showAlert: true ,
-            modalShow:false
+            modalShow:false,
+            showDelegateCliModal:false,
         };
 
         this.toggleMenu = this.toggleMenu.bind(this);
@@ -25,7 +29,11 @@ class Header extends Component {
     toggleMenu = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
-
+    handleDelegateClieModel = () =>{
+        this.setState({ modalShow: false });
+        this.setState({ showDelegateCliModal: true });
+    }
+    
     /**
      * Sets active tab
      */
@@ -96,7 +104,49 @@ class Header extends Component {
                     centered
                 >
                     <Modal.Body>
-                        <Wallets />
+                    <div className="staking-wallet-section">
+                            <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                            <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
+                            <div className="row wallet-method">
+                            <div className="section-validator-address">
+                                    <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
+                                    <CopyToClipboard onCopy={this.onCopy} text={'cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny'}>
+                                        <img src={copy} alt="copy" className="copy-icon"/>
+                                    </CopyToClipboard>
+                                    <section className="copy-result">
+                                    {this.state.copyValue ? <span>Copied.</span> : null}
+                                    </section>
+                                </div>
+                            <div className="col-lg-6">
+                                    <div className="cli-box" onClick={this.handleDelegateClieModel}>
+                                        <div className="card-inner">
+                                            <p>Continue with CLI</p>
+                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <p className="continue-text">Or choose wallet to continue</p>
+                            <Wallets />
+                            </div>
+                    </Modal.Body>
+                </Modal>
+                <Modal
+                    size="lg"
+                    show={this.state.showDelegateCliModal}
+                    onHide={this.handleClose}
+                    className="accountInfoModel"
+                    centered
+                >
+                    <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --node tcp://139.59.70.20:26657</p>
+                                </div>
+
+                            </div>
                     </Modal.Body>
                 </Modal>
             </div >

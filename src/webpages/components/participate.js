@@ -34,7 +34,9 @@ class Participate extends Component {
             copied: false,
             copyValue:false,
             notParticipantAddress:false,
-            showDelegateModal:false
+            showDelegateModal:false,
+            showDelegateCliModal:false,
+            showMagicTxnClieModel:true
         }
         this.handleCalculate = this.handleCalculate.bind(this);
     }
@@ -55,6 +57,8 @@ class Participate extends Component {
     handleClose = () => {
         this.setState({ show: false });
         this.setState({ showDelegateModal: false });
+        this.setState({ showDelegateCliModal: false });
+        this.setState({ showMagicTxnClieModel: false });
     };
     handleModel = () => {
         this.setState({ show: true });
@@ -62,6 +66,15 @@ class Participate extends Component {
     handleDelegateModel = () => {
         this.setState({ showDelegateModal: true });
     };
+    handleDelegateClieModel = () =>{
+        this.setState({ showDelegateModal: false });
+        this.setState({ showDelegateCliModal: true });
+    }
+    
+    handleMagicTxnClieModel = () =>{
+        this.setState({ show: false });
+        this.setState({ showMagicTxnClieModel: true });
+    }
     handleTerms = () => {
         this.setState({ tcShow: false });
         localStorage.setItem('accepted',  true);
@@ -380,7 +393,7 @@ class Participate extends Component {
                                     </section>
                                 </div>
                             <div className="col-lg-6">
-                                    <div className="cli-box">
+                                    <div className="cli-box" onClick={this.handleMagicTxnClieModel}>
                                         <div className="card-inner">
                                             <p>Continue with CLI</p>
                                             <Icon viewClass="social_icon_imgg" icon="arrow-right" />
@@ -408,7 +421,6 @@ class Participate extends Component {
                             <p className="info">Choose a prefered staking method. We recomend the web interface - it’s easier to use!</p>
                             <div className="row wallet-method">
                             <div className="section-validator-address">
-                                    
                                     <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
                                     <CopyToClipboard onCopy={this.onCopy} text={'cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny'}>
                                         <img src={copy} alt="copy" className="copy-icon"/>
@@ -418,7 +430,7 @@ class Participate extends Component {
                                     </section>
                                 </div>
                             <div className="col-lg-6">
-                                    <div className="cli-box">
+                                    <div className="cli-box" onClick={this.handleDelegateClieModel}>
                                         <div className="card-inner">
                                             <p>Continue with CLI</p>
                                             <Icon viewClass="social_icon_imgg" icon="arrow-right" />
@@ -427,8 +439,44 @@ class Participate extends Component {
                                 </div>
                                 </div>
                                 <p className="continue-text">Or choose wallet to continue</p>
-                               
                             <Wallets />
+                            </div>
+                    </Modal.Body>
+                </Modal>
+
+                <Modal
+                    size="lg"
+                    show={this.state.showMagicTxnClieModel}
+                    onHide={this.handleClose}
+                    className="accountInfoModel"
+                    centered
+                >
+                    <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>gaiacli tx send [from_key_or_address] cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22 1000uatom --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --memo [ERC-Address] --node tcp://139.59.70.20:26657</p>
+                                </div>
+
+                            </div>
+                    </Modal.Body>
+                </Modal>
+                <Modal
+                    size="lg"
+                    show={this.state.showDelegateCliModal}
+                    onHide={this.handleClose}
+                    className="accountInfoModel"
+                    centered
+                >
+                    <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --node tcp://139.59.70.20:26657</p>
+                                </div>
+
                             </div>
                     </Modal.Body>
                 </Modal>
