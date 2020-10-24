@@ -111,7 +111,7 @@ class stakedrop extends React.Component {
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_atom_cosmos}</h4>
-                                                    <p>200,000 $XPRT</p>
+                                                    <p>200,000 XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_atom}</p>
@@ -130,7 +130,7 @@ class stakedrop extends React.Component {
                                                      </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_luna_terra}</h4>
-                                                    <p>100,000 $XPRT</p>
+                                                    <p>100,000 XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_luna_terra}</p>
@@ -149,7 +149,7 @@ class stakedrop extends React.Component {
                                                     </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_kava_labs}</h4>
-                                                    <p>100,000 $XPRT</p>
+                                                    <p>100,000 XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_kava}</p>
@@ -168,7 +168,7 @@ class stakedrop extends React.Component {
                                                       </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_iris_net}</h4>
-                                                    <p>100,000 $XPRT</p>
+                                                    <p>100,000 XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_iris_net}</p>
@@ -189,7 +189,7 @@ class stakedrop extends React.Component {
                                                     </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_dot_polkadot}</h4>
-                                                    <p>200,000 $XPRT</p>
+                                                    <p>200,000 XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_dot}</p>
@@ -208,7 +208,7 @@ class stakedrop extends React.Component {
                                                  </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_matic_network}</h4>
-                                                    <p>200,000 $XPRT</p>
+                                                    <p>200,000 XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_matic}</p>
@@ -227,7 +227,7 @@ class stakedrop extends React.Component {
                                                       </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_stake_xtx_tezos}</h4>
-                                                    <p>100,000 $XPRT</p>
+                                                    <p>100,000 XPRT</p>
                                                 </div>
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_xtx}</p>

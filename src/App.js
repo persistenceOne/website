@@ -8,7 +8,6 @@ import AppContainer from './webpages/components/appContainer';
 import homepage from './webpages/homepage';
 import stakedrop from './webpages/components/stakedrop';
 import participate from './webpages/components/participate';
-import Header from './webpages/components/header';
 import Footer from './webpages/components/footer';
 // import InfoPdf from './webpages/components/pdf';
 
@@ -31,7 +30,6 @@ class App extends Component {
       <div className={window.location.pathname ?
         window.location.pathname.split('/')[1] :
         'App'}>
-                  <Header />
                    {routes}
                    <Footer />
         </div>
