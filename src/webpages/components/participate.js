@@ -471,7 +471,7 @@ class Participate extends Component {
                 >
                     <Modal.Body>
                             <div className="cli-section">
-                                <h3>CLI Method Audit</h3>
+                                <h3>CLI Method</h3>
                                 <p className="info">Awesome, everything that you need is below</p>
                                 <div className="cli-address">
                                     <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --node tcp://139.59.70.20:26657</p>
