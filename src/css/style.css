@@ -4518,6 +4518,7 @@ input:focus {
 
 .section-magic-address p, .section-validator-address p {
   margin: 0;
+  word-break: break-all;
 }
 
 .section-magic-address .copy-icon, .section-validator-address .copy-icon {
