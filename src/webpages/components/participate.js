@@ -52,23 +52,23 @@ class Participate extends Component {
             this.setState({copyValue : false})
           }, 1000);
       };
-
+    
+    
     handleOnChange = (value) => {
         this.setState({ volume: value })
         var utomsToDelegate = value * 1000000
         var delegateAudit =  ((0.25 * utomsToDelegate/(this.state.globalAuditStakedInt + utomsToDelegate) + 
             (0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate))* this.state.totalDistributedInt);
-        console.log(delegateAudit)
         var delegateOther = ((0.75 * utomsToDelegate)/(this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributedInt;
         if(delegateAudit > 5000){
             this.setState({ delegateAudit:5000})
         }else{
-            this.setState({ delegateAudit:delegateAudit})
+            this.setState({ delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2)})
         }
         if(delegateOther > 5000){
             this.setState({ delegateOther:5000})
         }else{
-            this.setState({ delegateOther:delegateOther})
+            this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2)})
         }
     }   
 
@@ -107,15 +107,14 @@ class Participate extends Component {
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000) 
-            console.log(totalDistributed)
             const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
             this.setState({totalDistributedInt: totalDistributed})  
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
             this.setState({globalAuditStakedInt: worldAuditDelegations }) 
             this.setState({totalDistributed: totalDistributed.toLocaleString()})
-            this.setState({globalTotalStaked: worldTotalDelegations.toLocaleString()})
-            this.setState({globalAuditStaked: worldAuditDelegations.toLocaleString()})
+            this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
+            this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
 
         })
     }
@@ -136,8 +135,8 @@ class Participate extends Component {
                 const yourEstimatedRewards = (calculatedata.estimated /1000000);
                 this.setState({ ercAddress: calculatedata.ercAddress })
                 this.setState({ blockHeight: calculatedata.magicTxHeight })
-                this.setState({totalStaked: (calculatedata.globalDelegation).toLocaleString()})
-                this.setState({statkedOnAudit: (calculatedata.auditDelegation).toLocaleString()})
+                this.setState({totalStaked: (calculatedata.globalDelegation/1000000).toLocaleString()})
+                this.setState({statkedOnAudit: (calculatedata.auditDelegation/1000000).toLocaleString()})
                 this.setState({ totalRewards: (Math.round(currentEarned * 100) / 100).toFixed(2)})
                 this.setState({ estimatedRewards: (Math.round(yourEstimatedRewards * 100) / 100).toFixed(2)})
             } else {
@@ -259,22 +258,22 @@ class Participate extends Component {
 
                                             <div className="inputstaking bottom">
                                                 <h5>Total Staked</h5>
-                                                <h5 className="value">{this.state.totalStaked}</h5>
+                                                <h5 className="value">{this.state.totalStaked} ATOM</h5>
                                             </div>
 
 
                                             <div className="inputstaking bottom">
                                                 <h5>Total Staked on AUDIT.one</h5>
-                                                <h5 className="value">{this.state.statkedOnAudit}</h5>
+                                                <h5 className="value">{this.state.statkedOnAudit} ATOM</h5>
                                             </div>
 
                                             <div className="inputstaking bottom">
                                                 <h5>Total Rewards</h5>
-                                                <h5 className="value">{this.state.totalRewards}</h5>
+                                                <h5 className="value">{this.state.totalRewards} XPRT</h5>
                                             </div>
                                             <div className="inputstaking bottom">
                                                 <h5>Estimated Rewards</h5>
-                                                <h5 className="value">{this.state.estimatedRewards}</h5>
+                                                <h5 className="value">{this.state.estimatedRewards} XPRT</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -308,13 +307,13 @@ class Participate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo">
                                                 <h6>Total Staked:</h6>
-                                                <h1>{this.state.globalTotalStaked}</h1>
+                                                <h1>{this.state.globalTotalStaked} ATOM</h1>
                                             </div>
                                         </div>
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo end">
                                                 <h6>Total Staked on AUDIT.one:</h6>
-                                                <h1>{this.state.globalAuditStaked}</h1>
+                                                <h1>{this.state.globalAuditStaked} ATOM</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -345,12 +344,12 @@ class Participate extends Component {
                                                     <div className="col-lg-12 delegate-sec">
                                                         <div className="inputstaking bottom">
                                                             <h5>If you delegate to AUDIT.one</h5>
-                                                            <h5 className="value">{this.state.delegateAudit}</h5>
+                                                            <h5 className="value">{this.state.delegateAudit} XPRT</h5>
                                                         </div>
                                                       
                                                         <div className="inputstaking bottom">
                                                             <h5>to Other Validators</h5>
-                                                            <h5 className="value">{this.state.delegateOther}</h5>
+                                                            <h5 className="value">{this.state.delegateOther} XPRT</h5>
                                                         </div>
                                                   
                                                     </div>
