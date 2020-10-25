@@ -143,7 +143,7 @@ class Header extends Component {
                                 <h3>CLI Method</h3>
                                 <p className="info">Awesome, everything that you need is below</p>
                                 <div className="cli-address">
-                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --node https://node1.rpc.cosmos.persistence.one</p>
+                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --from [from_key_or_address] --chain-id cosmoshub-3 --node https://node1.rpc.cosmos.persistence.one:443</p>
                                 </div>
 
                             </div>
