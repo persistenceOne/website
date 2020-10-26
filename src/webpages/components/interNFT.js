@@ -57,6 +57,7 @@ class InterNFT extends Component {
                                     
 
                                 </div>
+                                {/* <p className="network-group-heading">Group Members</p> */}
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import language from '../webpages/translationlang';
 import Validator from './components/validator';
-import MailChimp from './components/mailChimp';
+
 import Products from './components/products';
 import InterNFT from './components/interNFT';
 import Slider from './components/slider';
@@ -270,18 +270,7 @@ class homePage extends Component {
                 </section>
              
 
-                <section className="contact-section">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <p>{language[lang].join_our_community}</p>
-                            </div>
-                            <div className="col-lg-6 form-container form-md">
-                                <MailChimp />
-                            </div>
-                        </div>
-                    </div>
-                </section>
+         
 
               
 

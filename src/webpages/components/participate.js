@@ -8,6 +8,7 @@ import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import Header from '../../webpages/components/header';
 import copy from '../../assets/copy.svg'
+import { withRouter } from 'react-router-dom';
 import docTerms from '../../assets/PersistenceT&C.pdf'
 import { getCalculateComsmos, getStatusURL } from "../../constants/url";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
@@ -44,7 +45,6 @@ class Participate extends Component {
         }
         this.handleCalculate = this.handleCalculate.bind(this);
     }
-
     onCopy = () => {
         this.setState({copyValue : true})
         this.setState({copied: true});
@@ -163,7 +163,9 @@ class Participate extends Component {
                   
               
                     <div className="col-lg-12">
+                    <p className="button-back" onClick={this.props.history.goBack}>     <Icon viewClass="arrow-right" icon="arrow-right" /> Back to Campaigns</p>
                         <div className="row">
+                       
                             <div className="col-lg-4 section-campaign">
                                 <div className="row campaign-maintwo">
                                     <div className="col-lg-12  header-section">
@@ -200,7 +202,40 @@ class Participate extends Component {
                                     </div>
 
                                 </div>
-                
+                                <div className="row campaign-maintwo second">
+                                    <div className="col-lg-12  header-section">
+                                        <h5 className="heading-participate two">Campaign Status</h5>
+                                    </div>
+                                    <div className="row body-section">
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo">
+                                                <h6>Tokens left:</h6>
+                                                 <h1>{this.state.totalDistributed} XPRT</h1>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo">
+                                                <h6>Time left:</h6>
+                                                <h1 className="countdown"><Countdown
+                                                    date={1606348800000}
+                                                    autoStart={true}
+                                                /></h1>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo">
+                                                <h6>Total Staked:</h6>
+                                                <h1>{this.state.globalTotalStaked} ATOM</h1>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-12 card-content">
+                                            <div className="participate-cardtwo end">
+                                                <h6>Total Staked on AUDIT.one:</h6>
+                                                <h1>{this.state.globalAuditStaked} ATOM</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="col-lg-8 staking-second-section">
                                 <div className="col-lg-12  cosmos-tutorial-section">
@@ -208,7 +243,7 @@ class Participate extends Component {
                                     </div>
                                 <div className="col-lg-12 stakerow">
                                     <div className="col-lg-12  header-section">
-                                        <h5 className="heading-participate">Your Rewards</h5>
+                                        <h5 className="heading-participate">Calculate Your Estimated Rewards</h5>
                                     </div>
                                     <div className="body-section">
                                         <form onSubmit={this.handleCalculate}>
@@ -279,48 +314,7 @@ class Participate extends Component {
                                     </div>
 
                                 </div>
-                        
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-lg-4">
-                        <div className="row campaign-maintwo second">
-                                    <div className="col-lg-12  header-section">
-                                        <h5 className="heading-participate two">Campaign Status</h5>
-                                    </div>
-                                    <div className="row body-section">
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo">
-                                                <h6>Tokens left:</h6>
-                                                 <h1>{this.state.totalDistributed} XPRT</h1>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo">
-                                                <h6>Time left:</h6>
-                                                <h1 className="countdown"><Countdown
-                                                    date={1606348800000}
-                                                    autoStart={true}
-                                                /></h1>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo">
-                                                <h6>Total Staked:</h6>
-                                                <h1>{this.state.globalTotalStaked} ATOM</h1>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12 card-content">
-                                            <div className="participate-cardtwo end">
-                                                <h6>Total Staked on AUDIT.one:</h6>
-                                                <h1>{this.state.globalAuditStaked} ATOM</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div className="col-lg-8 staking-second-section">
-                                    <div className="col-lg-12 staking-right-bottom stakerow">
+                                <div className="col-lg-12 staking-right-bottom stakerow">
                                         <div className="col-lg-12  header-section">
                                             <h5 className="heading-participate">Participate</h5>
                                         </div>
@@ -367,8 +361,9 @@ class Participate extends Component {
                                             
                                         </div>
                                     </div>
-                                </div>
-                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <Modal
@@ -382,7 +377,7 @@ class Participate extends Component {
                     </p>
                     <div className="button-section">
                     <button className="btn accept" onClick = {this.handleTerms} >Accept</button>
-                    <button className="btn decline" onClick = {this.handleCancelTerms} >decline</button>
+                    <button className="btn decline" onClick = {this.handleCancelTerms} >Decline</button>
                     </div>
                     </Modal.Body>
                     </Modal>
@@ -500,6 +495,6 @@ class Participate extends Component {
     }
 }
 
-export default Participate;
+export default withRouter(Participate);
 
 
