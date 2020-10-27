@@ -196,7 +196,7 @@ class Participate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo end">
                                                 <h6>End</h6>
-                                                <h1>25th of Novemeber 2020<span>Block Height: 4206000</span></h1>
+                                                <h1>25th of November 2020<span>Block Height: 4206000</span></h1>
                                             </div>
                                         </div>
                                     </div>
