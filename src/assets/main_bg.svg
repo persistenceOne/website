@@ -1,39 +1,16 @@
-<svg width="605" height="780" viewBox="0 0 605 780" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d)">
-<path d="M270.667 482.508L191 434.536L222 416.471L270.667 445L652 222.5L895.525 116L270.667 482.508Z" fill="#515257"/>
-<path d="M191 435L270.355 482.718L271 772H191V435Z" fill="url(#paint0_linear)"/>
-<path d="M270.5 482.5L622 276.5V704H270.5V482.5Z" fill="#1D1E22"/>
-<path d="M270.667 402L660.5 175.5L895.525 79L270.667 445.508L270.667 402Z" fill="#3E0305"/>
-<path d="M191 355.536L665.162 79.2156L895.525 37L270.5 403.5L191 355.536Z" fill="url(#paint1_linear)"/>
-<path d="M270.5 445.5V403.5L191 355.5V398L270.5 445.5Z" fill="#960E15"/>
-<path d="M558.49 586.524L597.161 580L622.148 610.226L583.477 616.75L558.49 586.524Z" fill="#515258"/>
-<path d="M583.654 616.221L621.706 610.101L608.208 646.353L569.597 653.336L583.654 616.221Z" fill="#17181A"/>
-<path d="M583.674 616.22L558.629 586.606L545 623.212L569.848 654L583.674 616.22Z" fill="#313238"/>
-<path d="M20.2595 509.863L66.8687 502L96.9858 538.431L50.3766 546.294L20.2595 509.863Z" fill="#515258"/>
-<path d="M50.5887 545.656L96.4526 538.28L80.1837 581.974L33.6466 590.39L50.5887 545.656Z" fill="#17181A"/>
-<path d="M50.6138 545.655L20.4268 509.962L3.99979 554.082L33.9497 591.191L50.6138 545.655Z" fill="#313238"/>
-<path d="M212.34 253.912L186.504 244L165.001 261.418L190.837 271.329L212.34 253.912Z" fill="#515258"/>
-<path d="M190.78 270.938L165.315 261.393L169.59 288.352L195.321 298.572L190.78 270.938Z" fill="#313238"/>
-<path d="M190.779 270.936L212.237 253.95L216.553 281.172L195.068 298.998L190.779 270.936Z" fill="#17181A"/>
-<path d="M512.212 -3.0884L538.049 -13L559.552 4.41768L533.716 14.3293L512.212 -3.0884Z" fill="#515258"/>
-<path d="M533.773 13.9381L559.238 4.39307L554.963 31.3521L529.232 41.5721L533.773 13.9381Z" fill="#17181A"/>
-<path d="M533.774 13.9357L512.316 -3.05029L508 24.1717L529.485 41.9977L533.774 13.9357Z" fill="#313238"/>
-</g>
+<svg width="414" height="737" viewBox="0 0 414 737" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M79.667 445.508L0 397.536L31 379.471L79.667 408L461 185.5L704.525 79L79.667 445.508Z" fill="#515257"/>
+<path d="M0 398L79.3548 445.718L80 735H0V398Z" fill="url(#paint0_linear)"/>
+<path d="M79.5 445.5L431 239.5V736.5H79.5V445.5Z" fill="#1D1E22"/>
+<path d="M79.667 365L469.5 138.5L704.525 42L79.667 408.508L79.667 365Z" fill="#3E0305"/>
+<path d="M0 318.536L474.162 42.2156L704.525 0L79.5 366.5L0 318.536Z" fill="url(#paint1_linear)"/>
+<path d="M79.5 408.5V366.5L0 318.5V361L79.5 408.5Z" fill="#960E15"/>
 <defs>
-<filter id="filter0_d" x="0" y="-13" width="899.525" height="793" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear" x1="231" y1="435" x2="231" y2="747.104" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear" x1="40" y1="398" x2="40" y2="710.104" gradientUnits="userSpaceOnUse">
 <stop stop-color="#303138"/>
 <stop offset="1" stop-color="#1D1E22"/>
 </linearGradient>
-<linearGradient id="paint1_linear" x1="235.5" y1="381" x2="684.5" y2="109.5" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear" x1="44.5" y1="344" x2="493.5" y2="72.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="#E50913"/>
 <stop offset="1" stop-color="#E50913" stop-opacity="0.5"/>
 </linearGradient>

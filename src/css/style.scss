@@ -1828,6 +1828,37 @@ input:focus {
 	background-size    : auto;
 	background-position: 100% 0;
 }
+.block1{
+	position: absolute;
+    right: 380px;
+	top: 180px;
+	animation: float 6s ease-in-out infinite;
+}
+.block2{
+	position: absolute;
+    right: 480px;
+	top: 480px;
+	animation: float 6s ease-in-out infinite;
+}
+.block3{
+	position: absolute;
+    right: 0px;
+	top: 550px;
+	animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 
 .img-width {
 	width: 100%;
@@ -3960,7 +3991,9 @@ input:focus {
 		.bg-product {
 			background-image: none;
 		}
-
+		.block1, .block2, .block3{
+			display: none;
+		}
 		.team-section .proileContainer {
 			display       : flex;
 			flex-direction: column;

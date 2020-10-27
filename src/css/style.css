@@ -1940,6 +1940,60 @@ input:focus {
   background-position: 100% 0;
 }
 
+.block1 {
+  position: absolute;
+  right: 380px;
+  top: 180px;
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+
+.block2 {
+  position: absolute;
+  right: 480px;
+  top: 480px;
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+
+.block3 {
+  position: absolute;
+  right: 0px;
+  top: 550px;
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
 .img-width {
   width: 100%;
 }
@@ -4006,6 +4060,9 @@ input:focus {
   }
   .persistence .bg-product {
     background-image: none;
+  }
+  .persistence .block1, .persistence .block2, .persistence .block3 {
+    display: none;
   }
   .persistence .team-section .proileContainer {
     display: -webkit-box;
