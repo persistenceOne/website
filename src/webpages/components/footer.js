@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import language from '../translationlang';
 import { connect } from 'react-redux';
-import icon from '../../assets/logo_dark.svg'
+import icon from '../../assets/logo.png'
+import MailChimp from '../components/mailChimp';
 import whitepaper from '../../whitepaper.pdf'
 import { Link } from 'react-router-dom';
 import Icon from '../icon';
@@ -10,6 +11,19 @@ class Footer extends Component {
     render() {
         const { lang } = this.props;
         return (
+            <>
+            <section className="contact-section">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-6">
+                        <p>{language[lang].join_our_community}</p>
+                    </div>
+                    <div className="col-lg-6 form-container form-md">
+                        <MailChimp />
+                    </div>
+                </div>
+            </div>
+        </section>
             <footer className="footer">
                 <div className="container">
                     <div className="col-xs-12 col-md-12 col-lg-12">
@@ -81,6 +95,7 @@ class Footer extends Component {
                     </div>
                 </div>
             </footer>
+            </>
         );
     }
 }

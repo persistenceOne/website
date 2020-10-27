@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import language from '../webpages/translationlang';
 import Validator from './components/validator';
-import MailChimp from './components/mailChimp';
+
 import Products from './components/products';
 import InterNFT from './components/interNFT';
 import Slider from './components/slider';
@@ -37,6 +37,9 @@ import chainnews from '../assets/chainnews.svg';
 import whitepaper from '../whitepaper.pdf'
 import Icon from './icon';
 import Header from '../webpages/components/header';
+import block1 from '../assets/block1.png';
+import block2 from '../assets/block2.png';
+import block3 from '../assets/block3.png';
 
 class homePage extends Component {
     componentDidMount() {
@@ -55,7 +58,7 @@ class homePage extends Component {
                     <section className="section-1 bg-product product-padding" id="home" data-image-src={proudctBg}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-8 text-white mobile-head">
+                                <div className="col-lg-7 text-white mobile-head">
                                     <h1 className="title">{language[lang].protocal_powering}</h1>
                                     <p className="sub-title title-line">{language[lang].persistence_bridges_defi}</p>
                                     <div className="col-lg-12">
@@ -70,8 +73,12 @@ class homePage extends Component {
                                         </div>
                                     </div>
                                 </div>
+                           
                             </div>
                         </div>
+                                    <img src={block1} alt="block1" className="block1" />
+                                    <img src={block2} alt="block2" className="block2" />
+                                    <img src={block3} alt="block3" className="block3" />
                     </section>
                 </div>
                 <section className="sub-section">
@@ -270,18 +277,7 @@ class homePage extends Component {
                 </section>
              
 
-                <section className="contact-section">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <p>{language[lang].join_our_community}</p>
-                            </div>
-                            <div className="col-lg-6 form-container form-md">
-                                <MailChimp />
-                            </div>
-                        </div>
-                    </div>
-                </section>
+         
 
               
 

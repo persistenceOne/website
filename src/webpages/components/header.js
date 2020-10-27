@@ -21,11 +21,24 @@ class Header extends Component {
             showAlert: true ,
             modalShow:false,
             showDelegateCliModal:false,
+            isTop: true,
         };
 
         this.toggleMenu = this.toggleMenu.bind(this);
     }
-
+    componentDidMount() {
+        document.addEventListener('scroll', () => {
+            var scrolled = document.scrollingElement.scrollTop;
+          if (scrolled < 5) {
+              document.getElementById('nav-bar').classList.add('not-scrolled');
+              document.getElementById('nav-bar').classList.remove('scrolled');
+          }
+          else{
+            document.getElementById('nav-bar').classList.add('scrolled');
+            document.getElementById('nav-bar').classList.remove('not-scrolled');
+          }
+        });
+      }
     toggleMenu = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
@@ -51,25 +64,27 @@ class Header extends Component {
                <ScrollToTop />
                 <div id="is-sticky">
                 
-                    <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
-                
+                    <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar" >
+             
                     {/* <p className="stakedrop-line"><span>Prepare Yourselves for Persistence StakeDrop! The Grand Unveiling <img src={rightarrow} alt="arrow"/></span></p> */}
                     { this.state.showAlert ? 
+                    <div className="alert-section">
+                    <div className="container">
                     <Alert dismissible onClose={() => this.setState({showAlert:false})} >
-                        <Link to="stakedrop">
+                        <NavLink to="stakedrop">
 					<p className="other-pages">
                     Grab the chance to earn $250,000 worth of XPRT tokens. Cosmos campaign starts on 26 October. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
-                    </Link>
+                    </NavLink>
                     <p className="stake-drop stake-drop-banner" onClick={() => this.setState({modalShow:true})}>
                         Earn additional XPRT <span>for staking on</span> AUDIT.One <span>Validator</span>&emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
-                    </Alert>:''
+                    </Alert></div></div>:''
                     } 
                         
                         <div className="container nav-banner">
-                            <Link className="navbar-brand logo text-uppercase" to="/">
-                                <img src={logo} alt="logo" /></Link>
+                            <NavLink className="navbar-brand logo text-uppercase" to="/">
+                                <img src={logo} alt="logo" /></NavLink>
 
                             <button className="navbar-toggler" onClick={this.toggleMenu} type="button">
                                 <i className="mdi mdi-menu"></i>

@@ -3,7 +3,7 @@ import { Col } from 'reactstrap';
 import layer1 from '../../assets/Layer01.png'
 import layer2 from '../../assets/Layer02.png'
 import layer3 from '../../assets/Layer03.png'
-import Animate from '../components/animate';
+import Animate from '../components/animations/animate';
 import language from '../translationlang';
 import {connect} from 'react-redux';
 import {
@@ -90,6 +90,7 @@ const Slider = (props) => {
                     <div className="col-lg-6">
                         <Col lg="12" className="slider-width"><span>{item.animate}</span></Col>
                         <Col lg="12" className="slider-width"><img src={item.src} alt={item.altText} /></Col>
+                        <p className="slider-watermark">Technology Stack</p>
                     </div>
                 </div>
             </CarouselItem>

@@ -45,7 +45,7 @@ class stakedrop extends React.Component {
                                     <div className="row">
                                         <div className="col-lg-8">
                                             <h1 className="stake-title">{language[lang].stake_drop_title}
-                                                <p className="sub-text">{language[lang].stake_drop_sub_title_1} <span>{language[lang].stake_drop_sub_title_2}</span></p></h1>
+                                                <p className="sub-text">{language[lang].stake_drop_sub_title_1}</p></h1>
                                             <p className="sub-title title-line">{language[lang].stake_drip_des} <span>{language[lang].stake_drop_des_1} <span><a href="https://medium.com/@PersistenceOne/pos-token-holders-prepare-yourselves-for-persistence-stakedrop-the-grand-unveiling-d5f6ca6ddc40" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_learn_more}</a></span></span></p>
 
                                         </div>
