@@ -107,10 +107,8 @@ const Slider = (props) => {
             <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
             <div className="c-indicators">
-                <div>
             <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-            <CarouselControl direction="next" directionText="Next" on   ClickHandler={next} />
-            </div>
+            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
             </div>
         </Carousel >
     );
