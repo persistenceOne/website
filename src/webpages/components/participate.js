@@ -328,7 +328,7 @@ class Participate extends Component {
                                                     value={volume}
                                                     onChange={this.handleOnChange}
                                                     min={0}
-                                                    max={200000}
+                                                    max={2000000}
                                                     step={100}
                                                 />
                                             </div>
