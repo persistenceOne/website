@@ -116,8 +116,8 @@ class stakedrop extends React.Component {
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_atom}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration} 30 Days</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;26th of October 2020</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;25th of November 2020</p>
                                                     <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
                                                 </div>
                                             </div>
