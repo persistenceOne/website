@@ -8,6 +8,7 @@ import rainbow from '../../assets/rainbow.svg'
 import math from '../../assets/math.svg'
 import keplr from '../../assets/keplr.svg'
 import imtoken from '../../assets/imtoken.svg'
+import citadelwallet from '../../assets/citadelwallet.svg'
 
 class Wallets extends Component {
     render() {
@@ -16,7 +17,7 @@ class Wallets extends Component {
 
          
                                  <div className="row">
-                                    <a href="https://lunie.io/" target="_blank" rel="noopener noreferrer" title="lunie" className="wallet-card">
+                                    <a href="https://app.lunie.io/cosmos-hub/validators" target="_blank" rel="noopener noreferrer" title="lunie" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={lunie} alt="Lunie" />
                                             <p>Lunie</p>
@@ -56,6 +57,12 @@ class Wallets extends Component {
                                         <div className="card-inner">
                                         <img src={keplr} alt="Keplr" />
                                             <p>Keplr Wallet</p>
+                                        </div>
+                                    </a>
+                                    <a href="https://app.citadel.one/" target="_blank" rel="noopener noreferrer" title="keplr" className="wallet-card">
+                                        <div className="card-inner">
+                                        <img src={citadelwallet} alt="Citadelwallet" />
+                                            <p>Citadel Wallet</p>
                                         </div>
                                     </a>
                             </div>
