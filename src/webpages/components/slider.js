@@ -19,12 +19,11 @@ const Slider = (props) => {
     const items = [
         {
             animate: <Animate selectedCaption={selectedCaption} enter={(caption) => onEnter.bind(this, caption)} leave={(caption) => onLeave.bind(this, caption)} />,
-           
-            caption: language[props.lang].persistence_technology,
-            caption1: language[props.lang].comdex_dapp,
-            caption2: language[props.lang].persistence_dapp,
-            caption3: language[props.lang].p_sdk,
-            caption4: language[props.lang].p_chanin,
+            caption: {text: language[props.lang].persistence_technology, header: language[props.lang].persistence_technology_header},
+            caption1: {text: language[props.lang].comdex_dapp, header: ''},
+            caption2: {text: language[props.lang].persistence_dapp, header: ''},
+            caption3: {text:language[props.lang].p_sdk, header: ''},
+            caption4: {text:language[props.lang].p_chanin, header: ''}
 
         },
         {
@@ -82,7 +81,7 @@ const Slider = (props) => {
             //  key={item.src}
             ><div className="row">
                     <div className="col-lg-6">
-                        <Col lg="12" className="slider-title" ><CarouselCaption captionText={item[selectedCaption]} /><span>&nbsp;</span></Col>
+                        <Col lg="12" className="slider-title" ><CarouselCaption captionHeader={item[selectedCaption]?.header} captionText={item[selectedCaption]?.text} /><span>&nbsp;</span></Col>
                        
                         <Col lg="12" className="slider-title"><CarouselCaption captionText={item.captionalt} /><span>&nbsp;</span></Col>
                         <Col lg="12" className="slider-title2"><CarouselCaption captionText={item.caption5} /><span>&nbsp;</span></Col>

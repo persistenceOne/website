@@ -2,6 +2,8 @@ import React from 'react';
 import language from '../translationlang';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { getStatusURL } from "../../constants/url";
 import pstakevideo from '../../assets/PStakedrop.mp4';
 import Accordion from '../components/accordion'
 import Icon from '../icon';
@@ -21,10 +23,26 @@ class stakedrop extends React.Component {
         super(props);
         this.state = {
             Tab: '',
-            isOpen: false
+            isOpen: false,
+             globalTotalStaked: 0,
         };
+    }
+    componentDidMount = () => {
+       
+        const Statusurl = getStatusURL();
+        axios.get(Statusurl).then((statusResponse) => {
+            const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000) 
+            const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
+            const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
+            this.setState({totalDistributedInt: totalDistributed})  
+            this.setState({globalTotalStakedInt: worldTotalDelegations}) 
+            this.setState({globalAuditStakedInt: worldAuditDelegations }) 
+            this.setState({totalDistributed: totalDistributed.toLocaleString()})
+            this.setState({totalDropped: 200000 - (totalDistributed)})
+            this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
+            this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
 
-
+        })
     }
 
     handleModel = () => {
@@ -46,7 +64,7 @@ class stakedrop extends React.Component {
                                         <div className="col-lg-8">
                                             <h1 className="stake-title">{language[lang].stake_drop_title}
                                                 <p className="sub-text">{language[lang].stake_drop_sub_title_1}</p></h1>
-                                            <p className="sub-title title-line">{language[lang].stake_drip_des} <span>{language[lang].stake_drop_des_1} <span><a href="https://medium.com/@PersistenceOne/pos-token-holders-prepare-yourselves-for-persistence-stakedrop-the-grand-unveiling-d5f6ca6ddc40" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_learn_more}</a></span></span></p>
+                                            <p className="sub-title title-line">{language[lang].stake_drip_des} <span>{language[lang].stake_drop_des_1} <span><a href="https://notes.persistence.one/s/cucF-3faM" target="_blank" rel="noopener noreferrer">{language[lang].stake_drop_learn_more}</a></span></span></p>
 
                                         </div>
                                         <div className="col-lg-4">
@@ -75,7 +93,7 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].dropped_fis}</p>
-                                                <h5>--</h5>
+                                                <h5>{this.state.totalDropped} XPRT</h5>
                                             </div>
                                         </div>
 
@@ -85,7 +103,7 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].staked_tokens}</p>
-                                                <h5>--</h5>
+                                                <h5>{this.state.globalTotalStaked} ATOM</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -238,6 +256,7 @@ class stakedrop extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
+                                       
                                         <div className="col-md-6 col-lg-8 campaign-sec">
                                             <div className="col-md-12 campaign-card learnmore_card">
                                             <h4 className="heading">Want to learn more?</h4>

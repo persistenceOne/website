@@ -73,7 +73,7 @@ class Header extends Component {
                     <Alert dismissible onClose={() => this.setState({showAlert:false})} >
                         <NavLink to="stakedrop">
 					<p className="other-pages">
-                    Grab the chance to earn $250,000 worth of XPRT tokens. Cosmos campaign starts on 26 October. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
+                    Grab the chance to earn $250,000 worth of $XPRT tokens. Cosmos campaign is live. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
                     </NavLink>
                     <p className="stake-drop stake-drop-banner" onClick={() => this.setState({modalShow:true})}>
