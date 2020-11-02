@@ -38,7 +38,7 @@ class stakedrop extends React.Component {
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
             this.setState({globalAuditStakedInt: worldAuditDelegations }) 
             this.setState({totalDistributed: totalDistributed.toLocaleString()})
-            this.setState({totalDropped: 200000 - (totalDistributed)})
+            this.setState({totalDropped: 200000 - (totalDistributed).toFixed(2)})
             this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
             this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
 
@@ -136,7 +136,7 @@ class stakedrop extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration} 30 Days</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;26th of October 2020</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;25th of November 2020</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>20.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,7 +155,7 @@ class stakedrop extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>10.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -174,7 +174,7 @@ class stakedrop extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>10.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -193,7 +193,7 @@ class stakedrop extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>10.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -214,7 +214,7 @@ class stakedrop extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>20.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -233,7 +233,7 @@ class stakedrop extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>20.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -252,7 +252,7 @@ class stakedrop extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>0.00%</span></p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>10.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
