@@ -2589,7 +2589,8 @@ input:focus {
 }
 
 .roadmap-section {
-  padding: 140px 0 0;
+  padding: 140px 0;
+  padding-bottom: 170px;
   background: #1d1e22;
   /* The actual content */
 }
@@ -3867,12 +3868,12 @@ input:focus {
 }
 
 .adviser-section {
-  background: #212226;
+  background: #fff;
   padding: 100px 0;
 }
 
 .adviser-section h3 {
-  color: #dadada;
+  color: #212529;
   padding-bottom: 50px;
   text-align: center;
   font-weight: bold;
@@ -3887,7 +3888,7 @@ input:focus {
 
 .adviser-section .adviser-text p {
   font-size: 18px;
-  color: #d4d4d4;
+  color: #80808e;
   font-weight: 400;
   text-align: center;
   line-height: 2;
@@ -3909,8 +3910,8 @@ input:focus {
 .adviser-section .proileContainer .bg-advisors {
   border-radius: 5px;
   padding: 40px 15px 15px;
-  background: #212226;
-  border: 1px solid #2c2c2c;
+  background: #fff;
+  border: 1px solid #80808e36;
 }
 
 .adviser-section .proileContainer .profile-picture {
@@ -3918,20 +3919,20 @@ input:focus {
 }
 
 .adviser-section .proileContainer .profile-name {
-  color: #f5f5f5;
+  color: #212529;
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
 }
 
 .adviser-section .proileContainer .designation-name {
-  color: #efe7e7;
+  color: #212529;
   margin-bottom: 10px;
   font-weight: 500;
 }
 
 .adviser-section .proileContainer .company-name {
-  color: #acacac;
+  color: #80808e;
   font-size: 14px;
   font-weight: 400;
   line-height: 2;
@@ -4627,9 +4628,11 @@ input:focus {
 }
 
 .range-slider .rangeslider {
-  background: rgba(229, 9, 19, 0.11);
-  height: 9px;
+  height: 5px;
   border-radius: 0;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+  background: rgba(229, 9, 19, 0.11);
 }
 
 .range-slider .rangeslider-horizontal .rangeslider__fill {
@@ -4639,9 +4642,9 @@ input:focus {
 
 .range-slider .rangeslider-horizontal .rangeslider__handle {
   border-radius: 0;
-  width: 16px;
-  height: 16px;
-  top: -55%;
+  width: 13px;
+  height: 13px;
+  top: -4px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-box-shadow: none;
@@ -4651,8 +4654,8 @@ input:focus {
 .range-slider .rangeslider-horizontal .rangeslider__handle::after {
   width: 10px;
   height: 10px;
-  top: 2px;
-  left: 2px;
+  top: 0px;
+  left: 0px;
   border-radius: 0;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
