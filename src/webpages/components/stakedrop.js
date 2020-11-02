@@ -38,9 +38,10 @@ class stakedrop extends React.Component {
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
             this.setState({globalAuditStakedInt: worldAuditDelegations }) 
             this.setState({totalDistributed: totalDistributed.toLocaleString()})
-            this.setState({totalDropped: 200000 - totalDistributed.toFixed(2)})
+            this.setState({totalDropped: (Math.round((200000 - totalDistributed) * 100) / 100).toFixed(2)})
             this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
             this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
+            
 
         })
     }
