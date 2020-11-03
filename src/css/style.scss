@@ -2637,116 +2637,6 @@ input:focus {
 	}
 }
 
-// .roadmap-section {
-// 	.main_div_table {
-// 		padding: 20px 15px;
-// 	}
-// 	.table-roadmap > div {
-// 		width: 100%;
-// 	}
-// 	padding: 140px 0 0;
-// 	background: #191616;
-// 	.roadmap-head {
-// 		color: #DADADA;
-// 		font-weight: bold;
-// 	}
-// 	.table {
-// 		background: #2C2C2C;
-// 		margin-top: 25px;
-// 		color: #fff;
-// 		width: 100%;
-// 		margin-bottom: 100px;
-// 		tbody {
-// 			.underline {
-// 				color: #fff;
-// 				text-decoration: underline;
-// 				a:hover {
-// 					color:#fff;
-// 				}
-// 			}
-// 			tr {
-// 				td:nth-child(1){
-// 					width:20%;
-// 				}
-// 				td:nth-child(2){
-// 					width:55%;
-
-// 				}
-// 				td:nth-child(3){
-// 					width:25%;
-
-// 				}
-// 			}
-// 			.align-right-text {
-// 				padding-right: 45px;
-// 			}
-// 			tr:last-child td {
-// 				border-bottom:0px solid #3E3E3E;
-// 			}
-// 			td {
-// 				border-bottom:1px solid #3E3E3E;
-// 				border-top: 0px solid #dee2e6;
-// 				vertical-align: middle;
-// 				padding: 25px 10px;
-// 				font-size: 14px;
-// 				position: relative;
-// 				.red {
-// 					background: #E50913;
-// 				}
-// 				.blue {
-// 					background: #053C75;
-// 				}
-// 				.dark {
-// 					background: rgba(54, 54, 54, 0.96);
-// 				}
-// 				.icon.icon-tick {
-// 					width: 17px;
-// 				}
-// 				p {
-// 					margin-bottom: 0;
-// 					margin-left: 30px;
-// 				}
-// 				p a {
-
-// 					text-decoration: underline;
-// 				}
-// 				p:first-child a > span {
-// 					padding: 2px 10px;
-// 					font-size: 12px;
-// 					font-weight: bold;
-// 					position: absolute;
-//     				left: 5px;
-
-// 				}
-// 				p:first-child span {
-// 					padding: 2px 10px;
-// 					font-size: 12px;
-// 					font-weight: bold;
-// 					position: absolute;
-//     				left: 5px;
-
-// 				}
-
-// 			}
-// 			td.align-right-text span {
-// 				float: right;
-// 				padding: 5px 10px;
-// 				font-size: 13px;
-// 				font-weight: 700;
-// 				margin: 0 5px;
-// 			}
-// 			td.right-border{
-// 				border-right:1px solid #3E3E3E;
-// 				color: #7B7B7B;
-// 				font-weight: bold;
-// 				padding: 25px 80px;
-// 			}
-// 			tr {
-// 				border:0;
-// 			}
-// 		}
-// 	}
-// }
 
 // Footer section css
 .footer {
@@ -2865,8 +2755,6 @@ input:focus {
 	min-height: 100vh;
 
 	.navbar-custom {
-		// background-color: #FFFFFF !important;
-		// box-shadow: none;
 		.navbar-toggler {
 			color: #2c2525;
 		}
@@ -4199,6 +4087,9 @@ input:focus {
 
 	.staking-right-bottom {
 		margin-top: 20px;
+	}
+	.faq-section {
+		padding: 50px 0;
 	}
 }
 

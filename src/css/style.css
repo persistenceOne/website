@@ -4253,6 +4253,9 @@ input:focus {
   .staking-right-bottom {
     margin-top: 20px;
   }
+  .faq-section {
+    padding: 50px 0;
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1199px) {

@@ -35,7 +35,7 @@ class Wallets extends Component {
                                             <p>imToken</p>
                                         </div>
                                     </a>
-                                    <a href="https://www.wetez.io/mwetez" target="_blank" rel="noopener noreferrer" title="wetez" className="wallet-card">
+                                    <a href="https://www.wetez.io/pc/homepage" target="_blank" rel="noopener noreferrer" title="wetez" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={wetez} alt="Wetez" />
                                             <p>Wetez</p>
