@@ -106,15 +106,19 @@ class Participate extends Component {
        
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
+            
             const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000) 
-            const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
+            const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
-            this.setState({totalDistributedInt: totalDistributed})  
+            const worldGlobalDelegation = (statusResponse.data.worldGlobalDelegation / 1000000);
+            this.setState({totalDistributedInt: totalDistributed}) 
+            this.setState({worldGlobalDelegation: (Math.round(worldGlobalDelegation * 100) / 100).toLocaleString()})
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
             this.setState({globalAuditStakedInt: worldAuditDelegations }) 
             this.setState({totalDistributed: totalDistributed.toLocaleString()})
             this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
             this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
+
 
         })
     }
@@ -225,7 +229,7 @@ class Participate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo">
                                                 <h6>Total Staked:</h6>
-                                                <h1>{this.state.globalTotalStaked} ATOM</h1>
+                                                <h1>{this.state.globalTotalStaked} ATOM <span>Total Active: {this.state.worldGlobalDelegation}</span></h1>
                                             </div>
                                         </div>
                                         <div className="col-lg-12 card-content">

@@ -33,12 +33,14 @@ class stakedrop extends React.Component {
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000) 
             const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
+            const totalStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
             this.setState({totalDistributedInt: totalDistributed})  
+            this.setState({totalStakeDropGlobalDelegation: (Math.round(totalStakeDropGlobalDelegation * 100) / 100).toLocaleString()})
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
             this.setState({globalAuditStakedInt: worldAuditDelegations }) 
             this.setState({totalDistributed: totalDistributed.toLocaleString()})
-            this.setState({totalDropped: (Math.round((200000 - totalDistributed) * 100) / 100).toFixed(2)})
+            this.setState({totalDropped: (Math.round((200000 - totalDistributed) * 100) / 100).toLocaleString()})
             this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
             this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
             
@@ -104,7 +106,7 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].staked_tokens}</p>
-                                                <h5>{this.state.globalTotalStaked} ATOM</h5>
+                                                <h5>{this.state.totalStakeDropGlobalDelegation} ATOM</h5>
                                             </div>
                                         </div>
                                     </div>
