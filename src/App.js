@@ -8,6 +8,7 @@ import AppContainer from './webpages/components/appContainer';
 import homepage from './webpages/homepage';
 import stakedrop from './webpages/components/stakedrop';
 import participate from './webpages/components/participate';
+import KavaParticipate from './webpages/components/kavaParticipate';
 import Footer from './webpages/components/footer';
 // import InfoPdf from './webpages/components/pdf';
 
@@ -24,6 +25,7 @@ class App extends Component {
             <Route path="/app" component={AppContainer} />
             <Route path="/stakedrop" component={stakedrop} />
             <Route path="/StakeDropCosmos" component={participate} />
+            <Route path="/StakeDropKava" component={KavaParticipate} />
             
       </Switch>)
     return (

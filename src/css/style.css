@@ -2495,6 +2495,8 @@ input:focus {
 .contact-section {
   border-top: 1px solid #282828;
   background-color: #212226;
+  z-index: 9999;
+  position: relative;
 }
 
 .contact-section .row {

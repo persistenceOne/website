@@ -166,7 +166,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={kava_icon} alt="atom" />
-                                                    <button>Coming Soon</button>
+                                                    <Link to="/StakeDropKava" >{language[lang].stake_drop_participants}</Link>
                                                     </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_kava_labs}</h4>
@@ -175,8 +175,8 @@ class stakedrop extends React.Component {
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_kava}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;26th of November 2020</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;16th of December 2020</p>
                                                     <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>10.00%</span></p>
                                                 </div>
                                             </div>

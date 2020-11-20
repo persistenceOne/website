@@ -37,6 +37,10 @@ class Header extends Component {
             document.getElementById('nav-bar').classList.add('scrolled');
             document.getElementById('nav-bar').classList.remove('not-scrolled');
           }
+          var scrolledBottom = document.scrollingElement.scrollBottom;
+          if (scrolledBottom < 5) {
+              alert('hi')
+          }
         });
       }
     toggleMenu = () => {
