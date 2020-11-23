@@ -10,9 +10,9 @@ import Header from '../../webpages/components/header';
 import copy from '../../assets/copy.svg'
 import { withRouter } from 'react-router-dom';
 import docTerms from '../../assets/PersistenceT&C.pdf'
-import { getCalculateComsmos, getStatusURL } from "../../constants/url";
+import { getCalculateKava, getKavaStatusURL } from "../../constants/url";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-import Wallets from './wallets'
+import KavaWallets from './kavaWallet'
 class KavaParticipate extends Component {
 
     constructor(props, context) {
@@ -104,7 +104,7 @@ class KavaParticipate extends Component {
     };
     componentDidMount = () => {
        
-        const Statusurl = getStatusURL();
+        const Statusurl = getKavaStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             
             const totalDistributed = 100000 -(statusResponse.data.totalDistributed / 1000000) 
@@ -131,7 +131,7 @@ class KavaParticipate extends Component {
         var addressPrefix = calAddress.startsWith("kava");
 
     if (addressPrefix === true && calAddress.length === 43) {
-        const url = getCalculateComsmos(calAddress)
+        const url = getCalculateKava(calAddress)
         axios.get(url).then((result) => {
             const calculatedata = result.data;
             if (calculatedata.success === true) {
@@ -212,8 +212,8 @@ class KavaParticipate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo">
                                                 <h6>Tokens left:</h6>
-                                                 {/* <h1>{this.state.totalDistributed} XPRT</h1> */}
-                                                 <h1>100000 XPRT</h1>
+                                                 <h1>{this.state.totalDistributed} XPRT</h1>
+                                                
                                             </div>
                                         </div>
                                         <div className="col-lg-12 card-content">
@@ -228,23 +228,23 @@ class KavaParticipate extends Component {
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo">
                                                 <h6>Total Staked:</h6>
-                                                {/* <h1>{this.state.globalTotalStaked} KAVA <span>Total Active: {this.state.worldGlobalDelegation}</span></h1> */}
-                                                <h1>0 KAVA <span>Total Active: 0</span></h1>
+                                                <h1>{this.state.globalTotalStaked} KAVA <span>Total Active: {this.state.worldGlobalDelegation}</span></h1>
+                                               
                                             </div>
                                         </div>
                                         <div className="col-lg-12 card-content">
                                             <div className="participate-cardtwo end">
                                                 <h6>Total Staked on AUDIT.one:</h6>
-                                                {/* <h1>{this.state.globalAuditStaked} KAVA</h1> */}
-                                                <h1>0 KAVA</h1>
+                                                <h1>{this.state.globalAuditStaked} KAVA</h1>
+                                               
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-8 staking-second-section">
-                                <div className="col-lg-12  cosmos-tutorial-section">
-                                        <p className="">Kava StakeDrop Tutorial: <a href="https://notes.persistence.one/s/SzZKebecO"  target="_blank" rel="noopener noreferrer">How KAVA Holders Can Participate in StakeDrop? </a></p>
+                                <div className="col-lg-12 kava-tutorial-section">
+                                        <p className="">Kava StakeDrop Tutorial: <a href="https://persistenceone.medium.com/kava-stakedrop-tutorial-how-kava-holders-can-participate-in-persistences-stakedrop-f7062a7688e4"  target="_blank" rel="noopener noreferrer">How KAVA Holders Can Participate in StakeDrop? </a></p>
                                     </div>
                                 <div className="col-lg-12 stakerow">
                                     <div className="col-lg-12  header-section">
@@ -333,7 +333,7 @@ class KavaParticipate extends Component {
                                                     value={volume}
                                                     onChange={this.handleOnChange}
                                                     min={0}
-                                                    max={1000000}
+                                                    max={2000000}
                                                     step={100}
                                                 />
                                             </div>
@@ -399,7 +399,7 @@ class KavaParticipate extends Component {
                             <p className="info">Please choose a method to send the magic transaction</p>
                             <div className="row wallet-method">
                             <div className="section-magic-address">
-                                    <p><b>Designated address: </b>cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22</p>
+                                    <p><b>Designated address: </b>kava1fxxxruhmqx3myuhjwxx9gk90kwqrgs9jamr892</p>
                                     <CopyToClipboard onCopy={this.onCopy} text={'cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22'}>
                                     <img src={copy} alt="copy" className="copy-icon"/>
                                     </CopyToClipboard>
@@ -418,7 +418,7 @@ class KavaParticipate extends Component {
                                 </div>
                                 <p className="continue-text">Or choose wallet to continue</p>
                            
-                            <Wallets />
+                            <KavaWallets />
                             </div>
                     </Modal.Body>
                 </Modal>
@@ -435,7 +435,7 @@ class KavaParticipate extends Component {
                             <h4 className="title">Available Methods to Participate in Stakedrop</h4>
                             <div className="row wallet-method">
                             <div className="section-validator-address">
-                                    <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
+                                    <p> <b>audit.one: </b>kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev</p>
                                     <CopyToClipboard onCopy={this.onCopy} text={'cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny'}>
                                         <img src={copy} alt="copy" className="copy-icon"/>
                                     </CopyToClipboard>
@@ -453,7 +453,7 @@ class KavaParticipate extends Component {
                                 </div>
                                 </div>
                                 <p className="continue-text">Or choose wallet to continue</p>
-                            <Wallets />
+                            <KavaWallets />
                             </div>
                     </Modal.Body>
                 </Modal>
@@ -470,7 +470,7 @@ class KavaParticipate extends Component {
                                 <h3>CLI Method</h3>
                                 <p className="info">Awesome, everything that you need is below</p>
                                 <div className="cli-address">
-                                    <p>gaiacli tx send [from_key_or_address] cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22 1000uatom --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --memo [ERC-Address] --node https://node1.rpc.cosmos.persistence.one</p>
+                                    <p>kvcli tx send [from_key_or_address] kava1fxxxruhmqx3myuhjwxx9gk90kwqrgs9jamr892 1000ukava --chain-id kava-4 --memo [ERC-Address] --node https://node1.rpc.kava.persistence.one:443</p>
                                 </div>
 
                             </div>
@@ -488,7 +488,7 @@ class KavaParticipate extends Component {
                                 <h3>CLI Method</h3>
                                 <p className="info">Awesome, everything that you need is below</p>
                                 <div className="cli-address">
-                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --gas auto --gas-prices 0.001uatom --chain-id cosmoshub-3 --node https://node1.rpc.cosmos.persistence.one</p>
+                                    <p>kvcli tx staking delegate kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev [amount] --from [from_key_or_address] --chain-id kava-4 --node https://node1.rpc.kava.persistence.one:443</p>
                                 </div>
 
                             </div>
