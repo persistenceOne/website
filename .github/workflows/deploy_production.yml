@@ -28,6 +28,7 @@ jobs:
         env:
           REACT_APP_MAIL_CHIMP_URL: ${{ secrets.MAILCHIMP }}
           REACT_APP_API_KEY: ${{ secrets.STAG_API_KEY }}
+          REACT_APP_KAVA_API_KEY: ${{ secrets.KAVA_STAKEDROP_STATUS }}
       - name: zip up the build
         uses: montudor/action-zip@v0.1.0
         with:
