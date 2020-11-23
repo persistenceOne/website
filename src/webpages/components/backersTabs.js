@@ -49,58 +49,52 @@ class BackersTabs extends Component {
 				<Tab eventKey="institutional" title="Institutional">
 					<div className="common-row first-row">
 
-						<img className="logo-img" src={arrington} alt="Arrington" />
-						<img className="logo-img" src={lunex} alt="LuneX" />
-						<img className="logo-img" src={woodstock} alt="Woodstock" />
+						<a href="http://arringtonxrpcapital.com/companies/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={arrington} alt="Arrington" /></a> 
+						<a href="https://lunex.vc/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={lunex} alt="LuneX" /></a>
+						<a href="https://woodstockfund.com/#portfolio" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={woodstock} alt="Woodstock" /></a>
 
 					</div>
 					<div className="common-row second-row">
-						<img className="logo-img" src={au21} alt="Au21" />
-						<img className="logo-img" src={ngcventures} alt="NGC Ventures" />
-						<img className="logo-img" src={Spark} alt="Spark" />
+					<a href="https://au21.capital/portfolio-1" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={au21} alt="Au21" /></a>
+					<a href="https://www.ngc.fund/portfolio" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={ngcventures} alt="NGC Ventures" /></a>
+					<a href="https://www.sparkdigitalcapital.com/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Spark} alt="Spark" /></a>
 					</div>
 					<div className="common-row third-row">
-						<img className="logo-img" src={iosg} alt="IOSG" />
-						<img className="logo-img" src={incrypt} alt="Incrypt" />
-						<img className="logo-img" src={threecommas} alt="3commas" />
+					<a href="https://iosg.vc/#/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={iosg} alt="IOSG" /></a>
+					<a href="https://www.incrypt.co/portfolio" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={incrypt} alt="Incrypt" /></a>
+					<a href="https://3commas.io/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={threecommas} alt="3commas" /></a>
 
 					</div>
 				</Tab>
 				<Tab eventKey="validators" title="Validators">
 					<div className="common-row first-row">
-					<img className="logo-img" src={dokia} alt="Dokia" />
-					<img className="logo-img" src={Cosmostation} alt="Cosmostation" />
-					<img className="logo-img" src={sg1} alt="sg1" />
+					<a href="https://dokia.capital/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={dokia} alt="Dokia" /></a>
+					<a href="https://www.cosmostation.io/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Cosmostation} alt="Cosmostation" /></a>
+					<a href="https://sg-1.online/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={sg1} alt="sg1" /></a>
 					</div>
 					<div className="common-row second-row">
-					<img className="logo-img" src={stakefish} alt="Stakefish" />
-					<img className="logo-img" src={FigmentNetworks} alt="FigmentNetworks" />
-					<img className="logo-img" src={BHarvest} alt="BHarvest" />
-					<img className="logo-img" src={sikka} alt="sikka" />
+					<a href="https://stake.fish/en/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={stakefish} alt="Stakefish" /></a>
+					<a href="https://figment.io/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={FigmentNetworks} alt="FigmentNetworks" /></a>
+					<a href="https://bharvest.io/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={BHarvest} alt="BHarvest" /></a>
+					<a href="https://www.sikka.tech/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={sikka} alt="sikka" /></a>
 					</div>
 					<div className="common-row third-row">
-					<img className="logo-img" src={Iqlusion} alt="Iqlusion" />
-					<img className="logo-img" src={StakeWithUs} alt="StakeWithUs" />
-					<img className="logo-img" src={p2p_logo} alt="P2P" />
+					<a href="https://www.iqlusion.io/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Iqlusion} alt="Iqlusion" /></a>
+					<a href="https://www.stakewith.us/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={StakeWithUs} alt="StakeWithUs" /></a>
+					<a href="https://p2p.org/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={p2p_logo} alt="P2P" /></a>
 					
 					</div>
 					<div className="common-row fourth-row">
-					<img className="logo-img" src={CertusOne} alt="CertusOne" />
-					<img className="logo-img" src={HashQuark} alt="HashQuark" />
+					<a href="https://certus.one/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={CertusOne} alt="CertusOne" /></a>
+					<a href="https://www.hashquark.io/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={HashQuark} alt="HashQuark" /></a>
 					</div>
 				</Tab>
 				<Tab eventKey="ecosystem" title="Ecosystem">
 					<div className="common-row fourth-row">
 
-						{/* <img className="logo-img" src={dokia_capital} alt="Dokia" /> */}
-						<img className="logo-img" src={alamedaresearch} alt="Alameda" />
-						<img className="logo-img" src={terra} alt="Terra" />
-						<img className="logo-img" src={icf} alt="ICF" />
-						{/* <img className="logo-img" src={Cosmostation} alt="Cosmostation" />	
-						
-						
-						{/* <img className="logo-img" src={genesisblock} alt="genesisblock" /> */}
-						{/* <img className="logo-img" src={sgone} alt="SG1" /> */}
+					<a href="https://www.alameda-research.com/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={alamedaresearch} alt="Alameda" /></a>
+					<a href="https://terra.money/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={terra} alt="Terra" /></a>
+					<a href="https://interchain.io/" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={icf} alt="ICF" /></a>
 					</div>
 				</Tab>
 			</Tabs>

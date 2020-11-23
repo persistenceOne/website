@@ -214,6 +214,31 @@ input:focus {
 				}
 			}
 		}
+		.kava-tutorial-section {
+			background-color: #231f20;
+			background-image: url(../assets/kava-tutorial-bg.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0% 1px;
+			padding: 20px;
+			margin-bottom: 15px;
+
+			p {
+				margin: 0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #ffffff;
+
+				a {
+					text-decoration: underline;
+
+					&:hover {
+						color: #ffffff;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
 
 		.staking-right-bottom.stakerow {
 			.body-section {
