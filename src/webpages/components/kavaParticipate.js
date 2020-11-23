@@ -334,7 +334,7 @@ class KavaParticipate extends Component {
                                                     onChange={this.handleOnChange}
                                                     min={0}
                                                     max={2000000}
-                                                    step={50}
+                                                    step={100}
                                                 />
                                             </div>
 
