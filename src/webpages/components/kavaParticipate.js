@@ -54,23 +54,7 @@ class KavaParticipate extends Component {
       };
     
     
-    handleOnChange = (value) => {
-        this.setState({ volume: value })
-        var ukavasToDelegate = value * 1000000
-        var delegateAudit =  ((0.25 * ukavasToDelegate/(this.state.globalAuditStakedInt + ukavasToDelegate) + 
-            (0.75 * ukavasToDelegate)/(this.state.globalTotalStakedInt + ukavasToDelegate))* this.state.totalDistributedInt);
-        var delegateOther = ((0.75 * ukavasToDelegate)/(this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt;
-        if(delegateAudit > 5000){
-            this.setState({ delegateAudit:5000})
-        }else{
-            this.setState({ delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2)})
-        }
-        if(delegateOther > 5000){
-            this.setState({ delegateOther:5000})
-        }else{
-            this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2)})
-        }
-    }   
+      
 
     handleClose = () => {
         this.setState({ show: false });
@@ -122,7 +106,29 @@ class KavaParticipate extends Component {
 
         })
     }
-
+    handleOnChange = (value) => {
+        this.setState({ volume: value })
+        var ukavasToDelegate = value * 1000000
+        var delegateAudit =  ((0.25 * ukavasToDelegate/(this.state.globalAuditStakedInt + ukavasToDelegate) + 
+            (0.75 * ukavasToDelegate)/(this.state.globalTotalStakedInt + ukavasToDelegate))* this.state.totalDistributedInt);
+        var delegateOther = ((0.75 * ukavasToDelegate)/(this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt;
+         if(isNaN(delegateAudit)) {
+            delegateAudit = 0;
+        }
+        if(isNaN(delegateOther)) {
+            delegateOther = 0;
+        }
+        if(delegateAudit > 5000){
+            this.setState({ delegateAudit:5000})
+        }else{
+            this.setState({ delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2)})
+        }
+        if(delegateOther > 5000){
+            this.setState({ delegateOther:5000})
+        }else{
+            this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2)})
+        }
+    } 
     handleCalculate = e => {
         e.preventDefault();
         this.setState({ errorAddress: false })
@@ -333,7 +339,7 @@ class KavaParticipate extends Component {
                                                     value={volume}
                                                     onChange={this.handleOnChange}
                                                     min={0}
-                                                    max={2000000}
+                                                    max={1000000}
                                                     step={100}
                                                 />
                                             </div>

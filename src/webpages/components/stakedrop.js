@@ -3,7 +3,7 @@ import language from '../translationlang';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { getKavaStatusURL } from "../../constants/url";
+import { getStatusURL, getKavaStatusURL } from "../../constants/url";
 import pstakevideo from '../../assets/PStakedrop.mp4';
 import Accordion from '../components/accordion'
 import Icon from '../icon';
@@ -25,28 +25,67 @@ class stakedrop extends React.Component {
             Tab: '',
             isOpen: false,
              globalTotalStaked: 0,
+             totalDropped: 0,
+             totaldrop: 0,
+             
+             totalCosmosStakeDropGlobalDelegation: 0,
+             totalKavaStakeDropGlobalDelegation: ''
+
         };
     }
     componentDidMount = () => {
        
-        const Statusurl = getKavaStatusURL();
+        const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
-            const totalDistributed = 100000 -(statusResponse.data.totalDistributed / 1000000) 
+            const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000) 
             const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
-            const totalStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
+            const totalCosmosStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
+            const totalCosmosDropped= (Math.round((200000 - totalDistributed) * 100) / 100).toLocaleString()
             this.setState({totalDistributedInt: totalDistributed})  
-            this.setState({totalStakeDropGlobalDelegation: (Math.round(totalStakeDropGlobalDelegation * 100) / 100).toLocaleString()})
+            this.setState({totalCosmosStakeDropGlobalDelegation: (Math.round(totalCosmosStakeDropGlobalDelegation * 100) / 100).toLocaleString()})
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
             this.setState({globalAuditStakedInt: worldAuditDelegations }) 
             this.setState({totalDistributed: totalDistributed.toLocaleString()})
-            this.setState({totalDropped: (Math.round((200000 - totalDistributed) * 100) / 100).toLocaleString()})
+            this.setState({totalCosmosDropped: totalCosmosDropped})
             this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
             this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
+
+
+
+            const Statuskavaurl = getKavaStatusURL();
+            axios.get(Statuskavaurl).then((statusResponse) => {
+                const totalDistributed = 100000 -(statusResponse.data.totalDistributed / 1000000) 
+                const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
+                const totalKavaStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
+                const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
+               const totalKavaDropped = (Math.round((100000 - totalDistributed) * 100) / 100).toLocaleString() 
+                this.setState({totalDistributedInt: totalDistributed})  
+                this.setState({totalKavaStakeDropGlobalDelegation: (Math.round(totalKavaStakeDropGlobalDelegation * 100) / 100).toLocaleString()})
+                this.setState({globalTotalStakedInt: worldTotalDelegations}) 
+                this.setState({globalAuditStakedInt: worldAuditDelegations }) 
+                this.setState({totalDistributed: totalDistributed.toLocaleString()})
+                this.setState({totalKavaDropped: totalKavaDropped})
+                this.setState({globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString()})
+                this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
+                
+                
+                const totaldrop = totalCosmosDropped + totalKavaDropped;
+                this.setState({totaldrop:totaldrop})
+
+
+
+
+            })
             
 
         })
+       
+
+       
+       
     }
+    
 
     handleModel = () => {
         this.setState({ show: true });
@@ -54,6 +93,8 @@ class stakedrop extends React.Component {
   
     render() {
         const { lang } = this.props;
+       
+        
         return (
             <div className="section-stake-drop">
                 <Header />
@@ -92,11 +133,9 @@ class stakedrop extends React.Component {
 
 
                                         <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
-
                                             <div className="col-lg-12 common-cards card-one">
-
                                                 <p>{language[lang].dropped_fis}</p>
-                                                <h5>{this.state.totalDropped} XPRT</h5>
+                                                <h5>{this.state.totaldrop} XPRT</h5>
                                             </div>
                                         </div>
 
@@ -106,7 +145,7 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].staked_tokens}</p>
-                                                <h5>{this.state.totalStakeDropGlobalDelegation} KAVA</h5>
+                                                <h5>{(this.state.totalCosmosStakeDropGlobalDelegation) + (this.state.totalKavaStakeDropGlobalDelegation)}</h5>
                                             </div>
                                         </div>
                                     </div>
