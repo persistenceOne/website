@@ -406,7 +406,7 @@ class KavaParticipate extends Component {
                             <div className="row wallet-method">
                             <div className="section-magic-address">
                                     <p><b>Designated address: </b>kava1fxxxruhmqx3myuhjwxx9gk90kwqrgs9jamr892</p>
-                                    <CopyToClipboard onCopy={this.onCopy} text={'cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22'}>
+                                    <CopyToClipboard onCopy={this.onCopy} text={'kava1fxxxruhmqx3myuhjwxx9gk90kwqrgs9jamr892'}>
                                     <img src={copy} alt="copy" className="copy-icon"/>
                                     </CopyToClipboard>
                                     <section className="copy-result">
@@ -442,7 +442,7 @@ class KavaParticipate extends Component {
                             <div className="row wallet-method">
                             <div className="section-validator-address">
                                     <p> <b>audit.one: </b>kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev</p>
-                                    <CopyToClipboard onCopy={this.onCopy} text={'cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny'}>
+                                    <CopyToClipboard onCopy={this.onCopy} text={'kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev'}>
                                         <img src={copy} alt="copy" className="copy-icon"/>
                                     </CopyToClipboard>
                                     <section className="copy-result">
