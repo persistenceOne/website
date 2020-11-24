@@ -44,6 +44,7 @@ class Participate extends Component {
             totalDistributedInt:0
         }
         this.handleCalculate = this.handleCalculate.bind(this);
+        this.handleOninputChange = this.handleOninputChange.bind(this)
     }
     onCopy = () => {
         this.setState({copyValue : true})
@@ -53,9 +54,6 @@ class Participate extends Component {
           }, 1000);
       };
     
-    
-   
-
     handleClose = () => {
         this.setState({ show: false });
         this.setState({ showDelegateModal: false });
@@ -105,6 +103,46 @@ class Participate extends Component {
 
 
         })
+    }
+
+
+    handleOninputChange(event) {
+
+        const re = /^[0-9\b]+$/;
+        if (event.target.value === '' || re.test(event.target.value)) {
+            this.setState({ volume: event.target.value })
+        }
+        if (event.target.value >= 2000000) {
+            this.setState({ volume: 2000000 })
+
+        }
+        if (event.target.value === '') {
+            const delegateAudit = 0;
+            const delegateOther = 0;
+            this.setState({ delegateAudit: delegateAudit })
+            this.setState({ delegateOther: delegateOther })
+        } else {
+            var ukavasToDelegate = this.state.volume * 1000000
+            var delegateAudit = ((0.25 * ukavasToDelegate / (this.state.globalAuditStakedInt + ukavasToDelegate) +
+                (0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt);
+            var delegateOther = ((0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt;
+            if (isNaN(delegateAudit)) {
+                delegateAudit = 0;
+            }
+            if (isNaN(delegateOther)) {
+                delegateOther = 0;
+            }
+            if (delegateAudit > 5000) {
+                this.setState({ delegateAudit: 5000 })
+            } else {
+                this.setState({ delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2) })
+            }
+            if (delegateOther > 5000) {
+                this.setState({ delegateOther: 5000 })
+            } else {
+                this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2) })
+            }
+        }
     }
         handleOnChange = (value) => {
         this.setState({ volume: value })
@@ -331,7 +369,15 @@ class Participate extends Component {
                                         <div className="body-section">
                                             <div className="range-data">
                                                 <p>How many ATOMs would you like to stake?</p>
-                                                <p className="range-value">{this.state.volume}</p>
+                                               
+                                                <input
+                                                    type="text"
+                                                    className="range-value"
+                                                    value={volume}
+                                                    onChange={this.handleOninputChange}
+                                                   
+
+                                                />
                                             </div>
                                             <div className="range-slider">
                                                 <Slider
