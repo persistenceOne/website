@@ -27,9 +27,8 @@ class stakedrop extends React.Component {
              globalTotalStaked: 0,
              totalDropped: 0,
              totaldrop: 0,
+             totalStakeDropGlobalDelegation: 0,
              
-             totalCosmosStakeDropGlobalDelegation: 0,
-             totalKavaStakeDropGlobalDelegation: ''
 
         };
     }
@@ -71,6 +70,10 @@ class stakedrop extends React.Component {
                 
                 
                 const totaldrop = totalCosmosDropped + totalKavaDropped;
+                const totalStakeDropGlobalDelegation = totalCosmosStakeDropGlobalDelegation + totalKavaStakeDropGlobalDelegation;
+                console.log(totalCosmosStakeDropGlobalDelegation)
+                console.log(totalKavaStakeDropGlobalDelegation)
+                this.setState({totalStakeDropGlobalDelegation:(totalStakeDropGlobalDelegation).toLocaleString()})
                 this.setState({totaldrop:totaldrop})
 
 
@@ -145,7 +148,7 @@ class stakedrop extends React.Component {
                                             <div className="col-lg-12 common-cards card-one">
 
                                                 <p>{language[lang].staked_tokens}</p>
-                                                <h5>{(this.state.totalCosmosStakeDropGlobalDelegation) + (this.state.totalKavaStakeDropGlobalDelegation)}</h5>
+                                                <h5>{(this.state.totalStakeDropGlobalDelegation)}</h5>
                                             </div>
                                         </div>
                                     </div>
