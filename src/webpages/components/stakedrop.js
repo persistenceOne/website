@@ -71,8 +71,7 @@ class stakedrop extends React.Component {
                 
                 const totaldrop = totalCosmosDropped + totalKavaDropped;
                 const totalStakeDropGlobalDelegation = totalCosmosStakeDropGlobalDelegation + totalKavaStakeDropGlobalDelegation;
-                console.log(totalCosmosStakeDropGlobalDelegation)
-                console.log(totalKavaStakeDropGlobalDelegation)
+               
                 this.setState({totalStakeDropGlobalDelegation:(totalStakeDropGlobalDelegation).toLocaleString()})
                 this.setState({totaldrop:totaldrop})
 
