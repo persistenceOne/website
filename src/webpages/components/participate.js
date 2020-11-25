@@ -107,7 +107,8 @@ class Participate extends Component {
 
 
     handleOninputChange(event) {
-
+        const value = event.target.value 
+        this.setState({ volume: value})
         const re = /^[0-9\b]+$/;
         if (event.target.value === '' || re.test(event.target.value)) {
             this.setState({ volume: event.target.value })
@@ -122,10 +123,10 @@ class Participate extends Component {
             this.setState({ delegateAudit: delegateAudit })
             this.setState({ delegateOther: delegateOther })
         } else {
-            var ukavasToDelegate = this.state.volume * 1000000
-            var delegateAudit = ((0.25 * ukavasToDelegate / (this.state.globalAuditStakedInt + ukavasToDelegate) +
-                (0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt);
-            var delegateOther = ((0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt;
+            var utomsToDelegate = value * 1000000
+            var delegateAudit = ((0.25 * utomsToDelegate / (this.state.globalAuditStakedInt + utomsToDelegate) +
+                (0.75 * utomsToDelegate) / (this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributedInt);
+            var delegateOther = ((0.75 * utomsToDelegate) / (this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributedInt;
             if (isNaN(delegateAudit)) {
                 delegateAudit = 0;
             }

@@ -2379,7 +2379,7 @@ input:focus {
 .contact-section {
 	border-top: 1px solid #282828;
 	background-color: #212226;
-	z-index: 9999;
+	z-index: 9990;
     position: relative;
 
 	.row {
@@ -4586,7 +4586,9 @@ input:focus {
 		display: block;
 	}
 }
-
+body .modal {
+	z-index: 9999;
+}
 .accountInfoModel {
 	.modal-content {
 		background-color: #f4f5f7;

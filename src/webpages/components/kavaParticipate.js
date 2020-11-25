@@ -85,7 +85,7 @@ class KavaParticipate extends Component {
     };
     handleCancelTerms = () => {
         this.setState({ tcShow: false });
-        this.props.history.push('/StakeDropCosmos');
+        this.props.history.push('/StakeDropKava');
     };
     componentDidMount = () => {
 
@@ -105,6 +105,8 @@ class KavaParticipate extends Component {
         })
     }
     handleOninputChange(event) {
+        const value = event.target.value 
+        this.setState({ volume: value})
         const re = /^[0-9\b]+$/;
         if (event.target.value === '' || re.test(event.target.value)) {
             this.setState({ volume: event.target.value })
@@ -120,7 +122,7 @@ class KavaParticipate extends Component {
             this.setState({ delegateAudit: delegateAudit })
             this.setState({ delegateOther: delegateOther })
         } else {
-            var ukavasToDelegate = this.state.volume * 1000000
+            var ukavasToDelegate = value * 1000000
             var delegateAudit = ((0.25 * ukavasToDelegate / (this.state.globalAuditStakedInt + ukavasToDelegate) +
                 (0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt);
             var delegateOther = ((0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt;
