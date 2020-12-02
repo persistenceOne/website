@@ -1004,7 +1004,14 @@ input:focus {
 		}
 	}
 }
-
+.stakedrop-banner {
+	background: #313238;
+	padding: 75px 0;
+	img {
+		width:100%;
+		margin: 10px 0;
+	}
+}
 .faq-section {
 	background-color: #191616;
 	padding: 150px;
@@ -1125,7 +1132,7 @@ input:focus {
 			color: #231f20;
 		}
 	}
-
+	
 	.campaign-card {
 		.icon-div {
 			display: flex;
@@ -1145,7 +1152,19 @@ input:focus {
 				border-radius: 5px;
 				line-height: 1;
 			}
-
+			a.viewcampaign{
+				opacity: 1;
+				transition: all 0.5s ease-in-out;
+				background: #fff;
+				color: #000000;
+				border: 1px solid #e5e5e5;
+				font-weight: bold;
+				padding: 10px 20px;
+				border-radius: 5px;
+				font-size: 14px;
+				border-radius: 5px;
+				line-height: 1;
+			}
 			button {
 				font-weight: 500;
 				border-radius: 5px;

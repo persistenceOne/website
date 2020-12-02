@@ -1,18 +1,13 @@
 
 import React, { Component } from 'react';
 import Icon from '../icon';
-import { Modal } from "react-bootstrap";
 import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import Header from '../../webpages/components/header';
-import copy from '../../assets/copy.svg'
 import { withRouter } from 'react-router-dom';
-import docTerms from '../../assets/PersistenceT&C.pdf'
 import { getCalculateComsmos, getStatusURL } from "../../constants/url";
-import {CopyToClipboard} from 'react-copy-to-clipboard';
-import Wallets from './wallets'
 class Participate extends Component {
 
     constructor(props, context) {
@@ -407,14 +402,7 @@ class Participate extends Component {
                                                     
                                                 </div>
                                             </div>
-                                            <div className="participate-buttons">
-                                                <div className="btn-magic-txs">
-                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
-                                                </div>
-                                                <div className="btn-delegate">
-                                                    <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>
-                                                </div>
-                                            </div>
+                                           
                                             
                                         </div>
                                     </div>
@@ -423,129 +411,7 @@ class Participate extends Component {
                         
                     </div>
                 </div>
-                <Modal
-                    show={this.state.tcShow}
-                    onHide={this.handleClose}
-                    className="accountInfoModel"
-                    centered
-                >
-                    <Modal.Body>
-                    <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
-                    </p>
-                    <div className="button-section">
-                    <button className="btn accept" onClick = {this.handleTerms} >Accept</button>
-                    <button className="btn decline" onClick = {this.handleCancelTerms} >Decline</button>
-                    </div>
-                    </Modal.Body>
-                    </Modal>
-                <Modal
-                    size="lg"
-                    show={this.state.show}
-                    onHide={this.handleClose}
-                    className="accountInfoModel"
-                    centered
-                >
-                    <Modal.Body>
-                    <div className="staking-wallet-section">
-                            <h4 className="title">Available Methods to Participate in Stakedrop</h4>
-                            <p className="info">Please choose a method to send the magic transaction</p>
-                            <div className="row wallet-method">
-                            <div className="section-magic-address">
-                                    <p><b>Designated address: </b>cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22</p>
-                                    <CopyToClipboard onCopy={this.onCopy} text={'cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22'}>
-                                    <img src={copy} alt="copy" className="copy-icon"/>
-                                    </CopyToClipboard>
-                                    <section className="copy-result">
-                                    {this.state.copyValue ? <span>Copied.</span> : null}
-                                    </section>
-                                </div>
-                            <div className="col-lg-6">
-                                    <div className="cli-box" onClick={this.handleMagicTxnClieModel}>
-                                        <div className="card-inner">
-                                            <p>Continue with CLI</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <p className="continue-text">Or choose wallet to continue</p>
-                           
-                            <Wallets />
-                            </div>
-                    </Modal.Body>
-                </Modal>
-
-                <Modal
-                    size="lg"
-                    show={this.state.showDelegateModal}
-                    onHide={this.handleClose}
-                    className="accountInfoModel"
-                    centered
-                >
-                    <Modal.Body>
-                    <div className="staking-wallet-section">
-                            <h4 className="title">Available Methods to Participate in Stakedrop</h4>
-                            <div className="row wallet-method">
-                            <div className="section-validator-address">
-                                    <p> <b>audit.one: </b>cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny</p>
-                                    <CopyToClipboard onCopy={this.onCopy} text={'cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny'}>
-                                        <img src={copy} alt="copy" className="copy-icon"/>
-                                    </CopyToClipboard>
-                                    <section className="copy-result">
-                                    {this.state.copyValue ? <span>Copied.</span> : null}
-                                    </section>
-                                </div>
-                            <div className="col-lg-6">
-                                    <div className="cli-box" onClick={this.handleDelegateClieModel}>
-                                        <div className="card-inner">
-                                            <p>Continue with CLI</p>
-                                            <Icon viewClass="social_icon_imgg" icon="arrow-right" />
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <p className="continue-text">Or choose wallet to continue</p>
-                            <Wallets />
-                            </div>
-                    </Modal.Body>
-                </Modal>
-
-                <Modal
-                    size="lg"
-                    show={this.state.showMagicTxnClieModel}
-                    onHide={this.handleClose}
-                    className="accountInfoModel"
-                    centered
-                >
-                    <Modal.Body>
-                            <div className="cli-section">
-                                <h3>CLI Method</h3>
-                                <p className="info">Awesome, everything that you need is below</p>
-                                <div className="cli-address">
-                                    <p>gaiacli tx send [from_key_or_address] cosmos1ea6cx6km3jmryax5aefq0vy5wrfcdqtaau4f22 1000uatom --chain-id cosmoshub-3 --memo [ERC-Address] --node https://node1.rpc.cosmos.persistence.one:443</p>
-                                </div>
-
-                            </div>
-                    </Modal.Body>
-                </Modal>
-                <Modal
-                    size="lg"
-                    show={this.state.showDelegateCliModal}
-                    onHide={this.handleClose}
-                    className="accountInfoModel"
-                    centered
-                >
-                    <Modal.Body>
-                            <div className="cli-section">
-                                <h3>CLI Method</h3>
-                                <p className="info">Awesome, everything that you need is below</p>
-                                <div className="cli-address">
-                                    <p>gaiacli tx staking delegate cosmosvaloper1udpsgkgyutgsglauk9vk9rs03a3skc62gup9ny [amount] --from [from_key_or_address] --chain-id cosmoshub-3 --node https://node1.rpc.cosmos.persistence.one:443</p>
-                                </div>
-
-                            </div>
-                    </Modal.Body>
-                </Modal>
+      
             </section>
             </div>
         );
