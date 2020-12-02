@@ -14,6 +14,8 @@ import xtz_icon from '../../assets/xtz.svg';
 import luna_icon from '../../assets/luna.svg';
 import kava_icon from '../../assets/kava.svg';
 import iris_icon from '../../assets/iris.svg';
+import banner1 from '../../assets/banner1.svg';
+import banner2 from '../../assets/banner2.svg';
 import cosmos_tutorial from '../../assets/cosmos-tutorial.svg';
 import mechanism from '../../assets/mechanism.svg';
 import Header from '../../webpages/components/header';
@@ -40,7 +42,7 @@ class stakedrop extends React.Component {
             const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
             const totalCosmosStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
-            const totalCosmosDropped= (Math.round((200000 - totalDistributed) * 100) / 100).toLocaleString()
+            const totalCosmosDropped= (Math.round((200000 - totalDistributed) * 100) / 100)
             this.setState({totalDistributedInt: totalDistributed})  
             this.setState({totalCosmosStakeDropGlobalDelegation: (Math.round(totalCosmosStakeDropGlobalDelegation * 100) / 100).toLocaleString()})
             this.setState({globalTotalStakedInt: worldTotalDelegations}) 
@@ -58,7 +60,7 @@ class stakedrop extends React.Component {
                 const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
                 const totalKavaStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
                 const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
-               const totalKavaDropped = (Math.round((100000 - totalDistributed) * 100) / 100).toLocaleString() 
+               const totalKavaDropped = (Math.round((100000 - totalDistributed) * 100) / 100)
                 this.setState({totalDistributedInt: totalDistributed})  
                 this.setState({totalKavaStakeDropGlobalDelegation: (Math.round(totalKavaStakeDropGlobalDelegation * 100) / 100).toLocaleString()})
                 this.setState({globalTotalStakedInt: worldTotalDelegations}) 
@@ -69,7 +71,8 @@ class stakedrop extends React.Component {
                 this.setState({globalAuditStaked: (worldAuditDelegations /1000000).toLocaleString()})
                 
                 
-                const totaldrop = totalCosmosDropped + totalKavaDropped;
+                const totaldrop = (totalCosmosDropped + totalKavaDropped).toLocaleString();
+               
                 const totalStakeDropGlobalDelegation = totalCosmosStakeDropGlobalDelegation + totalKavaStakeDropGlobalDelegation;
                
                 this.setState({totalStakeDropGlobalDelegation:(totalStakeDropGlobalDelegation).toLocaleString()})
@@ -156,6 +159,18 @@ class stakedrop extends React.Component {
                         </div>
 
                     </section>
+                    <section className="stakedrop-banner">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <a href="https://trustwallet.com/" target="_blank" rel="noopener noreferrer"> <img src={banner1} alt="banner"/></a>
+                                </div>
+                                <div className="col-md-6">
+                                <a href="https://www.stakingrewards.com/" target="_blank" rel="noopener noreferrer">  <img src={banner2} alt="banner"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section className="stake-drop-campaigns">
                         <div className="container">
                             <div className="row">
@@ -169,7 +184,7 @@ class stakedrop extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom" />
                                                     {/* <button onClick={this.handleModel}>Participate</button> */}
-                                                  <Link to="/StakeDropCosmos" >{language[lang].stake_drop_participants}</Link>
+                                                  <Link className="viewcampaign" to="/StakeDropCosmos" >View</Link>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_atom_cosmos}</h4>

@@ -19,7 +19,7 @@ class KavaWallets extends Component {
                                             <p>Trust Wallet</p>
                                         </div>
                                     </a>
-                                    <a href="https://frontierwallet.com/" target="_blank" rel="noopener noreferrer" title="Frontier Wallet" className="wallet-card">
+                                    <a href="https://frontier.xyz/" target="_blank" rel="noopener noreferrer" title="Frontier Wallet" className="wallet-card">
                                         <div className="card-inner">
                                         <img src={frontier_wallet} alt="Frontier Wallet" />
                                             <p>Frontier Wallet</p>
