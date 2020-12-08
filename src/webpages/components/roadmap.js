@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGa from 'react-ga';
 import language from '../translationlang';
 import { connect } from 'react-redux';
 import link from '../../assets/link.png'
@@ -20,8 +21,8 @@ class Roadmap extends React.Component {
        
     }
 
-   
     componentDidMount() {
+        ReactGa.pageview(window.location.pathname + window.location.search);
         document.body.classList = "";
        
         var today = new Date();

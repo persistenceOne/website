@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import ReactGa from 'react-ga';
 import Icon from '../icon';
 import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
@@ -79,8 +80,9 @@ class Participate extends Component {
         this.setState({ tcShow: false });
         this.props.history.push('/StakeDropCosmos');
     };
+   
     componentDidMount = () => {
-       
+        ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             

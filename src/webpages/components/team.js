@@ -1,9 +1,7 @@
 import React from 'react';
 import language from '../translationlang';
 import { connect } from 'react-redux';
-// import quotes1 from '../../assets/quotes1.png'
-// import quotes2 from '../../assets/quotes2.png'
-
+import ReactGa from 'react-ga';
 import pic1 from '../../assets/pics/pic1.png'
 import pic2 from '../../assets/pics/pic2.png'
 import pic3 from '../../assets/pics/pic3.png'
@@ -22,7 +20,9 @@ class Team extends React.Component {
         
     }
 
-    
+    componentDidMount() {
+        ReactGa.pageview(window.location.pathname + window.location.search);
+    }
    
     /**
      * Sets active tab

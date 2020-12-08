@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import ReactGa from 'react-ga';
 // import LangDropDown from './langDropDown';
 import Alert from 'react-bootstrap/Alert'
 import Icon from '../icon';
@@ -43,6 +44,13 @@ class Header extends Component {
           }
         });
       }
+      onClickTopBar = () => {
+          ReactGa.event({
+              category:'TOP BAR',
+              action: 'Clicked on TOP BAR'
+          })
+          
+      }
     toggleMenu = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
@@ -76,12 +84,12 @@ class Header extends Component {
                     <div className="container">
                     <Alert dismissible onClose={() => this.setState({showAlert:false})} >
                         <NavLink to="stakedrop">
-					<p className="other-pages">
+					<p className="other-pages" onClick={this.onClickTopBar}>
                     Grab the chance to earn $250,000 worth of $XPRT tokens. Kava campaign is live. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
                     </NavLink>
                     <p className="stake-drop stake-drop-banner" onClick={() => this.setState({modalShow:true})}>
-                        Earn additional XPRT <span>for staking on</span> AUDIT.One <span>Validator</span>&emsp;<img src={rightarrow} alt="arrow"/>
+                        <span onClick={this.onClickTopBar}>Earn additional XPRT <span>for staking on</span> AUDIT.One <span>Validator</span></span>&emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
                     </Alert></div></div>:''
                     } 

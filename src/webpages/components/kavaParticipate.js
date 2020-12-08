@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import ReactGa from 'react-ga';
 import Icon from '../icon';
 import { Modal } from "react-bootstrap";
 import Slider from 'react-rangeslider';
@@ -65,9 +66,17 @@ class KavaParticipate extends Component {
     };
 
     handleTcModal = () => {
+        ReactGa.event({
+            category:'Send Magic Transaction',
+            action: 'Clicked on Magic Transaction'
+        })
         this.setState({ tcShow: true });
     };
     handleDelegateModel = () => {
+        ReactGa.event({
+            category:'Delegate',
+            action: 'Clicked on Delegate'
+        })
         this.setState({ showDelegateModal: true });
     };
     handleDelegateClieModel = () => {
@@ -88,7 +97,7 @@ class KavaParticipate extends Component {
         this.props.history.push('/StakeDropKava');
     };
     componentDidMount = () => {
-
+        ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getKavaStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 100000 - (statusResponse.data.totalDistributed / 1000000)

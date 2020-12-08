@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
+import ReactGa from 'react-ga';
 import { connect } from 'react-redux';
 import language from '../webpages/translationlang';
 import Validator from './components/validator';
@@ -29,6 +30,7 @@ import block3 from '../assets/block3.png';
 
 class homePage extends Component {
     componentDidMount() {
+        ReactGa.pageview(window.location.pathname + window.location.search);
         document.body.classList = "";
         document.getElementById('nav-bar').classList.add('navbar-white');
     }

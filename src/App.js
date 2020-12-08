@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import './css/style.css';
 import './App.css';
+import ReactGa from 'react-ga';
 import Team from './webpages/components/team';
 import Roadmap from './webpages/components/roadmap';
 import AppContainer from './webpages/components/appContainer';
@@ -15,8 +17,14 @@ import Footer from './webpages/components/footer';
 
 class App extends Component {
   
+ 
+componentDidMount() {
+  ReactGa.pageview(window.location.pathname + window.location.search);
+    
+}
 
   render() {
+   
     const routes = (
       <Switch>
         <Route exact path="/" component={homepage} />
@@ -28,6 +36,7 @@ class App extends Component {
             <Route path="/StakeDropKava" component={KavaParticipate} />
             
       </Switch>)
+    
     return (
       <div className={window.location.pathname ?
         window.location.pathname.split('/')[1] :
