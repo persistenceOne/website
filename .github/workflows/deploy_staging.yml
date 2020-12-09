@@ -49,4 +49,4 @@ jobs:
 
           # then run these commands
           ssh_after: |
-            /root/update.sh
+            ${{ secrets.SCRIPT_PATH }}
