@@ -1,5 +1,6 @@
 import React from 'react';
 import language from '../translationlang';
+import ReactGa from 'react-ga';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -34,8 +35,21 @@ class stakedrop extends React.Component {
 
         };
     }
+    onClickParticipate = () => {
+        ReactGa.event({
+            category:'Participate',
+            action: 'Clicked on Participate'
+        })
+    }
+    onClickView = () => {
+        ReactGa.event({
+            category:'View',
+            action: 'Clicked on View'
+        })
+    }
     componentDidMount = () => {
-       
+        ReactGa.pageview(window.location.pathname + window.location.search);
+        console.log(window.location.pathname)
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000) 
@@ -184,7 +198,7 @@ class stakedrop extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom" />
                                                     {/* <button onClick={this.handleModel}>Participate</button> */}
-                                                  <Link className="viewcampaign" to="/StakeDropCosmos" >View</Link>
+                                                  <Link onClick={this.onClickView}className="viewcampaign" to="/StakeDropCosmos" >View</Link>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_atom_cosmos}</h4>
@@ -204,7 +218,7 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={kava_icon} alt="atom" />
-                                                    <Link to="/StakeDropKava" >{language[lang].stake_drop_participants}</Link>
+                                                    <Link onClick={this.onClickParticipate}to="/StakeDropKava" >{language[lang].stake_drop_participants}</Link>
                                                     </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_kava_labs}</h4>

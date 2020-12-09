@@ -68,6 +68,7 @@ class Footer extends Component {
                                     <li><a href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo" />&ensp;{language[lang].twitter}</a></li>
                                     <li><a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="medium-m" />&ensp;{language[lang].medium}</a></li>
                                     <li><a href="https://www.reddit.com/r/PersistenceOne/" rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="reddit" />&ensp;Reddit</a></li>
+                                    <li><a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="youtube" />&ensp;Youtube</a></li>
                                 </ul>
                             </div>
                         </div>
