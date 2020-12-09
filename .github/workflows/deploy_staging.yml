@@ -29,6 +29,7 @@ jobs:
           REACT_APP_MAIL_CHIMP_URL: ${{ secrets.MAILCHIMP }}
           REACT_APP_API_KEY: ${{ secrets.STAG_API_KEY }}
           REACT_APP_KAVA_API_KEY: ${{ secrets.KAVA_STAKEDROP_STATUS }}
+          REACT_APP_GA_ID: ${{ secrets.GOOGLE_ANALYTICS }}
       - name: zip up the build
         uses: montudor/action-zip@v0.1.0
         with:
@@ -49,4 +50,4 @@ jobs:
 
           # then run these commands
           ssh_after: |
-            /root/update.sh
+            ${{ secrets.SCRIPT_PATH }}
