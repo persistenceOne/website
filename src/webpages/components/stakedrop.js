@@ -229,8 +229,8 @@ class stakedrop extends React.Component {
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
-                                                    <img src={kava_icon} alt="atom" /><span><h6>Completed!</h6>
-                                                    <Link onClick={this.onClickParticipate} className="viewcampaign" to="/StakeDropKava" >View</Link></span>
+                                                    <img src={kava_icon} alt="atom" />
+                                                    <Link onClick={this.onClickParticipate}  to="/StakeDropKava" >Participate</Link>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_kava_labs}</h4>
@@ -348,15 +348,37 @@ class stakedrop extends React.Component {
                                             <div className="col-md-12 campaign-card learnmore_card">
                                                 <h4 className="heading">Want to learn more?</h4>
                                                 <div className="col-lg-12 about-campaign learn_more">
-                                                    <a href="stakedropinfo.pdf" target="_blank" className="icon-div mechanism-btn mechanism">
+                                                    <a href="https://notes.persistence.one/7X4wCuP1Q9GHO53YdpiVew#" target="_blank" rel="noopener noreferrer" className="icon-div mechanism-btn mechanism">
                                                         <img src={cosmos_tutorial} alt="Tutorial" />
                                                         <p>Mechanism Paper</p>
 
                                                     </a>
-                                                    <a className="icon-div mechanism-btn" href="https://persistenceone.medium.com" target="_blank" rel="noopener noreferrer">
+                                                    <a className="icon-div mechanism-btn" href="https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d" target="_blank" rel="noopener noreferrer">
                                                         <img src={mechanism} alt="Tutorial" />
                                                         <p>Terra Tutorial</p>
                                                     </a>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-lg-4 tutorial-links">
+                                                        <div className="link-section">
+                                                        <p>English blogpost:</p>
+                                                        <a href="https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686</a>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-lg-4 tutorial-links">
+                                                        <div className="link-section">
+                                                        <p>English Tutorial:</p>
+                                                        <a href="https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d</a>
+                                                        </div>
+                                                    </div>
+                                                
+            
+                                                    <div className="col-lg-4 tutorial-links">
+                                                        <div className="link-section">
+                                                        <p>Korean blogpost:</p>
+                                                        <a href="https://medium.com/persistence-blog/12%EC%9B%94-19%EC%9D%BC-terra-luna-%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EB%93%9C%EB%A1%AD%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%A9%EB%8B%88%EB%8B%A4-25-000-%EC%83%81%EB%8B%B9%EC%9D%98-xprt%EA%B0%80-luna-staker-%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%BB%A4-%EB%93%A4%EC%97%90%EA%B2%8C-%EC%A7%80%EA%B8%89%EB%90%A0-%EC%98%88%EC%A0%95%EC%9E%85%EB%8B%88%EB%8B%A4-daddf55594f7" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/12%EC%9B%94-19%EC%9D%BC-terra-luna-%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EB%93%9C%EB%A1%AD%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%A9%EB%8B%88%EB%8B%A4-25-000-%EC%83%81%EB%8B%B9%EC%9D%98-xprt%EA%B0%80-luna-staker-%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%BB%A4-%EB%93%A4%EC%97%90%EA%B2%8C-%EC%A7%80%EA%B8%89%EB%90%A0-%EC%98%88%EC%A0%95%EC%9E%85%EB%8B%88%EB%8B%A4-daddf55594f7</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div className="official-announce">
                                                     <a href="https://medium.com/persistence-blog/pos-token-holders-prepare-yourselves-for-persistence-stakedrop-the-grand-unveiling-d5f6ca6ddc40" target="_blank" rel="noopener noreferrer">Official Announcement</a>
