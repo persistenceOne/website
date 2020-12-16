@@ -250,7 +250,7 @@ class TerraParticipate extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>End</h6>
-                                                    <h1>12th January 2021<span>Block Height: 1363850</span></h1>
+                                                    <h1>13th January 2021<span>Block Height: 1363850</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -272,7 +272,7 @@ class TerraParticipate extends Component {
                                                 <div className="participate-cardtwo">
                                                     <h6>Time left:</h6>
                                                     <h1 className="countdown"><Countdown
-                                                        date={1610427057000}
+                                                        date={1610541000000}
                                                         autoStart={true}
                                                     /></h1>
                                                 </div>
@@ -280,14 +280,14 @@ class TerraParticipate extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Total Staked:</h6>
-                                                    <h1>{this.state.globalTotalStaked} TERRA <span>Total Active: {this.state.worldGlobalDelegation}</span></h1>
+                                                    <h1>{this.state.globalTotalStaked} LUNA <span>Total Active: {this.state.worldGlobalDelegation}</span></h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>Total Staked on AUDIT.one:</h6>
-                                                    <h1>{this.state.globalAuditStaked} TERRA</h1>
+                                                    <h1>{this.state.globalAuditStaked} LUNA</h1>
 
                                                 </div>
                                             </div>
@@ -350,13 +350,13 @@ class TerraParticipate extends Component {
 
                                                 <div className="inputstaking bottom">
                                                     <h5>Total Staked</h5>
-                                                    <h5 className="value">{this.state.totalStaked} TERRA</h5>
+                                                    <h5 className="value">{this.state.totalStaked} LUNA</h5>
                                                 </div>
 
 
                                                 <div className="inputstaking bottom">
                                                     <h5>Total Staked on AUDIT.one</h5>
-                                                    <h5 className="value">{this.state.statkedOnAudit} TERRA</h5>
+                                                    <h5 className="value">{this.state.statkedOnAudit} LUNA</h5>
                                                 </div>
 
                                                 <div className="inputstaking bottom">
@@ -377,7 +377,7 @@ class TerraParticipate extends Component {
                                         </div>
                                         <div className="body-section">
                                             <div className="range-data">
-                                                <p>How many TERRAs would you like to stake?</p>
+                                                <p>How many LUNAs would you like to stake?</p>
 
                                                 <input
                                                     type="text"
