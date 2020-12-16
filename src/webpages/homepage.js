@@ -163,18 +163,18 @@ class homePage extends Component {
                     <h3>Highlights</h3>
                     <div className="container">
                         <div className="row">
-                            <a href="https://medium.com/persistence-blog/25-000-worth-of-xprt-will-be-distributed-to-kava-stakers-during-the-kava-stakedrop-beginning-17489f431234" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
+                            <a href="https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
                                 <div className="row blog-section">
                                     <div className="col-lg-4">
                                         <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*S-Sr8UDaMlYZoFM-Q0O5pw.jpeg" />
+                                            <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*P6cVFkoq-AmWBSQBQSvwrA.jpeg" />
                                         </Card>
                                     </div>
                                     <div className="col-lg-8 blog-head">
                                         <Card.Body>
-                                            <Card.Title>$25,000 Worth of XPRT will be Distributed to KAVA Stakers During the Kava StakeDrop, Beginning November 26th!</Card.Title>
+                                            <Card.Title>Terra (LUNA) StakeDrop Begins December 19th! $25,000 Worth of XPRT will be Distributed to LUNA Stakers!</Card.Title>
 
-                                            <p className="blog-medium">20 OCT 2020</p>
+                                            <p className="blog-medium">15 DEC 2020</p>
                                             <img className="blog-year" src={medium} alt="Medium" />
                                         </Card.Body>
                                     </div>

@@ -239,6 +239,31 @@ input:focus {
 				}
 			}
 		}
+		.terra-tutorial-section {
+			background-color: #231f20;
+			background-image: url(../assets/terra-tutorial-bg.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0% 1px;
+			padding: 20px;
+			margin-bottom: 15px;
+
+			p {
+				margin: 0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #ffffff;
+
+				a {
+					text-decoration: underline;
+
+					&:hover {
+						color: #ffffff;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
 
 		.staking-right-bottom.stakerow {
 			.body-section {
@@ -1010,6 +1035,7 @@ input:focus {
 	img {
 		width:100%;
 		margin: 10px 0;
+		height: 150px;
 	}
 }
 .faq-section {
@@ -1139,7 +1165,16 @@ input:focus {
 			justify-content: space-between;
 
 			align-items: center;
-
+				span {
+					display: flex;
+					align-items: center;
+					h6{
+						color: #63B036;
+						font-weight: bold;
+						margin-bottom: 0;
+						margin-right: 10px;
+					}
+				}
 			a {
 				opacity: 1;
 				transition: all 0.5s ease-in-out;
