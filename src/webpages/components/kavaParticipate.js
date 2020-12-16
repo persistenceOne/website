@@ -229,7 +229,7 @@ class KavaParticipate extends Component {
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
                                                     <h6>Campaign Duration</h6>
-                                                    <h1>21 Days</h1>
+                                                    <h1>28 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
 
@@ -250,7 +250,7 @@ class KavaParticipate extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>End</h6>
-                                                    <h1>16th of December 2020<span>Block Height: 672440</span></h1>
+                                                    <h1>23rd of December 2020<span>Block Height: 672440</span></h1>
                                                 </div>
                                             </div>
                                         </div>
