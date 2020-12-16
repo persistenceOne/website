@@ -296,7 +296,7 @@ class TerraParticipate extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12 terra-tutorial-section">
-                                        <p className="">Terra StakeDrop Tutorial: <a href="www.google.com" target="_blank" rel="noopener noreferrer">How TERRA Holders Can Participate in StakeDrop? </a></p>
+                                        <p className="">Terra StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d" target="_blank" rel="noopener noreferrer">How TERRA Holders Can Participate in StakeDrop? </a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">

@@ -1194,7 +1194,7 @@ input:focus {
 }
 
 .stake-drop-campaigns .campaign-card.learnmore_card {
-  padding: 70px 40px;
+  padding: 35px 40px 15px 40px;
 }
 
 .stake-drop-campaigns .campaign-card.learnmore_card .about-campaign {
@@ -1204,13 +1204,32 @@ input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 40px 0;
+  margin: 20px 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .stake-drop-campaigns .campaign-card.learnmore_card .about-campaign .mechanism {
   margin-right: 35px;
+}
+
+.stake-drop-campaigns .tutorial-links .link-section {
+  margin: 5px 0;
+}
+
+.stake-drop-campaigns .tutorial-links .link-section p {
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.stake-drop-campaigns .tutorial-links .link-section a {
+  color: #007bff;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
 
 .stake-drop-campaigns .learnmore_card .heading {
@@ -1250,7 +1269,7 @@ input:focus {
 }
 
 .stake-drop-campaigns .campaign-card .icon-div span h6 {
-  color: #63B036;
+  color: #63b036;
   font-weight: bold;
   margin-bottom: 0;
   margin-right: 10px;
@@ -1349,7 +1368,8 @@ input:focus {
 
 .stake-drop-campaigns .campaign-card .official-announce {
   text-align: center;
-  padding: 6px 0;
+  padding: 0px 0;
+  margin-top: 15px;
 }
 
 .stake-drop-campaigns .campaign-card .official-announce a {
