@@ -2,16 +2,19 @@
 import React, { Component } from 'react';
 import ReactGa from 'react-ga';
 import Icon from '../icon';
+import { Modal } from "react-bootstrap";
 import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import Header from '../../webpages/components/header';
+import copy from '../../assets/copy.svg'
 import { withRouter } from 'react-router-dom';
-import { getCalculateKava, getKavaStatusURL } from "../../constants/url";
-
-
-class KavaParticipate extends Component {
+import docTerms from '../../assets/PersistenceT&C.pdf'
+import { getCalculateTerra, getTerraStatusURL } from "../../constants/url";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Wallets from './wallets'
+class TerraParticipate extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -95,7 +98,7 @@ class KavaParticipate extends Component {
     };
     componentDidMount = () => {
         ReactGa.pageview(window.location.pathname + window.location.search);
-        const Statusurl = getKavaStatusURL();
+        const Statusurl = getTerraStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 100000 - (statusResponse.data.totalDistributed / 1000000)
             const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation);
@@ -128,10 +131,10 @@ class KavaParticipate extends Component {
             this.setState({ delegateAudit: delegateAudit })
             this.setState({ delegateOther: delegateOther })
         } else {
-            var ukavasToDelegate = value * 1000000
-            var delegateAudit = ((0.25 * ukavasToDelegate / (this.state.globalAuditStakedInt + ukavasToDelegate) +
-                (0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt);
-            var delegateOther = ((0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt;
+            var uterrasToDelegate = value * 1000000
+            var delegateAudit = ((0.25 * uterrasToDelegate / (this.state.globalAuditStakedInt + uterrasToDelegate) +
+                (0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt);
+            var delegateOther = ((0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt;
             if (isNaN(delegateAudit)) {
                 delegateAudit = 0;
             }
@@ -154,10 +157,10 @@ class KavaParticipate extends Component {
 
     handleOnChange = (value) => {
         this.setState({ volume: value })
-        var ukavasToDelegate = value * 1000000
-        var delegateAudit = ((0.25 * ukavasToDelegate / (this.state.globalAuditStakedInt + ukavasToDelegate) +
-            (0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt);
-        var delegateOther = ((0.75 * ukavasToDelegate) / (this.state.globalTotalStakedInt + ukavasToDelegate)) * this.state.totalDistributedInt;
+        var uterrasToDelegate = value * 1000000
+        var delegateAudit = ((0.25 * uterrasToDelegate / (this.state.globalAuditStakedInt + uterrasToDelegate) +
+            (0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt);
+        var delegateOther = ((0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt;
         if (isNaN(delegateAudit)) {
             delegateAudit = 0;
         }
@@ -179,11 +182,11 @@ class KavaParticipate extends Component {
         e.preventDefault();
         this.setState({ errorAddress: false })
         this.setState({ notParticipantAddress: false })
-        const calAddress = e.target.kavaAddress.value;
-        var addressPrefix = calAddress.startsWith("kava");
+        const calAddress = e.target.terraAddress.value;
+        var addressPrefix = calAddress.startsWith("terra");
 
-        if (addressPrefix === true && calAddress.length === 43) {
-            const url = getCalculateKava(calAddress)
+        if (addressPrefix === true && calAddress.length === 44) {
+            const url = getCalculateTerra(calAddress)
             axios.get(url).then((result) => {
                 const calculatedata = result.data;
                 if (calculatedata.success === true) {
@@ -220,13 +223,13 @@ class KavaParticipate extends Component {
                                 <div className="col-lg-4 section-campaign">
                                     <div className="row campaign-maintwo">
                                         <div className="col-lg-12  header-section">
-                                            <h5 className="heading-participate">Kava Stake Drop Campaign</h5>
+                                            <h5 className="heading-participate">Terra Stake Drop Campaign</h5>
                                         </div>
                                         <div className="row body-section">
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
                                                     <h6>Campaign Duration</h6>
-                                                    <h1>21 Days</h1>
+                                                    <h1>25 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
 
@@ -240,14 +243,14 @@ class KavaParticipate extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Start</h6>
-                                                    <h1>26th of November 2020 <span>Block Height: 453621</span></h1>
+                                                    <h1>19th December 2020 <span>Block Height: 1030101</span></h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>End</h6>
-                                                    <h1>16th of December 2020<span>Block Height: 672440</span></h1>
+                                                    <h1>12th January 2021<span>Block Height: 1363850</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -269,7 +272,7 @@ class KavaParticipate extends Component {
                                                 <div className="participate-cardtwo">
                                                     <h6>Time left:</h6>
                                                     <h1 className="countdown"><Countdown
-                                                        date={1608163199000}
+                                                        date={1610427057000}
                                                         autoStart={true}
                                                     /></h1>
                                                 </div>
@@ -277,14 +280,14 @@ class KavaParticipate extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Total Staked:</h6>
-                                                    <h1>{this.state.globalTotalStaked} KAVA <span>Total Active: {this.state.worldGlobalDelegation}</span></h1>
+                                                    <h1>{this.state.globalTotalStaked} TERRA <span>Total Active: {this.state.worldGlobalDelegation}</span></h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>Total Staked on AUDIT.one:</h6>
-                                                    <h1>{this.state.globalAuditStaked} KAVA</h1>
+                                                    <h1>{this.state.globalAuditStaked} TERRA</h1>
 
                                                 </div>
                                             </div>
@@ -292,8 +295,8 @@ class KavaParticipate extends Component {
                                     </div>
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
-                                    <div className="col-lg-12 kava-tutorial-section">
-                                        <p className="">Kava StakeDrop Tutorial: <a href="https://persistenceone.medium.com/kava-stakedrop-tutorial-how-kava-holders-can-participate-in-persistences-stakedrop-f7062a7688e4" target="_blank" rel="noopener noreferrer">How KAVA Holders Can Participate in StakeDrop? </a></p>
+                                    <div className="col-lg-12 terra-tutorial-section">
+                                        <p className="">Terra StakeDrop Tutorial: <a href="www.google.com" target="_blank" rel="noopener noreferrer">How TERRA Holders Can Participate in StakeDrop? </a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
@@ -306,9 +309,9 @@ class KavaParticipate extends Component {
                                                     <h5>Staking Address</h5>
                                                     <input
                                                         type="text"
-                                                        name="kavaAddress"
-                                                        id="kavaAddress"
-                                                        value={this.state.kavaAddress}
+                                                        name="terraAddress"
+                                                        id="terraAddress"
+                                                        value={this.state.terraAddress}
                                                         onChange={this.handleAddressChange}
                                                         placeholder="Enter Address"
                                                         required
@@ -347,13 +350,13 @@ class KavaParticipate extends Component {
 
                                                 <div className="inputstaking bottom">
                                                     <h5>Total Staked</h5>
-                                                    <h5 className="value">{this.state.totalStaked} KAVA</h5>
+                                                    <h5 className="value">{this.state.totalStaked} TERRA</h5>
                                                 </div>
 
 
                                                 <div className="inputstaking bottom">
                                                     <h5>Total Staked on AUDIT.one</h5>
-                                                    <h5 className="value">{this.state.statkedOnAudit} KAVA</h5>
+                                                    <h5 className="value">{this.state.statkedOnAudit} TERRA</h5>
                                                 </div>
 
                                                 <div className="inputstaking bottom">
@@ -374,7 +377,7 @@ class KavaParticipate extends Component {
                                         </div>
                                         <div className="body-section">
                                             <div className="range-data">
-                                                <p>How many KAVAs would you like to stake?</p>
+                                                <p>How many TERRAs would you like to stake?</p>
 
                                                 <input
                                                     type="text"
@@ -412,7 +415,14 @@ class KavaParticipate extends Component {
 
                                                 </div>
                                             </div>
-                                          
+                                            <div className="participate-buttons">
+                                                <div className="btn-magic-txs">
+                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
+                                                </div>
+                                                <div className="btn-delegate">
+                                                    <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -421,13 +431,135 @@ class KavaParticipate extends Component {
 
                         </div>
                     </div>
-                    
+                    <Modal
+                        show={this.state.tcShow}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
+                            </p>
+                            <div className="button-section">
+                                <button className="btn accept" onClick={this.handleTerms} >Accept</button>
+                                <button className="btn decline" onClick={this.handleCancelTerms} >Decline</button>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                    <Modal
+                        size="lg"
+                        show={this.state.show}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
+                                <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                                <p className="info">Please choose a method to send the magic transaction</p>
+                                <div className="row wallet-method">
+                                    <div className="section-magic-address">
+                                        <p><b>Designated address: </b>terra1cznza0q0ga4d4vtfrx8q9fmw3llkecg4szpdez</p>
+                                        <CopyToClipboard onCopy={this.onCopy} text={'terra1cznza0q0ga4d4vtfrx8q9fmw3llkecg4szpdez'}>
+                                            <img src={copy} alt="copy" className="copy-icon" />
+                                        </CopyToClipboard>
+                                        <section className="copy-result">
+                                            {this.state.copyValue ? <span>Copied.</span> : null}
+                                        </section>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="cli-box" onClick={this.handleMagicTxnClieModel}>
+                                            <div className="card-inner">
+                                                <p>Continue with CLI</p>
+                                                <Icon viewClass="social_icon_imgg" icon="arrow-right" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p className="continue-text">Or choose wallet to continue</p>
+
+                                <Wallets />
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
+                                <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                                <div className="row wallet-method">
+                                    <div className="section-validator-address">
+                                        <p> <b>audit.one: </b>terravaloper1n7pkcal0jkp0ac9r338qp9cm5x6cakfnremtnt</p>
+                                        <CopyToClipboard onCopy={this.onCopy} text={'terravaloper1n7pkcal0jkp0ac9r338qp9cm5x6cakfnremtnt'}>
+                                            <img src={copy} alt="copy" className="copy-icon" />
+                                        </CopyToClipboard>
+                                        <section className="copy-result">
+                                            {this.state.copyValue ? <span>Copied.</span> : null}
+                                        </section>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="cli-box" onClick={this.handleDelegateClieModel}>
+                                            <div className="card-inner">
+                                                <p>Continue with CLI</p>
+                                                <Icon viewClass="social_icon_imgg" icon="arrow-right" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p className="continue-text">Or choose wallet to continue</p>
+                                <Wallets />
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showMagicTxnClieModel}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>terracli tx send [from_key_or_address] terra1cznza0q0ga4d4vtfrx8q9fmw3llkecg4szpdez 1000uluna --chain-id columbus-4 --memo [ERC-Address] --node https://node1.rpc.terra.persistence.one:443</p>
+                                </div>
+
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateCliModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>terracli tx staking delegate terravaloper1n7pkcal0jkp0ac9r338qp9cm5x6cakfnremtnt [amount] --from [from_key_or_address] --chain-id columbus-4 --node https://node1.rpc.terra.persistence.one:443</p>
+                                </div>
+
+                            </div>
+                        </Modal.Body>
+                    </Modal>
                 </section>
             </div>
         );
     }
 }
 
-export default withRouter(KavaParticipate);
+export default withRouter(TerraParticipate);
 
 

@@ -8,7 +8,7 @@ import ScrollToTop from '../components/scrollToTop';
 import logo from '../../assets/logo.png'
 import rightarrow from '../../assets/right-arrow.svg'
 // import NavDropdown from 'react-bootstrap/NavDropdown'
-import KavaWallets from '../components/kavaWallet'
+import Wallets from '../components/wallets'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import copy from '../../assets/copy.svg'
 import { Modal } from "react-bootstrap";
@@ -85,7 +85,7 @@ class Header extends Component {
                     <Alert dismissible onClose={() => this.setState({showAlert:false})} >
                         <NavLink to="stakedrop">
 					<p className="other-pages" onClick={this.onClickTopBar}>
-                    Grab the chance to earn $250,000 worth of $XPRT tokens. Kava campaign is live. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
+                    Grab the chance to earn $250,000 worth of $XPRT tokens. Terra StakeDrop Campaign starts on December 19. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
                     </NavLink>
                     <p className="stake-drop stake-drop-banner" onClick={() => this.setState({modalShow:true})}>
@@ -136,8 +136,8 @@ class Header extends Component {
                                 <h4 className="title">Available Methods to Participate in Stakedrop</h4>
                                 <div className="row wallet-method">
                                     <div className="section-validator-address">
-                                        <p> <b>audit.one: </b>kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev</p>
-                                        <CopyToClipboard onCopy={this.onCopy} text={'kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev'}>
+                                        <p> <b>audit.one: </b>terravaloper1n7pkcal0jkp0ac9r338qp9cm5x6cakfnremtnt</p>
+                                        <CopyToClipboard onCopy={this.onCopy} text={'terravaloper1n7pkcal0jkp0ac9r338qp9cm5x6cakfnremtnt'}>
                                             <img src={copy} alt="copy" className="copy-icon" />
                                         </CopyToClipboard>
                                         <section className="copy-result">
@@ -154,7 +154,7 @@ class Header extends Component {
                                     </div>
                                 </div>
                                 <p className="continue-text">Or choose wallet to continue</p>
-                                <KavaWallets />
+                                <Wallets />
                             </div>
                     </Modal.Body>
                 </Modal>
@@ -166,11 +166,11 @@ class Header extends Component {
                         centered
                     >
                         <Modal.Body>
-                            <div className="cli-section">
+                        <div className="cli-section">
                                 <h3>CLI Method</h3>
                                 <p className="info">Awesome, everything that you need is below</p>
                                 <div className="cli-address">
-                                    <p>kvcli tx staking delegate kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev [amount] --from [from_key_or_address] --chain-id kava-4 --node https://node1.rpc.kava.persistence.one:443</p>
+                                    <p>terracli tx staking delegate terravaloper1n7pkcal0jkp0ac9r338qp9cm5x6cakfnremtnt [amount] --from [from_key_or_address] --chain-id columbus-4 --node https://node1.rpc.terra.persistence.one:443</p>
                                 </div>
 
                             </div>
