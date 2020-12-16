@@ -30,6 +30,7 @@ jobs:
           REACT_APP_API_KEY: ${{ secrets.STAG_API_KEY }}
           REACT_APP_KAVA_API_KEY: ${{ secrets.KAVA_STAKEDROP_STATUS }}
           REACT_APP_GA_ID: ${{ secrets.GOOGLE_ANALYTICS }}
+          REACT_APP_TERRA_API_KEY: ${{ secrets.TERRA_STAKEDROP_STATUS }}
       - name: zip up the build
         uses: montudor/action-zip@v0.1.0
         with:
