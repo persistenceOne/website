@@ -223,7 +223,7 @@ class TerraParticipate extends Component {
                                 <div className="col-lg-4 section-campaign">
                                     <div className="row campaign-maintwo">
                                         <div className="col-lg-12  header-section">
-                                            <h5 className="heading-participate">Terra Stake Drop Campaign</h5>
+                                            <h5 className="heading-participate">Terra StakeDrop Campaign</h5>
                                         </div>
                                         <div className="row body-section">
                                             <div className="col-lg-12 card-content campaign-card">
@@ -272,7 +272,7 @@ class TerraParticipate extends Component {
                                                 <div className="participate-cardtwo">
                                                     <h6>Time left:</h6>
                                                     <h1 className="countdown"><Countdown
-                                                        date={1610541000000}
+                                                        date={1610521200000}
                                                         autoStart={true}
                                                     /></h1>
                                                 </div>
@@ -296,7 +296,7 @@ class TerraParticipate extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12 terra-tutorial-section">
-                                        <p className="">Terra StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d" target="_blank" rel="noopener noreferrer">How TERRA Holders Can Participate in StakeDrop? </a></p>
+                                        <p className="">Luna StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d" target="_blank" rel="noopener noreferrer">How LUNA Holders Can Participate in StakeDrop? </a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
@@ -455,7 +455,7 @@ class TerraParticipate extends Component {
                     >
                         <Modal.Body>
                             <div className="staking-wallet-section">
-                                <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                                <h4 className="title">Available Methods to Participate in StakeDrop</h4>
                                 <p className="info">Please choose a method to send the magic transaction</p>
                                 <div className="row wallet-method">
                                     <div className="section-magic-address">
@@ -492,7 +492,7 @@ class TerraParticipate extends Component {
                     >
                         <Modal.Body>
                             <div className="staking-wallet-section">
-                                <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                                <h4 className="title">Available Methods to Participate in StakeDrop</h4>
                                 <div className="row wallet-method">
                                     <div className="section-validator-address">
                                         <p> <b>audit.one: </b>terravaloper1n7pkcal0jkp0ac9r338qp9cm5x6cakfnremtnt</p>

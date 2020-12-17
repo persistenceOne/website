@@ -32,7 +32,7 @@ componentDidMount() {
             <Route path="/team" component={Team} />
             <Route path="/roadmap" component={Roadmap} />
             <Route path="/app" component={AppContainer} />
-            <Route path="/stakedrop" component={stakedrop} />
+            <Route path="/StakeDrop" component={stakedrop} />
             <Route path="/StakeDropCosmos" component={participate} />
             <Route path="/StakeDropKava" component={KavaParticipate} />
             <Route path="/StakeDropTerra" component={TerraParticipate} />

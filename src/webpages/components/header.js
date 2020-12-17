@@ -114,7 +114,7 @@ class Header extends Component {
                                             <div className="header-buttons">
                                                 <a href="https://explorer.persistence.one/" className="button-explorer" rel="noopener noreferrer" target="_blank">Explorer</a>
 
-                                                <Link className="button-app" to="stakedrop">Stakedrop</Link>
+                                                <Link className="button-app" to="StakeDrop">StakeDrop</Link>
 
                                             </div>
                                         </li>
