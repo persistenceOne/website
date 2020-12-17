@@ -223,7 +223,7 @@ class KavaParticipate extends Component {
                                 <div className="col-lg-4 section-campaign">
                                     <div className="row campaign-maintwo">
                                         <div className="col-lg-12  header-section">
-                                            <h5 className="heading-participate">Kava Stake Drop Campaign</h5>
+                                            <h5 className="heading-participate">Kava StakeDrop Campaign</h5>
                                         </div>
                                         <div className="row body-section">
                                             <div className="col-lg-12 card-content campaign-card">
@@ -272,7 +272,7 @@ class KavaParticipate extends Component {
                                                 <div className="participate-cardtwo">
                                                     <h6>Time left:</h6>
                                                     <h1 className="countdown"><Countdown
-                                                        date={1608730630000}
+                                                        date={1608748199000}
                                                         autoStart={true}
                                                     /></h1>
                                                 </div>
@@ -326,7 +326,7 @@ class KavaParticipate extends Component {
                                                     ""
                                                 }
                                                 {this.state.notParticipantAddress ?
-                                                    <h6 className="valid-add">Not a stakedrop participant address, please send the magic transaction</h6>
+                                                    <h6 className="valid-add">Not a StakeDrop participant address, please send the magic transaction</h6>
                                                     :
                                                     ""
                                                 }
@@ -455,7 +455,7 @@ class KavaParticipate extends Component {
                     >
                         <Modal.Body>
                             <div className="staking-wallet-section">
-                                <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                                <h4 className="title">Available Methods to Participate in StakeDrop</h4>
                                 <p className="info">Please choose a method to send the magic transaction</p>
                                 <div className="row wallet-method">
                                     <div className="section-magic-address">
@@ -492,7 +492,7 @@ class KavaParticipate extends Component {
                     >
                         <Modal.Body>
                             <div className="staking-wallet-section">
-                                <h4 className="title">Available Methods to Participate in Stakedrop</h4>
+                                <h4 className="title">Available Methods to Participate in StakeDrop</h4>
                                 <div className="row wallet-method">
                                     <div className="section-validator-address">
                                         <p> <b>audit.one: </b>kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev</p>

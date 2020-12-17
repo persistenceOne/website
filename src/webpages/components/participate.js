@@ -215,7 +215,7 @@ class Participate extends Component {
                             <div className="col-lg-4 section-campaign">
                                 <div className="row campaign-maintwo">
                                     <div className="col-lg-12  header-section">
-                                        <h5 className="heading-participate">Cosmos Stake Drop Campaign</h5>
+                                        <h5 className="heading-participate">Cosmos StakeDrop Campaign</h5>
                                     </div>
                                     <div className="row body-section">
                                         <div className="col-lg-12 card-content campaign-card">
@@ -315,7 +315,7 @@ class Participate extends Component {
                                                 ""
                                             }
                                               {this.state.notParticipantAddress ?
-                                                <h6 className="valid-add">Not a stakedrop participant address, please send the magic transaction</h6>
+                                                <h6 className="valid-add">Not a StakeDrop participant address, please send the magic transaction</h6>
                                                 :
                                                 ""
                                             }
