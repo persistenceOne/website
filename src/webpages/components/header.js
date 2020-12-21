@@ -85,7 +85,7 @@ class Header extends Component {
                     <Alert dismissible onClose={() => this.setState({showAlert:false})} >
                         <NavLink to="stakedrop">
 					<p className="other-pages" onClick={this.onClickTopBar}>
-                    Grab the chance to earn $250,000 worth of $XPRT tokens. Terra StakeDrop Campaign starts on December 19. Participate Now! &emsp;<img src={rightarrow} alt="arrow"/>
+                    Grab the chance to earn $250,000 worth of $XPRT tokens. Terra StakeDrop Campaign is now live. Participate now! &emsp;<img src={rightarrow} alt="arrow"/>
                     </p>
                     </NavLink>
                     <p className="stake-drop stake-drop-banner" onClick={() => this.setState({modalShow:true})}>
