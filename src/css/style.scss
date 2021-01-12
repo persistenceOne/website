@@ -214,6 +214,31 @@ input:focus {
 				}
 			}
 		}
+		.matic-tutorial-section {
+			background-color: #231f20;
+			background-image: url(../assets/matic-tutorial-bg.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0% 1px;
+			padding: 20px;
+			margin-bottom: 15px;
+
+			p {
+				margin: 0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #ffffff;
+
+				a {
+					text-decoration: underline;
+
+					&:hover {
+						color: #ffffff;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
 		.kava-tutorial-section {
 			background-color: #231f20;
 			background-image: url(../assets/kava-tutorial-bg.png);
@@ -1154,7 +1179,6 @@ input:focus {
 				color: #000000;
 				font-weight: 500;
 				margin-bottom: 0;
-				
 			}
 			a {
 				color: #007bff;
@@ -1274,7 +1298,7 @@ input:focus {
 		.official-announce {
 			text-align: center;
 			padding: 0px 0;
-    		margin-top: 15px;
+			margin-top: 15px;
 
 			a {
 				font-weight: 500;
@@ -3885,9 +3909,12 @@ input:focus {
 			}
 		}
 	}
+	.slider-watermark {
+		display: none;
+	}
 
 	.slider-title2 {
-		margin-top: 0;
+		margin-top: -0px;
 
 		.carousel-caption {
 			padding-top: 0;
@@ -4519,13 +4546,38 @@ input:focus {
 		text-align: center;
 		color: #838c9f;
 	}
-
+	.staking-instructions {
+		
+		span.addressmatic {
+			color: #e50913;
+			display: inline-block;
+			.copy-icon {
+				width: 15px;
+				height: 15px;
+				cursor: pointer;
+				margin-left: 0px;
+			}
+		}
+		.continue-text {
+			font-weight: 600;
+			font-size: 14px;
+			text-align: center;
+			color: #231f20;
+			margin-top: 10px;
+			a {
+				color: #e50913;
+			}
+		}
+	}
 	.continue-text {
 		font-weight: 600;
 		font-size: 14px;
 		text-align: center;
 		color: #231f20;
 		margin-top: 20px;
+		a {
+			color: #e50913;
+		}
 	}
 
 	.wallet-method {
@@ -4561,6 +4613,8 @@ input:focus {
 
 	.row {
 		margin-bottom: 10px;
+		text-align: center;
+		display: inline-flex;
 	}
 
 	.wallet-card {

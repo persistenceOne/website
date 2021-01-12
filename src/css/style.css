@@ -229,6 +229,32 @@ input:focus {
   text-decoration: underline;
 }
 
+.participate-stakedrop .staking-second-section .matic-tutorial-section {
+  background-color: #231f20;
+  background-image: url(../assets/matic-tutorial-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 1px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.participate-stakedrop .staking-second-section .matic-tutorial-section p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.participate-stakedrop .staking-second-section .matic-tutorial-section p a {
+  text-decoration: underline;
+}
+
+.participate-stakedrop .staking-second-section .matic-tutorial-section p a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .participate-stakedrop .staking-second-section .kava-tutorial-section {
   background-color: #231f20;
   background-image: url(../assets/kava-tutorial-bg.png);
@@ -4128,8 +4154,11 @@ input:focus {
   .slider-title .carousel-caption p {
     margin-bottom: 0;
   }
+  .slider-watermark {
+    display: none;
+  }
   .slider-title2 {
-    margin-top: 0;
+    margin-top: -0px;
   }
   .slider-title2 .carousel-caption {
     padding-top: 0;
@@ -4643,12 +4672,40 @@ input:focus {
   color: #838c9f;
 }
 
+.staking-wallet-section .staking-instructions span.addressmatic {
+  color: #e50913;
+  display: inline-block;
+}
+
+.staking-wallet-section .staking-instructions span.addressmatic .copy-icon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.staking-wallet-section .staking-instructions .continue-text {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #231f20;
+  margin-top: 10px;
+}
+
+.staking-wallet-section .staking-instructions .continue-text a {
+  color: #e50913;
+}
+
 .staking-wallet-section .continue-text {
   font-weight: 600;
   font-size: 14px;
   text-align: center;
   color: #231f20;
   margin-top: 20px;
+}
+
+.staking-wallet-section .continue-text a {
+  color: #e50913;
 }
 
 .staking-wallet-section .wallet-method {
@@ -4695,6 +4752,10 @@ input:focus {
 
 .staking-wallet-section .row {
   margin-bottom: 10px;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .staking-wallet-section .wallet-card {

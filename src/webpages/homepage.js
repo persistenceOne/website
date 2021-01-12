@@ -163,18 +163,18 @@ class homePage extends Component {
                     <h3>Highlights</h3>
                     <div className="container">
                         <div className="row">
-                            <a href="https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
+                            <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
                                 <div className="row blog-section">
                                     <div className="col-lg-4">
                                         <Card style={{ width: '100%' }}>
-                                            <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*P6cVFkoq-AmWBSQBQSvwrA.jpeg" />
+                                            <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*Wys_KVVJr99svVy-jGMYag.png" />
                                         </Card>
                                     </div>
                                     <div className="col-lg-8 blog-head">
                                         <Card.Body>
-                                            <Card.Title>Terra (LUNA) StakeDrop Begins December 19th! $25,000 Worth of XPRT will be Distributed to LUNA Stakers!</Card.Title>
+                                            <Card.Title>$50,000 Worth of XPRT will be Distributed to MATIC Stakers During the Matic StakeDrop, Beginning January 16th!</Card.Title>
 
-                                            <p className="blog-medium">15 DEC 2020</p>
+                                            <p className="blog-medium">11 JAN 2021</p>
                                             <img className="blog-year" src={medium} alt="Medium" />
                                         </Card.Body>
                                     </div>
@@ -182,12 +182,23 @@ class homePage extends Component {
                             </div></a>
                             <div className="col-lg-12 blog-articles">
                                 <div className="row">
+                                <div className="col-lg-4">
+                                        <a href="https://medium.com/persistence-blog/our-journey-toward-a-new-financial-paradigm-persistence-200e7efafa81" target="_blank" rel="noopener noreferrer">
+                                            <Card style={{ width: '100%' }}>
+                                                <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*GiRBfno3sWdPEdLaeqHpQQ.png" />
+                                                <Card.Body>
+                                                    <Card.Title title="Interchain Foundation awards Persistence One a grant to develop Interchain Standards for NFTs and Metadata">Interchain Foundation awards Persistence One a grant to develop Interchain Standards for NFTs and Metadata</Card.Title>
+                                                    <p className="blog-medium">8 JAN 2021</p>
+                                                    <img className="blog-year" src={medium} alt="Medium" />
+                                                </Card.Body>
+                                            </Card></a>
+                                    </div>
                                     <div className="col-lg-4">
                                         <a href="https://medium.com/persistence-blog/persistence-one-first-to-implement-interchain-native-nft-transfer-bags-icf-grant-cdb6c3856c25" target="_blank" rel="noopener noreferrer">
                                             <Card style={{ width: '100%' }}>
                                                 <Card.Img variant="top" src="https://miro.medium.com/max/1000/0*wa22sTXP7YDMj2k8" />
                                                 <Card.Body>
-                                                    <Card.Title title="Interchain Foundation awards Persistence One a grant to develop Interchain Standards for NFTs and Metadata">Interchain Foundation awards Persistence One a grant to develop Interchain Standards for NFTs and Metadata</Card.Title>
+                                                    <Card.Title title="Our Journey Toward a New Financial Paradigm — Persistence">Our Journey Toward a New Financial Paradigm — Persistence</Card.Title>
                                                     <p className="blog-medium">31 AUG 2020</p>
                                                     <img className="blog-year" src={medium} alt="Medium" />
                                                 </Card.Body>
@@ -204,17 +215,7 @@ class homePage extends Component {
                                                 </Card.Body>
                                             </Card></a>
                                     </div>
-                                    <div className="col-lg-4">
-                                        <a href="https://blog.cosmos.network/leading-interoperability-protocol-cosmos-network-partners-with-persistence-one-to-launch-hackatom-d06c1a234885" target="_blank" rel="noopener noreferrer">
-                                            <Card style={{ width: '100%' }}>
-                                                <Card.Img variant="top" src="https://miro.medium.com/max/1000/1*B19-vbybSwSoc2qTzS73-g.png" />
-                                                <Card.Body>
-                                                    <Card.Title title="Persistence’s focus on Open Finance — Asset-Based Lending">Cosmos Network Partners with Persistence One to launch ‘HackAtom India: Build the Cosmos’</Card.Title>
-                                                    <p className="blog-medium">4 SEP 2020</p>
-                                                    <img className="blog-year" src={medium} alt="Medium" />
-                                                </Card.Body>
-                                            </Card></a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

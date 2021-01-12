@@ -12,6 +12,7 @@ import stakedrop from './webpages/components/stakedrop';
 import participate from './webpages/components/participate';
 import KavaParticipate from './webpages/components/kavaParticipate';
 import TerraParticipate from './webpages/components/terraParticipate';
+import MaticParticipate from './webpages/components/maticParticipate';
 import Footer from './webpages/components/footer';
 // import InfoPdf from './webpages/components/pdf';
 
@@ -36,6 +37,7 @@ componentDidMount() {
             <Route path="/StakeDropCosmos" component={participate} />
             <Route path="/StakeDropKava" component={KavaParticipate} />
             <Route path="/StakeDropTerra" component={TerraParticipate} />
+            <Route path="/StakeDropMatic" component={MaticParticipate} />
             
       </Switch>)
     
