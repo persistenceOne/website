@@ -91,8 +91,8 @@ class MaticParticipate extends Component {
         axios.get(Statusurl).then((statusResponse) => {
 
             const totalDistributed = 200000 - (statusResponse.data.totalDistributed / 1000000)
-            const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation);
-            const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
+            const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation / 10 ** 18);
+            const worldAuditDelegations = (statusResponse.data.worldAuditDelegation / 10 ** 18);
             const worldGlobalDelegation = (statusResponse.data.worldGlobalDelegation / 10 ** 18);
             this.setState({ totalDistributedInt: totalDistributed })
             this.setState({ worldGlobalDelegation: (Math.round(worldGlobalDelegation * 100) / 100).toLocaleString() })
