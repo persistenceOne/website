@@ -4,7 +4,7 @@ import ReactGa from 'react-ga';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { getStatusURL, getKavaStatusURL, getTerraStatusURL } from "../../constants/url";
+import { getStatusURL, getKavaStatusURL, getTerraStatusURL, getMaticStatusURL } from "../../constants/url";
 import pstakevideo from '../../assets/PStakedrop.mp4';
 import Accordion from '../components/accordion'
 import Icon from '../icon';
@@ -40,68 +40,76 @@ class stakedrop extends React.Component {
             action: 'Clicked on Participate'
         })
     }
-    onClickView = () => {
+    onClickViewCosmos = () => {
         ReactGa.event({
             category: 'View',
-            action: 'Clicked on View'
+            action: 'Clicked on View Cosmos'
+        })
+    }
+    onClickViewKava = () => {
+        ReactGa.event({
+            category: 'View',
+            action: 'Clicked on View Kava'
+        })
+    }
+    onClickViewTerra = () => {
+        ReactGa.event({
+            category: 'View',
+            action: 'Clicked on View Terra'
         })
     }
     componentDidMount = () => {
         ReactGa.pageview(window.location.pathname + window.location.search);
-        console.log(window.location.pathname)
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 200000 - (statusResponse.data.totalDistributed / 1000000)
-            const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
             const totalCosmosStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
-            const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
             const totalCosmosDropped = (Math.round((200000 - totalDistributed) * 100) / 100)
             this.setState({ totalDistributedInt: totalDistributed })
             this.setState({ totalCosmosStakeDropGlobalDelegation: (Math.round(totalCosmosStakeDropGlobalDelegation * 100) / 100).toLocaleString() })
-            this.setState({ globalTotalStakedInt: worldTotalDelegations })
-            this.setState({ globalAuditStakedInt: worldAuditDelegations })
             this.setState({ totalDistributed: totalDistributed.toLocaleString() })
             this.setState({ totalCosmosDropped: totalCosmosDropped })
-            this.setState({ globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString() })
-            this.setState({ globalAuditStaked: (worldAuditDelegations / 1000000).toLocaleString() })
+           
 
             const Statusterraurl = getTerraStatusURL();
             axios.get(Statusterraurl).then((statusResponse) => {
                 const totalDistributed = 100000 - (statusResponse.data.totalDistributed / 1000000)
-                const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
                 const totalTerraStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
-                const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
                 const totalTerraDropped = (Math.round((100000 - totalDistributed) * 100) / 100)
                 this.setState({ totalDistributedInt: totalDistributed })
                 this.setState({ totalTerraStakeDropGlobalDelegation: (Math.round(totalTerraStakeDropGlobalDelegation * 100) / 100).toLocaleString() })
-                this.setState({ globalTotalStakedInt: worldTotalDelegations })
-                this.setState({ globalAuditStakedInt: worldAuditDelegations })
                 this.setState({ totalDistributed: totalDistributed.toLocaleString() })
                 this.setState({ totalTerraDropped: totalTerraDropped })
-                this.setState({ globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString() })
-                this.setState({ globalAuditStaked: (worldAuditDelegations / 1000000).toLocaleString() })
-
-
+              
 
                 const Statuskavaurl = getKavaStatusURL();
                 axios.get(Statuskavaurl).then((statusResponse) => {
                     const totalDistributed = 100000 - (statusResponse.data.totalDistributed / 1000000)
-                    const worldTotalDelegations = (statusResponse.data.worldGlobalDelegation);
                     const totalKavaStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 1000000);
-                    const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
                     const totalKavaDropped = (Math.round((100000 - totalDistributed) * 100) / 100)
                     this.setState({ totalDistributedInt: totalDistributed })
                     this.setState({ totalKavaStakeDropGlobalDelegation: (Math.round(totalKavaStakeDropGlobalDelegation * 100) / 100).toLocaleString() })
-                    this.setState({ globalTotalStakedInt: worldTotalDelegations })
-                    this.setState({ globalAuditStakedInt: worldAuditDelegations })
                     this.setState({ totalDistributed: totalDistributed.toLocaleString() })
                     this.setState({ totalKavaDropped: totalKavaDropped })
-                    this.setState({ globalTotalStaked: (worldTotalDelegations / 1000000).toLocaleString() })
-                    this.setState({ globalAuditStaked: (worldAuditDelegations / 1000000).toLocaleString() })
-                    const totaldrop = (totalCosmosDropped + totalKavaDropped + totalTerraDropped).toLocaleString();
-                    const totalStakeDropGlobalDelegation = totalCosmosStakeDropGlobalDelegation + totalKavaStakeDropGlobalDelegation + totalTerraStakeDropGlobalDelegation;
+                  
+                   
+                    const Statusmaticurl = getMaticStatusURL();
+                    axios.get(Statusmaticurl).then((statusResponse) => {
+                    const totalDistributed = 200000 - (statusResponse.data.totalDistributed / 1000000)
+                    const totalMaticStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 10**18);
+                    const totalMaticDropped = (Math.round((200000 - totalDistributed) * 100) / 100)
+                    this.setState({ totalDistributedInt: totalDistributed })
+                    this.setState({ totalMaticStakeDropGlobalDelegation: (Math.round(totalMaticStakeDropGlobalDelegation * 100) / 100).toLocaleString() })
+                    this.setState({ totalDistributed: totalDistributed.toLocaleString() })
+                    this.setState({ totalMaticDropped: totalMaticDropped })
+                    const totaldrop = (totalCosmosDropped + totalKavaDropped + totalTerraDropped + totalMaticDropped).toLocaleString();
+                    const totalStakeDropGlobalDelegation = totalCosmosStakeDropGlobalDelegation + totalKavaStakeDropGlobalDelegation + totalTerraStakeDropGlobalDelegation + totalMaticStakeDropGlobalDelegation;
                     this.setState({ totalStakeDropGlobalDelegation: (totalStakeDropGlobalDelegation).toLocaleString() })
                     this.setState({ totaldrop: totaldrop })
+                   
+                   
+
+                })
 
                 })
 
@@ -210,7 +218,7 @@ class stakedrop extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom" /><span><h6>Completed!</h6>
                                                     {/* <button onClick={this.handleModel}>Participate</button> */}
-                                                    <Link onClick={this.onClickView} className="viewcampaign" to="/StakeDropCosmos" >View</Link></span>
+                                                    <Link onClick={this.onClickViewCosmos} className="viewcampaign" to="/StakeDropCosmos" >View</Link></span>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_atom_cosmos}</h4>
@@ -228,10 +236,11 @@ class stakedrop extends React.Component {
 
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
-                                                <div className="icon-div">
-                                                    <img src={kava_icon} alt="atom" />
-                                                    <Link onClick={this.onClickParticipate}  to="/StakeDropKava" >Participate</Link>
+                                            <div className="icon-div">
+                                                    <img src={kava_icon} alt="atom" /><span><h6>Completed!</h6>
+                                                    <Link onClick={this.onClickViewKava} className="viewcampaign" to="/StakeDropKava" >View</Link></span>
                                                 </div>
+                                              
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_kava_labs}</h4>
                                                     <p>100,000 XPRT</p>
@@ -248,9 +257,10 @@ class stakedrop extends React.Component {
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
-                                                    <img src={luna_icon} alt="atom" />
-                                                    <Link onClick={this.onClickParticipate} to="/StakeDropTerra" >{language[lang].stake_drop_participants}</Link>
-
+                                                <div className="icon-div">
+                                                    <img src={luna_icon} alt="atom" /><span><h6>Completed!</h6>
+                                                    <Link onClick={this.onClickViewTerra} className="viewcampaign" to="/StakeDropTerra" >View</Link></span>
+                                                </div>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_luna_terra}</h4>
@@ -259,9 +269,28 @@ class stakedrop extends React.Component {
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_luna_terra}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration} 25 Days</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;19th December 2020</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;13th January 2021</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;19th of December 2020</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;13th of January 2021</p>
                                                     <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>10.00%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6 col-lg-4 campaign-sec">
+                                            <div className="col-md-12 campaign-card">
+                                                <div className="icon-div">
+                                                    <img src={mat_icon} alt="atom" />
+                                                    <Link onClick={this.onClickParticipate} to="/StakeDropMatic" >{language[lang].stake_drop_participants}</Link>
+                                                </div>
+                                                <div className="about-campaign">
+                                                    <h4>{language[lang].stake_drop_matic_network}</h4>
+                                                    <p>200,000 XPRT</p>
+                                                </div>
+                                                <div className="stake-to">
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_matic}</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration} 45 Days</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp; 16th of January 2021</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;2nd of March 2021</p>
+                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>20.00%</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -305,25 +334,7 @@ class stakedrop extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-md-6 col-lg-4 campaign-sec">
-                                            <div className="col-md-12 campaign-card">
-                                                <div className="icon-div">
-                                                    <img src={mat_icon} alt="atom" />
-                                                    <button>Coming Soon</button>
-                                                </div>
-                                                <div className="about-campaign">
-                                                    <h4>{language[lang].stake_drop_matic_network}</h4>
-                                                    <p>200,000 XPRT</p>
-                                                </div>
-                                                <div className="stake-to">
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_matic}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration}</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp;--</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;--</p>
-                                                    <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>20.00%</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
@@ -353,25 +364,22 @@ class stakedrop extends React.Component {
                                                         <p>Mechanism Paper</p>
 
                                                     </a>
-                                                    <a className="icon-div mechanism-btn" href="https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d" target="_blank" rel="noopener noreferrer">
+                                                    <a className="icon-div mechanism-btn" href="www.google.com" target="_blank" rel="noopener noreferrer">
                                                         <img src={mechanism} alt="Tutorial" />
-                                                        <p>Terra Tutorial</p>
+                                                        <p>Matic Tutorial</p>
                                                     </a>
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-lg-6 tutorial-links">
                                                         <div className="link-section">
-                                                        <p>English blogpost:</p>
-                                                        <a href="https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686</a>
+                                                        <p>Matic StakeDrop Blog [English]</p>
+                                                        <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686</a>
                                                         </div>
                                                     </div>
-                                                    
-                                                
-            
                                                     <div className="col-lg-6 tutorial-links">
                                                         <div className="link-section">
-                                                        <p>Korean blogpost:</p>
-                                                        <a href="https://medium.com/persistence-blog/12%EC%9B%94-19%EC%9D%BC-terra-luna-%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EB%93%9C%EB%A1%AD%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%A9%EB%8B%88%EB%8B%A4-25-000-%EC%83%81%EB%8B%B9%EC%9D%98-xprt%EA%B0%80-luna-staker-%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%BB%A4-%EB%93%A4%EC%97%90%EA%B2%8C-%EC%A7%80%EA%B8%89%EB%90%A0-%EC%98%88%EC%A0%95%EC%9E%85%EB%8B%88%EB%8B%A4-daddf55594f7" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/12%EC%9B%94-19%EC%9D%BC-terra-luna-%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EB%93%9C%EB%A1%AD%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%A9%EB%8B%88%EB%8B%A4-25-000-%EC%83%81%EB%8B%B9%EC%9D%98-xprt%EA%B0%80-luna-staker-%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%BB%A4-%EB%93%A4%EC%97%90%EA%B2%8C-%EC%A7%80%EA%B8%89%EB%90%A0-%EC%98%88%EC%A0%95%EC%9E%85%EB%8B%88%EB%8B%A4-daddf55594f7</a>
+                                                        <p>Matic StakeDrop Blog [Mandarin]</p>
+                                                        <a href="/stakedropmandarin.pdf" target="_blank" rel="noopener noreferrer">Check here</a>
                                                         </div>
                                                     </div>
                                                 </div>
