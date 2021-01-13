@@ -362,7 +362,7 @@ class stakedrop extends React.Component {
                                                         <p>Mechanism Paper</p>
 
                                                     </a>
-                                                    <a className="icon-div mechanism-btn" href="www.google.com" target="_blank" rel="noopener noreferrer">
+                                                    <a className="icon-div mechanism-btn" href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" target="_blank" rel="noopener noreferrer">
                                                         <img src={mechanism} alt="Tutorial" />
                                                         <p>Matic Tutorial</p>
                                                     </a>

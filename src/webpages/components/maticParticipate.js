@@ -294,7 +294,7 @@ class MaticParticipate extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12 matic-tutorial-section">
-                                        <p className="">Matic StakeDrop Tutorial: <a href="www.google.com" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
+                                        <p className="">Matic StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
