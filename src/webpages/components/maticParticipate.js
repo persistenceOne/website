@@ -91,16 +91,16 @@ class MaticParticipate extends Component {
         axios.get(Statusurl).then((statusResponse) => {
 
             const totalDistributed = 200000 - (statusResponse.data.totalDistributed / 1000000)
-            const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation / 10 ** 18);
-            const worldAuditDelegations = (statusResponse.data.worldAuditDelegation / 10 ** 18);
-            const worldGlobalDelegation = (statusResponse.data.worldGlobalDelegation / 10 ** 18);
+            const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation);
+            const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
+            const worldGlobalDelegation = (statusResponse.data.worldGlobalDelegation);
             this.setState({ totalDistributedInt: totalDistributed })
             this.setState({ worldGlobalDelegation: (Math.round(worldGlobalDelegation * 100) / 100).toLocaleString() })
             this.setState({ globalTotalStakedInt: worldTotalDelegations })
             this.setState({ globalAuditStakedInt: worldAuditDelegations })
             this.setState({ totalDistributed: totalDistributed.toLocaleString() })
-            this.setState({ globalTotalStaked: (worldTotalDelegations / 10 ** 18).toLocaleString() })
-            this.setState({ globalAuditStaked: (worldAuditDelegations / 10 ** 18).toLocaleString() })
+            this.setState({ globalTotalStaked: (worldTotalDelegations).toLocaleString() })
+            this.setState({ globalAuditStaked: (worldAuditDelegations).toLocaleString() })
 
 
         })
@@ -124,7 +124,7 @@ class MaticParticipate extends Component {
             this.setState({ delegateAudit: delegateAudit })
             this.setState({ delegateOther: delegateOther })
         } else {
-            var umaticToDelegate = value * 1000000
+            var umaticToDelegate = value
             var delegateAudit = ((0.25 * umaticToDelegate / (this.state.globalAuditStakedInt + umaticToDelegate) +
                 (0.75 * umaticToDelegate) / (this.state.globalTotalStakedInt + umaticToDelegate)) * this.state.totalDistributedInt);
             var delegateOther = ((0.75 * umaticToDelegate) / (this.state.globalTotalStakedInt + umaticToDelegate)) * this.state.totalDistributedInt;
@@ -148,7 +148,7 @@ class MaticParticipate extends Component {
     }
     handleOnChange = (value) => {
         this.setState({ volume: value })
-        var umaticToDelegate = value * 1000000
+        var umaticToDelegate = value
         var delegateAudit = ((0.25 * umaticToDelegate / (this.state.globalAuditStakedInt + umaticToDelegate) +
             (0.75 * umaticToDelegate) / (this.state.globalTotalStakedInt + umaticToDelegate)) * this.state.totalDistributedInt);
         var delegateOther = ((0.75 * umaticToDelegate) / (this.state.globalTotalStakedInt + umaticToDelegate)) * this.state.totalDistributedInt;
@@ -187,8 +187,8 @@ class MaticParticipate extends Component {
                 if (calculatedata.success === true) {
                     const currentEarned = (calculatedata.received / 1000000);
                     const yourEstimatedRewards = (calculatedata.estimated / 1000000);
-                    const totalStaked = (calculatedata.globalDelegation / 10 ** 18).toFixed(2);
-                    const statkedOnAudit = (calculatedata.auditDelegation / 10 ** 18).toFixed(2);
+                    const totalStaked = (calculatedata.globalDelegation).toFixed(2);
+                    const statkedOnAudit = (calculatedata.auditDelegation).toFixed(2);
                     this.setState({ blockHeight: calculatedata.magicTxCheckpoint })
                     this.setState({ totalStaked: numberWithCommas(totalStaked) })
                     this.setState({ statkedOnAudit: numberWithCommas(statkedOnAudit) })
@@ -315,9 +315,14 @@ class MaticParticipate extends Component {
                                                         required
 
                                                     />
-
+                                                    
                                                 </div>
-
+                                                <div className="inputstaking left-align-calculate">
+                                                    <h5>&nbsp;</h5>
+                                                    <div className="btn-calculate">
+                                                        <button type="submit" className="btn">Calculate</button>
+                                                    </div>
+                                                </div>
                                                 {this.state.errorAddress ?
                                                     <h6 className="valid-add">Enter Valid Address</h6>
                                                     :
@@ -328,14 +333,12 @@ class MaticParticipate extends Component {
                                                     :
                                                     ""
                                                 }
-                                                <div className="btn-calculate">
-                                                    <button type="submit" className="btn">Calculate</button>
-                                                </div>
+                                                
                                             </form>
 
                                             <div className="">
                                                 <div className="inputstaking justify-start">
-                                                    <h5>Start Block Height</h5>
+                                                    <h5>Start Checkpoint</h5>
                                                     <h5 className="text-color">{this.state.blockHeight}</h5>
                                                 </div>
                                             </div>
@@ -452,14 +455,14 @@ class MaticParticipate extends Component {
                                 <h4 className="text-left title">List of instructions to send Magic Transaction</h4>
                                 <ul className="staking-instructions">
                                     <li className="text-left continue-text">To do magic tx, you have to send 0 MATIC to the contract address <span className="addressmatic">0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d <CopyToClipboard onCopy={this.onCopy} text={'0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d'}>
-                                            <img src={copy} alt="copy" className="copy-icon" />
-                                        </CopyToClipboard></span> from Matic Wallet (NOT Ethereum Wallet).</li>
+                                        <img src={copy} alt="copy" className="copy-icon" />
+                                    </CopyToClipboard></span> from Matic Wallet (NOT Ethereum Wallet).</li>
                                     <p className="text-left continue-text">&emsp;Note: This address has to be same address from which you have staked your Matic tokens.</p>
                                     <p className="text-left continue-text">&emsp;Note: If you try send any matic token other than 0, Tx will fail.</p>
                                 </ul>
                                 <ul className="staking-instructions">
                                     <li className="text-left continue-text">Magic Tx can be done via MetaMask - Switch over Matic Mainnet in MetaMask and "Send" 0 MATIC to the contract address. If you haven't added Matic Mainnet, you can do so by adding Custom RPC and filling it with the details from <a href="https://docs.matic.network/docs/develop/network-details/network/" target="_blank" rel="noopener noreferrer">here</a></li>
-                                   </ul>
+                                </ul>
                                 <ul className="staking-instructions">
                                     <li className="text-left continue-text">To do Magic Tx you will need some MATIC token in Matic Wallet as fees. If you have MATIC in Ethereum wallet, you can transfer it to Matic Wallet by following the steps:</li>
                                     <p className="text-left continue-text">&emsp;Login <a href="https://wallet.matic.network" rel="noopener noreferrer" target="_blank">https://wallet.matic.network</a></p>
@@ -482,14 +485,14 @@ class MaticParticipate extends Component {
                         <Modal.Body>
                             <div className="staking-wallet-section">
                                 <h4 className="title">Available Methods to Participate in StakeDrop</h4>
-                                
+
                                 <p className="continue-text"> Choose wallet to continue</p>
                                 <MaticWallets />
                             </div>
                         </Modal.Body>
                     </Modal>
 
-                   
+
                     <Modal
                         size="lg"
                         show={this.state.showDelegateCliModal}

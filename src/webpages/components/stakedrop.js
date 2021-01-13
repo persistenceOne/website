@@ -96,7 +96,7 @@ class stakedrop extends React.Component {
                     const Statusmaticurl = getMaticStatusURL();
                     axios.get(Statusmaticurl).then((statusResponse) => {
                     const totalDistributed = 200000 - (statusResponse.data.totalDistributed / 1000000)
-                    const totalMaticStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation / 10**18);
+                    const totalMaticStakeDropGlobalDelegation = (statusResponse.data.totalStakeDropGlobalDelegation);
                     const totalMaticDropped = (Math.round((200000 - totalDistributed) * 100) / 100)
                     this.setState({ totalDistributedInt: totalDistributed })
                     this.setState({ totalMaticStakeDropGlobalDelegation: (Math.round(totalMaticStakeDropGlobalDelegation * 100) / 100).toLocaleString() })
@@ -106,7 +106,7 @@ class stakedrop extends React.Component {
                     const totalStakeDropGlobalDelegation = totalCosmosStakeDropGlobalDelegation + totalKavaStakeDropGlobalDelegation + totalTerraStakeDropGlobalDelegation + totalMaticStakeDropGlobalDelegation;
                     this.setState({ totalStakeDropGlobalDelegation: (totalStakeDropGlobalDelegation).toLocaleString() })
                     this.setState({ totaldrop: totaldrop })
-                   
+                   console.log(totalCosmosStakeDropGlobalDelegation, totalKavaStakeDropGlobalDelegation, totalTerraStakeDropGlobalDelegation, totalMaticStakeDropGlobalDelegation)
                    
 
                 })
@@ -257,10 +257,8 @@ class stakedrop extends React.Component {
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
-                                                <div className="icon-div">
                                                     <img src={luna_icon} alt="atom" /><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewTerra} className="viewcampaign" to="/StakeDropTerra" >View</Link></span>
-                                                </div>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>{language[lang].stake_drop_luna_terra}</h4>

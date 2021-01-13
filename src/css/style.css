@@ -421,6 +421,20 @@ input:focus {
   font-weight: 600;
 }
 
+.participate-stakedrop .staking-second-section .inputstaking.left-align-calculate {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking.left-align-calculate h5 {
+  width: 170px;
+}
+
+.participate-stakedrop .staking-second-section .inputstaking.left-align-calculate .btn-calculate {
+  margin-top: 0;
+}
+
 .participate-stakedrop .staking-second-section .inputstaking {
   display: -webkit-box;
   display: -ms-flexbox;
