@@ -388,7 +388,15 @@ input:focus {
 				font-weight: 600;
 			}
 		}
-
+		.inputstaking.left-align-calculate {
+			justify-content: right;
+			h5 {
+				width: 170px;
+			}
+			.btn-calculate {
+				margin-top:0;
+			}
+		}
 		.inputstaking {
 			display: flex;
 			justify-content: space-between;
@@ -4547,7 +4555,6 @@ input:focus {
 		color: #838c9f;
 	}
 	.staking-instructions {
-		
 		span.addressmatic {
 			color: #e50913;
 			display: inline-block;
