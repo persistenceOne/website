@@ -244,14 +244,14 @@ class MaticParticipate extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Start</h6>
-                                                    <h1>16th of January 2021 <span>Checkpoint: 9586</span></h1>
+                                                    <h1>20th of January 2021 <span>Checkpoint: 9707</span></h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>End</h6>
-                                                    <h1>2nd of March 2021<span>Checkpoint: 10935</span></h1>
+                                                    <h1>6th of March 2021<span>Checkpoint: 11056</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -272,7 +272,7 @@ class MaticParticipate extends Component {
                                                 <div className="participate-cardtwo">
                                                     <h6>Time left:</h6>
                                                     <h1 className="countdown"><Countdown
-                                                        date={1614668400000}
+                                                        date={1615033800000}
                                                         autoStart={true}
                                                     /></h1>
                                                 </div>
@@ -294,7 +294,7 @@ class MaticParticipate extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12 matic-tutorial-section">
-                                        <p className="">Matic StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
+                                        <p className="">Matic StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
@@ -454,22 +454,11 @@ class MaticParticipate extends Component {
 
                                 <h4 className="text-left title">List of instructions to send Magic Transaction</h4>
                                 <ul className="staking-instructions">
-                                    <li className="text-left continue-text">To do magic tx, you have to send 0 MATIC to the contract address <span className="addressmatic">0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d <CopyToClipboard onCopy={this.onCopy} text={'0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d'}>
+                                    <li className="text-left continue-text">After you have staked your tokens on Matic Network, to do magic tx, you have to send 0 MATIC to the contract address   <span className="addressmatic">0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d <CopyToClipboard onCopy={this.onCopy} text={'0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d'}>
                                         <img src={copy} alt="copy" className="copy-icon" />
-                                    </CopyToClipboard></span> from Matic Wallet (NOT Ethereum Wallet).</li>
+                                    </CopyToClipboard></span> from your ERC-20 wallet.</li>
                                     <p className="text-left continue-text">&emsp;Note: This address has to be same address from which you have staked your Matic tokens.</p>
-                                    <p className="text-left continue-text">&emsp;Note: If you try send any matic token other than 0, Tx will fail.</p>
-                                </ul>
-                                <ul className="staking-instructions">
-                                    <li className="text-left continue-text">Magic Tx can be done via MetaMask - Switch over Matic Mainnet in MetaMask and "Send" 0 MATIC to the contract address. If you haven't added Matic Mainnet, you can do so by adding Custom RPC and filling it with the details from <a href="https://docs.matic.network/docs/develop/network-details/network/" target="_blank" rel="noopener noreferrer">here</a></li>
-                                </ul>
-                                <ul className="staking-instructions">
-                                    <li className="text-left continue-text">To do Magic Tx you will need some MATIC token in Matic Wallet as fees. If you have MATIC in Ethereum wallet, you can transfer it to Matic Wallet by following the steps:</li>
-                                    <p className="text-left continue-text">&emsp;Login <a href="https://wallet.matic.network" rel="noopener noreferrer" target="_blank">https://wallet.matic.network</a></p>
-                                    <p className="text-left continue-text">&emsp;Go to "Wallet" tab</p>
-                                    <p className="text-left continue-text">&emsp;Select "Switch to Plasma" bridge</p>
-                                    <p className="text-left continue-text">&emsp;Select "Matic Wallet"</p>
-                                    <p className="text-left continue-text">&emsp;Click on "Deposit" button and follow the instructions.</p>
+                                    <p className="text-left continue-text">&emsp;Note: If you try sending Matic tokens more than 0, Tx will fail.</p>
                                 </ul>
                             </div>
                         </Modal.Body>

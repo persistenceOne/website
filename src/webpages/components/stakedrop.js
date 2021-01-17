@@ -286,8 +286,8 @@ class stakedrop extends React.Component {
                                                 <div className="stake-to">
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow" />&emsp;{language[lang].stake_drop_stake_matic}</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-time" />&emsp;{language[lang].stake_drop_campaign_duration} 45 Days</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp; 16th of January 2021</p>
-                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;2nd of March 2021</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-flag" />&emsp; 20th of January 2021</p>
+                                                    <p><Icon viewClass="social_icon_imgg" icon="stake-fillflag" />&emsp;6th of March 2021</p>
                                                     <p className="total_drop_allowcated"><span>Total drop allocated:</span><span>20.00%</span></p>
                                                 </div>
                                             </div>
@@ -362,7 +362,7 @@ class stakedrop extends React.Component {
                                                         <p>Mechanism Paper</p>
 
                                                     </a>
-                                                    <a className="icon-div mechanism-btn" href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" target="_blank" rel="noopener noreferrer">
+                                                    <a className="icon-div mechanism-btn" href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" target="_blank" rel="noopener noreferrer">
                                                         <img src={mechanism} alt="Tutorial" />
                                                         <p>Matic Tutorial</p>
                                                     </a>
@@ -371,7 +371,7 @@ class stakedrop extends React.Component {
                                                     <div className="col-lg-6 tutorial-links">
                                                         <div className="link-section">
                                                         <p>Matic StakeDrop Blog [English]</p>
-                                                        <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686</a>
+                                                        <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" target="_blank" rel="noopener noreferrer">https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686</a>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-6 tutorial-links">

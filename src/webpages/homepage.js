@@ -163,7 +163,7 @@ class homePage extends Component {
                     <h3>Highlights</h3>
                     <div className="container">
                         <div className="row">
-                            <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
+                            <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" rel="noopener noreferrer" target="_blank"><div className="col-lg-12">
                                 <div className="row blog-section">
                                     <div className="col-lg-4">
                                         <Card style={{ width: '100%' }}>
@@ -172,7 +172,7 @@ class homePage extends Component {
                                     </div>
                                     <div className="col-lg-8 blog-head">
                                         <Card.Body>
-                                            <Card.Title>$50,000 Worth of XPRT will be Distributed to MATIC Stakers During the Matic StakeDrop, Beginning January 16th!</Card.Title>
+                                            <Card.Title>$50,000 Worth of XPRT will be Distributed to MATIC Stakers During the Matic StakeDrop, Beginning January 20th!</Card.Title>
 
                                             <p className="blog-medium">11 JAN 2021</p>
                                             <img className="blog-year" src={medium} alt="Medium" />
