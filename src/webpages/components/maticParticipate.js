@@ -458,7 +458,7 @@ class MaticParticipate extends Component {
                                         <img src={copy} alt="copy" className="copy-icon" />
                                     </CopyToClipboard></span> from your ERC-20 wallet.</li>
                                     <p className="text-left continue-text">&emsp;Note: This address has to be same address from which you have staked your Matic tokens.</p>
-                                    <p className="text-left continue-text">&emsp;Note: If you try send more than 0 Eth, the transaction will fail.</p>
+                                    <p className="text-left continue-text">&emsp;Note: If you try to send more than 0 Eth, the transaction will fail.</p>
                                 </ul>
                             </div>
                         </Modal.Body>
