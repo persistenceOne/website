@@ -454,11 +454,11 @@ class MaticParticipate extends Component {
 
                                 <h4 className="text-left title">List of instructions to send Magic Transaction</h4>
                                 <ul className="staking-instructions">
-                                    <li className="text-left continue-text">After you have staked your tokens on Matic Network, to do magic tx, you have to send 0 MATIC to the contract address   <span className="addressmatic">0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d <CopyToClipboard onCopy={this.onCopy} text={'0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d'}>
+                                    <li className="text-left continue-text">After you have staked your tokens on Matic Network, to do magic tx, you have to send 0 Eth to the contract address   <span className="addressmatic">0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d <CopyToClipboard onCopy={this.onCopy} text={'0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d'}>
                                         <img src={copy} alt="copy" className="copy-icon" />
                                     </CopyToClipboard></span> from your ERC-20 wallet.</li>
                                     <p className="text-left continue-text">&emsp;Note: This address has to be same address from which you have staked your Matic tokens.</p>
-                                    <p className="text-left continue-text">&emsp;Note: If you try sending Matic tokens more than 0, Tx will fail.</p>
+                                    <p className="text-left continue-text">&emsp;Note: If you try send more than 0 Eth, the transaction will fail.</p>
                                 </ul>
                             </div>
                         </Modal.Body>
