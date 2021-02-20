@@ -1,0 +1,13 @@
+@media (max-width: 991.8px) {
+  .vision-banner-section{
+    height: auto;
+    .image-section{
+      display: none;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .vision-banner-section .content {
+    padding-right: 200px;
+  }
+}

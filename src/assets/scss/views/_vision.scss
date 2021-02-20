@@ -1,0 +1,340 @@
+.vision-banner-section {
+  padding: 150px 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  .content {
+    padding-top: 70px;
+    padding-right: 80px;
+
+  }
+
+  .heading {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.314;
+    color: #FFFFFF;
+    margin-bottom: 30px;;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    color: #DBD6D6;
+  }
+
+  .quote-section {
+    position: relative;
+
+    .quote-text {
+      font-weight: bold;
+      font-size: 18px;
+      background-image: url(./../../images1/quote-image.svg);
+      background-repeat: no-repeat;
+      color: #F5F5F5;
+      margin: 0;
+
+      span {
+        color: #E50913;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: -20px;
+      bottom: -15px;
+    }
+  }
+
+  .image-section {
+    padding-top: 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.vision-section-boxes {
+  padding: 100px 0;
+  background: radial-gradient(94.37% 161.58% at 2.64% 12.07%, #16151D 0%, #232526 100%);
+
+  .boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .box {
+      padding: 30px 35px;
+      background: #292A2D;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      height: 130px;
+      margin-bottom: 10px;
+
+      img {
+        margin-right: 25px;
+      }
+
+      p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.vision-section-team {
+  padding: 100px 0;
+  background: linear-gradient(184.17deg, #1D1E22 3.64%, #1C1C21 96.87%);
+
+  .section-title {
+    color: #FFFFFF;
+  }
+
+  .profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+
+    .profile {
+      position: relative;
+      margin-right: 20px;
+
+      img {
+        width: 100%;
+      }
+
+      &:hover .image-overlay {
+        opacity: 1;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.759;
+        color: #FFFFFF;
+        margin: 20px 0 0 0;
+      }
+
+      .role {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.759;
+        color: #A5A5A5;
+        margin: 0;
+      }
+
+      .image-overlay {
+        opacity: 0;
+        text-align: center;
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        transition: all 0.4s ease-in-out 0s;
+        transform: translate(-50%, 50%);
+
+        p {
+          margin: 0;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 1.759;
+          text-align: center;
+          text-decoration-line: underline !important;
+          cursor: pointer;
+          color: #FFFFFF;
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .icon-box {
+            margin-right: 5px;
+            width: 32px;
+            height: 32px;
+            background-color: #E50913;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              fill: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.adviser-section {
+  background: #FFFFFF;
+  padding: 100px 0;
+
+  .section-title {
+    color: #1B1A20;
+    padding-bottom: 50px;
+  }
+  .profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+
+    .profile {
+      position: relative;
+      margin-right: 20px;
+      text-align: center;
+      img {
+        width: 250px;
+      }
+
+      &:hover .image-overlay {
+        opacity: 1;
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.759;
+        color: #1A1920;
+        margin: 20px 0 0 0;
+      }
+
+      .role {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.759;
+        color: #555555;
+        margin: 0;
+      }
+
+      .image-overlay {
+        opacity: 0;
+        text-align: center;
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        transition: all 0.4s ease-in-out 0s;
+        transform: translate(-50%, 50%);
+
+        p {
+          margin: 0;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 1.759;
+          text-align: center;
+          text-decoration-line: underline !important;
+          cursor: pointer;
+          color: #FFFFFF;
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .icon-box {
+            margin-right: 5px;
+            width: 32px;
+            height: 32px;
+            background-color: #E50913;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              fill: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+  .adviser-text {
+    margin: auto;
+    padding: 0 205px 100px 205px;
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.855;
+      text-align: center;
+      color: #313238;
+    }
+  }
+
+  .proileContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    .bg-advisors {
+      border: 1px solid #F5F5F5;
+      background-image: url(./../../images1/adivser_bg.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 0px -25px;
+      padding: 40px 25px 25px;
+
+    }
+
+    .profile-picture {
+      text-align: center;
+    }
+
+    .profile-name {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1.759;
+      color: #1A1920;
+    }
+
+    .designation-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.759;
+      color: #555555;
+      margin-bottom: 10px;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .company-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      line-height: 1.855;
+      color: #515257;
+    }
+
+    .profile-picture {
+      .social-icons {
+        margin: 15px;
+
+        a {
+          padding: 0px 5px;
+        }
+      }
+    }
+  }
+}

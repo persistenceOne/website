@@ -1,26 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import './components/Internationalization/i18n'
 import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-import ReactGa from 'react-ga';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from "./store";
-import {unregister} from './registerServiceWorker'
-let gaID = process.env.REACT_APP_GA_ID
+//import './App.css';
+import './assets/scss/style.scss';
 
+const history = createBrowserHistory();
 
-ReactGa.initialize(`${gaID}`)
-const app = (
-    <Provider store={store}>
-      <BrowserRouter>
-          <App />
-      </BrowserRouter>
-    </Provider>
+ReactDOM.render(
+  <Router history={history}>
+    <App />
+  </Router>,
+  document.getElementById('root')
 );
 
-
-
-ReactDOM.render(app, document.getElementById('root'));
-unregister();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
