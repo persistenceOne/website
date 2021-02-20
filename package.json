@@ -1,5 +1,5 @@
 {
-  "name": "open-react-template",
+  "name": "Persistence",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,10 +29,6 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "swiper": "^6.4.14"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
     "start": "react-scripts start",
