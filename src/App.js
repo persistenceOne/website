@@ -1,55 +1,71 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useRef, useEffect } from 'react';
+import { useLocation, Switch } from 'react-router-dom';
+import AppRoute from './utils/AppRoute';
+import ReactGA from 'react-ga';
+// Layouts
+import LayoutDefault from './layouts/LayoutDefault';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+// Views
+import Homepage from "./views/Homepage";
+import Vision from "./views/Vision";
+import Products from "./views/Products";
+import RoadMap from "./views/RoadMap";
+import Ecosystem from "./views/Ecosystem";
+import Stakedrop from "./views/Stakedrop";
+import CosmosStakedrop from "./Containers/Stakedrop/CosmosStakedrop";
+import KavaStakedrop from "./Containers/Stakedrop/KavaStakedrop";
+import TerraStakedrop from "./Containers/Stakedrop/TerraStakedrop";
+import MaticStakedrop from "./Containers/Stakedrop/MaticStakedrop";
+import ScrollReveal from './utils/ScrollReveal';
+import Technology from "./views/Technology";
+// Initialize Google Analytics
+ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
-import './css/style.css';
-import './App.css';
-import ReactGa from 'react-ga';
-import Team from './webpages/components/team';
-import Roadmap from './webpages/components/roadmap';
-import AppContainer from './webpages/components/appContainer';
-import homepage from './webpages/homepage';
-import stakedrop from './webpages/components/stakedrop';
-import participate from './webpages/components/participate';
-import KavaParticipate from './webpages/components/kavaParticipate';
-import TerraParticipate from './webpages/components/terraParticipate';
-import MaticParticipate from './webpages/components/maticParticipate';
-import Footer from './webpages/components/footer';
-// import InfoPdf from './webpages/components/pdf';
+const trackPage = page => {
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
+};
 
+const App = () => {
 
-class App extends Component {
-  
- 
-componentDidMount() {
-  ReactGa.pageview(window.location.pathname + window.location.search);
-    
-}
+    useEffect(() => {
+        AOS.init({
+            duration : 2000
+        })
+    },[]);
 
-  render() {
-   
-    const routes = (
-      <Switch>
-        <Route exact path="/" component={homepage} />
-            <Route path="/team" component={Team} />
-            <Route path="/roadmap" component={Roadmap} />
-            <Route path="/app" component={AppContainer} />
-            <Route path="/StakeDrop" component={stakedrop} />
-            <Route path="/StakeDropCosmos" component={participate} />
-            <Route path="/StakeDropKava" component={KavaParticipate} />
-            <Route path="/StakeDropTerra" component={TerraParticipate} />
-            <Route path="/StakeDropMatic" component={MaticParticipate} />
-            
-      </Switch>)
-    
-    return (
-      <div className={window.location.pathname ?
-        window.location.pathname.split('/')[1] :
-        'App'}>
-                   {routes}
-                   <Footer />
-        </div>
-    );
-  }
+    const childRef = useRef();
+    let location = useLocation();
+
+    useEffect(() => {
+        const page = location.pathname;
+        document.body.classList.add('is-loaded')
+        childRef.current.init();
+        trackPage(page);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location]);
+
+  return (
+      <ScrollReveal
+          ref={childRef}
+          children={() => (
+        <Switch>
+          <AppRoute exact path="/" component={Homepage} layout={LayoutDefault} />
+            <AppRoute exact path="/vision" component={Vision} layout={LayoutDefault} />
+            <AppRoute exact path="/products" component={Products} layout={LayoutDefault} />
+            <AppRoute exact path="/roadmap" component={RoadMap} layout={LayoutDefault} />
+            <AppRoute exact path="/ecosystem" component={Ecosystem} layout={LayoutDefault} />
+            <AppRoute exact path="/stakedrop" component={Stakedrop} layout={LayoutDefault} />
+          <AppRoute exact path="/StakeDropCosmos" component={CosmosStakedrop} layout={LayoutDefault} />
+            <AppRoute exact path="/StakeDropCosmos" component={CosmosStakedrop} layout={LayoutDefault} />
+            <AppRoute exact path="/StakeDropKava" component={KavaStakedrop} layout={LayoutDefault} />
+            <AppRoute exact path="/StakeDropTerra" component={TerraStakedrop} layout={LayoutDefault} />
+            <AppRoute exact path="/StakeDropMatic" component={MaticStakedrop} layout={LayoutDefault} />
+          <AppRoute exact path="/technology" component={Technology} layout={LayoutDefault} />
+        </Switch>
+          )} />
+  );
 }
 
 export default App;
