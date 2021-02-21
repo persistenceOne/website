@@ -74,6 +74,7 @@ const Modal = (props) => {
                             if (item.key === props.name) {
                                 return (
                                     <div className="modal-data">
+                                        <button className="close-button" onClick={handleClose}>x</button>
                                         <div className="profile-image">
                                             <img src={item.img} alt="img"/>
                                         </div>

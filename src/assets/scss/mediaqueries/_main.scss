@@ -44,6 +44,13 @@
   .navbar .container {
     padding: 0 15px !important;
   }
+  .info-modal.modal .modal-dialog .modal-content .modal-data{
+    flex-wrap: wrap;
+    .profile-image{
+      flex: 1;
+      text-align: center;
+    }
+  }
 }
 
 @media (max-width: 575.8px) {

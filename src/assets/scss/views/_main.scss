@@ -425,6 +425,17 @@ a {
           }
         }
       }
+      .close-button{
+        background: transparent;
+        position: absolute;
+        right: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ccc;
+        padding: 20px;
+        border: 0px solid;
+        outline: none;
+      }
     }
   }
 }
