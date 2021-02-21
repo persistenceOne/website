@@ -1,10 +1,12 @@
 @media (max-width: 991.8px) {
-  .navbar.navbar-custom .navbar-nav li {
+  .navbar.navbar-custom .navbar-nav {
+    li {
     margin: 0;
     a {
       text-align: left;
       padding:15px 0;
     }
+  }
   }
   .navbar-collapse{
     padding-top: 15px;
@@ -34,6 +36,9 @@
       max-width: 600px;
       .dropdown-content{
     flex-wrap: wrap;
+        .items{
+          border: 0px solid;
+        }
     }}
   }
   .navbar .container {
