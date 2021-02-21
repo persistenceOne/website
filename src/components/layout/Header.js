@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import logo from '../../assets/images1/logo.png'
-import { Nav, Button } from "react-bootstrap";
+import {Nav, Button} from "react-bootstrap";
 import Circle from "../../assets/images1/shapes/circle.svg"
 import Rectangle from "../../assets/images1/shapes/Rectangle.svg"
 import Polygon from "../../assets/images1/shapes/polygon.svg"
 import Triangle from "../../assets/images1/shapes/triangle.svg"
 import internft_logo from "../../assets/images1/internft/internft.svg"
-
+import stakdrop from "../../assets/images1/stakedrop.svg";
+import xprt_bg from "../../assets/images1/xprt_bg.svg";
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -47,10 +48,6 @@ class Header extends Component {
                 document.getElementById('nav-bar').classList.add('bg-not-active');
                 document.getElementById('nav-bar').classList.remove('bg-active');
             }
-            var scrolledBottom = document.scrollingElement.scrollBottom;
-            if (scrolledBottom < 5) {
-                alert('hi')
-            }
         });
 
     }
@@ -74,7 +71,6 @@ class Header extends Component {
         if (route === "/vision" || route === "/roadmap") {
             document.getElementById('company-nav-dropdown').classList.add('active');
         } else if (route === "/stakedrop") {
-            console.log("entred if", document.getElementById('ecosystem-nav-dropdown'))
             document.getElementById('ecosystem-nav-dropdown').classList.add('active');
         } else {
             if (document.getElementById('company-nav-dropdown').classList.contains('active')) {
@@ -202,25 +198,28 @@ class Header extends Component {
                                                         <Button>Learn More</Button>
                                                     </div>
                                                     <div className="item stake-drop" id="stake-drop-tab">
-                                                        <img src={internft_logo} alt="internft_logo"/>
+                                                        <img src={stakdrop} alt="stakdrop"/>
                                                         <p>
-                                                            projects and protocols building inter-chain standards for
-                                                            Non-Fungible Tokens and Metadata. </p>
+                                                            A community-focused initiative designed to facilitate the
+                                                            wide distribution of XPRT tokens among PoS token holders
+                                                            familiar with staking, thus accelerating the
+                                                            decentralisation of the Persistence mainnet once live. </p>
                                                         <Button>Learn More stakedrop</Button>
                                                     </div>
                                                     <div className="item stake-drop" id="validators-tab">
                                                         <img src={internft_logo} alt="internft_logo"/>
-                                                        <p>interNFT is a working group consisting of the leading
-                                                            interoperable
-                                                            projects and protocols building inter-chain standards for
+                                                        <p>A network is only as strong as its validators. The
+                                                            Persistence network is secured by leading PoS validators
+                                                            running institutional-grade architecture, geographically
+                                                            distributed across the world.
                                                         </p>
                                                         <Button>Learn More validators</Button>
                                                     </div>
                                                     <div className="item stake-drop" id="xprt-tab">
-                                                        <img src={internft_logo} alt="internft_logo"/>
-                                                        <p>interNFT is a working group consisting of the leading
-                                                            interoperable
-                                                            Non-Fungible Tokens and Metadata. </p>
+                                                        <img src={xprt_bg} alt="xprt_bg"/>
+                                                        <p>The XPRT token is primarily a governance token for the Persistence chain. Once the
+                                                            Persistence mainnet is launched, token holders will be able to stake XPRT tokens to
+                                                            passively earn more XPRT. </p>
                                                         <Button>Learn More xprt</Button>
                                                     </div>
                                                 </div>

@@ -143,9 +143,6 @@ class StakedropMainPage extends React.Component {
                         const totalStakeDropGlobalDelegation = totalCosmosStakeDropGlobalDelegation + totalKavaStakeDropGlobalDelegation + totalTerraStakeDropGlobalDelegation + totalMaticStakeDropGlobalDelegation;
                         this.setState({totalStakeDropGlobalDelegation: (totalStakeDropGlobalDelegation).toLocaleString()})
                         this.setState({totaldrop: totaldrop})
-                        console.log(totalCosmosStakeDropGlobalDelegation, totalKavaStakeDropGlobalDelegation, totalTerraStakeDropGlobalDelegation, totalMaticStakeDropGlobalDelegation)
-
-
                     })
 
                 })

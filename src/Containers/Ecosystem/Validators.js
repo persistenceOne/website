@@ -15,7 +15,7 @@ import HashQuark from "../../assets/images1/backers/validators/HashQuark.png";
 const Validators = () => {
     return (
         <>
-            <section className="validators-section">
+            <section className="validators-section" id="validatorsSection">
                 <div className="title-line-section">
                     <h3 className="section-title">Validators</h3>
                 </div>

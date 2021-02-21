@@ -451,7 +451,7 @@ a {
   background: #262B35 !important;
   padding: 80px 0 0 0;
 
-  .footer-list li a {
+  .footer-list li a,  .footer-list li .inactive {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -589,14 +589,28 @@ a {
     .mail-chimp-section {
       display: flex;
       align-items: center;
-
+      margin: 10px 0 20px 0;
       input {
         width: 100%;
       }
     }
   }
 }
+.show-message{
+  animation: hide-animation 10s ease-in 0s;
+  visibility: hidden;
+}
+@keyframes hide-animation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
 
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 #tsparticles {
   canvas {
     height: 100vh !important;

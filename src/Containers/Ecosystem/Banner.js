@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import Icon from "../../components/Icon";
+import Modal from "./Modal";
 
 const Banner = () => {
+    const [name, setName] = useState("");
+
+    const handleModalData = (name) => {
+        setName(name)
+    };
     return (
         <section className="section-ecosystem-banner" data-aos="fade-up">
             <div className="container">
@@ -14,7 +20,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="telegram-plane"/>
                             </div>
                         </div>
-                        <a href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">/PersistenceOne</a>
+                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">/PersistenceOne</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -22,7 +28,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="announcements"/>
                             </div>
                         </div>
-                        <a href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">Announcements</a>
+                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">Announcements</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -30,7 +36,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="chat"/>
                             </div>
                         </div>
-                        <a href="https://discord.gg/SaBKpjbnhH" rel="noopener noreferrer" target="_blank">Dev Chat</a>
+                        <a className="text" href="https://discord.gg/SaBKpjbnhH" rel="noopener noreferrer" target="_blank">Dev Chat</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -38,7 +44,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="twitter-logo"/>
                             </div>
                         </div>
-                        <a href="https://twitter.com/hu_zhiwei" rel="noopener noreferrer" target="_blank">Twitter Page</a>
+                        <a className="text" href="https://twitter.com/hu_zhiwei" rel="noopener noreferrer" target="_blank">Twitter Page</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -46,7 +52,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="youtube"/>
                             </div>
                         </div>
-                        <a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank">Youtube</a>
+                        <a className="text" href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank">Youtube</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -54,7 +60,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="reddit-round"/>
                             </div>
                         </div>
-                        <a href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">Reddit</a>
+                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">Reddit</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -62,10 +68,15 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="regional"/>
                             </div>
                         </div>
-                        <a href="https://twitter.com/hu_zhiwei" rel="noopener noreferrer" target="_blank">Regional</a>
+                        <p className="text" onClick={handleModalData}>Regional</p>
                     </div>
                 </div>
             </div>
+            {
+                name ?
+                    <Modal setName={setName} /> :
+                    null
+            }
         </section>
     )
 };

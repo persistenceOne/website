@@ -20,9 +20,6 @@ class Animation extends React.Component {
             document.documentElement.scrollHeight -
             document.documentElement.clientHeight;
         const scrolled = `${scrollPx / winHeightPx * 100}vw`;
-
-        console.log(scrolled);
-
         this.setState({
             scrolled: scrolled
         });

@@ -20,7 +20,7 @@ import MaticStakedrop from "./Containers/Stakedrop/MaticStakedrop";
 import ScrollReveal from './utils/ScrollReveal';
 import Technology from "./views/Technology";
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
 const trackPage = page => {
   ReactGA.set({ page });

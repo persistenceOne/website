@@ -67,12 +67,12 @@ class Footer extends Component {
                                         <h6>Company</h6>
                                         <div className="text-muted mt-30">
                                             <ul className="list-unstyled footer-list">
-                                                <li><Link to="/team">Company</Link></li>
+                                                <li><Link to="/vision">Company</Link></li>
                                                 <li><Link to="/roadmap">Roadmap</Link></li>
                                                 <li><a href={whitepaper} target="_blank"
                                                        rel="noopener noreferrer">Whitepaper</a></li>
-                                                <li><Link to="/roadmap">Ecosystem</Link></li>
-                                                <li><Link to="/roadmap">Technology</Link></li>
+                                                <li><Link to="/ecosystem">Ecosystem</Link></li>
+                                                <li><Link to="/technology">Technology</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -80,11 +80,11 @@ class Footer extends Component {
                                         <h6>Products</h6>
                                         <div className="text-muted mt-30">
                                             <ul className="list-unstyled footer-list">
-                                                <li><Link to="/stakedrop">Comdex</Link></li>
-                                                <li><Link to="/stakedrop">Asset Mantle</Link></li>
-                                                <li><Link to="/stakedrop">pStake</Link></li>
-                                                <li><Link to="/stakedrop">Audit.one</Link></li>
-                                                <li><Link to="/stakedrop">pLend</Link></li>
+                                                <li><a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank">Comdex</a></li>
+                                                <li><p className="inactive" title="Coming Soon">Asset Mantle</p></li>
+                                                <li><p className="inactive"title="Coming Soon">pStake</p></li>
+                                                <li><a href="https://audit.one/" rel="noopener noreferrer" target="_blank">Audit.one</a></li>
+                                                <li><p className="inactive"title="Coming Soon">pLend</p></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@ class Footer extends Component {
                                         <div className="text-muted mt-30">
                                             {/*<p className="footer-text">2972 Westheimer Rd. Santa Ana, Illinois*/}
                                             {/*    85486 </p>*/}
-                                            <p className="footer-text">hello@perstistence.one</p>
+                                            <a className="footer-text" href="mailto:someone@example.com">hello@perstistence.one</a>
                                         </div>
                                     </div>
                                 </div>

@@ -37,7 +37,6 @@ const CustomForm = ({status, message, onValidated}) => {
         }
     }, [isLoading]);
 
-    console.log(message, status)
     const submit = () => {
         setLoading(true);
         email &&
@@ -53,12 +52,15 @@ const CustomForm = ({status, message, onValidated}) => {
                 {status === "error" && (
                     <div
                         style={{color: "red"}}
+                        className="show-message"
                     >
-                        raju@persistence.one is already subscribed.</div>
+
+                       Email already subscribed.</div>
                 )}
                 {status === "success" && (
                     <div
                         style={{color: "green"}}
+                        className="show-message"
                     >Thank you for subscribing!
                     </div>
                 )}
