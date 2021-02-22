@@ -8,7 +8,7 @@
     background-position: 73% 50%,
     100% 100%;
     background-size: 60% 67%, cover;
-  
+
     .caption {
       font-weight: 600;
       font-size: 12px;
@@ -353,7 +353,7 @@
       }
       .content {
         display: flex;
-        max-height: 53em;
+        max-height: 54em;
         min-height: 42vw;
         //padding: 50px;
         -webkit-box-orient: vertical;
@@ -383,14 +383,18 @@
         //overflow: hidden;
       }
       .content-multiple{
+        max-height: 54em;
+        min-height: 42vw;
         display: flex;
         flex-direction: column;
       }
       .content.mantle-content{
+        max-height: 27em;
         min-height: 21vw;
         width: 100%;
       }
       .content.plend-content{
+        max-height: 27em;
         min-height: 21vw;
         width: 100%;
       }
@@ -406,7 +410,41 @@
         //will-change: opacity;
       }
 
+    .bg-overlay{
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      right: 0%;
+      bottom: 0%;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+      .bg-overlay-image{
+        background-size: cover;
 
+        background-position: 50% 50%;
+        position: absolute;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        right: -100%;
+        bottom: -100%;
+        top: -100%;
+        left: -100%;
+      }
+      .bg-overlay-image.comdex{
+        background-image:url(./../../images1/comdex_overlay_bg.svg);
+      }
+      .bg-overlay-image.audit{
+        background-image:url(./../../images1/audit_overlay_bg.svg);
+      }
+      .bg-overlay-image.pstake{
+        background-image:url(./../../images1/pstake_overlay_bg.svg);
+      }
+    }
       img {
         position: absolute;
         left: 0%;
@@ -415,7 +453,7 @@
         bottom: 0%;
         //z-index: -2;
         height: 100%;
-        width: auto;
+        width: 100%;
         opacity: 0;
         //transition: all 0.1s ease-in-out 0s;
         -webkit-transition: all 0.4s ease-in-out 0s;
@@ -550,7 +588,7 @@
         opacity: 0;
       }
   
-      .content:hover img {
+      .content:hover img, .content:hover .bg-overlay{
         //transform: translateX(0px) translateY(0px) translateZ(0px);
         //transition: opacity 0.2s ease 0s, opacity 400ms ease 0s, transform 400ms ease 0s;
         //transition: all 0.1s ease-in-out 0s;

@@ -269,6 +269,9 @@
       }
     }
   }
+  .profiles-group{
+    justify-content: flex-start;
+  }
   .adviser-text {
     margin: auto;
     padding: 0 205px 100px 205px;
@@ -282,19 +285,23 @@
     }
   }
 
+  .advisers-profiles-container{
+    display: flex;
+    justify-content: center;
+  }
   .proileContainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-
+    width: 370px;
+    padding: 0px 10px;
     .bg-advisors {
       border: 1px solid #F5F5F5;
       background-image: url(./../../images1/adivser_bg.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: 0px -25px;
-      padding: 40px 25px 25px;
-
+      background-position: 0px 0px;
+      padding: 40px 25px 5px;
     }
 
     .profile-picture {
@@ -316,12 +323,24 @@
       line-height: 1.759;
       color: #555555;
       margin-bottom: 10px;
-
+      display: flex;
+      justify-content: center;
       a {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.759;
+        color: #555555;
         text-decoration: underline;
       }
     }
-
+    .read-more{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.759;
+      text-align: center;
+      text-decoration-line: underline;
+      color: #E50913;
+    }
     .company-name {
       font-family: 'Poppins', sans-serif;
       font-size: 14px;

@@ -6,9 +6,6 @@ import plend from '../../assets/images1/logos/plend_white.svg'
 import assetmantle from '../../assets/images1/mantle_white.svg'
 import audit from '../../assets/images1/logos/audit_white.svg'
 import Icon from "../../components/Icon";
-import comdex_overlay_bg from "../../assets/images1/comdex_overlay_bg.svg";
-import audit_overlay_bg from "../../assets/images1/audit_overlay_bg.svg";
-import pstake_overlay_bg from "../../assets/images1/pstake_overlay_bg.svg";
 
 const Products = () => {
     const {t} = useTranslation();
@@ -24,9 +21,11 @@ const Products = () => {
                     <div className="col-md-3">
                         <div className="content comdex-info">
                             <div className="content-overlay"></div>
-                            <img
-                                src={comdex_overlay_bg}
-                                alt="comdex"/>
+                            <div className="bg-overlay">
+                                <div className="bg-overlay-image comdex">
+                                </div>
+                            </div>
+
 
 
                             <p className="overlay-text">Comdex</p>
@@ -49,9 +48,10 @@ const Products = () => {
                     <div className="col-md-3">
                         <div className="content audit-info">
                             <div className="content-overlay"></div>
-                            <img
-                                src={audit_overlay_bg}
-                                alt="comdex-logo"/>
+                            <div className="bg-overlay">
+                                <div className="bg-overlay-image audit">
+                                </div>
+                            </div>
                             <p className="overlay-text">Audit.one</p>
                             <img className="image-logo" src={audit} alt="audit-logo"/>
                             <p className="overlay-subtext">Stake your assets</p>
@@ -69,9 +69,10 @@ const Products = () => {
                     <div className="col-md-3">
                         <div className="content pstake-info">
                             <div className="content-overlay"></div>
-                            <img
-                                src={pstake_overlay_bg}
-                                alt="comdex-logo"/>
+                            <div className="bg-overlay">
+                                <div className="bg-overlay-image pstake">
+                                </div>
+                            </div>
                             <p className="overlay-text">pStake</p>
                             <img className="image-logo" src={pstake} alt="pstake-logo"/>
                             <p className="overlay-subtext">Unlock Liquidity</p>
