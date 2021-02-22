@@ -86,7 +86,7 @@ class Header extends Component {
         return (
             <React.Fragment>
                 <div id="is-sticky">
-                    <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
+                    <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar" data-aos="fade-down">
                         <div className="container">
                             <Nav.Link className="navbar-brand logo text-uppercase" href="/">
                                 <img src={logo} alt="logo"/></Nav.Link>

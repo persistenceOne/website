@@ -56,6 +56,7 @@
       }
 
       .view {
+        margin: 0;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.314;
@@ -63,6 +64,10 @@
         text-decoration-line: underline !important;
         color: #E50913;
         cursor: pointer;
+      }
+      .view.coming-soon{
+        color: #80808E;
+        text-decoration-line:none !important;
       }
     }
   }
@@ -127,6 +132,9 @@
 
     .logo {
       padding: 50px 100px;
+      img{
+        width: 100%;
+      }
     }
   }
 }
@@ -134,7 +142,7 @@
 .section-sdk {
   .right-section {
     .logo {
-      background: linear-gradient(105.54deg, rgba(68, 29, 33, 0.44) 1%, #202024 100%);
+      //background: linear-gradient(105.54deg, rgba(68, 29, 33, 0.44) 1%, #202024 100%);
     }
   }
 }
@@ -144,7 +152,7 @@
   background: #26272A;
   .right-section {
     .logo {
-      background: linear-gradient(106.56deg, #31302A 1.05%, #26272A 101.87%);
+      //background: linear-gradient(106.56deg, #31302A 1.05%, #26272A 101.87%);
     }
   }
 }

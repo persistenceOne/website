@@ -1,5 +1,5 @@
 import React from "react";
-import sdk from "../../assets/images1/sdk.svg";
+import sdk from "../../assets/images1/technology_psdk.svg";
 const PersistenceSDK = () => {
     return (
             <section className="section-sdk">

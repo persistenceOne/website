@@ -6,7 +6,9 @@ import plend from '../../assets/images1/logos/plend_white.svg'
 import assetmantle from '../../assets/images1/mantle_white.svg'
 import audit from '../../assets/images1/logos/audit_white.svg'
 import Icon from "../../components/Icon";
-import comdex_overlay from "../../assets/images1/comdex_f.png"
+import comdex_overlay_bg from "../../assets/images1/comdex_overlay_bg.svg";
+import audit_overlay_bg from "../../assets/images1/audit_overlay_bg.svg";
+import pstake_overlay_bg from "../../assets/images1/pstake_overlay_bg.svg";
 
 const Products = () => {
     const {t} = useTranslation();
@@ -23,7 +25,7 @@ const Products = () => {
                         <div className="content comdex-info">
                             <div className="content-overlay"></div>
                             <img
-                                src={comdex_overlay}
+                                src={comdex_overlay_bg}
                                 alt="comdex"/>
 
 
@@ -33,32 +35,54 @@ const Products = () => {
                                 <img className="image-logo" src={comdex} alt="comdex-logo"/>
                                 <p className="overlay-subtext">Decentralize Comodity Trade</p>
                             </div>
-                            <a href="https://comdex.sg/"  rel="noopener noreferrer" target="_blank" className="overlay-button button"> Learn More <Icon viewClass="arrow-right"
-                                                                                 icon="arrow-right"/></a>
+                            <a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank"
+                               className="overlay-learn-more">
+                                <p> Learn More </p>
+                                <div className="">
+                                    <Icon
+                                        viewClass="arrow-right"
+                                        icon="arrow-right"/>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="content audit-info">
                             <div className="content-overlay"></div>
                             <img
-                                src={comdex_overlay}
+                                src={audit_overlay_bg}
                                 alt="comdex-logo"/>
                             <p className="overlay-text">Audit.one</p>
                             <img className="image-logo" src={audit} alt="audit-logo"/>
                             <p className="overlay-subtext">Stake your assets</p>
-                            <a href="http://audit.one/" rel="noopener noreferrer" target="_blank" className="overlay-button button" > Learn More <Icon viewClass="arrow-right"
-                                                                                 icon="arrow-right"/></a>
+                            <a href="http://audit.one/" rel="noopener noreferrer" target="_blank"
+                               className="overlay-learn-more">
+                                <p> Stake Now </p>
+                                <div className="">
+                                    <Icon
+                                        viewClass="arrow-right"
+                                        icon="arrow-right"/>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="content pstake-info">
                             <div className="content-overlay"></div>
                             <img
-                                src={comdex_overlay}
+                                src={pstake_overlay_bg}
                                 alt="comdex-logo"/>
                             <p className="overlay-text">pStake</p>
                             <img className="image-logo" src={pstake} alt="pstake-logo"/>
                             <p className="overlay-subtext">Unlock Liquidity</p>
+                            <div className="overlay-learn-more">
+                                <p> Coming Soon </p>
+                                <div className="">
+                                    <Icon
+                                        viewClass="arrow-right"
+                                        icon="arrow-right"/>
+                                </div>
+                            </div>
                             {/*<a href=""  target="_blank" className="overlay-button button"> Learn More <Icon viewClass="arrow-right"*/}
                             {/*                                                     icon="arrow-right"/></a>*/}
                         </div>
@@ -67,23 +91,17 @@ const Products = () => {
                         <div className="content-multiple">
                             <div className="content  mantle-info mantle-content">
                                 <div className="content-overlay"></div>
-                                <img
-                                    src={comdex_overlay}
-                                    alt="comdex-logo"/>
                                 <p className="overlay-text">Asset Mantle</p>
                                 <img className="image-logo" src={assetmantle} alt="assetmantle-logo"/>
-                                <p className="overlay-subtext coming-soon">Coming soon!</p>
+                                <p className="overlay-subtext coming-soon">Coming soon <span className="dot"></span></p>
                                 {/*<a href=""  target="_blank" className="overlay-button button"> Learn More <Icon viewClass="arrow-right"*/}
                                 {/*                                                     icon="arrow-right"/></a>*/}
                             </div>
                             <div className="content mantle-info plend-content">
                                 <div className="content-overlay"></div>
-                                <img
-                                    src={comdex_overlay}
-                                    alt="comdex-logo"/>
                                 <p className="overlay-text">pLend</p>
                                 <img className="image-logo" src={plend} alt="plend-logo"/>
-                                <p className="overlay-subtext coming-soon">Coming soon!</p>
+                                <p className="overlay-subtext coming-soon">Coming soon <span className="dot"></span></p>
                                 {/*<Button className="overlay-button"> Learn More <Icon viewClass="arrow-right"*/}
                                 {/*                                                  icon="arrow-right"/></Button>*/}
                             </div>

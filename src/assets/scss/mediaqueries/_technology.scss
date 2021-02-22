@@ -2,8 +2,11 @@
   .section-technology-banner{
     padding: 130px 0 100px 0;
   }
-  .section-sdk .right-section, .section-asset-mantle .right-section{
-    display: none;
+  .section-sdk .row, .section-asset-mantle .row{
+    flex-direction: column-reverse;
+  }
+    .section-sdk .right-section, .section-asset-mantle .right-section{
+justify-content: flex-start;
   }
   .section-sdk, .section-asset-mantle{
     padding: 50px 0;
@@ -17,5 +20,10 @@
   }
   .tools-section-boxes{
     padding: 50px 0;
+  }
+}
+@media (max-width: 1199.8px){
+  .section-sdk .right-section .logo, .section-asset-mantle .right-section .logo{
+    padding: 10px 0;
   }
 }
