@@ -252,6 +252,7 @@ a {
       }
 
       a.active {
+        color: #FFFFFF;
         &::first-letter {
           border-top: 2px solid #e50913;
         }

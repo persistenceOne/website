@@ -17,7 +17,7 @@ const Comdex = () => {
                             </p>
                             <div className="row1">
                                 <div className="data-card text-left">
-                                    <p className="value">$41M+</p>
+                                    <p className="value">$55M+</p>
                                     <p className="name">Transaction Volume</p>
                                 </div>
                                 <div className="data-card side-border text-center">

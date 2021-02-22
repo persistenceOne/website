@@ -116,6 +116,7 @@
       }
 
       &:hover .image-overlay {
+        transform: translate(-50%, 40%);
         opacity: 1;
       }
 
@@ -138,12 +139,13 @@
 
       .image-overlay {
         opacity: 0;
+        transform: translate(-50%, 80%);
         text-align: center;
         position: absolute;
         bottom: 120px;
         left: 50%;
-        transition: all 0.4s ease-in-out 0s;
-        transform: translate(-50%, 50%);
+        transition: all 0.2s linear;
+
 
         p {
           margin: 0;

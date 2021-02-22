@@ -23,7 +23,7 @@ const Technologies = () => {
                     <div className="list-item">
                         <img src={node} alt="sdk"/>
                         <p className="name">Validator Node</p>
-                        <p className="view">Coming Soon</p>
+                        <p className="view coming-soon">Coming Soon</p>
                     </div>
                     <div className="list-item">
                         <img src={paper} alt="sdk"/>

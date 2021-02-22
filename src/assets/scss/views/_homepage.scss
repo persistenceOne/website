@@ -326,13 +326,13 @@
       .comdex-info .content-overlay {
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url(./../../images1/audit-overlay.svg);
+        background-image: url(./../../images1/comdex_overlay.svg);
       }
   
       .audit-info .content-overlay {
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url(./../../images1/audit-overlay.svg);
+        background-image: url(./../../images1/audit_overlay.svg);
       }
   
       .pstake-info .content-overlay {
@@ -355,7 +355,7 @@
         display: flex;
         max-height: 53em;
         min-height: 42vw;
-        padding: 50px;
+        //padding: 50px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         //-webkit-flex-direction: column;
@@ -415,33 +415,33 @@
         bottom: 0%;
         //z-index: -2;
         height: 100%;
-        width: 100%;
+        width: auto;
         opacity: 0;
         //transition: all 0.1s ease-in-out 0s;
         -webkit-transition: all 0.4s ease-in-out 0s;
         -moz-transition: all 0.4s ease-in-out 0s;
         transition: all 0.4s ease-in-out 0s;
       }
-  
-      .overlay-button {
-        background: #E50913 !important;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08) !important;
-        border-radius: 32.8824px;
-        border: 0px solid !important;
-        font-weight: 500 !important;
-        font-size: 12px !important;
-        line-height: 1.8 !important;
-        text-align: center !important;
-        color: #FFFFFF !important;
-        padding: 8px 15px !important;
-        transform: translate(-50%, 50%);
-        left: 50%;
-        position: absolute;
-        .icon {
-          fill: #FFFFFF;
-          margin-left: 10px;
-        }
-      }
+
+      //.overlay-button {
+      //  background: #E50913 !important;
+      //  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08) !important;
+      //  border-radius: 32.8824px;
+      //  border: 0px solid !important;
+      //  font-weight: 500 !important;
+      //  font-size: 12px !important;
+      //  line-height: 1.8 !important;
+      //  text-align: center !important;
+      //  color: #FFFFFF !important;
+      //  padding: 8px 15px !important;
+      //  transform: translate(-50%, 50%);
+      //  left: 50%;
+      //  position: absolute;
+      //  .icon {
+      //    fill: #FFFFFF;
+      //    margin-left: 10px;
+      //  }
+      //}
   
       .overlay-text {
         position: absolute;
@@ -497,22 +497,55 @@
         font-weight: 500;
         font-size: 16px;
         color: #555555;
+        .dot{
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #555555;
+          display: inline-block;
+          margin: 0;
+        }
       }
-      .button {
+      .overlay-learn-more {
         opacity: 0;
         z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background: rgba(28, 28, 33, 0.6);
+        p{
+          margin: 0;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 180%;
+          /* identical to box height, or 22px */
+          color: #FFFFFF;
+        }
+        a{
+          padding: 10px;
+        }
+        .icon{
+          fill: #FFFFFF;
+        }
+        &:hover
+        {
+          background: #E50913;
+        }
         //  -webkit-transition: all 0.3s ease-in-out 0s;
         //-moz-transition: all 0.3s ease-in-out 0s;
         //transition: all 0.3s ease-in-out 0s;
       }
-  
+
       .content:hover .content-overlay {
         opacity: 0;
         -webkit-transition: all 0.4s ease-in-out 0s;
         -moz-transition: all 0.4s ease-in-out 0s;
         transition: all 0.4s ease-in-out 0s;
       }
-  
+      .content.plend-content, .content.mantle-content {
+        pointer-events: none;
+      }
       .content:hover .overlay-text {
         opacity: 0;
       }
@@ -525,7 +558,7 @@
   
       }
   
-      .content:hover .button {
+      .content:hover .overlay-learn-more {
         opacity: 1;
         -webkit-transition: all 0.4s ease-in-out 0s;
         -moz-transition: all 0.4s ease-in-out 0s;

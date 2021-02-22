@@ -87,11 +87,12 @@
   padding: 100px 0 100px 0;
   background-color: #1F2023;
   position: relative;
+
   .title-line-section {
     position: absolute;
     width: 100%;
     top: -23px;
-    text-transform:uppercase;
+    text-transform: uppercase;
   }
 
   .validators {
@@ -123,8 +124,9 @@
 
     .become-validator {
       display: flex;
-      padding:60px 50px 0px 50px;
+      padding: 60px 50px 0px 50px;
       justify-content: center;
+
       .text {
         flex: 1;
 
@@ -137,6 +139,9 @@
       }
 
       .button-list {
+        button.button {
+          padding: 8px 35px !important;
+        }
 
         .button-primary {
           border-radius: 0 !important;
@@ -408,12 +413,15 @@
   .section-title {
     color: #FFFFFF;
     padding-bottom: 100px;
+    span{
+      margin: 0;
+      display: inline-block;
+      &:first-letter{
+        border-top:5px solid #E50913;
+      }
+    }
   }
 
-  .accordion-button {
-    background: none;
-    border: 0px solid;
-  }
 
   .info {
     p {
@@ -424,14 +432,35 @@
       margin-bottom: 40px;
     }
 
+    button.button {
+      padding: 8px 35px !important;
+    }
+
     .button {
       padding: 12px 35px !important;
       border-radius: 0px !important;
     }
   }
+}
 
+.ecosystem-faq-section {
+  padding: 100px 0;
+  background: #1F2023;
+  .section-title{
+    color: #FFFFFF;
+    padding-bottom: 20px;;
+  }
+  .row{
+    justify-content: center;
+  }
   .accordion {
     padding-top: 40px;
+
+    .accordion-button {
+      background: none;
+      border: 0px solid ;
+      outline: 0;
+    }
 
     .card {
       background: transparent;

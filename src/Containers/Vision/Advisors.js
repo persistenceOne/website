@@ -23,7 +23,7 @@ const Advisors = () => {
                 <div className="adviser-text">
                     <p>{t("ADVISORS_INFO")}</p>
                 </div>
-                <div className="profiles">
+                <div className="profiles" data-aos="fade-up">
                     <div className="profile">
                         <img src={pic3} alt="box_build"/>
                         <div className="text-center">
@@ -39,7 +39,7 @@ const Advisors = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="profile">
+                    <div className="profile" data-aos="fade-up">
                         <img src={pic4} alt="box_build"/>
                         <div className="text-center">
                         <p className="name">Sandeep Nailwal</p>
@@ -56,7 +56,7 @@ const Advisors = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="profile">
+                    <div className="profile" data-aos="fade-up">
                         <img src={pic5} alt="box_build"/>
                         <div className="text-center">
                         <p className="name">Jeffrey Hu</p>
@@ -71,7 +71,7 @@ const Advisors = () => {
                     </div>
                 </div>
                 <div className="profiles">
-                    <div className="profile">
+                    <div className="profile" data-aos="fade-up">
                         <img src={pic3} alt="box_build"/>
                         <div className="text-center">
                             <p className="name">Jason Choi</p>
@@ -86,7 +86,7 @@ const Advisors = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="profile">
+                    <div className="profile" data-aos="fade-up">
                         <img src={pic4} alt="box_build"/>
                         <div className="text-center">
                             <p className="name">Sandeep Nailwal</p>
@@ -103,7 +103,7 @@ const Advisors = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="profile">
+                    <div className="profile" data-aos="fade-up">
                         <img src={pic5} alt="box_build"/>
                         <div className="text-center">
                             <p className="name">Jeffrey Hu</p>

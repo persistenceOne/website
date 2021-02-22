@@ -12,6 +12,7 @@ const Banner = () => {
         <section className="banner-section" data-aos="fade-up">
             <div className="container">
                 <div className="row">
+                    {/*data-aos="fade-up"  data-aos-delay="2000"*/}
                     <div className="col-md-6 col-sm-12">
                         <p className="caption">{t("BANNER_CAPTION")}</p>
                         <h3 className="banner-heading">Protocol Powering Next-Gen Financial Products</h3>

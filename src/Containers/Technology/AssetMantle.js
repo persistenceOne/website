@@ -1,5 +1,5 @@
 import React from "react";
-import mantle_white from "../../assets/images1/mantle_white.svg"
+import mantle_white from "../../assets/images1/technology_mantle.svg";
 
 const AssetMantle = () => {
     return (

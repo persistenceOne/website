@@ -9,7 +9,7 @@ import Icon from "../../Icon";
 
 const socialList = [
     {
-        url: 'https://t.me/PersistenceOne',
+        url: 'https://twitter.com/PersistenceOne',
         iconName: 'twitter-logo',
         tooltip:'twitter'
     },
@@ -18,19 +18,19 @@ const socialList = [
         iconName: 'telegram-plane',
         tooltip:'telegram'
     }, {
-        url: 'https://t.me/PersistenceOne',
+        url: 'https://t.me/PersistenceOneChat',
         iconName: 'chat',
         tooltip:'chat'
     }, {
-        url: 'https://www.linkedin.com/company/persistenceone/',
+        url: 'https://t.me/PersistenceOne',
         iconName: 'announcements',
         tooltip:'announcements'
     }, {
-        url: 'https://t.me/PersistenceOne',
+        url: 'https://discord.gg/SaBKpjbnhH',
         iconName: 'discord',
         tooltip:'discord'
     }, {
-        url: 'https://t.me/PersistenceOne',
+        url: 'https://www.reddit.com/r/PersistenceOne/',
         iconName: 'reddit-round',
         tooltip:'reddit'
     }, {
@@ -42,7 +42,7 @@ const socialList = [
         iconName: 'medium-m',
         tooltip:'medium'
     }, {
-        url: 'https://www.reddit.com/r/PersistenceOne/',
+        url: 'https://www.linkedin.com/company/persistenceone/',
         iconName: 'linkedin-footer',
         tooltip:'linkedIn'
     },
@@ -64,7 +64,7 @@ class Footer extends Component {
                             <div className="col-lg-8 col-md-12">
                                 <div className="row m-0">
                                     <div className="col-lg-4 col-md-6 col-sm-12 margin-t-20 ">
-                                        <h6>Company</h6>
+                                        <h6>About</h6>
                                         <div className="text-muted mt-30">
                                             <ul className="list-unstyled footer-list">
                                                 <li><Link to="/vision">Company</Link></li>
@@ -82,9 +82,9 @@ class Footer extends Component {
                                             <ul className="list-unstyled footer-list">
                                                 <li><a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank">Comdex</a></li>
                                                 <li><p className="inactive" title="Coming Soon">Asset Mantle</p></li>
-                                                <li><p className="inactive"title="Coming Soon">pStake</p></li>
+                                                <li><p className="inactive" title="Coming Soon">pStake</p></li>
                                                 <li><a href="https://audit.one/" rel="noopener noreferrer" target="_blank">Audit.one</a></li>
-                                                <li><p className="inactive"title="Coming Soon">pLend</p></li>
+                                                <li><p className="inactive" title="Coming Soon">pLend</p></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@ class Footer extends Component {
                                         <div className="text-muted mt-30">
                                             {/*<p className="footer-text">2972 Westheimer Rd. Santa Ana, Illinois*/}
                                             {/*    85486 </p>*/}
-                                            <a className="footer-text" href="mailto:someone@example.com">hello@perstistence.one</a>
+                                            <a className="footer-text" href="mailto:someone@example.com">hello@persistence.one</a>
                                         </div>
                                     </div>
                                 </div>
