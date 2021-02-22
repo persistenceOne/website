@@ -24,3 +24,14 @@
     right: 0;
   }
 }
+@media (max-width: 575.8px) {
+  .adviser-section .proileContainer{
+    width: 280px;
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 1200px) {
+  .adviser-section .profiles-group{
+    justify-content: center;
+  }
+}
