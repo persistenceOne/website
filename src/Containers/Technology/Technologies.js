@@ -7,7 +7,7 @@ import whitepaper from "../../assets/images1/whitepaper.pdf";
 import explorer from "../../assets/images1/technology/explorer.svg";
 const Technologies = () => {
     return (
-        <section className="section-technology-list">
+        <section className="section-technology-list" data-aos="fade">
             <div className="container">
                 <div className="list">
                     <div className="list-item">

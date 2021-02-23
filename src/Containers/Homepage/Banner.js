@@ -3,6 +3,7 @@ import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
 import curvedBorder from '../../assets/images1/curvedBorder.svg'
 import {NavLink} from "react-router-dom";
+// import Persistence from "../../assets/Persistence_3.mp4";
 const Banner = () => {
     const {t} = useTranslation();
     const handleScroll = () =>{
@@ -47,6 +48,14 @@ const Banner = () => {
 
                     </div>
                     <div className="col-md-6 col-sm-12 content">
+                        {/*<div>*/}
+                        {/*<video className="banner-video" autoPlay="autoplay" preload loop="loop"*/}
+                        {/*       muted src={Persistence}>*/}
+                        {/*    <source type="video/webm" src={Persistence}/>*/}
+                        {/*    <source type="video/mp4" src={Persistence}/>*/}
+                        {/*    <source type="video/ogg" src={Persistence}/>*/}
+                        {/*</video>*/}
+                        {/*</div>*/}
                         <div className="content-box">
                         <p className="banner-content"> Bridging the gap between traditional finance and DeFi by facilitating the easy free flow of assets.</p>
                         <img src={curvedBorder} alt="curvedBorder" className="curve"/>

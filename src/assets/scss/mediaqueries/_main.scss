@@ -59,4 +59,8 @@
   }
 
 }
-
+@media (min-width: 768px) and (max-width: 991.8px) {
+.footer .contact-us{
+justify-content: flex-start;
+}
+}

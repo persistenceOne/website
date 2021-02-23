@@ -46,7 +46,7 @@ class BackersTabs extends Component {
                         <a href="http://arringtonxrpcapital.com/companies/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={arrington} alt="Arrington" /></a>
                         <a href="https://lunex.vc/" target="_blank" className="reveal-scale-up" rel="noopener noreferrer"><img className="logo-img" src={lunex} alt="LuneX" /></a>
                         <a href="https://woodstockfund.com/#portfolio" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={woodstock} alt="Woodstock" /></a>
-                        <a href="https://au21.capital/portfolio-1" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={au21} alt="Au21" /></a>
+                        <a href="https://au21.capital/portfolio" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={au21} alt="Au21" /></a>
                         <a href="https://www.sparkdigitalcapital.com/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Spark} alt="Spark" /></a>
                     </div>
                     <div className="common-row second-row">
