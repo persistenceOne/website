@@ -7,6 +7,7 @@ import dropdown_asset from "../../assets/images1/dropdown_asset.svg"
 import dropdown_comdex from "../../assets/images1/dropdown_comdex.svg"
 import dropdown_audit from "../../assets/images1/dropdown_audit.svg"
 import dropdown_pstake from "../../assets/images1/dropdown_pstake.svg"
+
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -171,7 +172,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <img src={dropdown_comdex} alt="dropdown_asset" />
+                                                            <img src={dropdown_comdex} alt="dropdown_asset"/>
                                                         </div>
                                                         Comdex
                                                     </a>
@@ -181,7 +182,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <img src={dropdown_audit} alt="dropdown_asset" />
+                                                            <img src={dropdown_audit} alt="dropdown_asset"/>
                                                         </div>
                                                         Audit.one
                                                     </a>
@@ -191,7 +192,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <img src={dropdown_pstake} alt="dropdown_asset" />
+                                                            <img src={dropdown_pstake} alt="dropdown_asset"/>
                                                         </div>
                                                         PStake
                                                     </a>
@@ -201,7 +202,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <img src={dropdown_asset} alt="dropdown_asset" />
+                                                            <img src={dropdown_asset} alt="dropdown_asset"/>
                                                         </div>
                                                         Asset Mantle
                                                     </a>
@@ -210,7 +211,7 @@ class Header extends Component {
                                                         onMouseOver={() => this.onHoverProducts('plend-tab')}
                                                         to="/products" onClick={() => this.setActiveTab('/products')}>
                                                         <div className="dropdown-image">
-                                                            <img src={dropdown_pstake} alt="dropdown_asset" />
+                                                            <img src={dropdown_pstake} alt="dropdown_asset"/>
                                                         </div>
                                                         pLend
                                                     </NavLink>
@@ -236,9 +237,9 @@ class Header extends Component {
                                                            className="button">Learn More</a>
                                                     </div>
                                                     <div className="item stake-drop" id="pstake-tab">
-                                                        <p>Liquid staking application to unlock liquidity for staked
-                                                            assets, allowing stakers to boost yields from their staked
-                                                            assets.
+                                                        <p> Liquid staking application to unlock liquidity of staked
+                                                            assets allowing stakers to generate higher returns on their
+                                                            staked assets.
                                                         </p>
                                                         <a href="https://twitter.com/pStakeFinance"
                                                            rel="noopener noreferrer"
@@ -246,7 +247,9 @@ class Header extends Component {
                                                            className="button">Learn More</a>
                                                     </div>
                                                     <div className="item stake-drop" id="mantle-tab">
-                                                        <p>Application implementing the minimum clique of PersistenceSDK modules enabling interchain NFT definition, issuance, ownership transfer and decentralized exchange.</p>
+                                                        <p>Application implementing the minimum clique of PersistenceSDK
+                                                            modules enabling interchain NFT definition, issuance,
+                                                            ownership transfer and decentralized exchange.</p>
                                                         <a href="https://twitter.com/AssetMantle"
                                                            rel="noopener noreferrer"
                                                            target="_blank"

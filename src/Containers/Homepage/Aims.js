@@ -7,7 +7,7 @@ import triangle from "../../assets/images1/float_blocks/triangle.svg";
 const Aims = () => {
     return (
         <section className="aim-section">
-            <h3 className="section-title"> What are our focuses?</h3>
+            <h3 className="section-title"> What is our focus?</h3>
             <div className="container">
                 <div className="row row-margin-nft">
                             <div className="col-md-12 col-lg-6 img-section">
@@ -39,7 +39,7 @@ const Aims = () => {
                                         <Icon viewClass="liquidity" icon="nft"/>
                                         </div>
                                         <div className="media-body">
-                                            <h5 className="primary-white-color">Non-Fungible Token (NFT)</h5>
+                                            <h5 className="primary-white-color">Non-Fungible Tokens (NFTs)</h5>
                                             <p className="pt-2">Making real-world and digital assets, such as invoices, collectibles and art, more accessible.</p>
                                         </div>
                                     </div>

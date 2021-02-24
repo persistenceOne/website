@@ -58,7 +58,7 @@ const Banner = () => {
                         </video>
                         </div>
                         <div className="content-box">
-                        <p className="banner-content">Bridging the gap between traditional finance and DeFi by facilitating the easy flow of assets.</p>
+                        <p className="banner-content">Building an ecosystem of financial products to serve institutional and crypto-native users.</p>
                         <img src={curvedBorder} alt="curvedBorder" className="curve"/>
                         </div>
                     </div>

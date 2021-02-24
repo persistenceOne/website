@@ -11,8 +11,8 @@ const Products = () => {
         <section className="product-section">
             <div className="container">
                 <h3 className="section-title">What are we building?</h3>
-                <p className="section-info">Persistence is building a suite of financial products, focusing on both
-                    institutional and crypto-native use-cases.</p>
+                <p className="section-info">Persistence is building an ecosystem of financial products, focusing on
+                    both, institutional and crypto-native use cases.</p>
             </div>
             <div className="">
                 <div className="row">
@@ -48,7 +48,7 @@ const Products = () => {
                                 <div className="bg-overlay-image audit">
                                 </div>
                             </div>
-                            <p className="overlay-text">Audit.one</p>
+                            <p className="overlay-text">AUDIT.one</p>
                             <img className="image-logo" src={audit} alt="audit-logo"/>
                             <p className="overlay-subtext">Staking-as-a-Service</p>
                             <a href="http://audit.one/" rel="noopener noreferrer" target="_blank"
