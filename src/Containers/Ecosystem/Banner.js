@@ -11,8 +11,7 @@ const Banner = () => {
     return (
         <section className="section-ecosystem-banner" data-aos="fade-up">
             <div className="container">
-                <h3 className="section-title">Ecosystem is the final frontier for any decentralised network.</h3>
-                {/*<p className="info">Persistence Ecosystem is the final frontier for any decentralised network</p>*/}
+                <h3 className="section-title">Ecosystem</h3>
                 <div className="social-links">
                     <div className="link">
                         <div className="outer-box">
@@ -20,7 +19,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="telegram-plane"/>
                             </div>
                         </div>
-                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">/PersistenceOne</a>
+                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">Community Chat</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -44,7 +43,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="twitter-logo"/>
                             </div>
                         </div>
-                        <a className="text" href="https://twitter.com/hu_zhiwei" rel="noopener noreferrer" target="_blank">Twitter Page</a>
+                        <a className="text" href="https://twitter.com/hu_zhiwei" rel="noopener noreferrer" target="_blank">Twitter</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">

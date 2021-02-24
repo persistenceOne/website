@@ -10,7 +10,7 @@ const Boxes = () => {
                    <div className="col-lg-4 col-md-6 col-sm-12">
                        <div className="box">
                            <img src={box_innovate} alt="box_build"/>
-                           <p>Innovate to stay ahead</p>
+                           <p>Operate on the bleeding-edge of technology</p>
                        </div>
                    </div>
                    <div className="col-lg-4 col-md-6 col-sm-12">

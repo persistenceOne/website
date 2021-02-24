@@ -17,7 +17,7 @@ const Banner = () => {
                             ‘real-world’ debt.</p>
                         <div className="quote-section">
                             <p className="quote-text">Data flows like water today.
-                                <span> Digital Assets flow like water tomorrow.</span>
+                                <span> Digital assets flow like water tomorrow.</span>
                             </p>
                             <img src={curved_line} alt="curved_line"/>
                         </div>
@@ -29,5 +29,5 @@ const Banner = () => {
             </div>
         </section>
     )
-}
+};
 export default Banner;

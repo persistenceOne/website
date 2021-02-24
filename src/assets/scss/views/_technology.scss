@@ -12,6 +12,7 @@
     width: 100%;
   }
   .content-box {
+    position: relative;
     .row {
       align-items: center;
     }
@@ -29,6 +30,10 @@
       line-height: 2;
       color: #ACACAC;
     }
+    //.curve-image{
+    //  position: absolute;
+    //  right: 0;
+    //}
   }
 }
 
@@ -121,6 +126,9 @@
         color: #FFFFFF;
         padding: 12px 35px !important;
         box-shadow: none;
+        &:hover{
+          background: #E50913;
+        }
       }
     }
   }

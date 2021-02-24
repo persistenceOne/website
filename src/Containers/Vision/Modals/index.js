@@ -11,8 +11,8 @@ const data = [
     {
         key: 'tushar',
         name: 'Tushar Aggarwal',
-        about: 'Tushar helped to set up LuneX Ventures - first regulated Crypto VC fund in Southeast Asia (Crypto arm of a ’Traditional’ Singapore VC called Golden Gate Ventures).Written extensively on Blockchain/Crypto on Tech in Asia and previously host of Decrypt Asia Podcast',
-        role: 'CEO',
+        about: 'Tushar helped to set up LuneX Ventures - first regulated Crypto VC fund in Southeast Asia (Crypto arm of a ’Traditional’ Singapore VC called Golden Gate Ventures). Written extensively on Blockchain/Crypto on Tech in Asia and previously host of Decrypt Asia Podcast.',
+        role: 'CEO and Co-founder',
         twitter: 'https://twitter.com/Tushar307',
         linkedIn: 'https://www.linkedin.com/in/tushar-aggarwal-2823b02b/',
         img: Tushar
@@ -20,8 +20,8 @@ const data = [
     {
         key: 'deepanshu',
         name: 'Deepanshu Tripati',
-        about: 'Part of a three-person team to create a unified payment acceptance platform. White-labeled to Reliance (invested by Facebook, etc) eventually sold to African Fintech for $9M USD. Performed world’s first ever Inter-Blockchain NFT transfer',
-        role: 'CTO, Persistence',
+        about: 'Part of a three-person team to create a unified payment acceptance platform. White-labeled to Reliance (invested by Facebook, etc) eventually sold to African Fintech for $9M USD. Performed world’s first ever Inter-Blockchain NFT transfer.',
+        role: 'CTO and Co-founder, Persistence',
         twitter: 'https://twitter.com/deepanshutr',
         linkedIn: 'https://www.linkedin.com/in/deepanshutr/',
         img: deepanshu
@@ -30,7 +30,7 @@ const data = [
     {
         key: 'jason',
         name: 'Jason Choi',
-        about: 'Jason is a host of the most popular Asian Crypto Podcast called The Blockcrunch. Jason has been and will be providing inputs on positioning of product, branding, marketing',
+        about: 'Jason is a host of the most popular Asian Crypto Podcast called The Blockcrunch. Jason has been and will be providing inputs on positioning of product, branding, marketing.',
         role: 'Head of Research, Spartan Capital',
         twitter: 'https://twitter.com/mrjasonchoi',
         linkedIn: 'https://www.linkedin.com/in/jasonhtchoi/',
@@ -39,7 +39,7 @@ const data = [
     {
         key: 'sandeep',
         name: 'Sandeep Nailwal',
-        about: 'Matic Network is a very successful project from India which was also part of the Binance Launchpad initiative. Sandeep is helping bridge connections to media and assist on token management',
+        about: 'Matic Network is a very successful project from India which was also part of the Binance Launchpad initiative. Sandeep is helping bridge connections to media and assist on token management.',
         role: 'Co-founder and COO, Matic Network',
         twitter: 'https://twitter.com/sandeepnailwal',
         linkedIn: 'https://www.linkedin.com/in/sandeep-nailwal-60709a33/',
@@ -48,7 +48,7 @@ const data = [
     {
         key: 'jeffrey',
         name: 'Jeffrey Hu',
-        about: 'Jeffrey is the Director of Research at IRISnet (China hub of Cosmos) and is primarily helping on giving exposure to Persistence in China as a fellow Tendermint Project',
+        about: 'Jeffrey is the Director of Research at IRISnet (China hub of Cosmos) and is primarily helping on giving exposure to Persistence in China as a fellow Tendermint Project.',
         role: 'Director of Research, IRIS Network',
         twitter: 'https://twitter.com/hu_zhiwei',
         linkedIn: null,
@@ -66,8 +66,6 @@ const Modal = (props) => {
     return (
         <div>
             <ReactModal show={show} onHide={handleClose} className="info-modal" centered>
-                {/*<ReactModa.Header closeButton>*/}
-                {/*</ReactModa.Header>*/}
                 <ReactModal.Body>
                     {
                         data.map((item, index) => {

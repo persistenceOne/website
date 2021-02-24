@@ -1,6 +1,5 @@
 import React from "react";
 import cointelegraph from "../../assets/images1/featured/CT.png";
-// import yahoofinance from "../../assets/images1/featured/YF.png";
 import financemagnet from "../../assets/images1/featured/FM.png";
 import chainnews from "../../assets/images1/featured/chainnews.png";
 import dsa from "../../assets/images1/featured/dsa.png";
@@ -10,7 +9,7 @@ import Image from "../../components/elements/Image";
 const Featured = () => {
     return (
         <section className="featured-on">
-            <h3 className="section-title">As Seen on</h3>
+            <h3 className="section-title">As seen on</h3>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
@@ -25,12 +24,7 @@ const Featured = () => {
                                     alt="Coindesk"
                                 />
                             </a>
-                            {/*<a href="https://finance.yahoo.com/news/comdex-completes-over-10m-worth-070800123.html?guccounter=1"*/}
-                            {/*   target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">*/}
-                            {/*    <img className="logo-img"*/}
-                            {/*         src={yahoofinance}*/}
-                            {/*         alt="Yahoo Finance"/>*/}
-                            {/*</a>*/}
+
                             <a href="https://www.financemagnates.com/cryptocurrency/news/all-eyes-on-india-as-supreme-court-crypto-case-advances/"
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                 <img className="logo-img"
@@ -67,5 +61,5 @@ const Featured = () => {
             </div>
         </section>
     )
-}
+};
 export default Featured;

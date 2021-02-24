@@ -18,10 +18,16 @@ justify-content: flex-start;
       margin: 0px 5px 10px 5px;
     }
   }
+}
+@media (max-width: 991.8px) {
+  .section-sdk, .section-asset-mantle{
+    padding: 70px 0;
+  }
   .tools-section-boxes{
-    padding: 50px 0;
+    padding: 70px 0;
   }
 }
+
 @media (max-width: 1199.8px){
   .section-sdk .right-section .logo, .section-asset-mantle .right-section .logo{
     padding: 10px 0;

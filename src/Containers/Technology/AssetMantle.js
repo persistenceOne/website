@@ -9,7 +9,7 @@ const AssetMantle = () => {
                     <div className="row">
                         <div className="col-md-6 left-section">
                             <p className="sub-text">Build your own NFT marketplace</p>
-                            <h3 className="title">Mantle Chain</h3>
+                            <h3 className="title">Asset Mantle</h3>
                             <p className="text">Application implementing the minimum clique of PersistenceSDK modules
                                 enabling interchain NFT definition, issuance, ownership transfer and decentralized
                                 exchange.

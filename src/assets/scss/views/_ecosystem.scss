@@ -81,6 +81,7 @@
       }
     }
   }
+
 }
 
 .validators-section {
@@ -105,7 +106,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 150px;
+      padding: 10px 150px;
 
       a {
         width: 200px;
@@ -126,7 +127,7 @@
       display: flex;
       padding: 60px 50px 0px 50px;
       justify-content: center;
-
+      align-items: center;
       .text {
         flex: 1;
 
@@ -164,6 +165,9 @@
           padding: 12px 35px !important;
           box-shadow: none;
           margin-bottom: 10px;
+          &:hover{
+            background: #E50913;
+          }
         }
       }
     }
@@ -421,7 +425,10 @@
       }
     }
   }
-
+  .info-section{
+    display: flex;
+    align-items: center;
+  }
 
   .info {
     p {
@@ -429,7 +436,6 @@
       font-size: 14px;
       line-height: 200%;
       color: #ACACAC;
-      margin-bottom: 40px;
     }
 
     button.button {

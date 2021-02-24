@@ -1,19 +1,16 @@
 import React from "react";
 import Icon from "../../components/Icon";
-import {useTranslation} from "react-i18next";
 import square from "../../assets/images1/float_blocks/square.svg";
 import circle from "../../assets/images1/float_blocks/circle.svg";
 import triangle from "../../assets/images1/float_blocks/triangle.svg";
 
 const Aims = () => {
-    const {t} = useTranslation();
     return (
         <section className="aim-section">
-            <h3 className="section-title">{t("AIM_SECTION_TITLE")}</h3>
+            <h3 className="section-title"> What are our focuses?</h3>
             <div className="container">
                 <div className="row row-margin-nft">
                             <div className="col-md-12 col-lg-6 img-section">
-                                {/*<img src={aimbg} alt="aim_bg"/>*/}
                                 <img src={square} alt="square" className="square"/>
                                 <img src={circle} alt="circle" className="circle"/>
                                 <img src={triangle} alt="triangle" className="triangle"/>
@@ -25,11 +22,11 @@ const Aims = () => {
                                     </div>
                                     <div className="serviceBody">
                                         <div className="icon-section">
-                                        <Icon viewClass="accessibility" icon="accessibility"/>
+                                        <Icon viewClass="accessibility" icon="defi"/>
                                         </div>
                                         <div className="media-body">
-                                            <h5 className="primary-white-color">{t("ACCESSIBILITY")}</h5>
-                                            <p className="pt-2">{t("ACCESSIBILITY_INFO")}</p>
+                                            <h5 className="primary-white-color">Decentralized Finance (DeFi)</h5>
+                                            <p className="pt-2">Enabling users to interact with both traditional and digital assets in an open and global context.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -39,11 +36,11 @@ const Aims = () => {
                                     </div>
                                     <div className="serviceBody">
                                         <div className="icon-section">
-                                        <Icon viewClass="liquidity" icon="liquidity"/>
+                                        <Icon viewClass="liquidity" icon="nft"/>
                                         </div>
                                         <div className="media-body">
-                                            <h5 className="primary-white-color">{t("LIQUIDITY")}</h5>
-                                            <p className="pt-2">{t("LIQUIDITY_INFO")}</p>
+                                            <h5 className="primary-white-color">Non-Fungible Token (NFT)</h5>
+                                            <p className="pt-2">Making real-world and digital assets, such as invoices, collectibles and art, more accessible</p>
                                         </div>
                                     </div>
                                 </div>
@@ -53,11 +50,11 @@ const Aims = () => {
                                     </div>
                                     <div className="serviceBody">
                                         <div className="icon-section">
-                                        <Icon viewClass="sustainability" icon="sustainability"/>
+                                        <Icon viewClass="sustainability" icon="pos"/>
                                         </div>
                                         <div className="media-body">
-                                            <h5 className="primary-white-color">{t("SUSTAINABILITY")}</h5>
-                                            <p className="pt-2">{t("SUSTAINABILITY_INFO")}</p>
+                                            <h5 className="primary-white-color">Proof-of-Stake (PoS)</h5>
+                                            <p className="pt-2">Creating products to generate opportunities and address challenges around the novel PoS consensus mechanism in a multi-chain environment.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -66,5 +63,5 @@ const Aims = () => {
             </div>
         </section>
     )
-}
+};
 export default Aims;

@@ -16,7 +16,7 @@ import iris_icon from '../../assets/images1/stakedrop/iris.svg';
 import banner2 from '../../assets/images1/stakedrop/banner2.svg';
 import cosmos_tutorial from '../../assets/images1/stakedrop/cosmos-tutorial.svg';
 import mechanism from '../../assets/images1/stakedrop/mechanism.svg';
-
+import stakedropmandarin from '../../assets/images1/stakedropmandarin.pdf';
 const questionList = [
     {
         question: 'What is the Persistence StakeDrop?',
@@ -247,7 +247,6 @@ class StakedropMainPage extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom"/><span><h6>Completed!</h6>
-                                                    {/* <button onClick={this.handleModel}>Participate</button> */}
                                                     <Link onClick={this.onClickViewCosmos} className="viewcampaign"
                                                           to="/StakeDropCosmos">View</Link></span>
                                                 </div>
@@ -452,7 +451,7 @@ class StakedropMainPage extends React.Component {
                                                     <div className="col-lg-6 tutorial-links">
                                                         <div className="link-section">
                                                             <p>Matic StakeDrop Blog [Mandarin]</p>
-                                                            <a href="/stakedropmandarin.pdf" target="_blank"
+                                                            <a href={stakedropmandarin} target="_blank"
                                                                rel="noopener noreferrer">Check here</a>
                                                         </div>
                                                     </div>

@@ -51,6 +51,11 @@
       text-align: center;
     }
   }
+  .product-section .col-md-3 {
+    .content-upcoming.mantle-content, .content-upcoming.plend-content {
+      min-height: 60vw;
+    }
+  }
 }
 
 @media (max-width: 575.8px) {

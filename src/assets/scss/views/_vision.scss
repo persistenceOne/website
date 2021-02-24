@@ -32,6 +32,7 @@
     position: relative;
 
     .quote-text {
+      font-family: 'Poppins', sans-serif;
       font-weight: bold;
       font-size: 18px;
       background-image: url(./../../images1/quote-image.svg);
@@ -47,7 +48,7 @@
     img {
       position: absolute;
       right: -20px;
-      bottom: -15px;
+      bottom: -20px;
     }
   }
 
@@ -179,6 +180,22 @@
           }
         }
       }
+      .more-box{
+        width: 280px;
+        height: 280px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        p{
+          text-align: left;
+          font-weight: bold;
+          font-size: 18px;
+          color: #212529;
+          margin: 0;
+        }
+      }
     }
   }
 }
@@ -295,8 +312,10 @@
     margin-bottom: 50px;
     width: 370px;
     padding: 0px 10px;
+    margin: 0 10px 20px 0;
+    padding: 0px 10px;
+    border: 1px solid #F5F5F5;
     .bg-advisors {
-      border: 1px solid #F5F5F5;
       background-image: url(./../../images1/adivser_bg.svg);
       background-repeat: no-repeat;
       background-size: contain;
@@ -352,7 +371,9 @@
     .profile-picture {
       .social-icons {
         margin: 15px;
-
+        .icon:hover{
+          fill: #E50913 ;
+        }
         a {
           padding: 0px 5px;
         }

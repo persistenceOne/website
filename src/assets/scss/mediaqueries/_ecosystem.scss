@@ -43,6 +43,36 @@
       width: 100%;
       margin-bottom: 20px;
     }
+
+    padding: 70px 0;
+
+    .title-line-section {
+      padding: 0 0 70px 0;
+    }
+  }
+  .validators-section {
+    padding: 70px 0;
+
+    .title-line-section {
+      padding: 0 0 70px 0;
+    }
+  }
+  .xprt-section {
+    padding: 70px 0;
+
+    .title-line-section {
+      padding: 0 0 70px 0;
+    }
+  }
+  .internft-section {
+    padding: 0 0 70px;
+
+    .title-line-section {
+      padding: 0 0 70px;
+    }
+  }
+  .ecosystem-faq-section {
+    padding: 70px 0;
   }
 }
 
@@ -64,8 +94,9 @@
   //  padding: 50px 0 50px 0;
   //}
 }
+
 @media (max-width: 575.8px) {
-  .validators-section .validators .common-row{
+  .validators-section .validators .common-row {
     justify-content: center;
   }
 }

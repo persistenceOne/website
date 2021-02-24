@@ -10,8 +10,11 @@
       padding-right: 15px;
     }
   }
-  .adviser-section .adviser-text{
-    padding: 0;
+  .adviser-section{
+    padding: 70px 0;
+    .adviser-text{
+      padding: 0;
+    }
   }
 }
 @media (min-width: 1400px) {
