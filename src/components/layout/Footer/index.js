@@ -4,8 +4,8 @@ import whitepaper from '../../../assets/images1/whitepaper.pdf'
 import Mailchimp from "./MailChimp";
 import {Link} from 'react-router-dom';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
-// import ScrollToTop from 'react-scroll-up';
 import Icon from "../../Icon";
+import ScrollToTop from "react-scroll-up";
 
 const socialList = [
     {
@@ -46,9 +46,7 @@ const socialList = [
 ];
 
 class Footer extends Component {
-    scrollTop() {
-        window.scrollTo(0, 0);
-    }
+
     render() {
         return (
             <>
@@ -138,9 +136,10 @@ class Footer extends Component {
                             <img className="dark-logo" src={icon} alt="icon-logo" title="logo"/>
                             <p className="copy-rights mb-sm-0">{new Date().getFullYear()} © Persistence</p>
                             <div>
-                                <div className="go-top" onClick={this.scrollTop}>
-
+                                <div className="go-top">
+                                    <ScrollToTop showUnder={160}>
                                         <Icon viewClass="social_icon_imgg" icon="gotop"/>
+                                    </ScrollToTop>
 
                                 </div>
                             </div>
