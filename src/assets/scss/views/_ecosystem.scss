@@ -78,6 +78,10 @@
         line-height: 1.434;
         text-align: center;
         color: #E8EEF4;
+        &:hover
+        {
+          text-decoration: underline !important;
+        }
       }
     }
   }

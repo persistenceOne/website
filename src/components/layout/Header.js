@@ -65,8 +65,8 @@ class Header extends Component {
             document.getElementById(id).classList.add('show');
             this.setState({productActiveTab: id});
         }
-
     }
+
     onHover(id) {
         const curretnTab = this.state.activeTab;
         if (document.getElementById(curretnTab).classList.contains('show')) {
@@ -164,7 +164,7 @@ class Header extends Component {
                                                 <div className="items">
                                                     <a className="nav-link dropdown-item primary-medium-color"
                                                        onMouseOver={() => this.onHoverProducts('comdex-tab')}
-                                                       href="https://twitter.com/pStakeFinance"
+                                                       href="https://comdex.sg/"
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
@@ -345,7 +345,9 @@ class Header extends Component {
                                                             wide distribution of XPRT tokens among PoS token holders
                                                             familiar with staking, thus accelerating the
                                                             decentralisation of the Persistence mainnet once live. </p>
-                                                        <NavLink to='/stakedrop' className="button">Open app</NavLink>
+                                                        <a href="/stakedrop" rel="noopener noreferrer"
+                                                           target="_blank"
+                                                           className="button">Open app</a>
                                                     </div>
                                                     <div className="item stake-drop" id="validators-tab">
                                                         <p>A network is only as strong as its validators. The

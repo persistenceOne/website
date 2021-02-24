@@ -23,7 +23,7 @@ const Validators = () => {
                     <div className="common-row first-row">
                         <a href="https://dokia.capital/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={dokia} alt="Dokia" /></a>
                         <a href="https://www.cosmostation.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Cosmostation} alt="Cosmostation" /></a>
-                        <a href="https://sg-1.online/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={audit} alt="audit" /></a>
+                        <a href="https://audit.one/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={audit} alt="audit" /></a>
                         <a href="https://stake.fish/en/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={stakefish} alt="Stakefish" /></a>
                     </div>
                     <div className="common-row second-row">
@@ -43,7 +43,7 @@ const Validators = () => {
                             <p>A network is only as strong as its validators. The Persistence network is secured by leading PoS validators running institutional-grade architecture, geographically distributed across the world. Validators in our ecosystem secure more than $700M USD worth of assets collectively.</p>
                         </div>
                         <div className="col-lg-5 col-md-12 button-list">
-                            <button className="button-primary button" title="Coming Soon" disabled>Become a Validator</button>
+                            <a href="https://forms.gle/EcHn9W9JADTaPXGHA" className="button-primary button" rel="noopener noreferrer" target="_blank">Become a Validator</a>
                             <a href="https://explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">Explorer</a>
                         </div>
                     </div>
