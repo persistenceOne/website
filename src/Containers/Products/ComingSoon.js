@@ -11,12 +11,11 @@ const ComingSoon = () => {
                     <div className="product">
                         <img src={mantle} alt="mantle-logo"/>
                         <p>NFT Marketplace Framework</p>
-                        <a href="https://twitter.com/assetmantle" rel="noopener noreferrer" target="_blank">Join</a>
+                        <a href="https://twitter.com/AssetMantle" rel="noopener noreferrer" target="_blank">Learn More</a>
                     </div>
                     <div className="product">
                         <img src={plend} alt="mantle-logo"/>
                         <p>Debt Financing dApp</p>
-                        <a href="https://twitter.com/assetmantle" rel="noopener noreferrer" target="_blank">Join</a>
                     </div>
                 </div>
             </div>

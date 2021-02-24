@@ -5,11 +5,11 @@ import Comdex from "../../Containers/Products/Comdex";
 import Pstake from "../../Containers/Products/Pstake";
 import Audit from "../../Containers/Products/Audit";
 import ComingSoon from "../../Containers/Products/ComingSoon";
+
 const Products = () => {
     return (
         <>
             <Animation/>
-            {/*<ProductSwiper/>*/}
             <Comdex/>
             <Pstake/>
             <Audit/>
@@ -18,5 +18,5 @@ const Products = () => {
 
         </>
     )
-}
+};
 export default Products;

@@ -51,7 +51,7 @@ const Faq = () => {
                                     <Card>
                                         <Card.Header>
                                             <p>
-                                                How to acquire?
+                                                How to acquire XPRT?
                                             </p>
                                             <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
                                         </Card.Header>

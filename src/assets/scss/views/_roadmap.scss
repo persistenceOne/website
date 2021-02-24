@@ -11,27 +11,6 @@
   }
 
   .content {
-    //display: flex;
-    //align-items: center;
-    //border-top: 1px solid #313238;
-    //
-    //.year-text {
-    //  font-weight: bold;
-    //  font-size: 72px;
-    //  line-height: 88px;
-    //  text-align: center;
-    //  letter-spacing: 0.1em;
-    //  background: linear-gradient(to right, rgba(43, 43, 43, 0.41) 7.19%, #515257 81.64%);
-    //  -webkit-background-clip: text;
-    //  -webkit-text-fill-color: transparent;
-    //  text-transform: uppercase;
-    //  transform: rotate(-90deg);
-    //  width: 250px;
-    //}
-    //
-    //.left {
-    //  width: 300px;
-    //}
     .nav-tabs{
       border-bottom:  1px solid #313238;
       .nav-link{
@@ -65,7 +44,7 @@
             font-size: 14px;
             text-transform: uppercase;
             color: #D8DFE9;
-            margin-right: 20px;
+            margin-right: 40px;
           }
         }
 

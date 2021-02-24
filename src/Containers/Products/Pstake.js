@@ -15,21 +15,17 @@ const Pstake = () => {
                             </p>
                             <div className="row1">
                                 <div className="data-card text-left">
-                                    <p className="value">$360B</p>
-                                    <p className="name">Target Market</p>
-                                </div>
-                                <div className="data-card side-border text-center">
-                                    <p className="value">2200% </p>
-                                    <p className="name">IYOY Growth</p>
+                                    <p className="value"> $450B+</p>
+                                    <p className="name">Total Addressable Market</p>
                                 </div>
                                 <div className="data-card text-center">
-                                    <p className="value">30+ </p>
-                                    <p className="name">Prediction</p>
+                                    <p className="value">$105B+ </p>
+                                    <p className="name">Staked Assets</p>
                                 </div>
                             </div>
                             <div className="button-list">
-                                <button className="button-primary button" title="Coming Soon" disabled>Open App</button>
-                                <button className="button-secondary button" title="Coming Soon"     disabled>Read Whitepaper</button>
+                                <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank" className="button-primary button"> Learn More</a>
+                                <button className="button coming-soon" data-hover="Coming Soon" >Open app</button>
                             </div>
                         </div>
                     </div>

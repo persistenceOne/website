@@ -1,12 +1,10 @@
 import React from "react";
 import BackersTabs from "../../components/backers";
-import {useTranslation} from "react-i18next";
 
 const Backers = () => {
-    const {t} = useTranslation();
     return (
         <section className="our-backers">
-            <h3 className="section-title">{t("OUR_BACKERS")}</h3>
+            <h3 className="section-title">Who’s backing us?</h3>
             <div className="container">
                 <BackersTabs/>
             </div>

@@ -1,9 +1,33 @@
 .animation-section {
-  padding: 300px 0;
-  background: #1F2023;
+  padding: 100px 0;
+  background: #1f1d24;
   overflow: hidden;
   position: relative;
-  .bg-scroll-text{
+
+  .animation-container {
+    //max-width: 500px;
+    //margin: auto;
+    .video {
+      width: 100%;
+    }
+  }
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content-box {
+      h3 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 1.314;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .bg-scroll-text {
     will-change: transform;
     transform-style: preserve-3d;
     position: absolute;
@@ -25,7 +49,8 @@
     -ms-flex-align: center;
     align-items: center;
   }
-  .text-block-25{
+
+  .text-block-25 {
     position: relative;
     z-index: -1;
     overflow: hidden;
@@ -40,25 +65,63 @@
     text-align: center;
     color: #FFFFFF;
   }
+
 }
-.product-info-section.product-comdex{
+
+.product-info-section.product-comdex {
   background: #26272A;
 }
-.product-info-section.product-audit{
+
+.product-info-section.product-audit {
   background: #26272A;
 }
-.product-info-section.product-pstake{
+
+.product-info-section.product-pstake {
   background: #1F2023;
+  .button.coming-soon{
+    display: inline-block;
+    background: #313238;
+    cursor:auto;
+    border: 0px solid;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    color: #FFFFFF;
+    box-shadow: none;
+    padding: 8px 35px !important;
+    margin-bottom: 10px;
+    outline: none;
+    &:hover{
+      font-size: 0 !important;
+      background: #E50913;
+    }
+  }
+  .coming-soon.button:hover:before {
+    content: attr(data-hover);
+    display: inline-block;
+    border: 0px solid;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    color: #FFFFFF;
+    box-shadow: none;
+  }
 }
+
 .product-info-section {
   padding: 100px 0;
-  .product-info{
+
+  .product-info {
     padding-top: 15px;
-    img{
+
+    img {
       width: 100%;
     }
   }
-  .pstake, .audit{
+
+  .pstake, .audit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,19 +129,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100%;
-    img{
+
+    img {
       width: auto;
     }
   }
+
   .cards {
     text-align: left;
     margin-left: 60px;
-    .text{
+
+    .text {
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
       line-height: 200%;
       color: #ACACAC;
     }
+
     .row1, .row2 {
       display: flex;
       flex-wrap: wrap;
@@ -92,7 +159,7 @@
       flex: 1;
       text-align: center;
       padding: 0;
-      margin:10px 15px 25px 0;
+      margin: 10px 15px 25px 0;
 
       .value {
         font-family: 'Poppins', sans-serif;
@@ -110,52 +177,65 @@
         margin: 0;
       }
     }
-    .side-border{
+
+    .side-border {
       border-left: 1px solid #313238;
       border-right: 1px solid #313238;
 
     }
-    .button-list{
+
+    .button-list {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      button.button{
+
+      button.button {
         padding: 8px 35px !important;
       }
-      .button-primary{
+
+      .button-primary {
         border-radius: 0 !important;
         margin-right: 15px;
         margin-bottom: 10px;
       }
-      .button-secondary{
+
+      .button-secondary {
         background: #313238;
         border: 0px solid;
         font-weight: 600;
-        font-size: 16px ;
-        line-height: 1.8 ;
-        text-align: center ;
-        color: #FFFFFF ;
-        box-shadow: none ;
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: center;
+        color: #FFFFFF;
+        box-shadow: none;
         padding: 12px 35px !important;
         margin-bottom: 10px;
+
+        &:hover {
+          background: #E50913;
+        }
       }
     }
   }
 }
-.pstake-section{
+
+.pstake-section {
   background-color: #FFFFFF;
   padding: 100px 0;
-  .cards{
-    .row1{
+
+  .cards {
+    .row1 {
       display: flex;
       margin-bottom: 15px;
     }
-    .data-card{
+
+    .data-card {
       background: #FFFFFF;
       box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.02);
       padding: 20px 30px;
       margin-right: 15px;
       width: 250px;
+
       .value {
         font-weight: bold;
         font-size: 42px;
@@ -174,13 +254,15 @@
     }
 
   }
-  .pstake-info{
+
+  .pstake-info {
     padding-top: 15px;
-    img{
+    img {
       width: 170px;
       height: 40px;
     }
-    p{
+
+    p {
       font-size: 18.6633px;
       line-height: 1.855;
       color: #313238;
@@ -192,13 +274,14 @@
 
 #particle {
   background-color: #b61924;
-  position:fixed;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  z-index:0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
 }
+
 #overlay {
   position: relative;
 }
@@ -233,16 +316,17 @@ body {
   align-items: center;
 }
 
-.swiper-box{
+.swiper-box {
   width: 500px;
   padding-top: 200px;
   background: #FFFFFF;
   height: 400px;
 }
 
-.coming-soon-section{
+.coming-soon-section {
   padding: 100px 0;
-  .heading{
+
+  .heading {
     font-weight: bold;
     font-size: 72px;
     line-height: 88px;
@@ -258,20 +342,25 @@ body {
     -webkit-text-fill-color: transparent;
     margin-bottom: 50px;
   }
-  .products{
+
+  .products {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
     .product {
       text-align: center;
-      a{
+
+      a {
         font-size: 16px;
         font-weight: bold;
-        &:hover{
-          color:#E50913 ;
+
+        &:hover {
+          color: #E50913;
         }
       }
+
       p, a {
         margin-top: 10px;
         font-family: 'Poppins', sans-serif;
@@ -280,7 +369,8 @@ body {
         text-align: center;
         color: #ACACAC;
       }
-      &:first-child{
+
+      &:first-child {
         margin-right: 100px;
       }
     }

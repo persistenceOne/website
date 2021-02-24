@@ -70,7 +70,7 @@ class Footer extends Component {
                                                 <li><Link to="/vision">Company</Link></li>
                                                 <li><Link to="/roadmap">Roadmap</Link></li>
                                                 <li><a href={whitepaper} target="_blank"
-                                                       rel="noopener noreferrer">Whitepaper</a></li>
+                                                       rel="noopener noreferrer">Protocol Paper</a></li>
                                                 <li><Link to="/ecosystem">Ecosystem</Link></li>
                                                 <li><Link to="/technology">Technology</Link></li>
                                             </ul>
@@ -81,19 +81,17 @@ class Footer extends Component {
                                         <div className="text-muted mt-30">
                                             <ul className="list-unstyled footer-list">
                                                 <li><a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank">Comdex</a></li>
-                                                <li><p className="inactive" title="Coming Soon">Asset Mantle</p></li>
-                                                <li><p className="inactive" title="Coming Soon">pStake</p></li>
                                                 <li><a href="https://audit.one/" rel="noopener noreferrer" target="_blank">Audit.one</a></li>
+                                                <li><a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank">pStake</a></li>
+                                                <li><a href="https://twitter.com/AssetMantle" rel="noopener noreferrer" target="_blank">Asset Mantle</a></li>
                                                 <li><p className="inactive" title="Coming Soon">pLend</p></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-12 margin-t-20">
                                         <h6>Get in touch</h6>
-                                        <div className="text-muted mt-30">
-                                            {/*<p className="footer-text">2972 Westheimer Rd. Santa Ana, Illinois*/}
-                                            {/*    85486 </p>*/}
-                                            <a className="footer-text" href="mailto:someone@example.com">hello@persistence.one</a>
+                                        <div className="text-muted mt-30 email">
+                                            <a className="footer-text email" href="mailto:someone@example.com">hello@persistence.one</a>
                                         </div>
                                     </div>
                                 </div>
@@ -102,7 +100,7 @@ class Footer extends Component {
                                 <div className="contact-us">
                                     <div>
                                         <div className="contact-box">
-                                            <h6 className="title">Subscribe to Newsletter</h6>
+                                            <h6 className="title"> Subscribe to newsletter</h6>
                                             <div className="form-container mt-30">
                                                 <p className="footer-text">Want to receive the latest updates?</p>
                                                 <Mailchimp/>
@@ -139,7 +137,7 @@ class Footer extends Component {
                     <div className="footer-bottom-section">
                         <div className="footer-logo-section container ">
                             <img className="dark-logo" src={icon} alt="icon-logo" title="logo"/>
-                            <p className="copy-rights mb-sm-0">{new Date().getFullYear()} © Persistence | Terms of Use.</p>
+                            <p className="copy-rights mb-sm-0">{new Date().getFullYear()} © Persistence</p>
                             <div>
                                 <div className="go-top">
                                     <ScrollToTop showUnder={160}>

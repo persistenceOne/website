@@ -13,7 +13,7 @@ const Comdex = () => {
                     <div className="col-md-8">
                         <div className="cards">
                             <p className="text">Decentralised commodities trading solution that facilitates the
-                                end-to-end trade cycle including trade discovery, settlement and financing
+                                end-to-end trade cycle including trade discovery, settlement and financing.
                             </p>
                             <div className="row1">
                                 <div className="data-card text-left">

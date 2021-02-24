@@ -26,7 +26,8 @@ const Info = () => {
                                         <div className="event">
                                             <img className="event-status-img" src={establish} alt="establish-img"/>
                                             <p className="event-name establish">Persistence One Established</p>
-                                            <div className="hover-blog">
+                                            <a href="https://medium.com/persistence-blog/our-journey-toward-a-new-financial-paradigm-persistence-200e7efafa81"
+                                               rel="noopener noreferrer" target="_blank" className="hover-blog">
                                                 <img className="event-status-img blog-image" alt="blog2"
                                                      src="https://miro.medium.com/max/1000/1*GiRBfno3sWdPEdLaeqHpQQ.png"/>
                                                 <div className="blog-info">
@@ -37,7 +38,7 @@ const Info = () => {
                                                         Introducing Persistence — Focus on ‘Real-World’ Adoption!
                                                     </p>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
@@ -105,23 +106,13 @@ const Info = () => {
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">Validator Set Expansion </p>
+                                            <p className="event-name">Validator Set Expansion <span>Ecosystem</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
                                             <p className="event-name">Raised funds from Validator/Strategic
                                                 Investors</p>
                                         </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="present-img event-status-img" src={event_running}*/}
-                                        {/*         alt="establish-img"/>*/}
-                                        {/*    <div className="circle event-status-img"></div>*/}
-
-                                        {/*    <p className="event-name">Raised funds from Validator/Strategic*/}
-                                        {/*        Investors </p>*/}
-
-                                        {/*    <p className="present-event ind"><span>We are here!</span></p>*/}
-                                        {/*</div>*/}
                                     </div>
                                 </div>
                                 <div className="quater-section">
@@ -131,32 +122,31 @@ const Info = () => {
                                     <div className="eventes">
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
-                                            <p className="event-name">SDK Release v1.0</p>
+                                            <p className="event-name">SDK Release v1.0 <span>Core</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
                                             <p className="event-name">Comdex Completes $30 Million in Trade
-                                                Volume</p>
+                                                Volume <span>dapp</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
                                             <p className="event-name">PoS Validator arm of Persistence,
-                                                AUDIT.one
-                                                launched</p>
+                                                AUDIT.one launched <span>Ecosystem</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
-                                            <p className="event-name">First Set of Advisors onboarded</p>
+                                            <p className="event-name">First Set of Advisors onboarded  <span>Ecosystem</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
-                                            <p className="event-name">Partnership with Terra established</p>
+                                            <p className="event-name">Partnership with Terra established  <span>Ecosystem</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
                                             <p className="event-name">Tendermint delegated 595K ATOMs to
                                                 AUDIT.one
-                                                (The largest delegation by Tendermint to any validator)</p>
+                                                (The largest delegation by Tendermint to any validator)  <span>Ecosystem</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -180,27 +170,23 @@ const Info = () => {
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete}
                                                  alt="event_complete-img"/>
-                                            <p className="event-name">Persistence raises $3.7 Million in Private
-                                                Fundraise</p>
-                                        </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_complete}*/}
-                                        {/*         alt="event_complete-img"/>*/}
-                                        {/*    <p className="event-name">Onboarded Jeffery Hu as*/}
-                                        {/*        Advisor <span>Team</span></p>*/}
-                                        {/*</div>*/}
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete}
-                                                 alt="event_complete-img"/>
-                                            <p className="event-name">Interchain Foundation awarded Persistence
-                                                a Grant for developing Interchain Standards for NFT and
-                                                Metadata <span>Ecosystem</span></p>
+                                            <p className="event-name">Closed $3.7 Million in Private Fundraise</p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete}
                                                  alt="event_complete-img"/>
                                             <p className="event-name">Partnership with
                                                 Matic <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete}
+                                                 alt="event_complete-img"/>
+                                            <p className="event-name">Comdex Incentivised Testnet Launch  <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete}
+                                                 alt="event_complete-img"/>
+                                            <p className="event-name">Partnership with Matic established <span>Ecosystem</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -218,29 +204,42 @@ const Info = () => {
                                             <p className="event-name">Partnership with Razor Network
                                                 established <span>Ecosystem</span></p>
                                         </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_complete} alt="event_complete-img"/>*/}
-                                        {/*    <p className="event-name">Tendermint Delegated 595K ATOMs to Persistence Validator, AUDIT.one <span>Ecosystem</span></p>*/}
-                                        {/*</div>*/}
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
+                                            <p className="event-name">NFT Module Spec Implementation with multiple Chains <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
+                                            <p className="event-name">CosmWasm Integration <span>Ecosystem</span></p>
+                                        </div>
+
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
                                             <p className="event-name">Launched StakeDrop Campaign for 7 Networks; Fist being Cosmos StakeDrop <span>Token</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
-                                            <p className="event-name">Comdex Incentivised Testnet Launch <span>dapp</span></p>
+                                            <p className="event-name">Team expansion to 20+ Members  <span>Team</span></p>
                                         </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_complete} alt="event_complete-img"/>*/}
-                                        {/*    <p className="event-name">Kava StakeDrop <span>Token</span></p>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_complete} alt="event_complete-img"/>*/}
-                                        {/*    <p className="event-name">Terra StakeDrop <span>Token</span></p>*/}
-                                        {/*</div>*/}
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
-                                            <p className="event-name">Expanded Team to 20+ Members <span>Team</span></p>
+                                            <p className="event-name">Comdex Incentivised Testnet Launch <span>dapp</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
+                                            <p className="event-name">Launched XPRT StakeDrop with Cosmos Network <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
+                                            <p className="event-name">30M ATOMs ($600M+ at current price) staked to participate in Persistence's StakeDrop with more than 1000+ participants <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
+                                            <p className="event-name">Launched Terra and Kava StakeDrop campaigns and attracted ~$200M worth of assets with more than 1000+ participants <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="event_complete-img"/>
+                                            <p className="event-name">Established partnerships with Cosmostation Wallet, Trust Wallet and Citadel Wallet <span>Ecosystem</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -253,23 +252,22 @@ const Info = () => {
                                         <h3 className="quater-text">Q1</h3>
                                     </div>
                                     <div className="eventes">
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_complete} alt="establish-img"/>*/}
-                                        {/*    <p className="event-name">Matic StakeDrop Launch <span>Token</span></p>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_complete} alt="establish-img"/>*/}
-                                        {/*    <p className="event-name">Token Utility Paper  <span>Token</span></p>*/}
-                                        {/*</div>*/}
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">interNFT: Publish Technical Specifications <span>Core</span></p>
+                                            <p className="event-name">Launched Matic StakeDrop Campaign <span>Token</span></p>
                                         </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_complete} alt="establish-img"/>*/}
-                                        {/*    <p className="event-name">TBD Program Launch <span>Community</span></p>*/}
-                                        {/*</div>*/}
-
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
+                                            <p className="event-name">Published Technical Specifications for interNFT  <span>Core</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
+                                            <p className="event-name">Launched Matic StakeDrop Campaign with 220M MATIC staked and 500+ participants <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
+                                            <p className="event-name">AUDIT.one crosses $100M AUD<span>Ecosystem</span></p>
+                                        </div>
                                         <div className="event">
                                             <img className="present-img event-status-img" src={event_running}
                                                  alt="establish-img"/>
@@ -279,40 +277,50 @@ const Info = () => {
 
                                             <p className="present-event ind"><span>We are here!</span></p>
                                         </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Persistence Joins Celo Alliance<span>Token</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">pStake Development <span>Core</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Persistence's Cosmos ETH Bridge Live (pBridge) <span>dapp</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Token Contract Audit <span>Token</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">pStake.finance liquid staking application MVP development complete <span>dapp</span></p>
+                                        </div>
+
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Persistence Wallet Launch <span>Core</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Public Sale<span>Token</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Launch of Persistence's Staking platform <span>dapp</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Wallet and Block Explorer Integrations<span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Initial set of exchange listings<span>Token</span></p>
+                                        </div>
 
 
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name">Token Economics Release <span>Token </span></p>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name pending">Asset Mantle Testnet  <span>Core </span></p>*/}
-                                        {/*</div>*/}
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">Persistence ETH Bridge Live (pBridge)  <span>dapp </span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">Token Contract Audit  <span>Token </span></p>
-                                        </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name pending">Persistence dApp Litepaper <span>dapp </span></p>*/}
-                                        {/*</div>*/}
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">TGE <span>Token </span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">pStake Application Launch <span>dapp </span></p>
-                                        </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name pending">Irisnet StakeDrop <span>Token </span></p>*/}
-                                        {/*</div>*/}
+
                                     </div>
                                 </div>
                                 <div className="quater-section">
@@ -320,45 +328,130 @@ const Info = () => {
                                         <h3 className="quater-text">Q2</h3>
                                     </div>
                                     <div className="eventes">
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name pending">Ambassador Program Launch <span>Community </span></p>*/}
-                                        {/*</div>*/}
                                         <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">interNFT implementation v1.0 <span>Core </span></p>
-                                        </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name pending">Polkadot StakeDrop <span>Token  </span></p>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name pending">Tezos StakeDrop <span>Token  </span></p>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="event_pending-img"/>*/}
-                                        {/*    <p className="event-name pending">dapp Beta Release <span>dapp  </span></p>*/}
-                                        {/*</div>*/}
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">SDK release v2.0 <span>Core  </span></p>
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Persistence Incentivized Testnet Launch <span>Community</span></p>
                                         </div>
                                         <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">Persistence Alpha Testnet <span>Core  </span></p>
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Validator Set expansion <span>Ecosystem</span></p>
                                         </div>
                                         <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">Block Explorer v1.0 <span>Core  </span></p>
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">interNFT implementation v1.0 <span>Core</span></p>
                                         </div>
                                         <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">Validator Set Expansion <span>Ecosystem  </span></p>
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">pStake Application Launch <span>Token </span></p>
                                         </div>
                                         <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="event_pending-img"/>
-                                            <p className="event-name pending">Community Bounty Program  <span>Community  </span></p>
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Expansion of Exchange listings <span>Token </span></p>
+                                        </div>
+                                        <div className="event">
+                                        <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                        <p className="event-name">AUDIT.one ETH2 staking platform launch<span>Token </span></p>
+                                    </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                             <p className="event-name">Asset Mantle NFT Marketplace application MVP to be launched <span>dapp </span></p>
+                                         </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">SDK release v2.0 <span>Core </span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Persistence Alpha Testnet  <span>Core </span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Block Explorer v1.0 <span>Core </span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Validator Set Expansion <span>Ecosystem </span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Community Bounty Program  <span>Community </span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Extend Partnerships with other projects <span>Ecosystem </span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="quater-section">
+                                    <div className="quater">
+                                        <h3 className="quater-text">Q3</h3>
+                                    </div>
+                                    <div className="eventes">
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Asset Mantle NFT Marketplace to be launched <span>dapp</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Wallet and Block explorer integrations<span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Integration with other Protocols and Chains through Interchain Communication Protocols <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Additional SDK Modules Development <span>Core</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">pLend MVP to be launched<span>dapp</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Expansion of Wallet Integrations and Block explorers <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Persistence Mainnet Launch <span>Core</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">Comdex Mainnet Launch <span>dapp</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <p className="event-name">AUDIT.one Staking interface to be launched <span>Ecosystem</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Tab>
+                        <Tab eventKey="2022" title="Q4 2021 & Q1 2022">
+                            <div className="right-section">
+                                <div className="quater-section">
+                                    <div className="quater">
+                                    </div>
+                                    <div className="eventes">
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="event_complete-img"/>
+                                            <p className="event-name">pLend to be Launched<span>dapp</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="event_complete-img"/>
+                                            <p className="event-name">Expansion of Wallet Integrations and Block Explorers <span>Ecosystem</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="event_complete-img"/>
+                                            <p className="event-name">Expansion of Exchange listings <span>Token</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="event_complete-img"/>
+                                            <p className="event-name">SDK release v3<span>Core</span></p>
+                                        </div>
+                                        <div className="event">
+                                            <img className="event-status-img" src={event_pending} alt="event_complete-img"/>
+                                            <p className="event-name">pStake v2 to be Launched <span>dapp</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -369,5 +462,5 @@ const Info = () => {
             </div>
         </section>
     )
-}
+};
 export default Info;
