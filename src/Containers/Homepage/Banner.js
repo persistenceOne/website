@@ -4,11 +4,13 @@ import {useTranslation} from "react-i18next";
 import curvedBorder from '../../assets/images1/curvedBorder.svg'
 import {NavLink} from "react-router-dom";
 import Persistence from "../../assets/Persistence_9.mp4";
+import Scroll from 'react-scroll';
+let scroll = Scroll.animateScroll;
 const Banner = () => {
     const {t} = useTranslation();
     const handleScroll = () =>{
-        window.scrollTo(0, 600, 'smooth');
-    }
+        scroll.scrollTo(700);
+    };
     return (
         <section className="banner-section" data-aos="fade-up">
             <div className="container">
@@ -56,7 +58,7 @@ const Banner = () => {
                         </video>
                         </div>
                         <div className="content-box">
-                        <p className="banner-content">Bridging the gap between traditional finance and DeFi by facilitating the easy flow of assets.</p>
+                        <p className="banner-content">Building an ecosystem of financial products to serve institutional and crypto-native users.</p>
                         <img src={curvedBorder} alt="curvedBorder" className="curve"/>
                         </div>
                     </div>

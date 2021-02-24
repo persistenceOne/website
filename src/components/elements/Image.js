@@ -73,7 +73,7 @@ const Image = ({
       alt={alt}
       onLoad={onLoad} />
   );
-}
+};
 
 Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;

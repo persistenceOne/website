@@ -19,7 +19,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="telegram-plane"/>
                             </div>
                         </div>
-                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">Community Chat</a>
+                        <a className="text" href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank">Community Chat</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">

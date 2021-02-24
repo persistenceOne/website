@@ -31,7 +31,7 @@ const Audit = () => {
                             </div>
                             <div className="button-list">
                                 <a href="https://audit.one/" className="button-primary button" rel="noopener noreferrer"
-                                   target="_blank">Audit.one</a>
+                                   target="_blank">AUDIT.one</a>
                             </div>
                         </div>
                     </div>

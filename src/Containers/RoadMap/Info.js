@@ -295,7 +295,7 @@ const Info = () => {
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">pStake.finance liquid staking application MVP development complete <span>dapp</span></p>
+                                            <p className="event-name">pStake (Liquid Staking Application) MVP development <span>dapp</span></p>
                                         </div>
 
                                         <div className="event">
@@ -362,19 +362,7 @@ const Info = () => {
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">Persistence Alpha Testnet  <span>Core </span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">Block Explorer v1.0 <span>Core </span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
                                             <p className="event-name">Validator Set Expansion <span>Ecosystem </span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">Community Bounty Program  <span>Community </span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
@@ -389,7 +377,7 @@ const Info = () => {
                                     <div className="eventes">
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">Asset Mantle NFT Marketplace to be launched <span>dapp</span></p>
+                                            <p className="event-name">Asset Mantle (NFT Marketplace) to be launched <span>dapp</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>

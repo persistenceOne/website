@@ -1,6 +1,5 @@
 html,
-body,
-.persistence {
+body{
   font-family: "Montserrat", sans-serif;
   height: 100%;
   scroll-behavior: smooth;
@@ -8,8 +7,12 @@ body,
 
 body {
   background-color: #222325 !important;
+  scroll-behavior: smooth;
 }
 
+.body-wrap{
+  scroll-behavior: smooth;
+}
 // common and custom css
 .pl-0 {
   padding-left: 0;
@@ -336,10 +339,10 @@ a {
           &:hover {
             color: #FFFFFF;
           }
-
-          &:hover .dropdown-image {
-            background: red;
-          }
+          //
+          //&:hover .dropdown-image {
+          //  background: red;
+          //}
 
           &:hover .dropdown-image .icon {
             fill: #FFFFFF;
