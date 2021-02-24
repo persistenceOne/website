@@ -9,7 +9,7 @@ const Blogs = () => {
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-5 reveal-from-bottom">
+                    <div className="col-md-5" data-aos="fade-up">
                         <a href="https://medium.com/persistence-blog/how-persistence-is-ushering-in-a-new-era-of-next-gen-financial-products-a06e5d57c72b"
                            rel="noopener noreferrer" target="_blank">
                             <div className="blog-section">
@@ -34,7 +34,7 @@ const Blogs = () => {
                             <div className="col-md-6 blog-articles left">
                                 <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133"
                                    target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card mb-10 reveal-from-bottom" data-reveal-delay="200">
+                                    <div className="custom-card mb-10" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog2"
                                                  src="https://miro.medium.com/max/1981/1*5uzz509r3c5kMSbvzVAVRg.png"/>
@@ -49,7 +49,7 @@ const Blogs = () => {
                                 </a>
                                 <a href="https://medium.com/persistence-blog/persistence-one-first-to-implement-interchain-native-nft-transfer-bags-icf-grant-cdb6c3856c25"
                                    target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card reveal-from-bottom" data-reveal-delay="200">
+                                    <div className="custom-card" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog3"
                                                  src="https://miro.medium.com/max/1000/0*wa22sTXP7YDMj2k8"/>
@@ -65,7 +65,7 @@ const Blogs = () => {
                             <div className="col-md-6 blog-articles right">
                                 <a href="https://medium.com/persistence-blog/our-journey-toward-a-new-financial-paradigm-persistence-200e7efafa81"
                                    target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card mb-10 reveal-from-bottom" data-reveal-delay="200">
+                                    <div className="custom-card mb-10" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog4"
                                                  src="https://miro.medium.com/max/3367/1*GiRBfno3sWdPEdLaeqHpQQ.png"/>
@@ -80,7 +80,7 @@ const Blogs = () => {
                                 </a>
                                 <a href="https://medium.com/persistence-blog/persistence-raises-3-7m-from-industry-heavyweights-to-bridge-traditional-finance-and-defi-via-nfts-a30256cdb428"
                                    target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card reveal-from-bottom" data-reveal-delay="200">
+                                    <div className="custom-card" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog4"
                                                  src="https://miro.medium.com/max/6732/1*8tJhZXSzGxRl2aisB43BmA.png"/>

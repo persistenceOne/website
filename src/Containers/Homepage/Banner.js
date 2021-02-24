@@ -4,11 +4,13 @@ import {useTranslation} from "react-i18next";
 import curvedBorder from '../../assets/images1/curvedBorder.svg'
 import {NavLink} from "react-router-dom";
 import Persistence from "../../assets/Persistence_9.mp4";
+import Scroll from 'react-scroll';
+let scroll = Scroll.animateScroll;
 const Banner = () => {
     const {t} = useTranslation();
     const handleScroll = () =>{
-        window.scrollTo(0, 600, 'smooth');
-    }
+        scroll.scrollTo(700);
+    };
     return (
         <section className="banner-section" data-aos="fade-up">
             <div className="container">

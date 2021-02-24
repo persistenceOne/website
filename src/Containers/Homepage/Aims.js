@@ -40,7 +40,7 @@ const Aims = () => {
                                         </div>
                                         <div className="media-body">
                                             <h5 className="primary-white-color">Non-Fungible Token (NFT)</h5>
-                                            <p className="pt-2">Making real-world and digital assets, such as invoices, collectibles and art, more accessible</p>
+                                            <p className="pt-2">Making real-world and digital assets, such as invoices, collectibles and art, more accessible.</p>
                                         </div>
                                     </div>
                                 </div>

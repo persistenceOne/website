@@ -78,10 +78,11 @@
 
 .product-info-section.product-pstake {
   background: #1F2023;
-  .button.coming-soon{
+
+  .button.coming-soon {
     display: inline-block;
     background: #313238;
-    cursor:auto;
+    cursor: auto;
     border: 0px solid;
     font-weight: 600;
     font-size: 16px;
@@ -92,11 +93,13 @@
     padding: 8px 35px !important;
     margin-bottom: 10px;
     outline: none;
-    &:hover{
+
+    &:hover {
       font-size: 0 !important;
       background: #E50913;
     }
   }
+
   .coming-soon.button:hover:before {
     content: attr(data-hover);
     display: inline-block;
@@ -257,6 +260,7 @@
 
   .pstake-info {
     padding-top: 15px;
+
     img {
       width: 170px;
       height: 40px;
@@ -284,12 +288,6 @@
 
 #overlay {
   position: relative;
-}
-
-html,
-body {
-  position: relative;
-  height: 100%;
 }
 
 
@@ -326,6 +324,10 @@ body {
 .coming-soon-section {
   padding: 100px 0;
 
+  .mt-10 {
+    margin-top: 10px;
+  }
+
   .heading {
     font-weight: bold;
     font-size: 72px;
@@ -335,7 +337,6 @@ body {
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    //background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
 
     background: linear-gradient(180deg, #515257 0%, rgba(43, 43, 43, 0.41) 100%);
     -webkit-background-clip: text;
@@ -345,7 +346,6 @@ body {
 
   .products {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 

@@ -10,7 +10,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.site-content, .body-wrap{
+.body-wrap{
   scroll-behavior: smooth;
 }
 // common and custom css
@@ -339,10 +339,10 @@ a {
           &:hover {
             color: #FFFFFF;
           }
-
-          &:hover .dropdown-image {
-            background: red;
-          }
+          //
+          //&:hover .dropdown-image {
+          //  background: red;
+          //}
 
           &:hover .dropdown-image .icon {
             fill: #FFFFFF;

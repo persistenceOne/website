@@ -3,7 +3,10 @@ import {NavLink, withRouter} from 'react-router-dom';
 import logo from '../../assets/images1/logo.png'
 import {Nav} from "react-bootstrap";
 import Icon from "../Icon";
-
+import dropdown_asset from "../../assets/images1/dropdown_asset.svg"
+import dropdown_comdex from "../../assets/images1/dropdown_comdex.svg"
+import dropdown_audit from "../../assets/images1/dropdown_audit.svg"
+import dropdown_pstake from "../../assets/images1/dropdown_pstake.svg"
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -47,7 +50,7 @@ class Header extends Component {
 
     }
 
-    comdexdoc(id, route) {
+    scrollToID(id, route) {
         if (this.props.history.location.pathname !== route) {
             this.props.history.push(`/${route}`)
             window.scrollTo(0, 0);
@@ -168,9 +171,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <Icon
-                                                                viewClass="arrow-right"
-                                                                icon="dropdown-square"/>
+                                                            <img src={dropdown_comdex} alt="dropdown_asset" />
                                                         </div>
                                                         Comdex
                                                     </a>
@@ -180,9 +181,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <Icon
-                                                                viewClass="arrow-right"
-                                                                icon="dropdown-square"/>
+                                                            <img src={dropdown_audit} alt="dropdown_asset" />
                                                         </div>
                                                         Audit.one
                                                     </a>
@@ -192,9 +191,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <Icon
-                                                                viewClass="arrow-right"
-                                                                icon="dropdown-square"/>
+                                                            <img src={dropdown_pstake} alt="dropdown_asset" />
                                                         </div>
                                                         PStake
                                                     </a>
@@ -204,9 +201,7 @@ class Header extends Component {
                                                        rel="noopener noreferrer"
                                                        target="_blank">
                                                         <div className="dropdown-image">
-                                                            <Icon
-                                                                viewClass="arrow-right"
-                                                                icon="dropdown-square"/>
+                                                            <img src={dropdown_asset} alt="dropdown_asset" />
                                                         </div>
                                                         Asset Mantle
                                                     </a>
@@ -215,9 +210,7 @@ class Header extends Component {
                                                         onMouseOver={() => this.onHoverProducts('plend-tab')}
                                                         to="/products" onClick={() => this.setActiveTab('/products')}>
                                                         <div className="dropdown-image">
-                                                            <Icon
-                                                                viewClass="arrow-right"
-                                                                icon="dropdown-square"/>
+                                                            <img src={dropdown_pstake} alt="dropdown_asset" />
                                                         </div>
                                                         pLend
                                                     </NavLink>
@@ -261,7 +254,7 @@ class Header extends Component {
                                                     </div>
                                                     <div className="item stake-drop" id="plend-tab">
                                                         <p>Debt Financing dApp </p>
-                                                        <NavLink to='/products' className="button">Learn More</NavLink>
+                                                        <button className="button">Coming soon</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -287,7 +280,7 @@ class Header extends Component {
                                                     <NavLink className="nav-link dropdown-item primary-medium-color"
                                                              onMouseOver={() => this.onHover('intenft-tab')}
                                                              to="/ecosystem"
-                                                             onClick={() => this.comdexdoc("section-nft", "ecosystem")}>
+                                                             onClick={() => this.scrollToID("section-nft", "ecosystem")}>
                                                         <div className="dropdown-image">
                                                             <Icon
                                                                 viewClass="arrow-right"
@@ -309,7 +302,7 @@ class Header extends Component {
                                                     <NavLink className="nav-link dropdown-item primary-medium-color"
                                                              onMouseOver={() => this.onHover('validators-tab')}
                                                              to="/ecosystem"
-                                                             onClick={() => this.comdexdoc("section-validators", "ecosystem")}>
+                                                             onClick={() => this.scrollToID("section-validators", "ecosystem")}>
                                                         <div className="dropdown-image">
                                                             <Icon
                                                                 viewClass="arrow-right"
@@ -320,7 +313,7 @@ class Header extends Component {
                                                     <NavLink className="nav-link dropdown-item primary-medium-color"
                                                              onMouseOver={() => this.onHover('xprt-tab')}
                                                              to="/ecosystem"
-                                                             onClick={() => this.comdexdoc("section-xprt", "ecosystem")}>
+                                                             onClick={() => this.scrollToID("section-xprt", "ecosystem")}>
                                                         <div className="dropdown-image">
                                                             <Icon
                                                                 viewClass="dropdown-icon"
