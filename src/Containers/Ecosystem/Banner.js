@@ -60,7 +60,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="reddit-round"/>
                             </div>
                         </div>
-                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">{t("REDDIT")}</a>
+                        <a className="text" href="https://www.reddit.com/r/PersistenceOne/" rel="noopener noreferrer" target="_blank">{t("REDDIT")}</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
