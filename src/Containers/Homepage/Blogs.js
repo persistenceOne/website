@@ -1,11 +1,13 @@
 import React from "react";
 import Icon from "../../components/Icon";
+import {useTranslation} from "react-i18next";
 
 const Blogs = () => {
+    const {t} = useTranslation();
     return (
         <section className="stay-updated">
             <div className="title-line-section">
-                <h3 className="section-title">Featured blogs</h3>
+                <h3 className="section-title">{t("BLOGS_SECTION_TITLE")}</h3>
             </div>
             <div className="container">
                 <div className="row">
@@ -17,12 +19,9 @@ const Blogs = () => {
                                     <img className="card-img-top" alt="blog"
                                          src="https://miro.medium.com/max/1684/1*H0mHBkwD2VdVnQ_9ECQmfA.png"/>
                                     <div className="custom-card-body">
-                                        <p className="text">About</p>
-                                        <p className="text1">The Internet disintermediated the media & communications
-                                            industry. Using HTTP, SMTP, and TCP/IP as the foundational layers, the cost
-                                            of information exchange was significantly...</p>
-                                        <p className="learn-more">Learn
-                                            More <Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                        <p className="text">{t("ABOUT")}</p>
+                                        <p className="text1">{t("BLOG1_TEXT")}</p>
+                                        <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                     </div>
                                 </div>
 
@@ -41,9 +40,8 @@ const Blogs = () => {
                                         </div>
 
                                         <div className="custom-card-body">
-                                            <p className="text1">StakeDrop</p>
-                                            <p className="learn-more">Learn
-                                                More <Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                            <p className="text1">{t("STAKEDROP")}</p>
+                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>
                                 </a>
@@ -55,9 +53,8 @@ const Blogs = () => {
                                                  src="https://miro.medium.com/max/1000/0*wa22sTXP7YDMj2k8"/>
                                         </div>
                                         <div className="custom-card-body">
-                                            <p className="text1">Partnership</p>
-                                            <p className="learn-more">Learn
-                                                More <Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                            <p className="text1">{t("PATNERSHIP")}</p>
+                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>
                                 </a>
@@ -72,9 +69,8 @@ const Blogs = () => {
                                         </div>
 
                                         <div className="custom-card-body">
-                                            <p className="text1">About</p>
-                                            <p className="learn-more">Learn
-                                                More <Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                            <p className="text1">{t("ABOUT")}</p>
+                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>
                                 </a>
@@ -87,9 +83,8 @@ const Blogs = () => {
                                         </div>
 
                                         <div className="custom-card-body">
-                                            <p className="text1">Fundraise</p>
-                                            <p className="learn-more">Learn
-                                                More <Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                            <p className="text1">{t("FUND_RAISE")}</p>
+                                            <p className="learn-more">{t("LEARN_MORE")} <Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>
                                 </a>

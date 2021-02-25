@@ -15,7 +15,6 @@ const Products = () => {
             <Audit/>
             <ComingSoon/>
             <ScrollToTop/>
-
         </>
     )
 };

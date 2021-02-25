@@ -1,7 +1,9 @@
 import React from "react";
 import audit_white from "../../assets/images1/logos/audit_white.svg";
+import {useTranslation} from "react-i18next";
 
 const Audit = () => {
+    const {t} = useTranslation();
     return (
         <section className="product-info-section product-audit">
             <div className="container">
@@ -11,27 +13,24 @@ const Audit = () => {
                     </div>
                     <div className="col-md-8">
                         <div className="cards">
-                            <p className="text">Staking-as-a-Service solution for proof-of-stake networks. For
-                                institutional assets managers looking to generate fixed income returns from
-                                Staking-as-an-AssetClass, AUDIT.one provides whitelabeling solutions for hardware and
-                                software.</p>
+                            <p className="text">{t("PRODUCT_AUDIT_DESCRIPTION")}</p>
                             <div className="row1">
                                 <div className="data-card text-left">
                                     <p className="value">$150M+</p>
-                                    <p className="name">Total Assets Secured</p>
+                                    <p className="name">{t("TOTAL_ASSETS_SECURED")}</p>
                                 </div>
                                 <div className="data-card side-border text-center">
                                     <p className="value">$100M+</p>
-                                    <p className="name">Assets Under Delegation</p>
+                                    <p className="name">{t("ASSETS_UNDER_DELEGATION")}</p>
                                 </div>
                                 <div className="data-card text-center">
                                     <p className="value">10 </p>
-                                    <p className="name">Networks Secured</p>
+                                    <p className="name">{t("NETWORKS_SECURED")}</p>
                                 </div>
                             </div>
                             <div className="button-list">
                                 <a href="https://audit.one/" className="button-primary button" rel="noopener noreferrer"
-                                   target="_blank">AUDIT.one</a>
+                                   target="_blank">{t("AUDIT_ONE")}</a>
                             </div>
                         </div>
                     </div>
@@ -39,5 +38,5 @@ const Audit = () => {
             </div>
         </section>
     )
-}
+};
 export default Audit;

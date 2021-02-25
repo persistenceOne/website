@@ -6,10 +6,12 @@ import dsa from "../../assets/images1/featured/dsa.png";
 import e27 from "../../assets/images1/featured/e27.png";
 import blockbeats from "../../assets/images1/featured/blockbeats.png";
 import Image from "../../components/elements/Image";
+import {useTranslation} from "react-i18next";
 const Featured = () => {
+    const {t} = useTranslation();
     return (
         <section className="featured-on">
-            <h3 className="section-title">As seen on</h3>
+            <h3 className="section-title">{t("FEATURED_ON_SECTION_TITLE")}</h3>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

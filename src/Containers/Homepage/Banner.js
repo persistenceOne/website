@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
-import curvedBorder from '../../assets/images1/curvedBorder.svg'
+import curvedBorder from '../../assets/images1/curvedBorder.svg';
 import {NavLink} from "react-router-dom";
 import Persistence from "../../assets/Persistence_9.mp4";
 import Scroll from 'react-scroll';
@@ -17,10 +17,10 @@ const Banner = () => {
                 <div className="row">
                     <div className="col-md-6 col-sm-12">
                         <p className="caption">{t("BANNER_CAPTION")}</p>
-                        <h3 className="banner-heading">Protocol Powering Next-Gen Financial Products</h3>
+                        <h3 className="banner-heading">{t("BANNER_HEADING")}</h3>
                         <div className="banner-buttons">
                             <NavLink className="button xprt" to="/stakedrop"> Earn X<p>PRT</p></NavLink>
-                            <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://medium.com/persistence-blog">Blog</a>
+                            <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://medium.com/persistence-blog">{t("BLOG")}</a>
                         </div>
                         <div className="social-icons">
                             <ul className="list-unstyled first-section-social-icons">
@@ -44,7 +44,7 @@ const Banner = () => {
                         </div>
                         <div className="mouse-section">
                             <Icon viewClass="social_icon_imgg" icon="mouse"/>
-                            <p onClick={handleScroll}>Scroll Down</p>
+                            <p onClick={handleScroll}>{t("SCROLL_DOWN")}</p>
                         </div>
 
                     </div>
@@ -58,7 +58,7 @@ const Banner = () => {
                         </video>
                         </div>
                         <div className="content-box">
-                        <p className="banner-content">Building an ecosystem of financial products to serve institutional and crypto-native users.</p>
+                        <p className="banner-content">{t("BANNER_SUB_TEXT")}</p>
                         <img src={curvedBorder} alt="curvedBorder" className="curve"/>
                         </div>
                     </div>

@@ -11,13 +11,15 @@ import StakeWithUs from "../../assets/images1/backers/validators/StakeWithUs.png
 import p2p_logo from "../../assets/images1/backers/validators/p2p.png";
 import CertusOne from "../../assets/images1/backers/validators/CertusOne.png";
 import HashQuark from "../../assets/images1/backers/validators/HashQuark.png";
+import {useTranslation} from "react-i18next";
 
 const Validators = () => {
+    const {t} = useTranslation();
     return (
         <>
             <section className="validators-section" id="section-validators">
                 <div className="title-line-section">
-                    <h3 className="section-title">Validators</h3>
+                    <h3 className="section-title">{t("VALIDATORS")}</h3>
                 </div>
                 <div className="container validators">
                     <div className="common-row first-row">
@@ -40,11 +42,11 @@ const Validators = () => {
                     </div>
                     <div className="become-validator row">
                         <div className="col-lg-7 col-md-12 text">
-                            <p>A network is only as strong as its validators. The Persistence network is secured by leading PoS validators running institutional-grade architecture, geographically distributed across the world. Validators in our ecosystem secure more than $700M USD worth of assets collectively.</p>
+                            <p>{t("VALIDATORS_INFO")}</p>
                         </div>
                         <div className="col-lg-5 col-md-12 button-list">
-                            <a href="https://forms.gle/EcHn9W9JADTaPXGHA" className="button-primary button" rel="noopener noreferrer" target="_blank">Become a Validator</a>
-                            <a href="https://explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">Explorer</a>
+                            <a href="https://forms.gle/EcHn9W9JADTaPXGHA" className="button-primary button" rel="noopener noreferrer" target="_blank">{t("BECOME_VALIDATOR")}</a>
+                            <a href="https://explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("EXPLORER")}</a>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import pstake_white from "../../assets/images1/logos/pstake_white.svg";
+import {useTranslation} from "react-i18next";
 
 const Pstake = () => {
+    const {t} = useTranslation();
     return (
         <section className="product-info-section product-pstake">
             <div className="container">
@@ -11,21 +13,21 @@ const Pstake = () => {
                     </div>
                     <div className="col-md-8">
                         <div className="cards">
-                            <p className="text">Liquid staking application to unlock liquidity for staked assets, allowing stakers to boost yields from their staked assets.
+                            <p className="text">{t("PRODUCT_PSTAKE_DESCRIPTION")}
                             </p>
                             <div className="row1">
                                 <div className="data-card text-left">
                                     <p className="value"> $450B+</p>
-                                    <p className="name">Total Addressable Market</p>
+                                    <p className="name">{t("TOTAL_ADDRESSABLE")}</p>
                                 </div>
                                 <div className="data-card text-center">
                                     <p className="value">$105B+ </p>
-                                    <p className="name">Staked Assets</p>
+                                    <p className="name">{t("STAKED_ASSETS")}</p>
                                 </div>
                             </div>
                             <div className="button-list">
-                                <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank" className="button-primary button"> Learn More</a>
-                                <button className="button coming-soon" data-hover="Coming Soon" >Open app</button>
+                                <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("LEARN_MORE")}</a>
+                                <button className="button coming-soon" data-hover="Coming Soon" >{t("OPEN_APP")}</button>
                             </div>
                         </div>
                     </div>

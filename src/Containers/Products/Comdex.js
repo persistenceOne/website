@@ -1,8 +1,9 @@
 import React from "react";
-// import comdexLogo from "../../assets/logos/comdex_small.svg";
 import comdex_product from "../../assets/images1/comdex_product.svg";
+import {useTranslation} from "react-i18next";
 
 const Comdex = () => {
+    const {t} = useTranslation();
     return (
         <section className="product-info-section product-comdex">
             <div className="container">
@@ -12,26 +13,25 @@ const Comdex = () => {
                     </div>
                     <div className="col-md-8">
                         <div className="cards">
-                            <p className="text">Decentralised commodities trading solution that facilitates the
-                                end-to-end trade cycle including trade discovery, settlement and financing.
+                            <p className="text">{t("PRODUCT_COMDEX_DESCRIPTION")}
                             </p>
                             <div className="row1">
                                 <div className="data-card text-left">
                                     <p className="value">$55M+</p>
-                                    <p className="name">Transaction Volume</p>
+                                    <p className="name">{t("TRANSACTION_VALUME")}</p>
                                 </div>
                                 <div className="data-card side-border text-center">
                                     <p className="value">35+ </p>
-                                    <p className="name">Institutional Traders</p>
+                                    <p className="name">{t("INSTITUTIONAL_TRADE")}</p>
                                 </div>
                                 <div className="data-card text-center">
                                     <p className="value">4</p>
-                                    <p className="name">Trading Hubs</p>
+                                    <p className="name">{t("TRADING_HUBS")}</p>
                                 </div>
                             </div>
                             <div className="button-list">
-                                <a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank" className="button-primary button">Comdex.sg</a>
-                                <a href="https://explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">Block Explorer</a>
+                                <a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("COMDEX_SG")}</a>
+                                <a href="https://explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("BLOCK_EXPLORER")}</a>
                             </div>
                         </div>
                     </div>
