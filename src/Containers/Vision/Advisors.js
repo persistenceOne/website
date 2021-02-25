@@ -74,9 +74,6 @@ const Advisors = () => {
                             <div className="profile-picture">
                                 <img src={jeffrey} alt="pic1"/>
                                 <div className="social-icons">
-                                    <a className="icon-box" href="https://twitter.com/sandeepnailwal"
-                                       rel="noopener noreferrer"
-                                       target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></a>
                                     <a className="icon-box" href="https://twitter.com/hu_zhiwei"
                                        rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg"
                                                                                        icon="linkedin-footer"/></a>
