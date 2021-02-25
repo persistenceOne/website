@@ -44,7 +44,7 @@ const Banner = () => {
                                 <Icon viewClass="social_icon_imgg" icon="twitter-logo"/>
                             </div>
                         </div>
-                        <a className="text" href="https://twitter.com/hu_zhiwei" rel="noopener noreferrer" target="_blank">{t("TWITTER")}</a>
+                        <a className="text" href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank">{t("TWITTER")}</a>
                     </div>
                     <div className="link">
                         <div className="outer-box">
