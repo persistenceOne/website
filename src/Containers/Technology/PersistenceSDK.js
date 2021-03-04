@@ -13,7 +13,7 @@ const PersistenceSDK = () => {
                             <p className="text">{t("PERSISTENCE_SDK_INFO")}
                             </p>
                             <div className="button-list">
-                                <a href="https://github.com/persistenceOne" className="button-primary button" rel="noopener noreferrer" target="_blank">{t("GITHUB")}</a>
+                                <a href="https://github.com/persistenceOne/persistenceSDK" className="button-primary button" rel="noopener noreferrer" target="_blank">{t("GITHUB")}</a>
                                 <a href="https://discord.gg/SaBKpjbnhH" className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("DEV_CHAT")}</a>
                             </div>
                         </div>
