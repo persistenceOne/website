@@ -335,7 +335,7 @@ class StakedropMainPage extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow"/>&emsp;Stake
                                                         MATIC to earn XPRT</p>
                                                     <p><Icon viewClass="social_icon_imgg"
-                                                             icon="stake-time"/>&emsp;Campaign Duration: 45 Days</p>
+                                                             icon="stake-time"/>&emsp;Campaign Duration: 67 Days</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag"/>&emsp; 20th
                                                         of January 2021</p>
                                                     <p><Icon viewClass="social_icon_imgg"
