@@ -245,8 +245,8 @@ class MaticStakedrop extends Component {
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
-                                                    <h6>End</h6>
-                                                    <h1>6th of March 2021<span>Checkpoint: 11056</span></h1>
+                                                    <h6>End(expected)</h6>
+                                                    <h1>28th of March 2021<span>Checkpoint: 11056</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -265,9 +265,9 @@ class MaticStakedrop extends Component {
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
-                                                    <h6>Time left:</h6>
+                                                    <h6>Time left(expected):</h6>
                                                     <h1 className="countdown"><Countdown
-                                                        date={1615033800000}
+                                                        date={1616934600000}
                                                         autoStart={true}
                                                     /></h1>
                                                 </div>
@@ -502,5 +502,3 @@ class MaticStakedrop extends Component {
 }
 
 export default withRouter(MaticStakedrop);
-
-
