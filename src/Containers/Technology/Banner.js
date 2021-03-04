@@ -1,8 +1,10 @@
 import React from "react";
 import technology_bg from "../../assets/images1/technology/technolgy_banner.svg"
 import curvedBorder from "../../assets/images1/left_curved.svg";
+import {useTranslation} from "react-i18next";
 
 const Banner = () => {
+    const {t} = useTranslation();
     return (
         <section className="section-technology-banner" data-aos="fade-up">
             <div className="container">
@@ -10,11 +12,8 @@ const Banner = () => {
                     <div className="col-md-5 left-section">
                         <div className="content">
                             <div className="content-box">
-                                <h3>Technology</h3>
-                                <p className="banner-content"> Persistence is an interoperable protocol that provides
-                                    sovereign environments for decentralised/institutional finance applications to be
-                                    developed and operated.</p>
-
+                                <h3>{t("TECHNOLOGY")}</h3>
+                                <p className="banner-content"> {t("TECHNOLOGY_BANNER_TEXT")}</p>
                                 <img src={curvedBorder} alt="curvedBorder" className="curve"/>
                             </div>
                         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
-import comdexLogo from "../../assets/images1/logos/comdex_small.svg"
 import {Button} from "react-bootstrap";
 
 const Building = () => {

@@ -1,11 +1,13 @@
 import React from "react";
 import internft_logos from "../../assets/images1/internft_logos.svg";
+import {useTranslation} from "react-i18next";
 const Internft = () => {
+    const {t} = useTranslation();
     return (
         <>
             <section className="internft-section" id="section-nft">
                 <div className="title-line-section">
-                    <h3 className="section-title">interNFT</h3>
+                    <h3 className="section-title">{t("INTER_NFT")}</h3>
                 </div>
                 <div className="container">
                     <div className="row">
@@ -14,13 +16,8 @@ const Internft = () => {
                         </div>
                         <div className="col-md-6 right-section">
                             <div className="info">
-                                <p>
-                                    interNFT is a working group consisting of the leading interoperable projects and
-                                    protocols building inter-chain standards for non-fungible tokens (NFTs) and NFT
-                                    Metadata. This open collaboration was initiated by the Interchain Foundation and is
-                                    being facilitated by Persistence together with ixo.
-                                </p>
-                                <a href="https://internft.org/" rel="noopener noreferrer" target="_blank" className="button-primary button">internft.org</a>
+                                <p>{t("INTERNFT_INFO")}</p>
+                                <a href="https://internft.org/" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("INTERNFT_ORG")}</a>
                             </div>
                         </div>
                     </div>

@@ -12,18 +12,20 @@ import klk from "../../assets/images1/pics/klk.png"
 import aditi from "../../assets/images1/pics/aditi.png"
 import Icon from "../../components/Icon";
 import Modal from "./Modals";
+import {useTranslation} from "react-i18next";
 
 const Team = () => {
+    const {t} = useTranslation();
     const [name, setName] = useState("");
     return (
         <section className="vision-section-team">
             <div className="container">
-                <h3 className="section-title">Team</h3>
+                <h3 className="section-title">{t("TEAM")}Team</h3>
                 <div className="profiles">
                     <div className="profile" data-aos="fade-up">
                         <img src={Tushar} alt="box_build"/>
-                        <p className="name">Tushar Aggarwal</p>
-                        <p className="role">CEO and Co-founder</p>
+                        <p className="name">{t("TUSHAR")}</p>
+                        <p className="role">{t("CEO_CO_FOUNDER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://twitter.com/Tushar307" rel="noopener noreferrer"
@@ -36,8 +38,8 @@ const Team = () => {
                     </div>
                     <div className="profile" data-aos="fade-up">
                         <img src={deepanshu} alt="box_build"/>
-                        <p className="name">Deepanshu Tripathi</p>
-                        <p className="role">CTO and Co-founder</p>
+                        <p className="name">{t("DEEPANSHU")}</p>
+                        <p className="role">{t("CTO_CO_FOUNDER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://twitter.com/deepanshutr" rel="noopener noreferrer"
@@ -50,8 +52,8 @@ const Team = () => {
                     </div>
                     <div className="profile" data-aos="fade-up">
                         <img src={abhinav} alt="box_build"/>
-                        <p className="name">Abhinav Kumar</p>
-                        <p className="role">Software Developer</p>
+                        <p className="name">{t("ABHINAV")}</p>
+                        <p className="role">{t("SOFTWARE_DEVELOPER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://twitter.com/avkr003" rel="noopener noreferrer"
@@ -67,8 +69,8 @@ const Team = () => {
                 <div className="profiles" data-aos="fade-up">
                     <div className="profile">
                         <img src={prashant} alt="box_build"/>
-                        <p className="name">Prashant Kumar</p>
-                        <p className="role">Software Developer</p>
+                        <p className="name">{t("PRASHANTH")}</p>
+                        <p className="role">{t("SOFTWARE_DEVELOPER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box"
@@ -81,8 +83,8 @@ const Team = () => {
 
                     <div className="profile" data-aos="fade-up">
                         <img src={puneet} alt="box_build"/>
-                        <p className="name">Puneet Mahajan</p>
-                        <p className="role">Software Developer</p>
+                        <p className="name">{t("PUNEET")}</p>
+                        <p className="role">{t("SOFTWARE_DEVELOPER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://twitter.com/puneet_m_" rel="noopener noreferrer"
@@ -95,8 +97,8 @@ const Team = () => {
                     </div>
                     <div className="profile" data-aos="fade-up">
                         <img src={raju} alt="box_build"/>
-                        <p className="name">Raju Vemula</p>
-                        <p className="role">Front-end Developer</p>
+                        <p className="name">{t("RAJU")}</p>
+                        <p className="role">{t("FRON_END")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://www.linkedin.com/in/rajuvemula/"
@@ -109,13 +111,13 @@ const Team = () => {
                 <div className="profiles" data-aos="fade-up">
                     <div className="profile">
                         <img src={sudheer} alt="box_build"/>
-                        <p className="name">Sudheer Darla</p>
-                        <p className="role">UI/UX Designer</p>
+                        <p className="name">{t("SUDHEER")}</p>
+                        <p className="role">{t("UX")}</p>
                     </div>
                     <div className="profile" data-aos="fade-up">
                         <img src={abhitej} alt="box_build"/>
-                        <p className="name">Abhitej Singh</p>
-                        <p className="role">Strategy and Marketing</p>
+                        <p className="name">{t("ABHITEJ")}</p>
+                        <p className="role">{t("STRATEGY")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://twitter.com/abhitezsingh"
@@ -129,8 +131,8 @@ const Team = () => {
                     </div>
                     <div className="profile" data-aos="fade-up">
                         <img src={mikhil} alt="box_build"/>
-                        <p className="name">Mikhil Panday</p>
-                        <p className="role">Strategy and BD</p>
+                        <p className="name">{t("MIKHIL")}</p>
+                        <p className="role">{t("STRATEGY_BD")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://twitter.com/PandeyMikhil"
@@ -146,14 +148,14 @@ const Team = () => {
                 <div className="profiles" data-aos="fade-up">
                     <div className="profile">
                         <img src={klk} alt="box_build"/>
-                        <p className="name"> Lakshmikanth K</p>
-                        <p className="role">Front-end Developer</p>
+                        <p className="name"> {t("LAKSHMIKANTH")}</p>
+                        <p className="role">{t("FRON_END")}</p>
                     </div>
 
                     <div className="profile" data-aos="fade-up">
                         <img src={aditi} alt="box_build"/>
-                        <p className="name">Aditi Maheshwari</p>
-                        <p className="role">Software Developer</p>
+                        <p className="name">{t("ADITI")}</p>
+                        <p className="role">{t("SOFTWARE_DEVELOPER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box" href="https://www.linkedin.com/in/aditi-maheshwari-a17906107/"
@@ -165,10 +167,10 @@ const Team = () => {
                     <div className="profile" data-aos="fade-up">
                         <div className="more-box">
                             <div>
-                                <p>14+ More</p>
-                                <p className="more-text">Security, Design, DevOps,</p>
-                                <p className="more-text">Research, Marketing,</p>
-                                <p className="more-text"> Finance and Operations.</p>
+                                <p>14+ {t("MORE")}</p>
+                                <p className="more-text">{t("SECURITY_DESIGN")}</p>
+                                <p className="more-text">{t("RESEARCH_MARKETING")}</p>
+                                <p className="more-text">{t("FINANCE_OPERATIONS")}</p>
                             </div>
                         </div>
 
