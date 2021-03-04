@@ -225,7 +225,7 @@ class MaticStakedrop extends Component {
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
                                                     <h6>Campaign Duration</h6>
-                                                    <h1>45 Days</h1>
+                                                    <h1>67 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
 
