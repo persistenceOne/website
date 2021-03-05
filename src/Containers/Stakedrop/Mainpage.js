@@ -174,7 +174,7 @@ class StakedropMainPage extends React.Component {
                                                     validator, earn additional XPRT rewards.</p></h1>
                                             <p className="sub-title title-line">We have allocated 1% of our total supply
                                                 at genesis for StakeDrop.
-                                                <span>1,000,000 XPRT tokens will be distributed to stakers of some of the most prominent dPoS/nPoS networks.<span><a
+                                                <span>1,000,000 XPRT tokens will be distributed to stakers of some of the most prominent dPoS/nPoS networks. <span><a
                                                     href="https://notes.persistence.one/s/cucF-3faM" target="_blank"
                                                     rel="noopener noreferrer">Learn more</a></span></span>
                                             </p>
@@ -445,7 +445,7 @@ class StakedropMainPage extends React.Component {
                                                             <p>Matic StakeDrop Blog [English]</p>
                                                             <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c"
                                                                target="_blank"
-                                                               rel="noopener noreferrer">https://medium.com/persistence-blog/terra-luna-stakedrop-begins-december-19th-33fdb78d0686</a>
+                                                               rel="noopener noreferrer">Click here</a>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-6 tutorial-links">
