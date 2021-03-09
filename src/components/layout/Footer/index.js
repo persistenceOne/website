@@ -92,7 +92,7 @@ const Footer = () => {
                                 <div className="col-lg-4 col-md-6 col-sm-12 margin-t-20">
                                     <h6>{t("GET_IN_TOUCH")}</h6>
                                     <div className="text-muted mt-30 email">
-                                        <a className="footer-text email" href="mailto:someone@example.com">hello@persistence.one</a>
+                                        <a className="footer-text email" href="mailto:hello@persistence.one">hello@persistence.one</a>
                                     </div>
                                 </div>
                             </div>

@@ -30,6 +30,10 @@ const Banner = () => {
                                 </a>
                                 <a href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank"
                                    title="Announcements">
+                                    <li><Icon viewClass="social_icon_imgg" icon="announcements"/></li>
+                                </a>
+                                <a href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank"
+                                   title="Community Chat">
                                     <li><Icon viewClass="social_icon_imgg" icon="telegram-plane"/></li>
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank"

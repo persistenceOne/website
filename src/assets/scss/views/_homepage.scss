@@ -430,12 +430,15 @@
       max-height: 27em;
       min-height: 21vw;
       width: 100%;
+      border-bottom: 1px solid #333;
+      border-right: 0px solid;
     }
 
     .content-upcoming.plend-content {
       max-height: 27em;
       min-height: 21vw;
       width: 100%;
+      border-right: 0px solid;
     }
 
     .content-overlay {
