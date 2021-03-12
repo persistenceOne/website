@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import icon from '../../../assets/images1/footer_logo.svg'
 import whitepaper from '../../../assets/images1/whitepaper.pdf'
 import Mailchimp from "./MailChimp";
-import {Link} from 'react-router-dom';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap'
+import {Link, NavLink} from 'react-router-dom';
+import {OverlayTrigger, Tooltip, Dropdown} from 'react-bootstrap'
 import Icon from "../../Icon";
 import Scroll from 'react-scroll';
 import {useTranslation} from "react-i18next";
+
 let scroll = Scroll.animateScroll;
 
 const socialList = [
@@ -48,9 +49,14 @@ const socialList = [
 ];
 
 const Footer = () => {
-    const {t} = useTranslation();
+    const {t, i18n} = useTranslation();
+    const [language, setLanguage] = useState('English');
     const scrollTop = () =>{
         scroll.scrollToTop();
+    };
+    const handleLanguage = (type) =>{
+        i18n.changeLanguage(type);
+        setLanguage(type);
     };
     return (
         <>
@@ -93,6 +99,19 @@ const Footer = () => {
                                     <h6>{t("GET_IN_TOUCH")}</h6>
                                     <div className="text-muted mt-30 email">
                                         <a className="footer-text email" href="mailto:hello@persistence.one">hello@persistence.one</a>
+                                    </div>
+                                    <h6>Choose Language</h6>
+                                    <div className="text-muted mt-30">
+                                        <Dropdown>
+                                            <Dropdown.Toggle id="dropdown-basic">
+                                                {language}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                <li className="dropdown-item" onClick={() => handleLanguage('English')}>English</li>
+                                                <li className="dropdown-item" onClick={() => handleLanguage('Russian')}>Russian</li>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </div>
                                 </div>
                             </div>
