@@ -20,7 +20,7 @@ const Team = () => {
     return (
         <section className="vision-section-team">
             <div className="container">
-                <h3 className="section-title">{t("TEAM")}Team</h3>
+                <h3 className="section-title">{t("TEAM")}</h3>
                 <div className="profiles">
                     <div className="profile" data-aos="fade-up">
                         <img src={Tushar} alt="box_build"/>
