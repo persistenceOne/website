@@ -1,13 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import icon from '../../../assets/images1/footer_logo.svg'
 import whitepaper from '../../../assets/images1/whitepaper.pdf'
 import Mailchimp from "./MailChimp";
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {OverlayTrigger, Tooltip, Dropdown} from 'react-bootstrap'
 import Icon from "../../Icon";
 import Scroll from 'react-scroll';
 import {useTranslation} from "react-i18next";
-
 let scroll = Scroll.animateScroll;
 
 const socialList = [
@@ -48,15 +47,25 @@ const socialList = [
     },
 ];
 
-const Footer = () => {
+const Footer = (props) => {
     const {t, i18n} = useTranslation();
     const [language, setLanguage] = useState('English');
     const scrollTop = () =>{
         scroll.scrollToTop();
     };
+    useEffect(() => {
+        // localStorage.setItem("language", language);
+        const languageType = localStorage.getItem('language');
+        if(languageType !== ''){
+            setLanguage(languageType);
+        }
+    },[]);
     const handleLanguage = (type) =>{
+        localStorage.setItem("language", type);
+        const languageType = localStorage.getItem('language');
+        setLanguage(languageType);
         i18n.changeLanguage(type);
-        setLanguage(type);
+        // setLanguage(type);
     };
     return (
         <>
@@ -169,4 +178,6 @@ const Footer = () => {
         </>
     )
 };
+
+
 export default Footer;
