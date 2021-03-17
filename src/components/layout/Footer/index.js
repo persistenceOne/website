@@ -119,6 +119,7 @@ const Footer = (props) => {
                                             <Dropdown.Menu>
                                                 <li className="dropdown-item" onClick={() => handleLanguage('English')}>English</li>
                                                 <li className="dropdown-item" onClick={() => handleLanguage('Russian')}>Russian</li>
+                                                <li className="dropdown-item" onClick={() => handleLanguage('Chinese')}>Chinese</li>
                                             </Dropdown.Menu>
                                         </Dropdown>
                                     </div>

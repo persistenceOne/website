@@ -3,6 +3,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 import English from "./locales/en/translation"
 import Russian from "./locales/russian/translation";
+import Chinese from "./locales/chinese/translation";
 i18n
     .use(LanguageDetector)
     .use(initReactI18next)
@@ -11,6 +12,7 @@ i18n
         resources: {
             English: English,
             Russian: Russian,
+            Chinese: Chinese,
         },
         fallbackLng: "English",
         debug: true,
