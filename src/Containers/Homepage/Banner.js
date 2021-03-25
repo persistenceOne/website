@@ -2,7 +2,6 @@ import React from "react";
 import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
 import curvedBorder from '../../assets/images1/curvedBorder.svg';
-import {NavLink} from "react-router-dom";
 import Persistence from "../../assets/Persistence_9.mp4";
 import Scroll from 'react-scroll';
 let scroll = Scroll.animateScroll;
@@ -19,7 +18,8 @@ const Banner = () => {
                         <p className="caption">{t("BANNER_CAPTION")}</p>
                         <h3 className="banner-heading">{t("BANNER_HEADING")}</h3>
                         <div className="banner-buttons">
-                            <NavLink className="button xprt" to="/stakedrop"> Earn X<p>PRT</p></NavLink>
+                           
+                            <a rel="noopener noreferrer" target="_blank" className="button xprt" href="https://buff.ly/3feZxbw">X<p>PRT</p>&nbsp;Sale</a>
                             <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://medium.com/persistence-blog">{t("BLOG")}</a>
                         </div>
                         <div className="social-icons">

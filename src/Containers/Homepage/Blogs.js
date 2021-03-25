@@ -45,35 +45,10 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://medium.com/persistence-blog/persistence-one-first-to-implement-interchain-native-nft-transfer-bags-icf-grant-cdb6c3856c25"
-                                   target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card" data-aos="fade-up">
-                                        <div className="blog-image">
-                                            <img className="card-img-top" alt="blog3"
-                                                 src="https://miro.medium.com/max/1000/0*wa22sTXP7YDMj2k8"/>
-                                        </div>
-                                        <div className="custom-card-body">
-                                            <p className="text1">{t("PATNERSHIP")}</p>
-                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                        </div>
-                                    </div>
-                                </a>
+                              
                             </div>
                             <div className="col-md-6 blog-articles right">
-                                <a href="https://medium.com/persistence-blog/our-journey-toward-a-new-financial-paradigm-persistence-200e7efafa81"
-                                   target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card mb-10" data-aos="fade-up">
-                                        <div className="blog-image">
-                                            <img className="card-img-top" alt="blog4"
-                                                 src="https://miro.medium.com/max/3367/1*GiRBfno3sWdPEdLaeqHpQQ.png"/>
-                                        </div>
-
-                                        <div className="custom-card-body">
-                                            <p className="text1">{t("ABOUT")}</p>
-                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                        </div>
-                                    </div>
-                                </a>
+                              
                                 <a href="https://medium.com/persistence-blog/persistence-raises-3-7m-from-industry-heavyweights-to-bridge-traditional-finance-and-defi-via-nfts-a30256cdb428"
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card" data-aos="fade-up">

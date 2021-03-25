@@ -11,6 +11,7 @@ import Products from "./views/Products";
 import RoadMap from "./views/RoadMap";
 import Ecosystem from "./views/Ecosystem";
 import Stakedrop from "./views/Stakedrop";
+import XPRTToken from "./views/XPRTToken";
 import CosmosStakedrop from "./Containers/Stakedrop/CosmosStakedrop";
 import KavaStakedrop from "./Containers/Stakedrop/KavaStakedrop";
 import TerraStakedrop from "./Containers/Stakedrop/TerraStakedrop";
@@ -48,6 +49,7 @@ const App = () => {
             <AppRoute exact path="/products" component={Products} layout={LayoutDefault} />
             <AppRoute exact path="/roadmap" component={RoadMap} layout={LayoutDefault} />
             <AppRoute exact path="/ecosystem" component={Ecosystem} layout={LayoutDefault} />
+            <AppRoute exact path="/xprttoken" component={XPRTToken} layout={LayoutDefault} />
             <AppRoute exact path="/stakedrop" component={Stakedrop} layout={LayoutDefault} />
           <AppRoute exact path="/StakeDropCosmos" component={CosmosStakedrop} layout={LayoutDefault} />
             <AppRoute exact path="/StakeDropCosmos" component={CosmosStakedrop} layout={LayoutDefault} />

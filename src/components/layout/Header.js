@@ -1,20 +1,23 @@
-import React, { useState, useEffect} from 'react';
-import {NavLink, withRouter, useHistory} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, withRouter, useHistory } from 'react-router-dom';
 import logo from '../../assets/images1/logo.png'
-import {Nav} from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import Icon from "../Icon";
+import Alert from 'react-bootstrap/Alert'
+import rightarrow from '../../assets/images1/right-arrow.svg'
 import dropdown_asset from "../../assets/images1/dropdown_asset.svg"
 import dropdown_comdex from "../../assets/images1/dropdown_comdex.svg"
 import dropdown_audit from "../../assets/images1/dropdown_audit.svg"
 import dropdown_pstake from "../../assets/images1/dropdown_pstake.svg"
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
     let history = useHistory();
     const [isOpen, setIsOPen] = useState(false);
+    const [banner, setBanner] = useState(true);
     const [activeTab, setActiveTabs] = useState('intenft-tab');
     const [productActiveTab, setProductActiveTab] = useState('comdex-tab');
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     useEffect(() => {
         document.addEventListener('scroll', () => {
             var scrolled = document.scrollingElement.scrollTop;
@@ -34,7 +37,9 @@ const Header = () => {
             }
         });
     }, []);
-
+    const closeBanner = () => {
+        setBanner(false);
+    }
     const toggleMenu = () => {
         setIsOPen(!isOpen);
         if (document.getElementById('nab-bar-toggle').classList.contains('collapsed')) {
@@ -100,16 +105,33 @@ const Header = () => {
 
     return (
         <React.Fragment>
+
             <div id="is-sticky">
+
                 <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar"
-                     data-aos="fade-down">
+                    data-aos="fade-down">
+                    <div className="container-fluid bannernav-section">
+                   {banner ?
                     <div className="container">
+                    <Alert className="nav-banner" dismissible onClick={closeBanner} >
+                        <p>
+                            <a href="https://buff.ly/3feZxbw" rel="noopener noreferrer" target="_blank">
+                            <span>XPRT auction will be hosted on AscendEX (formerly Bitmax) on March 31. Read more </span>&emsp;<img src={rightarrow} alt="arrow" /></a>
+                        </p>
+                    </Alert>
+                </div>
+                   : null}
+                       
+                  
+                    </div>
+                    <div className="container">
+
                         <Nav.Link className="navbar-brand logo text-uppercase" href="/">
-                            <img src={logo} alt="logo"/></Nav.Link>
+                            <img src={logo} alt="logo" /></Nav.Link>
                         <button className="navbar-toggler x collapsed" id="nab-bar-toggle" type="button"
-                                data-toggle="collapse" onClick={toggleMenu}
-                                data-target="#navbarsExample05" aria-controls="navbarsExample05"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                            data-toggle="collapse" onClick={toggleMenu}
+                            data-target="#navbarsExample05" aria-controls="navbarsExample05"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
@@ -121,19 +143,19 @@ const Header = () => {
                                 id="mySidenav">
                                 <li className="nav-item dropdown company">
                                     <NavLink className="nav-link dropdown-toggle" to="/vision"
-                                             id="company-nav-dropdown"
-                                             role="button" data-toggle="dropdown" aria-haspopup="true"
-                                             aria-expanded="false">
+                                        id="company-nav-dropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
                                         {t("COMPANY")}
                                     </NavLink>
                                     <div className="dropdown-menu company-menu"
-                                         aria-labelledby="company-nav-dropdown">
+                                        aria-labelledby="company-nav-dropdown">
                                         <NavLink className="nav-link dropdown-item" to="/vision"
-                                                 onClick={() => setActiveTab('/vision')}>
+                                            onClick={() => setActiveTab('/vision')}>
                                             {t("ABOUT")}
                                         </NavLink>
                                         <NavLink className="nav-link dropdown-item" to="/roadmap"
-                                                 onClick={() => setActiveTab('/roadmap')}>
+                                            onClick={() => setActiveTab('/roadmap')}>
                                             {t("ROADMAP")}
                                         </NavLink>
                                     </div>
@@ -142,53 +164,53 @@ const Header = () => {
 
                                 <li className="nav-item dropdown ecosystem">
                                     <NavLink className="nav-link dropdown-toggle" to="/products"
-                                             id="products-nav-dropdown"
-                                             onClick={() => setActiveTab('/products')}
-                                             role="button" data-toggle="dropdown" aria-haspopup="true"
-                                             aria-expanded="false">
+                                        id="products-nav-dropdown"
+                                        onClick={() => setActiveTab('/products')}
+                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
                                         {t("PRODUCTS")}
                                     </NavLink>
                                     <div className="dropdown-menu ecosystem-dropdown"
-                                         aria-labelledby="ecosystem-nav-dropdown">
+                                        aria-labelledby="ecosystem-nav-dropdown">
                                         <div className="dropdown-content">
                                             <div className="items">
                                                 <a className="nav-link dropdown-item primary-medium-color"
-                                                   onMouseOver={() => onHoverProducts('comdex-tab')}
-                                                   href="https://comdex.sg/"
-                                                   rel="noopener noreferrer"
-                                                   target="_blank">
+                                                    onMouseOver={() => onHoverProducts('comdex-tab')}
+                                                    href="https://comdex.sg/"
+                                                    rel="noopener noreferrer"
+                                                    target="_blank">
                                                     <div className="dropdown-image">
-                                                        <img src={dropdown_comdex} alt="dropdown_asset"/>
+                                                        <img src={dropdown_comdex} alt="dropdown_asset" />
                                                     </div>
                                                     {t("COMDEX")}
                                                 </a>
                                                 <a className="nav-link dropdown-item primary-medium-color"
-                                                   onMouseOver={() => onHoverProducts('audit-tab')}
-                                                   href="https://audit.one/"
-                                                   rel="noopener noreferrer"
-                                                   target="_blank">
+                                                    onMouseOver={() => onHoverProducts('audit-tab')}
+                                                    href="https://audit.one/"
+                                                    rel="noopener noreferrer"
+                                                    target="_blank">
                                                     <div className="dropdown-image">
-                                                        <img src={dropdown_audit} alt="dropdown_asset"/>
+                                                        <img src={dropdown_audit} alt="dropdown_asset" />
                                                     </div>
                                                     {t("AUDIT_ONE")}
                                                 </a>
                                                 <a className="nav-link dropdown-item primary-medium-color"
-                                                   onMouseOver={() => onHoverProducts('pstake-tab')}
-                                                   href="https://twitter.com/pStakeFinance"
-                                                   rel="noopener noreferrer"
-                                                   target="_blank">
+                                                    onMouseOver={() => onHoverProducts('pstake-tab')}
+                                                    href="https://twitter.com/pStakeFinance"
+                                                    rel="noopener noreferrer"
+                                                    target="_blank">
                                                     <div className="dropdown-image">
-                                                        <img src={dropdown_pstake} alt="dropdown_asset"/>
+                                                        <img src={dropdown_pstake} alt="dropdown_asset" />
                                                     </div>
                                                     {t("PSTAKE")}
                                                 </a>
                                                 <a className="nav-link dropdown-item primary-medium-color"
-                                                   onMouseOver={() => onHoverProducts('mantle-tab')}
-                                                   href="https://twitter.com/AssetMantle"
-                                                   rel="noopener noreferrer"
-                                                   target="_blank">
+                                                    onMouseOver={() => onHoverProducts('mantle-tab')}
+                                                    href="https://twitter.com/AssetMantle"
+                                                    rel="noopener noreferrer"
+                                                    target="_blank">
                                                     <div className="dropdown-image">
-                                                        <img src={dropdown_asset} alt="dropdown_asset"/>
+                                                        <img src={dropdown_asset} alt="dropdown_asset" />
                                                     </div>
                                                     {t("ASSET_MANTLE")}
                                                 </a>
@@ -197,7 +219,7 @@ const Header = () => {
                                                     onMouseOver={() => onHoverProducts('plend-tab')}
                                                     to="/products" onClick={() => setActiveTab('/products')}>
                                                     <div className="dropdown-image">
-                                                        <img src={dropdown_pstake} alt="dropdown_asset"/>
+                                                        <img src={dropdown_pstake} alt="dropdown_asset" />
                                                     </div>
                                                     {t("PLEND")}
                                                 </NavLink>
@@ -206,30 +228,30 @@ const Header = () => {
                                                 <div className="item internft show" id="comdex-tab">
                                                     <p>{t("COMDEX_TAB_CONTENT")} </p>
                                                     <a href="https://comdex.sg/" rel="noopener noreferrer"
-                                                       target="_blank"
-                                                       className="button">{t("LEARN_MORE")}</a>
+                                                        target="_blank"
+                                                        className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="audit-tab">
                                                     <p>{t("AUDIT_TAB_CONTENT")}</p>
 
                                                     <a href="https://audit.one/" rel="noopener noreferrer"
-                                                       target="_blank"
-                                                       className="button">{t("LEARN_MORE")}</a>
+                                                        target="_blank"
+                                                        className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="pstake-tab">
                                                     <p> {t("PSTAKE_TAB_CONTENT")}
                                                     </p>
                                                     <a href="https://twitter.com/pStakeFinance"
-                                                       rel="noopener noreferrer"
-                                                       target="_blank"
-                                                       className="button">{t("LEARN_MORE")}</a>
+                                                        rel="noopener noreferrer"
+                                                        target="_blank"
+                                                        className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="mantle-tab">
                                                     <p>{t("MANTLE_TAB_CONTENT")}</p>
                                                     <a href="https://twitter.com/AssetMantle"
-                                                       rel="noopener noreferrer"
-                                                       target="_blank"
-                                                       className="button">{t("LEARN_MORE")}</a>
+                                                        rel="noopener noreferrer"
+                                                        target="_blank"
+                                                        className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="plend-tab">
                                                     <p>{t("PLEND_TAB_CONTENT")}</p>
@@ -241,29 +263,29 @@ const Header = () => {
                                 </li>
 
                                 <li className="nav-item"><NavLink className="nav-link primary-medium-color"
-                                                                  to="/technology"
-                                                                  onClick={() => setActiveTab('/technology')}>{t("TECHNOLOGY")}</NavLink>
+                                    to="/technology"
+                                    onClick={() => setActiveTab('/technology')}>{t("TECHNOLOGY")}</NavLink>
                                 </li>
                                 <li className="nav-item dropdown ecosystem">
                                     <NavLink className="nav-link dropdown-toggle" to="/ecosystem"
-                                             id="ecosystem-nav-dropdown"
-                                             onClick={() => setActiveTab('/ecosystem')}
-                                             role="button" data-toggle="dropdown" aria-haspopup="true"
-                                             aria-expanded="false">
+                                        id="ecosystem-nav-dropdown"
+                                        onClick={() => setActiveTab('/ecosystem')}
+                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
                                         {t("ECOSYSTEMS")}
                                     </NavLink>
                                     <div className="dropdown-menu ecosystem-dropdown"
-                                         aria-labelledby="ecosystem-nav-dropdown">
+                                        aria-labelledby="ecosystem-nav-dropdown">
                                         <div className="dropdown-content">
                                             <div className="items">
                                                 <NavLink className="nav-link dropdown-item primary-medium-color"
-                                                         onMouseOver={() => onHover('intenft-tab')}
-                                                         to="/ecosystem"
-                                                         onClick={() => scrollToID("section-nft", "ecosystem")}>
+                                                    onMouseOver={() => onHover('intenft-tab')}
+                                                    to="/ecosystem"
+                                                    onClick={() => scrollToID("section-nft", "ecosystem")}>
                                                     <div className="dropdown-image">
                                                         <Icon
                                                             viewClass="arrow-right"
-                                                            icon="dropdown-square"/>
+                                                            icon="dropdown-square" />
                                                     </div>
                                                     {t("INTER_NFT")}
                                                 </NavLink>
@@ -274,29 +296,29 @@ const Header = () => {
                                                     <div className="dropdown-image">
                                                         <Icon
                                                             viewClass="arrow-right"
-                                                            icon="dropdown-triangle"/>
+                                                            icon="dropdown-triangle" />
                                                     </div>
                                                     {t("STAKEDROP")}
                                                 </NavLink>
                                                 <NavLink className="nav-link dropdown-item primary-medium-color"
-                                                         onMouseOver={() => onHover('validators-tab')}
-                                                         to="/ecosystem"
-                                                         onClick={() => scrollToID("section-validators", "ecosystem")}>
+                                                    onMouseOver={() => onHover('validators-tab')}
+                                                    to="/ecosystem"
+                                                    onClick={() => scrollToID("section-validators", "ecosystem")}>
                                                     <div className="dropdown-image">
                                                         <Icon
                                                             viewClass="arrow-right"
-                                                            icon="dropdown-polygon"/>
+                                                            icon="dropdown-polygon" />
                                                     </div>
                                                     {t("VALIDATORS")}
                                                 </NavLink>
                                                 <NavLink className="nav-link dropdown-item primary-medium-color"
-                                                         onMouseOver={() => onHover('xprt-tab')}
-                                                         to="/ecosystem"
-                                                         onClick={() => scrollToID("section-xprt", "ecosystem")}>
+                                                    onMouseOver={() => onHover('xprt-tab')}
+                                                    to="/ecosystem"
+                                                    onClick={() => scrollToID("section-xprt", "ecosystem")}>
                                                     <div className="dropdown-image">
                                                         <Icon
                                                             viewClass="dropdown-icon"
-                                                            icon="dropdown-circle"/>
+                                                            icon="dropdown-circle" />
                                                     </div>
                                                     {t("XPRT_TOKEN")}
                                                 </NavLink>
@@ -305,25 +327,27 @@ const Header = () => {
                                                 <div className="item internft show" id="intenft-tab">
                                                     <p>{t("NFT_TAB_CONTENT")}</p>
                                                     <a href="https://internft.org/" rel="noopener noreferrer"
-                                                       target="_blank"
-                                                       className="button">{t("LEARN_MORE")}</a>
+                                                        target="_blank"
+                                                        className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="stake-drop-tab">
                                                     <p>{t("STAKEDROP_TAB_CONTENT")}
                                                     </p>
                                                     <a href="/stakedrop" rel="noopener noreferrer"
-                                                       target="_blank"
-                                                       className="button">{t("OPEN_APP")}</a>
+                                                        target="_blank"
+                                                        className="button">{t("OPEN_APP")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="validators-tab">
                                                     <p>{t("VALIDATORS_TAB_CONTENT")}</p>
-                                                    <NavLink to='/ecosystem'
-                                                             className="button">{t("LEARN_MORE")}</NavLink>
+                                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6kIw0ihP4gwA5OSqIMLS_hEodR76N4Y5Tblhl4S3ifxJZ8Q/viewform" rel="noopener noreferrer"
+                                                        target="_blank"
+                                                        className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="xprt-tab">
                                                     <p>{t("XPRT_TAB_CONTENT")}</p>
-                                                    <NavLink to='/ecosystem'
-                                                             className="button">{t("LEARN_MORE")}</NavLink>
+                                                    <NavLink to='/xprttoken'
+                                                       
+                                                        className="button">{t("LEARN_MORE")}</NavLink>
                                                 </div>
                                             </div>
                                         </div>
