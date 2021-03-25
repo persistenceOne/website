@@ -454,6 +454,38 @@
     }
   }
 }
+.xprt-banner-ecosystem.ecosystem-faq-section {
+  padding: 200px 0 200px 0;
+} 
+.why_xprt.internft-section, .acquire_xprt.internft-section {
+  .right-section .info p{
+    margin-bottom: 15px;
+  }
+}
+.acquire_xprt {
+  p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    color: #ACACAC;
+  }
+}
+.schedule_token.internft-section .right-section .info {
+  padding-left:0;
+  width: 100%;
+}
+.token_distribution.internft-section {
+  .right-section .info p{
+    span{
+      font-weight: 700;
+    }
+    margin-bottom: 15px;
+  }
+  .right-section .info {
+    padding-left: 0px;
+    padding-right: 100px;
+  }
+}
 
 .ecosystem-faq-section {
   padding: 100px 0;
