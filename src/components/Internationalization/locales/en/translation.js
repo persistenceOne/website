@@ -1,4 +1,4 @@
-let en = {
+let English = {
     translations: {
         //home page banner
         "NETWORK_ERROR": "Network Disconnected. Check your data or wifi connection.",
@@ -310,4 +310,4 @@ let en = {
     }
 };
 
-export default en;
+export default English;
