@@ -115,7 +115,7 @@ const Header = () => {
                     <div className="container">
                     <Alert className="nav-banner" dismissible onClick={closeBanner} >
                         <p>
-                            <a href="https://buff.ly/3feZxbw" rel="noopener noreferrer" target="_blank">
+                            <a href="https://ascendex.com/en/marketing/xprt" rel="noopener noreferrer" target="_blank">
                             <span>XPRT auction will be hosted on AscendEX (formerly Bitmax) on March 31. Read more </span>&emsp;<img src={rightarrow} alt="arrow" /></a>
                         </p>
                     </Alert>

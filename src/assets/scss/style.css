@@ -3661,6 +3661,7 @@ button:disabled {
   font-size: 14px;
   line-height: 200%;
   color: #ACACAC;
+  margin-bottom: 50px;
 }
 
 .xprt-section .info button.button {

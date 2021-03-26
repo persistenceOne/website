@@ -1,6 +1,7 @@
 import React from "react";
 import xprt_bg from "../../assets/images1/xprt_bg.svg";
 import {useTranslation} from "react-i18next";
+import { NavLink } from 'react-router-dom';
 const Xprt = () => {
     const {t} = useTranslation();
     return (
@@ -13,6 +14,7 @@ const Xprt = () => {
                             <div className="info">
                                 <p>{t("XPRT_TOKEN_INFO")}
                                 </p>
+                                <NavLink to="/xprttoken" className="button-primary button">{t("LEARN_MORE")}</NavLink>
                             </div>
                         </div>
                         <div className="col-md-6 text-center">
