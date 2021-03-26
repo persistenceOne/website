@@ -1,5 +1,5 @@
 import React from "react";
-import ascendbitmaxlogo from "../../assets/images1/ascendbitmaxlogo.svg";
+import ascendbitmaxlogo from "../../assets/images1/ascendbitmaxlogo.png";
 import {useTranslation} from "react-i18next";
 const AcquireXPRT = () => {
     const {t} = useTranslation();
@@ -17,8 +17,9 @@ const AcquireXPRT = () => {
                         <div className="col-md-6 right-section">
                             <div className="info">
                                 <p>{t("ACQUIRE_XPRT_TITLE_1")}</p>
+                              
                                 <p>{t("ACQUIRE_XPRT_TITLE_2")} <a href="https://bitmax.io/en/global-digital-asset-platform" target="_blank" rel="noopener noreferrer">{t("ACQUIRE_XPRT_TITLE_3")}</a></p>
-                                <p>{t("ACQUIRE_XPRT_TITLE_4")}</p>
+                                <p>{t("ACQUIRE_XPRT_TITLE_4")} <a href="https://t.me/PersistenceOneChat" target="_blank" rel="noopener noreferrer">{t("ACQUIRE_XPRT_TITLE_6")}</a> {t("ACQUIRE_XPRT_TITLE_7")}</p>
                             </div>
                         </div>
                       

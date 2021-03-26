@@ -3627,6 +3627,15 @@ button:disabled {
   border-radius: 0px !important;
 }
 
+.acquire_xprt .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .xprt-section {
   border-top: 1px solid #313238;
   background: #1F2023;

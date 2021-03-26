@@ -414,7 +414,12 @@
   }
 
 }
-
+.acquire_xprt {
+  .logos {
+    display: flex;
+    align-items: center;
+  }
+}
 .xprt-section {
   border-top: 1px solid #313238;
   background: #1F2023;
