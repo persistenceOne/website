@@ -224,6 +224,7 @@ a {
   background: #e50913;
   position: relative;
   top: 0px;
+  margin-bottom: 15px;
 }
 
 .navbar.navbar-custom {
