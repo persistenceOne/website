@@ -25,7 +25,7 @@ const Technologies = () => {
                     <div className="list-item">
                         <img src={node} alt="sdk"/>
                         <p className="name">{t("VALIDATOR_NODE")}</p>
-                        <p className="view coming-soon">{t("COMING_SOON")}</p>
+                        <a href="https://forms.gle/EcHn9W9JADTaPXGHA" rel="noopener noreferrer" target="_blank" className="view">{t("BECOME_VALIDATOR")}</a>
                     </div>
                     <div className="list-item">
                         <img src={paper} alt="sdk"/>

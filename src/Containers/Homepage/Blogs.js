@@ -31,24 +31,49 @@ const Blogs = () => {
                     <div className="col-md-7">
                         <div className="row m-0">
                             <div className="col-md-6 blog-articles left">
-                                <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133"
+                            <a href="https://medium.com/persistence-blog/xprt-tokenomics-and-utility-powering-the-persistence-ecosystem-70fc49e10362"
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card mb-10" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog2"
-                                                 src="https://miro.medium.com/max/1981/1*5uzz509r3c5kMSbvzVAVRg.png"/>
+                                                 src="https://miro.medium.com/max/3200/0*pmqr3HP6JhJGG0uC"/>
                                         </div>
 
                                         <div className="custom-card-body">
-                                            <p className="text1">{t("STAKEDROP")}</p>
+                                            <p className="text1">{t("TOKEN_ECONOMICS")}</p>
                                             <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>
                                 </a>
-                              
+                                <a href="https://medium.com/persistence-blog/xprt-token-sale-to-launch-on-ascendex-formerly-bitmax-on-march-31st-full-details-9fe2a8f52fa"
+                                   target="_blank" rel="noopener noreferrer">
+                                    <div className="custom-card" data-aos="fade-up">
+                                        <div className="blog-image">
+                                            <img className="card-img-top" alt="blog3"
+                                                 src="https://miro.medium.com/max/1000/0*qVE4WN0CsnFZKL2s"/>
+                                        </div>
+                                        <div className="custom-card-body">
+                                            <p className="text1">{t("TOKEN_SALE")}</p>
+                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                             <div className="col-md-6 blog-articles right">
-                              
+                                <a href="https://medium.com/persistence-blog/our-journey-toward-a-new-financial-paradigm-persistence-200e7efafa81"
+                                   target="_blank" rel="noopener noreferrer">
+                                    <div className="custom-card mb-10" data-aos="fade-up">
+                                        <div className="blog-image">
+                                            <img className="card-img-top" alt="blog4"
+                                                 src="https://miro.medium.com/max/3367/1*GiRBfno3sWdPEdLaeqHpQQ.png"/>
+                                        </div>
+
+                                        <div className="custom-card-body">
+                                            <p className="text1">{t("ABOUT")}</p>
+                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                        </div>
+                                    </div>
+                                </a>
                                 <a href="https://medium.com/persistence-blog/persistence-raises-3-7m-from-industry-heavyweights-to-bridge-traditional-finance-and-defi-via-nfts-a30256cdb428"
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card" data-aos="fade-up">
