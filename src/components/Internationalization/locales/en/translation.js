@@ -224,7 +224,7 @@ let English = {
         "ACQUIRE_XPRT_TITLE_4":"Please note that XPRT will not be sold through any other platform, exchange or medium. For any queries regarding the sale, please send a message in our official telegram chat.",
         "TOKEN_ECONOMICS":"TOKEN ECONOMICS",
         "TOKEN_SALE":"TOKEN SALE",
-        "BECOME_VALIDATOR":"Become a Validator",
+        
         //Roadmap
         "DAPP":"Dapp",
         "TOKEN":"Token",
