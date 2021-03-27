@@ -224,6 +224,7 @@ a {
   background: #e50913;
   position: relative;
   top: 0px;
+  margin-bottom: 15px;
 }
 
 .navbar.navbar-custom {
@@ -3625,6 +3626,15 @@ button:disabled {
 .stakedrop-info-section .right-section .info .button {
   padding: 12px 35px !important;
   border-radius: 0px !important;
+}
+
+.acquire_xprt .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .xprt-section {
