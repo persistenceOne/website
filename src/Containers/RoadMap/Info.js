@@ -277,19 +277,6 @@ const Info = () => {
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q1_4")} <span>{t("ECOSYSTEM")}</span></p>
                                         </div>
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="present-img event-status-img" src={event_running}*/}
-                                        {/*         alt="establish-img"/>*/}
-                                        {/*    <div className="circle event-status-img"></div>*/}
-
-                                        {/*    <p className="event-name">{t("2021_Q1_5")}</p>*/}
-
-                                        {/*    <p className="present-event ind"><span>We are here!</span></p>*/}
-                                        {/*</div>*/}
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="establish-img"/>*/}
-                                        {/*    <p className="event-name">{t("2021_Q1_6")} <span>{t("TOKEN")}</span></p>*/}
-                                        {/*</div>*/}
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q1_7")} <span>{t("CORE")}</span></p>
@@ -344,10 +331,6 @@ const Info = () => {
                                         <h3 className="quater-text">Q2</h3>
                                     </div>
                                     <div className="eventes">
-                                        {/*<div className="event">*/}
-                                        {/*    <img className="event-status-img" src={event_pending} alt="establish-img"/>*/}
-                                        {/*    <p className="event-name">{t("2021_Q2_1")} <span>{t("COMMUNITY")}</span></p>*/}
-                                        {/*</div>*/}
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q2_2")} <span>{t("ECOSYSTEM")}</span></p>

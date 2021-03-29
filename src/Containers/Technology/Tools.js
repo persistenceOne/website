@@ -17,9 +17,6 @@ const Tools = () => {
                                     <div className="logo">
                                         <a className="link-box" href="http://dev.testnet-explorer.persistence.one/" rel="noopener noreferrer" target="_blank">Core-1</a>
                                     </div>
-                                    {/*<div className="logo">*/}
-                                    {/*    <a className="link-box" href="https://explorer.persistence.one/" rel="noopener noreferrer" target="_blank">{t("CRUST_2")}</a>*/}
-                                    {/*</div>*/}
                                 </div>
                             </div>
                         </div>
