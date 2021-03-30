@@ -28,58 +28,64 @@ function ContextAwareToggle({children, eventKey, callback}) {
 const TokenTitle = () => {
     const {t} = useTranslation();
     return (
-            <section className="xprt-banner-ecosystem ecosystem-faq-section" data-aos="fade-up">
-                <div className="container">
-                    <h3 className="section-title">{t("ROLE_OF_XPRT")}</h3>
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="info">
-                                <Accordion>
-                                    <Card>
-                                        <Card.Header>
-                                            <p>
-                                                {t("FAQ3_QUESTION")}
+        <section className="xprt-banner-ecosystem ecosystem-faq-section" data-aos="fade-up">
+            <div className="container">
+                <div className="info-form">
+                    <div className="text">Fill in your XPRT auction confirmation number from AscendEX <a
+                        href="https://auction.persistence.one"
+                        rel="noopener noreferrer"
+                        target="_blank">here.</a></div>
+                </div>
+                <h3 className="section-title">{t("ROLE_OF_XPRT")}</h3>
+                <div className="row">
+                    <div className="col-md-6">
+                        <div className="info">
+                            <Accordion>
+                                <Card>
+                                    <Card.Header>
+                                        <p>
+                                            {t("FAQ3_QUESTION")}
+                                        </p>
+                                        <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
+                                    </Card.Header>
+                                    <Accordion.Collapse eventKey="0">
+                                        <Card.Body>{t("FAQ3_ANSWER")}</Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                                <Card>
+                                    <Card.Header>
+                                        <p>
+                                            {t("FAQ4_QUESTION")}
+                                        </p>
+                                        <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
+                                    </Card.Header>
+                                    <Accordion.Collapse eventKey="1">
+                                        <Card.Body>
+                                            <p>{t("FAQ4_ANSWER")}
                                             </p>
-                                            <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
-                                        </Card.Header>
-                                        <Accordion.Collapse eventKey="0">
-                                            <Card.Body>{t("FAQ3_ANSWER")}</Card.Body>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                    <Card>
-                                        <Card.Header>
-                                            <p>
-                                                {t("FAQ4_QUESTION")}
+                                        </Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                                <Card>
+                                    <Card.Header>
+                                        <p>
+                                            {t("FAQ5_QUESTION")}
+                                        </p>
+                                        <ContextAwareToggle eventKey="2">Click me!</ContextAwareToggle>
+                                    </Card.Header>
+                                    <Accordion.Collapse eventKey="2">
+                                        <Card.Body>
+                                            <p>{t("FAQ5_ANSWER")}
                                             </p>
-                                            <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
-                                        </Card.Header>
-                                        <Accordion.Collapse eventKey="1">
-                                            <Card.Body>
-                                                <p>{t("FAQ4_ANSWER")}
-                                                </p>
-                                            </Card.Body>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                    <Card>
-                                        <Card.Header>
-                                            <p>
-                                                {t("FAQ5_QUESTION")}
-                                            </p>
-                                            <ContextAwareToggle eventKey="2">Click me!</ContextAwareToggle>
-                                        </Card.Header>
-                                        <Accordion.Collapse eventKey="2">
-                                            <Card.Body>
-                                                <p>{t("FAQ5_ANSWER")}
-                                                </p>
-                                            </Card.Body>
-                                        </Accordion.Collapse>
-                                    </Card>
-                                </Accordion>
-                            </div>
+                                        </Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
     )
 }
 export default TokenTitle;

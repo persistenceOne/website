@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import icon from '../../../assets/images1/footer_logo.svg'
 import whitepaper from '../../../assets/images1/whitepaper.pdf'
 import Mailchimp from "./MailChimp";
 import {Link} from 'react-router-dom';
-import {OverlayTrigger, Tooltip, Dropdown} from 'react-bootstrap'
+import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 import Icon from "../../Icon";
 import Scroll from 'react-scroll';
 import {useTranslation} from "react-i18next";
@@ -48,25 +48,11 @@ const socialList = [
 ];
 
 const Footer = (props) => {
-    const {t, i18n} = useTranslation();
-    const [language, setLanguage] = useState('English');
+    const {t} = useTranslation();
     const scrollTop = () =>{
         scroll.scrollToTop();
     };
-    useEffect(() => {
-        // localStorage.setItem("language", language);
-        const languageType = localStorage.getItem('language');
-        if(languageType !== ''){
-            setLanguage(languageType);
-        }
-    },[]);
-    const handleLanguage = (type) =>{
-        localStorage.setItem("language", type);
-        const languageType = localStorage.getItem('language');
-        setLanguage(languageType);
-        i18n.changeLanguage(type);
-        // setLanguage(type);
-    };
+
     return (
         <>
             <section className="contact-section">
@@ -108,21 +94,6 @@ const Footer = (props) => {
                                     <h6>{t("GET_IN_TOUCH")}</h6>
                                     <div className="text-muted mt-30 email">
                                         <a className="footer-text email" href="mailto:hello@persistence.one">hello@persistence.one</a>
-                                    </div>
-                                    <h6>Choose Language</h6>
-                                    <div className="text-muted mt-30">
-                                        <Dropdown>
-                                            <Dropdown.Toggle id="dropdown-basic">
-                                                {language}
-                                            </Dropdown.Toggle>
-
-                                            <Dropdown.Menu>
-                                                <li className="dropdown-item" onClick={() => handleLanguage('English')}>English</li>
-                                                <li className="dropdown-item" onClick={() => handleLanguage('Russian')}>Russian</li>
-                                                <li className="dropdown-item" onClick={() => handleLanguage('Chinese')}>Chinese</li>
-                                                <li className="dropdown-item" onClick={() => handleLanguage('Korean')}>Korean</li>
-                                            </Dropdown.Menu>
-                                        </Dropdown>
                                     </div>
                                 </div>
                             </div>

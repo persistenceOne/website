@@ -13,8 +13,10 @@ const Tools = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="box">
                                 <p>{t("EXPLORERS")}</p>
-                                <div className="logo">
-                                    <a className="link-box" href="https://explorer.persistence.one/" rel="noopener noreferrer" target="_blank">{t("CRUST_2")}</a>
+                                <div className="logos flex-box">
+                                    <div className="logo">
+                                        <a className="link-box" href="http://dev.testnet-explorer.persistence.one/" rel="noopener noreferrer" target="_blank">Core-1</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

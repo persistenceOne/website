@@ -5,6 +5,7 @@ import node from "../../assets/images1/technology/node.svg";
 import paper from "../../assets/images1/technology/paper.svg";
 import whitepaper from "../../assets/images1/whitepaper.pdf";
 import explorer from "../../assets/images1/technology/explorer.svg";
+import wallet from "../../assets/images1/technology/wallet.svg";
 import {useTranslation} from "react-i18next";
 const Technologies = () => {
     const {t} = useTranslation();
@@ -30,12 +31,17 @@ const Technologies = () => {
                     <div className="list-item">
                         <img src={paper} alt="sdk"/>
                         <p className="name">{t("EXPLORER")}</p>
-                        <a href="https://explorer.persistence.one/" rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
+                        <a href="http://dev.testnet-explorer.persistence.one/" rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
                     </div>
                     <div className="list-item">
                         <img src={explorer} alt="sdk"/>
                         <p className="name">{t("PROTOCOL_PAPER")}</p>
                         <a href={whitepaper} rel="noopener noreferrer" target="_blank" className="view">{t("EXPLORE_MORE")}</a>
+                    </div>
+                    <div className="list-item">
+                        <img src={wallet} alt="sdk"/>
+                        <p className="name">Persistence Wallet</p>
+                        <a href="https://wallet.persistence.one/" rel="noopener noreferrer" target="_blank" className="view">Open</a>
                     </div>
                 </div>
             </div>

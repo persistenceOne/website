@@ -220,6 +220,10 @@ a {
 
 .navbar.navbar-custom {
   width: 100%;
+  .wallet-button .button-primary{
+    padding: 6px 20px !important;
+    letter-spacing: 0.5px;
+  }
 }
 .bannernav-section {
   width: 100%;
@@ -291,6 +295,7 @@ a {
   .dropdown-menu.company-menu {
     right: 0 !important;
     left: auto !important;
+    top: 96% !important;
   }
 
   .dropdown.company .dropdown-item {
@@ -305,13 +310,14 @@ a {
     li {
       margin-left: 35px;
 
-      a {
+      a, .nav-link {
         font-family: 'Poppins', sans-serif;
         font-weight: bold;
         font-size: 12px;
         line-height: 1.5;
         text-align: center;
         letter-spacing: 0.1em;
+        margin: 0;
         text-transform: uppercase;
         color: #C4C4C4;
       }
@@ -321,6 +327,13 @@ a {
 
         &::first-letter {
           border-top: 2px solid #e50913;
+        }
+      }
+    }
+    .language-dropdown{
+      .dropdown-menu{
+        .nav-link.active{
+          color: #e50913;
         }
       }
     }
@@ -362,7 +375,7 @@ a {
     right: 0;
     left: auto;
     padding: 0;
-
+    top: 96%;
     .dropdown-content {
       display: flex;
 
@@ -637,11 +650,18 @@ a {
     }
   }
 }
-
+.language-dropdown{
+  .icon{
+    color: #C4C4C4;
+    width: 22px;
+  }
+}
 .second-section {
   background: #F5F5F5;
 }
-
+.m-10{
+  margin-left: 10px;
+}
 .footer {
   .resources {
     margin-top: 30px;
