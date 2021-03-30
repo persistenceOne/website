@@ -305,10 +305,15 @@ a {
   .dropdown.ecosystem:hover .dropdown-menu {
     display: block;
   }
-
+  .nav-item.wallet-button {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   .navbar-nav {
+    align-items: center;
     li {
-      margin-left: 35px;
+      margin-left: 20px;
 
       a, .nav-link {
         font-family: 'Poppins', sans-serif;

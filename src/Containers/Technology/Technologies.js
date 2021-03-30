@@ -7,6 +7,7 @@ import whitepaper from "../../assets/images1/whitepaper.pdf";
 import explorer from "../../assets/images1/technology/explorer.svg";
 import wallet from "../../assets/images1/technology/wallet.svg";
 import {useTranslation} from "react-i18next";
+let explorerURL = process.env.REACT_APP_EXPLORER_URL;
 const Technologies = () => {
     const {t} = useTranslation();
     return (
@@ -31,7 +32,7 @@ const Technologies = () => {
                     <div className="list-item">
                         <img src={paper} alt="sdk"/>
                         <p className="name">{t("EXPLORER")}</p>
-                        <a href="https://explorer.persistence.one/" rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
+                        <a href={`${explorerURL}`}rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
                     </div>
                     <div className="list-item">
                         <img src={explorer} alt="sdk"/>
