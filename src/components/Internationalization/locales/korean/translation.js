@@ -124,7 +124,7 @@ let Korean = {
         "TAVIS_DIGITAL":"Tavis Digital",
         "SCOTT":"Scott Littlewood",
         "ASIA_HEAD_BD":"Asia Head of BD and Ops,",
-        "TEZOS":"Tezos APAC",
+        "TEZOS":"TZ APAC",
         "HARTEJ":"Hartej Sawney",
         "ZOKYO":"Zokyo",
         // Products
