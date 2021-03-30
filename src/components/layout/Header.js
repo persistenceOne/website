@@ -363,7 +363,7 @@ const Header = () => {
                                                              className="button">{t("LEARN_MORE")}</NavLink>
                                                     <a href="https://auction.persistence.one/" rel="noopener noreferrer"
                                                        target="_blank"
-                                                       className="button m-10">XPRT Auction</a>
+                                                       className="button ml-10">XPRT Auction</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -371,6 +371,9 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item wallet-button">
                                     <a href="https://wallet.persistence.one/" rel="noopener noreferrer" target="_blank" className="button-primary button">Wallet</a>
+                                </li>
+                                <li className="nav-item wallet-button">
+                                    <a href="https://explorer.persistence.one/" rel="noopener noreferrer" target="_blank" className="button-primary button">Explorer</a>
                                 </li>
                                 <li className="nav-item dropdown company language-dropdown">
                                     <p className="nav-link dropdown-toggle"
