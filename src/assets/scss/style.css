@@ -146,7 +146,7 @@ a {
 
 .button-primary {
   background-color: #E50913 !important;
-  border-radius: 7px !important;
+  border-radius: 0px !important;
   border: 0px solid !important;
   font-weight: 600 !important;
   font-size: 16px !important;
@@ -231,6 +231,11 @@ a {
   width: 100%;
 }
 
+.navbar.navbar-custom .wallet-button .button-primary {
+  padding: 10px 1.5rem !important;
+  letter-spacing: 0.5px;
+}
+
 .bannernav-section {
   width: 100%;
   background: #e50913;
@@ -310,6 +315,7 @@ a {
 .navbar.navbar-custom .dropdown-menu.company-menu {
   right: 0 !important;
   left: auto !important;
+  top: 96% !important;
 }
 
 .navbar.navbar-custom .dropdown.company .dropdown-item {
@@ -320,17 +326,30 @@ a {
   display: block;
 }
 
-.navbar.navbar-custom .navbar-nav li {
-  margin-left: 35px;
+.navbar.navbar-custom .nav-item.wallet-button {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.navbar.navbar-custom .navbar-nav li a {
+.navbar.navbar-custom .navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar.navbar-custom .navbar-nav li {
+  margin-left: 20px;
+}
+
+.navbar.navbar-custom .navbar-nav li a, .navbar.navbar-custom .navbar-nav li .nav-link {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.1em;
+  margin: 0;
   text-transform: uppercase;
   color: #C4C4C4;
 }
@@ -341,6 +360,10 @@ a {
 
 .navbar.navbar-custom .navbar-nav li a.active::first-letter {
   border-top: 2px solid #e50913;
+}
+
+.navbar.navbar-custom .navbar-nav .language-dropdown .dropdown-menu .nav-link.active {
+  color: #e50913;
 }
 
 .navbar.navbar-custom .dropdown-menu {
@@ -388,6 +411,7 @@ a {
   right: 0;
   left: auto;
   padding: 0;
+  top: 96%;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content {
@@ -663,8 +687,17 @@ a {
   outline: none;
 }
 
+.language-dropdown .icon {
+  color: #C4C4C4;
+  width: 22px;
+}
+
 .second-section {
   background: #F5F5F5;
+}
+
+.ml-10 {
+  margin-left: 10px !important;
 }
 
 .footer {
@@ -3698,6 +3731,24 @@ button:disabled {
   color: #ACACAC;
 }
 
+.acquire_xprt .info-form {
+  text-align: left;
+}
+
+.acquire_xprt .info-form .text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #ACACAC;
+}
+
+.acquire_xprt .info-form .text a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
 .schedule_token.internft-section .right-section .info {
   padding-left: 0;
   width: 100%;
@@ -3774,6 +3825,26 @@ button:disabled {
   font-size: 14px;
   line-height: 2;
   color: #F3F3F3;
+}
+
+.info-form {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.info-form .text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 2;
+  color: #FFFFFF;
+}
+
+.info-form .text a {
+  color: #e50913;
+  text-decoration: underline;
+  font-size: 16px;
+  padding-left: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -5027,6 +5098,10 @@ button:disabled {
 .section-technology-list .list .list-item {
   text-align: center;
   margin-bottom: 10px;
+}
+
+.section-technology-list .list .list-item img {
+  width: 57px;
 }
 
 .section-technology-list .list .list-item .name {

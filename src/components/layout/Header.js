@@ -11,7 +11,9 @@ import dropdown_audit from "../../assets/images1/dropdown_audit.svg"
 import dropdown_pstake from "../../assets/images1/dropdown_pstake.svg"
 import {useTranslation} from "react-i18next";
 
+let explorerURL = process.env.REACT_APP_EXPLORER_URL;
 const Header = () => {
+    
     let history = useHistory();
     const [isOpen, setIsOPen] = useState(false);
     const [banner, setBanner] = useState(true);
@@ -363,7 +365,7 @@ const Header = () => {
                                                              className="button">{t("LEARN_MORE")}</NavLink>
                                                     <a href="https://auction.persistence.one/" rel="noopener noreferrer"
                                                        target="_blank"
-                                                       className="button m-10">XPRT Auction</a>
+                                                       className="button ml-10">XPRT Auction</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -371,6 +373,9 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item wallet-button">
                                     <a href="https://wallet.persistence.one/" rel="noopener noreferrer" target="_blank" className="button-primary button">Wallet</a>
+                                </li>
+                                <li className="nav-item wallet-button">
+                                    <a href={`${explorerURL}`} rel="noopener noreferrer" target="_blank" className="button-primary button">Explorer</a>
                                 </li>
                                 <li className="nav-item dropdown company language-dropdown">
                                     <p className="nav-link dropdown-toggle"
