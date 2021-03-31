@@ -146,10 +146,10 @@ a {
 
 .button-primary {
   background-color: #E50913 !important;
-  border-radius: 0px !important;
+  border-radius: 7px !important;
   border: 0px solid !important;
-  font-weight: 600 !important;
-  font-size: 16px !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
   line-height: 1.8 !important;
   text-align: center !important;
   color: #FFFFFF !important;
@@ -232,7 +232,7 @@ a {
 }
 
 .navbar.navbar-custom .wallet-button .button-primary {
-  padding: 10px 1.5rem !important;
+  padding: 6px 20px !important;
   letter-spacing: 0.5px;
 }
 
@@ -312,6 +312,10 @@ a {
   display: block;
 }
 
+.navbar.navbar-custom .dropdown-menu {
+  min-width: 8rem;
+}
+
 .navbar.navbar-custom .dropdown-menu.company-menu {
   right: 0 !important;
   left: auto !important;
@@ -339,7 +343,7 @@ a {
 }
 
 .navbar.navbar-custom .navbar-nav li {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .navbar.navbar-custom .navbar-nav li a, .navbar.navbar-custom .navbar-nav li .nav-link {
