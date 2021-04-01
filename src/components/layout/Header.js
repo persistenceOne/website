@@ -128,9 +128,9 @@ const Header = () => {
                             <div className="container">
                                 <Alert className="nav-banner" dismissible onClick={closeBanner}>
                                     <p>
-                                        <a href="https://ascendex.com/en/marketing/xprt" rel="noopener noreferrer"
+                                        <a href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt" rel="noopener noreferrer"
                                            target="_blank">
-                                            <span>XPRT auction will be hosted on AscendEX (formerly BitMax) on March 31. Read more </span>&emsp;
+                                            <span>XPRT listed on AscendEX on April 1. Buy Now </span>&emsp;
                                             <img src={rightarrow} alt="arrow"/></a>
                                     </p>
                                 </Alert>
