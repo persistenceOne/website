@@ -31,7 +31,7 @@ const Comdex = () => {
                             </div>
                             <div className="button-list">
                                 <a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("COMDEX_SG")}</a>
-                                <a href="https://explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("BLOCK_EXPLORER")}</a>
+                                <a href="https://crust-2.explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("BLOCK_EXPLORER")}</a>
                             </div>
                         </div>
                     </div>
