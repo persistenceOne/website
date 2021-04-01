@@ -1,7 +1,7 @@
 import React from "react";
 import comdex_product from "../../assets/images1/comdex_product.svg";
 import {useTranslation} from "react-i18next";
-
+let explorerBlockURL = process.env.REACT_APP_BLOCK_EXPLORER_URL;
 const Comdex = () => {
     const {t} = useTranslation();
     return (
@@ -31,7 +31,7 @@ const Comdex = () => {
                             </div>
                             <div className="button-list">
                                 <a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("COMDEX_SG")}</a>
-                                <a href="https://explorer.persistence.one/" className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("BLOCK_EXPLORER")}</a>
+                                <a href={`${explorerBlockURL}`} className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("BLOCK_EXPLORER")}</a>
                             </div>
                         </div>
                     </div>
