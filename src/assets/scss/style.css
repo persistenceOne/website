@@ -246,7 +246,7 @@ a {
 .bannernav-section .alert-dismissible .close {
   position: absolute;
   top: -4px;
-  right: 0;
+  right: -25px;
   padding: .75rem 1.25rem;
   color: inherit;
   color: #fff;
@@ -2225,12 +2225,12 @@ button:disabled {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-bottom: 50px;
 }
 
 .vision-section-team .profiles .profile {
   position: relative;
   margin-right: 20px;
+  margin-bottom: 50px;
 }
 
 .vision-section-team .profiles .profile img {
@@ -3871,7 +3871,7 @@ button:disabled {
 
 .stakedrop-section .title-cards .common-cards {
   background: #313238;
-  padding: 15px 20px;
+  padding: 15px;
 }
 
 .stakedrop-section .title-cards .common-cards p {
@@ -4003,7 +4003,7 @@ button:disabled {
 
 .stake-drop-campaigns .campaign-card {
   background: #fff;
-  padding: 30px;
+  padding: 28px;
   border-radius: 5px;
   margin-bottom: 50px;
 }
@@ -4170,6 +4170,7 @@ button:disabled {
 
 .stake-drop-campaigns .about-campaign h4 {
   font-weight: bold;
+  font-size: 22px;
 }
 
 .stake-drop-campaigns .about-campaign p {
@@ -5332,6 +5333,19 @@ button:disabled {
   .navbar-collapse {
     padding-top: 15px;
   }
+  .site-content {
+    margin-top: 65px;
+  }
+  .site-content .banner-section {
+    height: auto;
+    padding: 135px 0 100px 0;
+  }
+  .product-info-section .cards {
+    margin-left: 0;
+  }
+  .section-roadmap {
+    padding: 130px 0 100px 0;
+  }
 }
 
 @media (max-width: 767.8px) {
@@ -5385,6 +5399,9 @@ button:disabled {
   .section-title {
     font-size: 26px;
   }
+  .validators-section .validators .become-validator {
+    padding: 60px 0px 0px 0px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.8px) {
@@ -5392,6 +5409,23 @@ button:disabled {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media (max-width: 375px) {
+  .button-primary, .button-secondary, .product-info-section.product-pstake .button.coming-soon {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .product-info-section .cards .button-list .button-primary {
+    margin-right: 0;
   }
 }
 

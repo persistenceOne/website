@@ -106,11 +106,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 50px;
+   
 
     .profile {
       position: relative;
       margin-right: 20px;
+      margin-bottom: 50px;
 
       img {
         width: 100%;
