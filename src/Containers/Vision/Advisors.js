@@ -7,6 +7,8 @@ import hartej from "../../assets/images1/pics/advisers/hartej.svg";
 import scott from "../../assets/images1/pics/advisers/scott.svg";
 import marcus from "../../assets/images1/pics/advisers/marcus.svg";
 import zhihao from "../../assets/images1/pics/advisers/zhihao.svg";
+import ajith from "../../assets/images1/pics/advisers/Ajith.png";
+import sam from "../../assets/images1/pics/advisers/Sam.png";
 
 import {useTranslation} from "react-i18next";
 import Icon from "../../components/Icon";
@@ -77,6 +79,57 @@ const Advisors = () => {
                             <div className="proileContainer" data-aos="fade-up">
                                 <div className="bg-advisors">
                                     <div className="profile-picture">
+                                        <img src={ajith} alt="pic1"/>
+                                        <div className="social-icons">
+                                            <a className="icon-box" href="https://twitter.com/chainyoda"
+                                               rel="noopener noreferrer" target="_blank"><Icon
+                                                viewClass="social_icon_imgg"
+                                                icon="twitter-logo"/></a>
+                                                 <a className="icon-box"
+                                               href="https://www.linkedin.com/in/ajitkt/"
+                                               rel="noopener noreferrer" target="_blank"><Icon
+                                                viewClass="social_icon_imgg"
+                                                icon="linkedin-footer"/></a>
+                                        </div>
+                                    </div>
+                                    <div className="margin-left-xs text-center">
+                                        <p className="profile-name">{t("AJITH")}</p>
+                                        <p className="designation-name">{t("HEAD_OF_INSTITUTIONAL")},&nbsp;
+                                            <a href="#" rel="noopener noreferrer"
+                                               target="_blank">{t("AAVE")}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div className="proileContainer" data-aos="fade-up">
+                                <div className="bg-advisors">
+                                    <div className="profile-picture">
+                                        <img src={sam} alt="pic1"/>
+                                        <div className="social-icons">
+                                            <a className="icon-box" href="#"
+                                               rel="noopener noreferrer" target="_blank"><Icon
+                                                viewClass="social_icon_imgg"
+                                                icon="twitter-logo"/></a>
+                                                 <a className="icon-box"
+                                               href="#"
+                                               rel="noopener noreferrer" target="_blank"><Icon
+                                                viewClass="social_icon_imgg"
+                                                icon="linkedin-footer"/></a>
+                                        </div>
+                                    </div>
+                                    <div className="margin-left-xs text-center">
+                                        <p className="profile-name">{t("SAM")}</p>
+                                        <p className="designation-name">{t("INVESTMENT_ASSOCIATE")},&nbsp;
+                                            <a href="#" rel="noopener noreferrer"
+                                               target="_blank">{t("TENDERMINT_SAM")}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="proileContainer" data-aos="fade-up">
+                                <div className="bg-advisors">
+                                    <div className="profile-picture">
                                         <img src={jeffrey} alt="pic1"/>
                                         <div className="social-icons">
                                             <a className="icon-box" href="https://twitter.com/hu_zhiwei"
@@ -94,8 +147,6 @@ const Advisors = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="row profiles-group">
                             <div className="proileContainer" data-aos="fade-up">
                                 <div className="bg-advisors">
                                     <div className="profile-picture">
@@ -116,6 +167,9 @@ const Advisors = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="row profiles-group">
+                          
                             <div className="proileContainer" data-aos="fade-up">
                                 <div className="bg-advisors">
                                     <div className="profile-picture">
@@ -162,8 +216,6 @@ const Advisors = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="row profiles-group">
                             <div className="proileContainer" data-aos="fade-up">
                                 <div className="bg-advisors">
                                     <div className="profile-picture">
@@ -185,6 +237,9 @@ const Advisors = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="row profiles-group">
+                           
                             <div className="proileContainer" data-aos="fade-up">
                                 <div className="bg-advisors">
                                     <div className="profile-picture">

@@ -204,20 +204,13 @@ class StakedropMainPage extends React.Component {
 
                                         <div className="col-xs-6 col-md-6 col-lg-3 row-pad p-1">
                                             <div className="col-lg-12 common-cards card-one">
-                                                <p>Dropped XPRT</p>
-                                                <h5>{this.state.totaldrop} XPRT</h5>
+                                                <p>Networks Supported</p>
+                                                <h5>7</h5>
                                             </div>
                                         </div>
 
 
-                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad p-1">
-
-                                            <div className="col-lg-12 common-cards card-one">
-
-                                                <p>Total Tokens Staked</p>
-                                                <h5>{(this.state.totalStakeDropGlobalDelegation)}</h5>
-                                            </div>
-                                        </div>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +241,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewCosmos} className="viewcampaign"
-                                                          to="/StakeDropCosmos">View</Link></span>
+                                                          to="/StakeDropCosmos">Cosmos</Link></span>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>Cosmos (ATOM)</h4>
@@ -274,7 +267,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={kava_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewKava} className="viewcampaign"
-                                                          to="/StakeDropKava">View</Link></span>
+                                                          to="/StakeDropKava">Kava</Link></span>
                                                 </div>
 
                                                 <div className="about-campaign">
@@ -300,7 +293,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={luna_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewTerra} className="viewcampaign"
-                                                          to="/StakeDropTerra">View</Link></span>
+                                                          to="/StakeDropTerra">Luna</Link></span>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>Terra (LUNA)</h4>

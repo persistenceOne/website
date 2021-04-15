@@ -4,12 +4,16 @@ import Cosmostation from "../../assets/images1/backers/validators/Cosmostation.p
 import audit from "../../assets/images1/backers/validators/audit.png";
 import stakefish from "../../assets/images1/backers/validators/stakefish.png";
 import FigmentNetworks from "../../assets/images1/backers/validators/figment.png";
-import BHarvest from "../../assets/images1/backers/validators/BHarvest.png";
-import sikka from "../../assets/images1/backers/validators/sikka.png";
-import Iqlusion from "../../assets/images1/backers/validators/Iqlusion.png";
+import huboipool from "../../assets/images1/backers/validators/svg/Houbi_Pool10.svg";
+import everstake from "../../assets/images1/backers/validators/svg/everstake.svg";
+import Band_Protoocol from "../../assets/images1/backers/validators/svg/Band_Protoocol.svg";
+import KalpaTech from "../../assets/images1/backers/validators/svg/KalpaTech.svg";
+import Ascendex from "../../assets/images1/backers/validators/svg/Ascendex.svg";
+import DSRV from "../../assets/images1/backers/validators/svg/DSRV.svg";
+import sg1 from "../../assets/images1/backers/validators/svg/sg1.svg";
+
 import StakeWithUs from "../../assets/images1/backers/validators/StakeWithUs.png";
 import p2p_logo from "../../assets/images1/backers/validators/p2p.png";
-import CertusOne from "../../assets/images1/backers/validators/CertusOne.png";
 import HashQuark from "../../assets/images1/backers/validators/HashQuark.png";
 import {useTranslation} from "react-i18next";
 
@@ -29,16 +33,23 @@ const Validators = () => {
                         <a href="https://stake.fish/en/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={stakefish} alt="Stakefish" /></a>
                     </div>
                     <div className="common-row second-row">
-                        <a href="https://bharvest.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={BHarvest} alt="BHarvest" /></a>
-                        <a href="https://www.sikka.tech/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={sikka} alt="sikka" /></a>
-                        <a href="https://www.iqlusion.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Iqlusion} alt="Iqlusion" /></a>
-                        <a href="https://www.stakewith.us/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={StakeWithUs} alt="StakeWithUs" /></a>
-                    </div>
+                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={huboipool} alt="StakeWithUs" /></a>
+                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={everstake} alt="StakeWithUs" /></a>
+                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Band_Protoocol} alt="StakeWithUs" /></a>
+                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={KalpaTech} alt="StakeWithUs" /></a>
+                   </div>
                     <div className="common-row third-row">
-                        <a href="https://figment.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={FigmentNetworks} alt="FigmentNetworks" /></a>
+                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Ascendex} alt="StakeWithUs" /></a>
+                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={DSRV} alt="StakeWithUs" /></a>
+                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={sg1} alt="StakeWithUs" /></a>
+                    <a href="https://www.stakewith.us/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={StakeWithUs} alt="StakeWithUs" /></a>
+                    
+                     </div>
+                    <div className="common-row third-row">
+                    <a href="https://figment.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={FigmentNetworks} alt="FigmentNetworks" /></a>
                         <a href="https://p2p.org/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={p2p_logo} alt="P2P" /></a>
-                        <a href="https://certus.one/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={CertusOne} alt="CertusOne" /></a>
                         <a href="https://www.hashquark.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={HashQuark} alt="HashQuark" /></a>
+                    
                     </div>
                     <div className="become-validator row">
                         <div className="col-lg-7 col-md-12 text">

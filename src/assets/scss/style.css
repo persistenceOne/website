@@ -3290,17 +3290,12 @@ button:disabled {
 }
 
 .section-ecosystem-banner .social-links .link .text {
-  cursor: pointer;
   margin: 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.434;
   text-align: center;
   color: #E8EEF4;
-}
-
-.section-ecosystem-banner .social-links .link .text:hover {
-  text-decoration: underline !important;
 }
 
 .validators-section {

@@ -11,8 +11,8 @@ const Homepage = () => {
     return (
         <React.Fragment>
             <Banner/>
-            <Aims/>
             <Products/>
+            <Aims/>
             <Backers/>
             <Blogs/>
             <Featured/>

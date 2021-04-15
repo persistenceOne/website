@@ -20,7 +20,7 @@ const Audit = () => {
                                     <p className="name">{t("TOTAL_ASSETS_SECURED")}</p>
                                 </div>
                                 <div className="data-card side-border text-center">
-                                    <p className="value">$100M+</p>
+                                    <p className="value">$200M+</p>
                                     <p className="name">{t("ASSETS_UNDER_DELEGATION")}</p>
                                 </div>
                                 <div className="data-card text-center">
