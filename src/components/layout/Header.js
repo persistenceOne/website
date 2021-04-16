@@ -357,7 +357,10 @@ const Header = () => {
                                                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6kIw0ihP4gwA5OSqIMLS_hEodR76N4Y5Tblhl4S3ifxJZ8Q/viewform"
                                                        rel="noopener noreferrer"
                                                        target="_blank"
-                                                       className="button">{t("LEARN_MORE")}</a>
+                                                       className="button">{t("VALIDATOR_NAV")}</a>
+                                                        <a href={`${explorerURL}`} rel="noopener noreferrer"
+                                                       target="_blank"
+                                                       className="button ml-10">Explorer</a>
                                                 </div>
                                                 <div className="item stake-drop" id="xprt-tab">
                                                     <p>{t("XPRT_TAB_CONTENT")}</p>

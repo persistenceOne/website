@@ -33,15 +33,15 @@ const Validators = () => {
                         <a href="https://stake.fish/en/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={stakefish} alt="Stakefish" /></a>
                     </div>
                     <div className="common-row second-row">
-                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={huboipool} alt="StakeWithUs" /></a>
-                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={everstake} alt="StakeWithUs" /></a>
-                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Band_Protoocol} alt="StakeWithUs" /></a>
-                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={KalpaTech} alt="StakeWithUs" /></a>
+                    <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={huboipool} alt="StakeWithUs" /></a>
+                    <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={everstake} alt="StakeWithUs" /></a>
+                    <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Band_Protoocol} alt="StakeWithUs" /></a>
+                    <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={KalpaTech} alt="StakeWithUs" /></a>
                    </div>
                     <div className="common-row third-row">
-                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Ascendex} alt="StakeWithUs" /></a>
-                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={DSRV} alt="StakeWithUs" /></a>
-                    <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={sg1} alt="StakeWithUs" /></a>
+                    <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Ascendex} alt="StakeWithUs" /></a>
+                    <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={DSRV} alt="StakeWithUs" /></a>
+                    <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={sg1} alt="StakeWithUs" /></a>
                     <a href="https://www.stakewith.us/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={StakeWithUs} alt="StakeWithUs" /></a>
                     
                      </div>

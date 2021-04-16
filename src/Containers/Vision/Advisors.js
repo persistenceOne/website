@@ -81,6 +81,7 @@ const Advisors = () => {
                                     <div className="profile-picture">
                                         <img src={ajith} alt="pic1"/>
                                         <div className="social-icons">
+                                           
                                             <a className="icon-box" href="https://twitter.com/chainyoda"
                                                rel="noopener noreferrer" target="_blank"><Icon
                                                 viewClass="social_icon_imgg"
@@ -95,7 +96,7 @@ const Advisors = () => {
                                     <div className="margin-left-xs text-center">
                                         <p className="profile-name">{t("AJITH")}</p>
                                         <p className="designation-name">{t("HEAD_OF_INSTITUTIONAL")},&nbsp;
-                                            <a href="#" rel="noopener noreferrer"
+                                            <a href="https://aave.com/" rel="noopener noreferrer"
                                                target="_blank">{t("AAVE")}</a>
                                         </p>
                                     </div>
@@ -107,21 +108,14 @@ const Advisors = () => {
                                     <div className="profile-picture">
                                         <img src={sam} alt="pic1"/>
                                         <div className="social-icons">
-                                            <a className="icon-box" href="#"
-                                               rel="noopener noreferrer" target="_blank"><Icon
-                                                viewClass="social_icon_imgg"
-                                                icon="twitter-logo"/></a>
-                                                 <a className="icon-box"
-                                               href="#"
-                                               rel="noopener noreferrer" target="_blank"><Icon
-                                                viewClass="social_icon_imgg"
-                                                icon="linkedin-footer"/></a>
+                                        <span className="icon-box">&nbsp;</span>
+                                           
                                         </div>
                                     </div>
                                     <div className="margin-left-xs text-center">
                                         <p className="profile-name">{t("SAM")}</p>
                                         <p className="designation-name">{t("INVESTMENT_ASSOCIATE")},&nbsp;
-                                            <a href="#" rel="noopener noreferrer"
+                                            <a href="https://tendermint.com" rel="noopener noreferrer"
                                                target="_blank">{t("TENDERMINT_SAM")}</a>
                                         </p>
                                     </div>

@@ -86,7 +86,7 @@ const BackersTabs = () => {
                <a href="https://stake.fish/en/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={stakefish} alt="Stakefish" /></a>
               
-                   <a href="#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
+                   <a href="www.dummy.com" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={bandprotocol} alt="Bandprotocol" /></a>
                    <a href="https://figment.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={FigmentNetworks} alt="FigmentNetworks" /></a>
@@ -94,25 +94,25 @@ const BackersTabs = () => {
             <div className="common-row second-row">
                 <a href="https://sg-1.online/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={sg1} alt="sg1" /></a>
-               <a href="#" className="reveal-scale-up" target="_blank"
+               <a href="www.dummy.com" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={huobipool} alt="huobipool" /></a>
                      <a href="https://www.stakewith.us/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={StakeWithUs} alt="StakeWithUs" /></a>
                    <a href="https://p2p.org/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={p2p_logo} alt="P2P" /></a>
-                  <a href="#" className="reveal-scale-up" target="_blank"
+                  <a href="www.dummy.com" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={everstake} alt="Everstake" /></a>
              
               
             </div>
             <div className="common-row third-row">
-            <a href="#" className="reveal-scale-up" target="_blank"
+            <a href="www.dummy.com" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={DSRV} alt="DSRV" /></a>
                   <a href="https://www.hashquark.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={HashQuark} alt="HashQuark" /></a>
-                  <a href="#" className="reveal-scale-up" target="_blank"
+                  <a href="www.dummy.com" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={Ascendex} alt="Ascendex" /></a>
-                     <a href="#" className="reveal-scale-up" target="_blank"
+                     <a href="www.dummy.com" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={kalpatech} alt="Kalpatech" /></a>
       
                
