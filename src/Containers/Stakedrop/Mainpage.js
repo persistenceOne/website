@@ -192,7 +192,7 @@ class StakedropMainPage extends React.Component {
                                 </div>
                                 <div className="col-lg-12 title-cards">
                                     <div className="row row-common">
-                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
+                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad p-1">
 
                                             <div className="col-lg-12 common-cards card-one">
 
@@ -202,7 +202,7 @@ class StakedropMainPage extends React.Component {
                                         </div>
 
 
-                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
+                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad p-1">
                                             <div className="col-lg-12 common-cards card-one">
                                                 <p>Dropped XPRT</p>
                                                 <h5>{this.state.totaldrop} XPRT</h5>
@@ -210,7 +210,7 @@ class StakedropMainPage extends React.Component {
                                         </div>
 
 
-                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad">
+                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad p-1">
 
                                             <div className="col-lg-12 common-cards card-one">
 
@@ -339,7 +339,7 @@ class StakedropMainPage extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag"/>&emsp; 20th
                                                         of January 2021</p>
                                                     <p><Icon viewClass="social_icon_imgg"
-                                                             icon="stake-fillflag"/>&emsp;28th of March 2021</p>
+                                                             icon="stake-fillflag"/>&emsp;TBD</p>
                                                     <p className="total_drop_allowcated">
                                                         <span>Total drop allocated:</span><span>20.00%</span></p>
                                                 </div>

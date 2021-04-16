@@ -45,15 +45,15 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://medium.com/persistence-blog/xprt-token-sale-to-launch-on-ascendex-formerly-bitmax-on-march-31st-full-details-9fe2a8f52fa"
+                                <a href="https://medium.com/persistence-blog/persistence-xprt-staking-guide-4504cf9a19df"
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog3"
-                                                 src="https://miro.medium.com/max/1000/0*qVE4WN0CsnFZKL2s"/>
+                                                 src="https://miro.medium.com/max/1000/1*ZQmstOH9DYK30v8zQWB8-g.png"/>
                                         </div>
                                         <div className="custom-card-body">
-                                            <p className="text1">{t("TOKEN_SALE")}</p>
+                                            <p className="text1">{t("STAKING")}</p>
                                             <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>

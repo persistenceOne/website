@@ -30,12 +30,7 @@ const TokenTitle = () => {
     return (
         <section className="xprt-banner-ecosystem ecosystem-faq-section" data-aos="fade-up">
             <div className="container">
-                <div className="info-form">
-                    <div className="text">Fill in your XPRT auction confirmation number from AscendEX <a
-                        href="https://auction.persistence.one"
-                        rel="noopener noreferrer"
-                        target="_blank">here.</a></div>
-                </div>
+               
                 <h3 className="section-title">{t("ROLE_OF_XPRT")}</h3>
                 <div className="row">
                     <div className="col-md-6">

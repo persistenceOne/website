@@ -124,7 +124,7 @@ let English = {
         "TAVIS_DIGITAL":"Tavis Digital",
         "SCOTT":"Scott Littlewood",
         "ASIA_HEAD_BD":"Asia Head of BD and Ops,",
-        "TEZOS":"Tezos APAC",
+        "TEZOS":"TZ APAC",
         "HARTEJ":"Hartej Sawney",
         "ZOKYO":"Zokyo",
         // Products
@@ -222,11 +222,11 @@ let English = {
        
         "ACQUIRE_XPRT_TITLE_6":"Telegram",
         "ACQUIRE_XPRT_TITLE_7":"chat.",
-        "ACQUIRE_XPRT_TITLE_2":"For more details around participating in the sale, please",
+        "ACQUIRE_XPRT_TITLE_2":"To acquire XPRT through AscendEX please",
         "ACQUIRE_XPRT_TITLE_3":"visit.",
         "ACQUIRE_XPRT_TITLE_4":"Please note that XPRT will not be sold through any other platform, exchange or medium. For any queries regarding the sale, please send a message in our official",
         "TOKEN_ECONOMICS":"TOKEN ECONOMICS",
-        "TOKEN_SALE":"TOKEN SALE",
+        "STAKING":"STAKING",
         
         //Roadmap
         "DAPP":"Dapp",

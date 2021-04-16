@@ -148,8 +148,8 @@ a {
   background-color: #E50913 !important;
   border-radius: 7px !important;
   border: 0px solid !important;
-  font-weight: 600 !important;
-  font-size: 16px !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
   line-height: 1.8 !important;
   text-align: center !important;
   color: #FFFFFF !important;
@@ -231,6 +231,11 @@ a {
   width: 100%;
 }
 
+.navbar.navbar-custom .wallet-button .button-primary {
+  padding: 6px 20px !important;
+  letter-spacing: 0.5px;
+}
+
 .bannernav-section {
   width: 100%;
   background: #e50913;
@@ -241,7 +246,7 @@ a {
 .bannernav-section .alert-dismissible .close {
   position: absolute;
   top: -4px;
-  right: 0;
+  right: -25px;
   padding: .75rem 1.25rem;
   color: inherit;
   color: #fff;
@@ -307,9 +312,14 @@ a {
   display: block;
 }
 
+.navbar.navbar-custom .dropdown-menu {
+  min-width: 8rem;
+}
+
 .navbar.navbar-custom .dropdown-menu.company-menu {
   right: 0 !important;
   left: auto !important;
+  top: 96% !important;
 }
 
 .navbar.navbar-custom .dropdown.company .dropdown-item {
@@ -320,17 +330,30 @@ a {
   display: block;
 }
 
-.navbar.navbar-custom .navbar-nav li {
-  margin-left: 35px;
+.navbar.navbar-custom .nav-item.wallet-button {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.navbar.navbar-custom .navbar-nav li a {
+.navbar.navbar-custom .navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar.navbar-custom .navbar-nav li {
+  margin-left: 15px;
+}
+
+.navbar.navbar-custom .navbar-nav li a, .navbar.navbar-custom .navbar-nav li .nav-link {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.1em;
+  margin: 0;
   text-transform: uppercase;
   color: #C4C4C4;
 }
@@ -341,6 +364,10 @@ a {
 
 .navbar.navbar-custom .navbar-nav li a.active::first-letter {
   border-top: 2px solid #e50913;
+}
+
+.navbar.navbar-custom .navbar-nav .language-dropdown .dropdown-menu .nav-link.active {
+  color: #e50913;
 }
 
 .navbar.navbar-custom .dropdown-menu {
@@ -388,6 +415,7 @@ a {
   right: 0;
   left: auto;
   padding: 0;
+  top: 96%;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content {
@@ -663,8 +691,17 @@ a {
   outline: none;
 }
 
+.language-dropdown .icon {
+  color: #C4C4C4;
+  width: 22px;
+}
+
 .second-section {
   background: #F5F5F5;
+}
+
+.ml-10 {
+  margin-left: 10px !important;
 }
 
 .footer {
@@ -2188,12 +2225,12 @@ button:disabled {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-bottom: 50px;
 }
 
 .vision-section-team .profiles .profile {
   position: relative;
   margin-right: 20px;
+  margin-bottom: 50px;
 }
 
 .vision-section-team .profiles .profile img {
@@ -3698,6 +3735,24 @@ button:disabled {
   color: #ACACAC;
 }
 
+.acquire_xprt .info-form {
+  text-align: left;
+}
+
+.acquire_xprt .info-form .text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #ACACAC;
+}
+
+.acquire_xprt .info-form .text a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
 .schedule_token.internft-section .right-section .info {
   padding-left: 0;
   width: 100%;
@@ -3776,6 +3831,26 @@ button:disabled {
   color: #F3F3F3;
 }
 
+.info-form {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.info-form .text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 2;
+  color: #FFFFFF;
+}
+
+.info-form .text a {
+  color: #e50913;
+  text-decoration: underline;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
 /*--------------------------------------------------------------
 # stake drop main styles
 --------------------------------------------------------------*/
@@ -3796,7 +3871,7 @@ button:disabled {
 
 .stakedrop-section .title-cards .common-cards {
   background: #313238;
-  padding: 15px 20px;
+  padding: 15px;
 }
 
 .stakedrop-section .title-cards .common-cards p {
@@ -3928,7 +4003,7 @@ button:disabled {
 
 .stake-drop-campaigns .campaign-card {
   background: #fff;
-  padding: 30px;
+  padding: 28px;
   border-radius: 5px;
   margin-bottom: 50px;
 }
@@ -4095,6 +4170,7 @@ button:disabled {
 
 .stake-drop-campaigns .about-campaign h4 {
   font-weight: bold;
+  font-size: 22px;
 }
 
 .stake-drop-campaigns .about-campaign p {
@@ -5029,6 +5105,10 @@ button:disabled {
   margin-bottom: 10px;
 }
 
+.section-technology-list .list .list-item img {
+  width: 57px;
+}
+
 .section-technology-list .list .list-item .name {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -5253,6 +5333,19 @@ button:disabled {
   .navbar-collapse {
     padding-top: 15px;
   }
+  .site-content {
+    margin-top: 65px;
+  }
+  .site-content .banner-section {
+    height: auto;
+    padding: 135px 0 100px 0;
+  }
+  .product-info-section .cards {
+    margin-left: 0;
+  }
+  .section-roadmap {
+    padding: 130px 0 100px 0;
+  }
 }
 
 @media (max-width: 767.8px) {
@@ -5306,6 +5399,9 @@ button:disabled {
   .section-title {
     font-size: 26px;
   }
+  .validators-section .validators .become-validator {
+    padding: 60px 0px 0px 0px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.8px) {
@@ -5313,6 +5409,23 @@ button:disabled {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media (max-width: 375px) {
+  .button-primary, .button-secondary, .product-info-section.product-pstake .button.coming-soon {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .product-info-section .cards .button-list .button-primary {
+    margin-right: 0;
   }
 }
 

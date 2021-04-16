@@ -124,7 +124,7 @@ let Korean = {
         "TAVIS_DIGITAL":"Tavis Digital",
         "SCOTT":"Scott Littlewood",
         "ASIA_HEAD_BD":"Asia Head of BD and Ops,",
-        "TEZOS":"Tezos APAC",
+        "TEZOS":"TZ APAC",
         "HARTEJ":"Hartej Sawney",
         "ZOKYO":"Zokyo",
         // Products
@@ -219,11 +219,11 @@ let Korean = {
         "SCHEDULE_HERE":"here.",
         "ACQUIRE_XPRT": "How to acquire XPRT?",
         "ACQUIRE_XPRT_TITLE_1": "AscendEx (formerly Bitmax) will be conducting an auction for 1 Million XPRT tokens on 31st March, 2021 followed by a primary listing on 1st April, 2021.",
-        "ACQUIRE_XPRT_TITLE_2":"For more details around participating in the sale, please",
+        "ACQUIRE_XPRT_TITLE_2":"To acquire XPRT through AscendEX please",
         "ACQUIRE_XPRT_TITLE_3":"visit.",
         "ACQUIRE_XPRT_TITLE_4":"Please note that XPRT will not be sold through any other platform, exchange or medium. For any queries regarding the sale, please send a message in our official telegram chat.",
         "TOKEN_ECONOMICS":"TOKEN ECONOMICS",
-        "TOKEN_SALE":"TOKEN SALE",
+        "STAKING":"STAKING",
         //Roadmap
         "DAPP":"Dapp",
         "TOKEN":"Token",

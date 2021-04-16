@@ -4,7 +4,6 @@ import ReactGa from 'react-ga';
 import { Modal } from "react-bootstrap";
 import Icon from "../../components/Icon";
 import Slider from 'react-rangeslider';
-import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
@@ -245,8 +244,8 @@ class MaticStakedrop extends Component {
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
-                                                    <h6>End(expected)</h6>
-                                                    <h1>28th of March 2021<span>Checkpoint: 11056</span></h1>
+                                                    <h6>End</h6>
+                                                    <h1>TBD<span>Checkpoint: 11056</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -265,11 +264,8 @@ class MaticStakedrop extends Component {
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
-                                                    <h6>Time left(expected):</h6>
-                                                    <h1 className="countdown"><Countdown
-                                                        date={1616934600000}
-                                                        autoStart={true}
-                                                    /></h1>
+                                                    <h6>Time left:</h6>
+                                                    <h1 className="countdown">TBD</h1>
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">

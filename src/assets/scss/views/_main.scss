@@ -130,8 +130,8 @@ a {
   background-color: #E50913 !important;
   border-radius: 7px !important;
   border: 0px solid !important;
-  font-weight: 600 !important;
-  font-size: 16px !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
   line-height: 1.8 !important;
   text-align: center !important;
   color: #FFFFFF !important;
@@ -234,7 +234,7 @@ a {
     
       position: absolute;
       top: -4px;
-      right: 0;
+      right: -25px;
       padding: .75rem 1.25rem;
       color: inherit;
       color: #fff;
@@ -291,7 +291,9 @@ a {
   .dropdown.company:hover .company-menu {
     display: block;
   }
-
+.dropdown-menu {
+  min-width: 8rem;
+}
   .dropdown-menu.company-menu {
     right: 0 !important;
     left: auto !important;
@@ -305,10 +307,15 @@ a {
   .dropdown.ecosystem:hover .dropdown-menu {
     display: block;
   }
-
+  .nav-item.wallet-button {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   .navbar-nav {
+    align-items: center;
     li {
-      margin-left: 35px;
+      margin-left: 15px;
 
       a, .nav-link {
         font-family: 'Poppins', sans-serif;

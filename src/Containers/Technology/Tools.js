@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
-
+let explorerURL = process.env.REACT_APP_EXPLORER_URL;
 const Tools = () => {
     const {t} = useTranslation();
     return (
@@ -15,7 +15,7 @@ const Tools = () => {
                                 <p>{t("EXPLORERS")}</p>
                                 <div className="logos flex-box">
                                     <div className="logo">
-                                        <a className="link-box" href="https://explorer.persistence.one/" rel="noopener noreferrer" target="_blank">Core-1</a>
+                                        <a className="link-box" href={`${explorerURL}`}rel="noopener noreferrer" target="_blank">Core-1</a>
                                     </div>
                                 </div>
                             </div>

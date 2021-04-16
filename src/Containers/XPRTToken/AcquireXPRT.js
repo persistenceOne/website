@@ -16,9 +16,10 @@ const AcquireXPRT = () => {
                         </div>
                         <div className="col-md-6 right-section">
                             <div className="info">
-                                <p>{t("ACQUIRE_XPRT_TITLE_1")}</p>
+                               
                               
-                                <p>{t("ACQUIRE_XPRT_TITLE_2")} <a href="https://bitmax.io/en/global-digital-asset-platform" target="_blank" rel="noopener noreferrer">{t("ACQUIRE_XPRT_TITLE_3")}</a></p>
+                                <p>{t("ACQUIRE_XPRT_TITLE_2")} <a href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt" target="_blank" rel="noopener noreferrer">{t("ACQUIRE_XPRT_TITLE_3")}</a></p>
+                                <p>{t("ACQUIRE_XPRT_TITLE_1")}</p>
                                 <p>{t("ACQUIRE_XPRT_TITLE_4")} <a href="https://t.me/PersistenceOneChat" target="_blank" rel="noopener noreferrer">{t("ACQUIRE_XPRT_TITLE_6")}</a> {t("ACQUIRE_XPRT_TITLE_7")}</p>
                                 <div className="info-form">
                                     <div className="text">Fill in your XPRT auction confirmation number from AscendEX <a
