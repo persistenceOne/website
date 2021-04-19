@@ -84,6 +84,7 @@ class MaticStakedrop extends Component {
     };
 
     componentDidMount = () => {
+        window.scrollTo(0, 0)
         ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getMaticStatusURL();
         axios.get(Statusurl).then((statusResponse) => {

@@ -15,18 +15,19 @@ const Audit = () => {
                         <div className="cards">
                             <p className="text">{t("PRODUCT_AUDIT_DESCRIPTION")}</p>
                             <div className="row1">
-                                <div className="data-card text-left">
+                                <div className="data-card text-center">
                                     <p className="value">$250M+</p>
-                                    <p className="name">{t("TOTAL_ASSETS_SECURED")}</p>
-                                </div>
-                                <div className="data-card side-border text-center">
-                                    <p className="value">$100M+</p>
                                     <p className="name">{t("ASSETS_UNDER_DELEGATION")}</p>
                                 </div>
-                                <div className="data-card text-center">
+                                <div className="data-card side-border text-center">
+                                <p className="value">10 </p>
+                                    <p className="name">{t("NETWORKS_SECURED")}</p>
+                                   
+                                </div>
+                                {/* <div className="data-card text-center">
                                     <p className="value">10 </p>
                                     <p className="name">{t("NETWORKS_SECURED")}</p>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="button-list">
                                 <a href="https://audit.one/" className="button-primary button" rel="noopener noreferrer"

@@ -30,6 +30,7 @@ let Korean = {
         "PLEND": "pLend",
         "PLEND_CAPTION": "Debt Financing",
         "LEARN_MORE": "Learn More",
+       
         "COMING_SOON": "Coming Soon",
         //backer section
         "BACKER_SECTION_TITLE": "우리의 응원군을 만나보시죠!",

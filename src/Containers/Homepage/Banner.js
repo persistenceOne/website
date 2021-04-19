@@ -44,6 +44,10 @@ const Banner = () => {
                                    title="Reddit">
                                     <li><Icon viewClass="social_icon_imgg" icon="reddit-round"/></li>
                                 </a>
+                                <a href="https://discord.gg/SaBKpjbnhH" rel="noopener noreferrer" target="_blank"
+                                   title="Discord">
+                                    <li><Icon viewClass="social_icon_imgg" icon="discord"/></li>
+                                </a>
                             </ul>
                         </div>
                         <div className="mouse-section">

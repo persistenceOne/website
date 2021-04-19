@@ -5,9 +5,13 @@ import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
-
+import { Modal } from "react-bootstrap";
+import docTerms from '../../assets/images1/stakedrop/PersistenceT&C.pdf'
+import copy from '../../assets/images1/copy.svg';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { withRouter } from 'react-router-dom';
 import { getCalculateComsmos, getStatusURL } from "../../constants/url";
+import MaticWallets from "./maticWallet";
 class CosmosStakedrop extends Component {
 
     constructor(props, context) {
@@ -81,6 +85,7 @@ class CosmosStakedrop extends Component {
     };
 
     componentDidMount = () => {
+        window.scrollTo(0, 0)
         ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
@@ -179,7 +184,7 @@ class CosmosStakedrop extends Component {
                     const currentEarned = (calculatedata.received / 1000000);
                     const yourEstimatedRewards = (calculatedata.estimated /1000000);
                     this.setState({ ercAddress: calculatedata.ercAddress })
-                    this.setState({ blockHeight: calculatedata.magicTxHeight })
+                  this.setState({xprtAddress:calculatedata.xprtAddress})
                     this.setState({totalStaked: (calculatedata.globalDelegation/1000000).toLocaleString()})
                     this.setState({statkedOnAudit: (calculatedata.auditDelegation/1000000).toLocaleString()})
                     this.setState({ totalRewards: (Math.round(currentEarned * 100) / 100).toFixed(2)})
@@ -204,7 +209,7 @@ class CosmosStakedrop extends Component {
                 <section className="participate-stakedrop">
                     <div className="container">
                         <div className="col-lg-12">
-                            <p className="button-back" onClick={this.props.history.goBack}>     <Icon viewClass="arrow-right" icon="arrow-right" /> Back to Campaigns</p>
+                            <p className="button-back" onClick={this.props.history.goBack}>  <Icon viewClass="arrow-right" icon="arrow-right" /> Back to Campaigns</p>
                             <div className="row">
 
                                 <div className="col-lg-4 section-campaign">
@@ -215,8 +220,8 @@ class CosmosStakedrop extends Component {
                                         <div className="row body-section">
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
-                                                    <h6>Campaign Duration</h6>
-                                                    <h1>30 Days</h1>
+                                                    <h6>Rewards Claim Window</h6>
+                                                    <h1>25 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
 
@@ -229,15 +234,15 @@ class CosmosStakedrop extends Component {
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
-                                                    <h6>Start</h6>
-                                                    <h1>26th of October 2020 <span>Block Height: 3846001</span></h1>
+                                                    <h6>Start Date (Tentative)</h6>
+                                                    <h1>20 April 2021 <span>Block Height: 5928000</span></h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
-                                                    <h6>End</h6>
-                                                    <h1>25th of November 2020<span>Block Height: 4206000</span></h1>
+                                                    <h6>End Date (Tentative)</h6>
+                                                    <h1>14 May 2021<span>Block Height: 6228000</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -280,7 +285,7 @@ class CosmosStakedrop extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12  cosmos-tutorial-section">
-                                        <p className="">Cosmos StakeDrop Tutorial: <a href="https://notes.persistence.one/s/SzZKebecO"  target="_blank" rel="noopener noreferrer">How ATOM Holders Can Participate in StakeDrop? </a></p>
+                                        <p className="">Learn how to claim StakeDrop rewards for Cosmos, Kava and Terra campaign <a href="https://buff.ly/3g3zAMw"  target="_blank" rel="noopener noreferrer">here.</a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
@@ -318,18 +323,8 @@ class CosmosStakedrop extends Component {
                                                     <button type="submit" className="btn">Calculate</button>
                                                 </div>
                                             </form>
-                                            <div className="">
-                                                <div className="inputstaking justify-start">
-                                                    <h5>ERC20 Address</h5>
-                                                    <h5 className="text-color">{this.state.ercAddress}</h5>
-                                                </div>
-                                            </div>
-                                            <div className="">
-                                                <div className="inputstaking justify-start">
-                                                    <h5>Start Block Height</h5>
-                                                    <h5 className="text-color">{this.state.blockHeight}</h5>
-                                                </div>
-                                            </div>
+                                          
+                                           
                                             <div className="row common-cards">
 
                                                 <div className="inputstaking bottom">
@@ -347,9 +342,10 @@ class CosmosStakedrop extends Component {
                                                     <h5>Total Rewards</h5>
                                                     <h5 className="value">{this.state.totalRewards} XPRT</h5>
                                                 </div>
+                                                
                                                 <div className="inputstaking bottom">
-                                                    <h5>Estimated Rewards</h5>
-                                                    <h5 className="value">{this.state.estimatedRewards} XPRT</h5>
+                                                    <h5>XPRT Address</h5>
+                                                    <h5 className="value">{this.state.xprtAddress}</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -400,6 +396,14 @@ class CosmosStakedrop extends Component {
                                                 </div>
                                             </div>
 
+                                            <div className="participate-buttons">
+                                                <div className="btn-magic-txs">
+                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" />Claim Rewards</button>
+                                                </div>
+                                                {/*<div className="btn-delegate">*/}
+                                                {/*    <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>*/}
+                                                {/*</div>*/}
+                                            </div>
 
                                         </div>
                                     </div>
@@ -408,7 +412,86 @@ class CosmosStakedrop extends Component {
 
                         </div>
                     </div>
+                    <Modal
+                        show={this.state.tcShow}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
+                            </p>
+                            <div className="button-section">
+                                <button className="btn accept" onClick={this.handleTerms} >Accept</button>
+                                <button className="btn decline" onClick={this.handleCancelTerms} >Decline</button>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                    <Modal
+                        size="lg"
+                        show={this.state.show}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
 
+                                <h4 className="text-left title">List of instructions to send Magic Transaction</h4>
+                                <ul className="staking-instructions">
+                                
+                                    <li className="text-left continue-text"> The Cosmos Stakedrop Campaign concluded in November 2020 and now we are distributing the rewards. Please note that we are not accepting any new transaction for participating in the campaign. </li>
+                                 <li className="text-left continue-text">All the StakeDrop participants need to create a Persistence Wallet. You can learn to create one <a without rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
+                                    
+                                    <li className="text-left continue-text"> Once you have created the wallet, starting 20 April 2021 [Block Height: 5928000] you can send a transaction of 0.001 ATOM from the same address you used to participate in StakeDrop campaign to the designated address <span className="addressmatic">cosmos1emjeuudhzn5pfrexmdnnnftm668fl09zvm7zmh <CopyToClipboard onCopy={this.onCopy} text={'cosmos1emjeuudhzn5pfrexmdnnnftm668fl09zvm7zmh'}><img src={copy} alt="copy" className="copy-icon" />
+                                    </CopyToClipboard></span> and put your Persistence Wallet address in the memo field.</li>
+                                   <p className="text-left continue-text">Example TX: gaiad tx bank send [Your_address] cosmos1emjeuudhzn5pfrexmdnnnftm668fl09zvm7zmh 10uatom --chain-id cosmoshub-4 --memo="persistence1aepmuldh8j05y57zh5tje3fuzk63mc2mmf63vv" --node https://node1.rpc.cosmos.persistence.one:443</p>
+                                   <li className="text-left continue-text"> If you send the Magic Transaction in first 4 (four) days [by the Block Height: 5976000] you will receive your rewards on 24 April 2021. For rest of the transaction the rewards will be distributed on  17 May 2021. </li>
+                                   <li className="text-left continue-text"> Your 0.001 ATOM will be returned at the end of the claim window to your Cosmos address.</li>
+                                   <li className="text-left continue-text">The claim window will end on 14 May 2021[Block Height: 6228000]. Any Magic Transaction sent after the 14 May 2021 will not be considered. </li>
+                                    <p className="text-left continue-text">Note: Don't share your mnemonics for any wallet with anyone. Mnemonics are highly sensitive data and should be secured very carefully.</p>
+
+                                </ul>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
+                                <h4 className="title">Available Methods to Participate in StakeDrop</h4>
+
+                                <p className="continue-text"> Choose wallet to continue</p>
+                                <MaticWallets />
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateCliModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>kvcli tx staking delegate kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev [amount] --from [from_key_or_address] --chain-id kava-4 --node https://node1.rpc.kava.persistence.one:443</p>
+                                </div>
+
+                            </div>
+                        </Modal.Body>
+                    </Modal>
                 </section>
             </div>
         );

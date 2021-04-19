@@ -92,6 +92,7 @@ class TerraStakedrop extends Component {
         this.props.history.push('/StakeDropKava');
     };
     componentDidMount = () => {
+        window.scrollTo(0, 0)
         ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getTerraStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
@@ -220,7 +221,7 @@ class TerraStakedrop extends Component {
                                         <div className="row body-section">
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
-                                                    <h6>Campaign Duration</h6>
+                                                    <h6>Reward Claim Duration</h6>
                                                     <h1>25 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
@@ -234,15 +235,15 @@ class TerraStakedrop extends Component {
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
-                                                    <h6>Start</h6>
-                                                    <h1>19th December 2020 <span>Block Height: 1030101</span></h1>
+                                                    <h6>Start Date (Tentative):</h6>
+                                                    <h1>30 April 2021</h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
-                                                    <h6>End</h6>
-                                                    <h1>13th January 2021<span>Block Height: 1363850</span></h1>
+                                                    <h6>End Date (Tentatively):</h6>
+                                                    <h1>24 May 2021</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,7 +289,7 @@ class TerraStakedrop extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12 terra-tutorial-section">
-                                        <p className="">Luna StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/luna-stakedrop-tutorial-using-terra-station-how-luna-holders-can-participate-in-persistences-6fba1803a67d" target="_blank" rel="noopener noreferrer">How LUNA Holders Can Participate in StakeDrop? </a></p>
+                                        <p className="">Learn how to claim StakeDrop rewards for Cosmos, Kava and Terra campaign <a href="https://buff.ly/3g3zAMw"  target="_blank" rel="noopener noreferrer">here.</a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">

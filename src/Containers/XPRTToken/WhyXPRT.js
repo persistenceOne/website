@@ -18,7 +18,11 @@ const WhyXPRT = () => {
                             <div className="info">
                                 <p>{t("WHY_XPRT_DES_1")}</p>
                                 <p>{t("WHY_XPRT_DES_2")}</p>
+                                <div className="button-list pt-3">
+                                <a href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" className="button-primary button" rel="noopener noreferrer" target="_blank">{t("CREATE_WALLET")}</a>
+                                &nbsp;<a href="https://medium.com/persistence-blog/persistence-xprt-staking-guide-4504cf9a19df" className="button-primary button" rel="noopener noreferrer" target="_blank">{t("STAKE_XPRT")}</a>
                               
+                            </div>
                             </div>
                         </div>
                     </div>

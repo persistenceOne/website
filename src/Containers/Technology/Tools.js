@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
 let explorerURL = process.env.REACT_APP_EXPLORER_URL;
+let crust2ExplorerURL = process.env.REACT_APP_CRUST_2_EXPLORER_URL;
 const Tools = () => {
     const {t} = useTranslation();
     return (
@@ -16,6 +17,7 @@ const Tools = () => {
                                 <div className="logos flex-box">
                                     <div className="logo">
                                         <a className="link-box" href={`${explorerURL}`}rel="noopener noreferrer" target="_blank">Core-1</a>
+                                        <a className="link-box" href={`${crust2ExplorerURL}`}rel="noopener noreferrer" target="_blank">Crust-2</a>
                                     </div>
                                 </div>
                             </div>

@@ -14,9 +14,11 @@ import luna_icon from '../../assets/images1/stakedrop/luna.svg';
 import kava_icon from '../../assets/images1/stakedrop/kava.svg';
 import iris_icon from '../../assets/images1/stakedrop/iris.svg';
 import banner2 from '../../assets/images1/stakedrop/banner2.svg';
+import banner3 from '../../assets/images1/stakedrop/banner03.svg';
 import cosmos_tutorial from '../../assets/images1/stakedrop/cosmos-tutorial.svg';
 import mechanism from '../../assets/images1/stakedrop/mechanism.svg';
 import stakedropmandarin from '../../assets/images1/stakedropmandarin.pdf';
+
 const questionList = [
     {
         question: 'What is the Persistence StakeDrop?',
@@ -66,8 +68,6 @@ class StakedropMainPage extends React.Component {
             totalDropped: 0,
             totaldrop: 0,
             totalStakeDropGlobalDelegation: 0,
-
-
         };
     }
 
@@ -181,7 +181,8 @@ class StakedropMainPage extends React.Component {
 
                                         </div>
                                         <div className="col-lg-4">
-                                            <video className="pmedia-element" autoPlay="autoplay" preload loop="loop"
+                                            <video className="pmedia-element" autoPlay="autoplay" preload="true"
+                                                   loop="loop"
                                                    muted src={pstakevideo}>
                                                 <source type="video/webm" src={pstakevideo}/>
                                                 <source type="video/mp4" src={pstakevideo}/>
@@ -204,20 +205,12 @@ class StakedropMainPage extends React.Component {
 
                                         <div className="col-xs-6 col-md-6 col-lg-3 row-pad p-1">
                                             <div className="col-lg-12 common-cards card-one">
-                                                <p>Dropped XPRT</p>
-                                                <h5>{this.state.totaldrop} XPRT</h5>
+                                                <p>Networks Supported</p>
+                                                <h5>7</h5>
                                             </div>
                                         </div>
 
 
-                                        <div className="col-xs-6 col-md-6 col-lg-3 row-pad p-1">
-
-                                            <div className="col-lg-12 common-cards card-one">
-
-                                                <p>Total Tokens Staked</p>
-                                                <h5>{(this.state.totalStakeDropGlobalDelegation)}</h5>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -228,9 +221,13 @@ class StakedropMainPage extends React.Component {
                         <div className="container">
                             <div className="row">
 
-                                <div className="col-md-12">
+                                <div className="col-md-6">
                                     <a href="https://www.stakingrewards.com/journal/exclusive-xprt-giveaway-persistence-stakedrop-participants"
                                        target="_blank" rel="noopener noreferrer"> <img src={banner2} alt="banner"/></a>
+                                </div>
+                                <div className="col-md-6">
+                                    <a href="https://buff.ly/3g3zAMw"
+                                       target="_blank" rel="noopener noreferrer"> <img src={banner3} alt="banner"/></a>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +245,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewCosmos} className="viewcampaign"
-                                                          to="/StakeDropCosmos">View</Link></span>
+                                                          to="/StakeDropCosmos">Claim Rewards</Link></span>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>Cosmos (ATOM)</h4>
@@ -274,7 +271,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={kava_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewKava} className="viewcampaign"
-                                                          to="/StakeDropKava">View</Link></span>
+                                                          to="/StakeDropKava">Claim Rewards</Link></span>
                                                 </div>
 
                                                 <div className="about-campaign">
@@ -300,7 +297,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={luna_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewTerra} className="viewcampaign"
-                                                          to="/StakeDropTerra">View</Link></span>
+                                                          to="/StakeDropTerra">Claim Rewards</Link></span>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>Terra (LUNA)</h4>
@@ -476,6 +473,7 @@ class StakedropMainPage extends React.Component {
                                     questionList.map((item, index) => {
                                         return (
                                             <Accordion
+                                                key={index}
                                                 title={item.question}
                                                 content={item.answer}
                                             />

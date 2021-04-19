@@ -15,20 +15,24 @@ const Banner = () => {
                 <h3 className="section-title">{t("ECOSYSTEM")}</h3>
                 <div className="social-links">
                     <div className="link">
+                    <a className="text" href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank">
                         <div className="outer-box">
                             <div className="icon-box">
-                                <Icon viewClass="social_icon_imgg" icon="telegram-plane"/>
+                                <Icon viewClass="social_icon_imgg" icon="telegram-plane"/> 
                             </div>
                         </div>
-                        <a className="text" href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank">{t("COMMUNITY_CHAT")}</a>
+                        </a>
+                        <p className="text">{t("COMMUNITY_CHAT")}</p>
                     </div>
                     <div className="link">
+                    <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">
                         <div className="outer-box">
                             <div className="icon-box">
                                 <Icon viewClass="social_icon_imgg" icon="announcements"/>
                             </div>
                         </div>
-                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">{t("ANNOUNCEMENTS")}</a>
+                        </a>
+                        <p className="text">{t("ANNOUNCEMENTS")}</p>
                     </div>
                     <div className="link">
                         <div className="outer-box">
@@ -39,28 +43,34 @@ const Banner = () => {
                         <a className="text" href="https://discord.gg/SaBKpjbnhH" rel="noopener noreferrer" target="_blank">{t("DEV_CHAT")}</a>
                     </div>
                     <div className="link">
+                    <a className="text" href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank">
                         <div className="outer-box">
                             <div className="icon-box">
                                 <Icon viewClass="social_icon_imgg" icon="twitter-logo"/>
                             </div>
                         </div>
-                        <a className="text" href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank">{t("TWITTER")}</a>
+                        </a>
+                        <p className="text">{t("TWITTER")}</p>
                     </div>
                     <div className="link">
+                    <a className="text" href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank">
                         <div className="outer-box">
                             <div className="icon-box">
                                 <Icon viewClass="social_icon_imgg" icon="youtube"/>
                             </div>
                         </div>
-                        <a className="text" href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank">{t("YOUTUBE")}</a>
+                        </a>
+                        <p className="text">{t("YOUTUBE")}</p>
                     </div>
                     <div className="link">
+                    <a className="text" href="https://www.reddit.com/r/PersistenceOne/" rel="noopener noreferrer" target="_blank">
                         <div className="outer-box">
                             <div className="icon-box">
                                 <Icon viewClass="social_icon_imgg" icon="reddit-round"/>
                             </div>
                         </div>
-                        <a className="text" href="https://www.reddit.com/r/PersistenceOne/" rel="noopener noreferrer" target="_blank">{t("REDDIT")}</a>
+                        </a>
+                        <p className="text">{t("REDDIT")}</p>
                     </div>
                     <div className="link">
                         <div className="outer-box">

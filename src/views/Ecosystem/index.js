@@ -5,7 +5,6 @@ import Validators from "../../Containers/Ecosystem/Validators";
 import Internft from "../../Containers/Ecosystem/Internft";
 import Stakedrop from "../../Containers/Ecosystem/Stakedrop";
 import Xprt from "../../Containers/Ecosystem/Xprt";
-import Faq from "../../Containers/Ecosystem/Faq";
 const Ecosystem = () => {
     return (
         <>
@@ -14,7 +13,6 @@ const Ecosystem = () => {
             <Internft/>
             <Stakedrop/>
             <Xprt/>
-            <Faq/>
             <ScrollToTop/>
         </>
     )

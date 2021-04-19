@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import Icon from "./Icon";
-// import "./Accordion.css";
 
 function Accordion(props) {
   const [setActive, setActiveState] = useState("");

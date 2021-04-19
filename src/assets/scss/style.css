@@ -2768,7 +2768,6 @@ button:disabled {
 
 .product-info-section .cards .side-border {
   border-left: 1px solid #313238;
-  border-right: 1px solid #313238;
 }
 
 .product-info-section .cards .button-list {
@@ -3290,17 +3289,12 @@ button:disabled {
 }
 
 .section-ecosystem-banner .social-links .link .text {
-  cursor: pointer;
   margin: 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.434;
   text-align: center;
   color: #E8EEF4;
-}
-
-.section-ecosystem-banner .social-links .link .text:hover {
-  text-decoration: underline !important;
 }
 
 .validators-section {
@@ -4015,6 +4009,8 @@ button:disabled {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4822,6 +4818,7 @@ button:disabled {
 
 .accountInfoModel .modal-content {
   background-color: #f4f5f7;
+  overflow-y: scroll;
 }
 
 .accountInfoModel .modal-content .modal-body {
