@@ -14,6 +14,7 @@ import luna_icon from '../../assets/images1/stakedrop/luna.svg';
 import kava_icon from '../../assets/images1/stakedrop/kava.svg';
 import iris_icon from '../../assets/images1/stakedrop/iris.svg';
 import banner2 from '../../assets/images1/stakedrop/banner2.svg';
+import banner3 from '../../assets/images1/stakedrop/banner03.svg';
 import cosmos_tutorial from '../../assets/images1/stakedrop/cosmos-tutorial.svg';
 import mechanism from '../../assets/images1/stakedrop/mechanism.svg';
 import stakedropmandarin from '../../assets/images1/stakedropmandarin.pdf';
@@ -220,9 +221,13 @@ class StakedropMainPage extends React.Component {
                         <div className="container">
                             <div className="row">
 
-                                <div className="col-md-12">
+                                <div className="col-md-6">
                                     <a href="https://www.stakingrewards.com/journal/exclusive-xprt-giveaway-persistence-stakedrop-participants"
                                        target="_blank" rel="noopener noreferrer"> <img src={banner2} alt="banner"/></a>
+                                </div>
+                                <div className="col-md-6">
+                                    <a href="https://buff.ly/3g3zAMw"
+                                       target="_blank" rel="noopener noreferrer"> <img src={banner3} alt="banner"/></a>
                                 </div>
                             </div>
                         </div>
