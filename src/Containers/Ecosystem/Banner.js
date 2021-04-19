@@ -15,76 +15,84 @@ const Banner = () => {
                 <h3 className="section-title">{t("ECOSYSTEM")}</h3>
                 <div className="social-links">
                     <div className="link">
-                    <a className="text" href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank">
-                        <div className="outer-box">
-                            <div className="icon-box">
-                                <Icon viewClass="social_icon_imgg" icon="telegram-plane"/> 
+                        <a className="text" href="https://t.me/PersistenceOneChat" rel="noopener noreferrer"
+                           target="_blank">
+                            <div className="outer-box">
+                                <div className="icon-box">
+                                    <Icon viewClass="social_icon_imgg" icon="telegram-plane"/>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <p className="text">{t("COMMUNITY_CHAT")}</p>
                     </div>
                     <div className="link">
-                    <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank">
-                        <div className="outer-box">
-                            <div className="icon-box">
-                                <Icon viewClass="social_icon_imgg" icon="announcements"/>
+                        <a className="text" href="https://t.me/PersistenceOne" rel="noopener noreferrer"
+                           target="_blank">
+                            <div className="outer-box">
+                                <div className="icon-box">
+                                    <Icon viewClass="social_icon_imgg" icon="announcements"/>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <p className="text">{t("ANNOUNCEMENTS")}</p>
                     </div>
                     <div className="link">
-                        <div className="outer-box">
-                            <div className="icon-box">
-                                <Icon viewClass="social_icon_imgg" icon="chat"/>
+                        <a className="text" href="https://discord.gg/SaBKpjbnhH" rel="noopener noreferrer"
+                           target="_blank">
+                            <div className="outer-box">
+                                <div className="icon-box">
+                                    <Icon viewClass="social_icon_imgg" icon="chat"/>
+                                </div>
                             </div>
-                        </div>
-                        <a className="text" href="https://discord.gg/SaBKpjbnhH" rel="noopener noreferrer" target="_blank">{t("DEV_CHAT")}</a>
+                        </a>
+                        <p className="text">{t("DEV_CHAT")}</p>
                     </div>
                     <div className="link">
-                    <a className="text" href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank">
-                        <div className="outer-box">
-                            <div className="icon-box">
-                                <Icon viewClass="social_icon_imgg" icon="twitter-logo"/>
+                        <a className="text" href="https://twitter.com/PersistenceOne" rel="noopener noreferrer"
+                           target="_blank">
+                            <div className="outer-box">
+                                <div className="icon-box">
+                                    <Icon viewClass="social_icon_imgg" icon="twitter-logo"/>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <p className="text">{t("TWITTER")}</p>
                     </div>
                     <div className="link">
-                    <a className="text" href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank">
-                        <div className="outer-box">
-                            <div className="icon-box">
-                                <Icon viewClass="social_icon_imgg" icon="youtube"/>
+                        <a className="text" href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured"
+                           rel="noopener noreferrer" target="_blank">
+                            <div className="outer-box">
+                                <div className="icon-box">
+                                    <Icon viewClass="social_icon_imgg" icon="youtube"/>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <p className="text">{t("YOUTUBE")}</p>
                     </div>
                     <div className="link">
-                    <a className="text" href="https://www.reddit.com/r/PersistenceOne/" rel="noopener noreferrer" target="_blank">
-                        <div className="outer-box">
-                            <div className="icon-box">
-                                <Icon viewClass="social_icon_imgg" icon="reddit-round"/>
+                        <a className="text" href="https://www.reddit.com/r/PersistenceOne/" rel="noopener noreferrer"
+                           target="_blank">
+                            <div className="outer-box">
+                                <div className="icon-box">
+                                    <Icon viewClass="social_icon_imgg" icon="reddit-round"/>
+                                </div>
                             </div>
-                        </div>
                         </a>
                         <p className="text">{t("REDDIT")}</p>
                     </div>
                     <div className="link">
-                        <div className="outer-box">
+                        <div className="outer-box regional-link" onClick={handleModalData}>
                             <div className="icon-box">
                                 <Icon viewClass="social_icon_imgg" icon="regional"/>
                             </div>
                         </div>
-                        <p className="text" onClick={handleModalData}>{t("REGIONAL")}</p>
+                        <p className="text" >{t("REGIONAL")}</p>
                     </div>
                 </div>
             </div>
             {
                 name ?
-                    <Modal setName={setName} /> :
+                    <Modal setName={setName}/> :
                     null
             }
         </section>
