@@ -223,8 +223,8 @@ class kavaStakedrop extends Component {
                                         <div className="row body-section">
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
-                                                    <h6>Campaign Duration</h6>
-                                                    <h1>28 Days</h1>
+                                                    <h6>Reward Claim Duration</h6>
+                                                    <h1>25 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
 
@@ -237,15 +237,15 @@ class kavaStakedrop extends Component {
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
-                                                    <h6>Start</h6>
-                                                    <h1>26th of November 2020 <span>Block Height: 453621</span></h1>
+                                                    <h6>Start Date (Tentatively)</h6>
+                                                    <h1>25 April 2021 </h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
-                                                    <h6>End</h6>
-                                                    <h1>23rd of December 2020<span>Block Height: 672440</span></h1>
+                                                    <h6>End Date (Tentatively):</h6>
+                                                    <h1>19 May 2021</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -291,7 +291,7 @@ class kavaStakedrop extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12 kava-tutorial-section">
-                                        <p className="">Kava StakeDrop Tutorial: <a href="https://persistenceone.medium.com/kava-stakedrop-tutorial-how-kava-holders-can-participate-in-persistences-stakedrop-f7062a7688e4" target="_blank" rel="noopener noreferrer">How KAVA Holders Can Participate in StakeDrop? </a></p>
+                                        <p className="">Learn how to claim StakeDrop rewards for Cosmos, Kava and Terra campaign <a href="https://buff.ly/3g3zAMw"  target="_blank" rel="noopener noreferrer">here.</a></p>
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">

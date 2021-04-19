@@ -4009,6 +4009,8 @@ button:disabled {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4816,6 +4818,7 @@ button:disabled {
 
 .accountInfoModel .modal-content {
   background-color: #f4f5f7;
+  overflow-y: scroll;
 }
 
 .accountInfoModel .modal-content .modal-body {
