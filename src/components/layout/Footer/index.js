@@ -65,7 +65,7 @@ const Footer = (props) => {
                     <div className="row">
                         <div className="col-lg-8 col-md-12">
                             <div className="row m-0">
-                                <div className="col-lg-4 col-md-6 col-sm-12 margin-t-20 ">
+                                <div className="col-lg-4 col-md-4 col-sm-12 margin-t-20 ">
                                     <h6>{t("ABOUT")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
@@ -78,7 +78,7 @@ const Footer = (props) => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 col-sm-12 margin-t-20">
+                                <div className="col-lg-4 col-md-4 col-sm-12 margin-t-20">
                                     <h6>{t("PRODUCTS")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
@@ -90,7 +90,7 @@ const Footer = (props) => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 col-sm-12 margin-t-20">
+                                <div className="col-lg-4 col-md-4 col-sm-12 margin-t-20">
                                     <h6>{t("GET_IN_TOUCH")}</h6>
                                     <div className="text-muted mt-30 email">
                                         <a className="footer-text email" href="mailto:hello@persistence.one">hello@persistence.one</a>
