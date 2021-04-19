@@ -71,17 +71,14 @@
       //  }
       //}
       .text {
-        cursor: pointer;
+       
         margin: 0;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.434;
         text-align: center;
         color: #E8EEF4;
-        &:hover
-        {
-          text-decoration: underline !important;
-        }
+       
       }
     }
   }
@@ -124,6 +121,7 @@
         &:hover {
           background: #2B2B31;
         }
+        img{}
       }
     }
 

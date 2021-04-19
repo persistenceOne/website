@@ -93,6 +93,7 @@ class kavaStakedrop extends Component {
         this.props.history.push('/StakeDropKava');
     };
     componentDidMount = () => {
+        window.scrollTo(0, 0)
         ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getKavaStatusURL();
         axios.get(Statusurl).then((statusResponse) => {

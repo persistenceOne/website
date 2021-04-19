@@ -8,5 +8,5 @@ const Stakedrop = () => {
             <ScrollToTop/>
         </>
     )
-}
+};
 export default Stakedrop;

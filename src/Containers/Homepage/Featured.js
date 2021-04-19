@@ -5,6 +5,7 @@ import chainnews from "../../assets/images1/featured/chainnews.png";
 import dsa from "../../assets/images1/featured/dsa.png";
 import e27 from "../../assets/images1/featured/e27.png";
 import blockbeats from "../../assets/images1/featured/blockbeats.png";
+import odaily from "../../assets/images1/featured/Odaily.svg";
 import Image from "../../components/elements/Image";
 import {useTranslation} from "react-i18next";
 const Featured = () => {
@@ -20,7 +21,7 @@ const Featured = () => {
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                     <img className="logo-img" src={cointelegraph} alt="Cointelegraph"/>
                             </a>
-                            <a href="https://t.co/HJjAp73SSb" target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                            <a href="https://www.coindesk.com/staking-as-an-asset-class-this-swiss-institutional-fund-is-jumping-in" target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                 <Image
                                     src={require('../../assets/images1/featured/coindesk01.png')}
                                     alt="Coindesk"
@@ -33,7 +34,7 @@ const Featured = () => {
                                   src={financemagnet}
                                   alt="Finance Magnates"/>
                             </a>
-                            <a href="https://www.chainnews.com/news/244436790135.htm" target="_blank"
+                            <a href="https://www.chainnews.com/articles/444783600555.htm" target="_blank"
                                rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                 <img className="logo-img"
                                      src={chainnews}
@@ -56,6 +57,12 @@ const Featured = () => {
                                 <img className="logo-img"
                                      src={blockbeats}
                                      alt="blockbeats"/>
+                            </a>
+                            <a href="https://www.odaily.com/newsflash/238810" target="_blank"
+                               rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img"
+                                     src={odaily}
+                                     alt="odaily"/>
                             </a>
                         </div>
                     </div>

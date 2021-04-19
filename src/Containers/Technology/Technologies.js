@@ -32,7 +32,7 @@ const Technologies = () => {
                     <div className="list-item">
                         <img src={paper} alt="sdk"/>
                         <p className="name">{t("EXPLORER")}</p>
-                        <a href={`${explorerURL}`} rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
+                        <a href={`${explorerURL}`}rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
                     </div>
                     <div className="list-item">
                         <img src={explorer} alt="sdk"/>

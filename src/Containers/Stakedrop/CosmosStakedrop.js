@@ -5,9 +5,13 @@ import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
-
+import { Modal } from "react-bootstrap";
+import docTerms from '../../assets/images1/stakedrop/PersistenceT&C.pdf'
+import copy from '../../assets/images1/copy.svg';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { withRouter } from 'react-router-dom';
 import { getCalculateComsmos, getStatusURL } from "../../constants/url";
+import MaticWallets from "./maticWallet";
 class CosmosStakedrop extends Component {
 
     constructor(props, context) {
@@ -81,6 +85,7 @@ class CosmosStakedrop extends Component {
     };
 
     componentDidMount = () => {
+        window.scrollTo(0, 0)
         ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
@@ -204,7 +209,7 @@ class CosmosStakedrop extends Component {
                 <section className="participate-stakedrop">
                     <div className="container">
                         <div className="col-lg-12">
-                            <p className="button-back" onClick={this.props.history.goBack}>     <Icon viewClass="arrow-right" icon="arrow-right" /> Back to Campaigns</p>
+                            <p className="button-back" onClick={this.props.history.goBack}>  <Icon viewClass="arrow-right" icon="arrow-right" /> Back to Campaigns</p>
                             <div className="row">
 
                                 <div className="col-lg-4 section-campaign">
@@ -400,6 +405,14 @@ class CosmosStakedrop extends Component {
                                                 </div>
                                             </div>
 
+                                            <div className="participate-buttons">
+                                                <div className="btn-magic-txs">
+                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" />Claim Rewards</button>
+                                                </div>
+                                                {/*<div className="btn-delegate">*/}
+                                                {/*    <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>*/}
+                                                {/*</div>*/}
+                                            </div>
 
                                         </div>
                                     </div>
@@ -408,7 +421,79 @@ class CosmosStakedrop extends Component {
 
                         </div>
                     </div>
+                    <Modal
+                        show={this.state.tcShow}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
+                            </p>
+                            <div className="button-section">
+                                <button className="btn accept" onClick={this.handleTerms} >Accept</button>
+                                <button className="btn decline" onClick={this.handleCancelTerms} >Decline</button>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                    <Modal
+                        size="lg"
+                        show={this.state.show}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
 
+                                <h4 className="text-left title">List of instructions to send Magic Transaction</h4>
+                                <ul className="staking-instructions">
+                                    <li className="text-left continue-text">After you have staked your tokens on Matic Network, to do magic tx, you have to send 0 Eth to the contract address   <span className="addressmatic">0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d <CopyToClipboard onCopy={this.onCopy} text={'0x925d092D9Ff6c95EaB70Ee5a23C77F355C67F46d'}>
+                                        <img src={copy} alt="copy" className="copy-icon" />
+                                    </CopyToClipboard></span> from your ERC-20 wallet.</li>
+                                    <p className="text-left continue-text">&emsp;Note: This address has to be same address from which you have staked your Matic tokens.</p>
+                                    <p className="text-left continue-text">&emsp;Note: If you try to send more than 0 Eth, the transaction will fail.</p>
+                                </ul>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
+                                <h4 className="title">Available Methods to Participate in StakeDrop</h4>
+
+                                <p className="continue-text"> Choose wallet to continue</p>
+                                <MaticWallets />
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateCliModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>kvcli tx staking delegate kavavaloper14gfgngrgg0pj494euuuvhygrhfptzf2hxllsev [amount] --from [from_key_or_address] --chain-id kava-4 --node https://node1.rpc.kava.persistence.one:443</p>
+                                </div>
+
+                            </div>
+                        </Modal.Body>
+                    </Modal>
                 </section>
             </div>
         );

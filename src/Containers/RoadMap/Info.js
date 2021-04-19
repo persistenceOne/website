@@ -310,18 +310,14 @@ const Info = () => {
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q1_16")} <span>{t("CORE")}</span></p>
                                         </div>
-
                                         <div className="event">
-                                            <img className="present-img event-status-img" src={event_running}
-                                                 alt="establish-img"/>
-                                            <div className="circle event-status-img"></div>
-
+                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q1_12")}</p>
-
-                                            <p className="present-event ind"><span>We are here!</span></p>
                                         </div>
+
+                                       
                                         <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q1_15")} <span>{t("TOKEN")}</span></p>
                                         </div>
                                     </div>
@@ -331,17 +327,23 @@ const Info = () => {
                                         <h3 className="quater-text">Q2</h3>
                                     </div>
                                     <div className="eventes">
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_pending} alt="establish-img"/>
+                                    <div className="event">
+                                            <img className="present-img event-status-img" src={event_running}
+                                                 alt="establish-img"/>
+                                            <div className="circle event-status-img"></div>
+
                                             <p className="event-name">{t("2021_Q2_2")} <span>{t("ECOSYSTEM")}</span></p>
+
+                                            <p className="present-event ind"><span>We are here!</span></p>
                                         </div>
+                                      
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q2_3")} <span>{t("CORE")}</span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q2_4")} <span>{t("TOKEN")} </span></p>
+                                            <p className="event-name">{t("2021_Q2_4")} <span>{t("DAPP")} </span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
@@ -349,7 +351,7 @@ const Info = () => {
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q2_6")} <span>{t("TOKEN")} </span></p>
+                                            <p className="event-name">{t("2021_Q2_6")} <span>{t("ECOSYSTEM")} </span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
@@ -357,7 +359,7 @@ const Info = () => {
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q2_8")} <span>{t("CORE")}Core </span></p>
+                                            <p className="event-name">{t("2021_Q2_8")} <span>{t("CORE")} </span></p>
                                         </div>
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
