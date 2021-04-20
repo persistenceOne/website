@@ -34,7 +34,7 @@ let English = {
         "COMING_SOON": "Coming Soon",
         //backer section
         "BACKER_SECTION_TITLE": "Who’s backing us?",
-        "VENTURE_FUNDS": "Venture Fund and Foundations",
+        "VENTURE_FUNDS": "Venture Funds and Foundations",
         "VALIDATORS": "Validators",
         "ECOSYSTEM": "Ecosystem",
         // Featured blogs section

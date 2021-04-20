@@ -21,6 +21,7 @@ class CosmosStakedrop extends Component {
             tcShow:false,
             volume: 0,
             ercAddress: '--',
+            xprtAddress:'--',
             blockHeight: '--',
             totalStaked: '--',
             statkedOnAudit: '--',
@@ -323,8 +324,13 @@ class CosmosStakedrop extends Component {
                                                     <button type="submit" className="btn">Calculate</button>
                                                 </div>
                                             </form>
-                                          
-                                           
+
+                                            <div className="">
+                                                <div className="inputstaking justify-start">
+                                                    <h5>XPRT Address</h5>
+                                                    <h5 className="text-color">{this.state.xprtAddress}</h5>
+                                                </div>
+                                            </div>
                                             <div className="row common-cards">
 
                                                 <div className="inputstaking bottom">
@@ -341,11 +347,6 @@ class CosmosStakedrop extends Component {
                                                 <div className="inputstaking bottom">
                                                     <h5>Total Rewards</h5>
                                                     <h5 className="value">{this.state.totalRewards} XPRT</h5>
-                                                </div>
-                                                
-                                                <div className="inputstaking bottom">
-                                                    <h5>XPRT Address</h5>
-                                                    <h5 className="value">{this.state.xprtAddress}</h5>
                                                 </div>
                                             </div>
                                         </div>
