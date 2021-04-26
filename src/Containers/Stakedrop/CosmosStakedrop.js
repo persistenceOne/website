@@ -178,17 +178,17 @@ class CosmosStakedrop extends Component {
         var addressPrefix = calAddress.startsWith("cosmos");
 
         if (addressPrefix === true && calAddress.length === 45) {
-            const url = getCalculateComsmos(calAddress)
+            const url = getCalculateComsmos(calAddress);
             axios.get(url).then((result) => {
                 const calculatedata = result.data;
                 if (calculatedata.success === true) {
                     const currentEarned = (calculatedata.received / 1000000);
                     const yourEstimatedRewards = (calculatedata.estimated /1000000);
-                    this.setState({ ercAddress: calculatedata.ercAddress })
-                  this.setState({xprtAddress:calculatedata.xprtAddress})
-                    this.setState({totalStaked: (calculatedata.globalDelegation/1000000).toLocaleString()})
-                    this.setState({statkedOnAudit: (calculatedata.auditDelegation/1000000).toLocaleString()})
-                    this.setState({ totalRewards: (Math.round(currentEarned * 100) / 100).toFixed(2)})
+                    this.setState({ ercAddress: calculatedata.ercAddress });
+                    this.setState({xprtAddress:calculatedata.xprtAddress});
+                    this.setState({totalStaked: (calculatedata.globalDelegation/1000000).toLocaleString()});
+                    this.setState({statkedOnAudit: (calculatedata.auditDelegation/1000000).toLocaleString()});
+                    this.setState({ totalRewards: (Math.round(currentEarned * 100) / 100).toFixed(2)});
                     this.setState({ estimatedRewards: (Math.round(yourEstimatedRewards * 100) / 100).toFixed(2)})
                 } else {
                     this.setState({ notParticipantAddress: true })
@@ -237,7 +237,6 @@ class CosmosStakedrop extends Component {
                                                 <div className="participate-cardtwo">
                                                     <h6>Start Date (Tentative)</h6>
                                                     <h1>20 April 2021 <span>Block Height: 5928000</span></h1>
-
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
@@ -365,8 +364,6 @@ class CosmosStakedrop extends Component {
                                                     className="range-value"
                                                     value={volume}
                                                     onChange={this.handleOninputChange}
-
-
                                                 />
                                             </div>
                                             <div className="range-slider">
@@ -401,9 +398,6 @@ class CosmosStakedrop extends Component {
                                                 <div className="btn-magic-txs">
                                                     <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" />Claim Rewards</button>
                                                 </div>
-                                                {/*<div className="btn-delegate">*/}
-                                                {/*    <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>*/}
-                                                {/*</div>*/}
                                             </div>
 
                                         </div>
@@ -442,7 +436,7 @@ class CosmosStakedrop extends Component {
                                 <ul className="staking-instructions">
                                 
                                     <li className="text-left continue-text"> The Cosmos Stakedrop Campaign concluded in November 2020 and now we are distributing the rewards. Please note that we are not accepting any new transaction for participating in the campaign. </li>
-                                 <li className="text-left continue-text">All the StakeDrop participants need to create a Persistence Wallet. You can learn to create one <a without rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
+                                 <li className="text-left continue-text">All the StakeDrop participants need to create a Persistence Wallet. You can learn to create one <a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
                                     
                                     <li className="text-left continue-text"> Once you have created the wallet, starting 20 April 2021 [Block Height: 5928000] you can send a transaction of 0.001 ATOM from the same address you used to participate in StakeDrop campaign to the designated address <span className="addressmatic">cosmos1emjeuudhzn5pfrexmdnnnftm668fl09zvm7zmh <CopyToClipboard onCopy={this.onCopy} text={'cosmos1emjeuudhzn5pfrexmdnnnftm668fl09zvm7zmh'}><img src={copy} alt="copy" className="copy-icon" />
                                     </CopyToClipboard></span> and put your Persistence Wallet address in the memo field.</li>
