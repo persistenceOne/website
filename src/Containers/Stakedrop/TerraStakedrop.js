@@ -8,6 +8,11 @@ import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { getCalculateTerra, getTerraStatusURL } from "../../constants/url";
+import {Modal} from "react-bootstrap";
+import docTerms from "../../assets/images1/stakedrop/PersistenceT&C.pdf";
+import {CopyToClipboard} from "react-copy-to-clipboard";
+import copy from "../../assets/images1/copy.svg";
+import MaticWallets from "./maticWallet";
 
 class TerraStakedrop extends Component {
 
@@ -18,6 +23,7 @@ class TerraStakedrop extends Component {
             tcShow: false,
             volume: 0,
             ercAddress: '--',
+            xprtAddress:'--',
             blockHeight: '--',
             totalStaked: '--',
             statkedOnAudit: '--',
@@ -188,7 +194,8 @@ class TerraStakedrop extends Component {
                 if (calculatedata.success === true) {
                     const currentEarned = (calculatedata.received / 1000000);
                     const yourEstimatedRewards = (calculatedata.estimated / 1000000);
-                    this.setState({ ercAddress: calculatedata.ercAddress })
+                    this.setState({ ercAddress: calculatedata.ercAddress });
+                    this.setState({xprtAddress:calculatedata.xprtAddress})
                     this.setState({ blockHeight: calculatedata.magicTxHeight })
                     this.setState({ totalStaked: (calculatedata.globalDelegation / 1000000).toLocaleString() })
                     this.setState({ statkedOnAudit: (calculatedata.auditDelegation / 1000000).toLocaleString() })
@@ -236,14 +243,13 @@ class TerraStakedrop extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Start Date (Tentative):</h6>
-                                                    <h1>30 April 2021</h1>
-
+                                                    <h1>30 April 2021<span>Block Height: 2781000</span></h1>
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>End Date (Tentatively):</h6>
-                                                    <h1>24 May 2021</h1>
+                                                    <h1>24 May 2021<span>Block Height: 3106000</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,14 +335,8 @@ class TerraStakedrop extends Component {
                                             </form>
                                             <div className="">
                                                 <div className="inputstaking justify-start">
-                                                    <h5>ERC20 Address</h5>
-                                                    <h5 className="text-color">{this.state.ercAddress}</h5>
-                                                </div>
-                                            </div>
-                                            <div className="">
-                                                <div className="inputstaking justify-start">
-                                                    <h5>Start Block Height</h5>
-                                                    <h5 className="text-color">{this.state.blockHeight}</h5>
+                                                    <h5>XPRT Address</h5>
+                                                    <h5 className="text-color">{this.state.xprtAddress}</h5>
                                                 </div>
                                             </div>
                                             <div className="row common-cards">
@@ -355,10 +355,6 @@ class TerraStakedrop extends Component {
                                                 <div className="inputstaking bottom">
                                                     <h5>Total Rewards</h5>
                                                     <h5 className="value">{this.state.totalRewards} XPRT</h5>
-                                                </div>
-                                                <div className="inputstaking bottom">
-                                                    <h5>Estimated Rewards</h5>
-                                                    <h5 className="value">{this.state.estimatedRewards} XPRT</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -409,7 +405,11 @@ class TerraStakedrop extends Component {
                                                 </div>
                                             </div>
 
-
+                                            <div className="participate-buttons">
+                                                <div className="btn-magic-txs">
+                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" />Claim Rewards</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -417,6 +417,83 @@ class TerraStakedrop extends Component {
 
                         </div>
                     </div>
+                    <Modal
+                        show={this.state.tcShow}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
+                            </p>
+                            <div className="button-section">
+                                <button className="btn accept" onClick={this.handleTerms} >Accept</button>
+                                <button className="btn decline" onClick={this.handleCancelTerms} >Decline</button>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                    <Modal
+                        size="lg"
+                        show={this.state.show}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
+
+                                <h4 className="text-left title">List of instructions to send Magic Transaction</h4>
+                                <ul className="staking-instructions">
+                                    <li className="text-left continue-text">Please send the Terra Magic Transaction only after block height '2781000'</li>
+                                    <li className="text-left continue-text"> The Terra Stakedrop Campaign concluded in January 2021 and now we are distributing the rewards. Please note that we are not accepting any new transaction for participating in the campaign. </li>
+                                    <li className="text-left continue-text">All the StakeDrop participants need to create a Persistence Wallet. You can learn to create one <a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
+
+                                    <li className="text-left continue-text"> Once you have created the wallet, starting 30 April 2021 [Block Height: 2781000] you can send a transaction of 0.001 KAVA from the same address you used to participate in StakeDrop campaign to the designated address <span className="addressmatic">terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l <CopyToClipboard onCopy={this.onCopy} text={'terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l'}><img src={copy} alt="copy" className="copy-icon" />
+                                    </CopyToClipboard></span> and put your Persistence Wallet address in the memo field.</li>
+                                    <li className="text-left continue-text"> Your 0.001 LUNA will be returned at the end of the claim window to your LUNA address.</li>
+                                    <li className="text-left continue-text">The claim window will end on 24 May 2021[Block Height: 3106000]. Any Magic Transaction sent after the 24 May 2021 will not be considered. </li>
+                                    <p className="text-left continue-text">Note: Don't share your mnemonics for any wallet with anyone. Mnemonics are highly sensitive data and should be secured very carefully.</p>
+                                </ul>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="staking-wallet-section">
+                                <h4 className="title">Available Methods to Participate in StakeDrop</h4>
+
+                                <p className="continue-text"> Choose wallet to continue</p>
+                                <MaticWallets />
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+
+                    <Modal
+                        size="lg"
+                        show={this.state.showDelegateCliModal}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <div className="cli-section">
+                                <h3>CLI Method</h3>
+                                <p className="info">Awesome, everything that you need is below</p>
+                                <div className="cli-address">
+                                    <p>kvcli tx staking delegate terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l [amount] --from [from_key_or_address] --chain-id kava-4 --node https://node1.rpc.kava.persistence.one:443</p>
+                                </div>
+
+                            </div>
+                        </Modal.Body>
+                    </Modal>
                 </section>
             </div>
         );

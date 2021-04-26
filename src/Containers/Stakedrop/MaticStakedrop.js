@@ -225,10 +225,9 @@ class MaticStakedrop extends Component {
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
                                                     <h6>Campaign Duration</h6>
-                                                    <h1>67 Days</h1>
+                                                    <h1>76 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
-
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
@@ -246,7 +245,7 @@ class MaticStakedrop extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>End</h6>
-                                                    <h1>TBD<span>Checkpoint: 11056</span></h1>
+                                                    <h1>16th of April 2021<span>Checkpoint: 11056</span></h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -266,7 +265,7 @@ class MaticStakedrop extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Time left:</h6>
-                                                    <h1 className="countdown">TBD</h1>
+                                                    <h1 className="countdown">00:00:00:00</h1>
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
@@ -401,14 +400,6 @@ class MaticStakedrop extends Component {
 
                                                     </div>
 
-                                                </div>
-                                            </div>
-                                            <div className="participate-buttons">
-                                                <div className="btn-magic-txs">
-                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" /> Send Magic Transaction</button>
-                                                </div>
-                                                <div className="btn-delegate">
-                                                    <button className="btn" onClick={this.handleDelegateModel}>Delegate</button>
                                                 </div>
                                             </div>
 

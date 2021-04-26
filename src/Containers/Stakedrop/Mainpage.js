@@ -320,10 +320,11 @@ class StakedropMainPage extends React.Component {
                                         <div className="col-md-6 col-lg-4 campaign-sec">
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
-                                                    <img src={mat_icon} alt="atom"/>
+                                                    <img src={mat_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickParticipate}
-                                                          to="/StakeDropMatic">Participate</Link>
+                                                          to="/StakeDropMatic">View</Link></span>
                                                 </div>
+
                                                 <div className="about-campaign">
                                                     <h4>Matic Network (MATIC)</h4>
                                                     <p>200,000 XPRT</p>
@@ -332,11 +333,11 @@ class StakedropMainPage extends React.Component {
                                                     <p><Icon viewClass="social_icon_imgg" icon="stakearrow"/>&emsp;Stake
                                                         MATIC to earn XPRT</p>
                                                     <p><Icon viewClass="social_icon_imgg"
-                                                             icon="stake-time"/>&emsp;Campaign Duration: 67 Days</p>
+                                                             icon="stake-time"/>&emsp;Campaign Duration: 76 Days</p>
                                                     <p><Icon viewClass="social_icon_imgg" icon="stake-flag"/>&emsp; 20th
                                                         of January 2021</p>
                                                     <p><Icon viewClass="social_icon_imgg"
-                                                             icon="stake-fillflag"/>&emsp;TBD</p>
+                                                             icon="stake-fillflag"/>&emsp;16th April 2021</p>
                                                     <p className="total_drop_allowcated">
                                                         <span>Total drop allocated:</span><span>20.00%</span></p>
                                                 </div>
