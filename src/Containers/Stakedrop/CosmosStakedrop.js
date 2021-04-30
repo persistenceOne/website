@@ -91,7 +91,7 @@ class CosmosStakedrop extends Component {
         const Statusurl = getStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
 
-            const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000)
+            const totalDistributed = 200000 -(statusResponse.data.totalDistributed / 1000000);
             const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
             const worldGlobalDelegation = (statusResponse.data.worldGlobalDelegation / 1000000);
@@ -122,10 +122,10 @@ class CosmosStakedrop extends Component {
         if (event.target.value === '') {
             const delegateAudit = 0;
             const delegateOther = 0;
-            this.setState({ delegateAudit: delegateAudit })
+            this.setState({ delegateAudit: delegateAudit });
             this.setState({ delegateOther: delegateOther })
         } else {
-            var utomsToDelegate = value * 1000000
+            var utomsToDelegate = value * 1000000;
             var delegateAudit = ((0.25 * utomsToDelegate / (this.state.globalAuditStakedInt + utomsToDelegate) +
                 (0.75 * utomsToDelegate) / (this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributedInt);
             var delegateOther = ((0.75 * utomsToDelegate) / (this.state.globalTotalStakedInt + utomsToDelegate)) * this.state.totalDistributedInt;
@@ -436,7 +436,7 @@ class CosmosStakedrop extends Component {
                                 <ul className="staking-instructions">
                                 
                                     <li className="text-left continue-text"> The Cosmos Stakedrop Campaign concluded in November 2020 and now we are distributing the rewards. Please note that we are not accepting any new transaction for participating in the campaign. </li>
-                                 <li className="text-left continue-text">All the StakeDrop participants need to create a Persistence Wallet. You can learn to create one <a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
+                                 <li className="text-left continue-text">All the StakeDrop participants need to create a new persistence wallet (with no prior transactions).<a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
                                     
                                     <li className="text-left continue-text"> Once you have created the wallet, starting 20 April 2021 [Block Height: 5928000] you can send a transaction of 0.001 ATOM from the same address you used to participate in StakeDrop campaign to the designated address <span className="addressmatic">cosmos1emjeuudhzn5pfrexmdnnnftm668fl09zvm7zmh <CopyToClipboard onCopy={this.onCopy} text={'cosmos1emjeuudhzn5pfrexmdnnnftm668fl09zvm7zmh'}><img src={copy} alt="copy" className="copy-icon" />
                                     </CopyToClipboard></span> and put your Persistence Wallet address in the memo field.</li>

@@ -263,7 +263,7 @@ class TerraStakedrop extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Tokens left:</h6>
-                                                    <h1>{this.state.totalDistributed} XPRT</h1>
+                                                    <h1>0 XPRT</h1>
 
                                                 </div>
                                             </div>
@@ -279,14 +279,14 @@ class TerraStakedrop extends Component {
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
                                                     <h6>Total Staked:</h6>
-                                                    <h1>{this.state.globalTotalStaked} LUNA <span>Total Active: {this.state.worldGlobalDelegation}</span></h1>
+                                                    <h1>0 LUNA <span>Total Active: 0</span></h1>
 
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
                                                     <h6>Total Staked on AUDIT.one:</h6>
-                                                    <h1>{this.state.globalAuditStaked} LUNA</h1>
+                                                    <h1>0 LUNA</h1>
 
                                                 </div>
                                             </div>
@@ -444,13 +444,13 @@ class TerraStakedrop extends Component {
 
                                 <h4 className="text-left title">List of instructions to send Magic Transaction</h4>
                                 <ul className="staking-instructions">
-                                    <li className="text-left continue-text">Please send the Terra Magic Transaction only after block height '2781000'</li>
                                     <li className="text-left continue-text"> The Terra Stakedrop Campaign concluded in January 2021 and now we are distributing the rewards. Please note that we are not accepting any new transaction for participating in the campaign. </li>
-                                    <li className="text-left continue-text">All the StakeDrop participants need to create a Persistence Wallet. You can learn to create one <a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
+                                    <li className="text-left continue-text">All the StakeDrop participants need to create a new persistence wallet (with no prior transactions). You can learn to create one <a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here.</a></li>
 
-                                    <li className="text-left continue-text"> Once you have created the wallet, starting 30 April 2021 [Block Height: 2781000] you can send a transaction of 0.001 KAVA from the same address you used to participate in StakeDrop campaign to the designated address <span className="addressmatic">terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l <CopyToClipboard onCopy={this.onCopy} text={'terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l'}><img src={copy} alt="copy" className="copy-icon" />
+                                    <li className="text-left continue-text"> Once you have created the wallet, starting 30 April 2021 [Block Height: 2781000] you can send a transaction of 0.001 LUNA from the same address you used to participate in StakeDrop campaign to the designated address <span className="addressmatic">terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l <CopyToClipboard onCopy={this.onCopy} text={'terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l'}><img src={copy} alt="copy" className="copy-icon" />
                                     </CopyToClipboard></span> and put your Persistence Wallet address in the memo field.</li>
-                                    <li className="text-left continue-text"> Your 0.001 LUNA will be returned at the end of the claim window to your LUNA address.</li>
+                                    <p className="text-left continue-text">Example TX: terracli tx send [your_key_or_address] terra1eesgkttzsgaw052s8w4sflyd86p9u8mjlsfr0l 100uluna --memo="your_persistence_address" --chain-id columbus-4  --node https://node1.rpc.terra.persistence.one:443</p>
+                                    <li className="text-left continue-text"> Your 0.001 LUNA will be returned at the end of the claim window to your Terra address.</li>
                                     <li className="text-left continue-text">The claim window will end on 24 May 2021[Block Height: 3106000]. Any Magic Transaction sent after the 24 May 2021 will not be considered. </li>
                                     <p className="text-left continue-text">Note: Don't share your mnemonics for any wallet with anyone. Mnemonics are highly sensitive data and should be secured very carefully.</p>
                                 </ul>
