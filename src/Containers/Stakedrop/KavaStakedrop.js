@@ -102,7 +102,6 @@ class kavaStakedrop extends Component {
         const Statusurl = getKavaStatusURL();
         axios.get(Statusurl).then((statusResponse) => {
             const totalDistributed = 100000 - (statusResponse.data.totalDistributed / 1000000)
-            console.log(statusResponse, "totalDistributed red");
             const worldTotalDelegations = (statusResponse.data.totalStakeDropGlobalDelegation);
             const worldAuditDelegations = (statusResponse.data.worldAuditDelegation);
             const worldGlobalDelegation = (statusResponse.data.worldGlobalDelegation / 1000000);
