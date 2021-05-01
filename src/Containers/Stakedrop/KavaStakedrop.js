@@ -451,7 +451,7 @@ class kavaStakedrop extends Component {
                                 <ul className="staking-instructions">
 
                                     <li className="text-left continue-text"> The Kava Stakedrop Campaign concluded in December 2020 and now we are distributing the rewards. Please note that we are not accepting any new transaction for participating in the campaign. </li>
-                                    <li className="text-left continue-text">All the StakeDrop participants need to create a Persistence Wallet. You can learn to create one <a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here</a></li>
+                                    <li className="text-left continue-text">All the StakeDrop participants need to create a new persistence wallet (with no prior transactions). You can learn to create one <a rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" target="_blank">here.</a></li>
 
                                     <li className="text-left continue-text"> Once you have created the wallet, starting 25th April 2021 [Block Height: 220500] you can send a transaction of 0.001 KAVA from the same address you used to participate in StakeDrop campaign to the designated address <span className="addressmatic">kava13rxv4w6d6d3hdwgg5dz2ktmmgmncan3sezg56h <CopyToClipboard onCopy={this.onCopy} text={'kava13rxv4w6d6d3hdwgg5dz2ktmmgmncan3sezg56h'}><img src={copy} alt="copy" className="copy-icon" />
                                     </CopyToClipboard></span> and put your Persistence Wallet address in the memo field.</li>
