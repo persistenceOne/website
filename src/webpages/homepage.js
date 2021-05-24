@@ -155,8 +155,6 @@ class homePage extends Component {
                     <h3>Our Backers</h3>
                     <div className="container">
                         <BackersTabs />
-
-
                     </div>
                 </section>
                 <section className="stay-updated">
