@@ -1,0 +1,36 @@
+@media (max-width: 767.8px) {
+  .section-technology-banner{
+    padding: 130px 0 100px 0;
+  }
+  .section-sdk .row, .section-asset-mantle .row{
+    flex-direction: column-reverse;
+  }
+    .section-sdk .right-section, .section-asset-mantle .right-section{
+justify-content: flex-start;
+  }
+  .section-sdk, .section-asset-mantle{
+    padding: 50px 0;
+  }
+  .section-technology-list .list
+  {
+    justify-content: center;
+    padding: 0;
+    .list-item{
+      margin: 0px 30px 20px 5px;
+    }
+  }
+}
+@media (max-width: 991.8px) {
+  .section-sdk, .section-asset-mantle{
+    padding: 70px 0;
+  }
+  .tools-section-boxes{
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 1199.8px){
+  .section-sdk .right-section .logo, .section-asset-mantle .right-section .logo{
+    padding: 10px 0;
+  }
+}

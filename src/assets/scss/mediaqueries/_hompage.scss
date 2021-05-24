@@ -1,0 +1,151 @@
+@media (max-width: 1200px) {
+  .featured-on .logos{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .banner-section{
+    .content-box{
+      position: relative;
+      padding: 0;
+      bottom: auto;
+    }
+    .row .col-md-6.content {
+      bottom: -0px;
+    }
+  }
+}
+@media (max-width: 767.8px){
+  .banner-section {
+    height: auto;
+    padding: 200px 0 100px 0;
+    .banner-heading{
+      font-size: 30px;
+    }
+    .banner-buttons button{
+      margin-bottom: 10px;
+    }
+    .row .col-md-6.content {
+      position: relative;
+      width: auto;
+
+      .content-box {
+        position: relative;
+      }
+    }
+    .mouse-section{
+      display: none;
+    }
+  }
+  .stay-updated {
+    .blog-section{
+     padding-bottom: 10px;
+    }
+    .blog-articles.right{
+    padding: 10px 0 0 0;
+    }
+
+  }
+  .aim-section{
+    .img-section{
+      display: none;
+    }
+  }
+  .featured-on .logos{
+    justify-content: space-evenly;
+  }
+
+  .col-md-5 {
+    padding-right: 20px !important;
+  }
+  .stay-updated .blog-articles.left{
+    padding-left: 0px;
+  }
+  .blog-articles.right {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 575.8px){
+  .aim-section .services-list{
+    padding: 20px 30px;
+   .media-body p{
+     padding: 0;
+   }
+  }
+  .section-title{
+    font-size: 26px;
+  }
+  .product-section .col-md-3 {
+    .content, .content.plend-content, .content.mantle-content{
+      min-height: 60vw;
+    }
+    .overlay-button{
+      transform: translate(-50%, 90%);
+    }
+  }
+  .aim-section .services-list .serviceBody .icon-section{
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 992px){
+  .aim-section{
+      padding: 70px 0;
+    .img-section {
+      display: none;
+    }
+  }
+  .product-section{
+    padding: 70px 0;
+  }
+  .our-backers{
+    padding: 70px 0;
+  }
+  .stay-updated{
+    padding: 0 0 70px 0;
+  }
+  .featured-on{
+    padding: 70px 0;
+  }
+}
+//@media (min-width: 1200px) and (max-width: 1399.8px){
+//  .banner-section {
+//    height: 100%;
+//  }
+//}
+@media (min-width: 992px) and (max-width: 1199.8px){
+  .aim-section .img-section {
+    .circle{
+      right: 100px;
+    }
+    .square{
+      right: 100px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1399.8px) {
+  .banner-section {
+    background-position: 80% 50%, 100% 100%;
+    padding: 300px 0;
+    height: 100%;
+
+    .mouse-section{
+      bottom: -150px;
+    }
+    .banner-heading {
+      font-size: 36px;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .blog-image .card-img-top {
+    height: 180px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .banner-section {
+    background-position: 87% 55%, 100% 100% !important;
+    background-size: 60% 75%, cover !important
+  }
+}

@@ -1,0 +1,1051 @@
+.stakedrop-section {
+  background: #1d1e22;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  margin-top: 0px;
+
+  .pmedia-element {
+    width: 100%;
+  }
+
+  .title-cards {
+    padding: 0;
+
+    .common-cards {
+      background: #313238;
+      padding: 15px;
+
+      p {
+        color: #9d9d9d;
+      }
+
+      h5 {
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+      }
+    }
+  }
+
+  .sub-title {
+    line-height: 2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #9d9d9d;
+    margin-top: 1rem;
+    width: 100%;
+
+    span {
+      display: block;
+
+      span {
+        display: inline-block;
+
+        a {
+          color: #fff;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            color: #e50913;
+          }
+        }
+      }
+    }
+  }
+
+  .stake-title {
+    .sub-text {
+      span {
+        display: block;
+      }
+
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    color: #fff;
+    font-weight: 800;
+    width: 100%;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .stake-title::before {
+    content: "";
+    background: #e50913;
+    height: 100%;
+    width: 7px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.stakedrop-banner {
+  background: #313238;
+  padding: 75px 0;
+  img {
+    width: 100%;
+    margin: 10px 0;
+    height: 150px;
+  }
+}
+
+
+.stake-drop-campaigns {
+  padding: 150px 0;
+  background: #f4f5f7;
+
+  .campaign-card.learnmore_card {
+    padding: 55px 40px;
+    .about-campaign {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      flex-wrap: wrap;
+
+      .mechanism {
+        margin-right: 35px;
+      }
+    }
+  }
+  .tutorial-links {
+    .link-section {
+      margin: 5px 0;
+      p {
+        color: #000000;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      a {
+        color: #007bff;
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .learnmore_card {
+    .heading {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+
+      color: #231f20;
+    }
+  }
+
+  .campaign-card {
+    .icon-div {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      span {
+        display: flex;
+        align-items: center;
+        h6 {
+          color: #63b036;
+          font-weight: bold;
+          margin-bottom: 0;
+          margin-right: 10px;
+        }
+      }
+      a {
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        color: #fff;
+        background: #000;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        border-radius: 5px;
+        line-height: 1;
+      }
+      a.viewcampaign {
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        background: #fff;
+        color: #000000;
+        border: 1px solid #e5e5e5;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        border-radius: 5px;
+        line-height: 1;
+      }
+      button {
+        font-weight: 500;
+        border-radius: 5px;
+        background: transparent;
+        color: #000000;
+        border: 1px solid #e5e5e5;
+        padding: 7px 25px;
+        transition: all 0.4s;
+
+        &:hover {
+          background: #e50913;
+          border: 1px solid #e50913;
+          color: #fff;
+        }
+      }
+
+      &:hover a {
+        opacity: 1;
+        background: #e50913;
+        color: #fff;
+      }
+    }
+
+    .mechanism-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 25px 35px;
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      box-sizing: border-box;
+      border-radius: 8px;
+      margin: auto;
+
+      img {
+        width: 40px;
+        height: 46px;
+      }
+
+      p {
+        font-weight: bold;
+        margin: 10px 0 0 0;
+        font-size: 16px;
+        text-align: center;
+        color: #000000;
+      }
+      &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+    }
+
+    .official-announce {
+      text-align: center;
+      padding: 0px 0;
+      margin-top: 15px;
+
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #838c9f;
+      }
+    }
+
+    background: #fff;
+    padding: 28px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+
+  .stake-to {
+    p.total_drop_allowcated {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #838c9f;
+      font-weight: 500;
+    }
+  }
+
+  .about-campaign {
+    margin: 35px 0;
+
+    h4 {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: #838c9f;
+
+      span {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    color: #100c15;
+    margin-bottom: 10px;
+  }
+
+  .stakedrop-title-head {
+    margin-bottom: 75px;
+
+    p {
+      margin: 0 0 10px 0;
+      font-weight: 500;
+    }
+  }
+}
+
+.section-participate,
+.section-stake-drop {
+  .other-pages {
+    display: none;
+  }
+
+  .stake-drop {
+    display: block;
+  }
+}
+.faq-section {
+  background-color: #191616;
+  padding: 150px;
+
+  h2 {
+    font-weight: bold;
+    color: #f4f5f7;
+    margin-bottom: 50px;
+  }
+
+  .acc-row {
+    justify-content: center;
+  }
+
+  /* Style the accordion section */
+  .accordion__section {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    border: none;
+    position: relative;
+    outline: none;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Style the accordion content title */
+  .accordion__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+  }
+
+  .accordion__title::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    display: flex;
+    top: 8px;
+    border-radius: 5px;
+    z-index: 6;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Style the accordion chevron icon */
+  .accordion__icon {
+    margin-left: auto;
+    transition: transform 0.6s ease;
+    width: 10px;
+    height: auto;
+    position: absolute;
+    right: 0;
+  }
+
+  /* Style to rotate icon when state is active */
+  .rotate {
+    transform: rotate(90deg);
+  }
+
+  /* Style the accordion content panel. Note: hidden by default */
+  .accordion__content {
+    color: #7b7b7b;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+  }
+
+  /* Style the accordion content text */
+  .accordion__text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 18px;
+    margin-left: 15px;
+  }
+}
+
+
+// Participate css
+
+.participate-stakedrop {
+  padding: 135px 0;
+  background: #f4f5f7;
+
+  .button-back {
+    color: #231f20;
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .heading-participate {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    color: #231f20;
+  }
+
+  .staking-second-section {
+    .cosmos-tutorial-section {
+      background-color: #231f20;
+      background-image: url(./../../images1/stakedrop/cosmos-tutorial-bg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0% 1px;
+      padding: 20px;
+      margin-bottom: 15px;
+
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .matic-tutorial-section {
+      background-color: #231f20;
+      background-image: url(./../../images1/stakedrop/matic-tutorial-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0% 1px;
+      padding: 25px;
+      margin-bottom: 15px;
+
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .kava-tutorial-section {
+      background-color: #231f20;
+      background-image: url(./../../images1/stakedrop/kava-tutorial-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0% 1px;
+      padding: 20px;
+      margin-bottom: 15px;
+
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .terra-tutorial-section {
+      background-color: #231f20;
+      background-image: url(./../../images1/stakedrop/terra-tutorial-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0% 1px;
+      padding: 20px;
+      margin-bottom: 15px;
+
+      p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .staking-right-bottom.stakerow {
+      .body-section {
+        padding: 20px;
+      }
+    }
+
+    .stakerow {
+      background: #fff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 0;
+
+      .header-section {
+        padding: 20px;
+        border-bottom: 1px solid #eeeeee;
+
+        h5 {
+          margin: 0;
+        }
+      }
+
+      .body-section {
+        .delegate-sec {
+          display: flex;
+
+          .inputstaking.bottom {
+            margin-right: 35px;
+            align-items: flex-start;
+
+            h5 {
+              width: auto;
+            }
+          }
+        }
+
+        padding: 0 20px 20px 20px;
+
+        form {
+          .valid-add {
+            text-align: center;
+            position: absolute;
+            right: 25px;
+            margin: 5px 0;
+            font-size: 12px;
+            color: #e50913;
+          }
+        }
+      }
+    }
+
+    .btn-calculate {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+
+      .btn {
+        font-weight: 500;
+        background: transparent;
+        color: #000000;
+        border: 1px solid #e5e5e5;
+        padding: 7px 25px;
+        transition: all 0.4s;
+
+        &:hover {
+          background: #e50913;
+          border: 1px solid #e50913;
+          color: #fff;
+        }
+      }
+    }
+
+    .row.common-cards {
+      justify-content: start;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .inputstaking.bottom {
+      flex-direction: column;
+
+      .value {
+        color: #000;
+        margin: 10px 0;
+        font-weight: 600;
+        word-break: break-word;
+      }
+    }
+
+    .inputstaking.justify-start {
+      justify-content: flex-start;
+
+      h5.text-color {
+        width: auto;
+        color: #000;
+        font-weight: 600;
+      }
+    }
+    .inputstaking.left-align-calculate {
+      justify-content: right;
+      h5 {
+        width: 170px;
+      }
+      .btn-calculate {
+        margin-top:0;
+      }
+    }
+    .inputstaking {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      align-items: center;
+
+      h5 {
+        color: #838c9f;
+        font-size: 16px;
+        display: flex;
+        margin: 0;
+        width: 230px;
+      }
+
+      input {
+        border: 1px solid #f4f5f7;
+        background: #f5f5f5;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+      }
+    }
+
+    .participate-buttons {
+      margin: 25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .btn-delegate .btn {
+        background: #e50913;
+        color: #fff;
+        margin-right: 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+
+    .btn-magic-txs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn {
+        background: #e50913;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .staking-right-bottom {
+    .btn-calculate {
+      margin-bottom: 15px;
+    }
+
+    .range-data {
+      display: flex;
+      justify-content: space-between;
+
+      .range-value {
+        color: #231f20;
+        font-weight: 600;
+        border: 1px solid #f4f5f7;
+        background: #f5f5f5;
+        padding: 10px;
+        border-radius: 5px;
+        width: 150px;
+      }
+    }
+  }
+
+  .section-campaign {
+    padding-bottom: 10px;
+  }
+
+  .campaign-maintwo.second {
+    .participate-cardtwo.end {
+      margin-bottom: 56px;
+    }
+  }
+
+  .campaign-maintwo {
+    background: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+
+    .header-section {
+      border-bottom: 1px solid #eeeeee;
+      padding: 20px;
+    }
+
+    .body-section {
+      padding: 0 25px;
+    }
+
+    .campaign-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+
+      // &::before {
+      // 	content: "";
+      // 	height: 100%;
+      // 	width: 8px;
+      // 	background: #e50913;
+      // 	position: absolute;
+      // 	left: 0px;
+      // }
+      .icon.icon-social_icon_imgg {
+        width: 25px;
+      }
+
+      .card-inner {
+        h6 {
+          font-size: 14px;
+          color: #838c9f;
+          margin-bottom: 5px;
+        }
+
+        h1 {
+          font-size: 20px;
+          color: #231f20;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .card-content {
+      border-bottom: 1px solid #eeeeee;
+      padding-top: 30px;
+    }
+
+    .participate-cardtwo.end {
+      margin-bottom: 30px;
+    }
+    .participate-cardtwo {
+      h6 {
+        font-size: 14px;
+        color: #838c9f;
+        margin-bottom: 5px;
+      }
+
+      h1.countdown span {
+        font-size: 20px;
+        color: #231f20;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        font-size: 20px;
+        color: #231f20;
+        font-weight: 600;
+        margin-bottom: 15px;
+
+        span {
+          display: block;
+          font-size: 14px;
+          color: #838c9f;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .campaign-main {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+  }
+}
+
+
+.range-slider {
+  .rangeslider {
+    height: 5px;
+    border-radius: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+    background: rgba(229, 9, 19, 0.11);
+  }
+
+  .rangeslider-horizontal {
+    .rangeslider__fill {
+      background-color: #e50913;
+      border-radius: 0;
+    }
+
+    .rangeslider__handle {
+      border-radius: 0;
+      width: 13px;
+      height: 13px;
+      top: -4px;
+      transform: rotate(45deg);
+      box-shadow: none;
+
+      &::after {
+        width: 10px;
+        height: 10px;
+        top: 0px;
+        left: 0px;
+        border-radius: 0;
+        transform: rotate(90deg);
+        background-color: #e50913;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .rangeslider__handle-tooltip {
+      display: none;
+    }
+  }
+}
+
+
+.accountInfoModel {
+  .modal-content {
+    background-color: #f4f5f7;
+    
+    overflow-y: auto;
+    .modal-body {
+      padding: 40px;
+    }
+  }
+
+  .tc {
+    color: #000000;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+
+    .form-group {
+      margin: 0 0 0 10px;
+    }
+
+    a {
+      text-decoration: underline;
+      margin-left: 5px;
+      color: #000000;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+}
+
+.button-section {
+  text-align: center;
+
+  .btn {
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 25px;
+    margin-bottom: 5px;
+  }
+
+  .accept {
+    background: #e50913;
+    box-shadow: 0px 4px 14px rgba(229, 9, 19, 0.25);
+    color: #ffffff;
+    margin-right: 15px;
+  }
+
+  .decline {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    color: #000000;
+  }
+}
+
+.staking-wallet-section {
+  .title {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #231f20;
+    margin-bottom: 10px;
+  }
+
+  .info {
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    color: #838c9f;
+  }
+  .staking-instructions {
+    span.addressmatic {
+      color: #e50913;
+      display: inline-block;
+      .copy-icon {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        margin-left: 0px;
+      }
+    }
+    .continue-text {
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+      color: #231f20;
+      margin-top: 10px;
+      a {
+        color: #e50913;
+      }
+    }
+  }
+  .continue-text {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #231f20;
+    margin-top: 20px;
+    a {
+      color: #e50913;
+    }
+  }
+
+  .wallet-method {
+    display: flex;
+    justify-content: center;
+
+    .cli-box {
+      background: #ffffff;
+      cursor: pointer;
+      padding: 15px 20px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+      border-radius: 8px;
+
+      .icon {
+        fill: red;
+        width: 24px;
+        height: 24px;
+      }
+
+      .card-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          margin: 0;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .row {
+    margin-bottom: 10px;
+    text-align: center;
+    display: inline-flex;
+  }
+
+  .wallet-card {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    height: 125px;
+    justify-content: center;
+
+    .icon {
+      fill: red;
+    }
+
+    .card-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      p {
+        margin: 10px 0 0 0;
+        font-weight: 600;
+        font-size: 14px;
+        color: #231f20;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
+}

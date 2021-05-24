@@ -1,0 +1,40 @@
+@media (max-width: 991.8px) {
+  .vision-banner-section{
+    display: block;
+    padding: 100px 0;
+    .image-section{
+      display: none;
+    }
+    .content {
+      padding-top: 0px;
+      padding-right: 15px;
+    }
+  }
+  .adviser-section{
+    padding: 70px 0;
+    .adviser-text{
+      padding: 0;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .vision-banner-section .content {
+    padding-right: 200px;
+  }
+}
+@media (max-width: 766.8px) {
+  .vision-banner-section .quote-section img{
+    right: 0;
+  }
+}
+@media (max-width: 575.8px) {
+  .adviser-section .proileContainer{
+    width: 280px;
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 1200px) {
+  .adviser-section .profiles-group{
+    justify-content: center;
+  }
+}

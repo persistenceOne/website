@@ -1,0 +1,31 @@
+@media (max-width: 767.8px) {
+  .section-roadmap .year-section {
+    flex-direction: column;
+
+    .year-text {
+      transform: none;
+    }
+  }
+}
+
+@media (max-width: 991.8px) {
+  .event {
+    .present-img {
+      display: none;
+    }
+    .present-event{
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .circle.event-status-img {
+    display: none;
+  }
+}
+@media (max-width:  575.8px) {
+  .section-roadmap .content .right-section{
+  padding: 0;
+  }
+}

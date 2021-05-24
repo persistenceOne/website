@@ -1,0 +1,30 @@
+@media (max-width: 991.8px) {
+  .product-info-section{
+    padding: 70px 0;
+  }
+  .coming-soon-section{
+    padding: 70px 0;
+  }
+}
+@media (max-width: 767.8px) {
+  .product-info-section .pstake, .product-info-section .audit {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .coming-soon-section {
+    .heading {
+      font-size: 44px;
+      line-height: 48px;
+    }
+
+    .products {
+      flex-direction: column;
+
+      .product:first-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

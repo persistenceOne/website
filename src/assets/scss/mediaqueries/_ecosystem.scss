@@ -1,0 +1,106 @@
+@media (min-width: 1400px) {
+  .validators-section .validators .become-validator {
+    .text {
+      padding-right: 100px;
+      padding-left: 100px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .validators-section {
+    .validators {
+      .common-row {
+        padding: 0;
+        flex-wrap: wrap;
+
+        //a {
+        //  width: auto;
+        //}
+      }
+
+      .become-validator {
+        .text {
+          padding-right: 15px;
+        }
+
+        .button-list {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .internft-section, .stakedrop-info-section {
+    .right-section .info {
+      padding-left: 0;
+    }
+  }
+  .token_distribution.internft-section .right-section .info {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+}
+
+@media (max-width: 991.8px) {
+  .stakedrop-info-section {
+    .stakedrop-image {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    padding: 70px 0;
+
+    .title-line-section {
+      padding: 0 0 70px 0;
+    }
+  }
+  .validators-section {
+    padding: 70px 0;
+
+    .title-line-section {
+      padding: 0 0 70px 0;
+    }
+  }
+  .xprt-section {
+    padding: 70px 0;
+
+    .title-line-section {
+      padding: 0 0 70px 0;
+    }
+  }
+  .internft-section {
+    padding: 0 0 70px;
+
+    .title-line-section {
+      padding: 0 0 70px;
+    }
+  }
+  .ecosystem-faq-section {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 767.8px) {
+  .internft-section {
+    padding: 0 0 50px 0
+  }
+  .stakedrop-info-section {
+    padding: 0 0 50px 0;
+  }
+  .section-ecosystem-banner {
+    padding: 130px 0 100px 0;
+
+    .social-links .link {
+      margin: 0 20px 10px 20px;
+    }
+  }
+  //.validators-section {
+  //  padding: 50px 0 50px 0;
+  //}
+}
+
+@media (max-width: 575.8px) {
+  .validators-section .validators .common-row {
+    justify-content: center;
+  }
+}

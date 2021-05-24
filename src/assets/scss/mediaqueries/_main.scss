@@ -1,0 +1,100 @@
+@media (max-width: 991.8px) {
+  .navbar.navbar-custom .navbar-nav {
+    li {
+    margin: 0;
+    a {
+      text-align: left;
+      padding:15px 0;
+    }
+  }
+  }
+  .navbar-collapse{
+    padding-top: 15px;
+  }
+  .site-content {
+    margin-top: 65px;
+    .banner-section {
+      height: auto;
+      padding: 135px 0 100px 0;
+  }
+  }
+  .product-info-section .cards {
+    margin-left: 0;
+  }
+  .section-roadmap {
+    padding: 130px 0 100px 0;
+  }
+  
+}
+
+@media (max-width: 767.8px) {
+  .footer {
+    text-align: center;
+
+    .mail-chimp-section {
+      display: flex;
+    }
+
+    .btn-subscribe {
+      padding: 8px 10px !important;
+    }
+  }
+  .navbar.navbar-custom {
+    padding: 20px 0;
+
+    .navbar-brand img {
+      width: 170px;
+    }
+    .ecosystem-dropdown {
+      width: auto;
+      max-width: 600px;
+      .dropdown-content{
+    flex-wrap: wrap;
+        .items{
+          border: 0px solid;
+        }
+    }}
+  }
+  .navbar .container {
+    padding: 0 15px !important;
+  }
+  .info-modal.modal .modal-dialog .modal-content .modal-data{
+    flex-wrap: wrap;
+    .profile-image{
+      flex: 1;
+      text-align: center;
+    }
+  }
+  .product-section .col-md-3 {
+    .content-upcoming.mantle-content, .content-upcoming.plend-content {
+      min-height: 60vw;
+    }
+  }
+}
+
+@media (max-width: 575.8px) {
+  .section-title {
+    font-size: 26px;
+  }
+  .validators-section .validators .become-validator {
+    padding: 60px 0px 0px 0px;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 991.8px) {
+.footer .contact-us{
+justify-content: flex-start;
+}
+}
+@media (max-width: 375px) { 
+  .button-primary, .button-secondary, .product-info-section.product-pstake .button.coming-soon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .product-info-section .cards .button-list .button-primary {
+    margin-right: 0;
+  }
+}
