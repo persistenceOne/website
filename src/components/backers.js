@@ -11,7 +11,7 @@ import sg1 from '../assets/images1/backers/validators/sg1.svg';
 import FigmentNetworks from '../assets/images1/backers/validators/figment.png';
 import BHarvest from '../assets/images1/backers/validators/BHarvest.png';
 import sikka from '../assets/images1/backers/validators/sikka.png';
-import Iqlusion from '../assets/images1/backers/validators/Iqlusion.png';
+import Chorus from '../assets/images1/backers/validators/chorus.png';
 import StakeWithUs from '../assets/images1/backers/validators/StakeWithUs.png';
 import p2p_logo from '../assets/images1/backers/validators/p2p.png';
 import CertusOne from '../assets/images1/backers/validators/CertusOne.png';
@@ -26,7 +26,6 @@ import huobipool from '../assets/images1/backers/validators/svg/Houbi_Pool10.svg
 import bandprotocol from '../assets/images1/backers/validators/svg/Band_Protoocol.svg';
 import everstake from '../assets/images1/backers/validators/svg/everstake.svg';
 import kalpatech from '../assets/images1/backers/validators/svg/KalpaTech.svg';
-import Ascendex from '../assets/images1/backers/validators/svg/Ascendex.svg';
 import DSRV from '../assets/images1/backers/validators/svg/DSRV.svg';
 import { useTranslation } from "react-i18next";
 
@@ -44,8 +43,8 @@ const BackersTabs = () => {
             <div className="common-row first-row">
                <a href="https://terra.money/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={terra} alt="Terra" /></a>
-                  <a href="https://tendermint.com/ventures/" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={tendermintventures} alt="Tendermint Ventures" /></a>
+                  <a href="https://tendermint.com/" className="reveal-scale-up" target="_blank"
+                  rel="noopener noreferrer"><img className="logo-img" src={tendermintventures} alt="Tendermint" /></a>
                <a href="https://interchain.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={icf} alt="ICF" /></a>
                <a href="https://www.alameda-research.com/" className="reveal-scale-up" target="_blank"
@@ -103,8 +102,6 @@ const BackersTabs = () => {
                   rel="noopener noreferrer"><img className="logo-img" src={DSRV} alt="DSRV" /></a>
                   <a href="https://www.hashquark.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={HashQuark} alt="HashQuark" /></a>
-                  <a href="https://bitmax.io/" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={Ascendex} alt="Ascendex" /></a>
                      <a href="https://kalpatech.co/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={kalpatech} alt="Kalpatech" /></a>
       
@@ -116,8 +113,8 @@ const BackersTabs = () => {
                   rel="noopener noreferrer"><img className="logo-img" src={BHarvest} alt="BHarvest" /></a>
                <a href="https://www.sikka.tech/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={sikka} alt="sikka" /></a>
-               <a href="https://www.iqlusion.io/" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={Iqlusion} alt="Iqlusion" /></a>
+               <a href="https://chorus.one" className="reveal-scale-up" target="_blank"
+                  rel="noopener noreferrer"><img className="logo-img" src={Chorus} alt="Chorus" /></a>
                <a href="https://certus.one/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={CertusOne} alt="CertusOne" /></a>
                    
