@@ -4,13 +4,15 @@ import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import './components/Internationalization/i18n'
 import App from './App';
+import ReactGa from 'react-ga';
 import * as serviceWorker from './serviceWorker';
 
 //import './App.css';
 import './assets/scss/style.scss';
 
 const history = createBrowserHistory();
-
+let gaID = process.env.REACT_APP_GA_ID
+ReactGa.initialize(`${gaID}`)
 ReactDOM.render(
   <Router history={history}>
     <App />
