@@ -301,7 +301,6 @@ a {
 }
 
 .navbar.navbar-custom .dropdown-toggle::after {
-  content: url(./../../images1/chevron.svg);
   border: 0;
   display: inline-block;
   margin-left: .55em;
@@ -434,7 +433,7 @@ a {
   font-weight: bold;
   font-size: 12px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: initial;
   color: #C4C4C4;
   padding: .65rem 1.5rem;
 }
