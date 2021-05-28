@@ -43,8 +43,8 @@ const BackersTabs = () => {
             <div className="common-row first-row">
                <a href="https://terra.money/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={terra} alt="Terra" /></a>
-                  <a href="https://tendermint.com/" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={tendermintventures} alt="Tendermint" /></a>
+                  <a href="https://tendermint.com/ventures/" className="reveal-scale-up" target="_blank"
+                  rel="noopener noreferrer"><img className="logo-img" src={tendermintventures} alt="Tendermint Ventures" /></a>
                <a href="https://interchain.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={icf} alt="ICF" /></a>
                <a href="https://www.alameda-research.com/" className="reveal-scale-up" target="_blank"
