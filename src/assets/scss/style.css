@@ -2111,7 +2111,7 @@ button:disabled {
 }
 
 .vision-banner-section .content {
-  padding-top: 70px;
+  padding-top: 170px;
   padding-right: 80px;
 }
 
@@ -2458,9 +2458,9 @@ button:disabled {
 }
 
 .adviser-section .profiles-group {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .adviser-section .adviser-text {
