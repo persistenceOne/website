@@ -8,6 +8,7 @@ body{
 body {
   background-color: #222325 !important;
   scroll-behavior: smooth;
+  text-transform: capitalize;
 }
 
 .body-wrap{
@@ -394,7 +395,7 @@ a {
           font-weight: bold;
           font-size: 12px;
           letter-spacing: 0.1em;
-          text-transform: uppercase;
+          text-transform: initial;
           color: #C4C4C4;
           padding: .65rem 1.5rem;
 

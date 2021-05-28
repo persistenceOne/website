@@ -24,9 +24,6 @@ const Products = () => {
                                 <div className="bg-overlay-image comdex">
                                 </div>
                             </div>
-
-                            <p className="overlay-text">{t("COMDEX")}</p>
-
                             <div className="">
                                 <img className="image-logo" src={comdex} alt="comdex-logo"/>
                                 <p className="overlay-subtext">{t("COMDEX_CAPTION")}</p>
@@ -49,7 +46,7 @@ const Products = () => {
                                 <div className="bg-overlay-image audit">
                                 </div>
                             </div>
-                            <p className="overlay-text">{t("AUDIT_ONE")}</p>
+                          
                             <img className="image-logo" src={audit} alt="audit-logo"/>
                             <p className="overlay-subtext">{t("AUDIT_ONE_CAPTION")}</p>
                             <a href="http://audit.one/" rel="noopener noreferrer" target="_blank"
@@ -70,9 +67,9 @@ const Products = () => {
                                 <div className="bg-overlay-image pstake">
                                 </div>
                             </div>
-                            <p className="overlay-text">{t("PSTAKE")}</p>
+                           
                             <img className="image-logo" src={pstake} alt="pstake-logo"/>
-                            <p className="overlay-subtext">{t("PSTAKE_CAPTION")}</p>
+                          
                             <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank"
                                className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
@@ -89,7 +86,7 @@ const Products = () => {
                         <div className="content-multiple">
                             <div className="content-upcoming mantle-info mantle-content">
                                 <div className="content-overlay"></div>
-                                <p className="overlay-text">{t("ASSET_MANTLE")}</p>
+                               
                                 <img className="image-logo" src={assetmantle} alt="assetmantle-logo"/>
                                 <p className="overlay-subtext">{t("ASSET_MANTLE_CAPTION")}</p>
                                 <a href="https://twitter.com/AssetMantle" rel="noopener noreferrer" target="_blank"
@@ -105,7 +102,7 @@ const Products = () => {
                             </div>
                             <div className="content-upcoming mantle-info plend-content">
                                 <div className="content-overlay"></div>
-                                <p className="overlay-text">{t("PLEND")}</p>
+                               
                                 <img className="image-logo" src={plend} alt="plend-logo"/>
                                 <p className="overlay-subtext">{t("PLEND_CAPTION")} </p>
                                 <div className="overlay-learn-more">

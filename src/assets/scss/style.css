@@ -13,6 +13,7 @@ body {
 body {
   background-color: #222325 !important;
   scroll-behavior: smooth;
+  text-transform: capitalize;
 }
 
 .body-wrap {
@@ -1658,7 +1659,7 @@ button:disabled {
   bottom: 0%;
   height: 100%;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
 }
@@ -2156,6 +2157,12 @@ button:disabled {
 
 .vision-banner-section .image-section {
   padding-top: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .vision-banner-section .image-section img {
@@ -3157,6 +3164,7 @@ button:disabled {
   padding: 2px 10px;
   margin-left: 15px;
   position: relative;
+  display: inline-block;
 }
 
 .section-roadmap .content .right-section .quater-section .eventes .event .present-event span:before {
@@ -3265,6 +3273,10 @@ button:disabled {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 10px;
+}
+
+.section-ecosystem-banner .social-links .link .regional-link {
+  cursor: pointer;
 }
 
 .section-ecosystem-banner .social-links .link .icon-box {
@@ -4550,6 +4562,7 @@ button:disabled {
   color: #000;
   margin: 10px 0;
   font-weight: 600;
+  word-break: break-word;
 }
 
 .participate-stakedrop .staking-second-section .inputstaking.justify-start {
@@ -4818,7 +4831,7 @@ button:disabled {
 
 .accountInfoModel .modal-content {
   background-color: #f4f5f7;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .accountInfoModel .modal-content .modal-body {

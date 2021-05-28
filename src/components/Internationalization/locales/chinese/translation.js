@@ -57,7 +57,7 @@ let Chinese = {
         "TECHNOLOGY": "技术方面",
         "ECOSYSTEMS": "Ecosystem",
         "INTER_NFT": "interNFT",
-        "XPRT_TOKEN": "xprt token",
+        "XPRT_TOKEN": "XPRT Token",
         "OPEN_APP": "Open app",
         "NFT_TAB_CONTENT": "interNFT 是一个工作组，由主要的可互操作项目和协议组成，为非同质化代币（NFT）和 NFT 元数据建立链间标准。这个开放的合作组织是由 Interchain 基金会发起的，并由 Persistence 与 ixo 共同推动.",
         "STAKEDROP_TAB_CONTENT": "一个以社区为中心的活动，旨在促进 XPRT 代币在熟悉质押 PoS 代币的持有者之间的广泛分配，从而在 Persistence 主网上线后加速其去中心化。XPRT 代币总供应量的 1% 已通过 StakeDrop 分发。.",

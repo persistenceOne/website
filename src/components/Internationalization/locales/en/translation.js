@@ -58,7 +58,7 @@ let English = {
         "TECHNOLOGY": "Technology",
         "ECOSYSTEMS": "Ecosystem",
         "INTER_NFT": "interNFT",
-        "XPRT_TOKEN": "xprt token",
+        "XPRT_TOKEN": "XPRT Token",
         "OPEN_APP": "Open app",
         "NFT_TAB_CONTENT": "interNFT is a working group consisting of the leading interoperable projects and protocols building inter-chain standards for Non-Fungible Tokens and Metadata.",
         "STAKEDROP_TAB_CONTENT": "A community-focused initiative designed to facilitate the wide distribution of XPRT tokens among PoS token holders familiar with staking, thus accelerating the decentralisation of the Persistence mainnet once live.",
@@ -73,6 +73,7 @@ let English = {
         "PERSISTENCE": "Persistence",
         //about
         "MISSION_BANNER_HEADING": "Mission & Vision",
+        "MISSION_BANNER_TEXT3":"Persistence is an interoperable protocol built to facilitate the creation of next-gen financial products. The Persistence tech stack provides the infrastructure to effectively bridge the realms of DeFi and traditional finance in a variety of areas, whilst also enabling the creation of innovative crypto-facing solutions to expand the DeFi and NFT sectors.",
         "MISSION_BANNER_TEXT1": "The Internet disintermediated the Media & Communications industry. Using HTTP, SMTP and TCP/IP as the foundational layers, the cost of information exchange was significantly lowered.",
         "MISSION_BANNER_TEXT2": "Persistence is leveraging blockchain technology to facilitate seamless asset exchange. Using Web 3.0 protocols, Persistence aims to enable and create a suite of bleeding edge financial products in niches ranging from staking-as-a-service and tokenized ‘real-world’ debt to digital art.",
         "MISSION_BANNER_QUOTE1": "Data flows like water today.",
