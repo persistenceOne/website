@@ -3,6 +3,7 @@ import icon from '../../../assets/images1/footer_logo.svg'
 import whitepaper from '../../../assets/images1/whitepaper.pdf'
 import Mailchimp from "./MailChimp";
 import {Link} from 'react-router-dom';
+import ReactGa from 'react-ga';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 import Icon from "../../Icon";
 import Scroll from 'react-scroll';
@@ -52,6 +53,13 @@ const Footer = (props) => {
     const scrollTop = () =>{
         scroll.scrollToTop();
     };
+    const socialIcon = (iconName) => {
+        ReactGa.event({
+            category:'Sociallinks',
+            action: 'Clicked on ' + iconName
+        })
+       
+    }
 
     return (
         <>
@@ -113,7 +121,9 @@ const Footer = (props) => {
                                         <ul className="list-unstyled footer-list">
                                             {
                                                 socialList.map((item, index) => (
-                                                    <OverlayTrigger
+                                                    <OverlayTrigger 
+                                                     
+                                                       
                                                         key={item.iconName}
                                                         placement="bottom"
                                                         overlay={
@@ -122,7 +132,7 @@ const Footer = (props) => {
                                                             </Tooltip>
                                                         }
                                                     >
-                                                        <a href={item.url} rel="noopener noreferrer"
+                                                        <a href={item.url}  onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
                                                            target="_blank"><Icon viewClass="social_icon_imgg"
                                                                                  icon={item.iconName}/></a>
                                                     </OverlayTrigger>

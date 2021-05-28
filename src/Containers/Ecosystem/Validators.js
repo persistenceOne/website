@@ -8,7 +8,7 @@ import huboipool from "../../assets/images1/backers/validators/svg/Houbi_Pool10.
 import everstake from "../../assets/images1/backers/validators/svg/everstake.svg";
 import Band_Protoocol from "../../assets/images1/backers/validators/svg/Band_Protoocol.svg";
 import KalpaTech from "../../assets/images1/backers/validators/svg/KalpaTech.svg";
-import Ascendex from "../../assets/images1/backers/validators/svg/Ascendex.svg";
+import Chorus from "../../assets/images1/backers/validators/chorus.png";
 import DSRV from "../../assets/images1/backers/validators/svg/DSRV.svg";
 import sg1 from "../../assets/images1/backers/validators/svg/sg1.svg";
 
@@ -39,7 +39,7 @@ const Validators = () => {
                     <a href="https://kalpatech.co/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={KalpaTech} alt="KalpaTech" /></a>
                    </div>
                     <div className="common-row third-row">
-                    <a href="https://bitmax.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Ascendex} alt="Ascendex" /></a>
+                    <a href="https://chorus.one/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={Chorus} alt="Chorus" /></a>
                     <a href="https://www.dsrvlabs.com/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={DSRV} alt="DSRV" /></a>
                     <a href="https://sg-1.online/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={sg1} alt="sg1" /></a>
                     <a href="https://www.stakewith.us/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={StakeWithUs} alt="StakeWithUs" /></a>

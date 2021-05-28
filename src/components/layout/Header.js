@@ -3,6 +3,7 @@ import {NavLink, withRouter, useHistory} from 'react-router-dom';
 import logo from '../../assets/images1/logo.png'
 import {Nav} from "react-bootstrap";
 import Icon from "../Icon";
+import ReactGa from 'react-ga';
 import Alert from 'react-bootstrap/Alert'
 import rightarrow from '../../assets/images1/right-arrow.svg'
 import dropdown_asset from "../../assets/images1/dropdown_asset.svg"
@@ -21,7 +22,9 @@ const Header = () => {
     const [productActiveTab, setProductActiveTab] = useState('comdex-tab');
     const {t, i18n} = useTranslation();
     const [language, setLanguage] = useState('English');
+   
     useEffect(() => {
+       
         document.addEventListener('scroll', () => {
             var scrolled = document.scrollingElement.scrollTop;
             if (scrolled > 100) {
@@ -66,6 +69,29 @@ const Header = () => {
             }
         }
     };
+   const onClickTopBar = () => {
+        ReactGa.event({
+            category:'TOP BAR',
+            action: 'Clicked on Topbar'
+        })
+        
+    }
+    
+    const onClickWallet = () => {
+        ReactGa.event({
+            category:'External Link',
+            action: 'Clicked on Wallet'
+        })
+        
+    }
+
+    const onClickExplorer = () => {
+        ReactGa.event({
+            category:'External Link',
+            action: 'Clicked on Explorer'
+        })
+        
+    }
 
     const onHoverProducts = (id) => {
 
@@ -85,6 +111,7 @@ const Header = () => {
         }
     };
     const setActiveTab = (route) => {
+        console.log(route,'route')
         setIsOPen(!isOpen);
         if (document.getElementById('nab-bar-toggle').classList.contains('collapsed')) {
             document.getElementById('nab-bar-toggle').classList.remove('collapsed');
@@ -109,6 +136,7 @@ const Header = () => {
             }
         }
     };
+   
     const handleLanguage = (type) => {
         localStorage.setItem("language", type);
         const languageType = localStorage.getItem('language');
@@ -130,7 +158,7 @@ const Header = () => {
                                     <p>
                                         <a href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt" rel="noopener noreferrer"
                                            target="_blank">
-                                            <span>XPRT listed on AscendEX on April 1. Buy Now </span>&emsp;
+                                            <span onClick={onClickTopBar}>XPRT listed on AscendEX on April 1. Buy Now </span>&emsp;
                                             <img src={rightarrow} alt="arrow"/></a>
                                     </p>
                                 </Alert>
@@ -348,7 +376,7 @@ const Header = () => {
                                                 <div className="item stake-drop" id="stake-drop-tab">
                                                     <p>{t("STAKEDROP_TAB_CONTENT")}
                                                     </p>
-                                                    <a href="/stakedrop" rel="noopener noreferrer"
+                                                    <a href="/stakedrop"  rel="noopener noreferrer"
                                                        target="_blank"
                                                        className="button">{t("OPEN_APP")}</a>
                                                 </div>
@@ -375,10 +403,10 @@ const Header = () => {
                                     </div>
                                 </li>
                                 <li className="nav-item wallet-button">
-                                    <a href="https://wallet.persistence.one/" rel="noopener noreferrer" target="_blank" className="button-primary button">Wallet</a>
+                                    <a href="https://wallet.persistence.one/" onClick={onClickWallet}rel="noopener noreferrer" target="_blank" className="button-primary button">Wallet</a>
                                 </li>
                                 <li className="nav-item wallet-button">
-                                    <a href={`${explorerURL}`} rel="noopener noreferrer" target="_blank" className="button-primary button">Explorer</a>
+                                    <a href={`${explorerURL}`} onClick={onClickExplorer}rel="noopener noreferrer" target="_blank" className="button-primary button">Explorer</a>
                                 </li>
                                 <li className="nav-item dropdown company language-dropdown">
                                     <p className="nav-link dropdown-toggle"
