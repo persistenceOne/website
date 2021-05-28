@@ -58,7 +58,7 @@ let Korean = {
         "TECHNOLOGY": "기술",
         "ECOSYSTEMS": "생태계",
         "INTER_NFT": "interNFT",
-        "XPRT_TOKEN": "xprt token",
+        "XPRT_TOKEN": "XPRT Token",
         "OPEN_APP": "Open app",
         "NFT_TAB_CONTENT": "interNFT is a working group consisting of the leading interoperable projects and protocols building inter-chain standards for Non-Fungible Tokens and Metadata.",
         "STAKEDROP_TAB_CONTENT": "A community-focused initiative designed to facilitate the wide distribution of XPRT tokens among PoS token holders familiar with staking, thus accelerating the decentralisation of the Persistence mainnet once live.",

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import threecommas from '../assets/images1/backers/venture/three-commas.png';
 import alamedaresearch from '../assets/images1/backers/alameda-research.svg';
 import arrington from '../assets/images1/backers/venture/arrington.png';
-import au21 from '../assets/images1/backers/venture/au21.png';
-import ngcventures from '../assets/images1/backers/venture/ngcventures.png';
+import ledgerprime from '../assets/images1/backers/ledgerprime.png';
 import dokia from '../assets/images1/backers/validators/dokiacapital.png';
 import Cosmostation from '../assets/images1/backers/validators/Cosmostation.png';
 import stakefish from '../assets/images1/backers/validators/stakefish.png';
@@ -18,12 +16,11 @@ import StakeWithUs from '../assets/images1/backers/validators/StakeWithUs.png';
 import p2p_logo from '../assets/images1/backers/validators/p2p.png';
 import CertusOne from '../assets/images1/backers/validators/CertusOne.png';
 import HashQuark from '../assets/images1/backers/validators/HashQuark.png';
-import incrypt from '../assets/images1/backers/venture/incrypt.png';
 import iosg from '../assets/images1/backers/venture/iosg.png';
 import lunex from '../assets/images1/backers/venture/lunex.png';
 import Spark from '../assets/images1/backers/venture/spark.png';
 import terra from '../assets/images1/backers/terra.svg';
-import woodstock from '../assets/images1/backers/venture/woodstock.png';
+import tendermintventures from '../assets/images1/backers/tendermintventures.png';
 import icf from '../assets/images1/backers/ICF.svg';
 import huobipool from '../assets/images1/backers/validators/svg/Houbi_Pool10.svg';
 import bandprotocol from '../assets/images1/backers/validators/svg/Band_Protoocol.svg';
@@ -47,6 +44,8 @@ const BackersTabs = () => {
             <div className="common-row first-row">
                <a href="https://terra.money/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={terra} alt="Terra" /></a>
+                  <a href="https://tendermint.com/ventures/" className="reveal-scale-up" target="_blank"
+                  rel="noopener noreferrer"><img className="logo-img" src={tendermintventures} alt="Tendermint Ventures" /></a>
                <a href="https://interchain.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={icf} alt="ICF" /></a>
                <a href="https://www.alameda-research.com/" className="reveal-scale-up" target="_blank"
@@ -55,26 +54,19 @@ const BackersTabs = () => {
                   rel="noopener noreferrer"><img className="logo-img" src={arrington} alt="Arrington" /></a>
             </div>
             <div className="common-row second-row">
+            <a href="https://iosg.vc/#/" className="reveal-scale-up" target="_blank"
+                  rel="noopener noreferrer"><img className="logo-img" src={iosg} alt="IOSG" /></a>
                <a href="https://lunex.vc/" target="_blank" className="reveal-scale-up"
                   rel="noopener noreferrer"><img className="logo-img" src={lunex} alt="LuneX" /></a>
 
-               <a href="https://au21.capital/portfolio" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={au21} alt="Au21" /></a>
+              
                <a href="https://www.sparkdigitalcapital.com/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={Spark} alt="Spark" /></a>
-               <a href="https://woodstockfund.com/#portfolio" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={woodstock} alt="Woodstock" /></a>
+                   <a href="https://www.ledgerprime.com/#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
+                  className="logo-img" src={ledgerprime} alt="Ledgerprime" /></a>
+            
             </div>
-            <div className="common-row second-row"> 
-            <a href="https://www.ngc.fund/portfolio" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={ngcventures} alt="NGC Ventures" /></a>
-               <a href="https://iosg.vc/#/" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={iosg} alt="IOSG" /></a>
-               <a href="https://3commas.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
-                  className="logo-img" src={threecommas} alt="3commas" /></a>
-               <a href="https://www.incrypt.co/portfolio" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={incrypt} alt="Incrypt" /></a>
-            </div>
+            
          </Tab>
          <Tab eventKey="validators" title={t("VALIDATORS")}>
             <div className="common-row first-row">
@@ -102,6 +94,7 @@ const BackersTabs = () => {
                   rel="noopener noreferrer"><img className="logo-img" src={p2p_logo} alt="P2P" /></a>
                   <a href="https://everstake.one/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={everstake} alt="Everstake" /></a>
+                  
              
               
             </div>
@@ -127,6 +120,7 @@ const BackersTabs = () => {
                   rel="noopener noreferrer"><img className="logo-img" src={Iqlusion} alt="Iqlusion" /></a>
                <a href="https://certus.one/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={CertusOne} alt="CertusOne" /></a>
+                   
                
             </div>
 
