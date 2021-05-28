@@ -9,7 +9,7 @@ const Banner = () => {
         <section className="vision-banner-section" data-aos="fade-up">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-8 content">
+                    <div className="col-md-9 content">
                         <h3 className="heading">{t("MISSION_BANNER_HEADING")}</h3>
                         <p>{t("MISSION_BANNER_TEXT3")}</p>
                         <p>{t("MISSION_BANNER_TEXT1")}</p>
@@ -21,7 +21,7 @@ const Banner = () => {
                             <img src={curved_line} alt="curved_line"/>
                         </div>
                     </div>
-                    <div className="col-md-4 image-section text-right">
+                    <div className="col-md-3 image-section text-right">
                         <img src={visionbg} alt="visionbg"/>
                     </div>
                 </div>

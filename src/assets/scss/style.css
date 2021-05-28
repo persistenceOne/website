@@ -2112,7 +2112,7 @@ button:disabled {
 
 .vision-banner-section .content {
   padding-top: 170px;
-  padding-right: 80px;
+  padding-right: 0px;
 }
 
 .vision-banner-section .heading {
@@ -2155,7 +2155,7 @@ button:disabled {
 }
 
 .vision-banner-section .image-section {
-  padding-top: 50px;
+  padding-top: 170px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
