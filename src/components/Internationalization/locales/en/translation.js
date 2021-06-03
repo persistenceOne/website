@@ -304,6 +304,8 @@ let English = {
         "2021_Q2_8":"SDK release v2.0",
         "2021_Q2_9":"Validator Set Expansion",
         "2021_Q2_10":"Extend Partnerships with Other Projects",
+        "2021_02_11":"Enable IBC transactions",
+        "2021_02_12":"pBridge Launch",
         "2021_Q3_1":"Asset Mantle (NFT Marketplace) to be launched",
         "2021_Q3_2":"Wallet and Block explorer integrations",
         "2021_Q3_3":"Integration with Other Protocols and Chains through Interchain Communication Protocols",
@@ -314,11 +316,14 @@ let English = {
         "2021_Q3_8":"Comdex Mainnet Launch",
         "2021_Q3_9":"AUDIT.one Staking interface to be launched",
         "2021_Q3_10":"Core-2 Mainnet Launch",
+        "2021_03_11": "Asset Mantle MVP launch",
+        "2021_03_12": "Extend support for liquid staking for PoS networks with pStake",
         "2022_Q1_1":"pLend to be launched",
         "2022_Q1_2":"Expansion of Wallet Integrations and Block Explorers",
         "2022_Q1_3":"Expansion of Exchange Listings",
-        "2022_Q1_4":"SDK release v3",
+        "2022_Q1_4":"SDK release v2.0",
         "2022_Q1_5":"pStake v2 to be launched",
+        "2021_01_6": "Asset Mantle launch",
 
 
 
