@@ -288,46 +288,7 @@ const Info = () => {
                                         <div className="event">
                                             <img className="event-status-img" src={event_complete} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q1_11")} <span>{t("CORE")}</span></p>
-                                        </div>
-
-{/* 
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q1_2")} <span>{t("CORE")}</span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q1_3")} <span>{t("ECOSYSTEM")}</span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q1_4")} <span>{t("ECOSYSTEM")}</span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q1_7")} <span>{t("CORE")}</span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q1_8")} <span>{t("DAPP")}</span></p>
-                                        </div>
-                                      
-                                      
-
-                                       
-                                       
-                                      
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q1_16")} <span>{t("CORE")}</span></p>
-                                        </div>
-                                        <div className="event">
-                                            <img className="event-status-img" src={event_complete} alt="establish-img"/>
-                                            <p className="event-name">{t("2021_Q1_12")}</p>
-                                        </div> */}
-
-                                       
-                                       
+                                        </div>  
                                     </div>
                                 </div>
                                 <div className="quater-section">
@@ -373,8 +334,6 @@ const Info = () => {
                                         <h3 className="quater-text">Q3</h3>
                                     </div>
                                     <div className="eventes">
-
-                                       
                                         <div className="event">
                                             <img className="event-status-img" src={event_pending} alt="establish-img"/>
                                             <p className="event-name">{t("2021_Q3_2")}<span>{t("ECOSYSTEM")}</span></p>
@@ -443,11 +402,6 @@ const Info = () => {
                                                  alt="event_complete-img"/>
                                             <p className="event-name">{t("2021_01_6")} <span>{t("DAPP")}</span></p>
                                         </div>
-                                       
-                                       
-                                       
-                                        
-                                       
                                     </div>
                                 </div>
                             </div>
