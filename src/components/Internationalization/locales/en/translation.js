@@ -54,7 +54,7 @@ let English = {
         "AUDIT_TAB_CONTENT": "Staking-as-a-Service solution for proof-of-stake networks. For institutional assets managers looking to generate fixed income returns from Staking-as-an-AssetClass, AUDIT.one provides whitelabeling solutions for hardware and software.",
         "PSTAKE_TAB_CONTENT": "Liquid staking application to unlock liquidity of staked assets allowing stakers to generate higher returns on their staked assets.",
         "MANTLE_TAB_CONTENT": "Application implementing the minimum clique of PersistenceSDK modules enabling interchain NFT definition, issuance, ownership transfer and decentralized exchange.",
-        "PLEND_TAB_CONTENT": "Debt Financing dApp",
+        "PLEND_TAB_CONTENT": "Debt financing application allowing stablecoin holders to participate in the global trade financing industry.",
         "TECHNOLOGY": "Technology",
         "ECOSYSTEMS": "Ecosystem",
         "INTER_NFT": "interNFT",
@@ -67,7 +67,7 @@ let English = {
         //Footer
         "PROTOCOL_PAPER": "Protocol Paper",
         "GET_IN_TOUCH": "Get in touch",
-        "SUBSCRIBE_HEADING": "Subscribe to newsletter",
+        "SUBSCRIBE_HEADING": "Subscribe to our newsletter",
         "SUBSCRIBE_NOTE": "Want to receive the latest updates?",
         "FOLLOW_US": "Follow us on",
         "PERSISTENCE": "Persistence",
