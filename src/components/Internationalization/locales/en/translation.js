@@ -54,7 +54,7 @@ let English = {
         "AUDIT_TAB_CONTENT": "Staking-as-a-Service solution for proof-of-stake networks. For institutional assets managers looking to generate fixed income returns from Staking-as-an-AssetClass, AUDIT.one provides whitelabeling solutions for hardware and software.",
         "PSTAKE_TAB_CONTENT": "Liquid staking application to unlock liquidity of staked assets allowing stakers to generate higher returns on their staked assets.",
         "MANTLE_TAB_CONTENT": "Application implementing the minimum clique of PersistenceSDK modules enabling interchain NFT definition, issuance, ownership transfer and decentralized exchange.",
-        "PLEND_TAB_CONTENT": "Debt Financing dApp",
+        "PLEND_TAB_CONTENT": "Debt financing application allowing stablecoin holders to participate in the global trade financing industry.",
         "TECHNOLOGY": "Technology",
         "ECOSYSTEMS": "Ecosystem",
         "INTER_NFT": "interNFT",
@@ -67,7 +67,7 @@ let English = {
         //Footer
         "PROTOCOL_PAPER": "Protocol Paper",
         "GET_IN_TOUCH": "Get in touch",
-        "SUBSCRIBE_HEADING": "Subscribe to newsletter",
+        "SUBSCRIBE_HEADING": "Subscribe to our newsletter",
         "SUBSCRIBE_NOTE": "Want to receive the latest updates?",
         "FOLLOW_US": "Follow us on",
         "PERSISTENCE": "Persistence",
@@ -304,6 +304,8 @@ let English = {
         "2021_Q2_8":"SDK release v2.0",
         "2021_Q2_9":"Validator Set Expansion",
         "2021_Q2_10":"Extend Partnerships with Other Projects",
+        "2021_02_11":"Enable IBC transactions",
+        "2021_02_12":"pBridge Launch",
         "2021_Q3_1":"Asset Mantle (NFT Marketplace) to be launched",
         "2021_Q3_2":"Wallet and Block explorer integrations",
         "2021_Q3_3":"Integration with Other Protocols and Chains through Interchain Communication Protocols",
@@ -314,11 +316,14 @@ let English = {
         "2021_Q3_8":"Comdex Mainnet Launch",
         "2021_Q3_9":"AUDIT.one Staking interface to be launched",
         "2021_Q3_10":"Core-2 Mainnet Launch",
+        "2021_03_11": "Asset Mantle MVP launch",
+        "2021_03_12": "Extend support for liquid staking for PoS networks with pStake",
         "2022_Q1_1":"pLend to be launched",
         "2022_Q1_2":"Expansion of Wallet Integrations and Block Explorers",
         "2022_Q1_3":"Expansion of Exchange Listings",
-        "2022_Q1_4":"SDK release v3",
+        "2022_Q1_4":"SDK release v2.0",
         "2022_Q1_5":"pStake v2 to be launched",
+        "2021_01_6": "Asset Mantle launch",
 
 
 

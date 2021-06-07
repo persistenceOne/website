@@ -53,7 +53,7 @@ let Chinese = {
         "AUDIT_TAB_CONTENT": "质押即服务解决方案，适用于 PoS 网络。AUDIT.one 为机构资产管理人提供了硬件和软件的一站式解决方案，帮助他们从质押资产中获得固定收益.",
         "PSTAKE_TAB_CONTENT": "流动性质押应用，为质押资产释放流动性，让质押者提高质押资产的收益率.",
         "MANTLE_TAB_CONTENT": "实现 PersistenceSDK 模块最小群组的应用，可以实现链间 NFT 的定义、发行、所有权转移和去中心化交易.",
-        "PLEND_TAB_CONTENT": "Debt Financing dApp",
+        "PLEND_TAB_CONTENT": "Debt financing application allowing stablecoin holders to participate in the global trade financing industry.",
         "TECHNOLOGY": "技术方面",
         "ECOSYSTEMS": "Ecosystem",
         "INTER_NFT": "interNFT",
@@ -66,7 +66,7 @@ let Chinese = {
         //Footer
         "PROTOCOL_PAPER": "协议信息",
         "GET_IN_TOUCH": "Get in touch",
-        "SUBSCRIBE_HEADING": "Subscribe to newsletter",
+        "SUBSCRIBE_HEADING": "Subscribe to our newsletter",
         "SUBSCRIBE_NOTE": "想收到最新的更新？[订阅]",
         "FOLLOW_US": "Follow us on",
         "PERSISTENCE": "Persistence",

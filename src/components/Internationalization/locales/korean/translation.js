@@ -54,7 +54,7 @@ let Korean = {
         "AUDIT_TAB_CONTENT": "Staking-as-a-Service solution for proof-of-stake networks. For institutional assets managers looking to generate fixed income returns from Staking-as-an-AssetClass, AUDIT.one provides whitelabeling solutions for hardware and software.",
         "PSTAKE_TAB_CONTENT": "Liquid staking application to unlock liquidity of staked assets allowing stakers to generate higher returns on their staked assets.",
         "MANTLE_TAB_CONTENT": "Application implementing the minimum clique of PersistenceSDK modules enabling interchain NFT definition, issuance, ownership transfer and decentralized exchange.",
-        "PLEND_TAB_CONTENT": "Debt Financing dApp",
+        "PLEND_TAB_CONTENT": "Debt financing application allowing stablecoin holders to participate in the global trade financing industry.",
         "TECHNOLOGY": "기술",
         "ECOSYSTEMS": "생태계",
         "INTER_NFT": "interNFT",
@@ -67,7 +67,7 @@ let Korean = {
         //Footer
         "PROTOCOL_PAPER": "프로토콜 페이퍼",
         "GET_IN_TOUCH": "Get in touch",
-        "SUBSCRIBE_HEADING": "Subscribe to newsletter",
+        "SUBSCRIBE_HEADING": "Subscribe to our newsletter",
         "SUBSCRIBE_NOTE": "최신 소식을 받아 보시려면? [구독]",
         "FOLLOW_US": "Follow us on",
         "PERSISTENCE": "Persistence",
