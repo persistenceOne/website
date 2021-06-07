@@ -21,6 +21,7 @@ import lunex from '../assets/images1/backers/venture/lunex.png';
 import Spark from '../assets/images1/backers/venture/spark.png';
 import terra from '../assets/images1/backers/terra.svg';
 import tendermintventures from '../assets/images1/backers/tendermintventures.png';
+import citadel from '../assets/images1/backers/validators/citadel.png';
 import icf from '../assets/images1/backers/ICF.svg';
 import huobipool from '../assets/images1/backers/validators/svg/Houbi_Pool10.svg';
 import bandprotocol from '../assets/images1/backers/validators/svg/Band_Protoocol.svg';
@@ -43,29 +44,27 @@ const BackersTabs = () => {
             <div className="common-row first-row">
                <a href="https://terra.money/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={terra} alt="Terra" /></a>
-                  <a href="https://tendermint.com/ventures/" className="reveal-scale-up" target="_blank"
+               <a href="https://tendermint.com/ventures/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={tendermintventures} alt="Tendermint Ventures" /></a>
                <a href="https://interchain.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={icf} alt="ICF" /></a>
                <a href="https://www.alameda-research.com/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={alamedaresearch} alt="Alameda" /></a>
-                    <a href="http://arringtonxrpcapital.com/companies/" className="reveal-scale-up" target="_blank"
+               <a href="http://arringtonxrpcapital.com/companies/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={arrington} alt="Arrington" /></a>
             </div>
             <div className="common-row second-row">
-            <a href="https://iosg.vc/#/" className="reveal-scale-up" target="_blank"
+               <a href="https://iosg.vc/#/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={iosg} alt="IOSG" /></a>
                <a href="https://lunex.vc/" target="_blank" className="reveal-scale-up"
                   rel="noopener noreferrer"><img className="logo-img" src={lunex} alt="LuneX" /></a>
-
-              
                <a href="https://www.sparkdigitalcapital.com/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={Spark} alt="Spark" /></a>
-                   <a href="https://www.ledgerprime.com/#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
+               <a href="https://www.ledgerprime.com/#" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={ledgerprime} alt="Ledgerprime" /></a>
-            
+
             </div>
-            
+
          </Tab>
          <Tab eventKey="validators" title={t("VALIDATORS")}>
             <div className="common-row first-row">
@@ -73,52 +72,44 @@ const BackersTabs = () => {
                   rel="noopener noreferrer"><img className="logo-img" src={dokia} alt="Dokia" /></a>
                <a href="https://www.cosmostation.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={Cosmostation} alt="Cosmostation" /></a>
-              
                <a href="https://stake.fish/en/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={stakefish} alt="Stakefish" /></a>
-              
-                   <a href="https://bandprotocol.com/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
+               <a href="https://bandprotocol.com/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={bandprotocol} alt="Bandprotocol" /></a>
-                   <a href="https://figment.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
+               <a href="https://figment.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={FigmentNetworks} alt="FigmentNetworks" /></a>
             </div>
             <div className="common-row second-row">
-                <a href="https://sg-1.online/" className="reveal-scale-up" target="_blank"
+               <a href="https://sg-1.online/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={sg1} alt="sg1" /></a>
                <a href="https://www.huobipool.com/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={huobipool} alt="huobipool" /></a>
-                     <a href="https://www.stakewith.us/" className="reveal-scale-up" target="_blank"
+               <a href="https://www.stakewith.us/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={StakeWithUs} alt="StakeWithUs" /></a>
-                   <a href="https://p2p.org/" className="reveal-scale-up" target="_blank"
+               <a href="https://p2p.org/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={p2p_logo} alt="P2P" /></a>
-                  <a href="https://everstake.one/" className="reveal-scale-up" target="_blank"
+               <a href="https://everstake.one/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={everstake} alt="Everstake" /></a>
-                  
-             
-              
             </div>
             <div className="common-row third-row">
-            <a href="https://www.dsrvlabs.com/" className="reveal-scale-up" target="_blank"
+               <a href="https://www.dsrvlabs.com/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={DSRV} alt="DSRV" /></a>
-                  <a href="https://www.hashquark.io/" className="reveal-scale-up" target="_blank"
+               <a href="https://www.hashquark.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={HashQuark} alt="HashQuark" /></a>
-                     <a href="https://kalpatech.co/" className="reveal-scale-up" target="_blank"
+               <a href="https://kalpatech.co/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={kalpatech} alt="Kalpatech" /></a>
-      
-               
+               <a href="https://chorus.one" className="reveal-scale-up" target="_blank"
+                  rel="noopener noreferrer"><img className="logo-img" src={Chorus} alt="Chorus" /></a>
             </div>
             <div className="common-row third-row">
-            
-            <a href="https://bharvest.io/" className="reveal-scale-up" target="_blank"
+               <a href="https://bharvest.io/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={BHarvest} alt="BHarvest" /></a>
                <a href="https://www.sikka.tech/" className="reveal-scale-up" target="_blank"
                   rel="noopener noreferrer"><img className="logo-img" src={sikka} alt="sikka" /></a>
-               <a href="https://chorus.one" className="reveal-scale-up" target="_blank"
-                  rel="noopener noreferrer"><img className="logo-img" src={Chorus} alt="Chorus" /></a>
                <a href="https://certus.one/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img
                   className="logo-img" src={CertusOne} alt="CertusOne" /></a>
-                   
-               
+               <a href="https://citadel.one/" className="reveal-scale-up" target="_blank"
+                  rel="noopener noreferrer"><img className="logo-img" src={citadel} alt="Citadel" /></a>
             </div>
 
          </Tab>
