@@ -11,6 +11,10 @@ import { getCalculateMatic, getMaticStatusURL } from "../../constants/url";
 import copy from '../../assets/images1/copy.svg'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import MaticWallets from './maticWallet'
+import {getContractInstance} from "../../actions/utils";
+import { checkbech32 } from "../../actions/bech32Validation"
+import Web3 from "web3";
+
 class MaticStakedrop extends Component {
 
     constructor(props, context) {
@@ -41,7 +45,8 @@ class MaticStakedrop extends Component {
             showMagicTxnClieModel: false,
             totalDistributedInt: 0,
             account: '',
-            metamaskShow: false
+            metamaskShow: false,
+            metamaskAccount: ''
            
             
         }
@@ -89,19 +94,20 @@ class MaticStakedrop extends Component {
     };
     
     componentDidMount = () => {
-      
+        this.loadBlockChain();
+
         const checkConnection = (cb) => {
             if( window.ethereum && window.ethereum.isMetaMask) {
                 cb(null)
              } else {
                  this.setState({metamaskShow: true});
-             }   
+             }
         };
         checkConnection((err) => {
             if(err) {
                 console.log(err)
                 return
-            } 
+            }
             console.log()
             window.ethereum.request({ method: 'eth_requestAccounts' })
             .then((addr) => {
@@ -194,18 +200,45 @@ class MaticStakedrop extends Component {
             this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2) })
         }
     }
-    rewardStakingAddress = e => {
+
+    async loadBlockChain() {
+        const web3 = new Web3(Web3.givenProvider)
+        const network = await web3.eth.net.getNetworkType();
+        console.log(network) // should give you main if you're connected to the main network via metamask...
+        const accounts = await web3.eth.getAccounts()
+        this.setState({metamaskAccount: accounts[0]})
+    }
+
+    rewardStakingAddress = async e => {
         e.preventDefault();
         const calAddress = e.target.xprtAddress.value;
         console.log(calAddress, 'calAddress')
-        var addressPrefix = calAddress.startsWith("persistence");
-        if (addressPrefix === true && calAddress.length === 50) {
+        console.log(this.props.address, ' this.props.address')
+        let checkBech32 = checkbech32(calAddress);
+        if (checkBech32) {
 
+            const stakeDrop3 = await getContractInstance("StakeDrop3");
+            await stakeDrop3.methods
+                .MagicTx(calAddress)
+                .send({
+                    from: this.state.metamaskAccount,
+                    gas: 100000,
+                })
+                .on("transactionHash", (receipt) => {
+                    console.log(receipt, "  receipt");
+                })
+                .then((response) => {
+                    this.setState({ tcShow: true });
+                    console.log(response, "completed");
+                })
+                .catch((e) => {
+                    console.log("Exception occured: ", e)
+                });
 
-        } else {
+        }else{
             this.setState({ errorxprtAddress: true })
         }
-        this.setState({ tcShow: true });
+
     }
     handleCalculate = e => {
         function numberWithCommas(x) {
