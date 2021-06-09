@@ -8,7 +8,6 @@ import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { getCalculateMatic, getMaticStatusURL } from "../../constants/url";
-import docTerms from '../../assets/images1/stakedrop/PersistenceT&C.pdf'
 import copy from '../../assets/images1/copy.svg'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import MaticWallets from './maticWallet'
@@ -35,6 +34,7 @@ class MaticStakedrop extends Component {
             errorAddress: false,
             copied: false,
             copyValue: false,
+            errorxprtAddress: false,
             notParticipantAddress: false,
             showDelegateModal: false,
             showDelegateCliModal: false,
@@ -168,7 +168,19 @@ class MaticStakedrop extends Component {
             this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2) })
         }
     }
+    rewardStakingAddress = e => {
+        e.preventDefault();
+        const calAddress = e.target.xprtAddress.value;
+        console.log(calAddress,'calAddress')
+        var addressPrefix = calAddress.startsWith("persistence");
+        if (addressPrefix === true && calAddress.length === 50) {
 
+
+        } else {
+            this.setState({ errorxprtAddress: true })
+        }
+        this.setState({ tcShow: true });
+    }
     handleCalculate = e => {
         function numberWithCommas(x) {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -286,6 +298,72 @@ class MaticStakedrop extends Component {
                                 <div className="col-lg-8 staking-second-section">
                                     <div className="col-lg-12 matic-tutorial-section">
                                         <p className="">Matic StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
+                                    </div>
+                                    <div className="col-lg-12 stakerow">
+                                        <div className="col-lg-12  header-section">
+                                            <h5 className="heading-participate">Provide Persistence Address for Rewards</h5>
+                                        </div>
+                                        <div className="body-section">
+                                        <h6 className="note-text mt-4"><span>Note:</span> Submit your Persistence Address (XPRT) and Staking Address (ETH) you used for MATIC Staking, to receive XPRT StakeDrop</h6>
+
+                                            <form onSubmit={this.rewardStakingAddress}>
+                                                <div className="inputstaking">
+                                                    <h5>Persistence Address</h5>
+                                                    <input
+                                                        type="text"
+                                                        name="xprtAddress"
+                                                        id="xprtAddress"
+                                                        value={this.state.xprtAddress}
+                                                        onChange={this.handlexprtAddressChange}
+                                                        placeholder="Enter Address"
+                                                        required
+                                                    />
+                                                    
+                                                </div>
+                                                {this.state.errorxprtAddress ?
+                                                    <h6 className="text-left valid-add">Enter Valid Persistence Address</h6>
+                                                    :
+                                                    ""
+                                                }
+                                                   
+                                                
+                                                <div className="inputstaking">
+                                                    <h5>Staking Address</h5>
+                                                    <input
+                                                        type="text"
+                                                        name="stakingAddress"
+                                                        id="stakingAddress"
+                                                        value={this.state.maticAddress}
+                                                        onChange={this.handleAddressChange}
+                                                        placeholder="--"
+                                                        required
+                                                    />
+                                                </div>
+                                               
+                                                <div className="inputstaking left-align-calculate">
+                                                    <h5>&nbsp;</h5>
+                                                    <div className="btn-calculate mr-2">
+                                                        <button type="submit" className="btn">Submit</button>
+                                                    </div>
+                                                   
+                                                </div>
+                                                {this.state.errorAddress ?
+                                                    <h6 className="valid-add">Enter Valid Address</h6>
+                                                    :
+                                                    ""
+                                                }
+                                                {this.state.notParticipantAddress ?
+                                                    <h6 className="valid-add">Not a StakeDrop participant address, please send the magic transaction</h6>
+                                                    :
+                                                    ""
+                                                }
+
+                                            </form>
+
+                                          
+                                          
+                                        </div>
+
                                     </div>
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
@@ -417,11 +495,11 @@ class MaticStakedrop extends Component {
                         centered
                     >
                         <Modal.Body>
-                            <p className="tc">Accept Stakedrop <a href={docTerms} target="_blank" rel="noopener noreferrer" title="Whitepaper"> Terms & Conditions </a>
+                            <p className="tc">Persistence Address recorded. You will receive the XPRT Rewards if you had participated in the StakeDrop Campaign
                             </p>
                             <div className="button-section">
-                                <button className="btn accept" onClick={this.handleTerms} >Accept</button>
-                                <button className="btn decline" onClick={this.handleCancelTerms} >Decline</button>
+                               
+                                <button className="btn decline" onClick={this.handleCancelTerms} >Ok</button>
                             </div>
                         </Modal.Body>
                     </Modal>

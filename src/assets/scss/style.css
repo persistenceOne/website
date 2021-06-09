@@ -2140,6 +2140,8 @@ button:disabled {
   background-image: url(./../../images1/quote-image.svg);
   background-repeat: no-repeat;
   color: #F5F5F5;
+  display: inline-block;
+  position: relative;
   margin: 0;
 }
 
@@ -4503,6 +4505,12 @@ button:disabled {
   width: auto;
 }
 
+.participate-stakedrop .staking-second-section .stakerow .body-section .note-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #231f20;
+}
+
 .participate-stakedrop .staking-second-section .stakerow .body-section form .valid-add {
   text-align: center;
   position: absolute;
@@ -5738,12 +5746,6 @@ button:disabled {
   }
   .adviser-section .adviser-text {
     padding: 0;
-  }
-}
-
-@media (min-width: 1400px) {
-  .vision-banner-section .content {
-    padding-right: 200px;
   }
 }
 
