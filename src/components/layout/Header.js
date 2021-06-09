@@ -352,7 +352,7 @@ const Header = () => {
                                                             viewClass="arrow-right"
                                                             icon="dropdown-polygon"/>
                                                     </div>
-                                                    {t("VALIDATORS")}
+                                                    {t("HEADVALIDATOR")}
                                                 </NavLink>
                                                 <NavLink className="nav-link dropdown-item primary-medium-color"
                                                          onMouseOver={() => onHover('xprt-tab')}

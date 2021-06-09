@@ -39,7 +39,11 @@ class MaticStakedrop extends Component {
             showDelegateModal: false,
             showDelegateCliModal: false,
             showMagicTxnClieModel: false,
-            totalDistributedInt: 0
+            totalDistributedInt: 0,
+            account: '',
+            metamaskShow: false
+           
+            
         }
         this.handleCalculate = this.handleCalculate.bind(this);
         this.handleOninputChange = this.handleOninputChange.bind(this)
@@ -80,10 +84,32 @@ class MaticStakedrop extends Component {
     };
     handleCancelTerms = () => {
         this.setState({ tcShow: false });
+        this.setState({ metamaskShow: false });
         this.props.history.push('/StakeDropMatic');
     };
-
+    
     componentDidMount = () => {
+      
+        const checkConnection = (cb) => {
+            if( window.ethereum && window.ethereum.isMetaMask) {
+                cb(null)
+             } else {
+                 this.setState({metamaskShow: true});
+             }   
+        };
+        checkConnection((err) => {
+            if(err) {
+                console.log(err)
+                return
+            } 
+            console.log()
+            window.ethereum.request({ method: 'eth_requestAccounts' })
+            .then((addr) => {
+                console.log(addr[0],'address')
+                this.setState({ account: addr[0] })
+            });
+        });
+
         window.scrollTo(0, 0)
         ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getMaticStatusURL();
@@ -171,7 +197,7 @@ class MaticStakedrop extends Component {
     rewardStakingAddress = e => {
         e.preventDefault();
         const calAddress = e.target.xprtAddress.value;
-        console.log(calAddress,'calAddress')
+        console.log(calAddress, 'calAddress')
         var addressPrefix = calAddress.startsWith("persistence");
         if (addressPrefix === true && calAddress.length === 50) {
 
@@ -304,7 +330,7 @@ class MaticStakedrop extends Component {
                                             <h5 className="heading-participate">Provide Persistence Address for Rewards</h5>
                                         </div>
                                         <div className="body-section">
-                                        <h6 className="note-text mt-4"><span>Note:</span> Submit your Persistence Address (XPRT) and Staking Address (ETH) you used for MATIC Staking, to receive XPRT StakeDrop</h6>
+                                            <h6 className="note-text mt-4"><span>Note:</span> Submit your Persistence Address (XPRT) and Staking Address (ETH) you used for MATIC Staking, to receive XPRT StakeDrop</h6>
 
                                             <form onSubmit={this.rewardStakingAddress}>
                                                 <div className="inputstaking">
@@ -318,34 +344,35 @@ class MaticStakedrop extends Component {
                                                         placeholder="Enter Address"
                                                         required
                                                     />
-                                                    
+
                                                 </div>
                                                 {this.state.errorxprtAddress ?
                                                     <h6 className="text-left valid-add">Enter Valid Persistence Address</h6>
                                                     :
                                                     ""
                                                 }
-                                                   
-                                                
+
+
                                                 <div className="inputstaking">
                                                     <h5>Staking Address</h5>
                                                     <input
                                                         type="text"
                                                         name="stakingAddress"
                                                         id="stakingAddress"
-                                                        value={this.state.maticAddress}
+                                                        value={this.state.account}
                                                         onChange={this.handleAddressChange}
                                                         placeholder="--"
                                                         required
+                                                        disabled
                                                     />
                                                 </div>
-                                               
+
                                                 <div className="inputstaking left-align-calculate">
                                                     <h5>&nbsp;</h5>
                                                     <div className="btn-calculate mr-2">
                                                         <button type="submit" className="btn">Submit</button>
                                                     </div>
-                                                   
+
                                                 </div>
                                                 {this.state.errorAddress ?
                                                     <h6 className="valid-add">Enter Valid Address</h6>
@@ -360,8 +387,8 @@ class MaticStakedrop extends Component {
 
                                             </form>
 
-                                          
-                                          
+
+
                                         </div>
 
                                     </div>
@@ -498,7 +525,22 @@ class MaticStakedrop extends Component {
                             <p className="tc">Persistence Address recorded. You will receive the XPRT Rewards if you had participated in the StakeDrop Campaign
                             </p>
                             <div className="button-section">
-                               
+
+                                <button className="btn decline" onClick={this.handleCancelTerms} >Ok</button>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                    <Modal
+                        show={this.state.metamaskShow}
+                        onHide={this.handleClose}
+                        className="accountInfoModel"
+                        centered
+                    >
+                        <Modal.Body>
+                            <p className="tc">Please install metamask
+                            </p>
+                            <div className="button-section">
+
                                 <button className="btn decline" onClick={this.handleCancelTerms} >Ok</button>
                             </div>
                         </Modal.Body>

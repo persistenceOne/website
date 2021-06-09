@@ -40,7 +40,7 @@ let Russian = {
         "BLOGS_SECTION_TITLE": "Featured blogs",
         "ABOUT": "Компания",
         "BLOG1_TEXT": "The Internet disintermediated the media & communications industry. Using HTTP, SMTP, and TCP/IP as the foundational layers, the cost of information exchange was significantly...",
-        "STAKEDROP": "StakeDrop",
+        "STAKEDROP": "STAKEDROP",
         "PATNERSHIP": "Partnership",
         "FUND_RAISE": "Fundraise",
         //Featured on section

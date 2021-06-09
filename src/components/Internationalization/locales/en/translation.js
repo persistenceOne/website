@@ -36,6 +36,7 @@ let English = {
         "BACKER_SECTION_TITLE": "Who’s backing us?",
         "VENTURE_FUNDS": "Venture Funds and Foundations",
         "VALIDATORS": "Validators",
+        "HEADVALIDATOR": "VALITATORS",
         "ECOSYSTEM": "Ecosystem",
         // Featured blogs section
         "BLOGS_SECTION_TITLE": "Featured blogs",
