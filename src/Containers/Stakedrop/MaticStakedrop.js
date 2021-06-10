@@ -51,11 +51,12 @@ class MaticStakedrop extends Component {
             metamaskAccount: '',
             updateAccount: '',
             networkName: ''
-            
+
         }
         this.handleCalculate = this.handleCalculate.bind(this);
         this.handleOninputChange = this.handleOninputChange.bind(this)
         this.metamaskConnect = this.metamaskConnect.bind(this)
+        this.handlexprtAddressChange = this.handlexprtAddressChange.bind(this)
     }
     onCopy = () => {
         this.setState({ copyValue: true })
@@ -120,51 +121,33 @@ class MaticStakedrop extends Component {
                 });
         });
     }
-    
+
     componentDidMount = () => {
-        
-        const checkConnection = (cb) => {
-            if (window.ethereum && window.ethereum.isMetaMask) {
-                cb(null)
-            } else {
-                this.setState({ metamaskShow: true });
-                this.setState({ disableBtn: true });
-                
-            }
-        };
-
-        checkConnection((err) => {
-            if (err) {
-                console.log(err)
-                return
-            }
-            console.log()
-
             window.ethereum.request({ method: 'eth_requestAccounts' })
                 .then((addr) => {
                     console.log(addr[0], 'address')
                     this.setState({ account: addr[0] })
                 });
-        });
+     
         window.ethereum.on('accountsChanged', (accounts) => {
             console.log(accounts[0])
             this.setState({ account: accounts[0] })
         });
         window.ethereum.on('chainChanged', (chainId) => {
-            this.setState({networkName:chainId})
-            if(chainId === NETWORK_ID) {
-                this.setState({msgShowAlert: true}) 
+            this.setState({ networkName: chainId })
+            if (chainId === NETWORK_ID) {
+                this.setState({ msgShowAlert: true })
             } else {
-                this.setState({msgShowAlert: false})
+                this.setState({ msgShowAlert: false })
             }
         });
         window.ethereum.request({ method: 'eth_chainId' })
             .then((networkId) => {
                 this.setState({ networkName: networkId })
-                if(networkId === NETWORK_ID) {
-                    this.setState({msgShowAlert: true})
+                if (networkId === NETWORK_ID) {
+                    this.setState({ msgShowAlert: true })
                 } else {
-                    this.setState({msgShowAlert: false})
+                    this.setState({ msgShowAlert: false })
                 }
 
             }).catch((error) => {
@@ -253,7 +236,18 @@ class MaticStakedrop extends Component {
             this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2) })
         }
     }
-
+    handlexprtAddressChange = (event) => {
+        
+       
+          let calAddress =  event.target.value
+        console.log(this.state.calAddress)
+        let checkBech32 = checkbech32(calAddress);
+        if (checkBech32) {
+            this.setState({ errorxprtAddress: false })
+        } else {
+            this.setState({ errorxprtAddress: true })
+        }
+    }
 
     rewardStakingAddress = async e => {
         e.preventDefault();
@@ -269,7 +263,7 @@ class MaticStakedrop extends Component {
                 .MagicTx(calAddress)
                 .send({
                     from: this.state.account,
-                    gas: 100000,
+                    // gas: 100000,
                 })
                 .on("transactionHash", (receipt) => {
                     console.log(receipt, "  receipt");
@@ -402,21 +396,21 @@ class MaticStakedrop extends Component {
                                     <div className="col-lg-12 matic-tutorial-section">
                                         <p className="">Matic StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
                                     </div>
-                                    {!this.state.account ? 
-                                    <div className="col-lg-12 matic-tutorial-section metmask-status">
-                                        <p className="">Connect to Metamask or other Browser Wallet</p>
-                                        <div className="btn-calculate mr-2">
-                                            <button type="submit" disabled={this.state.disableBtn} onClick={this.metamaskConnect} className="btn">  {!this.state.account ? <span>Connect</span> : <span>Connected</span>}</button>
-                                        </div>
-                                    </div> : null }
-                                     {this.state.account ? 
-                                     <>
-                                    {!this.state.msgShowAlert ?
-                                        <h6 className="error valid-add">"Network ID mismatch. Select Ethereum Mainnet in your Metamask / Browser Wallet"</h6>
-                                        : <h6 className="error valid-add green">"Conntected to Browser Wallet"</h6>}  </>
-: null }
+                                    {!this.state.account ?
+                                        <div className="col-lg-12 matic-tutorial-section metmask-status">
+                                            <p className="">Connect to Metamask or other Browser Wallet</p>
+                                            <div className="btn-calculate mr-2">
+                                                <button type="submit" disabled={this.state.disableBtn} onClick={this.metamaskConnect} className="btn">  {!this.state.account ? <span>Connect</span> : <span>Connected</span>}</button>
+                                            </div>
+                                        </div> : null}
+                                    {this.state.account ?
+                                        <>
+                                            {!this.state.msgShowAlert ?
+                                                <h6 className="error valid-add">"Network ID mismatch. Select Ethereum Mainnet in your Metamask / Browser Wallet and Refresh Page"</h6>
+                                                : <h6 className="error valid-add green">"Conntected to Browser Wallet"</h6>}  </>
+                                        : null}
 
-                                        
+
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
                                             <h5 className="heading-participate">Provide Persistence Address for Rewards</h5>
