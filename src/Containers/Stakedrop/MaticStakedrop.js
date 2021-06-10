@@ -11,7 +11,7 @@ import { getCalculateMatic, getMaticStatusURL } from "../../constants/url";
 import copy from '../../assets/images1/copy.svg'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import MaticWallets from './maticWallet'
-import {getContractInstance} from "../../actions/utils";
+import { getContractInstance } from "../../actions/utils";
 import { checkbech32 } from "../../actions/bech32Validation"
 import Web3 from "web3";
 
@@ -45,13 +45,15 @@ class MaticStakedrop extends Component {
             showMagicTxnClieModel: false,
             totalDistributedInt: 0,
             account: '',
+            disableBtn: '',
             metamaskShow: false,
-            metamaskAccount: ''
-           
-            
+            metamaskAccount: '',
+            updateAccount: '',
+            networdId:false
         }
         this.handleCalculate = this.handleCalculate.bind(this);
         this.handleOninputChange = this.handleOninputChange.bind(this)
+        this.metamaskConnect = this.metamaskConnect.bind(this)
     }
     onCopy = () => {
         this.setState({ copyValue: true })
@@ -90,30 +92,71 @@ class MaticStakedrop extends Component {
     handleCancelTerms = () => {
         this.setState({ tcShow: false });
         this.setState({ metamaskShow: false });
+        this.setState({ disableBtn: true });
         this.props.history.push('/StakeDropMatic');
     };
-    
-    componentDidMount = () => {
-        this.loadBlockChain();
-
+    metamaskConnect = () => {
         const checkConnection = (cb) => {
-            if( window.ethereum && window.ethereum.isMetaMask) {
+            if (window.ethereum && window.ethereum.isMetaMask) {
                 cb(null)
-             } else {
-                 this.setState({metamaskShow: true});
-             }
+            } else {
+                this.setState({ metamaskShow: true });
+                this.setState({ disableBtn: true });
+            }
         };
         checkConnection((err) => {
-            if(err) {
+            if (err) {
                 console.log(err)
                 return
             }
             console.log()
             window.ethereum.request({ method: 'eth_requestAccounts' })
-            .then((addr) => {
-                console.log(addr[0],'address')
-                this.setState({ account: addr[0] })
-            });
+                .then((addr) => {
+                    console.log(addr[0], 'address')
+                    this.setState({ account: addr[0] })
+                   
+                });
+        });
+    }
+    componentDidMount = () => {
+        const web3 = new Web3(Web3.givenProvider)
+        const network = web3.eth.net.getId();
+        if(network === 3){
+                    this.setState=({networdId: true})
+                } else {
+                    console.log('please select network') 
+                }
+        const checkConnection = (cb) => {
+            if (window.ethereum && window.ethereum.isMetaMask) {
+                cb(null)
+                window.ethereum.on('accountsChanged', (accounts) => {
+                    console.log(accounts[0])
+                    this.setState({ account: accounts[0] })
+                    if(network === 3){
+                        this.setState=({networdId: true})
+                    } else {
+                        console.log('please select network') 
+                    }
+                });
+
+            } else {
+                this.setState({ metamaskShow: true });
+                this.setState({ disableBtn: true }); 
+            }
+        };
+        checkConnection((err) => {
+            if (err) {
+                console.log(err)
+                return
+            }
+            console.log()
+
+            window.ethereum.request({ method: 'eth_requestAccounts' })
+                .then((addr) => {
+                    console.log(addr[0], 'address')
+                    this.setState({ account: addr[0] })
+                });
+
         });
 
         window.scrollTo(0, 0)
@@ -201,16 +244,22 @@ class MaticStakedrop extends Component {
         }
     }
 
-    async loadBlockChain() {
-        const web3 = new Web3(Web3.givenProvider)
-        const network = await web3.eth.net.getNetworkType();
-        console.log(network) // should give you main if you're connected to the main network via metamask...
-        const accounts = await web3.eth.getAccounts()
-        this.setState({metamaskAccount: accounts[0]})
-    }
+    // async loadBlockChain() {
+    //     const web3 = new Web3(Web3.givenProvider)
+    //     const network = await web3.eth.net.getId();
+    //    // should give you main if you're connected to the main network via metamask...
+    //     if(network === 3){
+    //         this.setState=({networdId: true})
+    //     } else {
+    //         console.log('please select network') 
+    //     }
+       
+        
+    // }
 
     rewardStakingAddress = async e => {
         e.preventDefault();
+
         const calAddress = e.target.xprtAddress.value;
         console.log(calAddress, 'calAddress')
         console.log(this.props.address, ' this.props.address')
@@ -221,7 +270,7 @@ class MaticStakedrop extends Component {
             await stakeDrop3.methods
                 .MagicTx(calAddress)
                 .send({
-                    from: this.state.metamaskAccount,
+                    from: this.state.account,
                     gas: 100000,
                 })
                 .on("transactionHash", (receipt) => {
@@ -235,7 +284,7 @@ class MaticStakedrop extends Component {
                     console.log("Exception occured: ", e)
                 });
 
-        }else{
+        } else {
             this.setState({ errorxprtAddress: true })
         }
 
@@ -275,8 +324,6 @@ class MaticStakedrop extends Component {
     };
 
     render() {
-
-
         const { volume } = this.state
 
         return (
@@ -358,67 +405,78 @@ class MaticStakedrop extends Component {
                                     <div className="col-lg-12 matic-tutorial-section">
                                         <p className="">Matic StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
                                     </div>
+                                    <div className="col-lg-12 matic-tutorial-section metmask-status">
+                                        <p className="">Connect to Metamask or other Browser Wallet</p>
+                                        <div className="btn-calculate mr-2">
+                                            <button type="submit" disabled={this.state.disableBtn} onClick={this.metamaskConnect} className="btn">  {!this.state.account ? <span>Connect</span> : <span>Connected</span>}</button>
+                                        </div>
+                                    </div>
+                                    {this.state.networdId ? 
+                                    <h6 className="error valid-add">"Network ID mismatch. Select Ethereum Mainnet in your Metamask / Browser Wallet"</h6>
+                                    :  <h6 className="error valid-add green">"Conntected to Browser Wallet"</h6> }
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
                                             <h5 className="heading-participate">Provide Persistence Address for Rewards</h5>
                                         </div>
                                         <div className="body-section">
                                             <h6 className="note-text mt-4"><span>Note:</span> Submit your Persistence Address (XPRT) and Staking Address (ETH) you used for MATIC Staking, to receive XPRT StakeDrop</h6>
+                                            
+                                                 <form onSubmit={this.rewardStakingAddress}>
+                                                    <div className="inputstaking">
+                                                        <h5>Persistence Address</h5>
+                                                        <input
+                                                            type="text"
+                                                            name="xprtAddress"
+                                                            id="xprtAddress"
+                                                            value={this.state.xprtAddress}
+                                                            onChange={this.handlexprtAddressChange}
+                                                            placeholder="Enter Address"
+                                                            required
+                                                        />
 
-                                            <form onSubmit={this.rewardStakingAddress}>
-                                                <div className="inputstaking">
-                                                    <h5>Persistence Address</h5>
-                                                    <input
-                                                        type="text"
-                                                        name="xprtAddress"
-                                                        id="xprtAddress"
-                                                        value={this.state.xprtAddress}
-                                                        onChange={this.handlexprtAddressChange}
-                                                        placeholder="Enter Address"
-                                                        required
-                                                    />
-
-                                                </div>
-                                                {this.state.errorxprtAddress ?
-                                                    <h6 className="text-left valid-add">Enter Valid Persistence Address</h6>
-                                                    :
-                                                    ""
-                                                }
+                                                    </div>
+                                                    {this.state.errorxprtAddress ?
+                                                        <h6 className="text-left valid-add">Enter Valid Persistence Address</h6>
+                                                        :
+                                                        ""
+                                                    }
 
 
-                                                <div className="inputstaking">
-                                                    <h5>Staking Address</h5>
-                                                    <input
-                                                        type="text"
-                                                        name="stakingAddress"
-                                                        id="stakingAddress"
-                                                        value={this.state.account}
-                                                        onChange={this.handleAddressChange}
-                                                        placeholder="--"
-                                                        required
-                                                        disabled
-                                                    />
-                                                </div>
-
-                                                <div className="inputstaking left-align-calculate">
-                                                    <h5>&nbsp;</h5>
-                                                    <div className="btn-calculate mr-2">
-                                                        <button type="submit" className="btn">Submit</button>
+                                                    <div className="inputstaking">
+                                                        <h5>Staking Address</h5>
+                                                        <input
+                                                            type="text"
+                                                            name="stakingAddress"
+                                                            id="stakingAddress"
+                                                            value={this.state.account}
+                                                            onChange={this.handleAddressChange}
+                                                            placeholder="--"
+                                                            required
+                                                            disabled
+                                                        />
                                                     </div>
 
-                                                </div>
-                                                {this.state.errorAddress ?
-                                                    <h6 className="valid-add">Enter Valid Address</h6>
-                                                    :
-                                                    ""
-                                                }
-                                                {this.state.notParticipantAddress ?
-                                                    <h6 className="valid-add">Not a StakeDrop participant address, please send the magic transaction</h6>
-                                                    :
-                                                    ""
-                                                }
+                                                    <div className="inputstaking left-align-calculate">
+                                                        <h5>&nbsp;</h5>
+                                                        <div className="btn-calculate mr-2">
+                                                            <button type="submit" disabled={!this.state.account} className="btn">Submit</button>
+                                                        </div>
 
-                                            </form>
+                                                    </div>
+                                                    {this.state.errorAddress ?
+                                                        <h6 className="valid-add">Enter Valid Address</h6>
+                                                        :
+                                                        ""
+                                                    }
+                                                    {this.state.notParticipantAddress ?
+                                                        <h6 className="valid-add">Not a StakeDrop participant address, please send the magic transaction</h6>
+                                                        :
+                                                        ""
+                                                    }
+
+                                                </form>
+                                            
+
 
 
 
