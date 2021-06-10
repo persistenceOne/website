@@ -1,1 +1,1 @@
-export const NETWORK_ID = 3;
+export const NETWORK_ID = "0x3";
