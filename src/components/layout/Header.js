@@ -156,9 +156,9 @@ const Header = () => {
                             <div className="container">
                                 <Alert className="nav-banner" dismissible onClick={closeBanner}>
                                     <p>
-                                        <a href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt" rel="noopener noreferrer"
+                                        <a href="https://alpha.pstake.finance" rel="noopener noreferrer"
                                            target="_blank">
-                                            <span onClick={onClickTopBar}>XPRT listed on AscendEX on April 1. Buy Now </span>&emsp;
+                                            <span onClick={onClickTopBar}>Unlock liquidity for your staked assets with pSTAKE. Try out the alpha release now</span>&emsp;
                                             <img src={rightarrow} alt="arrow"/></a>
                                     </p>
                                 </Alert>
