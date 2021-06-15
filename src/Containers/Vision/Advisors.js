@@ -203,9 +203,9 @@ const Advisors = () => {
                                     </div>
                                     <div className="margin-left-xs text-center">
                                         <p className="profile-name">{t("MARCUS")}</p>
-                                        <p className="designation-name">{t("MANAGING_PARTNER")}&nbsp;
-                                            <a href="https://www.tavis-digital.com/" rel="noopener noreferrer"
-                                               target="_blank">{t("TAVIS_DIGITAL")}</a>
+                                        <p className="designation-name">{t("COO")}&nbsp;
+                                            <a href="https://www.bridgetowercapital.com/" rel="noopener noreferrer"
+                                               target="_blank">{t("BRIDGE_TOWER")}</a>
                                         </p>
                                     </div>
                                 </div>
