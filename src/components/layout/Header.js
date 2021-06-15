@@ -6,6 +6,7 @@ import Icon from "../Icon";
 import ReactGa from 'react-ga';
 import Alert from 'react-bootstrap/Alert'
 import rightarrow from '../../assets/images1/right-arrow.svg'
+import close from '../../assets/images1/close_icon.png'
 import dropdown_asset from "../../assets/images1/dropdown_asset.svg"
 import dropdown_comdex from "../../assets/images1/dropdown_comdex.svg"
 import dropdown_audit from "../../assets/images1/dropdown_audit.svg"
@@ -154,13 +155,14 @@ const Header = () => {
                     <div className="container-fluid bannernav-section">
                         {banner ?
                             <div className="container">
-                                <Alert className="nav-banner" dismissible onClick={closeBanner}>
+                                <Alert className="nav-banner alert-dismissible">
                                     <p>
                                         <a href="https://alpha.pstake.finance" rel="noopener noreferrer"
                                            target="_blank">
                                             <span onClick={onClickTopBar}>Unlock liquidity for your staked assets with pSTAKE. Try out the alpha release now</span>&emsp;
                                             <img src={rightarrow} alt="arrow"/></a>
                                     </p>
+                                    <img src={close} alt="close" className="close" onClick={closeBanner}/>
                                 </Alert>
                             </div>
                             : null}
