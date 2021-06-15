@@ -40,6 +40,9 @@ let English = {
         // Featured blogs section
         "BLOGS_SECTION_TITLE": "Featured blogs",
         "ABOUT": "About",
+        "COO":"COO, of",
+        "BRIDGE_TOWER":"BridgeTower",
+        "BLOG_TEXT_HEAD":"pSTAKE is unlocking over $100B of staked assets, creating a more flexible environment, and developing more opportunities and utility for PoS assets.",
         "BLOG1_TEXT": "The Internet disintermediated the media & communications industry. Using HTTP, SMTP, and TCP/IP as the foundational layers, the cost of information exchange was significantly...",
         "STAKEDROP": "StakeDrop",
         "PATNERSHIP": "Partnership",
