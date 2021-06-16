@@ -12,15 +12,15 @@ const Blogs = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-5" data-aos="fade-up">
-                        <a href="https://medium.com/persistence-blog/how-persistence-is-ushering-in-a-new-era-of-next-gen-financial-products-a06e5d57c72b"
+                        <a href="https://medium.com/@pstakefinance/introducing-pstake-unlocking-liquidity-of-staked-assets-c704738ab37f"
                            rel="noopener noreferrer" target="_blank">
                             <div className="blog-section">
                                 <div className="custom-card">
                                     <img className="card-img-top" alt="blog"
-                                         src="https://miro.medium.com/max/1684/1*H0mHBkwD2VdVnQ_9ECQmfA.png"/>
+                                         src="https://miro.medium.com/max/2880/1*mz3Ee2H4quxAOl7VQ6IgSQ.gif"/>
                                     <div className="custom-card-body">
                                         <p className="text">{t("ABOUT")}</p>
-                                        <p className="text1">{t("BLOG1_TEXT")}</p>
+                                        <p className="text1">{t("BLOG_TEXT_HEAD")}</p>
                                         <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                     </div>
                                 </div>
