@@ -317,6 +317,7 @@ class MaticStakedrop extends Component {
 
     render() {
         const { volume } = this.state
+        console.log(this.state.account,'account')
         return (
             <div className="section-participate">
                 <section className="participate-stakedrop">
@@ -396,19 +397,19 @@ class MaticStakedrop extends Component {
                                     <div className="col-lg-12 matic-tutorial-section">
                                         <p className="">Matic StakeDrop Tutorial: <a href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c" target="_blank" rel="noopener noreferrer">How MATIC Holders Can Participate in StakeDrop? </a></p>
                                     </div>
-                                    {!this.state.account ?
+                                    {this.state.account ?
+                                        <>
+                                            {!this.state.msgShowAlert ?
+                                                <h6 className="error valid-add">"Network ID mismatch. Select Ethereum Mainnet in your Metamask / Browser Wallet and Refresh Page"</h6>
+                                                : <h6 className="error valid-add green">"Connected to Browser Wallet"</h6>}  </>
+                                        : null}
                                         <div className="col-lg-12 matic-tutorial-section metmask-status">
                                             <p className="">Connect to Metamask or other Browser Wallet</p>
                                             <div className="btn-calculate mr-2">
                                                 <button type="submit" disabled={this.state.disableBtn} onClick={this.metamaskConnect} className="btn">  {!this.state.account ? <span>Connect</span> : <span>Connected</span>}</button>
                                             </div>
-                                        </div> : null}
-                                    {this.state.account ?
-                                        <>
-                                            {!this.state.msgShowAlert ?
-                                                <h6 className="error valid-add">"Network ID mismatch. Select Ethereum Mainnet in your Metamask / Browser Wallet and Refresh Page"</h6>
-                                                : <h6 className="error valid-add green">"Conntected to Browser Wallet"</h6>}  </>
-                                        : null}
+                                        </div> 
+                                   
 
 
                                     <div className="col-lg-12 stakerow">
