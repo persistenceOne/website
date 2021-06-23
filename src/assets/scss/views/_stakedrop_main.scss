@@ -473,14 +473,17 @@
         }
       }
     }
-    .error.valid-add {
+    .error.valid-add.invalid {
       margin: 20px 0;
       font-size: 12px;
       color: #e50913;
       text-align: center;
     }
-    .error.valid-add.green {
-      color: #28a745;
+    .error.valid-add.valid {
+      color: #28a745!important;
+      margin: 20px 0;
+      font-size: 12px;
+      text-align: center;
     }
     .matic-tutorial-section {
       background-color: #231f20;

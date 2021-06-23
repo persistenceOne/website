@@ -59,7 +59,7 @@ body {
 }
 
 .primay-secondary-color {
-  color: #9A9A9A;
+  color: #9a9a9a;
   font-weight: 600;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .primary-white-color {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 ::-moz-selection {
@@ -145,14 +145,14 @@ a {
 }
 
 .button-primary {
-  background-color: #E50913 !important;
+  background-color: #e50913 !important;
   border-radius: 7px !important;
   border: 0px solid !important;
   font-weight: bold !important;
   font-size: 12px !important;
   line-height: 1.8 !important;
   text-align: center !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   padding: 8px 35px !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -245,9 +245,10 @@ a {
 
 .bannernav-section .alert-dismissible .close {
   position: absolute;
-  top: -4px;
+  top: 0;
+  cursor: pointer;
   right: -25px;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   color: inherit;
   color: #fff;
   opacity: 1;
@@ -296,14 +297,14 @@ a {
 }
 
 .navbar.navbar-custom .mdi-menu {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .navbar.navbar-custom .dropdown-toggle::after {
   border: 0;
   display: inline-block;
-  margin-left: .55em;
-  vertical-align: .255em;
+  margin-left: 0.55em;
+  vertical-align: 0.255em;
   margin-top: -5px;
 }
 
@@ -345,8 +346,9 @@ a {
   margin-left: 15px;
 }
 
-.navbar.navbar-custom .navbar-nav li a, .navbar.navbar-custom .navbar-nav li .nav-link {
-  font-family: 'Poppins', sans-serif;
+.navbar.navbar-custom .navbar-nav li a,
+.navbar.navbar-custom .navbar-nav li .nav-link {
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 1.5;
@@ -354,11 +356,11 @@ a {
   letter-spacing: 0.1em;
   margin: 0;
   text-transform: uppercase;
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 
 .navbar.navbar-custom .navbar-nav li a.active {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .navbar.navbar-custom .navbar-nav li a.active::first-letter {
@@ -370,7 +372,7 @@ a {
 }
 
 .navbar.navbar-custom .dropdown-menu {
-  background-color: #28292C !important;
+  background-color: #28292c !important;
 }
 
 .navbar.navbar-custom .dropdown-menu .dropdown-item {
@@ -381,7 +383,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: .55rem 1.5rem;
+  padding: 0.55rem 1.5rem;
 }
 
 .navbar.navbar-custom .dropdown-menu .dropdown-item:hover {
@@ -391,7 +393,7 @@ a {
 .navbar.navbar-custom .dropdown-menu .dropdown-image {
   width: 34px;
   height: 34px;
-  background: #4F5053;
+  background: #4f5053;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,7 +408,7 @@ a {
 }
 
 .navbar.navbar-custom .dropdown-menu .dropdown-image .icon {
-  fill: #7B7B7B;
+  fill: #7b7b7b;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown {
@@ -433,16 +435,16 @@ a {
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: initial;
-  color: #C4C4C4;
-  padding: .65rem 1.5rem;
+  color: #c4c4c4;
+  padding: 0.65rem 1.5rem;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content .items a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content .items a:hover .dropdown-image .icon {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content .items-content {
@@ -466,28 +468,28 @@ a {
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content .items-content .item p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   line-height: 1.759;
   letter-spacing: 0.02em;
-  color: #D8DFE9;
+  color: #d8dfe9;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content .items-content .item .button {
   margin-top: 20px;
-  background: #3E3F45;
+  background: #3e3f45;
   font-weight: bold;
   font-size: 9.91667px;
   border-radius: 0px;
   border: none;
-  line-height: 1.80;
+  line-height: 1.8;
   text-align: center;
-  padding: .475rem .75rem;
-  color: #FFFFFF;
+  padding: 0.475rem 0.75rem;
+  color: #ffffff;
 }
 
 .navbar.navbar-custom .ecosystem-dropdown .dropdown-content .items-content .item .button:hover {
-  background: #E50913;
+  background: #e50913;
 }
 
 .regional-modal-body .close-button {
@@ -544,7 +546,7 @@ a {
   font-weight: 600;
   font-size: 14px;
   line-height: 2;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .modal-data .chinese-dropdown .card .card-header button {
@@ -562,7 +564,7 @@ a {
   font-weight: 600;
   font-size: 14px;
   line-height: 2;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .modal-data .regional-box a {
@@ -584,14 +586,14 @@ a {
   font-size: 16px;
   line-height: 1.8;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 12px 35px !important;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .modal-data .regional-box a:hover {
-  background: #E50913;
+  background: #e50913;
 }
 
 .modal-open {
@@ -603,7 +605,7 @@ a {
 }
 
 .info-modal.modal .modal-dialog .modal-content {
-  background: #28292D;
+  background: #28292d;
 }
 
 .info-modal.modal .modal-dialog .modal-content .modal-body {
@@ -629,22 +631,22 @@ a {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.759;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .info-modal.modal .modal-dialog .modal-content .modal-data .content .about {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 2.14;
-  color: #D8DFE9;
+  color: #d8dfe9;
 }
 
 .info-modal.modal .modal-dialog .modal-content .modal-data .content .role {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.759;
-  color: #A5A5A5;
+  color: #a5a5a5;
   margin: 0 0 10px 0;
 }
 
@@ -661,7 +663,7 @@ a {
   margin-right: 5px;
   width: 32px;
   height: 32px;
-  background-color: #E50913;
+  background-color: #e50913;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -675,7 +677,7 @@ a {
 }
 
 .info-modal.modal .modal-dialog .modal-content .modal-data .content .icons .icon-box .icon {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .info-modal.modal .modal-dialog .modal-content .modal-data .close-button {
@@ -691,12 +693,12 @@ a {
 }
 
 .language-dropdown .icon {
-  color: #C4C4C4;
+  color: #c4c4c4;
   width: 22px;
 }
 
 .second-section {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 .ml-10 {
@@ -704,7 +706,7 @@ a {
 }
 
 .footer {
-  background: #262B35 !important;
+  background: #262b35 !important;
   padding: 80px 0 0 0;
 }
 
@@ -712,12 +714,13 @@ a {
   margin-top: 30px;
 }
 
-.footer .footer-list li a, .footer .footer-list li .inactive {
-  font-family: 'Poppins', sans-serif;
+.footer .footer-list li a,
+.footer .footer-list li .inactive {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.31;
-  color: #70747C;
+  color: #70747c;
 }
 
 .footer .email {
@@ -746,18 +749,18 @@ a {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.314;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer .copy-rights {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.314;
-  color: #70747C;
+  color: #70747c;
 }
 
 .footer .contact-box .mail-chimp-section input {
-  background: #1D2129;
+  background: #1d2129;
   border: 0px solid;
   padding: 10px 10px;
   font-weight: 500;
@@ -767,14 +770,14 @@ a {
 
 .footer .subscription-result {
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
 .footer .btn-subscribe {
   opacity: 1 !important;
   width: 102px;
-  background: #E50913 !important;
+  background: #e50913 !important;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08) !important;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08) !important;
   border-radius: 0px !important;
@@ -783,16 +786,16 @@ a {
   font-size: 12px !important;
   line-height: 1.8 !important;
   text-align: center !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   padding: 8px 20px !important;
 }
 
 .footer .footer-text {
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 1.31;
-  color: #70747C;
+  color: #70747c;
 }
 
 .footer .social-links-section {
@@ -825,12 +828,12 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #363B46;
+  background: #363b46;
 }
 
 .footer .social-links-section a .icon {
   width: 12px;
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .footer .social-links-section a:hover {
@@ -922,7 +925,7 @@ a {
 
 #tsparticles canvas {
   height: 100vh !important;
-  background: radial-gradient(94.37% 161.58% at 2.64% 12.07%, #16151D 0%, #232526 100%);
+  background: radial-gradient(94.37% 161.58% at 2.64% 12.07%, #16151d 0%, #232526 100%);
 }
 
 .progress-bar-box {
@@ -961,7 +964,7 @@ a {
   right: 0;
   width: 100%;
   position: absolute;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 100%;
   z-index: 99999;
 }
@@ -984,9 +987,9 @@ a {
 
 .bar-container > div > div > div {
   height: 2px !important;
-  background: #E50913 !important;
-  background-color: #E50913 !important;
-  border: 2px solid #E50913;
+  background: #e50913 !important;
+  background-color: #e50913 !important;
+  border: 2px solid #e50913;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1027,7 +1030,7 @@ a {
   padding: 0;
   margin: 0 0 1em;
   line-height: 2em;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 1px 1px 1px #000;
   font-size: 1.5em;
   position: relative;
@@ -1054,11 +1057,11 @@ a {
 }
 
 .tooltip > div.tooltip-inner {
-  background-color: #363B46 !important;
+  background-color: #363b46 !important;
 }
 
 .tooltip > div.arrow::before {
-  border-bottom-color: #363B46 !important;
+  border-bottom-color: #363b46 !important;
 }
 
 a.disabled {
@@ -1067,7 +1070,7 @@ a.disabled {
 }
 
 button:disabled {
-  opacity: .65;
+  opacity: 0.65;
 }
 
 @-webkit-keyframes progress {
@@ -1107,7 +1110,11 @@ button:disabled {
 }
 
 @media (min-width: 1400px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
     max-width: 1340px !important;
   }
 }
@@ -4406,15 +4413,18 @@ button:disabled {
   color: #fff;
 }
 
-.participate-stakedrop .staking-second-section .error.valid-add {
+.participate-stakedrop .staking-second-section .error.valid-add.invalid {
   margin: 20px 0;
   font-size: 12px;
   color: #e50913;
   text-align: center;
 }
 
-.participate-stakedrop .staking-second-section .error.valid-add.green {
-  color: #28a745;
+.participate-stakedrop .staking-second-section .error.valid-add.valid {
+  color: #28a745 !important;
+  margin: 20px 0;
+  font-size: 12px;
+  text-align: center;
 }
 
 .participate-stakedrop .staking-second-section .matic-tutorial-section {
