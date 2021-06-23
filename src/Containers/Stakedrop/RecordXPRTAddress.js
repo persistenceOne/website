@@ -40,7 +40,7 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
 
         if (!window.ethereum || window.ethereum.chainId !== NETWORK_ID) {
             setIsWalletSuccess(false);
-            setWalletStatusMsg("Incorrect Network ID selected");
+            setWalletStatusMsg("Incorrect Network ID selected. Please select Rospten network and refresh the page");
             setErrorStatus("invalid")
             setIsXPRTSuccess(false);
             return;
@@ -106,7 +106,7 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
             if (chainId !== NETWORK_ID) {
                 console.log("ONCHAINCHANGED");
                 // setIsWalletSuccess(false);
-                setWalletStatusMsg("Incorrect Network ID selected");
+                setWalletStatusMsg("Incorrect Network ID selected. Please select Rospten network and refresh the page");
                 setErrorStatus("invalid")
                 setIsXPRTSuccess(false);
             }
@@ -117,7 +117,7 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
             .then((networkId) => {
                 if (networkId !== NETWORK_ID) {
                     //   setIsWalletSuccess(false);
-                    setWalletStatusMsg("Incorrect Network ID selected");
+                    setWalletStatusMsg("Incorrect Network ID selected. Please select Rospten network and refresh the page");
                     setErrorStatus("invalid")
                     setIsXPRTSuccess(false);
                 }
