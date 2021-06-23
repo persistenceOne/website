@@ -13,12 +13,10 @@ const RecordXPRTAddress = () => {
     const [errorxprtAddress, setErrorxprtAddress] = useState(false);
     const [tcShow, setTcShow] = useState(false);
     const [msgShowAlert, setMsgShowAlert] = useState(false);
-    const [xprtAddress, setXprtAddress] = useState('');
 
 
     const handlexprtAddressChange = (event) => {
         event.preventDefault();
-        console.log("event.target.value: ", event.target.value)
 
       let checkBech32 = checkbech32(event.target.value);
       if (checkBech32) {
@@ -31,8 +29,6 @@ const RecordXPRTAddress = () => {
         e.preventDefault();
 
         const _calAddress = e.target.xprtAddress.value;
-        setXprtAddress(_calAddress)
-        console.log(_calAddress, '_calAddress')
         let checkBech32 = checkbech32(_calAddress);
         if (checkBech32) {
 
@@ -90,34 +86,38 @@ const RecordXPRTAddress = () => {
     }
 
     useEffect(() => {
-        window.ethereum.request({ method: 'eth_requestAccounts' })
-            .then((addr) => {
-                console.log(addr[0], 'address')
-                setAccount(addr[0])
-            });
+        if (window.ethereum && window.ethereum.isMetaMask) {
+            window.ethereum.request({ method: 'eth_requestAccounts' })
+                .then((addr) => {
+                    console.log(addr[0], 'address')
+                    setAccount(addr[0])
+                });
 
-        window.ethereum.on('accountsChanged', (accounts) => {
-            console.log(accounts[0])
-            setAccount(accounts[0])
-        });
-        window.ethereum.on('chainChanged', (chainId) => {
-            if (chainId === NETWORK_ID) {
-                setMsgShowAlert(true)
-            } else {
-                setMsgShowAlert(false)
-            }
-        });
-        window.ethereum.request({ method: 'eth_chainId' })
-            .then((networkId) => {
-                if (networkId === NETWORK_ID) {
+            window.ethereum.on('accountsChanged', (accounts) => {
+                console.log(accounts[0])
+                setAccount(accounts[0])
+            });
+            window.ethereum.on('chainChanged', (chainId) => {
+                if (chainId === NETWORK_ID) {
                     setMsgShowAlert(true)
                 } else {
                     setMsgShowAlert(false)
                 }
+            });
+            window.ethereum.request({ method: 'eth_chainId' })
+                .then((networkId) => {
+                    if (networkId === NETWORK_ID) {
+                        setMsgShowAlert(true)
+                    } else {
+                        setMsgShowAlert(false)
+                    }
 
-            }).catch((error) => {
-            console.log(error)
-        })
+                }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+
 
         return () => {};
     });
@@ -154,7 +154,7 @@ const RecordXPRTAddress = () => {
                                 type="text"
                                 name="xprtAddress"
                                 id="xprtAddress"
-                                value={xprtAddress}
+                                //value={xprtAddress}
                                 onChange={handlexprtAddressChange}
                                 placeholder="Enter Address"
                                 required
@@ -166,7 +166,6 @@ const RecordXPRTAddress = () => {
                             :
                             ""
                         }
-
 
                         <div className="inputstaking">
                             <h5>Staking Address</h5>
@@ -215,7 +214,7 @@ const RecordXPRTAddress = () => {
                 centered
             >
                 <Modal.Body>
-                    <p className="tc">Please install metamask
+                    <p className="tc">Please install metamask and refresh the page
                     </p>
                     <div className="button-section">
 

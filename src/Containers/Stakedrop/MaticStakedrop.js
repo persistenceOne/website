@@ -7,7 +7,6 @@ import Slider from 'react-rangeslider';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import { NETWORK_ID } from "../../constants/config";
 import { getCalculateMatic, getMaticStatusURL } from "../../constants/url";
 import copy from '../../assets/images1/copy.svg'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -56,7 +55,6 @@ class MaticStakedrop extends Component {
         }
         this.handleCalculate = this.handleCalculate.bind(this);
         this.handleOninputChange = this.handleOninputChange.bind(this)
-        this.metamaskConnect = this.metamaskConnect.bind(this)
         this.handlexprtAddressChange = this.handlexprtAddressChange.bind(this)
     }
     onCopy = () => {
@@ -99,7 +97,7 @@ class MaticStakedrop extends Component {
         this.setState({ disableBtn: true });
         this.props.history.push('/StakeDropMatic');
     };
-    metamaskConnect = () => {
+    /*metamaskConnect = () => {
         const checkConnection = (cb) => {
             if (window.ethereum && window.ethereum.isMetaMask) {
                 cb(null)
@@ -121,10 +119,10 @@ class MaticStakedrop extends Component {
 
                 });
         });
-    }
+    }*/
 
     componentDidMount = () => {
-            window.ethereum.request({ method: 'eth_requestAccounts' })
+            /*window.ethereum.request({ method: 'eth_requestAccounts' })
                 .then((addr) => {
                     console.log(addr[0], 'address')
                     this.setState({ account: addr[0] })
@@ -153,7 +151,7 @@ class MaticStakedrop extends Component {
 
             }).catch((error) => {
                 console.log(error)
-            })
+            })*/
         window.scrollTo(0, 0)
         ReactGa.pageview(window.location.pathname + window.location.search);
         const Statusurl = getMaticStatusURL();
@@ -537,21 +535,7 @@ class MaticStakedrop extends Component {
                             </div>
                         </Modal.Body>
                     </Modal>
-                    <Modal
-                        show={this.state.metamaskShow}
-                        onHide={this.handleClose}
-                        className="accountInfoModel"
-                        centered
-                    >
-                        <Modal.Body>
-                            <p className="tc">Please install metamask
-                            </p>
-                            <div className="button-section">
 
-                                <button className="btn decline" onClick={this.handleCancelTerms} >Ok</button>
-                            </div>
-                        </Modal.Body>
-                    </Modal>
                     <Modal
                         size="lg"
                         show={this.state.show}
