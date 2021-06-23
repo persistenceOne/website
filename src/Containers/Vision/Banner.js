@@ -15,7 +15,7 @@ const Banner = () => {
                         <p>{t("MISSION_BANNER_TEXT1")}</p>
                         <p>{t("MISSION_BANNER_TEXT2")}</p>
                         <div className="quote-section">
-                            <p className="quote-text">{t("MISSION_BANNER_QUOTE1")}
+                            <p className="quote-text">{t("MISSION_BANNER_QUOTE1")} &nbsp;
                                 <span>{t("MISSION_BANNER_QUOTE2")}</span>
                                 <img src={curved_line} alt="curved_line"/>
                             </p>
