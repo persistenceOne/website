@@ -20,11 +20,11 @@ const RecordXPRTAddress = () => {
 
 
     const handlexprtAddressChange = (event) => {
-        event.preventDefault();
+      
 
-        setCalAddress(event.target.xprtAddress.value)
+        setCalAddress(event.target.value)
 
-      let checkBech32 = checkbech32(event.target.xprtAddress.value);
+      let checkBech32 = checkbech32(event.target.value);
       if (checkBech32) {
           setErrorxprtAddress(false);
       } else {
@@ -34,7 +34,7 @@ const RecordXPRTAddress = () => {
     const rewardStakingAddress = async e => {
         e.preventDefault();
 
-        const _calAddress = e.target.xprtAddress.value;
+        const _calAddress = e.target.value;
         setXprtAddress(_calAddress)
         console.log(_calAddress, '_calAddress')
         let checkBech32 = checkbech32(_calAddress);
@@ -161,7 +161,7 @@ const RecordXPRTAddress = () => {
                                 type="text"
                                 name="xprtAddress"
                                 id="xprtAddress"
-                                value={xprtAddress}
+                              
                                 onChange={handlexprtAddressChange}
                                 placeholder="Enter Address"
                                 required
@@ -182,7 +182,6 @@ const RecordXPRTAddress = () => {
                                 name="stakingAddress"
                                 id="stakingAddress"
                                 value={account}
-                                //onChange={handleAddressChange}
                                 placeholder="--"
                                 required
                                 disabled
