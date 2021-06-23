@@ -9,22 +9,18 @@ const RecordXPRTAddress = () => {
 
     const [metamaskShow, setMetamaskShow] = useState(false);
     const [account, setAccount] = useState('');
-    const [disableBtn, setDisableBtn] = useState('');
+    const [disableBtn, setDisableBtn] = useState(false);
     const [errorxprtAddress, setErrorxprtAddress] = useState(false);
     const [tcShow, setTcShow] = useState(false);
     const [msgShowAlert, setMsgShowAlert] = useState(false);
-    const [history, setHistory] = useState([]);
-    const [calAddress, setCalAddress] = useState('');
     const [xprtAddress, setXprtAddress] = useState('');
-    const [networkName, setNetworkName] = useState('');
 
 
     const handlexprtAddressChange = (event) => {
         event.preventDefault();
+        console.log("event.target.value: ", event.target.value)
 
-        setCalAddress(event.target.xprtAddress.value)
-
-      let checkBech32 = checkbech32(event.target.xprtAddress.value);
+      let checkBech32 = checkbech32(event.target.value);
       if (checkBech32) {
           setErrorxprtAddress(false);
       } else {
@@ -67,7 +63,6 @@ const RecordXPRTAddress = () => {
         setTcShow(false)
         setMetamaskShow(false);
         setDisableBtn(true);
-        history.push('/StakeDropMatic');
     };
 
     const metamaskConnect = () => {
@@ -106,7 +101,6 @@ const RecordXPRTAddress = () => {
             setAccount(accounts[0])
         });
         window.ethereum.on('chainChanged', (chainId) => {
-            setNetworkName(chainId)
             if (chainId === NETWORK_ID) {
                 setMsgShowAlert(true)
             } else {
@@ -115,7 +109,6 @@ const RecordXPRTAddress = () => {
         });
         window.ethereum.request({ method: 'eth_chainId' })
             .then((networkId) => {
-                setNetworkName(networkId)
                 if (networkId === NETWORK_ID) {
                     setMsgShowAlert(true)
                 } else {
@@ -198,14 +191,23 @@ const RecordXPRTAddress = () => {
                         </div>
 
                     </form>
-
-
-
-
-
                 </div>
-
             </div>
+            <Modal
+                show={tcShow}
+                onHide={handleCancelTerms}
+                className="accountInfoModel"
+                centered
+            >
+                <Modal.Body>
+                    <p className="tc">Persistence Address recorded. You will receive the XPRT Rewards if you had participated in the StakeDrop Campaign
+                    </p>
+                    <div className="button-section">
+
+                        <button className="btn decline" onClick={handleCancelTerms} >Ok</button>
+                    </div>
+                </Modal.Body>
+            </Modal>
             <Modal
                 show={metamaskShow}
                 onHide={handleCancelTerms}
@@ -227,4 +229,4 @@ const RecordXPRTAddress = () => {
 
 }
 
-export default RecordXPRTAddress
+export default RecordXPRTAddress;
