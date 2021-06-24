@@ -170,7 +170,7 @@ let Chinese = {
         "COMMUNITY_CHAT":"社区频道",
         "ANNOUNCEMENTS":"公告频道",
         "TWITTER":"推特",
-        "YOUTUBE":"Youtube",
+        "YOUTUBE":"YouTube",
         "REDDIT":"Reddit",
         "REGIONAL":"Regional",
         "VALIDATORS_INFO":"一个网络的实力取决于其验证者。Persistence 网络由领先的 PoS 验证者来保护，这些验证者以机构级架构运行，分布在世界各地。我们生态中的验证者共同保护着价值超过 30 亿美元的资产.",

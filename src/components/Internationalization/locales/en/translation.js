@@ -10,7 +10,7 @@ let English = {
         "BANNER_BUTTON_WHITEPAPER": "Whitepaper",
         "BANNER_SUB_TEXT": "Building an ecosystem of financial products to serve institutional and crypto-native users.",
         //aim section
-        "AIM_SECTION_HEADING": "What our focus?",
+        "AIM_SECTION_HEADING": "What's our focus?",
         "FOCUS_DEFI_HEADING": "Decentralized Finance (DeFi)",
         "FOCUS_DEFI_TEXT": "Enabling users to interact with both traditional and digital assets in an open and global context.",
         "FOCUS_NFT_HEADING": "Non-Fungible Tokens (NFTs)",
@@ -35,7 +35,8 @@ let English = {
         //backer section
         "BACKER_SECTION_TITLE": "Who’s backing us?",
         "VENTURE_FUNDS": "Venture Funds and Foundations",
-        "VALIDATORS": "VALIDATORS",
+        "VALIDATORS": "Validators",
+        "HEADVALIDATOR": "VALIDATORS",
         "ECOSYSTEM": "Ecosystem",
         // Featured blogs section
         "BLOGS_SECTION_TITLE": "Featured blogs",
@@ -151,7 +152,7 @@ let English = {
         "PRODUCT_AUDIT_DESCRIPTION":"Staking-as-a-Service solution for proof-of-stake networks. For institutional assets managers looking to generate fixed income returns from Staking-as-an-AssetClass, AUDIT.one provides whitelabeling solutions for hardware and software.",
         "TOTAL_ASSETS_SECURED":"Total Assets Secured",
         "ASSETS_UNDER_DELEGATION":"Assets Under Delegation",
-        "NETWORKS_SECURED":"Networks Secured",
+        "NETWORKS_SECURED":"Secured Networks",
         "NF_MARKET_FRAMEWORK":"NFT Marketplace Framework",
         //TECHNOLOGY
         "TECHNOLOGY_BANNER_TEXT":"Persistence is an interoperable protocol that provides sovereign environments for decentralised/institutional finance applications to be developed and operated.",
@@ -183,7 +184,7 @@ let English = {
         "COMMUNITY_CHAT":"Community Chat",
         "ANNOUNCEMENTS":"Announcements",
         "TWITTER":"Twitter",
-        "YOUTUBE":"Youtube",
+        "YOUTUBE":"YouTube",
         "REDDIT":"Reddit",
         "REGIONAL":"Regional",
         "VALIDATORS_INFO":"A network is only as strong as its validators. The Persistence network is secured by leading PoS validators running institutional-grade architecture, geographically distributed across the world. Validators in our ecosystem secure more than $700M USD worth of assets collectively.",

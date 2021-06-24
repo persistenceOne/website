@@ -40,7 +40,7 @@ let Russian = {
         "BLOGS_SECTION_TITLE": "Featured blogs",
         "ABOUT": "Компания",
         "BLOG1_TEXT": "The Internet disintermediated the media & communications industry. Using HTTP, SMTP, and TCP/IP as the foundational layers, the cost of information exchange was significantly...",
-        "STAKEDROP": "StakeDrop",
+        "STAKEDROP": "STAKEDROP",
         "PATNERSHIP": "Partnership",
         "FUND_RAISE": "Fundraise",
         //Featured on section
@@ -146,7 +146,7 @@ let Russian = {
         "PRODUCT_AUDIT_DESCRIPTION": "Staking-as-a-Service solution for proof-of-stake networks. For institutional assets managers looking to generate fixed income returns from Staking-as-an-AssetClass, AUDIT.one provides whitelabeling solutions for hardware and software.",
         "TOTAL_ASSETS_SECURED": "Total Assets Secured",
         "ASSETS_UNDER_DELEGATION": "Assets Under Delegation",
-        "NETWORKS_SECURED": "Networks Secured",
+        "NETWORKS_SECURED": "Secured Networks",
         "NF_MARKET_FRAMEWORK": "NFT Marketplace Framework",
         //TECHNOLOGY
         "TECHNOLOGY_BANNER_TEXT": "Persistence - это протокол с возможностью взаимодействия, который обеспечивает\n" +
@@ -186,7 +186,7 @@ let Russian = {
         "COMMUNITY_CHAT": "Чат для сообщества",
         "ANNOUNCEMENTS": "Анонсы",
         "TWITTER": "Twitter",
-        "YOUTUBE": "Youtube",
+        "YOUTUBE": "YouTube",
         "REDDIT": "Reddit",
         "REGIONAL": "Языковые чаты",
         "VALIDATORS_INFO": "Сеть настолько сильна, насколько сильны ее валидаторы. Сеть Persistence защищена\n" +
