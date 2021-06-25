@@ -89,7 +89,7 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
 
     // effect;
     return () => {};
-  });
+  }, [walletStatusMsg]);
 
   const handleWalletConnect = () => {
     setWalletStatusMsg("Browser Wallet Found. Click on Connect");
