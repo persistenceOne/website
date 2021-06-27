@@ -18,7 +18,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
   const [xprtStatusMsgMode, setXprtStatusMsgMode] = useState("");
 
   useEffect(() => {
-    console.log("inside useEffect");
     if (!window.ethereum) {
       setIsWalletSuccess(false);
       setWalletStatusMsg("Please Install Metamask or other Browser Wallet");
@@ -26,43 +25,7 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
       return;
     }
 
-    console.log("window.ethereum: ", window.ethereum);
-
-    console.log(
-      "window.ethereum.selectedAddress: ",
-      window.ethereum.selectedAddress,
-      " window.ethereum.chainId: ",
-      window.ethereum.chainId
-    );
-
-    /*  window.ethereum
-      .request({ method: "eth_chainId" })
-      .then((networkId) => {
-        if (networkId !== NETWORK_ID) {
-          setIsWalletSuccess(false);
-          setWalletStatusMsg(`Incorrect Network ID selected. Set network to ${NETWORK_NAME} and refresh`);
-          setWalletStatusMsgMode("invalid");
-          setIsXPRTSuccess(false);
-        }
-      })
-      .catch((error) => {
-        console.log("error: ", error);
-        setIsWalletSuccess(false);
-        setWalletStatusMsg("Network Error. Try connecting again");
-        setWalletStatusMsgMode("invalid");
-        setIsXPRTSuccess(false);
-      }); */
-
-    /* if (!window.ethereum || window.ethereum.chainId !== NETWORK_ID) {
-      setIsWalletSuccess(false);
-      setWalletStatusMsg(`Incorrect Network ID selected. Set network to ${NETWORK_NAME} and refresh`);
-      setWalletStatusMsgMode("invalid");
-      setIsXPRTSuccess(false);
-      return;
-    } */
-
     if (window.ethereum.selectedAddress) {
-      console.log("inside if condition");
       setEthAddress(window.ethereum.selectedAddress);
       if (!window.ethereum || window.ethereum.chainId !== NETWORK_ID) {
         setIsWalletSuccess(false);
@@ -87,7 +50,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
       }
     }
 
-    // effect;
     return () => {};
   }, [walletStatusMsg]);
 
@@ -105,12 +67,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
     window.ethereum
       .request({ method: "eth_requestAccounts" })
       .then((addr) => {
-        console.log(
-          "address: ",
-          addr[0],
-          " window.ethereum.chainId: ",
-          window.ethereum.chainId
-        );
         setEthAddress(addr[0]);
         if (!window.ethereum || window.ethereum.chainId !== NETWORK_ID) {
           setIsWalletSuccess(false);
@@ -128,18 +84,15 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
         }
       })
       .catch((e) => {
-        console.log("error in window.ethereum.request(): ", e);
         setWalletStatusMsgMode("invalid");
         setWalletStatusMsg("Wallet Error. Refresh and try again");
       });
 
     window.ethereum.on("accountsChanged", (accounts) => {
-      console.log(accounts[0]);
       setEthAddress(accounts[0]);
     });
 
     window.ethereum.on("disconnect", () => {
-      //   console.log(accounts[0]);
       setEthAddress("");
     });
 
@@ -156,7 +109,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
         }
       })
       .catch((error) => {
-        console.log("error: ", error);
         setIsWalletSuccess(false);
         setWalletStatusMsg("Network Error. Try connecting again");
         setWalletStatusMsgMode("invalid");
@@ -165,8 +117,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
 
     window.ethereum.on("chainChanged", (chainId) => {
       if (chainId !== NETWORK_ID) {
-        console.log("ONCHAINCHANGED");
-        // setIsWalletSuccess(false);
         setWalletStatusMsg(
           `Incorrect Network ID selected. Set network to ${NETWORK_NAME} and refresh`
         );
@@ -177,11 +127,8 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
   };
 
   const handleXPRTAddressChange = (event) => {
-    console.log("inside handleXPRTAddressChange, ", event.target.value);
 
     setXprtAddress(event.target.value);
-    console.log("xprtAddress: ", xprtAddress);
-
     // check if the XPRT address supplied is Bech32 valid
     let checkBech32 = checkbech32(event.target.value);
     if (!checkBech32) {
@@ -224,7 +171,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
   };
 
   const handleXPRTAddressSubmit = async (e) => {
-    console.log("inside handleXPRTAddressSubmit");
 
     e.preventDefault();
 
@@ -243,7 +189,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
     }
 
     const calAddress = xprtAddress;
-    console.log(calAddress, "calAddress");
     let checkBech32 = checkbech32(calAddress);
     if (checkBech32) {
       const stakeDrop3 = await getContractInstance("StakeDrop3");
@@ -254,7 +199,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
           // gas: 100000,
         })
         .on("transactionHash", (receipt) => {
-          console.log(receipt, "  receipt");
           setXprtStatusMsg("Transaction Submitted. Wait for confirmation");
           setXprtStatusMsgMode("valid");
           setIsXPRTSuccess(false);
@@ -270,18 +214,14 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
           );
           setXprtStatusMsgMode("valid");
 
-          //   this.setState({ tcShow: true });
-          console.log(response, "completed");
         })
         .catch((e) => {
-          console.log("Exception occured: ", e);
           setXprtStatusMsg(
             "Wallet Transaction Failed. Try again or check connection"
           );
           setXprtStatusMsgMode("invalid");
           setWalletStatusMsg("Browser Wallet Found. Click on Connect");
           setWalletStatusMsgMode("valid");
-          //   setIsWalletSuccess(false);
         });
     } else {
       setXprtStatusMsg("Address is Invalid as per Bech32");
@@ -289,21 +229,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
       setIsXPRTSuccess(false);
     }
   };
-
-  console.log(
-    " isWalletSuccess: ",
-    isWalletSuccess,
-    " walletStatusMsg: ",
-    walletStatusMsg,
-    " walletStatusMsgMode: ",
-    walletStatusMsgMode,
-    " isXPRTSuccess: ",
-    isXPRTSuccess,
-    " xprtStatusMsg: ",
-    xprtStatusMsg,
-    " xprtStatusMsgMode: ",
-    xprtStatusMsgMode
-  );
 
   return (
     <>
@@ -322,7 +247,7 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
             {!isWalletSuccess ? (
               <span>Not Connected</span>
             ) : (
-              <span>Connect</span>
+              <span>Connect Wallet</span>
             )}
           </button>
         </div>
