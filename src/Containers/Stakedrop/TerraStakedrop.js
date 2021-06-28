@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import ReactGa from 'react-ga';
 import Icon from "../../components/Icon";
-import Slider from 'react-rangeslider';
 import Countdown from 'react-countdown';
 import 'react-rangeslider/lib/index.css'
 import axios from 'axios';
@@ -46,7 +45,6 @@ class TerraStakedrop extends Component {
             totalDistributedInt: 0
         }
         this.handleCalculate = this.handleCalculate.bind(this);
-        this.handleOninputChange = this.handleOninputChange.bind(this)
     }
     onCopy = () => {
         this.setState({ copyValue: true })
@@ -115,71 +113,6 @@ class TerraStakedrop extends Component {
             this.setState({ globalAuditStaked: (worldAuditDelegations / 1000000).toLocaleString() })
         })
     }
-    handleOninputChange(event) {
-        const value = event.target.value
-        this.setState({ volume: value})
-        const re = /^[0-9\b]+$/;
-        if (event.target.value === '' || re.test(event.target.value)) {
-            this.setState({ volume: event.target.value })
-        }
-        if (event.target.value >= 1000000) {
-            this.setState({ volume: 1000000 })
-
-        }
-
-        if (event.target.value === '') {
-            const delegateAudit = 0;
-            const delegateOther = 0;
-            this.setState({ delegateAudit: delegateAudit })
-            this.setState({ delegateOther: delegateOther })
-        } else {
-            var uterrasToDelegate = value * 1000000
-            var delegateAudit = ((0.25 * uterrasToDelegate / (this.state.globalAuditStakedInt + uterrasToDelegate) +
-                (0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt);
-            var delegateOther = ((0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt;
-            if (isNaN(delegateAudit)) {
-                delegateAudit = 0;
-            }
-            if (isNaN(delegateOther)) {
-                delegateOther = 0;
-            }
-            if (delegateAudit > 5000) {
-                this.setState({ delegateAudit: 5000 })
-            } else {
-                this.setState({ delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2) })
-            }
-            if (delegateOther > 5000) {
-                this.setState({ delegateOther: 5000 })
-            } else {
-                this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2) })
-            }
-        }
-    }
-
-
-    handleOnChange = (value) => {
-        this.setState({ volume: value })
-        var uterrasToDelegate = value * 1000000
-        var delegateAudit = ((0.25 * uterrasToDelegate / (this.state.globalAuditStakedInt + uterrasToDelegate) +
-            (0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt);
-        var delegateOther = ((0.75 * uterrasToDelegate) / (this.state.globalTotalStakedInt + uterrasToDelegate)) * this.state.totalDistributedInt;
-        if (isNaN(delegateAudit)) {
-            delegateAudit = 0;
-        }
-        if (isNaN(delegateOther)) {
-            delegateOther = 0;
-        }
-        if (delegateAudit > 5000) {
-            this.setState({ delegateAudit: 5000 })
-        } else {
-            this.setState({ delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2) })
-        }
-        if (delegateOther > 5000) {
-            this.setState({ delegateOther: 5000 })
-        } else {
-            this.setState({ delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2) })
-        }
-    }
     handleCalculate = e => {
         e.preventDefault();
         this.setState({ errorAddress: false })
@@ -211,7 +144,7 @@ class TerraStakedrop extends Component {
     };
 
     render() {
-        const { volume } = this.state
+        
         return (
             <div className="section-participate">
                 <section className="participate-stakedrop">
@@ -359,58 +292,6 @@ class TerraStakedrop extends Component {
                                             </div>
                                         </div>
 
-                                    </div>
-                                    <div className="col-lg-12 staking-right-bottom stakerow">
-                                        <div className="col-lg-12  header-section">
-                                            <h5 className="heading-participate">Participate</h5>
-                                        </div>
-                                        <div className="body-section">
-                                            <div className="range-data">
-                                                <p>How many LUNAs would you like to stake?</p>
-
-                                                <input
-                                                    type="text"
-                                                    className="range-value"
-                                                    value={volume}
-                                                    onChange={this.handleOninputChange}
-
-
-                                                />
-                                            </div>
-                                            <div className="range-slider">
-                                                <Slider
-                                                    value={volume}
-                                                    onChange={this.handleOnChange}
-                                                    min={0}
-                                                    max={1000000}
-                                                    step={100}
-                                                />
-                                            </div>
-
-                                            <div className="">
-                                                <div className="row">
-                                                    <div className="col-lg-12 delegate-sec">
-                                                        <div className="inputstaking bottom">
-                                                            <h5>If you delegate to AUDIT.one</h5>
-                                                            <h5 className="value">{this.state.delegateAudit} XPRT</h5>
-                                                        </div>
-
-                                                        <div className="inputstaking bottom">
-                                                            <h5>to Other Validators</h5>
-                                                            <h5 className="value">{this.state.delegateOther} XPRT</h5>
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div className="participate-buttons">
-                                                <div className="btn-magic-txs">
-                                                    <button className="btn" onClick={this.handleTcModal}> <Icon viewClass="social_icon_imgg" icon="magic" />Claim Rewards</button>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

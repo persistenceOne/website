@@ -80,7 +80,7 @@ let Russian = {
             "набор передовых финансовых продуктов, начиная от инфраструктуры стейкинга как\n" +
             "услуги и торговых площадок цифрового искусства до токенизированных «реальных»\n" +
             "платформ для торговли долговыми обязательствами.",
-        "MISSION_BANNER_QUOTE1": "Data flows like water today.",
+        "MISSION_BANNER_QUOTE1": "Data flows like water today. ",
         "MISSION_BANNER_QUOTE2": " Digital assets will flow like water tomorrow.",
         "MISSION_BOX1_INFO": "Operate on the bleeding-edge of technology",
         "MISSION_BOX2_INFO": "Build best-in-class products",
