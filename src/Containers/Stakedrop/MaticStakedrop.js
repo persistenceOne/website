@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactGa from "react-ga";
 import { Modal } from "react-bootstrap";
 import Icon from "../../components/Icon";
-import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
 import axios from "axios";
 import { withRouter } from "react-router-dom";
@@ -49,7 +48,7 @@ class MaticStakedrop extends Component {
             networkName: "",
         };
         this.handleCalculate = this.handleCalculate.bind(this);
-        this.handleOninputChange = this.handleOninputChange.bind(this);
+      
         this.metamaskConnect = this.metamaskConnect.bind(this);
         this.handlexprtAddressChange = this.handlexprtAddressChange.bind(this);
     }
@@ -143,90 +142,6 @@ class MaticStakedrop extends Component {
             });
         });
     };
-
-    handleOninputChange(event) {
-        const value = event.target.value;
-        this.setState({ volume: value });
-        const re = /^[0-9\b]+$/;
-        if (event.target.value === "" || re.test(event.target.value)) {
-            this.setState({ volume: event.target.value });
-        }
-        if (event.target.value >= 2000000) {
-            this.setState({ volume: 2000000 });
-        }
-        if (event.target.value === "") {
-            const delegateAudit = 0;
-            const delegateOther = 0;
-            this.setState({ delegateAudit: delegateAudit });
-            this.setState({ delegateOther: delegateOther });
-        } else {
-            var umaticToDelegate = value;
-            var delegateAudit =
-                ((0.25 * umaticToDelegate) /
-                    (this.state.globalAuditStakedInt + umaticToDelegate) +
-                    (0.75 * umaticToDelegate) /
-                    (this.state.globalTotalStakedInt + umaticToDelegate)) *
-                this.state.totalDistributedInt;
-            var delegateOther =
-                ((0.75 * umaticToDelegate) /
-                    (this.state.globalTotalStakedInt + umaticToDelegate)) *
-                this.state.totalDistributedInt;
-            if (isNaN(delegateAudit)) {
-                delegateAudit = 0;
-            }
-            if (isNaN(delegateOther)) {
-                delegateOther = 0;
-            }
-            if (delegateAudit > 5000) {
-                this.setState({ delegateAudit: 5000 });
-            } else {
-                this.setState({
-                    delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2),
-                });
-            }
-            if (delegateOther > 5000) {
-                this.setState({ delegateOther: 5000 });
-            } else {
-                this.setState({
-                    delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2),
-                });
-            }
-        }
-    }
-    handleOnChange = (value) => {
-        this.setState({ volume: value });
-        var umaticToDelegate = value;
-        var delegateAudit =
-            ((0.25 * umaticToDelegate) /
-                (this.state.globalAuditStakedInt + umaticToDelegate) +
-                (0.75 * umaticToDelegate) /
-                (this.state.globalTotalStakedInt + umaticToDelegate)) *
-            this.state.totalDistributedInt;
-        var delegateOther =
-            ((0.75 * umaticToDelegate) /
-                (this.state.globalTotalStakedInt + umaticToDelegate)) *
-            this.state.totalDistributedInt;
-        if (isNaN(delegateAudit)) {
-            delegateAudit = 0;
-        }
-        if (isNaN(delegateOther)) {
-            delegateOther = 0;
-        }
-        if (delegateAudit > 5000) {
-            this.setState({ delegateAudit: 5000 });
-        } else {
-            this.setState({
-                delegateAudit: (Math.round(delegateAudit * 100) / 100).toFixed(2),
-            });
-        }
-        if (delegateOther > 5000) {
-            this.setState({ delegateOther: 5000 });
-        } else {
-            this.setState({
-                delegateOther: (Math.round(delegateOther * 100) / 100).toFixed(2),
-            });
-        }
-    };
     handlexprtAddressChange = (event) => {
         let calAddress = event.target.value;
         let checkBech32 = checkbech32(calAddress);
@@ -277,7 +192,7 @@ class MaticStakedrop extends Component {
     };
 
     render() {
-        const { volume } = this.state;
+        
         return (
             <div className="section-participate">
                 <section className="participate-stakedrop">
@@ -465,52 +380,7 @@ class MaticStakedrop extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-12 staking-right-bottom stakerow">
-                                        <div className="col-lg-12  header-section">
-                                            <h5 className="heading-participate">Participate</h5>
-                                        </div>
-                                        <div className="body-section">
-                                            <div className="range-data">
-                                                <p>How many MATICs would you like to stake?</p>
-
-                                                <input
-                                                    type="text"
-                                                    className="range-value"
-                                                    value={volume}
-                                                    onChange={this.handleOninputChange}
-                                                />
-                                            </div>
-                                            <div className="range-slider">
-                                                <Slider
-                                                    value={volume}
-                                                    onChange={this.handleOnChange}
-                                                    min={0}
-                                                    max={2000000}
-                                                    step={100}
-                                                />
-                                            </div>
-
-                                            <div className="">
-                                                <div className="row">
-                                                    <div className="col-lg-12 delegate-sec">
-                                                        <div className="inputstaking bottom">
-                                                            <h5>If you delegate to AUDIT.one</h5>
-                                                            <h5 className="value">
-                                                                {this.state.delegateAudit} XPRT
-                                                            </h5>
-                                                        </div>
-
-                                                        <div className="inputstaking bottom">
-                                                            <h5>to Other Validators</h5>
-                                                            <h5 className="value">
-                                                                {this.state.delegateOther} XPRT
-                                                            </h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                              
                                 </div>
                             </div>
                         </div>
