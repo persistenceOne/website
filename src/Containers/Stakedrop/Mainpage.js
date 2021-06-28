@@ -245,7 +245,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={atom_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewCosmos} className="viewcampaign"
-                                                          to="/StakeDropCosmos">Claim Rewards</Link></span>
+                                                          to="/StakeDropCosmos">View</Link></span>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>Cosmos (ATOM)</h4>
@@ -271,7 +271,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={kava_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewKava} className="viewcampaign"
-                                                          to="/StakeDropKava">Claim Rewards</Link></span>
+                                                          to="/StakeDropKava">View</Link></span>
                                                 </div>
 
                                                 <div className="about-campaign">
@@ -297,7 +297,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={luna_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickViewTerra} className="viewcampaign"
-                                                          to="/StakeDropTerra">Claim Rewards</Link></span>
+                                                          to="/StakeDropTerra">View</Link></span>
                                                 </div>
                                                 <div className="about-campaign">
                                                     <h4>Terra (LUNA)</h4>
@@ -322,7 +322,7 @@ class StakedropMainPage extends React.Component {
                                                 <div className="icon-div">
                                                     <img src={mat_icon} alt="atom"/><span><h6>Completed!</h6>
                                                     <Link onClick={this.onClickParticipate}
-                                                          to="/StakeDropMatic">View</Link></span>
+                                                          to="/StakeDropMatic">Claim Reward</Link></span>
                                                 </div>
 
                                                 <div className="about-campaign">

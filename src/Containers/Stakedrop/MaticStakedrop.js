@@ -172,6 +172,7 @@ class MaticStakedrop extends Component {
                     const totalStaked = calculatedata.globalDelegation.toFixed(2);
                     const statkedOnAudit = calculatedata.auditDelegation.toFixed(2);
                     this.setState({ blockHeight: calculatedata.magicTxCheckpoint });
+                    this.setState({ xprtAddressReward: calculatedata.xprtAddress });
                     this.setState({ totalStaked: numberWithCommas(totalStaked) });
                     this.setState({ statkedOnAudit: numberWithCommas(statkedOnAudit) });
                     this.setState({
@@ -350,6 +351,14 @@ class MaticStakedrop extends Component {
                                                     </h5>
                                                 </div>
                                             </div>
+                                            <div className="">
+                                                <div className="inputstaking justify-start">
+                                                    <h5>XPRT Address</h5>
+                                                    <h5 className="text-color">
+                                                        {this.state.xprtAddressReward}
+                                                    </h5>
+                                                </div>
+                                            </div>
                                             <div className="row common-cards">
                                                 <div className="inputstaking bottom">
                                                     <h5>Total Staked</h5>
@@ -371,12 +380,7 @@ class MaticStakedrop extends Component {
                                                         {this.state.totalRewards} XPRT
                                                     </h5>
                                                 </div>
-                                                <div className="inputstaking bottom">
-                                                    <h5>Estimated Rewards</h5>
-                                                    <h5 className="value">
-                                                        {this.state.estimatedRewards} XPRT
-                                                    </h5>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
