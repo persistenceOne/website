@@ -20,6 +20,7 @@ class MaticStakedrop extends Component {
             tcShow: false,
             volume: 0,
             blockHeight: "--",
+            xprtAddressReward:"--",
             totalStaked: "--",
             statkedOnAudit: "--",
             totalRewards: "--",
@@ -215,30 +216,30 @@ class MaticStakedrop extends Component {
                                         <div className="row body-section">
                                             <div className="col-lg-12 card-content campaign-card">
                                                 <div className="card-inner">
-                                                    <h6>Campaign Duration</h6>
-                                                    <h1>76 Days</h1>
+                                                    <h6>Rewards claim window</h6>
+                                                    <h1>27 Days</h1>
                                                 </div>
                                                 <Icon viewClass="social_icon_imgg" icon="participate" />
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
-                                                    <h6>Tokens to distribute</h6>
+                                                    <h6>Rewards</h6>
                                                     <h1>200,000 XPRT</h1>
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo">
-                                                    <h6>Start</h6>
+                                                    <h6>Start Date</h6>
                                                     <h1>
-                                                        20th of January 2021 <span>Checkpoint: 9707</span>
+                                                        29th of June 2021
                                                     </h1>
                                                 </div>
                                             </div>
                                             <div className="col-lg-12 card-content">
                                                 <div className="participate-cardtwo end">
-                                                    <h6>End</h6>
+                                                    <h6>End Date (Tentatively):</h6>
                                                     <h1>
-                                                        16th of April 2021<span>Checkpoint: 11056</span>
+                                                        26th of July 2021
                                                     </h1>
                                                 </div>
                                             </div>
@@ -284,18 +285,7 @@ class MaticStakedrop extends Component {
                                     </div>
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
-                                    <div className="col-lg-12 matic-tutorial-section">
-                                        <p className="">
-                                            Matic StakeDrop Tutorial:{" "}
-                                            <a
-                                                href="https://medium.com/persistence-blog/matic-stakedrop-tutorial-using-matic-web-wallet-how-matic-holders-can-participate-in-7f0e31df3a8c"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                How MATIC Holders Can Participate in StakeDrop?{" "}
-                                            </a>
-                                        </p>
-                                    </div>
+                                    
                                     <RecordXPRTAddress
                                         notParticipantAddress={this.state.notParticipantAddress}
                                     />
