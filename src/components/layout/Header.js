@@ -157,9 +157,9 @@ const Header = () => {
                             <div className="container">
                                 <Alert className="nav-banner alert-dismissible">
                                     <p>
-                                        <a href="https://alpha.pstake.finance" rel="noopener noreferrer"
+                                        <a href="https://register.pstake.finance/" rel="noopener noreferrer"
                                            target="_blank">
-                                            <span onClick={onClickTopBar}>Unlock liquidity for your staked assets with pSTAKE. Try out the alpha release now</span>&emsp;
+                                            <span onClick={onClickTopBar}>Unlock the liquidity for your staked assets with pSTAKE. Participate in the Staking Gala to win from the prize pool of $20,000. Register now!</span>&emsp;
                                             <img src={rightarrow} alt="arrow"/></a>
                                     </p>
                                     <img src={close} alt="close" className="close" onClick={closeBanner}/>
