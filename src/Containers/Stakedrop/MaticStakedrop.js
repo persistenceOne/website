@@ -10,7 +10,6 @@ import copy from "../../assets/images1/copy.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import MaticWallets from "./maticWallet";
 import { checkbech32 } from "../../actions/bech32Validation";
-import RecordXPRTAddress from "./RecordXPRTAddress";
 
 class MaticStakedrop extends Component {
     constructor(props, context) {
@@ -286,9 +285,9 @@ class MaticStakedrop extends Component {
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
                                     
-                                    <RecordXPRTAddress
-                                        notParticipantAddress={this.state.notParticipantAddress}
-                                    />
+                                <div className="col-lg-12 matic-tutorial-section">
+                                <p className="">Learn how to claim StakeDrop rewards for Matic campaign <a href="https://medium.com/persistence-blog/50-000-worth-of-xprt-will-be-distributed-to-matic-stakers-during-the-matic-stakedrop-beginning-97431e137133"  target="_blank" rel="noopener noreferrer">here.</a></p>
+                                    </div>
 
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
