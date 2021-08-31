@@ -321,8 +321,8 @@ class StakedropMainPage extends React.Component {
                                             <div className="col-md-12 campaign-card">
                                                 <div className="icon-div">
                                                     <img src={mat_icon} alt="atom"/><span><h6>Completed!</h6>
-                                                    <Link onClick={this.onClickParticipate}
-                                                          to="/StakeDropMatic">Claim Reward</Link></span>
+                                                    <Link onClick={this.onClickParticipate} className="viewcampaign"
+                                                          to="/StakeDropMatic">View</Link></span>
                                                 </div>
 
                                                 <div className="about-campaign">
