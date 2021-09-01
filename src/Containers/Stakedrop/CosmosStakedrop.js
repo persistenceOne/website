@@ -216,9 +216,7 @@ class CosmosStakedrop extends Component {
                                     </div>
                                 </div>
                                 <div className="col-lg-8 staking-second-section">
-                                    <div className="col-lg-12  cosmos-tutorial-section">
-                                        <p className="">Learn how to claim StakeDrop rewards for Cosmos, Kava and Terra campaign <a href="https://buff.ly/3g3zAMw"  target="_blank" rel="noopener noreferrer">here.</a></p>
-                                    </div>
+                                   
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
                                             <h5 className="heading-participate">Calculate Your Estimated Rewards</h5>
