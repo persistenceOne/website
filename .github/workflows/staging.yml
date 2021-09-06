@@ -24,7 +24,14 @@ jobs:
       - name: Build react project
         run: yarn build
         env:
-          REACT_APP_MAIL_CHIMP_URL: ${{ secrets.STAG_MAILCHIMP }}
+          REACT_APP_MAIL_CHIMP_URL: ${{ secrets.MAILCHIMP }}
+          REACT_APP_API_KEY: ${{ secrets.STAG_API_KEY }}
+          REACT_APP_KAVA_API_KEY: ${{ secrets.KAVA_STAKEDROP_STATUS }}
+          REACT_APP_GA_ID: ${{ secrets.GOOGLE_ANALYTICS }}
+          REACT_APP_TERRA_API_KEY: ${{ secrets.TERRA_STAKEDROP_STATUS }}
+          REACT_APP_MATIC_API_KEY: ${{ secrets.MATIC_STATUS_API }}
+          REACT_APP_EXPLORER_URL: ${{ secrets.CORE_EXPLORER }}
+          REACT_APP_BLOCK_EXPLORER_URL: ${{ secrets.CRUST_EXPLORER }}
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
