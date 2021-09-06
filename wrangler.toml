@@ -1,0 +1,13 @@
+name = "persistence-website"
+type = "webpack"
+usage_model = ''
+compatibility_flags = []
+workers_dev = true
+site = {bucket = "./build",entry-point = "workers-site"}
+zone_id = '000fde296cba847a78e918414382ba7a'
+
+[env.staging]
+route = 'https://staging.persistence.one/*'
+
+[env.proudction]
+route = 'https://persistence.one/*'
