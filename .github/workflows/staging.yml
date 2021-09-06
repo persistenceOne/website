@@ -1,5 +1,5 @@
 ---
-name: Deploy to Staging
+name: Cloudflare Staging 
 
 on:
   push:
