@@ -27,7 +27,8 @@ const Pstake = () => {
                             </div>
                             <div className="button-list">
                                 <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("LEARN_MORE")}</a>
-                                <button className="button coming-soon" data-hover="Coming Soon" >{t("OPEN_APP")}</button>
+                               
+                                <a href="https://app.pstake.finance/" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("OPEN_APP")}</a>
                             </div>
                         </div>
                     </div>

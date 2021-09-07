@@ -15,8 +15,9 @@ const Banner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-sm-12">
-                        <p className="caption">{t("BANNER_CAPTION")}</p>
                         <h3 className="banner-heading">{t("BANNER_HEADING")}</h3>
+                        <p className="caption">{t("BANNER_CAPTION")}</p>
+
                         <div className="banner-buttons">
                            
                             <a rel="noopener noreferrer" target="_blank" className="button xprt" href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt">Buy&nbsp;X<p>PRT</p></a>

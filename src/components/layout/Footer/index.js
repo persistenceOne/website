@@ -94,7 +94,7 @@ const Footer = (props) => {
                                             <li><a href="https://audit.one/" rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
                                             <li><a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank">{t("PSTAKE")}</a></li>
                                             <li><a href="https://twitter.com/AssetMantle" rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE")}</a></li>
-                                            <li><p className="inactive" title="Coming Soon">{t("PLEND")}</p></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>

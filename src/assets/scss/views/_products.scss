@@ -22,7 +22,7 @@
         font-weight: bold;
         font-size: 32px;
         line-height: 1.314;
-        color: #FFFFFF;
+        color: #ffffff;
       }
     }
   }
@@ -63,21 +63,20 @@
     line-height: 1;
     font-weight: 900;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-
 }
 
 .product-info-section.product-comdex {
-  background: #26272A;
+  background: #26272a;
 }
 
 .product-info-section.product-audit {
-  background: #26272A;
+  background: #26272a;
 }
 
 .product-info-section.product-pstake {
-  background: #1F2023;
+  background: #1f2023;
 
   .button.coming-soon {
     display: inline-block;
@@ -88,7 +87,7 @@
     font-size: 16px;
     line-height: 1.8;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     box-shadow: none;
     padding: 8px 35px !important;
     margin-bottom: 10px;
@@ -96,7 +95,7 @@
 
     &:hover {
       font-size: 0 !important;
-      background: #E50913;
+      background: #e50913;
     }
   }
 
@@ -108,7 +107,7 @@
     font-size: 16px;
     line-height: 1.8;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     box-shadow: none;
   }
 }
@@ -118,13 +117,22 @@
 
   .product-info {
     padding-top: 15px;
+    .info-text {
+      font-family: "Poppins", sans-serif;
+      font-size: 36px;
+      line-height: 1.759;
+      color: #ffffff;
+      margin: 0;
+      text-align: center;
+    }
 
     img {
       width: 100%;
     }
   }
 
-  .pstake, .audit {
+  .pstake,
+  .audit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,15 +149,23 @@
   .cards {
     text-align: left;
     margin-left: 60px;
-
+    .info-text {
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      line-height: 1.759;
+      color: #acacac;
+      margin-top: 25px;
+      
+    }
     .text {
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 14px;
       line-height: 200%;
-      color: #ACACAC;
+      color: #acacac;
     }
 
-    .row1, .row2 {
+    .row1,
+    .row2 {
       display: flex;
       flex-wrap: wrap;
     }
@@ -165,10 +181,10 @@
       margin: 10px 15px 25px 0;
 
       .value {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 36px;
         line-height: 1.759;
-        color: #FFFFFF;
+        color: #ffffff;
         margin: 0;
       }
 
@@ -176,15 +192,13 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1.855;
-        color: #ACACAC;
+        color: #acacac;
         margin: 0;
       }
     }
 
     .side-border {
       border-left: 1px solid #313238;
-     
-
     }
 
     .button-list {
@@ -209,13 +223,13 @@
         font-size: 16px;
         line-height: 1.8;
         text-align: center;
-        color: #FFFFFF;
+        color: #ffffff;
         box-shadow: none;
         padding: 8px 35px !important;
         margin-bottom: 10px;
 
         &:hover {
-          background: #E50913;
+          background: #e50913;
         }
       }
     }
@@ -223,7 +237,7 @@
 }
 
 .pstake-section {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 100px 0;
 
   .cards {
@@ -233,7 +247,7 @@
     }
 
     .data-card {
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.02);
       padding: 20px 30px;
       margin-right: 15px;
@@ -251,11 +265,10 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1.855;
-        color: #ACACAC;
+        color: #acacac;
         margin: 0;
       }
     }
-
   }
 
   .pstake-info {
@@ -275,7 +288,6 @@
   }
 }
 
-
 #particle {
   background-color: #b61924;
   position: fixed;
@@ -289,7 +301,6 @@
 #overlay {
   position: relative;
 }
-
 
 .swiper-container {
   width: 100%;
@@ -317,7 +328,7 @@
 .swiper-box {
   width: 500px;
   padding-top: 200px;
-  background: #FFFFFF;
+  background: #ffffff;
   height: 400px;
 }
 
@@ -357,17 +368,18 @@
         font-weight: bold;
 
         &:hover {
-          color: #E50913;
+          color: #e50913;
         }
       }
 
-      p, a {
+      p,
+      a {
         margin-top: 10px;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 14px;
         line-height: 2;
         text-align: center;
-        color: #ACACAC;
+        color: #acacac;
       }
 
       &:first-child {

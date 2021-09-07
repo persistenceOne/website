@@ -14,7 +14,7 @@ import sg1 from "../../assets/images1/backers/validators/svg/sg1.svg";
 
 import StakeWithUs from "../../assets/images1/backers/validators/StakeWithUs.png";
 import p2p_logo from "../../assets/images1/backers/validators/p2p.png";
-import HashQuark from "../../assets/images1/backers/validators/HashQuark.png";
+import InfoStones from "../../assets/images1/backers/validators/infostones.svg";
 import {useTranslation} from "react-i18next";
 
 const Validators = () => {
@@ -48,7 +48,7 @@ const Validators = () => {
                     <div className="common-row third-row">
                     <a href="https://figment.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={FigmentNetworks} alt="FigmentNetworks" /></a>
                         <a href="https://p2p.org/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={p2p_logo} alt="P2P" /></a>
-                        <a href="https://www.hashquark.io/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={HashQuark} alt="HashQuark" /></a>
+                        <a href="https://infstones.com/" className="reveal-scale-up" target="_blank" rel="noopener noreferrer"><img className="logo-img" src={InfoStones} alt="InfoStones" /></a>
                     
                     </div>
                     <div className="become-validator row">

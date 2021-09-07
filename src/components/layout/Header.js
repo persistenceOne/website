@@ -259,15 +259,7 @@ const Header = () => {
                                                     </div>
                                                     {t("ASSET_MANTLE")}
                                                 </a>
-                                                <NavLink
-                                                    className="nav-link dropdown-item stake-drop-link primary-medium-color"
-                                                    onMouseOver={() => onHoverProducts('plend-tab')}
-                                                    to="/products" onClick={() => setActiveTab('/products')}>
-                                                    <div className="dropdown-image">
-                                                        <img src={dropdown_pstake} alt="dropdown_asset"/>
-                                                    </div>
-                                                    {t("PLEND")}
-                                                </NavLink>
+                                               
                                             </div>
                                             <div className="items-content">
                                                 <div className="item internft show" id="comdex-tab">
@@ -411,14 +403,14 @@ const Header = () => {
                                     <a href={`${explorerURL}`} onClick={onClickExplorer}rel="noopener noreferrer" target="_blank" className="button-primary button">Explorer</a>
                                 </li>
                                 <li className="nav-item dropdown company language-dropdown">
-                                    <p className="nav-link dropdown-toggle"
+                                    {/* <p className="nav-link dropdown-toggle"
                                              id="company-nav-dropdown"
                                              role="button" data-toggle="dropdown" aria-haspopup="true"
                                              aria-expanded="false">
                                         <Icon
                                             viewClass="arrow-right"
                                             icon="language"/>
-                                    </p>
+                                    </p> */}
                                     <div className="dropdown-menu company-menu"
                                          aria-labelledby="company-nav-dropdown">
                                         <p className={language ==="English" ? "nav-link dropdown-item active" : "nav-link dropdown-item"}
