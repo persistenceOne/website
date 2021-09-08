@@ -1,7 +1,8 @@
 import React from "react";
 import pstake_white from "../../assets/images1/logos/pstake_white.svg";
 import {useTranslation} from "react-i18next";
-
+let PSTAKE_TWITTER_URL = process.env.REACT_APP_PSTAKE_TWITTER_URL;
+let PSTAKE_APP_URL = process.env.REACT_APP_PSTAKE_APP_URL;
 const Pstake = () => {
     const {t} = useTranslation();
     return (
@@ -26,9 +27,9 @@ const Pstake = () => {
                                 </div>
                             </div>
                             <div className="button-list">
-                                <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("LEARN_MORE")}</a>
+                                <a href={`${PSTAKE_TWITTER_URL}`} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("LEARN_MORE")}</a>
                                
-                                <a href="https://app.pstake.finance/" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("OPEN_APP")}</a>
+                                <a href={`${PSTAKE_APP_URL}`} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("OPEN_APP")}</a>
                             </div>
                         </div>
                     </div>

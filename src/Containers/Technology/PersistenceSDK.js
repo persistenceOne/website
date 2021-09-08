@@ -1,6 +1,8 @@
 import React from "react";
 import sdk from "../../assets/images1/technology_psdk.svg";
 import {useTranslation} from "react-i18next";
+let PERSISTENCEONESDK_GITHUB_URL = process.env.REACT_APP_PERSISTENCEONESDK_GITHUB_URL;
+let PERSISTENCEONE_DISCORD_URL = process.env.REACT_APP_PERSISTENCEONE_DISCORD_URL;
 const PersistenceSDK = () => {
     const {t} = useTranslation();
     return (
@@ -13,8 +15,8 @@ const PersistenceSDK = () => {
                             <p className="text">{t("PERSISTENCE_SDK_INFO")}
                             </p>
                             <div className="button-list">
-                                <a href="https://github.com/persistenceOne/persistenceSDK" className="button-primary button" rel="noopener noreferrer" target="_blank">{t("GITHUB")}</a>
-                                <a href="https://discord.gg/SaBKpjbnhH" className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("DEV_CHAT")}</a>
+                                <a href={`${PERSISTENCEONESDK_GITHUB_URL}`} className="button-primary button" rel="noopener noreferrer" target="_blank">{t("GITHUB")}</a>
+                                <a href={`${PERSISTENCEONE_DISCORD_URL}`} className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("DEV_CHAT")}</a>
                             </div>
                         </div>
                         <div className="col-md-6 right-section">

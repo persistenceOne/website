@@ -5,7 +5,10 @@ import assetmantle from '../../assets/images1/mantle_white.svg'
 import audit from '../../assets/images1/logos/audit_white.svg'
 import Icon from "../../components/Icon";
 import { useTranslation } from "react-i18next";
-
+let COMDEX_URL = process.env.REACT_APP_COMDEX_URL;
+let AUDIT_URL = process.env.REACT_APP_AUDIT_URL;
+let PSTAKE_TWITTER_URL = process.env.REACT_APP_PSTAKE_TWITTER_URL;
+let ASSETMANTLE_TWITTER_URL = process.env.REACT_APP_ASSETMANTLE_TWITTER_URL;
 const Products = () => {
     const { t } = useTranslation();
     return (
@@ -27,7 +30,7 @@ const Products = () => {
                                 <img className="image-logo" src={comdex} alt="comdex-logo" />
                                 <p className="overlay-subtext">{t("COMDEX_CAPTION")}</p>
                             </div>
-                            <a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank"
+                            <a href={`${COMDEX_URL}`} rel="noopener noreferrer" target="_blank"
                                 className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
                                 <div className="">
@@ -48,7 +51,7 @@ const Products = () => {
 
                             <img className="image-logo" src={audit} alt="audit-logo" />
                             <p className="overlay-subtext">{t("AUDIT_ONE_CAPTION")}</p>
-                            <a href="http://audit.one/" rel="noopener noreferrer" target="_blank"
+                            <a href={`${AUDIT_URL}`} rel="noopener noreferrer" target="_blank"
                                 className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
                                 <div className="">
@@ -69,7 +72,7 @@ const Products = () => {
 
                             <img className="image-logo" src={pstake} alt="pstake-logo" />
                             <p className="overlay-subtext">{t("LIQUID_STAKING")}</p>
-                            <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank"
+                            <a href={`${PSTAKE_TWITTER_URL}`} rel="noopener noreferrer" target="_blank"
                                 className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
                                 <div className="">
@@ -86,7 +89,7 @@ const Products = () => {
                             <div className="content-overlay"></div>
                             <img className="image-logo" src={assetmantle} alt="assetmantle-logo" />
                             <p className="overlay-subtext">{t("ASSET_MANTLE_CAPTION")}</p>
-                            <a href="https://twitter.com/AssetMantle" rel="noopener noreferrer" target="_blank"
+                            <a href={`${ASSETMANTLE_TWITTER_URL}`} rel="noopener noreferrer" target="_blank"
                                 className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")} </p>
                                 <div className="">

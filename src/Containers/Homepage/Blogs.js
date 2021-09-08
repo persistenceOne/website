@@ -1,6 +1,19 @@
 import React from "react";
 import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
+let BLOG_1_URL = process.env.REACT_APP_BLOG_1_URL;
+let BLOG_2_URL = process.env.REACT_APP_BLOG_2_URL;
+let BLOG_3_URL = process.env.REACT_APP_BLOG_3_URL;
+let BLOG_4_URL = process.env.REACT_APP_BLOG_4_URL;
+let BLOG_5_URL = process.env.REACT_APP_BLOG_5_URL;
+let BLOG_1_IMG_URL = process.env.REACT_APP_BLOG_1_IMG_URL;
+let BLOG_2_IMG_URL = process.env.REACT_APP_BLOG_2_IMG_URL;
+let BLOG_3_IMG_URL = process.env.REACT_APP_BLOG_3_IMG_URL;
+let BLOG_4_IMG_URL = process.env.REACT_APP_BLOG_4_IMG_URL;
+let BLOG_5_IMG_URL = process.env.REACT_APP_BLOG_5_IMG_URL;
+
+
+
 
 const Blogs = () => {
     const {t} = useTranslation();
@@ -12,12 +25,12 @@ const Blogs = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-5" data-aos="fade-up">
-                        <a href="https://medium.com/@pstakefinance/introducing-pstake-unlocking-liquidity-of-staked-assets-c704738ab37f"
+                        <a href={`${BLOG_1_URL}`}
                            rel="noopener noreferrer" target="_blank">
                             <div className="blog-section">
                                 <div className="custom-card">
                                     <img className="card-img-top" alt="blog"
-                                         src="https://miro.medium.com/max/2880/1*mz3Ee2H4quxAOl7VQ6IgSQ.gif"/>
+                                         src={`${BLOG_1_IMG_URL}`}/>
                                     <div className="custom-card-body">
                                         <p className="text">{t("ABOUT")}</p>
                                         <p className="text1">{t("BLOG_TEXT_HEAD")}</p>
@@ -31,12 +44,12 @@ const Blogs = () => {
                     <div className="col-md-7">
                         <div className="row m-0">
                             <div className="col-md-6 blog-articles left">
-                            <a href="https://medium.com/persistence-blog/xprt-tokenomics-and-utility-powering-the-persistence-ecosystem-70fc49e10362"
+                            <a href={`${BLOG_2_URL}`}
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card mb-10" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog2"
-                                                 src="https://miro.medium.com/max/3200/0*pmqr3HP6JhJGG0uC"/>
+                                                 src={`${BLOG_2_IMG_URL}`}/>
                                         </div>
 
                                         <div className="custom-card-body">
@@ -45,12 +58,12 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://medium.com/persistence-blog/persistence-xprt-staking-guide-4504cf9a19df"
+                                <a href={BLOG_3_URL}
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog3"
-                                                 src="https://miro.medium.com/max/1000/1*ZQmstOH9DYK30v8zQWB8-g.png"/>
+                                                 src={`${BLOG_3_IMG_URL}`}/>
                                         </div>
                                         <div className="custom-card-body">
                                             <p className="text1">{t("STAKING")}</p>
@@ -60,12 +73,12 @@ const Blogs = () => {
                                 </a>
                             </div>
                             <div className="col-md-6 blog-articles right">
-                                <a href="https://medium.com/persistence-blog/our-journey-toward-a-new-financial-paradigm-persistence-200e7efafa81"
+                                <a href={`${BLOG_4_URL}`}
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card mb-10" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog4"
-                                                 src="https://miro.medium.com/max/3367/1*GiRBfno3sWdPEdLaeqHpQQ.png"/>
+                                                 src={`${BLOG_4_IMG_URL}`}/>
                                         </div>
 
                                         <div className="custom-card-body">
@@ -74,12 +87,12 @@ const Blogs = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="https://medium.com/persistence-blog/persistence-raises-3-7m-from-industry-heavyweights-to-bridge-traditional-finance-and-defi-via-nfts-a30256cdb428"
+                                <a href={`${BLOG_5_URL}`}
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog4"
-                                                 src="https://miro.medium.com/max/6732/1*8tJhZXSzGxRl2aisB43BmA.png"/>
+                                                 src={`${BLOG_5_IMG_URL}`}/>
                                         </div>
 
                                         <div className="custom-card-body">

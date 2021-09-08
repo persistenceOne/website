@@ -1,7 +1,8 @@
 import React from "react";
 import mantle_white from "../../assets/images1/technology_mantle.svg";
 import {useTranslation} from "react-i18next";
-
+let ASSETMANTLE_GITHUB_URL = process.env.REACT_APP_ASSETMANTLE_GITHUB_URL;
+let INTERNFT_DOCS_URL = process.env.REACT_APP_INTERNFT_DOCS_URL;
 const AssetMantle = () => {
     const {t} = useTranslation();
     return (
@@ -15,10 +16,10 @@ const AssetMantle = () => {
                             <p className="text">{t("ASSET_MANTLE_INFO")}
                             </p>
                             <div className="button-list">
-                                <a href="https://github.com/persistenceOne/assetMantle"
+                                <a href={`${ASSETMANTLE_GITHUB_URL}`}
                                    className="button-primary button" rel="noopener noreferrer"
                                    target="_blank">{t("GITHUB")}</a>
-                                <a href="https://docs.internft.org/" className="button-secondary button"
+                                <a href={`${INTERNFT_DOCS_URL}`} className="button-secondary button"
                                    rel="noopener noreferrer" target="_blank">{t("DOCS")}</a>
                             </div>
                         </div>

@@ -7,7 +7,8 @@ import Icon from "../../components/Icon";
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import {useTranslation} from "react-i18next";
-
+let PONE_ESTABLISHED_ARTICLE = process.env.REACT_APP_PONE_ESTABLISHED_ARTICLE;
+let PONE_ESTABLISHED_IMAGE_URL = process.env.REACT_APP_PONE_ESTABLISHED_IMAGE_URL;
 const Info = () => {
     const {t} = useTranslation();
     return (
@@ -28,10 +29,10 @@ const Info = () => {
                                         <div className="event">
                                             <img className="event-status-img" src={establish} alt="establish-img"/>
                                             <p className="event-name establish">Persistence One Established</p>
-                                            <a href="https://medium.com/persistence-blog/our-journey-toward-a-new-financial-paradigm-persistence-200e7efafa81"
+                                            <a href={`${PONE_ESTABLISHED_ARTICLE}`}
                                                rel="noopener noreferrer" target="_blank" className="hover-blog">
                                                 <img className="event-status-img blog-image" alt="blog2"
-                                                     src="https://miro.medium.com/max/1000/1*GiRBfno3sWdPEdLaeqHpQQ.png"/>
+                                                     src={`${PONE_ESTABLISHED_IMAGE_URL}`}/>
                                                 <div className="blog-info">
                                                     <div className="medium-icon">
                                                         <Icon viewClass="social_icon_imgg" icon="medium-m"/>

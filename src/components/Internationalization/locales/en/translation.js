@@ -3,7 +3,7 @@ let English = {
         //home page banner
         "NETWORK_ERROR": "Network Disconnected. Check your data or wifi connection.",
         "BANNER_CAPTION": "Liquid Staking | NFTs | Synthetics",
-        "BANNER_HEADING": "Protocol Powering Next-Gen Financial Products",
+        "BANNER_HEADING": "Protocol enabling exposure to multiple asset classes",
         "BLOG": "Blog",
         "SCROLL_DOWN": "Scroll Down",
         "BANNER_BUTTON_XPRT": "Earn XPRT",
@@ -21,6 +21,8 @@ let English = {
         "BUILDING_SECTION_DESCRIPTION": "Persistence is building an ecosystem of financial products, focusing on both institutional and crypto-native use cases.",
         "COMDEX": "COMDEX",
         "COMDEX_CAPTION": "Synthetics Trading Platform",
+        "COMDEX_COMINGSOON_PLATFORM":"Coming Soon: Comdex Synthetics Platform",
+        "COMDEX_ENTERPRISE":"Enterprise",
         "LIQUID_STAKING": "Liquid Staking",
         "AUDIT_ONE": "AUDIT.one",
         "AUDIT_ONE_CAPTION": "Staking-as-a-Service",

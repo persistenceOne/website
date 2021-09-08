@@ -1,7 +1,10 @@
 import React from "react";
 import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
-let explorerURL = process.env.REACT_APP_EXPLORER_URL;
+let explorerURL = process.env.REACT_APP_REACT_APP_EXPLORER_URL;
+let INTERNFT_URL = process.env.REACT_APP_REACT_APP_INTERNFT_URL;
+let INTERNFT_DOCS_URL = process.env.REACT_APP_INTERNFT_DOCS_URL;
+let PERSISTENCEJS_URL = process.env.REACT_APP_PERSISTENCEJS_URL;
 let crust2ExplorerURL = process.env.REACT_APP_CRUST_2_EXPLORER_URL;
 const Tools = () => {
     const {t} = useTranslation();
@@ -26,8 +29,8 @@ const Tools = () => {
                             <div className="box box2">
                                 <p>interNFT</p>
                                 <div className="logo">
-                                    <a href="https://github.com/interNFT/" rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="github2"/></a>
-                                    <a className="link-box" href="https://docs.internft.org/" rel="noopener noreferrer" target="_blank">{t("DOCS")}</a>
+                                    <a href={`${INTERNFT_URL}`} rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="github2"/></a>
+                                    <a className="link-box" href={`${INTERNFT_DOCS_URL}`} rel="noopener noreferrer" target="_blank">{t("DOCS")}</a>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +38,7 @@ const Tools = () => {
                             <div className="box">
                                 <p>PersistenceJS</p>
                                 <div className="logo">
-                                    <a href="https://github.com/persistenceOne/persistenceJS" rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="github2"/></a>
+                                    <a href={`${PERSISTENCEJS_URL}`} rel="noopener noreferrer" target="_blank"><Icon viewClass="social_icon_imgg" icon="github2"/></a>
                                 </div>
                             </div>
                         </div>
