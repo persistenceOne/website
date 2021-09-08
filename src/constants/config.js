@@ -3,6 +3,7 @@ export const NETWORK_NAME = "Ethereum mainnet";
 export const ASCENDEX_URL = "https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt";
 export const PERSISTENCE_WALLET = "https://wallet.persistence.one/";
 export const AUCTION_PERSISTENCE = "https://auction.persistence.one/";
+export const FORUM_PERSISTENCE = "https://forum.persistence.one/";
 export const BECOME_VALIDATOR = "https://docs.google.com/forms/d/e/1FAIpQLSe6kIw0ihP4gwA5OSqIMLS_hEodR76N4Y5Tblhl4S3ifxJZ8Q/viewform";
 export const INTERNFT_URL = "https://internft.org/";
 export const INTERNFT_DOCS_URL = "https://docs.internft.org/";

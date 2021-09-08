@@ -19,6 +19,7 @@ import {COMDEX_URL,
     PERSISTENCEONE_REDDIT_URL,
     PERSISTENCEONE_YOUTUBE_URL,
     PERSISTENCEONE_MEDIUM_URL,
+    FORUM_PERSISTENCE,
     PERSISTENCEONE_LINKEDIN_URL
 } from "../../../constants/config";
 
@@ -97,7 +98,7 @@ const Footer = (props) => {
                                                 rel="noopener noreferrer">{t("PROTOCOL_PAPER")}</a></li>
                                             <li><Link to="/ecosystem">{t("ECOSYSTEM")}</Link></li>
                                             <li><Link to="/technology">{t("TECHNOLOGY")}</Link></li>
-                                            <li><a href="https://forum.persistence.one/" rel="noopener noreferrer" target="_blank">{t("FORUM")}</a></li>
+                                            <li><a href={FORUM_PERSISTENCE} rel="noopener noreferrer" target="_blank">{t("FORUM")}</a></li>
                                         </ul>
                                     </div>
                                 </div>
