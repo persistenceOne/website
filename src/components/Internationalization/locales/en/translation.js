@@ -73,6 +73,7 @@ let English = {
         "XPRT_TAB_CONTENT": "The XPRT token is primarily a governance token for the Persistence chain. Once the Persistence mainnet is launched, token holders will be able to stake XPRT tokens to passively earn more XPRT.",
         //Footer
         "PROTOCOL_PAPER": "Protocol Paper",
+        "FORUM": "Forum",
         "GET_IN_TOUCH": "Get in touch",
         "SUBSCRIBE_HEADING": "Subscribe to our newsletter",
         "SUBSCRIBE_NOTE": "Want to receive the latest updates?",
