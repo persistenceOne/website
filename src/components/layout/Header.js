@@ -12,15 +12,17 @@ import dropdown_comdex from "../../assets/images1/dropdown_comdex.svg"
 import dropdown_audit from "../../assets/images1/dropdown_audit.svg"
 import dropdown_pstake from "../../assets/images1/dropdown_pstake.svg"
 import { useTranslation } from "react-i18next";
-let PSTAKE_APP_URL = process.env.REACT_APP_PSTAKE_APP_URL;
-let COMDEX_URL = process.env.REACT_APP_COMDEX_URL;
-let AUDIT_URL = process.env.REACT_APP_AUDIT_URL;
-let ASSETMANTLE_TWITTER_URL = process.env.REACT_APP_ASSETMANTLE_TWITTER_URL;
-let PSTAKE_TWITTER_URL = process.env.REACT_APP_PSTAKE_TWITTER_URL;
-let INTERNFT_URL = process.env.REACT_APP_INTERNFT_URL;
-let BECOME_VALIDATOR = process.env.REACT_APP_BECOME_VALIDATOR;
-let AUCTION_PERSISTENCE = process.env.REACT_APP_AUCTION_PERSISTENCE;
-let PERSISTENCE_WALLET = process.env.REACT_APP_PERSISTENCE_WALLET;
+import {PSTAKE_APP_URL,
+    COMDEX_URL,
+    AUDIT_URL,
+    ASSETMANTLE_TWITTER_URL,
+    PSTAKE_TWITTER_URL,
+    INTERNFT_URL,
+    BECOME_VALIDATOR,
+    AUCTION_PERSISTENCE,
+    PERSISTENCE_WALLET
+} from "../../constants/config";
+
 
 
 
@@ -168,7 +170,7 @@ const Header = () => {
                             <div className="container">
                                 <Alert className="nav-banner alert-dismissible">
                                     <p>
-                                        <a href={`${PSTAKE_APP_URL}`} rel="noopener noreferrer"
+                                        <a href={PSTAKE_APP_URL} rel="noopener noreferrer"
                                             target="_blank">
                                             <span onClick={onClickTopBar}>pSTAKE Beta is live. Stake your ATOM now!</span>&emsp;
                                             <img src={rightarrow} alt="arrow" /></a>
@@ -232,7 +234,7 @@ const Header = () => {
                                             <div className="items">
                                                 <a className="nav-link dropdown-item primary-medium-color"
                                                     onMouseOver={() => onHoverProducts('comdex-tab')}
-                                                    href={`${COMDEX_URL}`}
+                                                    href={COMDEX_URL}
                                                     rel="noopener noreferrer"
                                                     target="_blank">
                                                     <div className="dropdown-image">
@@ -242,7 +244,7 @@ const Header = () => {
                                                 </a>
                                                 <a className="nav-link dropdown-item primary-medium-color"
                                                     onMouseOver={() => onHoverProducts('audit-tab')}
-                                                    href={`${AUDIT_URL}`}
+                                                    href={AUDIT_URL}
                                                     rel="noopener noreferrer"
                                                     target="_blank">
                                                     <div className="dropdown-image">
@@ -252,7 +254,7 @@ const Header = () => {
                                                 </a>
                                                 <a className="nav-link dropdown-item primary-medium-color"
                                                     onMouseOver={() => onHoverProducts('pstake-tab')}
-                                                    href={`${PSTAKE_TWITTER_URL}`}
+                                                    href={PSTAKE_TWITTER_URL}
                                                     rel="noopener noreferrer"
                                                     target="_blank">
                                                     <div className="dropdown-image">
@@ -262,7 +264,7 @@ const Header = () => {
                                                 </a>
                                                 <a className="nav-link dropdown-item primary-medium-color"
                                                     onMouseOver={() => onHoverProducts('mantle-tab')}
-                                                    href={`${ASSETMANTLE_TWITTER_URL}`}
+                                                    href={ASSETMANTLE_TWITTER_URL}
                                                     rel="noopener noreferrer"
                                                     target="_blank">
                                                     <div className="dropdown-image">
@@ -275,28 +277,28 @@ const Header = () => {
                                             <div className="items-content">
                                                 <div className="item internft show" id="comdex-tab">
                                                     <p>{t("COMDEX_TAB_CONTENT")} </p>
-                                                    <a href={`${COMDEX_URL}`} rel="noopener noreferrer"
+                                                    <a href={COMDEX_URL} rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="audit-tab">
                                                     <p>{t("AUDIT_TAB_CONTENT")}</p>
 
-                                                    <a href={`${AUDIT_URL}`} rel="noopener noreferrer"
+                                                    <a href={AUDIT_URL} rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="pstake-tab">
                                                     <p> {t("PSTAKE_TAB_CONTENT")}
                                                     </p>
-                                                    <a href={`${PSTAKE_TWITTER_URL}`}
+                                                    <a href={PSTAKE_TWITTER_URL}
                                                         rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button">{t("LEARN_MORE")}</a>
                                                 </div>
                                                 <div className="item stake-drop" id="mantle-tab">
                                                     <p>{t("MANTLE_TAB_CONTENT")}</p>
-                                                    <a href={`${ASSETMANTLE_TWITTER_URL}`}
+                                                    <a href={ASSETMANTLE_TWITTER_URL}
                                                         rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button">{t("LEARN_MORE")}</a>
@@ -374,7 +376,7 @@ const Header = () => {
                                             <div className="items-content">
                                                 <div className="item internft show" id="intenft-tab">
                                                     <p>{t("NFT_TAB_CONTENT")}</p>
-                                                    <a href={`${INTERNFT_URL}`} rel="noopener noreferrer"
+                                                    <a href={INTERNFT_URL} rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button">{t("LEARN_MORE")}</a>
                                                 </div>
@@ -387,7 +389,7 @@ const Header = () => {
                                                 </div>
                                                 <div className="item stake-drop" id="validators-tab">
                                                     <p>{t("VALIDATORS_TAB_CONTENT")}</p>
-                                                    <a href={`${BECOME_VALIDATOR}`}
+                                                    <a href={BECOME_VALIDATOR}
                                                         rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button">{t("BECOME_VALIDATOR")}</a>
@@ -399,7 +401,7 @@ const Header = () => {
                                                     <p>{t("XPRT_TAB_CONTENT")}</p>
                                                     <NavLink to='/xprttoken'
                                                         className="button">{t("LEARN_MORE")}</NavLink>
-                                                    <a href={`${AUCTION_PERSISTENCE}`} rel="noopener noreferrer"
+                                                    <a href={AUCTION_PERSISTENCE} rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button ml-10">XPRT Auction</a>
                                                 </div>
@@ -408,7 +410,7 @@ const Header = () => {
                                     </div>
                                 </li>
                                 <li className="nav-item wallet-button">
-                                    <a href={`${PERSISTENCE_WALLET}`} onClick={onClickWallet} rel="noopener noreferrer" target="_blank" className="button-primary button">Wallet</a>
+                                    <a href={PERSISTENCE_WALLET} onClick={onClickWallet} rel="noopener noreferrer" target="_blank" className="button-primary button">Wallet</a>
                                 </li>
                                 <li className="nav-item wallet-button">
                                     <a href={`${explorerURL}`} onClick={onClickExplorer} rel="noopener noreferrer" target="_blank" className="button-primary button">Explorer</a>

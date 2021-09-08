@@ -6,47 +6,45 @@ import paper from "../../assets/images1/technology/paper.svg";
 import whitepaper from "../../assets/images1/whitepaper.pdf";
 import explorer from "../../assets/images1/technology/explorer.svg";
 import wallet from "../../assets/images1/technology/wallet.svg";
-import {useTranslation} from "react-i18next";
-let PERSISTENCEONE_GITHUB_URL = process.env.REACT_APP_PERSISTENCEONE_GITHUB_URL;
-let INTERNFT_DOCS_URL = process.env.REACT_APP_INTERNFT_DOCS_URL;
-let BECOME_VALIDATOR = process.env.REACT_APP_BECOME_VALIDATOR;
-let PERSISTENCE_WALLET = process.env.REACT_APP_PERSISTENCE_WALLET;
+import { useTranslation } from "react-i18next";
+import { PERSISTENCEONE_GITHUB_URL, INTERNFT_DOCS_URL, BECOME_VALIDATOR, PERSISTENCE_WALLET } from "../../constants/config";
+
 let explorerURL = process.env.REACT_APP_EXPLORER_URL;
 const Technologies = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     return (
         <section className="section-technology-list" data-aos="fade">
             <div className="container">
                 <div className="list">
                     <div className="list-item">
-                        <img src={sdk} alt="sdk"/>
+                        <img src={sdk} alt="sdk" />
                         <p className="name">{t("PERSISTENCE_SDK")}</p>
-                        <a href={`${PERSISTENCEONE_GITHUB_URL}`} rel="noopener noreferrer" target="_blank" className="view">{t("VIEW_GITHUB")}</a>
+                        <a href={PERSISTENCEONE_GITHUB_URL} rel="noopener noreferrer" target="_blank" className="view">{t("VIEW_GITHUB")}</a>
                     </div>
                     <div className="list-item">
-                        <img src={nft} alt="sdk"/>
+                        <img src={nft} alt="sdk" />
                         <p className="name">{t("NFT_MODULE")}</p>
-                        <a href={`${INTERNFT_DOCS_URL}`} rel="noopener noreferrer" target="_blank" className="view">{t("READ_DOC")}</a>
+                        <a href={INTERNFT_DOCS_URL} rel="noopener noreferrer" target="_blank" className="view">{t("READ_DOC")}</a>
                     </div>
                     <div className="list-item">
-                        <img src={node} alt="sdk"/>
+                        <img src={node} alt="sdk" />
                         <p className="name">{t("VALIDATOR_NODE")}</p>
-                        <a href={`${BECOME_VALIDATOR}`} rel="noopener noreferrer" target="_blank" className="view">{t("BECOME_VALIDATOR")}</a>
+                        <a href={BECOME_VALIDATOR} rel="noopener noreferrer" target="_blank" className="view">{t("BECOME_VALIDATOR")}</a>
                     </div>
                     <div className="list-item">
-                        <img src={paper} alt="sdk"/>
+                        <img src={paper} alt="sdk" />
                         <p className="name">{t("EXPLORER")}</p>
-                        <a href={`${explorerURL}`}rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
+                        <a href={explorerURL} rel="noopener noreferrer" target="_blank" className="view">{t("OPEN_CRUST")}</a>
                     </div>
                     <div className="list-item">
-                        <img src={explorer} alt="sdk"/>
+                        <img src={explorer} alt="sdk" />
                         <p className="name">{t("PROTOCOL_PAPER")}</p>
                         <a href={whitepaper} rel="noopener noreferrer" target="_blank" className="view">{t("EXPLORE_MORE")}</a>
                     </div>
                     <div className="list-item">
-                        <img src={wallet} alt="sdk"/>
+                        <img src={wallet} alt="sdk" />
                         <p className="name">Persistence Wallet</p>
-                        <a href={`${PERSISTENCE_WALLET}`} rel="noopener noreferrer" target="_blank" className="view">Open</a>
+                        <a href={PERSISTENCE_WALLET} rel="noopener noreferrer" target="_blank" className="view">Open</a>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import mantle from "../../assets/images1/mantle_white.svg"
 import {useTranslation} from "react-i18next";
-let ASSETMANTLE_TWITTER_URL = process.env.REACT_APP_ASSETMANTLE_TWITTER_URL;
+import {ASSETMANTLE_TWITTER_URL,  
+} from "../../constants/config";
+
 
 const ComingSoon = () => {
     const {t} = useTranslation();
@@ -18,7 +20,7 @@ const ComingSoon = () => {
                             <p className="text">{t("NF_MARKET_FRAMEWORK")}</p>
                             
                             <div className="button-list">
-                                <a href={`${ASSETMANTLE_TWITTER_URL}`} className="button-primary button" rel="noopener noreferrer"
+                                <a href={ASSETMANTLE_TWITTER_URL} className="button-primary button" rel="noopener noreferrer"
                                    target="_blank">{t("LEARN_MORE")}</a>
                             </div>
                         </div>

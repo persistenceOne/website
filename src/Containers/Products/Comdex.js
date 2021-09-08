@@ -1,8 +1,10 @@
 import React from "react";
 import comdex_product from "../../assets/images1/comdex_product.svg";
 import {useTranslation} from "react-i18next";
+
+import {COMDEX_URL
+} from "../../constants/config";
 let explorerBlockURL = process.env.REACT_APP_BLOCK_EXPLORER_URL;
-let COMDEX_URL = process.env.REACT_APP_COMDEX_URL;
 const Comdex = () => {
     const {t} = useTranslation();
     return (
@@ -32,7 +34,7 @@ const Comdex = () => {
                                 </div>
                             </div>
                             <div className="button-list">
-                                <a href={`${COMDEX_URL}`} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("COMDEX_SG")}</a>
+                                <a href={COMDEX_URL} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("COMDEX_SG")}</a>
                                 <a href={`${explorerBlockURL}`} className="button-secondary button" rel="noopener noreferrer" target="_blank">{t("BLOCK_EXPLORER")}</a>
                             </div>
                             <p className="info-text">{t("COMDEX_COMINGSOON_PLATFORM")}</p>

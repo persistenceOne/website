@@ -8,53 +8,55 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import Icon from "../../Icon";
 import Scroll from 'react-scroll';
 import { useTranslation } from "react-i18next";
-let COMDEX_URL = process.env.REACT_APP_COMDEX_URL;
-let AUDIT_URL = process.env.REACT_APP_AUDIT_URL;
-let ASSETMANTLE_TWITTER_URL = process.env.REACT_APP_ASSETMANTLE_TWITTER_URL;
-let PERSISTENCEONE_DISCORD_URL = process.env.REACT_APP_PERSISTENCEONE_DISCORD_URL;
-let PSTAKE_TWITTER_URL = process.env.REACT_APP_PSTAKE_TWITTER_URL;
-let PERSISTENCEONE_TWITTER_URL = process.env.REACT_APP_PERSISTENCEONE_TWITTER_URL;
-let PERSISTENCEONE_TELEGRAM_URL = process.env.REACT_APP_PERSISTENCEONE_TELEGRAM_URL;
-let PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL = process.env.REACT_APP_PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL;
-let PERSISTENCEONE_REDDIT_URL = process.env.REACT_APP_PERSISTENCEONE_REDDIT_URL;
-let PERSISTENCEONE_YOUTUBE_URL = process.env.REACT_APP_PERSISTENCEONE_YOUTUBE_URL;
-let PERSISTENCEONE_MEDIUM_URL = process.env.REACT_APP_PERSISTENCEONE_MEDIUM_URL;
-let PERSISTENCEONE_LINKEDIN_URL = process.env.REACT_APP_PERSISTENCEONE_LINKEDIN_URL;
+import {COMDEX_URL,
+    AUDIT_URL,
+    ASSETMANTLE_TWITTER_URL,
+    PERSISTENCEONE_DISCORD_URL,
+    PSTAKE_TWITTER_URL,
+    PERSISTENCEONE_TWITTER_URL,
+    PERSISTENCEONE_TELEGRAM_URL,
+    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
+    PERSISTENCEONE_REDDIT_URL,
+    PERSISTENCEONE_YOUTUBE_URL,
+    PERSISTENCEONE_MEDIUM_URL,
+    PERSISTENCEONE_LINKEDIN_URL
+} from "../../../constants/config";
+
 let scroll = Scroll.animateScroll;
 
 const socialList = [
     {
-        url: `${PERSISTENCEONE_TWITTER_URL}`,
+        url: {PERSISTENCEONE_TWITTER_URL},
         iconName: 'twitter-logo',
         tooltip: 'twitter'
     },
     {
-        url: `${PERSISTENCEONE_TELEGRAM_URL}`,
+        url: {PERSISTENCEONE_TELEGRAM_URL},
         iconName: 'telegram-plane',
         tooltip: 'telegram'
     },
     {
-        url: `${ PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL }`,
+        url: { PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL },
         iconName: 'announcements',
         tooltip: 'announcements'
     }, {
-        url: `${ PERSISTENCEONE_DISCORD_URL }`,
+        url: { PERSISTENCEONE_DISCORD_URL },
         iconName: 'discord',
         tooltip: 'discord'
     }, {
-        url: `${ PERSISTENCEONE_REDDIT_URL }`,
+        url: { PERSISTENCEONE_REDDIT_URL },
         iconName: 'reddit-round',
         tooltip: 'reddit'
     }, {
-        url: `${ PERSISTENCEONE_YOUTUBE_URL }`,
+        url: { PERSISTENCEONE_YOUTUBE_URL },
         iconName: 'youtube',
         tooltip: 'youtube'
     }, {
-        url: `${ PERSISTENCEONE_MEDIUM_URL }`,
+        url: { PERSISTENCEONE_MEDIUM_URL },
         iconName: 'medium-m',
         tooltip: 'medium'
     }, {
-        url: `${ PERSISTENCEONE_LINKEDIN_URL }`,
+        url: { PERSISTENCEONE_LINKEDIN_URL },
         iconName: 'linkedin-footer',
         tooltip: 'linkedIn'
     },
@@ -102,10 +104,10 @@ const Footer = (props) => {
                                     <h6>{t("PRODUCTS")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href={`${COMDEX_URL}`} rel="noopener noreferrer" target="_blank">{t("COMDEX")}</a></li>
-                                            <li><a href={`${AUDIT_URL}`} rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
-                                            <li><a href={`${PSTAKE_TWITTER_URL}`} rel="noopener noreferrer" target="_blank">{t("PSTAKE")}</a></li>
-                                            <li><a href={`${ASSETMANTLE_TWITTER_URL}`} rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE")}</a></li>
+                                            <li><a href={COMDEX_URL} rel="noopener noreferrer" target="_blank">{t("COMDEX")}</a></li>
+                                            <li><a href={AUDIT_URL} rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
+                                            <li><a href={PSTAKE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("PSTAKE")}</a></li>
+                                            <li><a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE")}</a></li>
 
                                         </ul>
                                     </div>

@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Icon from "../../components/Icon";
 import Modal from "./Modal";
 import { useTranslation } from "react-i18next";
-let PERSISTENCEONE_TELEGRAM_URL = process.env.REACT_APP_PERSISTENCEONE_TELEGRAM_URL;
-let PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL = process.env.REACT_APP_PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL;
-let PERSISTENCEONE_DISCORD_URL = process.env.REACT_APP_PERSISTENCEONE_DISCORD_URL;
-let PERSISTENCEONE_TWITTER_URL = process.env.REACT_APP_PERSISTENCEONE_TWITTER_URL;
-let PERSISTENCEONE_YOUTUBE_URL = process.env.REACT_APP_PERSISTENCEONE_YOUTUBE_URL;
-let PERSISTENCEONE_REDDIT_URL = process.env.REACT_APP_PERSISTENCEONE_REDDIT_URL;
+import {PERSISTENCEONE_TELEGRAM_URL, 
+    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
+    PERSISTENCEONE_DISCORD_URL,
+    PERSISTENCEONE_TWITTER_URL,
+    PERSISTENCEONE_YOUTUBE_URL,
+    PERSISTENCEONE_REDDIT_URL
+} from "../../constants/config";
 
 
 
@@ -24,7 +25,7 @@ const Banner = () => {
                 <h3 className="section-title">{t("ECOSYSTEM")}</h3>
                 <div className="social-links">
                     <div className="link">
-                        <a className="text" href={`${PERSISTENCEONE_TELEGRAM_URL}`} rel="noopener noreferrer"
+                        <a className="text" href={PERSISTENCEONE_TELEGRAM_URL} rel="noopener noreferrer"
                             target="_blank">
                             <div className="outer-box">
                                 <div className="icon-box">
@@ -35,7 +36,7 @@ const Banner = () => {
                         <p className="text">{t("COMMUNITY_CHAT")}</p>
                     </div>
                     <div className="link">
-                        <a className="text" href={`${PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL}`} rel="noopener noreferrer"
+                        <a className="text" href={PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL} rel="noopener noreferrer"
                             target="_blank">
                             <div className="outer-box">
                                 <div className="icon-box">
@@ -46,7 +47,7 @@ const Banner = () => {
                         <p className="text">{t("ANNOUNCEMENTS")}</p>
                     </div>
                     <div className="link">
-                        <a className="text" href={`${PERSISTENCEONE_DISCORD_URL}`} rel="noopener noreferrer"
+                        <a className="text" href={PERSISTENCEONE_DISCORD_URL} rel="noopener noreferrer"
                             target="_blank">
                             <div className="outer-box">
                                 <div className="icon-box">
@@ -57,7 +58,7 @@ const Banner = () => {
                         <p className="text">{t("DEV_CHAT")}</p>
                     </div>
                     <div className="link">
-                        <a className="text" href={`${PERSISTENCEONE_TWITTER_URL}`} rel="noopener noreferrer"
+                        <a className="text" href={PERSISTENCEONE_TWITTER_URL} rel="noopener noreferrer"
                             target="_blank">
                             <div className="outer-box">
                                 <div className="icon-box">
@@ -68,7 +69,7 @@ const Banner = () => {
                         <p className="text">{t("TWITTER")}</p>
                     </div>
                     <div className="link">
-                        <a className="text" href={`${PERSISTENCEONE_YOUTUBE_URL}`}
+                        <a className="text" href={PERSISTENCEONE_YOUTUBE_URL}
                             rel="noopener noreferrer" target="_blank">
                             <div className="outer-box">
                                 <div className="icon-box">
@@ -79,7 +80,7 @@ const Banner = () => {
                         <p className="text">{t("YOUTUBE")}</p>
                     </div>
                     <div className="link">
-                        <a className="text" href={`${PERSISTENCEONE_REDDIT_URL}`} rel="noopener noreferrer"
+                        <a className="text" href={PERSISTENCEONE_REDDIT_URL} rel="noopener noreferrer"
                             target="_blank">
                             <div className="outer-box">
                                 <div className="icon-box">

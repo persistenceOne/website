@@ -1,16 +1,19 @@
 import React from "react";
 import pstake_white from "../../assets/images1/logos/pstake_white.svg";
-import {useTranslation} from "react-i18next";
-let PSTAKE_TWITTER_URL = process.env.REACT_APP_PSTAKE_TWITTER_URL;
-let PSTAKE_APP_URL = process.env.REACT_APP_PSTAKE_APP_URL;
+import { useTranslation } from "react-i18next";
+import {
+    PSTAKE_TWITTER_URL,
+    PSTAKE_APP_URL
+} from "../../constants/config";
+
 const Pstake = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     return (
         <section className="product-info-section product-pstake">
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 product-info pstake">
-                        <img src={pstake_white} alt="pstake_-logo"/>
+                        <img src={pstake_white} alt="pstake_-logo" />
                     </div>
                     <div className="col-md-8">
                         <div className="cards">
@@ -27,9 +30,8 @@ const Pstake = () => {
                                 </div>
                             </div>
                             <div className="button-list">
-                                <a href={`${PSTAKE_TWITTER_URL}`} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("LEARN_MORE")}</a>
-                               
-                                <a href={`${PSTAKE_APP_URL}`} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("OPEN_APP")}</a>
+                                <a href={PSTAKE_TWITTER_URL} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("LEARN_MORE")}</a>
+                                <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("OPEN_APP")}</a>
                             </div>
                         </div>
                     </div>

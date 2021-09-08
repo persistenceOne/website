@@ -1,7 +1,9 @@
 import React from "react";
 import audit_white from "../../assets/images1/logos/audit_white.svg";
 import {useTranslation} from "react-i18next";
-let AUDIT_URL = process.env.REACT_APP_AUDIT_URL;
+import {AUDIT_URL
+   
+} from "../../constants/config";
 const Audit = () => {
     const {t} = useTranslation();
     return (
@@ -26,7 +28,7 @@ const Audit = () => {
                                 </div>
                             </div>
                             <div className="button-list">
-                                <a href={`${AUDIT_URL}`} className="button-primary button" rel="noopener noreferrer"
+                                <a href={AUDIT_URL} className="button-primary button" rel="noopener noreferrer"
                                    target="_blank">{t("AUDIT_ONE")}</a>
                             </div>
                         </div>
