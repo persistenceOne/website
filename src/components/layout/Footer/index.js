@@ -97,7 +97,7 @@ const Footer = (props) => {
                                                 rel="noopener noreferrer">{t("PROTOCOL_PAPER")}</a></li>
                                             <li><Link to="/ecosystem">{t("ECOSYSTEM")}</Link></li>
                                             <li><Link to="/technology">{t("TECHNOLOGY")}</Link></li>
-                                            <li><a href="https://forum.persistence.one/" target="_blank">{t("FORUM")}</a></li>
+                                            <li><a href="https://forum.persistence.one/" rel="noopener noreferrer" target="_blank">{t("FORUM")}</a></li>
                                         </ul>
                                     </div>
                                 </div>
