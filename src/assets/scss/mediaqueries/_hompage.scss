@@ -132,11 +132,15 @@
       bottom: -150px;
     }
     .banner-heading {
-      font-size: 36px;
+      font-size: 34px;
     }
   }
 }
-
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-heading {
+    font-size: 28px!important;
+  }
+}
 @media (min-width: 768px){
   .blog-image .card-img-top {
     height: 180px;

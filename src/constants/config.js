@@ -1,6 +1,6 @@
 export const NETWORK_ID = "0x1";
 export const NETWORK_NAME = "Ethereum mainnet";
-export const ASCENDEX_URL = "https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt";
+export const EXCHANGE_URL = "https://www.huobi.com/en-us/exchange/xprt_usdt/";
 export const PERSISTENCE_WALLET = "https://wallet.persistence.one/";
 export const AUCTION_PERSISTENCE = "https://auction.persistence.one/";
 export const FORUM_PERSISTENCE = "https://forum.persistence.one/";

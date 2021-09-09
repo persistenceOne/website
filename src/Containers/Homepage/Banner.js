@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 import curvedBorder from '../../assets/images1/curvedBorder.svg';
 import Persistence from "../../assets/Persistence_9.mp4";
 import Scroll from 'react-scroll';
-import {ASCENDEX_URL, 
+import {EXCHANGE_URL, 
     PERSISTENCEONE_TWITTER_URL,
     PERSISTENCEONE_TELEGRAM_URL,
     PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
@@ -28,12 +28,13 @@ const Banner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-sm-12">
-                        <h3 className="banner-heading">{t("BANNER_HEADING")}</h3>
+                       
+                        <h3 className="banner-heading">{t("BANNER_HEADING")} <span>{t("BANNER_HEADING_LINE_2")}</span></h3>
                         <p className="caption">{t("BANNER_CAPTION")}</p>
 
                         <div className="banner-buttons">
                            
-                            <a rel="noopener noreferrer" target="_blank" className="button xprt" href={ASCENDEX_URL}>Buy&nbsp;X<p>PRT</p></a>
+                            <a rel="noopener noreferrer" target="_blank" className="button xprt" href={EXCHANGE_URL}>Buy&nbsp;X<p>PRT</p></a>
                             <a rel="noopener noreferrer" target="_blank" className="button white-paper" href={PERSISTENCEONE_MEDIUM_URL}>{t("BLOG")}</a>
                         </div>
                         <div className="social-icons">

@@ -21,11 +21,15 @@
 
   .banner-heading {
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 40px;
     line-height: 1.5;
     color: #FFFFFF;
     margin-bottom: 5px;
+    span{
+      display: block;
+      font-weight: bold;
+    }
   }
 
   .row {

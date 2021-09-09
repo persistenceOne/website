@@ -3,7 +3,8 @@ let English = {
         //home page banner
         "NETWORK_ERROR": "Network Disconnected. Check your data or wifi connection.",
         "BANNER_CAPTION": "Liquid Staking | NFTs | Synthetics",
-        "BANNER_HEADING": "Protocol enabling exposure to multiple asset classes",
+        "BANNER_HEADING": "Protocol Enabling Exposure To",
+        "BANNER_HEADING_LINE_2": "Multiple Asset Classes",
         "BLOG": "Blog",
         "SCROLL_DOWN": "Scroll Down",
         "BANNER_BUTTON_XPRT": "Earn XPRT",
