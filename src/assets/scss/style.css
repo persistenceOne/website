@@ -907,14 +907,25 @@ button:disabled {
   color: #F9F9F9;
   border-left: 2px solid #F9F9F9;
   padding-left: 10px;
+  margin-bottom: 40px;
 }
 .banner-section .banner-heading {
+<<<<<<< HEAD
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+=======
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+>>>>>>> 20f440a81f698b151a946229eac9e42d30089952
   font-size: 40px;
   line-height: 1.5;
   color: #FFFFFF;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+}
+
+.banner-section .banner-heading span {
+  display: block;
+  font-weight: bold;
 }
 .banner-section .row {
   position: relative;
@@ -2013,7 +2024,7 @@ button:disabled {
   font-weight: bold;
   font-size: 32px;
   line-height: 1.314;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .animation-section .bg-scroll-text {
   will-change: transform;
@@ -2050,19 +2061,19 @@ button:disabled {
   line-height: 1;
   font-weight: 900;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .product-info-section.product-comdex {
-  background: #26272A;
+  background: #26272a;
 }
 
 .product-info-section.product-audit {
-  background: #26272A;
+  background: #26272a;
 }
 
 .product-info-section.product-pstake {
-  background: #1F2023;
+  background: #1f2023;
 }
 .product-info-section.product-pstake .button.coming-soon {
   display: inline-block;
@@ -2081,7 +2092,7 @@ button:disabled {
 }
 .product-info-section.product-pstake .button.coming-soon:hover {
   font-size: 0 !important;
-  background: #E50913;
+  background: #e50913;
 }
 .product-info-section.product-pstake .coming-soon.button:hover:before {
   content: attr(data-hover);
@@ -2124,7 +2135,7 @@ button:disabled {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 200%;
-  color: #ACACAC;
+  color: #acacac;
 }
 .product-info-section .cards .row1, .product-info-section .cards .row2 {
   display: flex;
@@ -2143,14 +2154,14 @@ button:disabled {
   font-family: "Poppins", sans-serif;
   font-size: 36px;
   line-height: 1.759;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
 }
 .product-info-section .cards .data-card .name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.855;
-  color: #ACACAC;
+  color: #acacac;
   margin: 0;
 }
 .product-info-section .cards .side-border {
@@ -2182,11 +2193,11 @@ button:disabled {
   margin-bottom: 10px;
 }
 .product-info-section .cards .button-list .button-secondary:hover {
-  background: #E50913;
+  background: #e50913;
 }
 
 .pstake-section {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 100px 0;
 }
 .pstake-section .cards .row1 {
@@ -2211,7 +2222,7 @@ button:disabled {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.855;
-  color: #ACACAC;
+  color: #acacac;
   margin: 0;
 }
 .pstake-section .pstake-info {
@@ -2268,7 +2279,7 @@ button:disabled {
 .swiper-box {
   width: 500px;
   padding-top: 200px;
-  background: #FFFFFF;
+  background: #ffffff;
   height: 400px;
 }
 
@@ -2304,7 +2315,7 @@ button:disabled {
   font-weight: bold;
 }
 .coming-soon-section .products .product a:hover {
-  color: #E50913;
+  color: #e50913;
 }
 .coming-soon-section .products .product p, .coming-soon-section .products .product a {
   margin-top: 10px;
@@ -2312,7 +2323,7 @@ button:disabled {
   font-size: 14px;
   line-height: 2;
   text-align: center;
-  color: #ACACAC;
+  color: #acacac;
 }
 .coming-soon-section .products .product:first-child {
   margin-right: 100px;
@@ -4329,7 +4340,13 @@ button:disabled {
     bottom: -150px;
   }
   .banner-section .banner-heading {
-    font-size: 36px;
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-heading {
+    font-size: 28px !important;
   }
 }
 @media (min-width: 768px) {
