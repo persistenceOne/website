@@ -1,14 +1,19 @@
 import React from "react";
 import comdex from '../../assets/images1/logos/comdex_white.svg'
 import pstake from '../../assets/images1/logos/pstake_white.svg'
-import plend from '../../assets/images1/logos/plend_white.svg'
 import assetmantle from '../../assets/images1/mantle_white.svg'
 import audit from '../../assets/images1/logos/audit_white.svg'
 import Icon from "../../components/Icon";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import {COMDEX_URL,
+    AUDIT_URL,
+    ASSETMANTLE_TWITTER_URL,
+    PSTAKE_TWITTER_URL,
+   
+} from "../../constants/config";
 
 const Products = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     return (
         <section className="product-section">
             <div className="container">
@@ -25,16 +30,16 @@ const Products = () => {
                                 </div>
                             </div>
                             <div className="">
-                                <img className="image-logo" src={comdex} alt="comdex-logo"/>
+                                <img className="image-logo" src={comdex} alt="comdex-logo" />
                                 <p className="overlay-subtext">{t("COMDEX_CAPTION")}</p>
                             </div>
-                            <a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank"
-                               className="overlay-learn-more">
+                            <a href={COMDEX_URL} rel="noopener noreferrer" target="_blank"
+                                className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
                                 <div className="">
                                     <Icon
                                         viewClass="arrow-right"
-                                        icon="arrow-right"/>
+                                        icon="arrow-right" />
                                 </div>
                             </a>
                         </div>
@@ -46,16 +51,16 @@ const Products = () => {
                                 <div className="bg-overlay-image audit">
                                 </div>
                             </div>
-                          
-                            <img className="image-logo" src={audit} alt="audit-logo"/>
+
+                            <img className="image-logo" src={audit} alt="audit-logo" />
                             <p className="overlay-subtext">{t("AUDIT_ONE_CAPTION")}</p>
-                            <a href="http://audit.one/" rel="noopener noreferrer" target="_blank"
-                               className="overlay-learn-more">
+                            <a href={AUDIT_URL} rel="noopener noreferrer" target="_blank"
+                                className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
                                 <div className="">
                                     <Icon
                                         viewClass="arrow-right"
-                                        icon="arrow-right"/>
+                                        icon="arrow-right" />
                                 </div>
                             </a>
                         </div>
@@ -67,48 +72,38 @@ const Products = () => {
                                 <div className="bg-overlay-image pstake">
                                 </div>
                             </div>
-                           
-                            <img className="image-logo" src={pstake} alt="pstake-logo"/>
-                          
-                            <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank"
-                               className="overlay-learn-more">
+
+                            <img className="image-logo" src={pstake} alt="pstake-logo" />
+                            <p className="overlay-subtext">{t("LIQUID_STAKING")}</p>
+                            <a href={PSTAKE_TWITTER_URL} rel="noopener noreferrer" target="_blank"
+                                className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
                                 <div className="">
                                     <Icon
                                         viewClass="arrow-right"
-                                        icon="arrow-right"/>
+                                        icon="arrow-right" />
                                 </div>
                             </a>
 
                         </div>
                     </div>
                     <div className="col-md-3">
-                        <div className="content-multiple">
-                            <div className="content-upcoming mantle-info mantle-content">
-                                <div className="content-overlay"></div>
-                               
-                                <img className="image-logo" src={assetmantle} alt="assetmantle-logo"/>
-                                <p className="overlay-subtext">{t("ASSET_MANTLE_CAPTION")}</p>
-                                <a href="https://twitter.com/AssetMantle" rel="noopener noreferrer" target="_blank"
-                                   className="overlay-learn-more">
-                                    <p>{t("LEARN_MORE")} </p>
-                                    <div className="">
-                                        <Icon
-                                            viewClass="arrow-right"
-                                            icon="arrow-right"/>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div className="content-upcoming mantle-info plend-content">
-                                <div className="content-overlay"></div>
-                               
-                                <img className="image-logo" src={plend} alt="plend-logo"/>
-                                <p className="overlay-subtext">{t("PLEND_CAPTION")} </p>
-                                <div className="overlay-learn-more">
-                                    <p>{t("COMING_SOON")}</p>
+                        <div className="content mantle-info mantle-content">
+                            <div className="content-overlay"></div>
+                            <img className="image-logo" src={assetmantle} alt="assetmantle-logo" />
+                            <p className="overlay-subtext">{t("ASSET_MANTLE_CAPTION")}</p>
+                            <a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank"
+                                className="overlay-learn-more">
+                                <p>{t("LEARN_MORE")} </p>
+                                <div className="">
+                                    <Icon
+                                        viewClass="arrow-right"
+                                        icon="arrow-right" />
                                 </div>
-                            </div>
+                            </a>
+
+
+
                         </div>
                     </div>
                 </div>

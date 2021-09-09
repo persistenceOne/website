@@ -1,8 +1,11 @@
 import React from "react";
 import internft_logos from "../../assets/images1/internft_logos.svg";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import {INTERNFT_URL
+
+} from '../../constants/config';
 const Internft = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     return (
         <>
             <section className="internft-section" id="section-nft">
@@ -12,12 +15,12 @@ const Internft = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 logos">
-                            <img src={internft_logos} alt="internft_logos" className="internft-logos"/>
+                            <img src={internft_logos} alt="internft_logos" className="internft-logos" />
                         </div>
                         <div className="col-md-6 right-section">
                             <div className="info">
                                 <p>{t("INTERNFT_INFO")}</p>
-                                <a href="https://internft.org/" rel="noopener noreferrer" target="_blank" className="button-primary button">{t("INTERNFT_ORG")}</a>
+                                <a href={INTERNFT_URL} rel="noopener noreferrer" target="_blank" className="button-primary button">{t("INTERNFT_ORG")}</a>
                             </div>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ const Stakedrop = () => {
                         <div className="col-md-6 right-section">
                             <div className="info">
                                 <p>{t("STAKEDROP_INFO")}</p>
-                                <NavLink to="/stakedrop" className="button-primary button">{t("PARTICIPATE")}</NavLink>
+                                <NavLink to="/stakedrop" className="button-primary button">{t("VIEW")}</NavLink>
                             </div>
                         </div>
                     </div>

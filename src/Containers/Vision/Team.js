@@ -13,6 +13,25 @@ import aditi from "../../assets/images1/pics/aditi.png"
 import Icon from "../../components/Icon";
 import Modal from "./Modals";
 import {useTranslation} from "react-i18next";
+import {TEAM_ONE_TWITTER_URL,
+    TEAM_ONE_LINKEDIN_URL,
+    TEAM_TWO_TWITTER_URL,
+    TEAM_TWO_LINKEDIN_URL,
+    TEAM_THREE_TWITTER_URL,
+    TEAM_THREE_LINKEDIN_URL,
+    TEAM_TEN_TWITTER_URL,
+    TEAM_FOUR_TWITTER_URL,
+    TEAM_FOUR_LINKEDIN_URL,
+    TEAM_FIVE_LINKEDIN_URL,
+    TEAM_SIX_TWITTER_URL,
+    TEAM_SIX_LINKEDIN_URL,
+    TEAM_SEVEN_TWITTER_URL,
+    TEAM_SEVEN_LINKEDIN_URL,
+    TEAM_EIGHT_LINKEDIN_URL
+
+
+} from "../../constants/config";
+
 
 const Team = () => {
     const {t} = useTranslation();
@@ -28,9 +47,9 @@ const Team = () => {
                         <p className="role">{t("CEO_CO_FOUNDER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://twitter.com/Tushar307" rel="noopener noreferrer"
+                                <a className="icon-box" href={TEAM_ONE_TWITTER_URL} rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></a>
-                                <a className="icon-box" href="https://www.linkedin.com/in/tushar-aggarwal-2823b02b/"
+                                <a className="icon-box" href={TEAM_ONE_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -42,9 +61,9 @@ const Team = () => {
                         <p className="role">{t("CTO_CO_FOUNDER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://twitter.com/deepanshutr" rel="noopener noreferrer"
+                                <a className="icon-box" href={TEAM_TWO_TWITTER_URL} rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></a>
-                                <a className="icon-box" href="https://www.linkedin.com/in/deepanshutr/"
+                                <a className="icon-box" href={TEAM_TWO_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -56,9 +75,9 @@ const Team = () => {
                         <p className="role">{t("SOFTWARE_DEVELOPER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://twitter.com/avkr003" rel="noopener noreferrer"
+                                <a className="icon-box" href={TEAM_THREE_TWITTER_URL} rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></a>
-                                <a className="icon-box" href="https://www.linkedin.com/in/avkr003/"
+                                <a className="icon-box" href={TEAM_THREE_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -74,7 +93,7 @@ const Team = () => {
                         <div className="image-overlay">
                             <div className="icons">
                                 <a className="icon-box"
-                                   href="https://www.linkedin.com/in/prashant-kumar-varun-79701aa4/"
+                                   href={TEAM_TEN_TWITTER_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -87,9 +106,9 @@ const Team = () => {
                         <p className="role">{t("SOFTWARE_DEVELOPER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://twitter.com/puneet_m_" rel="noopener noreferrer"
+                                <a className="icon-box" href={TEAM_FOUR_TWITTER_URL} rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></a>
-                                <a className="icon-box" href="https://www.linkedin.com/in/puneet-mahajan-/"
+                                <a className="icon-box" href={TEAM_FOUR_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -101,7 +120,7 @@ const Team = () => {
                         <p className="role">{t("FRON_END")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://www.linkedin.com/in/rajuvemula/"
+                                <a className="icon-box" href={TEAM_FIVE_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -120,10 +139,10 @@ const Team = () => {
                         <p className="role">{t("STRATEGY")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://twitter.com/abhitezsingh"
+                                <a className="icon-box" href={TEAM_SIX_TWITTER_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></a>
-                                <a className="icon-box" href="https://www.linkedin.com/in/abhitejsingh23/"
+                                <a className="icon-box" href={TEAM_SIX_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -135,10 +154,10 @@ const Team = () => {
                         <p className="role">{t("STRATEGY_BD")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://twitter.com/PandeyMikhil"
+                                <a className="icon-box" href={TEAM_SEVEN_TWITTER_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></a>
-                                <a className="icon-box" href="https://www.linkedin.com/in/mikhilpandey/"
+                                <a className="icon-box" href={TEAM_SEVEN_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>
@@ -158,7 +177,7 @@ const Team = () => {
                         <p className="role">{t("SOFTWARE_DEVELOPER")}</p>
                         <div className="image-overlay">
                             <div className="icons">
-                                <a className="icon-box" href="https://www.linkedin.com/in/aditi-maheshwari-a17906107/"
+                                <a className="icon-box" href={TEAM_EIGHT_LINKEDIN_URL}
                                    rel="noopener noreferrer"
                                    target="_blank"><Icon viewClass="social_icon_imgg" icon="linkedin-footer"/></a>
                             </div>

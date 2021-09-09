@@ -4,6 +4,19 @@ import {useTranslation} from "react-i18next";
 import curvedBorder from '../../assets/images1/curvedBorder.svg';
 import Persistence from "../../assets/Persistence_9.mp4";
 import Scroll from 'react-scroll';
+import {ASCENDEX_URL, 
+    PERSISTENCEONE_TWITTER_URL,
+    PERSISTENCEONE_TELEGRAM_URL,
+    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
+    PERSISTENCEONE_DISCORD_URL,
+    PERSISTENCEONE_REDDIT_URL,
+    PERSISTENCEONE_YOUTUBE_URL,
+    PERSISTENCEONE_MEDIUM_URL
+} from "../../constants/config";
+
+
+
+
 let scroll = Scroll.animateScroll;
 const Banner = () => {
     const {t} = useTranslation();
@@ -15,36 +28,37 @@ const Banner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-sm-12">
-                        <p className="caption">{t("BANNER_CAPTION")}</p>
                         <h3 className="banner-heading">{t("BANNER_HEADING")}</h3>
+                        <p className="caption">{t("BANNER_CAPTION")}</p>
+
                         <div className="banner-buttons">
                            
-                            <a rel="noopener noreferrer" target="_blank" className="button xprt" href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt">Buy&nbsp;X<p>PRT</p></a>
-                            <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://medium.com/persistence-blog">{t("BLOG")}</a>
+                            <a rel="noopener noreferrer" target="_blank" className="button xprt" href={ASCENDEX_URL}>Buy&nbsp;X<p>PRT</p></a>
+                            <a rel="noopener noreferrer" target="_blank" className="button white-paper" href={PERSISTENCEONE_MEDIUM_URL}>{t("BLOG")}</a>
                         </div>
                         <div className="social-icons">
                             <ul className="list-unstyled first-section-social-icons">
-                                <a href="https://twitter.com/PersistenceOne" rel="noopener noreferrer" target="_blank"
+                                <a href={PERSISTENCEONE_TWITTER_URL} rel="noopener noreferrer" target="_blank"
                                    title="Twitter">
                                     <li><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></li>
                                 </a>
-                                <a href="https://t.me/PersistenceOne" rel="noopener noreferrer" target="_blank"
+                                <a href={PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL} rel="noopener noreferrer" target="_blank"
                                    title="Announcements">
                                     <li><Icon viewClass="social_icon_imgg" icon="announcements"/></li>
                                 </a>
-                                <a href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank"
+                                <a href={PERSISTENCEONE_TELEGRAM_URL} rel="noopener noreferrer" target="_blank"
                                    title="Community Chat">
                                     <li><Icon viewClass="social_icon_imgg" icon="telegram-plane"/></li>
                                 </a>
-                                <a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" rel="noopener noreferrer" target="_blank"
+                                <a href={PERSISTENCEONE_YOUTUBE_URL} rel="noopener noreferrer" target="_blank"
                                    title="Youtube">
                                     <li><Icon viewClass="social_icon_imgg" icon="youtube"/></li>
                                 </a>
-                                <a href="https://www.reddit.com/r/PersistenceOne/" rel="noopener noreferrer" target="_blank"
+                                <a href={PERSISTENCEONE_REDDIT_URL} rel="noopener noreferrer" target="_blank"
                                    title="Reddit">
                                     <li><Icon viewClass="social_icon_imgg" icon="reddit-round"/></li>
                                 </a>
-                                <a href="https://discord.gg/SaBKpjbnhH" rel="noopener noreferrer" target="_blank"
+                                <a href={PERSISTENCEONE_DISCORD_URL} rel="noopener noreferrer" target="_blank"
                                    title="Discord">
                                     <li><Icon viewClass="social_icon_imgg" icon="discord"/></li>
                                 </a>

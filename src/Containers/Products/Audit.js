@@ -1,7 +1,9 @@
 import React from "react";
 import audit_white from "../../assets/images1/logos/audit_white.svg";
 import {useTranslation} from "react-i18next";
-
+import {AUDIT_URL
+   
+} from "../../constants/config";
 const Audit = () => {
     const {t} = useTranslation();
     return (
@@ -20,17 +22,13 @@ const Audit = () => {
                                     <p className="name">{t("ASSETS_UNDER_DELEGATION")}</p>
                                 </div>
                                 <div className="data-card side-border text-center">
-                                <p className="value">10 </p>
+                                <p className="value">15 </p>
                                     <p className="name">{t("NETWORKS_SECURED")}</p>
                                    
                                 </div>
-                                {/* <div className="data-card text-center">
-                                    <p className="value">10 </p>
-                                    <p className="name">{t("NETWORKS_SECURED")}</p>
-                                </div> */}
                             </div>
                             <div className="button-list">
-                                <a href="https://audit.one/" className="button-primary button" rel="noopener noreferrer"
+                                <a href={AUDIT_URL} className="button-primary button" rel="noopener noreferrer"
                                    target="_blank">{t("AUDIT_ONE")}</a>
                             </div>
                         </div>

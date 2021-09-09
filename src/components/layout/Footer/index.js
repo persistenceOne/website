@@ -2,63 +2,78 @@ import React from 'react';
 import icon from '../../../assets/images1/footer_logo.svg'
 import whitepaper from '../../../assets/images1/whitepaper.pdf'
 import Mailchimp from "./MailChimp";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap'
+import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import Icon from "../../Icon";
 import Scroll from 'react-scroll';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import {COMDEX_URL,
+    AUDIT_URL,
+    ASSETMANTLE_TWITTER_URL,
+    PERSISTENCEONE_DISCORD_URL,
+    PSTAKE_TWITTER_URL,
+    PERSISTENCEONE_TWITTER_URL,
+    PERSISTENCEONE_TELEGRAM_URL,
+    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
+    PERSISTENCEONE_REDDIT_URL,
+    PERSISTENCEONE_YOUTUBE_URL,
+    PERSISTENCEONE_MEDIUM_URL,
+    FORUM_PERSISTENCE,
+    PERSISTENCEONE_LINKEDIN_URL
+} from "../../../constants/config";
+
 let scroll = Scroll.animateScroll;
 
 const socialList = [
     {
-        url: 'https://twitter.com/PersistenceOne',
+        url: {PERSISTENCEONE_TWITTER_URL},
         iconName: 'twitter-logo',
-        tooltip:'twitter'
+        tooltip: 'twitter'
     },
     {
-        url: 'https://t.me/PersistenceOneChat',
+        url: {PERSISTENCEONE_TELEGRAM_URL},
         iconName: 'telegram-plane',
-        tooltip:'telegram'
+        tooltip: 'telegram'
     },
     {
-        url: 'https://t.me/PersistenceOne',
+        url: { PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL },
         iconName: 'announcements',
-        tooltip:'announcements'
+        tooltip: 'announcements'
     }, {
-        url: 'https://discord.gg/SaBKpjbnhH',
+        url: { PERSISTENCEONE_DISCORD_URL },
         iconName: 'discord',
-        tooltip:'discord'
+        tooltip: 'discord'
     }, {
-        url: 'https://www.reddit.com/r/PersistenceOne/',
+        url: { PERSISTENCEONE_REDDIT_URL },
         iconName: 'reddit-round',
-        tooltip:'reddit'
+        tooltip: 'reddit'
     }, {
-        url: 'https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured',
+        url: { PERSISTENCEONE_YOUTUBE_URL },
         iconName: 'youtube',
-        tooltip:'youtube'
+        tooltip: 'youtube'
     }, {
-        url: 'https://medium.com/persistence-blog',
+        url: { PERSISTENCEONE_MEDIUM_URL },
         iconName: 'medium-m',
-        tooltip:'medium'
+        tooltip: 'medium'
     }, {
-        url: 'https://www.linkedin.com/company/persistenceone/',
+        url: { PERSISTENCEONE_LINKEDIN_URL },
         iconName: 'linkedin-footer',
-        tooltip:'linkedIn'
+        tooltip: 'linkedIn'
     },
 ];
 
 const Footer = (props) => {
-    const {t} = useTranslation();
-    const scrollTop = () =>{
+    const { t } = useTranslation();
+    const scrollTop = () => {
         scroll.scrollToTop();
     };
     const socialIcon = (iconName) => {
         ReactGa.event({
-            category:'Sociallinks',
+            category: 'Sociallinks',
             action: 'Clicked on ' + iconName
         })
-       
+
     }
 
     return (
@@ -80,9 +95,10 @@ const Footer = (props) => {
                                             <li><Link to="/vision">{t("COMPANY")}</Link></li>
                                             <li><Link to="/roadmap">{t("ROADMAP")}</Link></li>
                                             <li><a href={whitepaper} target="_blank"
-                                                   rel="noopener noreferrer">{t("PROTOCOL_PAPER")}</a></li>
+                                                rel="noopener noreferrer">{t("PROTOCOL_PAPER")}</a></li>
                                             <li><Link to="/ecosystem">{t("ECOSYSTEM")}</Link></li>
                                             <li><Link to="/technology">{t("TECHNOLOGY")}</Link></li>
+                                            <li><a href={FORUM_PERSISTENCE} rel="noopener noreferrer" target="_blank">{t("FORUM")}</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -90,11 +106,11 @@ const Footer = (props) => {
                                     <h6>{t("PRODUCTS")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href="https://comdex.sg/" rel="noopener noreferrer" target="_blank">{t("COMDEX")}</a></li>
-                                            <li><a href="https://audit.one/" rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
-                                            <li><a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank">{t("PSTAKE")}</a></li>
-                                            <li><a href="https://twitter.com/AssetMantle" rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE")}</a></li>
-                                            <li><p className="inactive" title="Coming Soon">{t("PLEND")}</p></li>
+                                            <li><a href={COMDEX_URL} rel="noopener noreferrer" target="_blank">{t("COMDEX")}</a></li>
+                                            <li><a href={AUDIT_URL} rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
+                                            <li><a href={PSTAKE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("PSTAKE")}</a></li>
+                                            <li><a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE")}</a></li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -113,7 +129,7 @@ const Footer = (props) => {
                                         <h6 className="title"> {t("SUBSCRIBE_HEADING")}</h6>
                                         <div className="form-container mt-30">
                                             <p className="footer-text">{t("SUBSCRIBE_NOTE")}</p>
-                                            <Mailchimp/>
+                                            <Mailchimp />
                                         </div>
                                     </div>
                                     <div className="social-links-section">
@@ -121,9 +137,9 @@ const Footer = (props) => {
                                         <ul className="list-unstyled footer-list">
                                             {
                                                 socialList.map((item, index) => (
-                                                    <OverlayTrigger 
-                                                     
-                                                       
+                                                    <OverlayTrigger
+
+
                                                         key={item.iconName}
                                                         placement="bottom"
                                                         overlay={
@@ -132,9 +148,9 @@ const Footer = (props) => {
                                                             </Tooltip>
                                                         }
                                                     >
-                                                        <a href={item.url}  onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
-                                                           target="_blank"><Icon viewClass="social_icon_imgg"
-                                                                                 icon={item.iconName}/></a>
+                                                        <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
+                                                            target="_blank"><Icon viewClass="social_icon_imgg"
+                                                                icon={item.iconName} /></a>
                                                     </OverlayTrigger>
                                                 ))
                                             }
@@ -148,11 +164,11 @@ const Footer = (props) => {
                 </div>
                 <div className="footer-bottom-section">
                     <div className="footer-logo-section container ">
-                        <img className="dark-logo" src={icon} alt="icon-logo" title="logo"/>
+                        <img className="dark-logo" src={icon} alt="icon-logo" title="logo" />
                         <p className="copy-rights mb-sm-0">{new Date().getFullYear()} © {t("PERSISTENCE")}</p>
                         <div>
                             <div className="go-top" onClick={scrollTop}>
-                                <Icon viewClass="social_icon_imgg" icon="gotop"/>
+                                <Icon viewClass="social_icon_imgg" icon="gotop" />
                             </div>
                         </div>
                     </div>
