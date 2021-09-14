@@ -15,7 +15,7 @@ const Animation = () => {
                     </div>
                     <div className="col-md-7 right-section">
                         <div className="animation-container">
-                            <video className="video" autoPlay="autoplay" preload="true" loop="loop"
+                            <video className="video" autoPlay playsInline preload="metadata" loop="loop"
                                    muted src={animation}>
                                 <source type="video/webm" src={animation}/>
                                 <source type="video/mp4" src={animation}/>
