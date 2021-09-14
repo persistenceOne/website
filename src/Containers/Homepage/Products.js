@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import {COMDEX_URL,
     AUDIT_URL,
     ASSETMANTLE_TWITTER_URL,
-    PSTAKE_APP_URL,
+    PSTAKE_WEB_URL,
    
 } from "../../constants/config";
 
@@ -75,7 +75,7 @@ const Products = () => {
 
                             <img className="image-logo" src={pstake} alt="pstake-logo" />
                             <p className="overlay-subtext">{t("LIQUID_STAKING")}</p>
-                            <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"
+                            <a href={PSTAKE_WEB_URL} rel="noopener noreferrer" target="_blank"
                                 className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")}</p>
                                 <div className="">
