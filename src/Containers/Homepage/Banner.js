@@ -73,7 +73,7 @@ const Banner = () => {
                     </div>
                     <div className="col-md-6 col-sm-12 content">
                         <div>
-                        <video className="banner-video" autoPlay="autoplay" preload="true" loop="loop"
+                        <video className="banner-video" autoPlay playsInline preload="metadata" loop="loop"
                                muted src={Persistence}>
                             <source type="video/webm" src={Persistence}/>
                             <source type="video/mp4" src={Persistence}/>
