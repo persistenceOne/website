@@ -27,37 +27,37 @@ let scroll = Scroll.animateScroll;
 
 const socialList = [
     {
-        url: {PERSISTENCEONE_TWITTER_URL},
+        url: PERSISTENCEONE_TWITTER_URL,
         iconName: 'twitter-logo',
         tooltip: 'twitter'
     },
     {
-        url: {PERSISTENCEONE_TELEGRAM_URL},
+        url: PERSISTENCEONE_TELEGRAM_URL,
         iconName: 'telegram-plane',
         tooltip: 'telegram'
     },
     {
-        url: { PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL },
+        url:  PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL ,
         iconName: 'announcements',
         tooltip: 'announcements'
     }, {
-        url: { PERSISTENCEONE_DISCORD_URL },
+        url:  PERSISTENCEONE_DISCORD_URL ,
         iconName: 'discord',
         tooltip: 'discord'
     }, {
-        url: { PERSISTENCEONE_REDDIT_URL },
+        url: PERSISTENCEONE_REDDIT_URL ,
         iconName: 'reddit-round',
         tooltip: 'reddit'
     }, {
-        url: { PERSISTENCEONE_YOUTUBE_URL },
+        url:  PERSISTENCEONE_YOUTUBE_URL ,
         iconName: 'youtube',
         tooltip: 'youtube'
     }, {
-        url: { PERSISTENCEONE_MEDIUM_URL },
+        url:  PERSISTENCEONE_MEDIUM_URL ,
         iconName: 'medium-m',
         tooltip: 'medium'
     }, {
-        url: { PERSISTENCEONE_LINKEDIN_URL },
+        url: PERSISTENCEONE_LINKEDIN_URL ,
         iconName: 'linkedin-footer',
         tooltip: 'linkedIn'
     },
