@@ -5,8 +5,8 @@ import {
     INTERNFT_URL,
     INTERNFT_DOCS_URL, PERSISTENCEJS_URL
 } from "../../constants/config";
-let explorerURL = process.env.REACT_APP_REACT_APP_EXPLORER_URL;
-let crust2ExplorerURL = process.env.REACT_APP_CRUST_2_EXPLORER_URL;
+let explorerURL = process.env.REACT_APP_EXPLORER_URL;
+let crust2ExplorerURL = process.env.REACT_APP_BLOCK_EXPLORER_URL;
 const Tools = () => {
     const {t} = useTranslation();
     return (
