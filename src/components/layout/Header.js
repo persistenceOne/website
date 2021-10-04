@@ -4,15 +4,13 @@ import logo from '../../assets/images1/logo.png'
 import { Nav } from "react-bootstrap";
 import Icon from "../Icon";
 import ReactGa from 'react-ga';
-import Alert from 'react-bootstrap/Alert'
-import rightarrow from '../../assets/images1/right-arrow.svg'
-import close from '../../assets/images1/close_icon.png'
+
 import dropdown_asset from "../../assets/images1/dropdown_asset.svg"
 import dropdown_comdex from "../../assets/images1/dropdown_comdex.svg"
 import dropdown_audit from "../../assets/images1/dropdown_audit.svg"
 import dropdown_pstake from "../../assets/images1/dropdown_pstake.svg"
 import { useTranslation } from "react-i18next";
-import {PSTAKE_APP_URL,
+import {
     COMDEX_URL,
     AUDIT_URL,
     ASSETMANTLE_TWITTER_URL,
@@ -31,7 +29,7 @@ const Header = () => {
 
     let history = useHistory();
     const [isOpen, setIsOPen] = useState(false);
-    const [banner, setBanner] = useState(true);
+  
     const [activeTab, setActiveTabs] = useState('intenft-tab');
     const [productActiveTab, setProductActiveTab] = useState('comdex-tab');
     const { t, i18n } = useTranslation();
@@ -61,9 +59,7 @@ const Header = () => {
             setLanguage(languageType);
         }
     }, []);
-    const closeBanner = () => {
-        setBanner(false);
-    }
+   
     const toggleMenu = () => {
         setIsOPen(!isOpen);
         if (document.getElementById('nab-bar-toggle').classList.contains('collapsed')) {
@@ -83,13 +79,7 @@ const Header = () => {
             }
         }
     };
-    const onClickTopBar = () => {
-        ReactGa.event({
-            category: 'TOP BAR',
-            action: 'Clicked on Topbar'
-        })
-
-    }
+   
 
     const onClickWallet = () => {
         ReactGa.event({
@@ -166,19 +156,7 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar"
                     data-aos="fade-down">
                     <div className="container-fluid bannernav-section">
-                        {banner ?
-                            <div className="container">
-                                <Alert className="nav-banner alert-dismissible">
-                                    <p>
-                                        <a href={PSTAKE_APP_URL} rel="noopener noreferrer"
-                                            target="_blank">
-                                            <span onClick={onClickTopBar}>pSTAKE Beta is live. Stake your ATOM now!</span>&emsp;
-                                            <img src={rightarrow} alt="arrow" /></a>
-                                    </p>
-                                    <img src={close} alt="close" className="close" onClick={closeBanner} />
-                                </Alert>
-                            </div>
-                            : null}
+                      
 
 
                     </div>
