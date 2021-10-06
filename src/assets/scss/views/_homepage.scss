@@ -14,8 +14,6 @@
     letter-spacing: 0.17em;
     text-transform: uppercase;
     color: #F9F9F9;
-    border-left: 2px solid #F9F9F9;
-    padding-left: 10px;
     margin-bottom: 40px;
   }
 
@@ -923,6 +921,13 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
+    a {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width:100px;
+    }
   }
 
   a {

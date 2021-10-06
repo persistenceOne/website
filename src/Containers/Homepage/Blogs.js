@@ -4,13 +4,10 @@ import {useTranslation} from "react-i18next";
 import {BLOG_1_URL,
     BLOG_2_URL,
     BLOG_3_URL,
-    BLOG_4_URL,
-    BLOG_5_URL,
     BLOG_1_IMG_URL,
     BLOG_2_IMG_URL,
     BLOG_3_IMG_URL,
-    BLOG_4_IMG_URL,
-    BLOG_5_IMG_URL
+   
  } from "../../constants/config";
 
 
@@ -55,12 +52,15 @@ const Blogs = () => {
                                         </div>
 
                                         <div className="custom-card-body">
-                                            <p className="text1">{t("TOKEN_ECONOMICS")}</p>
+                                            <p className="text1">{t("STAKING")}</p>
                                             <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>
                                 </a>
-                                <a href={BLOG_3_URL}
+                               
+                            </div>
+                            <div className="col-md-6 blog-articles right">
+                            <a href={BLOG_3_URL}
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card" data-aos="fade-up">
                                         <div className="blog-image">
@@ -68,41 +68,12 @@ const Blogs = () => {
                                                  src={BLOG_3_IMG_URL}/>
                                         </div>
                                         <div className="custom-card-body">
-                                            <p className="text1">{t("STAKING")}</p>
+                                            <p className="text1">{t("GUIDE")}</p>
                                             <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
                                         </div>
                                     </div>
                                 </a>
-                            </div>
-                            <div className="col-md-6 blog-articles right">
-                                <a href={BLOG_4_URL}
-                                   target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card mb-10" data-aos="fade-up">
-                                        <div className="blog-image">
-                                            <img className="card-img-top" alt="blog4"
-                                                 src={BLOG_4_IMG_URL}/>
-                                        </div>
-
-                                        <div className="custom-card-body">
-                                            <p className="text1">{t("ABOUT")}</p>
-                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href={BLOG_5_URL}
-                                   target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card" data-aos="fade-up">
-                                        <div className="blog-image">
-                                            <img className="card-img-top" alt="blog4"
-                                                 src={BLOG_5_IMG_URL}/>
-                                        </div>
-
-                                        <div className="custom-card-body">
-                                            <p className="text1">{t("FUND_RAISE")}</p>
-                                            <p className="learn-more">{t("LEARN_MORE")} <Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                        </div>
-                                    </div>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
