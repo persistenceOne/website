@@ -417,6 +417,7 @@
 }
 .acquire_xprt {
   .logos {
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -424,6 +425,9 @@
     a {
       display: flex;
       align-items: center;
+      margin: 15px;
+    width: auto;
+    text-align: center;
   }
   }
 }

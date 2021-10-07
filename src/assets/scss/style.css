@@ -1141,17 +1141,14 @@ button:disabled {
 }
 
 .banner-section .banner-heading {
-<<<<<<< HEAD
   font-family: 'Poppins', sans-serif;
-=======
-  font-family: "Poppins", sans-serif;
->>>>>>> 7dbe47f7871722eef07ffb9a112fc733e77365f6
   font-weight: 400;
   font-size: 40px;
   line-height: 1.5;
   color: #FFFFFF;
   margin-bottom: 5px;
 }
+
 .banner-section .banner-heading span {
   display: block;
   font-weight: bold;
@@ -2696,7 +2693,8 @@ button:disabled {
   line-height: 1.8;
   text-align: center;
   color: #ffffff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 8px 35px !important;
   margin-bottom: 10px;
   outline: none;
@@ -2716,7 +2714,8 @@ button:disabled {
   line-height: 1.8;
   text-align: center;
   color: #ffffff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .product-info-section {
@@ -2726,6 +2725,7 @@ button:disabled {
 .product-info-section .product-info {
   padding-top: 15px;
 }
+
 .product-info-section .product-info .info-text {
   font-family: "Poppins", sans-serif;
   font-size: 36px;
@@ -2734,11 +2734,15 @@ button:disabled {
   margin: 0;
   text-align: center;
 }
+
 .product-info-section .product-info img {
   width: 100%;
 }
+
 .product-info-section .pstake,
 .product-info-section .audit {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2751,6 +2755,7 @@ button:disabled {
   background-size: cover;
   background-position: 100%;
 }
+
 .product-info-section .pstake img,
 .product-info-section .audit img {
   width: auto;
@@ -2760,6 +2765,7 @@ button:disabled {
   text-align: left;
   margin-left: 60px;
 }
+
 .product-info-section .cards .info-text {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
@@ -2767,14 +2773,18 @@ button:disabled {
   color: #acacac;
   margin-top: 25px;
 }
+
 .product-info-section .cards .text {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 200%;
   color: #acacac;
 }
+
 .product-info-section .cards .row1,
 .product-info-section .cards .row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2842,7 +2852,8 @@ button:disabled {
   line-height: 1.8;
   text-align: center;
   color: #ffffff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 8px 35px !important;
   margin-bottom: 10px;
 }
@@ -2865,7 +2876,8 @@ button:disabled {
 
 .pstake-section .cards .data-card {
   background: #ffffff;
-  box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.02);
+  -webkit-box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.02);
   padding: 20px 30px;
   margin-right: 15px;
   width: 250px;
@@ -2990,6 +3002,7 @@ button:disabled {
 .coming-soon-section .products .product a:hover {
   color: #e50913;
 }
+
 .coming-soon-section .products .product p,
 .coming-soon-section .products .product a {
   margin-top: 10px;
@@ -3706,6 +3719,8 @@ button:disabled {
 }
 
 .acquire_xprt .logos {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3725,6 +3740,9 @@ button:disabled {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 15px;
+  width: auto;
+  text-align: center;
 }
 
 .xprt-section {
@@ -5660,6 +5678,7 @@ button:disabled {
     font-size: 34px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .banner-heading {
     font-size: 28px !important;
