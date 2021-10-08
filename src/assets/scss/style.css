@@ -5687,7 +5687,7 @@ button:disabled {
 
 @media (min-width: 768px) {
   .blog-image .card-img-top {
-    height: 180px;
+    height: 200px;
   }
 }
 

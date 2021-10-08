@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Tushar from "../../assets/images1/pics/tushar.png"
+import tushar from "../../assets/images1/pics/tushar.png"
 import deepanshu from "../../assets/images1/pics/deepanshu.png"
 import abhinav from "../../assets/images1/pics/abhinav.png"
 import sudheer from "../../assets/images1/pics/sudheer.png"
@@ -42,7 +42,7 @@ const Team = () => {
                 <h3 className="section-title">{t("TEAM")}</h3>
                 <div className="profiles">
                     <div className="profile" data-aos="fade-up">
-                        <img src={Tushar} alt="box_build" />
+                        <img src={tushar} alt="box_build" />
                         <p className="name">{t("TUSHAR")}</p>
                         <p className="role">{t("CEO_CO_FOUNDER")}</p>
                         <div className="image-overlay">

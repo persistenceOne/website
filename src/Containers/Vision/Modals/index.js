@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Modal as ReactModal} from "react-bootstrap";
-import Tushar from "../../../assets/images1/pics/tushar.png";
+import tushar from "../../../assets/images1/pics/tushar.png";
 import deepanshu from "../../../assets/images1/pics/deepanshu.png";
 import jason from "../../../assets/images1/pics/pic3.svg";
 import sandeep from "../../../assets/images1/pics/pic4.svg";
@@ -15,7 +15,7 @@ const data = [
         role: 'CEO and Co-founder',
         twitter: 'https://twitter.com/Tushar307',
         linkedIn: 'https://www.linkedin.com/in/tushar-aggarwal-2823b02b/',
-        img: Tushar
+        img: tushar
     },
     {
         key: 'deepanshu',

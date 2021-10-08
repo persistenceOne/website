@@ -14,8 +14,8 @@ import {
     COMDEX_URL,
     AUDIT_URL,
     ASSETMANTLE_TWITTER_URL,
-    PSTAKE_TWITTER_URL,
     INTERNFT_URL,
+    PSTAKE_WEB_URL,
     BECOME_VALIDATOR,
    
     PERSISTENCE_WALLET
@@ -232,7 +232,7 @@ const Header = () => {
                                                 </a>
                                                 <a className="nav-link dropdown-item primary-medium-color"
                                                     onMouseOver={() => onHoverProducts('pstake-tab')}
-                                                    href={PSTAKE_TWITTER_URL}
+                                                    href={PSTAKE_WEB_URL}
                                                     rel="noopener noreferrer"
                                                     target="_blank">
                                                     <div className="dropdown-image">
@@ -269,7 +269,7 @@ const Header = () => {
                                                 <div className="item stake-drop" id="pstake-tab">
                                                     <p> {t("PSTAKE_TAB_CONTENT")}
                                                     </p>
-                                                    <a href={PSTAKE_TWITTER_URL}
+                                                    <a href={PSTAKE_WEB_URL}
                                                         rel="noopener noreferrer"
                                                         target="_blank"
                                                         className="button">{t("LEARN_MORE")}</a>
