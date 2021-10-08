@@ -23,26 +23,26 @@ const Blogs = () => {
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-5" data-aos="fade-up">
-                        <a href={BLOG_1_URL}
-                           rel="noopener noreferrer" target="_blank">
-                            <div className="blog-section">
-                                <div className="custom-card">
-                                    <img className="card-img-top" alt="blog"
-                                         src={BLOG_1_IMG_URL}/>
-                                    <div className="custom-card-body">
-                                        <p className="text">{t("ABOUT")}</p>
-                                        <p className="text1">{t("BLOG_TEXT_HEAD")}</p>
-                                        <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div className="col-md-7">
+                    <div className="col-md-12">
                         <div className="row m-0">
-                            <div className="col-md-6 blog-articles left">
+                            <div className="col-md-4 blog-articles left">
+                            <a href={BLOG_1_URL}
+                                   target="_blank" rel="noopener noreferrer">
+                                    <div className="custom-card mb-10" data-aos="fade-up">
+                                        <div className="blog-image">
+                                            <img className="card-img-top" alt="blog2"
+                                                 src={BLOG_1_IMG_URL}/>
+                                        </div>
+
+                                        <div className="custom-card-body">
+                                            <p className="text1">{t("IBC_TRANSACTION")}</p>
+                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
+                                        </div>
+                                    </div>
+                                </a>
+                               
+                            </div>
+                            <div className="col-md-4 blog-articles right">
                             <a href={BLOG_2_URL}
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card mb-10" data-aos="fade-up">
@@ -59,7 +59,7 @@ const Blogs = () => {
                                 </a>
                                
                             </div>
-                            <div className="col-md-6 blog-articles right">
+                            <div className="col-md-4 blog-articles right">
                             <a href={BLOG_3_URL}
                                    target="_blank" rel="noopener noreferrer">
                                     <div className="custom-card" data-aos="fade-up">

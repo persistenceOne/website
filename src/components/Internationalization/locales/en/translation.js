@@ -251,6 +251,7 @@ let English = {
         "ACQUIRE_XPRT_TITLE_4":"Please note that XPRT will not be sold through any other platform, exchange, or medium. For any queries regarding the sale, please send a message in our official",
         "TOKEN_ECONOMICS":"TOKEN ECONOMICS",
         "STAKING":"STAKING",
+        "IBC_TRANSACTION":"IBC Transaction",
         "GUIDE":"GUIDE",
         
         //Roadmap
