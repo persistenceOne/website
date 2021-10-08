@@ -17,7 +17,7 @@ import {
     PSTAKE_TWITTER_URL,
     INTERNFT_URL,
     BECOME_VALIDATOR,
-    AUCTION_PERSISTENCE,
+   
     PERSISTENCE_WALLET
 } from "../../constants/config";
 
@@ -379,9 +379,7 @@ const Header = () => {
                                                     <p>{t("XPRT_TAB_CONTENT")}</p>
                                                     <NavLink to='/xprttoken'
                                                         className="button">{t("LEARN_MORE")}</NavLink>
-                                                    <a href={AUCTION_PERSISTENCE} rel="noopener noreferrer"
-                                                        target="_blank"
-                                                        className="button ml-10">XPRT Auction</a>
+                                                   
                                                 </div>
                                             </div>
                                         </div>

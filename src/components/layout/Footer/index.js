@@ -106,10 +106,10 @@ const Footer = (props) => {
                                     <h6>{t("PRODUCTS")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href={COMDEX_URL} rel="noopener noreferrer" target="_blank">{t("COMDEX")}</a></li>
+                                            <li><a href={COMDEX_URL} rel="noopener noreferrer" target="_blank">{t("COMDEX_FOOTER")}</a></li>
                                             <li><a href={AUDIT_URL} rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
                                             <li><a href={PSTAKE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("PSTAKE")}</a></li>
-                                            <li><a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE")}</a></li>
+                                            <li><a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE_FOOTER")}</a></li>
 
                                         </ul>
                                     </div>

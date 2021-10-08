@@ -847,6 +847,7 @@ a {
 #tsparticles {
   canvas {
     height: 100vh !important;
+    visibility: hidden;
     background: radial-gradient(94.37% 161.58% at 2.64% 12.07%, #16151d 0%, #232526 100%);
   }
 }

@@ -1,12 +1,11 @@
 import React from "react";
-import cointelegraph from "../../assets/images1/featured/CT.png";
-import financemagnet from "../../assets/images1/featured/FM.png";
-import chainnews from "../../assets/images1/featured/chainnews.png";
-import dsa from "../../assets/images1/featured/dsa.png";
-import e27 from "../../assets/images1/featured/e27.png";
-import blockbeats from "../../assets/images1/featured/blockbeats.png";
-import odaily from "../../assets/images1/featured/Odaily.svg";
-import Image from "../../components/elements/Image";
+import CT from "../../assets/images1/featured/cointelegraph.png";
+import forbes from "../../assets/images1/featured/forbes.png";
+import nasdaq from "../../assets/images1/featured/nasdaq.png";
+import coinspeaker from "../../assets/images1/featured/coinspeaker.png";
+import coindesk from "../../assets/images1/featured/coindeskb.png";
+import defitimes from "../../assets/images1/featured/defitimes.png";
+import investing from "../../assets/images1/featured/investing.png";
 import {useTranslation} from "react-i18next";
 import {AS_SEEN_ON1_URL,
     AS_SEEN_ON2_URL,
@@ -14,8 +13,7 @@ import {AS_SEEN_ON1_URL,
     AS_SEEN_ON4_URL,
     AS_SEEN_ON5_URL,
     AS_SEEN_ON6_URL,
-    AS_SEEN_ON7_URL,
-    AS_SEEN_ON8_URL
+    AS_SEEN_ON7_URL
 } from "../../constants/config";
 
 
@@ -31,51 +29,47 @@ const Featured = () => {
                         <div className="logos">
                             <a href={AS_SEEN_ON1_URL}
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                    <img className="logo-img" src={cointelegraph} alt="Cointelegraph"/>
+                                    <img className="logo-img" src={forbes} alt="Forbes"/>
                             </a>
                             <a href={AS_SEEN_ON2_URL} target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                <Image
-                                    src={require('../../assets/images1/featured/coindesk01.png')}
-                                    alt="Coindesk"
-                                />
+                              
+                                <img className="logo-img"
+                                 src={nasdaq}
+                                 alt="Nasdaq"
+                                 />
                             </a>
 
                             <a href={AS_SEEN_ON3_URL}
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                 <img className="logo-img"
-                                  src={financemagnet}
-                                  alt="Finance Magnates"/>
+                                  src={coinspeaker}
+                                  alt="Coinspeaker"/>
                             </a>
                             <a href={AS_SEEN_ON4_URL} target="_blank"
                                rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                 <img className="logo-img"
-                                     src={chainnews}
-                                     alt="ChainNews"/>
+                                     src={coindesk}
+                                     alt="Coindesk"/>
                             </a>
                             <a href={AS_SEEN_ON5_URL}
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                     <img className="logo-img"
-                                         src={dsa}
-                                         alt="dsa"/>
+                                         src={CT}
+                                         alt="Cointelegraph"/>
                                 </a>
-                            <a href={AS_SEEN_ON6_URL}
+                                <a href={AS_SEEN_ON6_URL}
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                <img className="logo-img"
-                                     src={e27}
-                                     alt="e27"/>
-                            </a>
-                            <a href={AS_SEEN_ON7_URL} target="_blank"
-                               rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                <img className="logo-img"
-                                     src={blockbeats}
-                                     alt="blockbeats"/>
-                            </a>
-                            <a href={AS_SEEN_ON8_URL} target="_blank"
-                               rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                <img className="logo-img"
-                                     src={odaily}
-                                     alt="odaily"/>
-                            </a>
+                                    <img className="logo-img"
+                                         src={defitimes}
+                                         alt="Defi Times"/>
+                                </a>
+                                <a href={AS_SEEN_ON7_URL}
+                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                    <img className="logo-img"
+                                         src={investing}
+                                         alt="Investing.com"/>
+                                </a>
+                            
                         </div>
                     </div>
                 </div>

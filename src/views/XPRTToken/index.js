@@ -5,7 +5,8 @@ import TokenTitle from "../../Containers/XPRTToken/TokenTitle";
 import WhyXPRT from "../../Containers/XPRTToken/WhyXPRT";
 import TokenDistribution from "../../Containers/XPRTToken/TokenDistribution";
 import Schedule from "../../Containers/XPRTToken/Schedule";
-import AcquireXPRT from "../../Containers/XPRTToken/AcquireXPRT";
+import CExchanges from "../../Containers/XPRTToken/CExchanges";
+import DExchanges from "../../Containers/XPRTToken/DExchanges";
 
 const Ecosystem = () => {
     return (
@@ -15,7 +16,8 @@ const Ecosystem = () => {
             <WhyXPRT />
             <TokenDistribution />
             <Schedule />
-            <AcquireXPRT />
+            <CExchanges />
+            <DExchanges />
             <ScrollToTop/>
             
         </>

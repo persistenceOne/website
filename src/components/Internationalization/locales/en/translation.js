@@ -47,7 +47,7 @@ let English = {
         "ABOUT": "About",
         "COO":"COO, of",
         "BRIDGE_TOWER":"BridgeTower",
-        "BLOG_TEXT_HEAD":"pSTAKE is unlocking over $100B of staked assets, creating a more flexible environment, and developing more opportunities and utility for PoS assets.",
+        "BLOG_TEXT_HEAD":"The month of May has been a blur, and the “noise” has seemed to have reached a crescendo. Though many are worried amid uncertain market conditions, we are not, instead we’re more driven than ever.",
         "BLOG1_TEXT": "The Internet disintermediated the media & communications industry. Using HTTP, SMTP, and TCP/IP as the foundational layers, the cost of information exchange was significantly...",
         "STAKEDROP": "STAKEDROP",
         "PATNERSHIP": "Partnership",
@@ -75,6 +75,8 @@ let English = {
         //Footer
         "PROTOCOL_PAPER": "Protocol Paper",
         "FORUM": "Forum",
+        "COMDEX_FOOTER":"Comdex",
+        "ASSET_MANTLE_FOOTER":"Asset Mantle",
         "GET_IN_TOUCH": "Get in touch",
         "SUBSCRIBE_HEADING": "Subscribe to our newsletter",
         "SUBSCRIBE_NOTE": "Want to receive the latest updates?",
@@ -238,6 +240,8 @@ let English = {
         "SCHEDULE_TITLE":"100% of the Genesis XPRT supply will be in circulation by the end of year 2024. Read the detailed release schedule ",
         "SCHEDULE_HERE":"here.",
         "ACQUIRE_XPRT": "How to acquire XPRT?",
+        "CENTRALISED_EXCHANGE": "CENTRALISED EXCHANGES",
+        "DCENTRALISED_EXCHANGE": "DCENTRALISED EXCHANGES",
         "ACQUIRE_XPRT_TITLE_1": "AscendEx (formerly BitMax) will be conducting an auction for 1 Million XPRT tokens on 31st March, 2021 followed by a primary listing on 1st April, 2021.  To acquire XPRT, you may participate in the auction or buy XPRT from AscendEX directly after listing.",
        
         "ACQUIRE_XPRT_TITLE_6":"Telegram",
@@ -247,6 +251,7 @@ let English = {
         "ACQUIRE_XPRT_TITLE_4":"Please note that XPRT will not be sold through any other platform, exchange, or medium. For any queries regarding the sale, please send a message in our official",
         "TOKEN_ECONOMICS":"TOKEN ECONOMICS",
         "STAKING":"STAKING",
+        "GUIDE":"GUIDE",
         
         //Roadmap
         "DAPP":"Dapp",
