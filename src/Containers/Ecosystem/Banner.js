@@ -22,7 +22,7 @@ const Banner = () => {
     return (
         <section className="section-ecosystem-banner" data-aos="fade-up">
             <div className="container">
-                <h3 className="section-title">{t("ECOSYSTEM")}</h3>
+                <h1 className="section-title">{t("ECOSYSTEM")}</h1>
                 <div className="social-links">
                     <div className="link">
                         <a className="text" href={PERSISTENCEONE_TELEGRAM_URL} rel="noopener noreferrer"

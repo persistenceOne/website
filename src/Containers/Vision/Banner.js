@@ -10,7 +10,7 @@ const Banner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 content">
-                        <h3 className="heading">{t("MISSION_BANNER_HEADING")}</h3>
+                        <h1 className="heading">{t("MISSION_BANNER_HEADING")}</h1>
                         <p>{t("MISSION_BANNER_TEXT3")}</p>
                         <p>{t("MISSION_BANNER_TEXT1")}</p>
                         <p>{t("MISSION_BANNER_TEXT2")}</p>

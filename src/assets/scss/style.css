@@ -2628,7 +2628,7 @@ button:disabled {
           justify-content: center;
 }
 
-.animation-section .left-section .content-box h3 {
+.animation-section .left-section .content-box h1 {
   font-weight: bold;
   font-size: 32px;
   line-height: 1.314;
@@ -5183,7 +5183,7 @@ button:disabled {
           align-items: center;
 }
 
-.section-technology-banner .content-box h3 {
+.section-technology-banner .content-box h1 {
   font-weight: bold;
   font-size: 32px;
   line-height: 1.314;
