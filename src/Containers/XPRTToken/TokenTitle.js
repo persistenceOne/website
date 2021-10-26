@@ -31,7 +31,7 @@ const TokenTitle = () => {
         <section className="xprt-banner-ecosystem ecosystem-faq-section" data-aos="fade-up">
             <div className="container">
                
-                <h3 className="section-title">{t("ROLE_OF_XPRT")}</h3>
+                <h1 className="section-title">{t("ROLE_OF_XPRT")}</h1>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="info">

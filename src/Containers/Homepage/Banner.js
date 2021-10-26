@@ -29,7 +29,7 @@ const Banner = () => {
                 <div className="row">
                     <div className="col-md-6 col-sm-12">
                        
-                        <h3 className="banner-heading">{t("BANNER_HEADING")} <span>{t("BANNER_HEADING_LINE_2")}</span></h3>
+                        <h1 className="banner-heading">{t("BANNER_HEADING")} <span>{t("BANNER_HEADING_LINE_2")}</span></h1>
                         <p className="caption">{t("BANNER_CAPTION")}</p>
 
                         <div className="banner-buttons">

@@ -17,9 +17,9 @@ const Info = () => {
     return (
         <section className="section-roadmap">
             <div className="container">
-                <h3 className="title">
+                <h1 className="title">
                     {t("ROADMAP")}
-                </h3>
+                </h1>
                 <div className="content">
                     <Tabs defaultActiveKey="2021" id="uncontrolled-tab-example">
                         <Tab eventKey="2019" title="2019">
