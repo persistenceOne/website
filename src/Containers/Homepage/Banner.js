@@ -2,7 +2,8 @@ import React from "react";
 import Icon from "../../components/Icon";
 import {useTranslation} from "react-i18next";
 import curvedBorder from '../../assets/images1/curvedBorder.svg';
-import Persistence from "../../assets/Persistence_9.mp4";
+import homepageBanner from '../../assets/images1/homepage_banner.png';
+// import Persistence from "../../assets/Persistence_9.mp4";
 import Scroll from 'react-scroll';
 import {EXCHANGE_URL, 
     PERSISTENCEONE_TWITTER_URL,
@@ -73,12 +74,14 @@ const Banner = () => {
                     </div>
                     <div className="col-md-6 col-sm-12 content">
                         <div>
-                        <video className="banner-video" autoPlay playsInline preload="metadata" loop="loop"
+                        <img src={homepageBanner} alt="curvedBorder" className="banner-video"/>
+
+                        {/* <video className="banner-video" autoPlay playsInline preload="metadata" loop="loop"
                                muted src={Persistence}>
                             <source type="video/webm" src={Persistence}/>
                             <source type="video/mp4" src={Persistence}/>
                             <source type="video/ogg" src={Persistence}/>
-                        </video>
+                        </video> */}
                         </div>
                         <div className="content-box">
                         <p className="banner-content">{t("BANNER_SUB_TEXT")}</p>

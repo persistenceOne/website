@@ -17,7 +17,6 @@ import {
     INTERNFT_URL,
     PSTAKE_WEB_URL,
     BECOME_VALIDATOR,
-   
     PERSISTENCE_WALLET
 } from "../../constants/config";
 
