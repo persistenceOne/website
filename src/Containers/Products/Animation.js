@@ -10,7 +10,7 @@ const Animation = () => {
                 <div className="row">
                     <div className="col-md-5 left-section">
                         <div className="content-box">
-                            <h3> {t("PRODUCTS")}</h3>
+                            <h1> {t("PRODUCTS")}</h1>
                         </div>
                     </div>
                     <div className="col-md-7 right-section">

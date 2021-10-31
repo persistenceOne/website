@@ -12,7 +12,7 @@ const Banner = () => {
                     <div className="col-md-5 left-section">
                         <div className="content">
                             <div className="content-box">
-                                <h3>{t("TECHNOLOGY")}</h3>
+                                <h1>{t("TECHNOLOGY")}</h1>
                                 <p className="banner-content"> {t("TECHNOLOGY_BANNER_TEXT")}</p>
                                 <img src={curvedBorder} alt="curvedBorder" className="curve"/>
                             </div>
