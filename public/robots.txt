@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://persistence.one/sitemap.xml
+
+
