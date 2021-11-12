@@ -129,7 +129,7 @@ a {
 
 .button-primary {
   background-color: #e50913 !important;
-  border-radius: 7px !important;
+  border-radius: 0px !important;
   border: 0px solid !important;
   font-weight: bold !important;
   font-size: 12px !important;
@@ -220,7 +220,7 @@ a {
 .navbar.navbar-custom {
   width: 100%;
   .wallet-button .button-primary {
-    padding: 6px 20px !important;
+    padding: 10px 25px!important;
     letter-spacing: 0.5px;
   }
 }
