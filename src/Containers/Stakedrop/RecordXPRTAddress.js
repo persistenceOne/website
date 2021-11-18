@@ -127,7 +127,6 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
   };
 
   const handleXPRTAddressChange = (event) => {
-
     setXprtAddress(event.target.value);
     // check if the XPRT address supplied is Bech32 valid
     let checkBech32 = checkbech32(event.target.value);

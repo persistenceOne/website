@@ -3390,6 +3390,18 @@ button:disabled {
   font-weight: 600;
   color: #231f20;
 }
+.participate-stakedrop .error.invalid {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #e50913;
+  text-align: center;
+}
+.participate-stakedrop .error.valid {
+  color: #28a745 !important;
+  margin: 20px 0;
+  font-size: 12px;
+  text-align: center;
+}
 .participate-stakedrop .staking-second-section .cosmos-tutorial-section {
   background-color: #231f20;
   background-image: url(./../../images1/stakedrop/cosmos-tutorial-bg.svg);
@@ -3424,6 +3436,12 @@ button:disabled {
 }
 .participate-stakedrop .staking-second-section .matic-tutorial-section.metmask-status .btn-calculate .btn {
   color: #fff;
+}
+.participate-stakedrop .staking-second-section .error.valid-add.invalid, .participate-stakedrop .staking-second-section .error.invalid {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #e50913;
+  text-align: center;
 }
 .participate-stakedrop .staking-second-section .error.valid-add.invalid {
   margin: 20px 0;

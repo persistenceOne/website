@@ -12,6 +12,7 @@ import RoadMap from "./views/RoadMap";
 import Ecosystem from "./views/Ecosystem";
 import Stakedrop from "./views/Stakedrop";
 import XPRTToken from "./views/XPRTToken";
+import ComdexStakedrop from "./Containers/Stakedrop/ComdexStakedrop";
 import CosmosStakedrop from "./Containers/Stakedrop/CosmosStakedrop";
 import KavaStakedrop from "./Containers/Stakedrop/KavaStakedrop";
 import TerraStakedrop from "./Containers/Stakedrop/TerraStakedrop";
@@ -42,7 +43,6 @@ const App = () => {
     }, [location]);
 
   return (
-
         <Switch>
           <AppRoute exact path="/" component={Homepage} layout={LayoutDefault} />
             <AppRoute exact path="/vision" component={Vision} layout={LayoutDefault} />
@@ -53,6 +53,7 @@ const App = () => {
             <AppRoute exact path="/stakedrop" component={Stakedrop} layout={LayoutDefault} />
           <AppRoute exact path="/StakeDropCosmos" component={CosmosStakedrop} layout={LayoutDefault} />
             <AppRoute exact path="/StakeDropCosmos" component={CosmosStakedrop} layout={LayoutDefault} />
+            <AppRoute exact path="/stakedrop/comdex" component={ComdexStakedrop} layout={LayoutDefault} />
             <AppRoute exact path="/StakeDropKava" component={KavaStakedrop} layout={LayoutDefault} />
             <AppRoute exact path="/StakeDropTerra" component={TerraStakedrop} layout={LayoutDefault} />
             <AppRoute exact path="/StakeDropMatic" component={MaticStakedrop} layout={LayoutDefault} />
