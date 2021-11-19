@@ -4,11 +4,16 @@ import 'react-rangeslider/lib/index.css'
 import { withRouter } from 'react-router-dom';
 import KeplrWallet from "../../utils/keplr";
 import {checkbech32} from "../../actions/bech32Validation";
+import {getContractInstance} from "../../actions/utils";
+import {NETWORK_ID} from "../../constants/config";
+
 const ComdexStakedrop = () =>{
     const [error, setError] = useState('');
     const [keplrError, setKeplrError] = useState('');
     const [xprtAddress, setXprtAddress] = useState("");
     const [address, setAddress] = useState(localStorage.getItem("keplrAddress"));
+    const [metamaskAddress, setMetamaskAddress] = useState(localStorage.getItem("ethAddress"));
+
    const keplrConnect = () => {
         const keplrResponse = KeplrWallet();
        keplrResponse.then(function () {
@@ -18,6 +23,30 @@ const ComdexStakedrop = () =>{
        }).catch(err => {
            setKeplrError(err.message);
        });
+    };
+
+    const metamaskConnect = () => {
+        const checkConnection = (cb) => {
+            console.log("window.ethereum.chainId: ", window.ethereum.chainId)
+            console.log("NETWORK_ID: ", NETWORK_ID)
+            if (window.ethereum && window.ethereum.isMetaMask){
+                cb(null);
+            } else {
+               // this.setState({ metamaskShow: true });
+                //this.setState({ disableBtn: true });
+            }
+        };
+        checkConnection((err) => {
+            if (err) {
+                return;
+            }
+            window.ethereum
+                .request({ method: "eth_requestAccounts" })
+                .then((addr) => {
+                   // this.setState({ account: addr[0] });
+                    setMetamaskAddress(addr[0]);
+                });
+        });
     };
 
     const handleXPRTAddressChange = (event) => {
@@ -31,12 +60,39 @@ const ComdexStakedrop = () =>{
         }
     };
 
-    const handleSubmit = (evt) =>{
+    const handleSubmit = async (evt) => {
         evt.preventDefault();
         const persistenceAddress = evt.target.xprtAddress.value;
         const stakeAddress = evt.target.stakingAddress.value;
-        console.log(persistenceAddress, stakeAddress);
-    };
+        const ethAddress = evt.target.ethAddress.value;
+        console.log("persistenceAddress: ", persistenceAddress);
+        console.log("stakeAddress: ", stakeAddress);
+        console.log("ethAddress: ", ethAddress);
+
+        let checkBech32 = checkbech32(stakeAddress);
+        if (checkBech32) {
+            const comdexAirdrop = await getContractInstance("comdexAirdrop");
+
+            await comdexAirdrop.methods
+                .MagicTx(persistenceAddress, stakeAddress)
+                .send({
+                    from: ethAddress,
+                    // gas: 100000,
+                })
+                .on("transactionHash", (receipt) => {
+                    console.log("receipt: ", receipt)
+                })
+                .then((response) => {
+                    console.log("response: ", response)
+                })
+                .catch((e) => {
+                    console.log("error: ", e)
+                });
+        } else {
+
+        }
+
+        }
 
         return (
             <div className="section-participate">
@@ -92,6 +148,13 @@ const ComdexStakedrop = () =>{
                                         </div>
                                     </div>
 
+                                    <div className="col-lg-12 matic-tutorial-section metmask-status">
+                                        <p className="">Connect to Metamask</p>
+                                        <div className="btn-calculate mr-2">
+                                            <button type="submit" onClick={metamaskConnect} className="btn">  {metamaskAddress === null ? <span>Connect</span> : <span>Connected</span>}</button>
+                                        </div>
+                                    </div>
+
                                     <div className="col-lg-12 stakerow">
                                         <div className="col-lg-12  header-section">
                                             <h5 className="heading-participate">Provide Persistence Address for Rewards</h5>
@@ -118,6 +181,18 @@ const ComdexStakedrop = () =>{
                                                         id="stakingAddress"
                                                         placeholder="--"
                                                         value={address !== null ? address : "" }
+                                                        required
+                                                        disabled
+                                                    />
+                                                </div>
+                                                <div className="inputstaking">
+                                                    <h5>Eth Address</h5>
+                                                    <input
+                                                        type="text"
+                                                        name="ethAddress"
+                                                        id="ethAddress"
+                                                        placeholder="--"
+                                                        value={metamaskAddress !== null ? metamaskAddress : "" }
                                                         required
                                                         disabled
                                                     />
