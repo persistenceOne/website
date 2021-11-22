@@ -121,3 +121,19 @@ export const TEAM_SIX_LINKEDIN_URL = 'https://www.linkedin.com/in/abhitejsingh23
 export const TEAM_SEVEN_TWITTER_URL = 'https://twitter.com/PandeyMikhil'
 export const TEAM_SEVEN_LINKEDIN_URL = 'https://www.linkedin.com/in/mikhilpandey/'
 export const TEAM_EIGHT_LINKEDIN_URL = 'https://www.linkedin.com/in/aditi-maheshwari-a17906107/'
+export const CHAIN = 'COSMOS';
+export const Keplr_CONFIG = {
+    chainName: "pSTAKE Testnet",
+    chainID: "pstake-staking-gala",
+    msgType: "/cosmos.bank.v1beta1.MsgSend",
+    chainRPCURL: "wss://rpc.testnet.pstake.finance",
+    chainRESTAPI: "https://api.testnet.pstake.finance",
+    coinName: "ATOM",
+    coinDenom: "uatom",
+    coinType: 118,
+    transactionFee: 300000,
+    depositAddress: "cosmos1yhmrqg3te2eu7yhpch6fk7uq569vwt2lz9ysl2",
+    gas: 200000,
+    feeAmount: 5000,
+    bech32Prefix: "cosmos",
+}

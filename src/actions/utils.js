@@ -1,8 +1,10 @@
 import detectEthereumProvider from "@metamask/detect-provider";
 import Web3 from "web3"; // import web3 v1.0 constructor
 import { NETWORK_ID } from "../constants/config";
+import BigNumber from "bignumber.js";
 
 var web3 = null;
+const decimalPlaces = 6;
 
 export const getWeb3 = () => {
     const web3 = new Web3(Web3.givenProvider)
@@ -31,6 +33,65 @@ export const isWeb3Unlocked = async () => {
         }
     }
     return false;
+};
+
+export const unDecimalize = (valueString, decimals = decimalPlaces) => {
+    // since BN.js doesn't accept decimals, we'll use BigNumber.js
+    console.log("valueString: ", valueString)
+    let bnValueString = valueString
+        ? new BigNumber(valueString.toString())
+        : new BigNumber(0);
+    let bnDecimalPlaces = new BigNumber(decimals);
+    let bnBase = new BigNumber(10);
+    let bnMultiplier = bnBase.pow(bnDecimalPlaces);
+    let bnResult = bnValueString.multipliedBy(bnMultiplier).toFixed(0);
+
+    let bnFinalValueToBN = web3.utils.toBN(bnResult.toString());
+    return bnFinalValueToBN;
+};
+
+export const autoExponentiation = (valueString, fixed = decimalPlaces) => {
+    let bnFinalValue;
+    let valueStringBN = new BigNumber(valueString);
+    let valueStringBNDP = valueStringBN.decimalPlaces(6, 1);
+    let denominator = new BigNumber(10 ** decimalPlaces);
+    let one = new BigNumber(1);
+    let minVal = one.dividedBy(denominator);
+    console.log(
+        "valueStringBN: ",
+        valueStringBN.toString(),
+        " valueStringBNDP: ",
+        valueStringBNDP.toString()
+    );
+    if (valueStringBN.isGreaterThanOrEqualTo(one)) {
+        bnFinalValue = valueStringBN.toFixed(Number(fixed), 1);
+    } else {
+        if (valueStringBN > valueStringBNDP) {
+            bnFinalValue = valueStringBN.toExponential(Number(fixed), 1);
+        } else {
+            bnFinalValue = valueStringBN.toFixed(Number(fixed), 1);
+        }
+    }
+
+    // return valueStringBN;
+    return bnFinalValue.toString();
+};
+
+export const decimalize = (
+    valueString,
+    decimals = decimalPlaces,
+    fixed = decimalPlaces
+) => {
+    // BigNumber.set({ DECIMAL_PLACES: decimalPlaces, ROUNDING_MODE: 5 });
+    let bnValueString = valueString
+        ? new BigNumber(valueString.toString())
+        : new BigNumber(0);
+    let bnDecimalPlaces = new BigNumber(decimals);
+    let bnBase = new BigNumber(10);
+    let bnDenominator = bnBase.pow(bnDecimalPlaces);
+    let bnFinalValueToBNString;
+    bnFinalValueToBNString = bnValueString.div(bnDenominator);
+    return autoExponentiation(bnFinalValueToBNString.toString(), fixed);
 };
 
 export const getContractInstance = async (contractName) => {
