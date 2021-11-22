@@ -32,9 +32,11 @@ const ComdexStakedrop = () =>{
         if(checkAddress){
             setError("");
             setIfBool(true);
+            setTxMsg('');
         }else{
             setError("Enter Valid Address");
             setIfBool(false);
+            setTxMsg('');
             return;
         }
     };
