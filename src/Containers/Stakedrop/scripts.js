@@ -1,6 +1,10 @@
 const {buildQuery} = require("@cosmjs/tendermint-rpc/build/tendermint33/requests");
 const tendermint34Client = require("@cosmjs/tendermint-rpc");
 const config = require("./config")
+const proto = require("@cosmjs/proto-signing");
+const util = require("./utilities/util");
+
+const registry = util.createDefaultRegistry();
 
 function txSearchParams(recipientAddress, pageNumber, perPage) {
     return {
@@ -8,31 +12,44 @@ function txSearchParams(recipientAddress, pageNumber, perPage) {
             tags: [
                 {key: "transfer.recipient", value: recipientAddress},
             ],
-        }), page: pageNumber, per_page: perPage, prove: true, memo:''
+        }), page: pageNumber, per_page: perPage, prove: true
     }
 }
 
 async function run(){
     let totalCount = 110;
+    let data = [];
+    let obj = {};
     const tmClient = await tendermint34Client.Tendermint34Client.connect(config.chainRPCURL);
-   // console.log("tmClient: ", tmClient )
     const pages = Math.ceil( totalCount / config.per_page)
     for (let page = 1; page <= pages; page++) {
         let perPageResults;
         perPageResults = await tmClient.txSearch(txSearchParams(config.depositAddress, page, config.per_page));
-
-       console.log("perPageResults: ", perPageResults )
-        if(perPageResults.txs[0].result.log && perPageResults.txs[0].result.log){
-          // console.log("perPageResults: ", perPageResults.txs[0].result.log );
-            let p = JSON.parse(perPageResults.txs[0].result.log);
-            if(p[0].events[0].attributes[0].value === "send" && p[0].events[1].type === "transfer"){
-                if(p[0].events[1].attributes[0].key === "recipient" && p[0].events[1].attributes[0].value === config.depositAddress){
-                   // console.log("perPageResults: ", perPageResults);
+        for (let transaction of perPageResults.txs) {
+            const decodedTransaction = proto.decodeTxRaw(transaction.tx);
+            if (transaction.result.code === 0) {
+                for (let message of decodedTransaction.body.messages) {
+                    if (message.typeUrl === "/cosmos.bank.v1beta1.MsgSend") {
+                        const body = registry.decode(message);
+                        if (body.toAddress === config.depositAddress) {
+                           // console.log(body);
+                            if (util.isAddress(decodedTransaction.body.memo)) {
+                                //console.log(decodedTransaction.body.memo)
+                                obj = {
+                                    toAddress: body.toAddress,
+                                    fromAddress: body.fromAddress,
+                                    ethAddress: decodedTransaction.body.memo,
+                                    amount: body.amount[0].amount
+                                }
+                                data.push(obj)
+                            }
+                        }
+                    }
                 }
             }
-
         }
     }
+    console.log("data: ", data)
 }
 
-run()
+run();
