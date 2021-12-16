@@ -13,6 +13,7 @@ export const PSTAKE_TWITTER_URL = "https://twitter.com/pStakeFinance";
 export const PSTAKE_APP_URL = "https://app.pstake.finance/";
 export const PSTAKE_WEB_URL = "https://pstake.finance/";
 export const ASSETMANTLE_TWITTER_URL = "https://twitter.com/AssetMantle";
+export const ASSETMANTLE_URL = "https://assetmantle.one";
 export const ASSETMANTLE_GITHUB_URL = "https://github.com/persistenceOne/assetMantle";
 export const PERSISTENCEONE_TWITTER_URL = "https://twitter.com/PersistenceOne";
 export const PERSISTENCEONESDK_GITHUB_URL = "https://github.com/persistenceOne/persistenceSDK";
