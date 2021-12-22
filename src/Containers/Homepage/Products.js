@@ -7,7 +7,7 @@ import Icon from "../../components/Icon";
 import { useTranslation } from "react-i18next";
 import {COMDEX_URL,
     AUDIT_URL,
-    ASSETMANTLE_TWITTER_URL,
+    ASSETMANTLE_URL,
     PSTAKE_WEB_URL,
    
 } from "../../constants/config";
@@ -92,7 +92,7 @@ const Products = () => {
                             <div className="content-overlay"></div>
                             <img className="image-logo" src={assetmantle} alt="assetmantle-logo" />
                             <p className="overlay-subtext">{t("ASSET_MANTLE_CAPTION")}</p>
-                            <a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank"
+                            <a href={ASSETMANTLE_URL} rel="noopener noreferrer" target="_blank"
                                 className="overlay-learn-more">
                                 <p>{t("LEARN_MORE")} </p>
                                 <div className="">
