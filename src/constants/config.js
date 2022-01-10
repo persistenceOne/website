@@ -7,6 +7,7 @@ export const FORUM_PERSISTENCE = "https://forum.persistence.one/";
 export const BECOME_VALIDATOR = "https://docs.google.com/forms/d/e/1FAIpQLSe6kIw0ihP4gwA5OSqIMLS_hEodR76N4Y5Tblhl4S3ifxJZ8Q/viewform";
 export const INTERNFT_URL = "https://internft.org/";
 export const INTERNFT_DOCS_URL = "https://docs.internft.org/";
+export const BANNER_URL = "https://medium.com/persistence-blog/2021-the-rise-of-the-persistence-ecosystem-ead7e9139434";
 export const COMDEX_URL = "https://comdex.one";
 export const AUDIT_URL = "https://audit.one/";
 export const PSTAKE_TWITTER_URL = "https://twitter.com/pStakeFinance";

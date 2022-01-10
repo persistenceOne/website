@@ -9,7 +9,7 @@ let English = {
         "SCROLL_DOWN": "Scroll Down",
         "BANNER_BUTTON_XPRT": "Earn XPRT",
         "BANNER_BUTTON_WHITEPAPER": "Whitepaper",
-        "BANNER_SUB_TEXT": "Building ecosystem of multi-chain Web3 products for both retail and institutional users",
+        "BANNER_SUB_TEXT": "2021 RECAP: The rise of the persistence ecosystem. Deep Dive",
         //aim section
         "AIM_SECTION_HEADING": "What's our focus?",
         "FOCUS_DEFI_HEADING": "Decentralized Finance (DeFi)",
