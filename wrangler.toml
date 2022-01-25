@@ -9,5 +9,5 @@ zone_id = '000fde296cba847a78e918414382ba7a'
 [env.staging]
 route = 'https://staging.persistence.one/*'
 
-[env.proudction]
+[env.release]
 route = 'https://persistence.one/*'
