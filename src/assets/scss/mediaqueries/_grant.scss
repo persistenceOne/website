@@ -2,4 +2,28 @@
   .grant-section .boxes-container .boxes .box {
     justify-content: center !important;
   }
+  .grant-section .scope-container, .grant-section .process-container{
+    margin: 0;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .grant-section .section-title{
+    font-size: 24px;
+  }
+
+  .grant-section .bottom-cards {
+    margin: 0;
+  }
+  .grant-section .bottom-cards .box .box-body .social-list{
+    a{
+      margin: 10px;
+      width: 42px;
+      height: 42px;
+      .icon{
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
 }

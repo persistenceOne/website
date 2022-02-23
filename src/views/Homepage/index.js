@@ -6,13 +6,15 @@ import Ecosystem from "../../Containers/Homepage/Ecosystem";
 import ScrollToTop from "../../components/ScrollTop";
 import Focus from "../../Containers/Homepage/Focus";
 import Network from "../../Containers/Homepage/Network";
+import Statistics from "../../Containers/Homepage/Statistics";
 const Homepage = () => {
     return (
         <React.Fragment>
             <Banner/>
+            <Statistics/>
             <Ecosystem/>
-            <Focus/>
             <Network/>
+            <Focus/>
             <Blogs/>
             <Featured/>
             <ScrollToTop/>

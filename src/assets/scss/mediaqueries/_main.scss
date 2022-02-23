@@ -95,7 +95,9 @@
   .validators-section .validators .become-validator {
     padding: 60px 0px 0px 0px;
   }
-
+  .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .links a{
+    margin: 0px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.8px) {
 .footer .contact-us{

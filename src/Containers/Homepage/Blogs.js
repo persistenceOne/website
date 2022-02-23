@@ -18,21 +18,24 @@ const responsive = {
     }
 };
 const images = [
-    "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550223640-23097fc71cb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550353175-a3611868086b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550330039-a54e15ed9d33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1549737328-8b9f3252b927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1549833284-6a7df91c1f65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1549985908-597a09ef0a7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+    {
+        url:'https://medium.com/persistence-blog/exploring-the-relationship-between-xprt-and-pstake-f0190efcee2a',
+        image:'https://miro.medium.com/max/1400/1*InSUTrBmx7so7xjEGWVRQQ.png'
+    },
+    {
+        url:'https://medium.com/persistence-blog/the-vision-for-persistence-and-xprt-value-accrual-53fd56619e3d',
+        image:'https://miro.medium.com/max/1400/1*yyGtq7g0FQRKsmzIWdP6Rw.png'
+    },
+    {
+        url:'https://medium.com/persistence-blog/from-the-founders-desk-mission-2022-d3a2a1d20de1',
+        image:'https://miro.medium.com/max/1400/0*ZgVUN-HPoMTO5AEO'
+    },
+    {
+        url:'https://medium.com/persistence-blog/community-newsletter-16-january-2022-ecde69cb2721',
+        image:'https://miro.medium.com/max/1400/1*VSeIXPpjTnKaQeTrpLi70g.png'
+    },
 ];
 
-// Because this is an inframe, so the SSR mode doesn't not do well here.
-// It will work on real devices.
 const Blogs = ({ deviceType }) => {
     const {t} = useTranslation();
     return (
@@ -49,14 +52,15 @@ const Blogs = ({ deviceType }) => {
                 >
                     {images.slice(0, 5).map(image => {
                         return (
-                            <a href="https://info.osmosis.zone/token/XPRT" rel="noopener noreferrer"
+                            <a href={image.url} rel="noopener noreferrer"
                                target="_blank"
+                               key={image.url}
                                className="button">
                                 <img
                                     draggable={false}
-                                    alt={image}
+                                    alt={image.image}
                                     style={{ width: "100%", height: "100%" }}
-                                    src={image}
+                                    src={image.image}
                                 />
                             </a>
 

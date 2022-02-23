@@ -1,86 +1,89 @@
 import React from "react";
-import Icon from "../../components/Icon";
-import {useTranslation} from "react-i18next";
-import {BLOG_1_URL,
-    BLOG_2_URL,
-    BLOG_3_URL,
-    BLOG_1_IMG_URL,
-    BLOG_2_IMG_URL,
-    BLOG_3_IMG_URL,
+import CT from "../../assets/images/featured/cointelegraph.svg";
+import coindex from "../../assets/images/featured/coindex.svg";
+import yahoo from "../../assets/images/featured/yahoo.svg";
+import finance from "../../assets/images/featured/finance.svg";
+import chain from "../../assets/images/featured/chain.svg";
+import deal_streat from "../../assets/images/featured/deal_streat.svg";
+import e27 from "../../assets/images/featured/e27.svg";
+import blockbeats from "../../assets/images/featured/blockbeats.svg";
 
+import {useTranslation} from "react-i18next";
+import {AS_SEEN_ON1_URL,
+    AS_SEEN_ON2_URL,
+    AS_SEEN_ON3_URL,
+    AS_SEEN_ON4_URL,
+    AS_SEEN_ON5_URL,
+    AS_SEEN_ON6_URL,
+    AS_SEEN_ON7_URL,
+    AS_SEEN_ON8_URL
 } from "../../constants/config";
 
 
 
-
-
-const Blogs = () => {
+const Featured = () => {
     const {t} = useTranslation();
     return (
-        <section className="stay-updated">
-            <div className="title-line-section">
-                <h3 className="section-title">{t("BLOGS_SECTION_TITLE")}</h3>
-            </div>
+        <section className="featured-on">
+            <h3 className="section-title">{t("FEATURED_ON_SECTION_TITLE")}</h3>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12">
-                        <div className="row m-0">
-                            <div className="col-md-4 blog-articles left">
-                                <a href={BLOG_1_URL}
-                                   target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card mb-10" data-aos="fade-up">
-                                        <div className="blog-image">
-                                            <img className="card-img-top" alt="blog2"
-                                                 src={BLOG_1_IMG_URL}/>
-                                        </div>
+                    <div className="col-lg-12">
+                        <div className="logos">
+                            <a href={AS_SEEN_ON1_URL}
+                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img" src={CT} alt="CT"/>
+                            </a>
+                            <a href={AS_SEEN_ON2_URL} target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
 
-                                        <div className="custom-card-body">
-                                            <p className="text1">{t("IBC_TRANSACTION")}</p>
-                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                        </div>
-                                    </div>
-                                </a>
+                                <img className="logo-img"
+                                     src={coindex}
+                                     alt="coindex"
+                                />
+                            </a>
 
-                            </div>
-                            <div className="col-md-4 blog-articles right">
-                                <a href={BLOG_2_URL}
-                                   target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card mb-10" data-aos="fade-up">
-                                        <div className="blog-image">
-                                            <img className="card-img-top" alt="blog2"
-                                                 src={BLOG_2_IMG_URL}/>
-                                        </div>
+                            <a href={AS_SEEN_ON3_URL}
+                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img"
+                                     src={yahoo}
+                                     alt="yahoo"/>
+                            </a>
+                            <a href={AS_SEEN_ON4_URL} target="_blank"
+                               rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img"
+                                     src={finance}
+                                     alt="finance"/>
+                            </a>
+                            <a href={AS_SEEN_ON5_URL}
+                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img"
+                                     src={chain}
+                                     alt="chain"/>
+                            </a>
+                            <a href={AS_SEEN_ON6_URL}
+                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img"
+                                     src={deal_streat}
+                                     alt="deal_streat"/>
+                            </a>
+                            <a href={AS_SEEN_ON7_URL}
+                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img"
+                                     src={e27}
+                                     alt="e27.com"/>
+                            </a>
+                            <a href={AS_SEEN_ON8_URL}
+                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+                                <img className="logo-img"
+                                     src={blockbeats}
+                                     alt="blockbeats"/>
+                            </a>
 
-                                        <div className="custom-card-body">
-                                            <p className="text1">{t("STAKING")}</p>
-                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div className="col-md-4 blog-articles right">
-                                <a href={BLOG_3_URL}
-                                   target="_blank" rel="noopener noreferrer">
-                                    <div className="custom-card" data-aos="fade-up">
-                                        <div className="blog-image">
-                                            <img className="card-img-top" alt="blog3"
-                                                 src={BLOG_3_IMG_URL}/>
-                                        </div>
-                                        <div className="custom-card-body">
-                                            <p className="text1">{t("GUIDE")}</p>
-                                            <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right"/></p>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
     )
 };
-export default Blogs;
+export default Featured;

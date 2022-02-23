@@ -27,7 +27,7 @@ const Ecosystem = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                                <a href="/" className="button button-primary">
+                                <a href="https://pstake.finance/" rel="noopener noreferrer" target="_blank" className="button button-primary">
                                     Go to App
                                 </a>
                             </div>
@@ -39,7 +39,7 @@ const Ecosystem = () => {
                                 <div className="image-section">
                                     <img src={drop} alt="drop"/>
                                 </div>
-                                <p className="heading"> DeFi for Liquid Staking </p>
+                                <p className="heading"> DeFi for Liquid Staking</p>
                                 <ul>
                                     <li>
                                         <p>Explore DeFi opportunities for stkASSETs within the Persistence ecosystem</p>
@@ -55,7 +55,7 @@ const Ecosystem = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                                <a href="/"  className="button button-primary">
+                                <a href="/grants"  rel="noopener noreferrer" target="_blank" className="button button-primary">
                                     Apply
                                 </a>
                             </div>

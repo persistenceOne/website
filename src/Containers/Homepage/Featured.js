@@ -2,18 +2,14 @@ import React from "react";
 import CT from "../../assets/images1/featured/cointelegraph.png";
 import forbes from "../../assets/images1/featured/forbes.png";
 import nasdaq from "../../assets/images1/featured/nasdaq.png";
-import coinspeaker from "../../assets/images1/featured/coinspeaker.png";
+import yahoo from "../../assets/images/featured/yahoo.svg";
 import coindesk from "../../assets/images1/featured/coindeskb.png";
-import defitimes from "../../assets/images1/featured/defitimes.png";
-import investing from "../../assets/images1/featured/investing.png";
 import {useTranslation} from "react-i18next";
 import {AS_SEEN_ON1_URL,
     AS_SEEN_ON2_URL,
     AS_SEEN_ON3_URL,
     AS_SEEN_ON4_URL,
     AS_SEEN_ON5_URL,
-    AS_SEEN_ON6_URL,
-    AS_SEEN_ON7_URL
 } from "../../constants/config";
 
 
@@ -31,45 +27,33 @@ const Featured = () => {
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                     <img className="logo-img" src={forbes} alt="Forbes"/>
                             </a>
-                            <a href={AS_SEEN_ON2_URL} target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                              
-                                <img className="logo-img"
-                                 src={nasdaq}
-                                 alt="Nasdaq"
-                                 />
-                            </a>
-
-                            <a href={AS_SEEN_ON3_URL}
-                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                <img className="logo-img"
-                                  src={coinspeaker}
-                                  alt="Coinspeaker"/>
-                            </a>
                             <a href={AS_SEEN_ON4_URL} target="_blank"
                                rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                 <img className="logo-img"
                                      src={coindesk}
                                      alt="Coindesk"/>
                             </a>
+
                             <a href={AS_SEEN_ON5_URL}
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
                                     <img className="logo-img"
                                          src={CT}
                                          alt="Cointelegraph"/>
                                 </a>
-                                <a href={AS_SEEN_ON6_URL}
+
+                            <a href={AS_SEEN_ON2_URL} target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
+
+                                <img className="logo-img"
+                                     src={nasdaq}
+                                     alt="Nasdaq"
+                                />
+                            </a>
+                            <a href={AS_SEEN_ON3_URL}
                                target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                    <img className="logo-img"
-                                         src={defitimes}
-                                         alt="Defi Times"/>
-                                </a>
-                                <a href={AS_SEEN_ON7_URL}
-                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                    <img className="logo-img"
-                                         src={investing}
-                                         alt="Investing.com"/>
-                                </a>
-                            
+                                <img className="logo-img"
+                                     src={yahoo}
+                                     alt="yahoo"/>
+                            </a>
                         </div>
                     </div>
                 </div>
