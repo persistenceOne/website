@@ -1,6 +1,5 @@
 import React from 'react';
 import icon from '../../../assets/images1/footer_logo.svg'
-import whitepaper from '../../../assets/images1/whitepaper.pdf'
 import Mailchimp from "./MailChimp";
 import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
@@ -19,7 +18,6 @@ import {COMDEX_URL,
     PERSISTENCEONE_REDDIT_URL,
     PERSISTENCEONE_YOUTUBE_URL,
     PERSISTENCEONE_MEDIUM_URL,
-    FORUM_PERSISTENCE,
     PERSISTENCEONE_LINKEDIN_URL
 } from "../../../constants/config";
 
@@ -73,7 +71,6 @@ const Footer = (props) => {
             category: 'Sociallinks',
             action: 'Clicked on ' + iconName
         })
-
     }
 
     return (
@@ -92,13 +89,14 @@ const Footer = (props) => {
                                     <h6>{t("ABOUT")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><Link to="/vision">{t("COMPANY")}</Link></li>
-                                            <li><Link to="/roadmap">{t("ROADMAP")}</Link></li>
-                                            <li><a href={whitepaper} target="_blank"
-                                                rel="noopener noreferrer">{t("PROTOCOL_PAPER")}</a></li>
-                                            <li><Link to="/ecosystem">{t("ECOSYSTEM")}</Link></li>
-                                            <li><Link to="/technology">{t("TECHNOLOGY")}</Link></li>
-                                            <li><a href={FORUM_PERSISTENCE} rel="noopener noreferrer" target="_blank">{t("FORUM")}</a></li>
+                                            <li><a href="https://github.com/persistenceOne/persistenceSDK" target="_blank"
+                                                   rel="noopener noreferrer">Persistence SDK</a></li>
+                                            <li><a href="/xprttoken" target="_blank"
+                                                   rel="noopener noreferrer">XPRT</a></li>
+                                            <li><a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ" target="_blank"
+                                                rel="noopener noreferrer">Guides/Tutorials</a></li>
+                                            <li><Link to="/faq">FAQs</Link></li>
+                                            <li><Link to="/grants">Grants</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -106,11 +104,10 @@ const Footer = (props) => {
                                     <h6>{t("PRODUCTS")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href={COMDEX_URL} rel="noopener noreferrer" target="_blank">{t("COMDEX_FOOTER")}</a></li>
-                                            <li><a href={AUDIT_URL} rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
                                             <li><a href={PSTAKE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("PSTAKE")}</a></li>
+                                            <li><a href={AUDIT_URL} rel="noopener noreferrer" target="_blank">{t("AUDIT_ONE")}</a></li>
+                                            <li><a href={COMDEX_URL} rel="noopener noreferrer" target="_blank">{t("COMDEX_FOOTER")}</a></li>
                                             <li><a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("ASSET_MANTLE_FOOTER")}</a></li>
-
                                         </ul>
                                     </div>
                                 </div>
@@ -138,8 +135,6 @@ const Footer = (props) => {
                                             {
                                                 socialList.map((item, index) => (
                                                     <OverlayTrigger
-
-
                                                         key={item.iconName}
                                                         placement="bottom"
                                                         overlay={
@@ -154,7 +149,6 @@ const Footer = (props) => {
                                                     </OverlayTrigger>
                                                 ))
                                             }
-
                                         </ul>
                                     </div>
                                 </div>

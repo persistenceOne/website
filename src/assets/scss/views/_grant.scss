@@ -1,25 +1,22 @@
 .grant-section{
   padding: 100px 0;
-  background: #1C1C21;
+  background-image: url(./../../images/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   .section-title {
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 1.314;
-    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 58px;
+    line-height: 150%;
+    color: #FBFBFB;
     padding-bottom: 20px;
   }
   .button-heading{
     margin: 0px auto 40px auto;
-    text-align: center;
-    span{
-      background: #C33B3D;
-      border-radius: 22px;
+    .title{
       font-weight: 500;
-      font-size: 22px;
-      line-height: 45px;
-      color: #FFFFFF;
-      display: inline-block;
-      padding: 12px 16px;
+      font-size: 40px;
+      line-height: 60px;
+      color: #F8F8F8;
     }
     &.heading2{
       width: 300px;
@@ -27,17 +24,19 @@
   }
   .lists, ul{
     li{
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
       font-size: 16px;
       line-height: 150%;
-      color: #FFFFFF;
+      color: #F0F0F0;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
       margin-bottom: 16px;
+      word-break: break-word;
     }
   }
 
   .scope-container{
     padding-bottom: 50px;
+    margin: 0 70px;
   }
   .boxes-container {
     margin-bottom: 40px;
@@ -87,7 +86,7 @@
     }
   }
   .process-container {
-    margin-bottom: 40px;
+    margin: 0 70px 40px 70px;
     h3{
       font-weight: bold;
       font-size: 20px;
@@ -103,7 +102,7 @@
     }
   }
   .bottom-cards{
-    margin-top: 40px;
+    margin: 0 70px 40px 70px;
     display: flex;
     flex-wrap: wrap;
 
@@ -118,7 +117,7 @@
        // }
       .box-body {
         padding: 40px;
-        min-width: 300px;
+        min-width: 200px;
         max-width: 600px;
         height: 100%;
         background: #232329;
@@ -147,8 +146,25 @@
           margin-bottom: 20px;
         }
         .buttons{
-          .button{
+          display: flex;
+          a{
             margin:10px;
+            border-radius: 22px !important;
+            display: block;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: #FFFFFF;
+            .icon{
+              margin-left: 10px;
+              fill: #FFFFFF;
+            }
+            &:hover{
+              color: #e50913;
+              .icon{
+                fill: #e50913;
+              }
+            }
           }
         }
         .social-list{
@@ -163,9 +179,9 @@
             align-items: center;
             border-radius: 50%;
             justify-content: center;
-            background: #C33B3D;
+            background: #e50913;
             .icon{
-              width: 18px;
+              width: 22px;
               fill: #ffffff;
             }
           }

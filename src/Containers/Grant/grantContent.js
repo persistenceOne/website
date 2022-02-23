@@ -61,7 +61,7 @@ const GrantContent = () => {
              <h1 className="section-title">Persistence Grant Program</h1>
              <div className="scope-container">
                  <div className="button-heading">
-                     <span>Grant Scope</span>
+                     <p className="title">Grant Scope</p>
                  </div>
                  <ul className="lists">
                      <li>
@@ -103,7 +103,7 @@ const GrantContent = () => {
                  </ul>
              </div>
              <div className="button-heading">
-                 <span>How will we help</span>
+                 <p className="title text-center">How will we help</p>
              </div>
              <div className="boxes-container">
                  <div className="boxes">
@@ -144,7 +144,7 @@ const GrantContent = () => {
              </div>
              <div className="process-container">
                  <div className="button-heading">
-                     <span>Application Process</span>
+                     <p className="title">Application Process</p>
                  </div>
                  <h3>Step 1: Application</h3>
                  <p>Write to grants@persistence.one with a detailed application consisting of the following details: </p>
@@ -185,12 +185,16 @@ const GrantContent = () => {
                                 </p>
                             </div>
                             <div className="buttons">
-                                <button className="button button-primary">
+                                <a href="https://github.com/persistenceOne" rel="noopener noreferrer"
+                                   target="_blank" className="link">
                                     GitHub
-                                </button>
-                                <button className="button button-primary">
-                                    DevChat
-                                </button>
+                                    <Icon viewClass="icon" icon="link-arrow"/>
+                                </a>
+                                <a href="https://discord.com/invite/qXRmTTGcYD" rel="noopener noreferrer"
+                                   target="_blank" className="link">
+                                    Dev Chat
+                                    <Icon viewClass="icon" icon="link-arrow"/>
+                                </a>
                             </div>
                         </div>
                     </div>

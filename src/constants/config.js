@@ -74,7 +74,7 @@ export const BLOG_5_URL = "https://medium.com/persistence-blog/persistence-raise
 export const BLOG_5_IMG_URL = "https://miro.medium.com/max/6732/1*8tJhZXSzGxRl2aisB43BmA.png";
 export const AS_SEEN_ON1_URL = "https://www.forbes.com/sites/lawrencewintermeyer/2021/07/01/collaboration-and-interoperability-over-tribalism-signals-maturity-developing-in-defi/?sh=3f285e0e6644";
 export const AS_SEEN_ON2_URL = "https://www.nasdaq.com/articles/staking-is-the-quiet-giant-of-crypto-yield-2021-06-23";
-export const AS_SEEN_ON3_URL = "https://www.coinspeaker.com/persistence-blazing-trail-defi/";
+export const AS_SEEN_ON3_URL = "https://finance.yahoo.com/news/liquid-staking-protocol-pstake-raises-140000873.html#:~:text=Liquid%20Staking%20Protocol%20PStake%20Raises%20%2410M%20in%20Strategic%20Funding,-Brandy%20Betz&text=PStake%2C%20the%20liquid%20staking%20protocol,Capital%20India%20and%20Defiance%20Capital.";
 export const AS_SEEN_ON4_URL = "https://www.coindesk.com/business/2021/03/26/staking-as-an-asset-class-this-swiss-institutional-fund-is-jumping-in/";
 export const AS_SEEN_ON5_URL = "https://cointelegraph.com/news/the-future-of-crypto-trading-will-be-omni-chain";
 export const AS_SEEN_ON6_URL = "https://defitimes.io/defi/the-new-era-of-defi-moving-from-speculation-to-value-creation-with-persistence/";
