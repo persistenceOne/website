@@ -9,7 +9,7 @@ import Homepage from "./views/Homepage";
 import Grant from "./views/Grant";
 import "react-multi-carousel/lib/styles.css";
 import CosmosStakedrop from "./Containers/Stakedrop/CosmosStakedrop";
-
+import Faq from "./views/Faq";
 ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
 const trackPage = page => {
@@ -37,7 +37,8 @@ const App = () => {
 
         <Switch>
           <AppRoute exact path="/" component={Homepage} layout={LayoutDefault} />
-            <AppRoute exact path="/faq" component={Grant} layout={LayoutDefault} />
+            <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} />
+            <AppRoute exact path="/grant" component={Grant} layout={LayoutDefault} />
             {/*<AppRoute exact path="/products" component={Products} layout={LayoutDefault} />*/}
             {/*<AppRoute exact path="/roadmap" component={RoadMap} layout={LayoutDefault} />*/}
             {/*<AppRoute exact path="/ecosystem" component={Ecosystem} layout={LayoutDefault} />*/}

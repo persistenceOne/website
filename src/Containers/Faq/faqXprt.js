@@ -1,7 +1,4 @@
 import React, {useContext} from "react";
-import xprt_bg from "../../assets/images1/xprt_bg.svg";
-import {useTranslation} from "react-i18next";
-import { NavLink } from 'react-router-dom';
 import {Accordion, AccordionContext, Card, useAccordionToggle} from "react-bootstrap";
 import Icon from "../../components/Icon";
 
@@ -28,7 +25,6 @@ function ContextAwareToggle({children, eventKey, callback}) {
 }
 
 const Faq = () => {
-    const {t} = useTranslation();
     return (
         <>
             <section className="xprt-banner-ecosystem ecosystem-faq-section" data-aos="fade-up">
