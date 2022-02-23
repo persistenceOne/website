@@ -1,18 +1,34 @@
 @media (max-width: 991.8px) {
   .navbar.navbar-custom .navbar-nav {
-    li {
-    margin: 0;
-    a {
+    a, .nav-link{
       text-align: left;
-      padding:15px 0;
     }
-  }
+    .nav-item{
+      border-bottom: 1px solid #e0e6e8;
+      &:last-child{
+        border: 0px solid;
+      }
+    }
+    .dropdown-menu{
+      position: static;
+      padding: 0;
+      .nav-dropdown-items{
+        padding: 20px;
+        flex-direction: column;
+        .nav-dropdown-item{
+          .header{
+            text-align: center;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
   }
   .navbar-collapse{
     padding-top: 15px;
   }
   .site-content {
-    margin-top: 65px;
+    //margin-top: 65px;
     .banner-section {
       height: auto;
       padding: 135px 0 100px 0;
