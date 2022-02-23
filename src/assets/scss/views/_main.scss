@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   height: 100%;
   scroll-behavior: smooth;
 }
@@ -249,7 +249,7 @@ a {
           font-size: 12px;
           line-height: 1.5;
           text-align: center;
-          letter-spacing: 0.1em;
+          //letter-spacing: 0.1em;
           text-transform: uppercase;
           color: #FFFFFF;
           margin: 0 5px;
@@ -288,12 +288,12 @@ a {
         .nav-dropdown-items{
           display: flex;
           .nav-dropdown-item{
-            margin: 0px 20px;
+            margin: 0px 30px;
             .header{
               font-weight: 500;
               font-size: 16px;
               line-height: 24px;
-              letter-spacing: 0.08em;
+              //letter-spacing: 0.08em;
               text-transform: uppercase;
               color: #F8F8F8;
               padding: 10px 0;
@@ -304,13 +304,15 @@ a {
               .inner-item{
                 font-size: 16px;
                 line-height: 24px;
-                letter-spacing: 0.08em;
                 text-transform: capitalize;
-                color: #F8F8F8;
+                color: #acacac;
                 margin-bottom: 16px;
                 display: block;
                 &.para{
                   width: 250px;
+                }
+                &:hover{
+                  color: #FFFFFF;
                 }
               }
               img{
@@ -322,7 +324,7 @@ a {
                   font-weight: 500;
                   font-size: 16px;
                   line-height: 24px;
-                  letter-spacing: 0.08em;
+                  //letter-spacing: 0.08em;
                   text-transform: uppercase;
                   color: #F8F8F8;
                   padding: 10px 0;
@@ -379,6 +381,7 @@ a {
         max-height: 600px;
         overflow: auto;
         opacity: 1;
+        box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
       }
     }
   }

@@ -24,11 +24,11 @@ const Network = () => {
                             <p className="heading">technology</p>
                             <p className="content">Persistence is an interoperable protocol that provides developers with the ability to
                                 build applications that are either sovereign, modular or built on top of Persistence’s
-                                CosmWasm layer
+                                CosmWasm layer.
                             </p>
                         </div>
                         <div className="buttons">
-                            <a href="https://github.com/persistenceOne/persistenceSDK" rel="noopener noreferrer"
+                            <a href="https://github.com/persistenceOne" rel="noopener noreferrer"
                                target="_blank" className="link">
                                GitHub
                                 <Icon viewClass="icon" icon="link-arrow"/>
@@ -44,15 +44,15 @@ const Network = () => {
                         <div className="qoutes">
                             <div className="qoute">
                                 <p>Build App-chains within the Persistence Ecosystem that are interoperable with the
-                                    Cosmos/IBC ecosystem and route IBC assets through Persistence Core-1 chain </p>
+                                    Cosmos/IBC ecosystem and route IBC assets through Persistence Core-1 chain. </p>
                             </div>
                             <div className="qoute">
                                 <p>Build Modular Apps directly on top of the Core-1 chain, using components of the
-                                    Persistence architecture as plug-and-play interfaces</p>
+                                    Persistence architecture as plug-and-play interfaces.</p>
                             </div>
                             <div className="qoute">
                                 <p>Build high-performance and easily upgradable Smart Contract Apps on Persistence
-                                    chain with the integration of CosmWasm </p>
+                                    chain with the integration of CosmWasm. </p>
                             </div>
                         </div>
                     </div>

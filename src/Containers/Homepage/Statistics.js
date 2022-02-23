@@ -10,7 +10,7 @@ const Statistics = () => {
                 <div className="img-section">
                     <img src={chart} alt="chart"/>
                     <p className="content">The rapid growth of the PoS space has positioned liquid staking industry
-                        at the inflection point</p>
+                        at the inflection point.</p>
                 </div>
             </div>
         </section>
