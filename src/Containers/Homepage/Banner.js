@@ -7,19 +7,16 @@ const Banner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-sm-12">
-                       
-                        <p className="banner-heading"><span>Liquid Staking </span>is the <br/> new Staking</p>
-                        <p className="caption">Building an economy around Liquid Proof of Stake assets</p>
+                        <p className="banner-heading"><span>Liquid Staking </span> <br/>Is The New Staking</p>
+                        <p className="caption">Building an economy around Liquid Proof-of-Stake assets</p>
                         <p className="text">
-                            Persistence is a tendermint/Cosmos-based Layer-1 network powering an ecosystem of DeFi
+                            Persistence is a Tendermint/Cosmos-based Layer-1 network powering an ecosystem of DeFi
                             products aimed at making liquid staked assets the default assets of the the PoS economy.
                         </p>
-
-
                     </div>
                     <div className="col-md-6 col-sm-12 content">
                         <div>
-                        <img src={homepageBanner} alt="curvedBorder" className="banner-video"/>
+                            <img src={homepageBanner} alt="curvedBorder" className="banner-video"/>
                         </div>
                     </div>
                 </div>

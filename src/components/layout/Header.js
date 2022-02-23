@@ -152,14 +152,14 @@ const Header = () => {
                                 <div className="nav-dropdown-item">
                                     <p className="header">Native</p>
                                     <div className="inner-items">
-                                        <a href="https://github.com/persistenceOne" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistenk SDK</a>
-                                        <a href="https://wallet.keplr.app/#/dashboard" rel="noopener noreferrer"
+                                        <a href="https://github.com/persistenceOne/persistenceSDK" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Persistence SDK</a>
+                                        <a href="https://wallet.persistence.one/" rel="noopener noreferrer"
                                            target="_blank" className="inner-item">Persistence Wallet</a>
                                         <a href="https://explorer.persistence.one/" rel="noopener noreferrer"
                                            target="_blank" className="inner-item">Persistence explorer</a>
                                         <a href="https://bridge.persistence.one/" rel="noopener noreferrer"
-                                           target="_blank"className="inner-item">Persistence Bridge</a>
+                                           target="_blank" className="inner-item">Persistence Bridge</a>
                                         <a href="/xprttoken" rel="noopener noreferrer"
                                            target="_blank" className="inner-item">XPRT</a>
                                     </div>

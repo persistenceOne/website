@@ -1,5 +1,6 @@
 import React from 'react';
 import drop from "../../assets/images/drop.svg";
+import defi from "../../assets/images/defi.svg";
 
 const Ecosystem = () => {
     return (
@@ -37,7 +38,7 @@ const Ecosystem = () => {
                         <div className="box-body">
                             <div className="content">
                                 <div className="image-section">
-                                    <img src={drop} alt="drop"/>
+                                    <img src={defi} alt="defi"/>
                                 </div>
                                 <p className="heading"> DeFi for Liquid Staking</p>
                                 <ul>
