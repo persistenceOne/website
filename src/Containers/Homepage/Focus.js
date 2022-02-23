@@ -1,10 +1,7 @@
 import React from "react";
-import BackersTabs from "../../components/backers";
-import {useTranslation} from "react-i18next";
 import xprt from "../../assets/images/xprt.svg";
 
 const Focus = () => {
-    const {t} = useTranslation();
     return (
         <section className="focus-section">
             <h3 className="section-title">The Fuel for the Persistence Ecosystem</h3>

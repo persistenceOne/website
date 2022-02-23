@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, withRouter, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
 import logo from '../../assets/images1/logo.png'
 import {Nav, Navbar, NavDropdown} from "react-bootstrap";
-import { useMediaQuery } from 'react-responsive'
 import { useTranslation } from "react-i18next";
 import walletLogo from "../../assets/images/logos/wallet.svg";
 import explorerLogo from "../../assets/images/logos/explorer.svg";
@@ -14,33 +13,11 @@ import comdexLogo from "../../assets/images/logos/comdex.svg";
 
 import Icon from "../Icon";
 
-
-
-
-let explorerURL = process.env.REACT_APP_EXPLORER_URL;
 const Header = () => {
 
-    let history = useHistory();
     const [mobileMenu, setMobileMenu] = useState(false);
   
-    const [activeTab, setActiveTabs] = useState('intenft-tab');
-    const [productActiveTab, setProductActiveTab] = useState('comdex-tab');
-    const { t, i18n } = useTranslation();
-    const [language, setLanguage] = useState('English');
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 992px)'
-    })
-
-    const isLandScape = useMediaQuery({
-        query: '(max-width: 991px)'
-    })
-
-    useEffect(() => {
-        const languageType = localStorage.getItem('language');
-        if (languageType !== '') {
-            setLanguage(languageType);
-        }
-    }, []);
+    const { t } = useTranslation();
 
     const toggleMenu = () => {
         // setIsOPen(!isOpen);
@@ -80,10 +57,6 @@ const Header = () => {
         </span>
     )
 
-    const handleRoute = (route) =>{
-        setMobileMenu(false);
-        history.push(route);
-    }
     return (
         <React.Fragment>
             <Navbar className="navbar-custom" sticky="top" expand="lg" expanded={mobileMenu}>
@@ -216,7 +189,7 @@ const Header = () => {
                                     <div className="inner-items">
                                         <p className="inner-item">Have an exciting Idea?
                                             Apply for a grant.</p>
-                                        <a href="" className="button-primary button">
+                                        <a href="/" className="button-primary button">
                                             Apply
                                         </a>
                                     </div>

@@ -1,9 +1,6 @@
 import React from "react";
-import BackersTabs from "../../components/backers";
-import {useTranslation} from "react-i18next";
 
 const Network = () => {
-    const {t} = useTranslation();
     return (
         <section className="network-section">
             <h3 className="section-title">The Persistence Network</h3>
@@ -20,10 +17,10 @@ const Network = () => {
                             </p>
                         </div>
                         <div className="buttons">
-                            <a href="" className="button button-primary">
+                            <a href="/" className="button button-primary">
                                GitHub
                             </a>
-                            <a href="" className="button button-primary">
+                            <a href="/" className="button button-primary">
                                 Dev Chat
                             </a>
                         </div>

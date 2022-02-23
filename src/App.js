@@ -6,21 +6,10 @@ import LayoutDefault from './layouts/LayoutDefault';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Homepage from "./views/Homepage";
-import Faq from "./views/Faq";
 import Grant from "./views/Grant";
 import "react-multi-carousel/lib/styles.css";
-// import Vision from "./views/Vision";
-// import Products from "./views/Products";
-// import RoadMap from "./views/RoadMap";
-// import Ecosystem from "./views/Ecosystem";
-// import Stakedrop from "./views/Stakedrop";
-// import XPRTToken from "./views/XPRTToken";
 import CosmosStakedrop from "./Containers/Stakedrop/CosmosStakedrop";
-// import KavaStakedrop from "./Containers/Stakedrop/KavaStakedrop";
-// import TerraStakedrop from "./Containers/Stakedrop/TerraStakedrop";
-// import MaticStakedrop from "./Containers/Stakedrop/MaticStakedrop";
-// import Technology from "./views/Technology";
-// Initialize Google Analytics
+
 ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
 const trackPage = page => {

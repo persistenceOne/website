@@ -1,12 +1,11 @@
 import React from "react";
-import ScrollToTop from "../../components/ScrollTop";
 import explorer_new from "../../assets/images/explorer_new.svg";
 import people from "../../assets/images/people.svg";
 import {
-    PERSISTENCEONE_DISCORD_URL, PERSISTENCEONE_LINKEDIN_URL, PERSISTENCEONE_MEDIUM_URL, PERSISTENCEONE_REDDIT_URL,
+    PERSISTENCEONE_DISCORD_URL,
     PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
     PERSISTENCEONE_TELEGRAM_URL,
-    PERSISTENCEONE_TWITTER_URL, PERSISTENCEONE_YOUTUBE_URL
+    PERSISTENCEONE_TWITTER_URL
 } from "../../constants/config";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import Icon from "../../components/Icon";

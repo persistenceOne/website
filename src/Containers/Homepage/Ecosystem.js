@@ -1,15 +1,5 @@
 import React from 'react';
-import Products from "../../Containers/Homepage/Products";
-import Aims from "../../Containers/Homepage/Aims";
-import Backers from "../../Containers/Homepage/Backers";
-import Blogs from "../../Containers/Homepage/Blogs";
-import Featured from "../../Containers/Homepage/Featured";
-import Banner from "../../Containers/Homepage/Banner";
-import ScrollToTop from "../../components/ScrollTop";
 import drop from "../../assets/images/drop.svg";
-import people from "../../assets/images/people.svg";
-import {OverlayTrigger, Tooltip} from "react-bootstrap";
-import Icon from "../../components/Icon";
 
 const Ecosystem = () => {
     return (
@@ -37,7 +27,7 @@ const Ecosystem = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                                <a href="" className="button button-primary">
+                                <a href="/" className="button button-primary">
                                     Go to App
                                 </a>
                             </div>
@@ -65,7 +55,7 @@ const Ecosystem = () => {
                                 </ul>
                             </div>
                             <div className="buttons">
-                                <a href=""  className="button button-primary">
+                                <a href="/"  className="button button-primary">
                                     Apply
                                 </a>
                             </div>

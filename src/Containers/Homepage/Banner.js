@@ -1,28 +1,7 @@
 import React from "react";
-import Icon from "../../components/Icon";
-import {useTranslation} from "react-i18next";
-import curvedBorder from '../../assets/images1/curvedBorder.svg';
 import homepageBanner from '../../assets/images1/homepage_banner.png';
-import Scroll from 'react-scroll';
-import {EXCHANGE_URL, 
-    PERSISTENCEONE_TWITTER_URL,
-    PERSISTENCEONE_TELEGRAM_URL,
-    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
-    PERSISTENCEONE_DISCORD_URL,
-    PERSISTENCEONE_REDDIT_URL,
-    PERSISTENCEONE_YOUTUBE_URL,
-    PERSISTENCEONE_MEDIUM_URL
-} from "../../constants/config";
 
-
-
-
-let scroll = Scroll.animateScroll;
 const Banner = () => {
-    const {t} = useTranslation();
-    const handleScroll = () =>{
-        scroll.scrollTo(700);
-    };
     return (
         <section className="banner-section">
             <div className="container">
