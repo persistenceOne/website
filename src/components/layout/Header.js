@@ -152,8 +152,8 @@ const Header = () => {
                                 <div className="nav-dropdown-item">
                                     <p className="header">Native</p>
                                     <div className="inner-items">
-                                        <a href="https://github.com/persistenceOne/persistenceSDK" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistence SDK</a>
+                                        <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Persistence Core</a>
                                         <a href="https://wallet.persistence.one/" rel="noopener noreferrer"
                                            target="_blank" className="inner-item">Persistence Wallet</a>
                                         <a href="https://explorer.persistence.one/" rel="noopener noreferrer"

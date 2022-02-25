@@ -89,8 +89,8 @@ const Footer = (props) => {
                                     <h6>{t("ABOUT")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href="https://github.com/persistenceOne/persistenceSDK" target="_blank"
-                                                   rel="noopener noreferrer">Persistence SDK</a></li>
+                                            <li><a href="https://github.com/persistenceOne/persistenceCore" target="_blank"
+                                                   rel="noopener noreferrer">Persistence Core</a></li>
                                             <li><a href="/xprttoken" target="_blank"
                                                    rel="noopener noreferrer">XPRT</a></li>
                                             <li><a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ" target="_blank"

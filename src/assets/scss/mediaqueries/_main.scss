@@ -1,22 +1,27 @@
 @media (max-width: 991.8px) {
   .navbar.navbar-custom .navbar-nav {
-    a, .nav-link{
+    a, .nav-link {
       text-align: left;
     }
-    .nav-item{
+
+    .nav-item {
       border-bottom: 1px solid #e0e6e8;
-      &:last-child{
+
+      &:last-child {
         border: 0px solid;
       }
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
       position: static;
       padding: 0;
-      .nav-dropdown-items{
+
+      .nav-dropdown-items {
         padding: 20px;
         flex-direction: column;
-        .nav-dropdown-item{
-          .header{
+
+        .nav-dropdown-item {
+          .header {
             text-align: center;
             padding: 10px 0;
           }
@@ -24,7 +29,7 @@
       }
     }
   }
-  .navbar-collapse{
+  .navbar-collapse {
     padding-top: 15px;
   }
   .site-content {
@@ -32,7 +37,7 @@
     .banner-section {
       height: auto;
       padding: 135px 0 100px 0;
-  }
+    }
   }
   .product-info-section .cards {
     margin-left: 0;
@@ -40,7 +45,12 @@
   .section-roadmap {
     padding: 130px 0 100px 0;
   }
-  
+  .navbar.navbar-custom .navbar-nav .dropdown .dropdown-menu {
+    max-height: 400px
+  }
+  .navbar.navbar-custom .navbar-brand img {
+    width: 120px;
+  }
 }
 
 @media (max-width: 767.8px) {
