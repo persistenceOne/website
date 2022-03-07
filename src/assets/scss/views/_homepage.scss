@@ -974,7 +974,8 @@
     line-height: 175.9%;
     text-align: center;
     color: #F5F5F5;
-    width: 640px;
+    max-width: 640px;
+    word-break: break-word;
     margin: auto auto 70px auto;
   }
   .boxes {
@@ -1116,10 +1117,10 @@
   .sub-heading{
     font-size: 16px;
     color: #F5F5F5;
-    font-size: 15px;
     line-height: 175.9%;
     text-align: center;
-    width: 600px;
+    max-width: 600px;
+    word-break: break-word;
     margin: auto auto 70px auto;
   }
   .boxes{

@@ -202,7 +202,7 @@ const GrantContent = () => {
                         <div className="box-body">
                             <div className="content">
                                 <img src={people} alt="people"/>
-                                <p className="heading">Explore Persistence SDK </p>
+                                <p className="heading">Explore Persistence Core </p>
                                 <p className="content">
                                     Be a part of our Community
                                     Keep tabs on all-things-Persistence.
