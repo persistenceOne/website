@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  background-color: #222325 !important;
+  background-color: #070B09 !important;
   scroll-behavior: smooth;
   
 }
@@ -118,11 +118,42 @@ a {
 .icon {
   width: 15px;
   font-size: 1.5rem;
-  color: #9a9a9a;
+  color: #787878;
   transition: 0.2s ease-in-out;
-  fill: #9a9a9a;
+  fill: #787878;
 }
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .button-initial.button.two {
+    background: transparent;
+    border: 0px solid #303132;
+    &:hover{
+      background: transparent;
+      border: 0px solid #303132;
+    }
 
+  }
+  .button-initial.button {
+    background: #E50913;
+    border-radius: 6px;
+    padding: 8px 15px;
+    border: 1px solid #E50913;
+    font-size: 14px;
+    width: 170px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0px;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      background: #E50913;
+      border: 1px solid #E50913;
+    }
+  }
+}
 .Toastify__toast {
   word-break: break-word !important;
 }
@@ -214,14 +245,22 @@ a {
     position: relative;
     top: 0px;
     margin-bottom: 15px;
+
   }
 }
 
   .navbar.navbar-custom {
     width: 100%;
     padding:0;
-    background: #222325;
-
+    background: #070B09;
+    .links a {
+      width: 32px;
+      height: 32px;
+      margin-right: 17px;
+      align-items: center;
+      border-radius: 50%;
+      justify-content: center;
+    }
     .navbar-brand {
       padding-left: 0px;
 
@@ -245,15 +284,14 @@ a {
     .navbar-nav {
         .nav-link {
           font-family: "Poppins", sans-serif;
-          font-weight: bold;
-          font-size: 12px;
+          font-weight: 500;
+          font-size: 16px;
           line-height: 1.5;
           text-align: center;
-          //letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: #FFFFFF;
+          text-transform: capitalize;
+          color: #C4C4C4;
           margin: 0 5px;
-          padding: 0 1.3rem!important;
+          padding: 0 0.6rem !important;
           height: 74px;
           display: flex;
           align-items: center;
@@ -360,7 +398,7 @@ a {
             }
           }
           &.learn-items, &.community-items,  &.ecosystem-items, &.network-items{
-            justify-content: center;
+            justify-content: left;
           }
         }
       }
@@ -593,16 +631,16 @@ a {
     margin-top: 30px;
   }
 
-  background: #1C1C21 !important;
+  background: #F1F1F1;
   padding: 80px 0 0 0;
 
   .footer-list li a,
   .footer-list li .inactive {
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.31;
-    color: #70747c;
+    color: rgba(0, 0, 0, 0.69);
   }
 
   .email {
@@ -628,10 +666,10 @@ a {
   }
 
   h6 {
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 1.314;
-    color: #ffffff;
+    color: rgba(0, 0, 0, 0.89);
   }
 
   .copy-rights {
@@ -639,13 +677,16 @@ a {
     font-size: 12px;
     line-height: 1.314;
     color: #70747c;
+    display: inline-block;
   }
 
   .contact-box .mail-chimp-section input {
-    background: #1d2129;
+    background: #D9D9D9;
     border: 0px solid;
+    border-radius: 6px;
     padding: 10px 10px;
     font-weight: 500;
+    margin-right: -15px;
     font-size: 12px;
     color: #dee2e6;
   }
@@ -658,13 +699,14 @@ a {
 
   .btn-subscribe {
     opacity: 1 !important;
-    width: 102px;
+    width: auto;
+    text-transform: uppercase;
     background: #e50913 !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08) !important;
-    border-radius: 0px !important;
+    border-radius: 6px !important;
     border: 0px solid !important;
     font-weight: bold !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 1.8 !important;
     text-align: center !important;
     color: #ffffff !important;
@@ -672,17 +714,17 @@ a {
   }
 
   .footer-text {
-    font-weight: 500;
+    font-weight: 400;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     line-height: 1.31;
-    color: #70747c;
+    color: rgba(0, 0, 0, 0.69);
   }
 
   .social-links-section {
     ul {
       display: flex;
-      margin-top: 20px;
+      margin-top: 0px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -712,19 +754,21 @@ a {
 
   .footer-bottom-section {
     margin-top: 20px;
-    border-top: 1px solid #313238;
-  }
-
-  .footer-logo-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .footer-logo-section {
+
     padding-top: 20px;
+    display: flex;
     padding-bottom: 20px;
+    align-items: self-end;
 
     .dark-logo {
       height: 20px;
-      width: 100px;
+      width: 140px;
       margin: 0;
     }
 
@@ -734,10 +778,6 @@ a {
   }
 
   .contact-us {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-
     .mail-chimp-section {
       display: flex;
       align-items: center;

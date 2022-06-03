@@ -148,8 +148,7 @@
 }
 @media (min-width: 768px) and (max-width: 1399.8px) {
   .banner-section {
-    background-position: 80% 50%, 100% 100%;
-    padding: 300px 0;
+    padding: 200px 0;
     height: 100%;
 
     .mouse-section{
@@ -172,8 +171,5 @@
 }
 
 @media (min-width: 1400px) {
-  .banner-section {
-    background-position: 87% 55%, 100% 100% !important;
-    background-size: 60% 75%, cover !important
-  }
+
 }

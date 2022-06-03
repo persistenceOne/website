@@ -1,67 +1,75 @@
 import React from 'react';
-import drop from "../../assets/images/drop.svg";
-import defi from "../../assets/images/defi.svg";
+import {Card,CardGroup} from 'react-bootstrap';
+import pastakelogo from '../../assets/images1/pstake-logo-symbol.svg';
+import borrow from '../../assets/images1/borrow.svg';
+import dex from '../../assets/images1/dex.svg';
 
 const Ecosystem = () => {
     return (
         <section className="home-ecosystem-section">
             <div className="container">
-                <h3 className="section-title">The Persistence Ecosystem</h3>
-                <p className="sub-heading">Join the growing number of users and builders of the Persistence ecosystem and help make Liquid staked
-                    assets the default assets of the PoS economy. </p>
-                <div className="boxes">
-                    <div className="box">
-                        <div className="box-body">
-                            <div className="content">
-                               <div className="image-section">
-                                   <img src={drop} alt="drop"/>
-                               </div>
-                                <p className="heading">Liquid Staking</p>
-                                <ul>
-                                    <li>
-                                        Issue Liquid Staked (stkASSETs) on the Persistence Network via pSTAKE.
-                                    </li>
-                                    <li>
-                                        All Cosmos/Tendermint-based (IBC enabled) assets could be liquid staked
-                                        as stkASSETs issued on the Persistence Network
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="buttons">
-                                <a href="https://pstake.finance/" rel="noopener noreferrer" target="_blank" className="button button-primary">
-                                    Go to App
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="box-body">
-                            <div className="content">
-                                <div className="image-section">
-                                    <img src={defi} alt="defi"/>
+                <h3 className="section-title">Maximise Capital Efficiency</h3>
+                <p className="sub-heading">The Persistence ecosystem application bridging Staking and DeFi </p>
+                <div className="card-tiles">
+                    <CardGroup>
+                        <Card className={'h-100'}>
+                            <div className={'card-section'}>
+                            <Card.Body >
+                                <Card.Img variant="top" src={pastakelogo} />
+                                <Card.Title className={'mb-3 mt-4'}>Liquid Staking Protocol</Card.Title>
+                                <Card.Text>
+                                    Unlocking Liquidity for Staked Assets. Bringing PoS assets to DeFi.
+                                </Card.Text>
+                                <div className={"button-section mt-5"}>
+                                    <a href="/grants" rel="noopener noreferrer"
+                                       target="_blank" className="button-initial button">
+                                        GO TO APP
+                                    </a>
+                                    <a href="/grants" rel="noopener noreferrer"
+                                       target="_blank" className="button-initial button two">
+                                        Explore
+                                    </a>
                                 </div>
-                                <p className="heading"> DeFi for Liquid Staking</p>
-                                <ul>
-                                    <li>
-                                        <p>Explore DeFi opportunities for stkASSETs within the Persistence ecosystem</p>
-                                        <ul>
-                                            <li>Borrowing/Lending</li>
-                                            <li>DEXes</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Have Interesting Ideas?
-                                        Apply for a Grant
-                                    </li>
-                                </ul>
+                            </Card.Body>
                             </div>
-                            <div className="buttons">
-                                <a href="/grants"  rel="noopener noreferrer" target="_blank" className="button button-primary">
-                                    Apply
-                                </a>
+
+                        </Card>
+                        <Card className={'h-100'}>
+                            <div className={'card-section h-100'}>
+                            <Card.Body >
+                                <div className={"symbol-section"}>
+                                <Card.Img variant="top" src={borrow} />
+                                    <h5>Borrow & Lend</h5>
                             </div>
-                        </div>
-                    </div>
+                                <Card.Title className={'mb-3 mt-4'}>Borrowing & Lending protocol</Card.Title>
+                                <Card.Text>
+                                    Borrowing and Lending Protocol for staked assets.
+                                </Card.Text>
+                                <div className={"comingsoon mt-5"}>
+                                    <h6>COMING SOON!</h6>
+                                </div>
+                            </Card.Body>
+                            </div>
+                        </Card>
+                        <Card className={'h-100'}>
+                            <div className={'card-section h-100'}>
+                            <Card.Body >
+                                <div className={"symbol-section"}>
+                                <Card.Img variant="top" src={dex} />
+                                    <h5>Dex</h5>
+                            </div>
+                                <Card.Title className={'mb-3 mt-4'}>DEX focused on staked assets</Card.Title>
+                                <Card.Text>
+                                    Interchain DEX for staked assets.
+                                </Card.Text>
+
+                                <div className={"comingsoon mt-5"}>
+                                    <h6>COMING SOON!</h6>
+                                </div>
+                            </Card.Body>
+                            </div>
+                        </Card>
+                    </CardGroup>
                 </div>
             </div>
         </section>

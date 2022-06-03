@@ -1,6 +1,5 @@
 import Carousel from "react-multi-carousel";
 import React from "react";
-import {useTranslation} from "react-i18next";
 
 
 const responsive = {
@@ -37,10 +36,8 @@ const images = [
 ];
 
 const Blogs = ({ deviceType }) => {
-    const {t} = useTranslation();
     return (
         <section className="stay-updated">
-            <h3 className="section-title">{t("BLOGS_SECTION_TITLE")}</h3>
             <div className="container">
                 <Carousel
                     ssr
@@ -52,6 +49,7 @@ const Blogs = ({ deviceType }) => {
                 >
                     {images.slice(0, 5).map(image => {
                         return (
+                            <>
                             <a href={image.url} rel="noopener noreferrer"
                                target="_blank"
                                key={image.url}
@@ -62,8 +60,15 @@ const Blogs = ({ deviceType }) => {
                                     style={{ width: "100%", height: "100%" }}
                                     src={image.image}
                                 />
+                                <div className={'blog-title'}>
+                                    <h6>Lorem epsum</h6>
+                                    <h5>Lorem epsum Lorem</h5>
+                                </div>
                             </a>
 
+
+
+                            </>
                         );
                     })}
                 </Carousel>
