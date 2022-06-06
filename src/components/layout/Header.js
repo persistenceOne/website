@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
-import logo from '../../assets/images/logo.svg'
+import { NavLink, withRouter, Link } from 'react-router-dom';
+import logo from '../../assets/images1/pstakesymbolblack.svg'
+import logotwo from '../../assets/images1/pstake-logo-symbol.svg'
 import {Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip} from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import pstakeLogo from "../../assets/images/logos/pstake.svg";
-import auditLogo from "../../assets/images/logos/audit.svg";
 
 import Icon from "../Icon";
 import {
-    PERSISTENCEONE_DISCORD_URL, PERSISTENCEONE_LINKEDIN_URL, PERSISTENCEONE_MEDIUM_URL, PERSISTENCEONE_REDDIT_URL,
-    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
+    PERSISTENCEONE_DISCORD_URL,
     PERSISTENCEONE_TELEGRAM_URL,
-    PERSISTENCEONE_TWITTER_URL, PERSISTENCEONE_YOUTUBE_URL
+    PERSISTENCEONE_TWITTER_URL,
+    PERSISTENCEONE_GITHUB_URL, PERSISTENCEONE_MEDIUM_URL
 } from "../../constants/config";
 import ReactGa from "react-ga";
 
@@ -21,36 +20,25 @@ const socialList = [
         iconName: 'twitter-logo',
         tooltip: 'twitter'
     },
+
     {
         url: PERSISTENCEONE_TELEGRAM_URL,
         iconName: 'telegram-plane',
         tooltip: 'telegram'
     },
-    {
-        url:  PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL ,
-        iconName: 'announcements',
-        tooltip: 'announcements'
-    }, {
+   {
         url:  PERSISTENCEONE_DISCORD_URL ,
         iconName: 'discord',
         tooltip: 'discord'
     }, {
-        url: PERSISTENCEONE_REDDIT_URL ,
-        iconName: 'reddit-round',
-        tooltip: 'reddit'
+        url: PERSISTENCEONE_GITHUB_URL,
+        iconName: 'github',
+        tooltip: 'github'
     }, {
-        url:  PERSISTENCEONE_YOUTUBE_URL ,
-        iconName: 'youtube',
-        tooltip: 'youtube'
-    }, {
-        url:  PERSISTENCEONE_MEDIUM_URL ,
-        iconName: 'medium-m',
+        url: PERSISTENCEONE_MEDIUM_URL,
+        iconName: 'mediumlink',
         tooltip: 'medium'
-    }, {
-        url: PERSISTENCEONE_LINKEDIN_URL ,
-        iconName: 'linkedin-footer',
-        tooltip: 'linkedIn'
-    },
+    }
 ];
 
 const Header = () => {
@@ -71,17 +59,12 @@ const Header = () => {
 
     const learnTitle = (
         <span>
-            Learn
+            Build
              <Icon viewClass="icon" icon="chevron"/>
         </span>
     )
 
-    const networkTitle = (
-        <span>
-            Network
-             <Icon viewClass="icon" icon="chevron"/>
-        </span>
-    )
+
 
     const ecoSystemTitle = (
         <span>
@@ -111,7 +94,7 @@ const Header = () => {
                 <div className="container p-0">
                 <Navbar.Brand href="#home">
                     <NavLink to="/">
-                        <img src={logo} alt="logo" />
+                        <img src={logotwo} alt="logo" />
                     </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"  className="navbar-toggler x" id="nab-bar-toggle"  onClick={toggleMenu}>
@@ -120,133 +103,145 @@ const Header = () => {
                     <span className="icon-bar"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
+                    <Nav className="m-auto">
                         <NavDropdown title={learnTitle} id="learn-dropdown">
                           <div className="nav-dropdown-items learn-items">
                               <div className="nav-dropdown-item">
-                                <p className="header">Guides & Tutorials</p>
+                                <p className="header">Developers</p>
                                   <div className="inner-items">
-                                      <a href="https://www.youtube.com/watch?v=tRzPBszn5X4" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Introduction to Persistence</a>
-                                      <a href="https://www.youtube.com/watch?v=5EfM_-0M7_g" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Multiproduct Vision</a>
-                                      <a href="https://www.youtube.com/watch?v=x8FIkYiAPRo" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Redefining “Defi”</a>
-                                      <a href="https://www.youtube.com/watch?v=1kTDDHvuWps" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Disrupting Proof-of-Stake</a>
+                                      <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Persistence SDK <Icon viewClass="social_icon_imgg"
+                                                                                                     icon={'exlink'} /></a>
+                                      <a href="https://github.com/persistenceOne" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Github Repository <Icon viewClass="social_icon_imgg"
+                                                                                                        icon={'exlink'} /></a>
+                                      <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Grants/Bug Bounties <Icon viewClass="social_icon_imgg"
+                                                                                                          icon={'exlink'} /></a>
+                                      <a href="https://discord.com/invite/qXRmTTGcYD" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Developer Discord Channel <Icon viewClass="social_icon_imgg"
+                                                                                                                icon={'exlink'} /></a>
                                   </div>
                               </div>
                               <div className="nav-dropdown-item">
-                                  <p className="header">FAQS</p>
+                                  <p className="header">Validators</p>
                                   <div className="inner-items">
-                                      <a href="/faq" className="inner-item">What is Persistence?</a>
-                                      {/*<p className="inner-item" onClick={()=>handleRoute('/faq')}>Wallet</p>*/}
-                                      <a href="/faq" className="inner-item">What is XPRT?</a>
-                                      <a href="/faq" className="inner-item">What is the Persistence vision?</a>
+                                      <a href="https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md"
+                                         target="_blank" rel="noopener noreferrer" className="inner-item">Become a Validator <Icon viewClass="social_icon_imgg"
+                                                                                                         icon={'exlink'} /></a>
+                                      <a href="/faq" className="inner-item">Foundation Delegation Program <Icon viewClass="social_icon_imgg"
+                                                                                                                icon={'exlink'} /></a>
+                                      <a href="https://rpc.core.persistence.one/" target="_blank" rel="noopener noreferrer" className="inner-item">RPC End Points <Icon viewClass="social_icon_imgg"
+                                                                                                                                                                        icon={'exlink'} /></a>
+                                      <a href="/https://discord.com/login?redirect_to=%2Fchannels%2F796174129077813248%2F844460782447362048"
+                                         target="_blank" rel="noopener noreferrer" className="inner-item">Validator Discord Channel <Icon viewClass="social_icon_imgg"
+                                                                                                                                          icon={'exlink'} /></a>
                                   </div>
                               </div>
                           </div>
                         </NavDropdown>
-                        <NavDropdown title={networkTitle} id="network-dropdown">
-                            <div className="nav-dropdown-items network-items">
-                                <div className="nav-dropdown-item">
-                                    <p className="header">Native</p>
-                                    <div className="inner-items">
-                                        <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistence Core</a>
-                                        <a href="https://wallet.persistence.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistence Wallet</a>
-                                        <a href="https://explorer.persistence.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistence explorer</a>
-                                        <a href="https://bridge.persistence.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistence Bridge</a>
-                                        <a href="/xprttoken" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">XPRT</a>
-                                    </div>
-                                </div>
-                                <div className="nav-dropdown-item">
-                                    <p className="header">External Tools</p>
-                                    <div className="inner-items sub">
-                                        <div className="sub-inner-items">
-                                            <p className="sub-inner-items-title">Wallet</p>
-                                            <a href="https://wallet.keplr.app/#/dashboard" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Keplr</a>
-                                            <a href="https://wallet.cosmostation.io/persistence" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Cosmostation</a>
-                                            <a href="https://www.ledger.com/" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Ledger</a>
-                                            <a href="https://coin98.com/" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Coin98</a>
-                                        </div>
-                                        <div className="sub-inner-items">
-                                            <p className="sub-inner-items-title">Explorers</p>
-                                            <a href="https://www.mintscan.io/persistence" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Mintscan</a>
-                                            <a href="https://hubble.figment.io/persistence/chains/core-1" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Hubble</a>
-                                            <a href="https://persistence.aneka.io/" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Aneka</a>
-                                            <a href="https://ping.pub/persistence" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Ping Explorer</a>
-                                        </div>
-                                        <div className="sub-inner-items">
-                                            <p className="sub-inner-items-title">dashboard</p>
-                                            <a href="https://mapofzones.com/zone?" rel="noopener noreferrer"
-                                               target="_blank" className="inner-item">Map of Zones</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </NavDropdown>
                         <NavDropdown title={ecoSystemTitle} id="ecosystem-dropdown">
                             <div className="nav-dropdown-items ecosystem-items">
                                 <div className="nav-dropdown-item">
-                                    <p className="header">Liquid Staking</p>
-                                    <div className="inner-items">
+                                    <div className="inner-items firstone">
+
                                         <a href="https://pstake.finance/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">
-                                            <img src={pstakeLogo} alt="pstakeLogo"/>
+                                           target="_blank" className="inner-item m-0">
+                                            <img src={logo} alt="pstakeLogo"/>
+                                            <p className="header logo m-0">Liquid Staking Protocol</p>
+
+                                        </a>
+                                    </div>
+                                    <div className="inner-items mt-2">
+
+                                        <a href="https://pstake.finance/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item ml-3 mb-0">
+
+                                            BORROW & LENDING
+                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
+
+                                        </a>
+                                    </div>
+                                    <div className="inner-items">
+
+                                        <a href="https://pstake.finance/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item ml-3 mb-0">
+
+INTERCHAIN DEX                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
+
                                         </a>
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
-                                    <p className="header">PoS Validator</p>
+                                    <p className="header">EXPLORER</p>
                                     <div className="inner-items">
-                                        <a href="https://audit.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">
-                                            <img src={auditLogo} alt="auditLogo"/>
+                                        <a href="https://explorer.persistence.one/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Persistence Explorer&nbsp;
+                                            <Icon viewClass="social_icon_imgg"
+                                                  icon={'exlink'} />
                                         </a>
+                                        <a href="https://www.mintscan.io/persistence" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Mintscan  <Icon viewClass="social_icon_imgg"
+                                                                                                  icon={'exlink'} /></a>
+                                        <a href="https://hubble.figment.io/persistence/chains/core-1" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Hubble  <Icon viewClass="social_icon_imgg"
+                                                                                                icon={'exlink'} /></a>
+
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
-                                    <p className="header">Other Initiatives</p>
+                                    <p className="header">WALLETS</p>
                                     <div className="inner-items">
-                                        <a href="https://assetmantle.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">AssetMantle</a>
-                                        <a href="https://comdex.one/home" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Comdex</a>
-                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Stakedrop</a>
-                                        <a href="https://internft.org/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">interNFT</a>
+                                        <a href="https://wallet.keplr.app/#/dashboard" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Keplr <Icon viewClass="social_icon_imgg"
+                                                                                              icon={'exlink'} /></a>
+
+                                        <a href="https://www.cosmostation.io/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Cosmostation <Icon viewClass="social_icon_imgg"
+                                                                                                     icon={'exlink'} /></a>
+                                        <a href="https://coin98.com/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Coin98 <Icon viewClass="social_icon_imgg"
+                                                                                               icon={'exlink'} /></a>
                                     </div>
                                 </div>
-                                <div className="nav-dropdown-item">
-                                    <p className="header">Grant</p>
-                                    <div className="inner-items">
-                                        <p className="inner-item">Have an exciting Idea?
-                                            Apply for a grant.</p>
-                                        <a href="/grants" rel="noopener noreferrer"
-                                           target="_blank" className="button-primary button">
-                                            Apply
-                                        </a>
-                                    </div>
+                                <div className="nav-dropdown-item buttoneco">
+                                    <Link to='/ecosystem'>Explore All Apps</Link>
                                 </div>
                             </div>
                         </NavDropdown>
                         <NavDropdown title={communityTitle} id="community-dropdown">
                             <div className="nav-dropdown-items community-items">
                                 <div className="nav-dropdown-item">
+
+                                    <p className="header">PROGRAM</p>
+                                    <div className="inner-items">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeewzYI2E3HXDZaZHa2KH3NULw30HnRmiu33EYL75H1op-Dw/viewform" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Guardians Program <Icon viewClass="social_icon_imgg"
+                                                                                              icon={'exlink'} /></a>
+
+                                        {/*<a href="https://www.cosmostation.io/" rel="noopener noreferrer"*/}
+                                        {/*   target="_blank" className="inner-item">Community Bounties<Icon viewClass="social_icon_imgg"*/}
+                                        {/*                                                             icon={'exlink'} /></a>*/}
+
+                                    </div>
+                                </div>
+                                <div className="nav-dropdown-item">
+                                    <p className="header">tutorials</p>
+                                    <div className="inner-items">
+                                        <a href="https://medium.com/persistence-blog/persistence-xprt-staking-guide-4504cf9a19df" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Stake $XPRT <Icon viewClass="social_icon_imgg"
+                                                                                              icon={'exlink'} /></a>
+
+                                        <a href="https://www.youtube.com/watch?v=QG7VCqGFc_8" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Provide Liquidity <Icon viewClass="social_icon_imgg"
+                                                                                                     icon={'exlink'} /></a>
+                                        <a href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Setup XPRT wallet <Icon viewClass="social_icon_imgg"
+                                                                                               icon={'exlink'} /></a>
+                                    </div>
+                                </div>
+                                <div className="nav-dropdown-item">
+>>>>>>> 05a8c92a694d0b17eedfc422113410d7cb352437
                                     <p className="header">forum</p>
                                     <div className="inner-items">
                                         <a className="inner-item para" rel="noopener noreferrer"
@@ -287,6 +282,30 @@ const Header = () => {
                             {t("BLOG")}
                         </Nav.Link>
                     </Nav>
+                    <div className="nav-dropdown-item">
+                        <div className="inner-items">
+                            <div className="links">
+                                {
+                                    socialList.map((item, index) => (
+                                        <OverlayTrigger
+                                            key={item.iconName}
+                                            placement="bottom"
+                                            overlay={
+                                                <Tooltip id={`tooltip-${item.iconName}}`}>
+                                                    {item.tooltip}
+                                                </Tooltip>
+                                            }
+                                        >
+                                            <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
+                                               target="_blank"><Icon viewClass="social_icon_imgg"
+                                                                     icon={item.iconName} /></a>
+                                        </OverlayTrigger>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+
                 </Navbar.Collapse>
                 </div>
             </Navbar>

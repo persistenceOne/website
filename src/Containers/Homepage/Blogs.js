@@ -1,6 +1,5 @@
 import Carousel from "react-multi-carousel";
 import React from "react";
-import {useTranslation} from "react-i18next";
 
 
 const responsive = {
@@ -19,28 +18,40 @@ const responsive = {
 };
 const images = [
     {
-        url:'https://medium.com/persistence-blog/exploring-the-relationship-between-xprt-and-pstake-f0190efcee2a',
-        image:'https://miro.medium.com/max/1400/1*InSUTrBmx7so7xjEGWVRQQ.png'
-    },
-    {
         url:'https://medium.com/persistence-blog/the-vision-for-persistence-and-xprt-value-accrual-53fd56619e3d',
-        image:'https://miro.medium.com/max/1400/1*yyGtq7g0FQRKsmzIWdP6Rw.png'
+        image:'https://miro.medium.com/max/1400/1*yyGtq7g0FQRKsmzIWdP6Rw.png',
+        title:"The Vision for Persistence",
+        subtitle:"$XPRT TOKEN"
     },
     {
         url:'https://medium.com/persistence-blog/from-the-founders-desk-mission-2022-d3a2a1d20de1',
-        image:'https://miro.medium.com/max/1400/0*ZgVUN-HPoMTO5AEO'
+        image:'https://miro.medium.com/max/1400/0*ZgVUN-HPoMTO5AEO',
+        title:"From the Founder’s Desk",
+        subtitle:"MISSION 2022"
     },
     {
-        url:'https://medium.com/persistence-blog/community-newsletter-16-january-2022-ecde69cb2721',
-        image:'https://miro.medium.com/max/1400/1*VSeIXPpjTnKaQeTrpLi70g.png'
+        url:'https://medium.com/persistence-blog/community-newsletter-20-may-2022-afb562173221',
+        image:'https://miro.medium.com/max/1400/0*0WYZ8Pk5xU5ods2l',
+        title:"Community Newsletter #20",
+        subtitle:"MAY 2022"
+    },
+    {
+        url:'https://medium.com/persistence-blog/from-the-founders-desk-mission-2022-d3a2a1d20de1',
+        image:'https://miro.medium.com/max/1400/0*r0zQspc5rwCjUGwZ',
+        title:"Community Newsletter #19",
+        subtitle:"APRIL 2022"
+    },
+    {
+        url:'https://medium.com/persistence-blog/community-newsletter-18-march-2022-9925d8bbd545',
+        image:'https://miro.medium.com/max/1400/0*QvLinyxZydtFUAam',
+        title:"Community Newsletter #18",
+        subtitle:"MARCH 2022"
     },
 ];
 
 const Blogs = ({ deviceType }) => {
-    const {t} = useTranslation();
     return (
         <section className="stay-updated">
-            <h3 className="section-title">{t("BLOGS_SECTION_TITLE")}</h3>
             <div className="container">
                 <Carousel
                     ssr
@@ -52,6 +63,7 @@ const Blogs = ({ deviceType }) => {
                 >
                     {images.slice(0, 5).map(image => {
                         return (
+                            <>
                             <a href={image.url} rel="noopener noreferrer"
                                target="_blank"
                                key={image.url}
@@ -62,8 +74,15 @@ const Blogs = ({ deviceType }) => {
                                     style={{ width: "100%", height: "100%" }}
                                     src={image.image}
                                 />
+                                <div className={'blog-title'}>
+                                    <h6>{image.subtitle}</h6>
+                                    <h5>{image.title}</h5>
+                                </div>
                             </a>
 
+
+
+                            </>
                         );
                     })}
                 </Carousel>
