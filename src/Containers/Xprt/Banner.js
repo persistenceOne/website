@@ -3,6 +3,13 @@ import xprt_role from "../../assets/images1/xprt_role.svg";
 import xprt_value from "../../assets/images1/xprt_value.svg";
 import economics from "../../assets/images1/xprt_economics.svg";
 import ecosystem from "../../assets/images1/ecosystem.svg";
+import injective from "../../assets/images1/aquire/injective.svg";
+import juno_swap from "../../assets/images1/aquire/juno_swap.svg";
+import osmosis from "../../assets/images1/aquire/osmosis.svg";
+import ascendex from "../../assets/images1/aquire/ascendex.png";
+import houbi from "../../assets/images1/aquire/houbi.svg";
+import gate_io from "../../assets/images1/aquire/gate_io.svg";
+import kucoin from "../../assets/images1/aquire/kucoin.svg";
 
 const Banner = () => {
     return (
@@ -56,6 +63,36 @@ const Banner = () => {
                 </div>
                 <div className="aquire-content">
                     <p className="title">Acquire XPRT</p>
+                    <div className="logos">
+                        <a href="https://www.huobi.com/en-us/exchange/xprt_usdt/" rel="noopener noreferrer"
+                           target="_blank" className="inner-item">
+                            <img src={houbi} alt={houbi} className="logo-img" />
+                        </a>
+                        <a href="https://www.kucoin.com/trade/XPRT-USDT" rel="noopener noreferrer"
+                           target="_blank" className="inner-item">
+                            <img src={kucoin} alt={kucoin} className="logo-img" />
+                        </a>
+                        <a href="https://ascendex.com/en/cashtrade-spottrading/usdt/xprt" rel="noopener noreferrer"
+                           target="_blank" className="inner-item">
+                            <img src={ascendex} alt={ascendex} className="logo-img" />
+                        </a>
+                        <a href="https://www.gate.io/trade/XPRT_USDT" rel="noopener noreferrer"
+                           target="_blank" className="inner-item">
+                            <img src={gate_io} alt={gate_io} className="logo-img" />
+                        </a>
+                        <a href="https://injective.exchange/spot/xprt-usdt" rel="noopener noreferrer"
+                           target="_blank" className="inner-item">
+                            <img src={injective} alt={injective} className="logo-img" />
+                        </a>
+                        <a href="https://info.osmosis.zone/token/XPRT" rel="noopener noreferrer"
+                           target="_blank" className="inner-item">
+                            <img src={osmosis} alt={osmosis} className="logo-img" />
+                        </a>
+                        <a href="https://junoswap.com/pools/JUNO-XPRT" rel="noopener noreferrer"
+                           target="_blank" className="inner-item">
+                            <img src={juno_swap} alt={juno_swap} className="logo-img" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

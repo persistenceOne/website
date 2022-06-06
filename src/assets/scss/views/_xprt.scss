@@ -1,5 +1,5 @@
 .xprt-banner-section{
-  padding-top: 200px;
+  padding: 200px 0 100px 0;
   background-repeat: no-repeat;
   //height: 100vh;
   //overflow: auto;
@@ -126,6 +126,15 @@
       line-height: 60px;
       text-align: center;
       color: #FFFFFF;
+      margin-bottom: 50px;
+    }
+    .logos{
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-content: center;
+      align-content: center;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
     }
   }
 }

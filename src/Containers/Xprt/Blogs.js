@@ -31,12 +31,7 @@ const images = [
         url:'https://www.youtube.com/watch?v=QG7VCqGFc_8',
         image:'https://img.youtube.com/vi/QG7VCqGFc_8/hqdefault.jpg',
         text:'Provide Liquidity on Osmosis'
-    },
-    {
-        url:'https://medium.com/persistence-blog/community-newsletter-16-january-2022-ecde69cb2721',
-        image:'https://miro.medium.com/max/1400/1*VSeIXPpjTnKaQeTrpLi70g.png',
-        text:'Wallet Setup Guide'
-    },
+    }
 ];
 
 const Blogs = ({ deviceType }) => {
@@ -66,7 +61,7 @@ const Blogs = ({ deviceType }) => {
                                     src={image.image}
                                 />
                                 <div className={'blog-title'}>
-                                    <a href={image.url}>{image.text}</a>
+                                    <a href={image.url} target="_blank" rel="noopener noreferrer">{image.text}</a>
                                 </div>
                             </a>
 

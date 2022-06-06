@@ -24,6 +24,9 @@
       }
     }
   }
+  .button-initial.button.one{
+    background: #E50913;
+  }
   .button-initial.button{
     background: transparent;
     border-radius: 6px;
@@ -37,8 +40,9 @@
     display: inline-block;
     transition: all 0.5s ease-in-out;
     &:hover{
-      background: #E50913;
-      border: 1px solid #E50913;
+      background: transparent;
+      text-decoration: underline!important;
+      border: 1px solid #303132;
     }
   }
   .caption {
@@ -737,12 +741,12 @@
     h6{
       color:#858585;
       font-weight: 400;
-      font-size: 12px;
+      font-size: 14px;
     }
     h5{
       color: #E1E1E1;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 18px;
     }
   }
   .section-title {
@@ -1053,6 +1057,14 @@
       font-weight: 400;
       color: #FCFCFC;
       right: 24px;
+      .dot{
+        width: 6px;
+        background: #00A8A8;
+        display: inline-block;
+        border: 0.247917px solid #00A8A8;
+        height: 6px;
+        border-radius: 50%;
+      }
     }
     .networkname{
       position: absolute;
@@ -1154,8 +1166,15 @@
   }
   .sortbuttons{
     text-align: center;
-    button{
+    button.active{
       background: #E50913;
+    }
+    button{
+      &:focus{
+        outline: 0px dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+      }
+      background: transparent;
       border-radius: 6px;
       border: 0;
       color: #FFFFFF;
@@ -1244,7 +1263,7 @@ margin: 0 7.5px;
 
 
 .network-section{
-  padding: 20px 0;
+  padding: 20px 60px;
     .tech-box{
       display: flex;
 .content-container{
