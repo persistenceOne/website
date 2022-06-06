@@ -36,7 +36,7 @@ const images = [
 
 const Blogs = ({ deviceType }) => {
     return (
-        <section className="stay-updated">
+        <section className="stay-updated xprt">
             <div className="container">
                 <p className="title">Tutorials</p>
                 <Carousel
