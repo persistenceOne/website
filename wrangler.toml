@@ -2,7 +2,7 @@ name = "persistence-website"
 type = "webpack"
 usage_model = ''
 compatibility_flags = []
-workers_dev = true
+workers_dev = false
 site = {bucket = "./build",entry-point = "workers-site"}
 zone_id = '000fde296cba847a78e918414382ba7a'
 compatibility_date = "2022-06-06"
