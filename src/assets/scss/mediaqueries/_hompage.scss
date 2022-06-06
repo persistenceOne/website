@@ -164,10 +164,79 @@
     font-size: 28px!important;
   }
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .blog-image .card-img-top {
     height: 200px;
   }
+}
+@media (max-width: 768px){
+  .blog-image .card-img-top {
+    height: 200px;
+  }
+  .home-ecosystem-section .card-tiles .card-group{
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-section .banner-heading span,.home-ecosystem-section h3{
+    font-size: 32px;
+  }
+  .banner-section .stats-container{
+    flex-direction: column;
+  }
+  .home-ecosystem-section .card-tiles .card-group .h-100.card{
+    height: auto!important;
+    margin-bottom: 15px;
+  }
+  .joinus .jointext{
+    flex-direction: column;
+  }
+  .footer .footer-logo-section{
+    padding-top: 20px;
+    display: block;
+    padding-bottom: 20px;
+    align-items: self-end;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .copy-rights{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.314;
+    color: #70747c;
+    display: block;
+    text-align: center;
+  }
+
+  .footer .footer-bottom-section{
+    flex-direction: column;
+  }
+  .contact-us{
+    width:100%;
+  }
+  .joinus .jointext a{
+    margin-top: 20px;
+  }
+  .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .comingsoon{
+    text-align: center;
+    position: static;
+    left: 50%;
+    margin-left: 0;
+    bottom: auto;
+  }
+  .network-section{
+    padding: 0;
+  }
+  .network-section .tech-box .content-container h2{
+    font-size: 32px;
+    text-align: center;
+  }
+  .network-section .tech-box{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 @media (min-width: 1400px) {
