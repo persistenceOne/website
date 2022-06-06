@@ -1,0 +1,12 @@
+@media (max-width: 767px){
+  .opportunities-section {
+    .title{
+      font-size: 2rem;
+    }
+  .staking-boxes .heading{
+    &:after, &:before{
+      content: none;
+    }
+  }
+  }
+}

@@ -1,10 +1,10 @@
 /*
 Error: wrong number of arguments (1 for 3) for `rgb'
-        on line 384 of views/_main.scss
+        on line 422 of views/_main.scss
         from line 6 of style.scss
 
 Backtrace:
-views/_main.scss:384
+views/_main.scss:422
 style.scss:6
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:311:in `reformat_argument_error'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:158:in `rescue in _perform'
@@ -93,4 +93,4 @@ style.scss:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: wrong number of arguments (1 for 3) for `rgb'\A         on line 384 of views/_main.scss\A         from line 6 of style.scss"; }
+  content: "Error: wrong number of arguments (1 for 3) for `rgb'\A         on line 422 of views/_main.scss\A         from line 6 of style.scss"; }
