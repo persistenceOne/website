@@ -212,8 +212,7 @@ INTERCHAIN DEX                                            <p className="header l
                         <NavDropdown title={communityTitle} id="community-dropdown">
                             <div className="nav-dropdown-items community-items">
                                 <div className="nav-dropdown-item">
-<<<<<<< HEAD
-=======
+
                                     <p className="header">PROGRAM</p>
                                     <div className="inner-items">
                                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeewzYI2E3HXDZaZHa2KH3NULw30HnRmiu33EYL75H1op-Dw/viewform" rel="noopener noreferrer"
