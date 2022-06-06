@@ -356,7 +356,7 @@ a {
             }
             .inner-items{
               padding: 10px 0;
-              .inner-item{
+              a{
                 img{
                   margin-bottom: 0;
                 }
@@ -446,12 +446,12 @@ a {
                 a{
                   width: 28px;
                   height: 28px;
-                  margin: 5px;
+                  margin-right: 10px;
                   display: flex;
                   align-items: center;
                   border-radius: 50%;
                   justify-content: center;
-                  background: #363B46;
+                  background: #e50913;
                   .icon{
                     width: 12px;
                     fill: #ffffff;

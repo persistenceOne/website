@@ -10,9 +10,7 @@ import {
     PERSISTENCEONE_DISCORD_URL,
     PERSISTENCEONE_TELEGRAM_URL,
     PERSISTENCEONE_TWITTER_URL,
-    PERSISTENCEONE_MEDIUM_URL,
-    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
-    PERSISTENCEONE_REDDIT_URL, PERSISTENCEONE_YOUTUBE_URL, PERSISTENCEONE_LINKEDIN_URL
+    PERSISTENCEONE_GITHUB_URL, PERSISTENCEONE_MEDIUM_URL
 } from "../../constants/config";
 import ReactGa from "react-ga";
 
@@ -22,36 +20,25 @@ const socialList = [
         iconName: 'twitter-logo',
         tooltip: 'twitter'
     },
+
     {
         url: PERSISTENCEONE_TELEGRAM_URL,
         iconName: 'telegram-plane',
         tooltip: 'telegram'
     },
-    {
-        url:  PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL ,
-        iconName: 'announcements',
-        tooltip: 'announcements'
-    }, {
+   {
         url:  PERSISTENCEONE_DISCORD_URL ,
         iconName: 'discord',
         tooltip: 'discord'
     }, {
-        url: PERSISTENCEONE_REDDIT_URL ,
-        iconName: 'reddit-round',
-        tooltip: 'reddit'
+        url: PERSISTENCEONE_GITHUB_URL,
+        iconName: 'github',
+        tooltip: 'github'
     }, {
-        url:  PERSISTENCEONE_YOUTUBE_URL ,
-        iconName: 'youtube',
-        tooltip: 'youtube'
-    }, {
-        url:  PERSISTENCEONE_MEDIUM_URL ,
-        iconName: 'medium-m',
+        url: PERSISTENCEONE_MEDIUM_URL,
+        iconName: 'mediumlink',
         tooltip: 'medium'
-    }, {
-        url: PERSISTENCEONE_LINKEDIN_URL ,
-        iconName: 'linkedin-footer',
-        tooltip: 'linkedIn'
-    },
+    }
 ];
 
 const Header = () => {
@@ -142,13 +129,11 @@ const Header = () => {
                                       <a href="https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md"
                                          target="_blank" rel="noopener noreferrer" className="inner-item">Become a Validator <Icon viewClass="social_icon_imgg"
                                                                                                          icon={'exlink'} /></a>
-                                      <a href="https://drive.google.com/file/d/1FRFNZxh894K5LIfvZ5n5zvXTXZ_YF3Qt/view?usp=sharing"
-                                         className="inner-item" target="_blank" rel="noopener noreferrer">Foundation Delegation Program
-                                          <Icon viewClass="social_icon_imgg" icon={'exlink'} />
-                                      </a>
+                                      <a href="/faq" className="inner-item">Foundation Delegation Program <Icon viewClass="social_icon_imgg"
+                                                                                                                icon={'exlink'} /></a>
                                       <a href="https://rpc.core.persistence.one/" target="_blank" rel="noopener noreferrer" className="inner-item">RPC End Points <Icon viewClass="social_icon_imgg"
                                                                                                                                                                         icon={'exlink'} /></a>
-                                      <a href="https://discord.com/login?redirect_to=%2Fchannels%2F796174129077813248%2F844460782447362048"
+                                      <a href="/https://discord.com/login?redirect_to=%2Fchannels%2F796174129077813248%2F844460782447362048"
                                          target="_blank" rel="noopener noreferrer" className="inner-item">Validator Discord Channel <Icon viewClass="social_icon_imgg"
                                                                                                                                           icon={'exlink'} /></a>
                                   </div>
@@ -169,17 +154,22 @@ const Header = () => {
                                     </div>
                                     <div className="inner-items mt-2">
 
-                                        <p className="inner-item ml-3 mb-0">
+                                        <a href="https://pstake.finance/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item ml-3 mb-0">
+
                                             BORROW & LENDING
                                             <p className="header logo inner m-0 p-0">Coming Soon</p>
 
-                                        </p>
+                                        </a>
                                     </div>
                                     <div className="inner-items">
-                                        <p className="inner-item ml-3 mb-0">
-                                            INTERCHAIN DEX
-                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
-                                        </p>
+
+                                        <a href="https://pstake.finance/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item ml-3 mb-0">
+
+INTERCHAIN DEX                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
+
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
@@ -222,6 +212,7 @@ const Header = () => {
                         <NavDropdown title={communityTitle} id="community-dropdown">
                             <div className="nav-dropdown-items community-items">
                                 <div className="nav-dropdown-item">
+
                                     <p className="header">PROGRAM</p>
                                     <div className="inner-items">
                                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeewzYI2E3HXDZaZHa2KH3NULw30HnRmiu33EYL75H1op-Dw/viewform" rel="noopener noreferrer"
@@ -250,25 +241,14 @@ const Header = () => {
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
+>>>>>>> 05a8c92a694d0b17eedfc422113410d7cb352437
                                     <p className="header">forum</p>
                                     <div className="inner-items">
-                                        <a href="https://forum.persistence.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Community Forum <Icon viewClass="social_icon_imgg"
-                                                                                              icon={'exlink'} /></a>
-
-                                        <a href="/faq" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Community FAQs <Icon viewClass="social_icon_imgg"
-                                                                                                     icon={'exlink'} /></a>
+                                        <a className="inner-item para" rel="noopener noreferrer"
+                                           target="_blank" href="https://forum.persistence.one/">Engage with the Persistence Community to
+                                            exchange and explore ideas for the ecosytem growth </a>
                                     </div>
                                 </div>
-                                {/*<div className="nav-dropdown-item">*/}
-                                {/*    <p className="header">forum</p>*/}
-                                {/*    <div className="inner-items">*/}
-                                {/*        <a className="inner-item para" rel="noopener noreferrer"*/}
-                                {/*           target="_blank" href="https://forum.persistence.one/">Engage with the Persistence Community to*/}
-                                {/*            exchange and explore ideas for the ecosytem growth </a>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
                                 <div className="nav-dropdown-item">
                                     <p className="header">social media</p>
                                     <div className="inner-items">

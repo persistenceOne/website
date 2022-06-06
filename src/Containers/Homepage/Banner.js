@@ -12,7 +12,7 @@ const Banner = () => {
                             <span>of DeFi dApps focused on unlocking the Liquidity of staked assets.</span>
                         </p>
                         <div className={"button-section text-center d-inline-block"}>
-                        <a href="/xprt" rel="noopener noreferrer"
+                        <a href="/grants" rel="noopener noreferrer"
                            target="_blank" className="button-initial button one">
                             $XPRT
                         </a>

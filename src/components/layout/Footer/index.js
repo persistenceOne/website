@@ -6,7 +6,10 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import Icon from "../../Icon";
 import { useTranslation } from "react-i18next";
 import {
+    AUDIT_URL,
+    ASSETMANTLE_TWITTER_URL,
     PERSISTENCEONE_DISCORD_URL,
+    PSTAKE_TWITTER_URL,
     PERSISTENCEONE_TWITTER_URL,
     PERSISTENCEONE_TELEGRAM_URL,
     PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
@@ -82,7 +85,7 @@ const Footer = (props) => {
                                                    rel="noopener noreferrer">XPRT</a></li>
                                             <li><a href="/ecosystem" target="_blank"
                                                    rel="noopener noreferrer">Ecosystem</a></li>
-                                            <li><a href="https://angel.co/company/persistence-one-1" target="_blank"
+                                            <li><a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ" target="_blank"
                                                 rel="noopener noreferrer">Careers</a></li>
                                             <li><a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ" target="_blank"
                                                    rel="noopener noreferrer">Press & Brand</a></li>
@@ -93,9 +96,9 @@ const Footer = (props) => {
                                     <h6>{t("Community")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href="https://drive.google.com/file/d/1gEdSvITrKA6wTtujOf9EIzl6M0QtltRV/view?usp=sharing" rel="noopener noreferrer" target="_blank">{t("Grants ")}</a></li>
-                                            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeeewzYI2E3HXDZaZHa2KH3NULw30HnRmiu33EYL75H1op-Dw/viewform" rel="noopener noreferrer" target="_blank">{t("Guardians Program")}</a></li>
-                                            <li><a href="https://drive.google.com/file/d/1FRFNZxh894K5LIfvZ5n5zvXTXZ_YF3Qt/view?usp=sharing" rel="noopener noreferrer" target="_blank">{t("Foundation Delegation")}</a></li>
+                                            <li><a href={PSTAKE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("Grants ")}</a></li>
+                                            <li><a href={AUDIT_URL} rel="noopener noreferrer" target="_blank">{t("Guardians Program")}</a></li>
+                                            <li><a href={ASSETMANTLE_TWITTER_URL} rel="noopener noreferrer" target="_blank">{t("Foundation Delegation")}</a></li>
                                         </ul>
                                     </div>
                                 </div>
