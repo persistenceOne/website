@@ -228,9 +228,9 @@ const Header = () => {
                                            target="_blank" className="inner-item">Guardians Program <Icon viewClass="social_icon_imgg"
                                                                                               icon={'exlink'} /></a>
 
-                                        <a href="https://www.cosmostation.io/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Community Bounties<Icon viewClass="social_icon_imgg"
-                                                                                                     icon={'exlink'} /></a>
+                                        {/*<a href="https://www.cosmostation.io/" rel="noopener noreferrer"*/}
+                                        {/*   target="_blank" className="inner-item">Community Bounties<Icon viewClass="social_icon_imgg"*/}
+                                        {/*                                                             icon={'exlink'} /></a>*/}
 
                                     </div>
                                 </div>
