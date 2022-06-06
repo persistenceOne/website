@@ -212,6 +212,37 @@ INTERCHAIN DEX                                            <p className="header l
                         <NavDropdown title={communityTitle} id="community-dropdown">
                             <div className="nav-dropdown-items community-items">
                                 <div className="nav-dropdown-item">
+<<<<<<< HEAD
+=======
+                                    <p className="header">PROGRAM</p>
+                                    <div className="inner-items">
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeewzYI2E3HXDZaZHa2KH3NULw30HnRmiu33EYL75H1op-Dw/viewform" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Guardians Program <Icon viewClass="social_icon_imgg"
+                                                                                              icon={'exlink'} /></a>
+
+                                        {/*<a href="https://www.cosmostation.io/" rel="noopener noreferrer"*/}
+                                        {/*   target="_blank" className="inner-item">Community Bounties<Icon viewClass="social_icon_imgg"*/}
+                                        {/*                                                             icon={'exlink'} /></a>*/}
+
+                                    </div>
+                                </div>
+                                <div className="nav-dropdown-item">
+                                    <p className="header">tutorials</p>
+                                    <div className="inner-items">
+                                        <a href="https://medium.com/persistence-blog/persistence-xprt-staking-guide-4504cf9a19df" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Stake $XPRT <Icon viewClass="social_icon_imgg"
+                                                                                              icon={'exlink'} /></a>
+
+                                        <a href="https://www.youtube.com/watch?v=QG7VCqGFc_8" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Provide Liquidity <Icon viewClass="social_icon_imgg"
+                                                                                                     icon={'exlink'} /></a>
+                                        <a href="https://medium.com/persistence-blog/persistence-xprt-wallet-guide-dbf5e27100f3" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Setup XPRT wallet <Icon viewClass="social_icon_imgg"
+                                                                                               icon={'exlink'} /></a>
+                                    </div>
+                                </div>
+                                <div className="nav-dropdown-item">
+>>>>>>> 05a8c92a694d0b17eedfc422113410d7cb352437
                                     <p className="header">forum</p>
                                     <div className="inner-items">
                                         <a className="inner-item para" rel="noopener noreferrer"
