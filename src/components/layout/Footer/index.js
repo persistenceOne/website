@@ -81,9 +81,9 @@ const Footer = (props) => {
                                     <h6>{t("General")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href="https://github.com/persistenceOne/persistenceCore" target="_blank"
+                                            <li><a href="/xprt" target="_blank"
                                                    rel="noopener noreferrer">XPRT</a></li>
-                                            <li><a href="/xprttoken" target="_blank"
+                                            <li><a href="/ecosystem" target="_blank"
                                                    rel="noopener noreferrer">Ecosystem</a></li>
                                             <li><a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ" target="_blank"
                                                 rel="noopener noreferrer">Careers</a></li>
@@ -158,7 +158,8 @@ const Footer = (props) => {
 
                     </div>
                     <div className={'col-lg-6 text-right'}>
-                        <p className="copy-rights mb-sm-0">Built with </p>
+                        <p className="copy-rights mb-sm-0">Built with <Icon viewClass="social_icon_imgg"
+                                                                            icon={'love'} /></p>
                     </div>
                 </div>
             </footer>

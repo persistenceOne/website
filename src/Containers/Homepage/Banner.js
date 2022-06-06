@@ -13,10 +13,10 @@ const Banner = () => {
                         </p>
                         <div className={"button-section text-center d-inline-block"}>
                         <a href="/grants" rel="noopener noreferrer"
-                           target="_blank" className="button-initial button">
+                           target="_blank" className="button-initial button one">
                             $XPRT
                         </a>
-                            <a href="/grants" rel="noopener noreferrer"
+                            <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
                                target="_blank" className="button-initial button">
                                 Ecosystem Grants
                             </a>

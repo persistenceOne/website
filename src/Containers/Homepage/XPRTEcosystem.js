@@ -2,11 +2,12 @@ import React from 'react';
 import {Card, CardGroup, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import validator from '../../assets/images1/validatoricon.svg';
 import community from '../../assets/images1/community.svg';
+import build from '../../assets/images1/buildon.svg';
 import Icon from "../../components/Icon";
 import {
-    PERSISTENCEONE_DISCORD_URL, PERSISTENCEONE_GITHUB_URL,
+    PERSISTENCEONE_DISCORD_URL, PERSISTENCEONE_GITHUB_URL, PERSISTENCEONE_MEDIUM_URL, PERSISTENCEONE_REDDIT_URL,
     PERSISTENCEONE_TELEGRAM_URL,
-    PERSISTENCEONE_TWITTER_URL
+    PERSISTENCEONE_TWITTER_URL, PERSISTENCEONE_YOUTUBE_URL
 } from "../../constants/config";
 import ReactGa from "react-ga";
 const socialList = [
@@ -15,7 +16,21 @@ const socialList = [
         iconName: 'twitter-logo',
         tooltip: 'twitter'
     },
-
+    {
+        url: PERSISTENCEONE_YOUTUBE_URL,
+        iconName: 'youtube',
+        tooltip: 'youtube'
+    },
+    {
+        url: PERSISTENCEONE_MEDIUM_URL,
+        iconName: 'mediumlink',
+        tooltip: 'medium'
+    },
+    {
+        url: PERSISTENCEONE_REDDIT_URL,
+        iconName: 'reddit-round',
+        tooltip: 'reddit'
+    },
     {
         url: PERSISTENCEONE_TELEGRAM_URL,
         iconName: 'telegram-plane',
@@ -50,7 +65,7 @@ const XPRTEcosystem = () => {
                             <div className={'card-section'}>
                                 <Card.Body >
                                     <div className={"symbol-section"}>
-                                        <Card.Img variant="top" src={validator} />
+                                        <Card.Img variant="top" src={build} />
                                         <h5>&nbsp;</h5>
                                     </div>
 
@@ -59,11 +74,11 @@ const XPRTEcosystem = () => {
                                         to realise innovative use-cases for stkASSETs
                                     </Card.Text>
                                     <div className={"button-section mt-5"}>
-                                        <a href="/grants" rel="noopener noreferrer"
+                                        <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
                                             GRANTS
                                         </a>
-                                        <a href="/grants" rel="noopener noreferrer"
+                                        <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button two">
                                             GITHUB
                                         </a>
@@ -85,11 +100,11 @@ const XPRTEcosystem = () => {
                                     </Card.Text>
 
                                     <div className={"comingsoon button-section mt-5"}>
-                                        <a href="/grants" rel="noopener noreferrer"
+                                        <a href="https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
                                             DOCS
                                         </a>
-                                        <a href="/grants" rel="noopener noreferrer"
+                                        <a href="/ecosystem" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button two">
                                             FOUNDATION DELEGATION
                                         </a>
@@ -131,11 +146,11 @@ const XPRTEcosystem = () => {
                                     </Card.Text>
 
                                     <div className={"comingsoon button-section mt-5"}>
-                                        <a href="/grants" rel="noopener noreferrer"
+                                        <a href="/ecosystem" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
                                             ECOSYSTEM
                                         </a>
-                                        <a href="/grants" rel="noopener noreferrer"
+                                        <a href="/ecosystem" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button two">
                                             GUARDIAN PROGRAM
                                         </a>

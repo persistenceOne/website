@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
-import logo from '../../assets/images1/logo.svg'
+import logo from '../../assets/images1/pstakesymbolblack.svg'
+import logotwo from '../../assets/images1/pstake-logo-symbol.svg'
 import {Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip} from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +10,7 @@ import {
     PERSISTENCEONE_DISCORD_URL,
     PERSISTENCEONE_TELEGRAM_URL,
     PERSISTENCEONE_TWITTER_URL,
-    PERSISTENCEONE_GITHUB_URL
+    PERSISTENCEONE_GITHUB_URL, PERSISTENCEONE_MEDIUM_URL
 } from "../../constants/config";
 import ReactGa from "react-ga";
 
@@ -33,6 +34,10 @@ const socialList = [
         url: PERSISTENCEONE_GITHUB_URL,
         iconName: 'github',
         tooltip: 'github'
+    }, {
+        url: PERSISTENCEONE_MEDIUM_URL,
+        iconName: 'mediumlink',
+        tooltip: 'medium'
     }
 ];
 
@@ -89,7 +94,7 @@ const Header = () => {
                 <div className="container p-0">
                 <Navbar.Brand href="#home">
                     <NavLink to="/">
-                        <img src={logo} alt="logo" />
+                        <img src={logotwo} alt="logo" />
                     </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"  className="navbar-toggler x" id="nab-bar-toggle"  onClick={toggleMenu}>
@@ -104,23 +109,33 @@ const Header = () => {
                               <div className="nav-dropdown-item">
                                 <p className="header">Developers</p>
                                   <div className="inner-items">
-                                      <a href="https://www.youtube.com/watch?v=tRzPBszn5X4" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Persistence SDK</a>
-                                      <a href="https://www.youtube.com/watch?v=5EfM_-0M7_g" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Github Repository</a>
-                                      <a href="https://www.youtube.com/watch?v=x8FIkYiAPRo" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Grants/Bug Bounties”</a>
-                                      <a href="https://www.youtube.com/watch?v=1kTDDHvuWps" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Developer Discord Channel</a>
+                                      <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Persistence SDK <Icon viewClass="social_icon_imgg"
+                                                                                                     icon={'exlink'} /></a>
+                                      <a href="https://github.com/persistenceOne" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Github Repository <Icon viewClass="social_icon_imgg"
+                                                                                                        icon={'exlink'} /></a>
+                                      <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Grants/Bug Bounties <Icon viewClass="social_icon_imgg"
+                                                                                                          icon={'exlink'} /></a>
+                                      <a href="https://discord.com/invite/qXRmTTGcYD" rel="noopener noreferrer"
+                                         target="_blank" className="inner-item">Developer Discord Channel <Icon viewClass="social_icon_imgg"
+                                                                                                                icon={'exlink'} /></a>
                                   </div>
                               </div>
                               <div className="nav-dropdown-item">
                                   <p className="header">Validators</p>
                                   <div className="inner-items">
-                                      <a href="/faq" className="inner-item">Become a Validator</a>
-                                      <a href="/faq" className="inner-item">Foundation Delegation Program</a>
-                                      <a href="/faq" className="inner-item">RPC End Points</a>
-                                      <a href="/faq" className="inner-item">Validator Discord Channel</a>
+                                      <a href="https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md"
+                                         target="_blank" rel="noopener noreferrer" className="inner-item">Become a Validator <Icon viewClass="social_icon_imgg"
+                                                                                                         icon={'exlink'} /></a>
+                                      <a href="/faq" className="inner-item">Foundation Delegation Program <Icon viewClass="social_icon_imgg"
+                                                                                                                icon={'exlink'} /></a>
+                                      <a href="https://rpc.core.persistence.one/" target="_blank" rel="noopener noreferrer" className="inner-item">RPC End Points <Icon viewClass="social_icon_imgg"
+                                                                                                                                                                        icon={'exlink'} /></a>
+                                      <a href="/https://discord.com/login?redirect_to=%2Fchannels%2F796174129077813248%2F844460782447362048"
+                                         target="_blank" rel="noopener noreferrer" className="inner-item">Validator Discord Channel <Icon viewClass="social_icon_imgg"
+                                                                                                                                          icon={'exlink'} /></a>
                                   </div>
                               </div>
                           </div>
@@ -128,45 +143,57 @@ const Header = () => {
                         <NavDropdown title={ecoSystemTitle} id="ecosystem-dropdown">
                             <div className="nav-dropdown-items ecosystem-items">
                                 <div className="nav-dropdown-item">
-                                    <p className="header">Liquid Staking</p>
-                                    <div className="inner-items">
+                                    <div className="inner-items firstone">
+
                                         <a href="https://pstake.finance/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">
+                                           target="_blank" className="inner-item m-0">
                                             <img src={logo} alt="pstakeLogo"/>
+                                            <p className="header logo m-0">Liquid Staking Protocol</p>
+
                                         </a>
                                     </div>
-                                </div>
-                                <div className="nav-dropdown-item">
-                                    <p className="header">PoS Validator</p>
+                                    <div className="inner-items mt-2">
+
+                                        <a href="https://pstake.finance/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item ml-3 mb-0">
+
+                                            BORROW & LENDING
+                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
+
+                                        </a>
+                                    </div>
                                     <div className="inner-items">
-                                        <a href="https://audit.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">
-                                            <img src={logo} alt="auditLogo"/>
+
+                                        <a href="https://pstake.finance/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item ml-3 mb-0">
+
+INTERCHAIN DEX                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
+
                                         </a>
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
-                                    <p className="header">Other Initiatives</p>
+                                    <p className="header">EXPLORER</p>
                                     <div className="inner-items">
                                         <a href="https://assetmantle.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">AssetMantle</a>
+                                           target="_blank" className="inner-item">Persistence Explorer</a>
                                         <a href="https://comdex.one/home" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Comdex</a>
+                                           target="_blank" className="inner-item">Mintscan</a>
                                         <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Stakedrop</a>
-                                        <a href="https://internft.org/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">interNFT</a>
+                                           target="_blank" className="inner-item">Hubble</a>
+
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
-                                    <p className="header">Grant</p>
+                                    <p className="header">WALLETS</p>
                                     <div className="inner-items">
-                                        <p className="inner-item">Have an exciting Idea?
-                                            Apply for a grant.</p>
-                                        <a href="/grants" rel="noopener noreferrer"
-                                           target="_blank" className="button-primary button">
-                                            Apply
-                                        </a>
+                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Keplr</a>
+
+                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Cosmostation</a>
+                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Coin98</a>
                                     </div>
                                 </div>
                             </div>

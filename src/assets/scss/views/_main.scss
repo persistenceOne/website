@@ -72,9 +72,7 @@ body {
   background: #e50913;
 }
 
-a:hover {
-  text-decoration: none !important;
-}
+
 
 .flex-box {
   display: flex;
@@ -129,8 +127,10 @@ a {
   .button-initial.button.two {
     background: transparent;
     border: 0px solid #303132;
+
     &:hover{
       background: transparent;
+      text-decoration: underline!important;
       border: 0px solid #303132;
     }
 
@@ -327,6 +327,35 @@ a {
           display: flex;
           .nav-dropdown-item{
             margin: 0px 30px;
+            width: 280px;
+            .inner-items.firstone{
+              width: 280px;
+              border-radius: 6px;
+              padding: 15px 15px 5px 15px;
+              transition: all 0.5s ease-in-out;
+              &:hover{
+                background: #ECECEC;
+
+              }
+            }
+            .inner-items{
+              padding: 10px 0;
+              a{
+                img{
+                  margin-bottom: 0;
+                }
+                p.inner{
+                  color:#ACACAC;
+                  font-weight: 400;
+                  font-size: 14px;
+                }
+                p{
+                  font-size: 14px;
+                  text-transform: capitalize;
+                  border: 0;
+                }
+              }
+            }
             .header{
               font-weight: 500;
               font-size: 16px;
@@ -338,7 +367,23 @@ a {
               margin-bottom: 24px;
             }
             .inner-items{
+              .inner-item.ml-3{
+                font-size: 16px;
+                line-height: 24px;
+                text-transform: capitalize;
+                color: #1C1C21;
+                margin-bottom: 16px;
+                font-weight: 600;
+                display: block;
+              }
+
               .inner-item{
+
+                  .icon{
+                    width: 10px;
+
+                  }
+
                 font-size: 14px;
                 line-height: 24px;
                 text-transform: capitalize;
@@ -350,7 +395,9 @@ a {
                   width: 250px;
                 }
                 &:hover{
-                  color: #FFFFFF;
+                  color: #1C1C21;
+                  text-decoration: underline!important;
+
                 }
               }
               img{
@@ -678,6 +725,9 @@ a {
     line-height: 1.314;
     color: #70747c;
     display: inline-block;
+    .icon{
+      width: 10px;
+    }
   }
 
   .contact-box .mail-chimp-section input {

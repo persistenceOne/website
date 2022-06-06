@@ -9,7 +9,7 @@ const Ecosystem = () => {
         <section className="home-ecosystem-section">
             <div className="container">
                 <h3 className="section-title">Maximise Capital Efficiency</h3>
-                <p className="sub-heading">The Persistence ecosystem application bridging Staking and DeFi </p>
+                <p className="sub-heading">With the Persistence ecosystem application bridging Staking and DeFi</p>
                 <div className="card-tiles">
                     <CardGroup>
                         <Card className={'h-100'}>
@@ -21,11 +21,11 @@ const Ecosystem = () => {
                                     Unlocking Liquidity for Staked Assets. Bringing PoS assets to DeFi.
                                 </Card.Text>
                                 <div className={"button-section mt-5"}>
-                                    <a href="/grants" rel="noopener noreferrer"
+                                    <a href="https://pstake.finance/" rel="noopener noreferrer"
                                        target="_blank" className="button-initial button">
                                         GO TO APP
                                     </a>
-                                    <a href="/grants" rel="noopener noreferrer"
+                                    <a href="https://pstake.finance/" rel="noopener noreferrer"
                                        target="_blank" className="button-initial button two">
                                         Explore
                                     </a>
@@ -39,11 +39,11 @@ const Ecosystem = () => {
                             <Card.Body >
                                 <div className={"symbol-section"}>
                                 <Card.Img variant="top" src={borrow} />
-                                    <h5>Borrow & Lend</h5>
+                                    <h5>BORROWING & LENDING</h5>
                             </div>
-                                <Card.Title className={'mb-3 mt-4'}>Borrowing & Lending protocol</Card.Title>
+                                <Card.Title className={'mb-3 mt-4'}>&nbsp;</Card.Title>
                                 <Card.Text>
-                                    Borrowing and Lending Protocol for staked assets.
+                                    Borrowing & Lending protocol for staked assets.
                                 </Card.Text>
                                 <div className={"comingsoon mt-5"}>
                                     <h6>COMING SOON!</h6>
@@ -56,9 +56,9 @@ const Ecosystem = () => {
                             <Card.Body >
                                 <div className={"symbol-section"}>
                                 <Card.Img variant="top" src={dex} />
-                                    <h5>Dex</h5>
+                                    <h5>INTERCHAIN DEX</h5>
                             </div>
-                                <Card.Title className={'mb-3 mt-4'}>DEX focused on staked assets</Card.Title>
+                                <Card.Title className={'mb-3 mt-4'}>&nbsp;</Card.Title>
                                 <Card.Text>
                                     Interchain DEX for staked assets.
                                 </Card.Text>

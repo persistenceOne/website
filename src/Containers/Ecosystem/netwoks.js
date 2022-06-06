@@ -13,7 +13,6 @@ export const netwrokData = [
         icon: "borrowlending",
         name: "dAPP",
         status: "ComingSoon",
-        wikilink: ""
     },
     {
         network: "Interchain DEX",
@@ -21,7 +20,6 @@ export const netwrokData = [
         icon: "interchaindex",
         name: "dApp",
         status: "ComingSoon",
-        wikilink: ""
     },
     {
         network: "pWallet",
