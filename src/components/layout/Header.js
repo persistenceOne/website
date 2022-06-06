@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter, Link } from 'react-router-dom';
 import logo from '../../assets/images1/pstakesymbolblack.svg'
 import logotwo from '../../assets/images1/pstake-logo-symbol.svg'
 import {Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip} from "react-bootstrap";
@@ -175,26 +175,37 @@ INTERCHAIN DEX                                            <p className="header l
                                 <div className="nav-dropdown-item">
                                     <p className="header">EXPLORER</p>
                                     <div className="inner-items">
-                                        <a href="https://assetmantle.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistence Explorer</a>
-                                        <a href="https://comdex.one/home" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Mintscan</a>
-                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Hubble</a>
+                                        <a href="https://explorer.persistence.one/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Persistence Explorer&nbsp;
+                                            <Icon viewClass="social_icon_imgg"
+                                                  icon={'exlink'} />
+                                        </a>
+                                        <a href="https://www.mintscan.io/persistence" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Mintscan  <Icon viewClass="social_icon_imgg"
+                                                                                                  icon={'exlink'} /></a>
+                                        <a href="https://hubble.figment.io/persistence/chains/core-1" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Hubble  <Icon viewClass="social_icon_imgg"
+                                                                                                icon={'exlink'} /></a>
 
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
                                     <p className="header">WALLETS</p>
                                     <div className="inner-items">
-                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Keplr</a>
+                                        <a href="https://wallet.keplr.app/#/dashboard" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Keplr <Icon viewClass="social_icon_imgg"
+                                                                                              icon={'exlink'} /></a>
 
-                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Cosmostation</a>
-                                        <a href="https://persistence.one/stakedrop" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Coin98</a>
+                                        <a href="https://www.cosmostation.io/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Cosmostation <Icon viewClass="social_icon_imgg"
+                                                                                                     icon={'exlink'} /></a>
+                                        <a href="https://coin98.com/" rel="noopener noreferrer"
+                                           target="_blank" className="inner-item">Coin98 <Icon viewClass="social_icon_imgg"
+                                                                                               icon={'exlink'} /></a>
                                     </div>
+                                </div>
+                                <div className="nav-dropdown-item buttoneco">
+                                    <Link to='/ecosystem'>Explore All Apps</Link>
                                 </div>
                             </div>
                         </NavDropdown>

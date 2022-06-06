@@ -325,9 +325,25 @@ a {
         font-size: 13px;
         .nav-dropdown-items{
           display: flex;
+          .nav-dropdown-item.buttoneco{
+            display: flex;
+            align-items: center;
+            a{
+              background: #000;
+              padding: 15px 45px;
+              border-radius: 6px;
+              font-size: 14px;
+              font-weight: 600;
+              color: #fff;
+              &:hover{
+                color:#fff
+              }
+            }
+          }
           .nav-dropdown-item{
             margin: 0px 30px;
             width: 280px;
+
             .inner-items.firstone{
               width: 280px;
               border-radius: 6px;
