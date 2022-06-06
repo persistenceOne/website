@@ -972,6 +972,108 @@
     }
   }
 }
+.home-ecosystem-section.ecosystem-section{
+  .network-section {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    a {
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .info-text {
+      position: absolute;
+      top: 15px;
+      width: 25px;
+      right: 13px;
+
+      .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+        color: #fff;
+        background-color: transparent;
+        border-color: transparent;
+      }
+      .btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem #48b46100;
+      }
+      button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        svg {
+          width: 20px;
+          height: 20px;
+          stroke: #fff;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            stroke: #E50913;
+          }
+        }
+      }
+
+    }
+    .icon-social_icon_imgg {
+      width: 36px;
+      height: 36px;
+    }
+    .networklist-tiles {
+      background: linear-gradient(156.29deg, #1F2023 4.39%, rgba(19, 20, 22, 0.48) 84.74%);
+      border-radius: 6px;
+      width: 230px;
+      height: 215px;
+      text-align: left;
+      color: #fff;
+      padding: 24px;
+      border: 1px solid transparent;
+      transition: all 0.5s ease-in-out;
+      margin: 24px 10px;
+      position: relative;
+      &:hover {
+        border: 1px solid #303132;
+        background: #1F2023;
+      }
+    }
+    h5 {
+      color: #FCFCFC;
+      margin-top: 3px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 12px;
+      color: #A6A6A6;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    .status {
+      position: absolute;
+      bottom: 24px;
+      font-size: 10px;
+      font-weight: 400;
+      color: #FCFCFC;
+      right: 24px;
+    }
+    .networkname{
+      position: absolute;
+      top: 13px;
+      right: 15px;
+      font-weight: 400;
+      border-radius: 6px;
+      background: #383838;
+      font-size: 8px;
+      padding: 4px 18px;
+    }
+    h4 {
+      font-size: 28px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.89);
+      letter-spacing: 0.1px;
+      margin-top: 20px;
+    }
+  }
+
+}
 .home-ecosystem-section.xprtecosystem{
   background: #F5F5F5;
   h3{
@@ -1049,6 +1151,19 @@
     color: #FFFFFF;
     padding: 0;
     margin-bottom: 20px;
+  }
+  .sortbuttons{
+    text-align: center;
+    button{
+      background: #E50913;
+      border-radius: 6px;
+      border: 0;
+      color: #FFFFFF;
+      padding:4px 15px;
+      font-weight: 500;
+      margin:4px 15px;
+      font-size: 15px;
+    }
   }
   .sub-heading{
     font-size: 16px;
@@ -1129,7 +1244,7 @@ margin: 0 7.5px;
 
 
 .network-section{
-  padding: 100px 0;
+  padding: 20px 0;
     .tech-box{
       display: flex;
 .content-container{
