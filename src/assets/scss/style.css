@@ -107,7 +107,6 @@ a {
     border: 0px solid #303132; }
     .button-section .button-initial.button.two:hover {
       background: transparent;
-      text-decoration: underline !important;
       border: 0px solid #303132; }
   .button-section .button-initial.button {
     background: #E50913;

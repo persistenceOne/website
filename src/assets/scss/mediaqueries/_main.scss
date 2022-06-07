@@ -45,14 +45,19 @@
   .section-roadmap {
     padding: 130px 0 100px 0;
   }
-  .navbar.navbar-custom .navbar-nav .dropdown .dropdown-menu {
-    max-height: 400px
-  }
+  //.navbar.navbar-custom .navbar-nav .dropdown .dropdown-menu {
+  //  max-height: 400px
+  //}
   .navbar.navbar-custom .navbar-brand img {
     width: 120px;
   }
 }
-
+@media (max-width: 991.98px) {
+  .navbar.navbar-custom {
+    padding: 20px 0;
+    background: #070B09;
+  }
+}
 @media (max-width: 767.8px) {
   .footer {
     text-align: center;
@@ -67,6 +72,7 @@
   }
   .navbar.navbar-custom {
     padding: 20px 0;
+    background: #070B09;
 
     .navbar-brand img {
       width: 170px;
@@ -113,6 +119,17 @@
 .footer .contact-us{
 justify-content: flex-start;
 }
+  .home-ecosystem-section .card-tiles .card-group{
+
+    flex-flow: column wrap;
+  }
+  .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .comingsoon{
+    position: relative;
+    left: 0;
+    margin-left: 0;
+    bottom: 30px;
+    text-align: center;
+  }
 }
 @media (max-width: 375px) { 
   .button-primary, .button-secondary, .product-info-section.product-pstake .button.coming-soon {

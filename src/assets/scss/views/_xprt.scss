@@ -1,6 +1,16 @@
 .xprt-banner-section{
   padding: 200px 0 100px 0;
   background-repeat: no-repeat;
+  .aquire-content{
+    margin-top: 100px;
+  }
+  a{
+    text-decoration: none!important;
+    &:hover{
+      text-decoration: none!important;
+
+    }
+  }
   //height: 100vh;
   //overflow: auto;
   background-image:url(./../../images1/xprt_bg2.svg),  url(./../../images1/xprt_bg.svg);
@@ -71,10 +81,16 @@
         align-items: center;
         margin-top: 2.5rem;
         .primary{
-          background: #E50913;
+          &:hover{
+            background: #E50913;
+            border:1px solid #E50913
+
+          }
+          background: transparent;
           border-radius: 6px;
           padding: 0.5rem 2rem;
           font-weight: 600;
+          transition: all 0.5s ease-in-out;
           font-size: 14px;
           line-height: 150%;
           text-align: center;
@@ -82,13 +98,17 @@
           text-transform: uppercase;
           color: #FCFCFC;
           box-shadow: none;
-          border: 0px solid ;
+          border: 1px solid #303132 ;
           outline: none;
           margin-right: 10px;
         }
         .button-secondary{
+          &:hover{
+            color:#E50913;
+          }
           padding: 0px 2rem;
           font-weight: 600;
+          transition: all 0.5s ease-in-out;
           font-size: 14px;
           line-height: 150%;
           text-align: center;
@@ -142,6 +162,13 @@
 .opportunities-section{
   padding: 100px 0;
   background: #000000;
+  a{
+    text-decoration: none!important;
+    &:hover{
+      text-decoration: none!important;
+
+    }
+  }
   .title{
     font-weight: 700;
     font-size: 48px;
@@ -226,10 +253,16 @@
             justify-content: space-evenly;
             margin-top: 2.5rem;
             .primary{
-              background: #E50913;
+              &:hover{
+                background: #E50913;
+                border: 1px solid #E50913;
+
+              }
+              background: transparent;
               border-radius: 6px;
               padding: 0.5rem 2rem;
               font-weight: 600;
+              transition: all 0.5s ease-in-out;
               font-size: 14px;
               line-height: 150%;
               text-align: center;
@@ -237,12 +270,17 @@
               text-transform: uppercase;
               color: #FCFCFC;
               box-shadow: none;
-              border: 0px solid ;
+              border: 1px solid #303132 ;
               outline: none;
             }
             .button-secondary{
+              &:hover{
+                color: #E50913;
+
+              }
               font-weight: 600;
               font-size: 14px;
+              transition: all 0.5s ease-in-out;
               line-height: 150%;
               text-align: center;
               text-decoration-line: underline;

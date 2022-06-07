@@ -23,7 +23,7 @@ const Opportunities = () => {
                                         Stake
                                     </a>
 
-                                    <a href="https://medium.com/persistence-blog/persistence-xprt-staking-guide-4504cf9a19df"
+                                    <a target="_blank" rel="noopener noreferrer" href="https://medium.com/persistence-blog/persistence-xprt-staking-guide-4504cf9a19df"
                                        className="button-secondary">
                                         TUTORIAL
                                     </a>

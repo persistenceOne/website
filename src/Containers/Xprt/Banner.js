@@ -29,7 +29,7 @@ const Banner = () => {
                                 XPRT stakers can participate in governance to contribute to the long-term success of the
                                 ecosystem.
                             </p>
-                            <p className="item-heading"><img src={xprt_value} alt={xprt_value}/> Value Accruel</p>
+                            <p className="item-heading"><img src={xprt_value} alt={xprt_value}/> Value Accrual</p>
                             <p className="item-text">XPRT accrues value from the ecosystem’s financial activity through multiple avenues
                                 including gas fees, fee-sharing with ecosystem application, hub-routing, etc.
                             </p>
@@ -51,7 +51,7 @@ const Banner = () => {
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    className="button-secondary">
-                                    TUTORIAL
+                                    Learn More
                                 </a>
                             </div>
                         </div>
