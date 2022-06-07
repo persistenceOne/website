@@ -23,11 +23,11 @@ const Banner = () => {
                     </div>
                         <div className="stats-container text-white">
                             <div className="stats-section">
-                                <h2>$12B</h2>
+                                <h2>$182B</h2>
                                 <h6 className="home-desc">POS MarketCap</h6>
                             </div>
                             <div className="stats-section">
-                                <h2>$2.5B</h2>
+                                <h2>$120B</h2>
                                 <h6 className="home-desc">Staked Assets Value</h6>
                             </div>
                             <div className="stats-section">
