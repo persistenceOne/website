@@ -57,7 +57,7 @@ const Opportunities = () => {
                                         <img src={osmo} alt="osmo" />
                                     </p>
                                     <p className="sub-title">XPRT/USDC Pool</p>
-                                    <p className="apr">~477% % <span className="apr-text">APR</span></p>
+                                    <p className="apr">~452% <span className="apr-text">APR</span></p>
                                     <div className="buttons">
                                         <a href="https://app.osmosis.zone/pool/719" target="_blank" rel="noopener noreferrer" className="primary">
                                             Provide Liquidity
@@ -72,7 +72,7 @@ const Opportunities = () => {
                                     </p>
                                     <p className="sub-title">XPRT/ATOM Pool</p>
 
-                                    <p className="apr">~55% <span className="apr-text">APR</span></p>
+                                    <p className="apr">~30% <span className="apr-text">APR</span></p>
                                     <div className="buttons">
                                         <a href="https://app.osmosis.zone/pool/13" target="_blank" rel="noopener noreferrer" className="primary">
                                             Provide Liquidity
@@ -88,7 +88,7 @@ const Opportunities = () => {
                                         <img src={osmo} alt="osmo" />
                                     </p>
                                     <p className="sub-title">XPRT/OSMO Pool</p>
-                                    <p className="apr">~48% <span className="apr-text">APR</span></p>
+                                    <p className="apr">~23% <span className="apr-text">APR</span></p>
                                     <div className="buttons">
                                         <a href="https://app.osmosis.zone/pool/15" target="_blank" rel="noopener noreferrer" className="primary">
                                             Provide Liquidity
