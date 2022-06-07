@@ -13,7 +13,7 @@ const Banner = () => {
                         </p>
                         <div className={"button-section text-center d-inline-block"}>
                         <a href="/xprt" rel="noopener noreferrer"
-                            className="button-initial button">
+                            className="button-initial button one">
                             $XPRT
                         </a>
                             <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"

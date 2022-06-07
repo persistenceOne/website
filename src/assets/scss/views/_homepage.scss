@@ -1279,7 +1279,13 @@ margin: 0 7.5px;
 
 
 .network-section{
-  padding: 20px 60px;
+  padding: 20px 60px 80px 20px;
+  position: relative;
+  .gradient{
+    position: absolute;
+    z-index: -1;
+    bottom: 40px;
+  }
     .tech-box{
       display: flex;
 .content-container{

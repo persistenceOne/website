@@ -189,22 +189,22 @@ export const netwrokData = [
         status: "Live",
         wikilink: "https://analytics.sushi.com/tokens/0x44017598f2af1bd733f9d87b5017b4e7c1b28dde"
     },
-    //{
-    //     network: "Smart Nodes",
-    //     description: "Cosmos Ecosystem Explorer",
-    //     icon: "smartnode",
-    //     name: "Explorer",
-    //     status: "Live",
-    //     wikilink: "https://smartnodes.one/dashboard/persistence"
-    // },
-    // {
-    //     network: "Citadel One",
-    //     description: "Non-custodial wallet",
-    //     icon: "citadelone",
-    //     name: "Wallet",
-    //     status: "Live",
-    //     wikilink: "https://app.citadel.one/"
-    // },
+    {
+        network: "Smart Nodes",
+        description: "Cosmos Ecosystem Explorer",
+        icon: "smartnode",
+        name: "Explorer",
+        status: "Live",
+        wikilink: "https://smartnodes.one/dashboard/persistence"
+    },
+    {
+        network: "Citadel One",
+        description: "Non-custodial wallet",
+        icon: "citadelone",
+        name: "Wallet",
+        status: "Live",
+        wikilink: "https://app.citadel.one/"
+    },
 
     {
         network: "Gravity Bridge",
