@@ -57,7 +57,7 @@ const Opportunities = () => {
                                         <img src={osmo} alt="osmo" />
                                     </p>
                                     <p className="sub-title">XPRT/USDC Pool</p>
-                                    <p className="apr">~452% <span className="apr-text">APR</span></p>
+                                    <p className="apr">~400% <span className="apr-text">APR</span></p>
                                     <div className="buttons">
                                         <a href="https://app.osmosis.zone/pool/719" target="_blank" rel="noopener noreferrer" className="primary">
                                             Provide Liquidity
