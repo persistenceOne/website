@@ -84,7 +84,7 @@ const Footer = (props) => {
                                                    rel="noopener noreferrer">Ecosystem</a></li>
                                             <li><a href="https://angel.co/company/persistence-one-1" target="_blank"
                                                 rel="noopener noreferrer">Careers</a></li>
-                                            <li><a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ" target="_blank"
+                                            <li><a href="https://drive.google.com/drive/folders/19JZsrnyMZDamjNMJCVxxYOvYPRO3dkUp?usp=sharing" target="_blank"
                                                    rel="noopener noreferrer">Press & Brand</a></li>
                                         </ul>
                                     </div>

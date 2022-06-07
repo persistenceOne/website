@@ -66,7 +66,8 @@ const XPRTEcosystem = () => {
                                 <Card.Body >
                                     <div className={"symbol-section"}>
                                         <Card.Img variant="top" src={build} />
-                                        <h5>&nbsp;</h5>
+
+                                    <h5>&nbsp;</h5>
                                     </div>
 
                                     <Card.Title className={'mb-3 mt-4'}>Build on Persistence</Card.Title>
@@ -76,7 +77,7 @@ const XPRTEcosystem = () => {
                                     <div className={"button-section mt-5"}>
                                         <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
-                                            GRANTS
+                                            Ecosystem Grants
                                         </a>
                                         <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button two">
@@ -104,7 +105,7 @@ const XPRTEcosystem = () => {
                                            target="_blank" className="button-initial button">
                                             DOCS
                                         </a>
-                                        <a href="/ecosystem" rel="noopener noreferrer"
+                                        <a href="https://drive.google.com/file/d/1FRFNZxh894K5LIfvZ5n5zvXTXZ_YF3Qt/view" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button two">
                                             FOUNDATION DELEGATION
                                         </a>
@@ -146,12 +147,11 @@ const XPRTEcosystem = () => {
                                     </Card.Text>
 
                                     <div className={"comingsoon button-section mt-5"}>
-                                        <a href="/ecosystem" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button">
+                                        <a href="/ecosystem" rel="noopener noreferrer" className="button-initial button">
                                             ECOSYSTEM
                                         </a>
-                                        <a href="/ecosystem" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button two">
+                                        <a href="https://bit.ly/38VBfme" rel="noopener noreferrer"
+                                            className="button-initial button two">
                                             GUARDIAN PROGRAM
                                         </a>
                                     </div>

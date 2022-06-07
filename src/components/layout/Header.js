@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, withRouter, Link } from 'react-router-dom';
 import logo from '../../assets/images1/pstakesymbolblack.svg'
 import logotwo from '../../assets/images1/logo.svg'
@@ -7,13 +7,12 @@ import { useTranslation } from "react-i18next";
 
 import Icon from "../Icon";
 import {
-    PERSISTENCEONE_DISCORD_URL,
+    PERSISTENCEONE_GITHUB_URL,
     PERSISTENCEONE_TELEGRAM_URL,
     PERSISTENCEONE_TWITTER_URL,
     PERSISTENCEONE_MEDIUM_URL,
-    PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
-    PERSISTENCEONE_YOUTUBE_URL,
-    PERSISTENCEONE_REDDIT_URL, PERSISTENCEONE_LINKEDIN_URL
+    PERSISTENCEONE_REDDIT_URL
+
 } from "../../constants/config";
 import ReactGa from "react-ga";
 
@@ -28,31 +27,19 @@ const socialList = [
         iconName: 'telegram-plane',
         tooltip: 'telegram'
     },
-    {
-        url:  PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL ,
-        iconName: 'announcements',
-        tooltip: 'announcements'
-    }, {
-        url:  PERSISTENCEONE_DISCORD_URL ,
-        iconName: 'discord',
-        tooltip: 'discord'
+     {
+        url:  PERSISTENCEONE_GITHUB_URL ,
+        iconName: 'github',
+        tooltip: 'github'
     }, {
         url: PERSISTENCEONE_REDDIT_URL ,
         iconName: 'reddit-round',
         tooltip: 'reddit'
-    }, {
-        url:  PERSISTENCEONE_YOUTUBE_URL ,
-        iconName: 'youtube',
-        tooltip: 'youtube'
-    }, {
+    },{
         url:  PERSISTENCEONE_MEDIUM_URL ,
-        iconName: 'medium-m',
+        iconName: 'mediumlink',
         tooltip: 'medium'
-    }, {
-        url: PERSISTENCEONE_LINKEDIN_URL ,
-        iconName: 'linkedin-footer',
-        tooltip: 'linkedIn'
-    },
+    }
 ];
 
 const Header = () => {
@@ -60,7 +47,11 @@ const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
   
     const { t } = useTranslation();
+    useEffect(() => {
+        document.body.classList = "";
+        window.addEventListener("scroll", scrollNavigation, true);
 
+    }, []);
     const toggleMenu = () => {
         // setIsOPen(!isOpen);
         setMobileMenu(!mobileMenu);
@@ -70,6 +61,17 @@ const Header = () => {
             document.getElementById('nab-bar-toggle').classList.add('collapsed');
         }
     };
+    const scrollNavigation = () => {
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        if (top > 50) {
+            document.getElementById('nav-bar').classList.add('sticky-dark');
+        }
+        else {
+
+            document.getElementById('nav-bar').classList.remove('sticky-dark');
+        }
+    }
 
     const learnTitle = (
         <span>
@@ -104,7 +106,7 @@ const Header = () => {
 
     return (
         <React.Fragment>
-            <Navbar className="navbar-custom" sticky="top" expand="lg" expanded={mobileMenu}>
+            <Navbar className="navbar-custom fixed-top" expand="lg" expanded={mobileMenu} id="nav-bar">
                 <div className="container p-0">
                 <Navbar.Brand href="#home">
                     <NavLink to="/">
@@ -119,7 +121,7 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="m-auto">
                         <NavDropdown title={learnTitle} id="learn-dropdown">
-                          <div className="nav-dropdown-items learn-items">
+                          <div className="container nav-dropdown-items learn-items pr-0 pl-0">
                               <div className="nav-dropdown-item">
                                 <p className="header">Developers</p>
                                   <div className="inner-items">
@@ -135,7 +137,7 @@ const Header = () => {
                                       </div>
                                       <div className="inner-item-container">
                                       <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
-                                         target="_blank" className="inner-item">Grants/Bug Bounties <Icon viewClass="social_icon_imgg"
+                                         target="_blank" className="inner-item">Ecosystem Grants <Icon viewClass="social_icon_imgg"
                                                                                                           icon={'exlink'} /></a>
                                       </div>
                                       <div className="inner-item-container">
@@ -172,7 +174,7 @@ const Header = () => {
                           </div>
                         </NavDropdown>
                         <NavDropdown title={ecoSystemTitle} id="ecosystem-dropdown">
-                            <div className="nav-dropdown-items ecosystem-items">
+                            <div className="container nav-dropdown-items ecosystem-items pl-0 pr-0">
                                 <div className="nav-dropdown-item">
                                     <div className="inner-items firstone">
                                         <div className="inner-item-container">
@@ -187,7 +189,7 @@ const Header = () => {
                                     <div className="inner-items mt-2">
                                         <div className="inner-item-container">
                                         <p className="inner-item ml-3 mb-0">
-                                            BORROW & LENDING
+                                            BORROWING & LENDING
                                             <p className="header logo inner m-0 p-0">Coming Soon</p>
                                         </p>
                                         </div>
@@ -251,7 +253,7 @@ const Header = () => {
                             </div>
                         </NavDropdown>
                         <NavDropdown title={communityTitle} id="community-dropdown">
-                            <div className="nav-dropdown-items community-items">
+                            <div className="container nav-dropdown-items community-items pl-0 pr-0">
                                 <div className="nav-dropdown-item">
 
                                     <p className="header">PROGRAM</p>
@@ -261,10 +263,13 @@ const Header = () => {
                                            target="_blank" className="inner-item">Guardians Program <Icon viewClass="social_icon_imgg"
                                                                                               icon={'exlink'} /></a>
                                         </div>
+                                        <div className="inner-item-container">
+                                            <Link className="inner-item">&nbsp;</Link>
+                                        </div>
+                                        <div className="inner-item-container">
+                                            <Link className="inner-item">&nbsp;</Link>
+                                        </div>
 
-                                        {/*<a href="https://www.cosmostation.io/" rel="noopener noreferrer"*/}
-                                        {/*   target="_blank" className="inner-item">Community Bounties<Icon viewClass="social_icon_imgg"*/}
-                                        {/*                                                             icon={'exlink'} /></a>*/}
 
                                     </div>
                                 </div>
@@ -298,32 +303,11 @@ const Header = () => {
                                         </div>
                                         <div className="inner-item-container">
                                         <a href="/faq" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Community FAQs <Icon viewClass="social_icon_imgg"
+                                            className="inner-item">Community FAQs <Icon viewClass="social_icon_imgg"
                                                                                                        icon={'exlink'} /></a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="nav-dropdown-item">
-                                    <p className="header">social media</p>
-                                    <div className="inner-items">
-                                        <div className="links">
-                                            {
-                                                socialList.map((item, index) => (
-                                                    <OverlayTrigger
-                                                        key={item.iconName}
-                                                        placement="bottom"
-                                                        overlay={
-                                                            <Tooltip id={`tooltip-${item.iconName}}`}>
-                                                                {item.tooltip}
-                                                            </Tooltip>
-                                                        }
-                                                    >
-                                                        <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
-                                                           target="_blank"><Icon viewClass="social_icon_imgg"
-                                                                                 icon={item.iconName} /></a>
-                                                    </OverlayTrigger>
-                                                ))
-                                            }
+                                        <div className="inner-item-container">
+                                            <Link className="inner-item">&nbsp;</Link>
                                         </div>
                                     </div>
                                 </div>

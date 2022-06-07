@@ -46,7 +46,8 @@ const EcosystemContent = () => {
     <section className="home-ecosystem-section ecosystem-section">
         <div className="container">
             <h3 className="section-title">Persistence Ecosystem</h3>
-            <p className="sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <p className="sub-heading">Discover the suite of applications, wallets, explorers and tools within the ecosystem
+            </p>
             <div className={'sortbuttons'} id={'myDIV'}>
             <button
                 key={1}
