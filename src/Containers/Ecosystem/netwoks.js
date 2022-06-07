@@ -1,6 +1,6 @@
 export const netwrokData = [
     {
-        network: "Agoric",
+        network: "pSTAKE",
         description: "Liquid Staking protocol",
         icon: "pstake-icon",
         name: "dApp",
@@ -11,7 +11,7 @@ export const netwrokData = [
         network: "Borrowing & Lending",
         description: "Borrowing and Lending Protocol for staked assets.",
         icon: "borrowlending",
-        name: "dAPP",
+        name: "dApp",
         status: "ComingSoon",
     },
     {
@@ -59,7 +59,7 @@ export const netwrokData = [
         icon: "junoswap",
         name: "Defi",
         status: "Live",
-        wikilink: "https://junoswap.com/"
+        wikilink: "https://junoswap.com/pools/JUNO-XPRT"
     },
     {
         network: "Sifchain",
@@ -75,7 +75,7 @@ export const netwrokData = [
         icon: "keplr",
         name: "Wallet",
         status: "Live",
-        wikilink: "https://wallet.keplr.app"
+        wikilink: "https://wallet.keplr.app/#/core/stake"
     },
     {
         network: "Cosmostation",
@@ -184,26 +184,35 @@ export const netwrokData = [
     {
         network: "SushiSwap",
         description: "Decentralised Exchange",
-        icon: "assetmantle",
+        icon: "sushiswap",
         name: "Defi",
         status: "Live",
         wikilink: "https://analytics.sushi.com/tokens/0x44017598f2af1bd733f9d87b5017b4e7c1b28dde"
     },
     {
-        network: "Dune Analytics",
-        description: "Blockchain ecosystem analytics",
-        icon: "duneanalytics",
-        name: "Tools",
+        network: "Smart Nodes",
+        description: "Cosmos Ecosystem Explorer",
+        icon: "smartnode",
+        name: "Explorer",
         status: "Live",
-        wikilink: "https://spacestation.zone/"
+        wikilink: "https://smartnodes.one/dashboard/persistence"
     },
+    {
+        network: "Citadel One",
+        description: "Non-custodial wallet",
+        icon: "citadelone",
+        name: "Wallet",
+        status: "Live",
+        wikilink: "https://app.citadel.one/"
+    },
+
     {
         network: "Gravity Bridge",
         description: "Trustless bridge between Ethereum and the Cosmos ecosystem",
         icon: "gravitybridge",
         name: "Tools",
         status: "Live",
-        wikilink: "https://app.citadel.one/"
+        wikilink: "https://spacestation.zone/"
     },
     {
         network: "Dexmos.app",

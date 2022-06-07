@@ -66,20 +66,21 @@ const XPRTEcosystem = () => {
                                 <Card.Body >
                                     <div className={"symbol-section"}>
                                         <Card.Img variant="top" src={build} />
-                                        <h5>&nbsp;</h5>
+
+                                    <h5>&nbsp;</h5>
                                     </div>
 
                                     <Card.Title className={'mb-3 mt-4'}>Build on Persistence</Card.Title>
                                     <Card.Text>
                                         to realise innovative use-cases for stkASSETs
                                     </Card.Text>
-                                    <div className={"button-section mt-5"}>
+                                    <div className={"button-section cards-buttons mt-5"}>
                                         <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
-                                            GRANTS
+                                            Ecosystem Grants
                                         </a>
                                         <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button two">
+                                           target="_blank" className="button-initial button ml-3">
                                             GITHUB
                                         </a>
                                     </div>
@@ -99,13 +100,13 @@ const XPRTEcosystem = () => {
                                         to help secure the core-chain
                                     </Card.Text>
 
-                                    <div className={"comingsoon button-section mt-5"}>
+                                    <div className={"comingsoon cards-buttons button-section mt-5"}>
                                         <a href="https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
                                             DOCS
                                         </a>
-                                        <a href="/ecosystem" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button two">
+                                        <a href="https://drive.google.com/file/d/1FRFNZxh894K5LIfvZ5n5zvXTXZ_YF3Qt/view" rel="noopener noreferrer"
+                                           target="_blank" className="button-initial button ml-3">
                                             FOUNDATION DELEGATION
                                         </a>
                                     </div>
@@ -145,13 +146,12 @@ const XPRTEcosystem = () => {
                                         </div>
                                     </Card.Text>
 
-                                    <div className={"comingsoon button-section mt-5"}>
-                                        <a href="/ecosystem" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button">
+                                    <div className={"comingsoon cards-buttons button-section mt-5"}>
+                                        <a href="/ecosystem" rel="noopener noreferrer" className="button-initial button">
                                             ECOSYSTEM
                                         </a>
-                                        <a href="/ecosystem" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button two">
+                                        <a href="https://bit.ly/38VBfme" rel="noopener noreferrer"
+                                            className="button-initial button ml-3">
                                             GUARDIAN PROGRAM
                                         </a>
                                     </div>

@@ -59,7 +59,7 @@ const Blogs = ({ deviceType }) => {
                     deviceType={deviceType}
                     itemClass="image-item"
                     responsive={responsive}
-                    autoPlay={true}
+                    autoPlay={false}
                 >
                     {images.slice(0, 5).map(image => {
                         return (

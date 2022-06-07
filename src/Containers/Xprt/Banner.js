@@ -1,7 +1,7 @@
 import React from "react";
-import xprt_role from "../../assets/images1/xprt_role.svg";
-import xprt_value from "../../assets/images1/xprt_value.svg";
-import economics from "../../assets/images1/xprt_economics.svg";
+import xprt_role from "../../assets/images1/role.png";
+import xprt_value from "../../assets/images1/value.png";
+import economics from "../../assets/images1/economics.png";
 import ecosystem from "../../assets/images1/ecosystem.svg";
 import injective from "../../assets/images1/aquire/injective.svg";
 import juno_swap from "../../assets/images1/aquire/juno_swap.svg";
@@ -29,7 +29,7 @@ const Banner = () => {
                                 XPRT stakers can participate in governance to contribute to the long-term success of the
                                 ecosystem.
                             </p>
-                            <p className="item-heading"><img src={xprt_value} alt={xprt_value}/> Value Accruel</p>
+                            <p className="item-heading"><img src={xprt_value} alt={xprt_value}/> Value Accrual</p>
                             <p className="item-text">XPRT accrues value from the ecosystem’s financial activity through multiple avenues
                                 including gas fees, fee-sharing with ecosystem application, hub-routing, etc.
                             </p>
@@ -51,7 +51,7 @@ const Banner = () => {
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    className="button-secondary">
-                                    TUTORIAL
+                                    Learn More
                                 </a>
                             </div>
                         </div>

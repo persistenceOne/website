@@ -1,5 +1,5 @@
 .banner-section {
-  padding: 150px 0;
+  padding: 200px 0;
   height: 100%;
   background-image: url(./../../images1/animate.gif);
   background-repeat: no-repeat;
@@ -40,9 +40,8 @@
     display: inline-block;
     transition: all 0.5s ease-in-out;
     &:hover{
-      background: transparent;
-      text-decoration: underline!important;
-      border: 1px solid #303132;
+      background: #E50913;
+      border: 1px solid #E50913;
     }
   }
   .caption {
@@ -1088,6 +1087,12 @@
 }
 .home-ecosystem-section.xprtecosystem{
   background: #F5F5F5;
+  .button-section .button-initial.button{
+    color:#303132;
+    &:hover{
+      color:#fff;
+    }
+  }
   h3{
     color:#000000;
     span{
@@ -1104,8 +1109,15 @@
         .card-section{
           background: #fff;
           .card-body{
+            .button-section.cards-buttons{
+              display: flex;
+              justify-content: normal;
+            }
             .button-section .button-initial.button.two{
               color: #181818;
+              &:hover{
+                color:#E50913;
+              }
             }
             .button-section {
               .button-initial.button{
@@ -1190,7 +1202,6 @@
     text-align: center;
     color: #BCBCBC;
     font-weight: 400;
-    max-width: 640px;
     word-break: break-word;
     margin: auto auto 70px auto;
   }
@@ -1227,10 +1238,19 @@ margin: 0 7.5px;
             display: flex;
             color: #fff;
             align-items: center;
+            &:hover .imageshow {
+              background-image: url(./../../images1/buildontwo.svg);
+              background: #000;
+            }
             h5{
               margin-bottom: 0;
               font-weight: 600;
               text-transform: uppercase;
+            }
+            .imageshow{
+              width: 56px;
+              height: 52px;
+              background-image: url(./../../images1/buildon.svg);
             }
             img{
               margin-right: 15px;
@@ -1263,18 +1283,32 @@ margin: 0 7.5px;
 
 
 .network-section{
-  padding: 20px 60px;
+  padding: 20px 60px 80px 20px;
+  position: relative;
+  .gradient{
+    position: absolute;
+    z-index: -1;
+    bottom: 40px;
+  }
     .tech-box{
       display: flex;
+      flex-direction: column;
 .content-container{
   h2{
     color: #fff;
-    width: 400px;
+    width: 60%;
+    margin: auto;
     font-weight: 700;
     font-size: 48px;
+    text-align: center;
   }
 }
-
+.allassets{
+  text-align: center;
+  img{
+    width: 60%;
+  }
+}
 
 
   }
