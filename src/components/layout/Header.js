@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, withRouter, Link } from 'react-router-dom';
 import logo from '../../assets/images1/pstakesymbolblack.svg'
-import logotwo from '../../assets/images1/pstake-logo-symbol.svg'
+import logotwo from '../../assets/images1/logo.svg'
 import {Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip} from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
