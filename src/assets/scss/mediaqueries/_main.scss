@@ -57,6 +57,9 @@
     padding: 20px 0;
     background: #070B09;
   }
+  .fixed-top{
+    position: static;
+  }
 }
 @media (max-width: 767.8px) {
   .footer {
