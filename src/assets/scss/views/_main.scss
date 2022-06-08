@@ -3,6 +3,11 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100%;
   scroll-behavior: smooth;
+  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section{
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+  }
   a{
     &:hover {
       text-decoration: none!important;
