@@ -34,19 +34,7 @@ const images = [
         image:'https://miro.medium.com/max/1400/0*0WYZ8Pk5xU5ods2l',
         title:"Community Newsletter #20",
         subtitle:"MAY 2022"
-    },
-    {
-        url:'https://medium.com/persistence-blog/from-the-founders-desk-mission-2022-d3a2a1d20de1',
-        image:'https://miro.medium.com/max/1400/0*r0zQspc5rwCjUGwZ',
-        title:"Community Newsletter #19",
-        subtitle:"APRIL 2022"
-    },
-    {
-        url:'https://medium.com/persistence-blog/community-newsletter-18-march-2022-9925d8bbd545',
-        image:'https://miro.medium.com/max/1400/0*QvLinyxZydtFUAam',
-        title:"Community Newsletter #18",
-        subtitle:"MARCH 2022"
-    },
+    }
 ];
 
 const Blogs = ({ deviceType }) => {

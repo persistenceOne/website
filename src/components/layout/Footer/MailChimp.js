@@ -38,6 +38,7 @@ const CustomForm = ({status, message, onValidated}) => {
     }, [isLoading]);
 
     const submit = () => {
+        console.log("ree")
         setLoading(true);
         email &&
         email.value.indexOf("@") > -1 &&

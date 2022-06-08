@@ -46,7 +46,7 @@ const Ecosystem = () => {
                                     Borrowing & Lending protocol for staked assets
                                 </Card.Text>
                                 <div className={"comingsoon mt-5"}>
-                                    <h6>COMING SOON!</h6>
+                                    <h6>COMING SOON</h6>
                                 </div>
                             </Card.Body>
                             </div>
@@ -64,7 +64,7 @@ const Ecosystem = () => {
                                 </Card.Text>
 
                                 <div className={"comingsoon mt-5"}>
-                                    <h6>COMING SOON!</h6>
+                                    <h6>COMING SOON</h6>
                                 </div>
                             </Card.Body>
                             </div>

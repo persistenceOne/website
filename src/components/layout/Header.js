@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, withRouter, Link } from 'react-router-dom';
 import logo from '../../assets/images1/pstakesymbolblack.svg'
 import logotwo from '../../assets/images1/logo.svg'
-import {Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip} from "react-bootstrap";
+import {Nav, Navbar, NavDropdown} from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
 import Icon from "../Icon";
@@ -325,19 +325,9 @@ const Header = () => {
                             <div className="links">
                                 {
                                     socialList.map((item, index) => (
-                                        <OverlayTrigger
-                                            key={item.iconName}
-                                            placement="bottom"
-                                            overlay={
-                                                <Tooltip id={`tooltip-${item.iconName}}`}>
-                                                    {item.tooltip}
-                                                </Tooltip>
-                                            }
-                                        >
                                             <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
                                                target="_blank"><Icon viewClass="social_icon_imgg"
                                                                      icon={item.iconName} /></a>
-                                        </OverlayTrigger>
                                     ))
                                 }
                             </div>

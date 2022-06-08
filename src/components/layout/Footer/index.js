@@ -2,7 +2,6 @@ import React from 'react';
 import icon from '../../../assets/images1/persistencefooterlogo.svg'
 import Mailchimp from "./MailChimp";
 import ReactGa from 'react-ga';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import Icon from "../../Icon";
 import { useTranslation } from "react-i18next";
 import {
@@ -100,7 +99,7 @@ const Footer = (props) => {
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-4 col-sm-12 margin-t-20">
-                                    <h6>{t("Contact Us")}</h6>
+                                    <h6>Connect With Us</h6>
                                     <div className="contact-us">
                                         <div>
                                             <div className="contact-box">
@@ -126,19 +125,9 @@ const Footer = (props) => {
                                         <ul className="list-unstyled footer-list">
                                             {
                                                 socialList.map((item, index) => (
-                                                    <OverlayTrigger
-                                                        key={item.iconName}
-                                                        placement="bottom"
-                                                        overlay={
-                                                            <Tooltip id={`tooltip-${item.iconName}}`}>
-                                                                {item.tooltip}
-                                                            </Tooltip>
-                                                        }
-                                                    >
-                                                        <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
-                                                            target="_blank"><Icon viewClass="social_icon_imgg"
-                                                                icon={item.iconName} /></a>
-                                                    </OverlayTrigger>
+                                                    <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
+                                                        target="_blank"><Icon viewClass="social_icon_imgg"
+                                                            icon={item.iconName} /></a>
                                                 ))
                                             }
                                         </ul>
@@ -151,12 +140,12 @@ const Footer = (props) => {
                 <div className="container footer-bottom-section">
                     <div className="col-lg-6 footer-logo-section container ">
                         <img className="dark-logo" src={icon} alt="icon-logo" title="logo" />&emsp;
-                        <span className="copy-rights mb-sm-0">{new Date().getFullYear()} © {t("Persistence.one | Privacy | Security")}</span>
+                        {/*<span className="copy-rights mb-sm-0">{new Date().getFullYear()} © {t("Persistence.one | Privacy | Security")}</span>*/}
 
                     </div>
                     <div className={'col-lg-6 text-right'}>
-                        <p className="copy-rights mb-sm-0">Built with <Icon viewClass="social_icon_imgg"
-                                                                            icon={'love'} /></p>
+                        {/*<p className="copy-rights mb-sm-0">Built with <Icon viewClass="social_icon_imgg"*/}
+                        {/*                                                    icon={'love'} /></p>*/}
                     </div>
                 </div>
             </footer>

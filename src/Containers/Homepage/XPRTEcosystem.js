@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardGroup, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {Card, CardGroup} from 'react-bootstrap';
 import validator from '../../assets/images1/validatoricon.svg';
 import community from '../../assets/images1/community.svg';
 import build from '../../assets/images1/buildon.svg';
@@ -126,19 +126,9 @@ const XPRTEcosystem = () => {
                                                 <div className="links">
                                                     {
                                                         socialList.map((item, index) => (
-                                                            <OverlayTrigger
-                                                                key={item.iconName}
-                                                                placement="bottom"
-                                                                overlay={
-                                                                    <Tooltip id={`tooltip-${item.iconName}}`}>
-                                                                        {item.tooltip}
-                                                                    </Tooltip>
-                                                                }
-                                                            >
                                                                 <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
                                                                    target="_blank"><Icon viewClass="social_icon_imgg"
                                                                                          icon={item.iconName} /></a>
-                                                            </OverlayTrigger>
                                                         ))
                                                     }
 
