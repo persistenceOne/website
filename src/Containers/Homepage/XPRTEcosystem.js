@@ -77,7 +77,7 @@ const XPRTEcosystem = () => {
                                     <div className={"button-section cards-buttons mt-5"}>
                                         <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
-                                            Ecosystem Grants
+                                            ECOSYSTEM GRANTS
                                         </a>
                                         <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button ml-3">
