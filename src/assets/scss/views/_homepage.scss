@@ -734,7 +734,14 @@
   .react-multi-carousel-list{
     padding-bottom: 100px;
     .react-multiple-carousel__arrow{
-      background: #212529;
+      height: calc(100% - 100px);
+      background: #000;
+      border-radius: 0;
+      opacity: 0.8;
+      width: 70px;
+    &:focus{
+      outline: 0px auto -webkit-focus-ring-color;
+    }
     }
   }
   .blog-title{
@@ -1295,22 +1302,18 @@ margin: 0 7.5px;
   }
     .tech-box{
       display: flex;
-      flex-direction: column;
 .content-container{
   h2{
     color: #fff;
-    width: 60%;
     margin: auto;
     font-weight: 700;
     font-size: 48px;
-    text-align: center;
+    text-align: left;
   }
 }
 .allassets{
   text-align: center;
-  img{
-    width: 60%;
-  }
+
 }
 
 

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, withRouter, Link } from 'react-router-dom';
+import Alert from 'react-bootstrap/Alert'
 import logo from '../../assets/images1/pstakesymbolblack.svg'
+import rightarrow from '../../assets/images1/right-arrow.svg'
+import close from '../../assets/images1/close_icon.png'
 import logotwo from '../../assets/images1/logo.svg'
 import {Nav, Navbar, NavDropdown} from "react-bootstrap";
 import { useTranslation } from "react-i18next";
@@ -43,15 +46,20 @@ const socialList = [
 ];
 
 const Header = () => {
-
+    const [banner, setBanner] = useState(true);
     const [mobileMenu, setMobileMenu] = useState(false);
-  
+    const [isActive, setIsActive] = useState(false);
+
     const { t } = useTranslation();
     useEffect(() => {
         document.body.classList = "";
         window.addEventListener("scroll", scrollNavigation, true);
 
     }, []);
+    const closeBanner = () => {
+        setBanner(false);
+        setIsActive(current => !current);
+    }
     const toggleMenu = () => {
         // setIsOPen(!isOpen);
         setMobileMenu(!mobileMenu);
@@ -107,6 +115,23 @@ const Header = () => {
     return (
         <React.Fragment>
             <Navbar className="navbar-custom fixed-top" expand="lg" expanded={mobileMenu} id="nav-bar">
+                <div className="container-fluid bannernav-section">
+                    {banner ?
+                        <div className="container">
+                            <Alert className="nav-banner alert-dismissible">
+                                <p>
+                                    <a href="https://t.me/Persistenceatconsensus" rel="noopener noreferrer"
+                                       target="_blank">
+                                        <span>Persistence is at Consensus 2022 </span>&emsp;
+                                        <img src={rightarrow} alt="arrow"/></a>
+                                </p>
+                                <img src={close} alt="close" className="close" onClick={closeBanner}/>
+                            </Alert>
+                        </div>
+                        : null}
+
+
+                </div>
                 <div className="container p-0">
                 <Navbar.Brand href="#home">
                     <NavLink to="/">
@@ -120,7 +145,9 @@ const Header = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="m-auto">
-                        <NavDropdown title={learnTitle} id="learn-dropdown">
+
+
+                        <NavDropdown className={isActive ? 'custom-dropdown' : ''} title={learnTitle} id="learn-dropdown">
                           <div className="container nav-dropdown-items learn-items pr-0 pl-0">
                               <div className="nav-dropdown-item">
                                 <p className="header">Developers</p>
@@ -173,7 +200,7 @@ const Header = () => {
                               </div>
                           </div>
                         </NavDropdown>
-                        <NavDropdown title={ecoSystemTitle} id="ecosystem-dropdown">
+                        <NavDropdown className={isActive ? 'custom-dropdown' : ''} title={ecoSystemTitle} id="ecosystem-dropdown">
                             <div className="container nav-dropdown-items ecosystem-items pl-0 pr-0">
                                 <div className="nav-dropdown-item">
                                     <div className="inner-items firstone">
@@ -248,11 +275,13 @@ const Header = () => {
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item buttoneco">
-                                    <Link to='/ecosystem'>Explore All Apps</Link>
+
+                                    <a href="/ecosystem" rel="noopener noreferrer"
+                                       className="inner-item">Explore All Apps </a>
                                 </div>
                             </div>
                         </NavDropdown>
-                        <NavDropdown title={communityTitle} id="community-dropdown">
+                        <NavDropdown className={isActive ? 'custom-dropdown' : ''} title={communityTitle} id="community-dropdown">
                             <div className="container nav-dropdown-items community-items pl-0 pr-0">
                                 <div className="nav-dropdown-item">
 
@@ -263,10 +292,10 @@ const Header = () => {
                                            target="_blank" className="inner-item">Guardians Program <Icon viewClass="social_icon_imgg"
                                                                                               icon={'exlink'} /></a>
                                         </div>
-                                        <div className="inner-item-container">
+                                        <div className="inner-item-container m-none">
                                             <Link className="inner-item">&nbsp;</Link>
                                         </div>
-                                        <div className="inner-item-container">
+                                        <div className="inner-item-container m-none">
                                             <Link className="inner-item">&nbsp;</Link>
                                         </div>
 

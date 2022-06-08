@@ -169,7 +169,10 @@
     height: 200px;
   }
 }
-@media (max-width: 768px){
+@media (max-width: 991px){
+  .network-section .tech-box{
+    flex-direction: column;
+  }
   .blog-image .card-img-top {
     height: 200px;
   }
@@ -183,14 +186,56 @@
     font-size: 32px;
   }
   .banner-section .stats-container{
-    flex-direction: column;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+.stats-section{
+  margin: 10px 0;
+}
+    .home-ecosystem-section{
+      padding: 70px 0;
+    }
+  }
+  .home-ecosystem-section .card-tiles{
+    display: block;
+  }
+  .banner-section .stats-container .stats-section h6{
+    font-size: 14px;
+  }
+  .banner-section .stats-container .stats-section h2{
+    font-size: 32px;
+  }
+  .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body{
+    padding: 40px 20px 30px 20px;
+  }
+  .button-section .button-initial.button{
+    font-size: 12px;
+  padding:8px 10px;
+    margin-left: 5px!important;
+  }
+  .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section{
+    margin-bottom: 10px;
+  }
+  .network-section .tech-box .allassets img{
+    width:100%;
+  }
+  .home-ecosystem-section .sub-heading{
+    margin: auto auto 40px auto;
   }
   .home-ecosystem-section .card-tiles .card-group .h-100.card{
     height: auto!important;
     margin-bottom: 15px;
+    margin: 0 15px;
   }
   .joinus .jointext{
+    .text-head{
+      h2{
+        margin-bottom: 20px;
+      }
+    }
     flex-direction: column;
+    text-align: center;
   }
   .footer .footer-logo-section{
     padding-top: 20px;
@@ -211,6 +256,15 @@
 
   .footer .footer-bottom-section{
     flex-direction: column;
+  }
+  .footer .contact-us .mail-chimp-section{
+    display: block;
+    align-items: center;
+    margin: 10px 0 20px 0;
+  }
+  .footer .contact-us .mail-chimp-section input{
+    width: 150px;
+    max-width: 500px;
   }
   .contact-us{
     width:100%;

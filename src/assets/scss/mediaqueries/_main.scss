@@ -2,10 +2,16 @@
   .navbar.navbar-custom .navbar-nav {
     a, .nav-link {
       text-align: left;
+      height: auto;
+      margin:0 0;
+      padding: 0 0!important;
     }
 
+    .nav-item.dropdown {
+      padding: 10px 0;
+    }
     .nav-item {
-      border-bottom: 1px solid #e0e6e8;
+      border-bottom: 0px solid #e0e6e8;
 
       &:last-child {
         border: 0px solid;
@@ -22,11 +28,16 @@
 
         .nav-dropdown-item {
           .header {
-            text-align: center;
+            text-align: left;
             padding: 10px 0;
           }
         }
       }
+    }
+  }
+  .nav-dropdown-item{
+    .inner-items {
+      margin: 15px 0px;
     }
   }
   .navbar-collapse {
@@ -36,7 +47,7 @@
     //margin-top: 65px;
     .banner-section {
       height: auto;
-      padding: 135px 0 100px 0;
+      padding: 85px 0;
     }
   }
   .product-info-section .cards {
@@ -53,8 +64,25 @@
   }
 }
 @media (max-width: 991.98px) {
+  .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item.ml-3{
+    margin: 0!important;
+  }
+  .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items.firstone{
+    padding: 15px 15px 5px 0px;
+  }
+  .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item.buttoneco a{
+    padding: 10px 45px!important;
+  }
+  .navbar-toggler
+  {
+    padding: 0;
+  }
+
+  .m-none{
+    display: none!important;
+  }
   .navbar.navbar-custom {
-    padding: 20px 0;
+    padding: 0 0;
     background: #070B09;
   }
   .xprt-banner-section .aquire-content .logos {
@@ -75,18 +103,64 @@
   }
 }
 @media (max-width: 767.8px) {
-  .xprt-banner-section .aquire-content .logos {
+  .home-ecosystem-section .sortbuttons{
+
+    overflow: scroll;
     display: flex;
+  }
+  .home-ecosystem-section .sortbuttons button{
+    font-size: 10px;
+  }
+  .xprt-banner-section{
+    background-image:none;
+    padding:100px 0;
+  }
+  .banner-section .button-initial.button{
+    margin: 5px;
+  }
+  .xprt-banner-section .aquire-content .title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+  .opportunities-section{
+    padding: 0;
+  }
+  .xprt-banner-section .aquire-content .logos {
+    display: block;
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     a{
       text-align: center;
       margin: 10px 0px;
+      img{
+        margin:10px;
+      }
+    }
+  }
+  .content-container{
+    h2{
+      color: #fff;
+      width: 60%;
+      margin: auto;
+      font-weight: 700;
+      font-size: 48px;
+      text-align: center;
     }
   }
   .footer {
     text-align: center;
+    .col-lg-4{
+      margin-bottom: 10px;
+      .mt-30{
+        margin-top: 10px;
+      }
+    }
 
     .mail-chimp-section {
       display: flex;
@@ -97,7 +171,7 @@
     }
   }
   .navbar.navbar-custom {
-    padding: 20px 0;
+    padding: 0 0;
     background: #070B09;
 
     .navbar-brand img {
@@ -113,8 +187,8 @@
         }
     }}
   }
-  .navbar .container {
-    padding: 0 15px !important;
+  .navbar .container.p-0 {
+    padding: 15px 15px !important;
   }
   .info-modal.modal .modal-dialog .modal-content .modal-data{
     flex-wrap: wrap;
@@ -127,6 +201,10 @@
     .content-upcoming.mantle-content, .content-upcoming.plend-content {
       min-height: 60vw;
     }
+  }
+  .opportunities-section .title{
+    font-size: 32px;
+    line-height: 1.5;
   }
 }
 
