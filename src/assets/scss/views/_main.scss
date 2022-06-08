@@ -259,8 +259,46 @@ a {
 }
   .navbar.navbar-custom {
     width: 100%;
-    padding:0;
+    padding: 0;
     background: transparent;
+    display: flex;
+    flex-direction: column;
+    .bannernav-section {
+      width: 100%;
+      background: #FFFFFF;
+      position: relative;
+      top: 0px;
+      .alert-dismissible .close {
+        position: absolute;
+        top: 3px;
+        cursor: pointer;
+        right: -25px;
+        padding: 0.75rem 1.25rem;
+        color: inherit;
+        color: #fff;
+        width: 50px;
+        opacity: 1;
+      }
+      .nav-banner {
+        p {
+          margin: 0;
+          font-weight: 500;
+          font-size: 12px;
+          color: #000;
+          a {
+            color: #000;
+
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+      }
+    }
     .links a {
       width: 32px;
       height: 32px;
@@ -320,10 +358,13 @@ a {
             border-top: 2px solid #e50913;
           }
         }
+      .custom-dropdown .dropdown-menu {
+        top:74px;
+      }
       .dropdown-menu{
         position: fixed;
         left: 0;
-        top: 74px;
+        top: 115px;
         right: 0;
         bottom: auto;
         z-index: 1;
@@ -763,7 +804,7 @@ a {
     font-weight: 500;
     margin-right: -15px;
     font-size: 12px;
-    color: #dee2e6;
+    color: #000;
   }
 
   .subscription-result {
