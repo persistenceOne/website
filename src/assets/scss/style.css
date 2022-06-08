@@ -8,6 +8,9 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100%;
   scroll-behavior: smooth; }
+  html a:hover,
+  body a:hover {
+    text-decoration: none !important; }
 
 body {
   background-color: #070B09 !important;
@@ -107,12 +110,13 @@ a {
     border: 0px solid #303132; }
     .button-section .button-initial.button.two:hover {
       background: transparent;
-      border: 0px solid #303132; }
+      border: 0px solid #303132;
+      color: #E50913; }
   .button-section .button-initial.button {
-    background: #E50913;
+    background: transparent;
     border-radius: 6px;
     padding: 8px 15px;
-    border: 1px solid #E50913;
+    border: 1px solid #303132;
     font-size: 14px;
     width: 170px;
     text-align: center;
@@ -193,10 +197,13 @@ a {
     top: 0px;
     margin-bottom: 15px; }
 
+.navbar.navbar-custom.sticky-dark {
+  background: #070B09; }
+
 .navbar.navbar-custom {
   width: 100%;
   padding: 0;
-  background: #070B09; }
+  background: transparent; }
   .navbar.navbar-custom .links a {
     width: 32px;
     height: 32px;
@@ -256,7 +263,7 @@ a {
         align-items: center; }
         .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item.buttoneco a {
           background: #000;
-          padding: 15px 45px;
+          padding: 10px 45px;
           border-radius: 6px;
           font-size: 14px;
           font-weight: 600;
@@ -264,7 +271,7 @@ a {
           .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item.buttoneco a:hover {
             color: #fff; }
       .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item {
-        margin: 0px 30px;
+        margin: 0px 40px 0 0px;
         width: 280px; }
         .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items.firstone {
           width: 280px;
@@ -307,18 +314,18 @@ a {
         .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item {
           font-size: 14px;
           line-height: 24px;
+          transition: all 0.5s ease-in-out;
           text-transform: capitalize;
           color: #1C1C21;
           margin-bottom: 16px;
           font-weight: 400;
           display: inline-block; }
+          .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item:hover {
+            color: #000; }
           .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item .icon {
             width: 10px; }
           .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item.para {
             width: 250px; }
-          .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item:hover {
-            color: #1C1C21;
-            text-decoration: underline !important; }
         .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items img {
           max-width: 200px;
           margin-bottom: 16px; }
@@ -340,8 +347,8 @@ a {
           align-items: center;
           flex-wrap: wrap; }
           .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .links a {
-            width: 28px;
-            height: 28px;
+            width: 22px;
+            height: 22px;
             margin: 5px;
             display: flex;
             align-items: center;
@@ -349,7 +356,7 @@ a {
             justify-content: center;
             background: #363B46; }
             .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .links a .icon {
-              width: 12px;
+              width: 10px;
               fill: #ffffff; }
       .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items.learn-items, .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items.community-items, .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items.ecosystem-items, .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items.network-items {
         justify-content: left; }
@@ -566,6 +573,8 @@ a {
     text-align: center !important;
     color: #ffffff !important;
     padding: 8px 20px !important; }
+  .footer .btn-subscribe.btn-primary.disabled, .footer .btn-subscribe.btn-primary:disabled {
+    opacity: 0.6 !important; }
   .footer .footer-text {
     font-weight: 400;
     font-family: "Poppins", sans-serif;
@@ -769,7 +778,7 @@ button:disabled {
 # Homepage styles
 --------------------------------------------------------------*/
 .banner-section {
-  padding: 150px 0;
+  padding: 200px 0;
   height: 100%;
   background-image: url(./../../images1/animate.gif);
   background-repeat: no-repeat;
@@ -802,9 +811,8 @@ button:disabled {
     display: inline-block;
     transition: all 0.5s ease-in-out; }
     .banner-section .button-initial.button:hover {
-      background: transparent;
-      text-decoration: underline !important;
-      border: 1px solid #303132; }
+      background: #E50913;
+      border: 1px solid #E50913; }
   .banner-section .caption {
     font-weight: bold;
     font-size: 18px;
@@ -1257,6 +1265,8 @@ button:disabled {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.41)); }
   .stay-updated .react-multi-carousel-list {
     padding-bottom: 100px; }
+    .stay-updated .react-multi-carousel-list .react-multiple-carousel__arrow {
+      background: #212529; }
   .stay-updated .blog-title {
     position: absolute;
     bottom: -75px; }
@@ -1511,6 +1521,10 @@ button:disabled {
 
 .home-ecosystem-section.xprtecosystem {
   background: #F5F5F5; }
+  .home-ecosystem-section.xprtecosystem .button-section .button-initial.button {
+    color: #303132; }
+    .home-ecosystem-section.xprtecosystem .button-section .button-initial.button:hover {
+      color: #fff; }
   .home-ecosystem-section.xprtecosystem h3 {
     color: #000000; }
     .home-ecosystem-section.xprtecosystem h3 span {
@@ -1521,8 +1535,13 @@ button:disabled {
     display: block; }
     .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section {
       background: #fff; }
+      .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body .button-section.cards-buttons {
+        display: flex;
+        justify-content: normal; }
       .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body .button-section .button-initial.button.two {
         color: #181818; }
+        .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body .button-section .button-initial.button.two:hover {
+          color: #E50913; }
       .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body .button-section {
         position: static;
         left: 0;
@@ -1587,7 +1606,6 @@ button:disabled {
     text-align: center;
     color: #BCBCBC;
     font-weight: 400;
-    max-width: 640px;
     word-break: break-word;
     margin: auto auto 70px auto; }
   .home-ecosystem-section .card-tiles {
@@ -1620,10 +1638,17 @@ button:disabled {
               display: flex;
               color: #fff;
               align-items: center; }
+              .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .symbol-section:hover .imageshow {
+                background-image: url(./../../images1/buildontwo.svg);
+                background: #000; }
               .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .symbol-section h5 {
                 margin-bottom: 0;
                 font-weight: 600;
                 text-transform: uppercase; }
+              .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .symbol-section .imageshow {
+                width: 56px;
+                height: 52px;
+                background-image: url(./../../images1/buildon.svg); }
               .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .symbol-section img {
                 margin-right: 15px;
                 width: 50px;
@@ -1642,14 +1667,26 @@ button:disabled {
           height: auto; }
 
 .network-section {
-  padding: 20px 60px; }
+  padding: 20px 60px 80px 20px;
+  position: relative; }
+  .network-section .gradient {
+    position: absolute;
+    z-index: -1;
+    bottom: 40px; }
   .network-section .tech-box {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     .network-section .tech-box .content-container h2 {
       color: #fff;
-      width: 400px;
+      width: 60%;
+      margin: auto;
       font-weight: 700;
-      font-size: 48px; }
+      font-size: 48px;
+      text-align: center; }
+    .network-section .tech-box .allassets {
+      text-align: center; }
+      .network-section .tech-box .allassets img {
+        width: 60%; }
 
 .statistics-section {
   padding: 100px 0;
@@ -1682,6 +1719,12 @@ button:disabled {
   background-image: url(./../../images1/xprt_bg2.svg), url(./../../images1/xprt_bg.svg);
   background-size: 200px, contain;
   background-position: top right, center bottom; }
+  .xprt-banner-section .aquire-content {
+    margin-top: 100px; }
+  .xprt-banner-section a {
+    text-decoration: none !important; }
+    .xprt-banner-section a:hover {
+      text-decoration: none !important; }
   .xprt-banner-section .content {
     display: flex;
     flex-wrap: wrap; }
@@ -1737,10 +1780,11 @@ button:disabled {
         align-items: center;
         margin-top: 2.5rem; }
         .xprt-banner-section .content .left .buttons .primary {
-          background: #E50913;
+          background: transparent;
           border-radius: 6px;
           padding: 0.5rem 2rem;
           font-weight: 600;
+          transition: all 0.5s ease-in-out;
           font-size: 14px;
           line-height: 150%;
           text-align: center;
@@ -1748,12 +1792,16 @@ button:disabled {
           text-transform: uppercase;
           color: #FCFCFC;
           box-shadow: none;
-          border: 0px solid;
+          border: 1px solid #303132;
           outline: none;
           margin-right: 10px; }
+          .xprt-banner-section .content .left .buttons .primary:hover {
+            background: #E50913;
+            border: 1px solid #E50913; }
         .xprt-banner-section .content .left .buttons .button-secondary {
           padding: 0px 2rem;
           font-weight: 600;
+          transition: all 0.5s ease-in-out;
           font-size: 14px;
           line-height: 150%;
           text-align: center;
@@ -1764,6 +1812,8 @@ button:disabled {
           box-shadow: none;
           border: 0px solid;
           background: none; }
+          .xprt-banner-section .content .left .buttons .button-secondary:hover {
+            color: #E50913; }
           .xprt-banner-section .content .left .buttons .button-secondary:active, .xprt-banner-section .content .left .buttons .button-secondary:hover {
             outline: none;
             box-shadow: none;
@@ -1795,6 +1845,10 @@ button:disabled {
 .opportunities-section {
   padding: 100px 0;
   background: #000000; }
+  .opportunities-section a {
+    text-decoration: none !important; }
+    .opportunities-section a:hover {
+      text-decoration: none !important; }
   .opportunities-section .title {
     font-weight: 700;
     font-size: 48px;
@@ -1863,10 +1917,11 @@ button:disabled {
           justify-content: space-evenly;
           margin-top: 2.5rem; }
           .opportunities-section .staking-boxes .boxes .box .buttons .primary {
-            background: #E50913;
+            background: transparent;
             border-radius: 6px;
             padding: 0.5rem 2rem;
             font-weight: 600;
+            transition: all 0.5s ease-in-out;
             font-size: 14px;
             line-height: 150%;
             text-align: center;
@@ -1874,11 +1929,15 @@ button:disabled {
             text-transform: uppercase;
             color: #FCFCFC;
             box-shadow: none;
-            border: 0px solid;
+            border: 1px solid #303132;
             outline: none; }
+            .opportunities-section .staking-boxes .boxes .box .buttons .primary:hover {
+              background: #E50913;
+              border: 1px solid #E50913; }
           .opportunities-section .staking-boxes .boxes .box .buttons .button-secondary {
             font-weight: 600;
             font-size: 14px;
+            transition: all 0.5s ease-in-out;
             line-height: 150%;
             text-align: center;
             text-decoration-line: underline;
@@ -1888,6 +1947,8 @@ button:disabled {
             box-shadow: none;
             border: 0px solid;
             background: none; }
+            .opportunities-section .staking-boxes .boxes .box .buttons .button-secondary:hover {
+              color: #E50913; }
             .opportunities-section .staking-boxes .boxes .box .buttons .button-secondary:active, .opportunities-section .staking-boxes .boxes .box .buttons .button-secondary:hover {
               outline: none;
               box-shadow: none;
@@ -2036,12 +2097,37 @@ button:disabled {
   .section-roadmap {
     padding: 130px 0 100px 0; }
 
-  .navbar.navbar-custom .navbar-nav .dropdown .dropdown-menu {
-    max-height: 400px; }
-
   .navbar.navbar-custom .navbar-brand img {
     width: 120px; } }
+@media (max-width: 991.98px) {
+  .navbar.navbar-custom {
+    padding: 20px 0;
+    background: #070B09; }
+
+  .xprt-banner-section .aquire-content .logos {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; }
+    .xprt-banner-section .aquire-content .logos a {
+      text-align: center;
+      margin: 10px 0px; }
+
+  .gradient {
+    display: none; }
+
+  .fixed-top {
+    position: static; } }
 @media (max-width: 767.8px) {
+  .xprt-banner-section .aquire-content .logos {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; }
+    .xprt-banner-section .aquire-content .logos a {
+      text-align: center;
+      margin: 10px 0px; }
+
   .footer {
     text-align: center; }
     .footer .mail-chimp-section {
@@ -2050,7 +2136,8 @@ button:disabled {
       padding: 8px 10px !important; }
 
   .navbar.navbar-custom {
-    padding: 20px 0; }
+    padding: 20px 0;
+    background: #070B09; }
     .navbar.navbar-custom .navbar-brand img {
       width: 170px; }
     .navbar.navbar-custom .ecosystem-dropdown {
@@ -2083,7 +2170,17 @@ button:disabled {
     margin: 0px; } }
 @media (min-width: 768px) and (max-width: 991.8px) {
   .footer .contact-us {
-    justify-content: flex-start; } }
+    justify-content: flex-start; }
+
+  .home-ecosystem-section .card-tiles .card-group {
+    flex-flow: column wrap; }
+
+  .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .comingsoon {
+    position: relative;
+    left: 0;
+    margin-left: 0;
+    bottom: 30px;
+    text-align: center; } }
 @media (max-width: 375px) {
   .button-primary, .button-secondary, .product-info-section.product-pstake .button.coming-soon {
     width: 100%;
@@ -2212,5 +2309,71 @@ button:disabled {
 @media (min-width: 768px) {
   .blog-image .card-img-top {
     height: 200px; } }
+@media (max-width: 768px) {
+  .blog-image .card-img-top {
+    height: 200px; }
+
+  .home-ecosystem-section .card-tiles .card-group {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-direction: column; }
+
+  .banner-section .banner-heading span, .home-ecosystem-section h3 {
+    font-size: 32px; }
+
+  .banner-section .stats-container {
+    flex-direction: column; }
+
+  .home-ecosystem-section .card-tiles .card-group .h-100.card {
+    height: auto !important;
+    margin-bottom: 15px; }
+
+  .joinus .jointext {
+    flex-direction: column; }
+
+  .footer .footer-logo-section {
+    padding-top: 20px;
+    display: block;
+    padding-bottom: 20px;
+    align-items: self-end;
+    flex-direction: column;
+    text-align: center; }
+
+  .footer .copy-rights {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.314;
+    color: #70747c;
+    display: block;
+    text-align: center; }
+
+  .footer .footer-bottom-section {
+    flex-direction: column; }
+
+  .contact-us {
+    width: 100%; }
+
+  .joinus .jointext a {
+    margin-top: 20px; }
+
+  .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body .comingsoon {
+    text-align: center;
+    position: static;
+    left: 50%;
+    margin-left: 0;
+    bottom: auto; }
+
+  .network-section {
+    padding: 0; }
+
+  .network-section .tech-box .content-container h2 {
+    font-size: 32px;
+    text-align: center;
+    width: auto; }
+
+  .network-section .tech-box {
+    display: flex;
+    flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */

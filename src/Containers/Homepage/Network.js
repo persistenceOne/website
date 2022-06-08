@@ -11,10 +11,9 @@ const Network = () => {
                     <div className="tech-box">
                         <div className="content-container">
                             <h2 className="heading">Building An Economy Around Proof-of-Stake Assets</h2>
-
                         </div>
                         <div className={"allassets"}>
-                            <img src={xprtnetwork} alt={"network"} title={'Assets'} className={'w-100'}/>
+                            <img src={xprtnetwork} alt={"network"} title={'Assets'}/>
                         </div>
                 </div>
             </div>

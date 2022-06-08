@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardGroup, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {Card, CardGroup} from 'react-bootstrap';
 import validator from '../../assets/images1/validatoricon.svg';
 import community from '../../assets/images1/community.svg';
 import build from '../../assets/images1/buildon.svg';
@@ -57,8 +57,8 @@ const XPRTEcosystem = () => {
     return (
         <section className="home-ecosystem-section xprtecosystem">
             <div className="container">
-                <h3 className="section-title">Get Involved In <span>Persistence EcosystemM</span></h3>
-                <p className="sub-heading">Powered by XPRT</p>
+                <h3 className="section-title">Powered by XPRT</h3>
+                <p className="sub-heading">Get Involved In the <span>Persistence Ecosystem</span></p>
                 <div className="card-tiles">
                     <CardGroup>
                         <Card className={'h-100'}>
@@ -74,13 +74,13 @@ const XPRTEcosystem = () => {
                                     <Card.Text>
                                         to realise innovative use-cases for stkASSETs
                                     </Card.Text>
-                                    <div className={"button-section mt-5"}>
+                                    <div className={"button-section cards-buttons mt-5"}>
                                         <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
                                             Ecosystem Grants
                                         </a>
                                         <a href="https://github.com/persistenceOne/persistenceCore" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button two">
+                                           target="_blank" className="button-initial button ml-3">
                                             GITHUB
                                         </a>
                                     </div>
@@ -100,13 +100,13 @@ const XPRTEcosystem = () => {
                                         to help secure the core-chain
                                     </Card.Text>
 
-                                    <div className={"comingsoon button-section mt-5"}>
+                                    <div className={"comingsoon cards-buttons button-section mt-5"}>
                                         <a href="https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
                                             DOCS
                                         </a>
                                         <a href="https://drive.google.com/file/d/1FRFNZxh894K5LIfvZ5n5zvXTXZ_YF3Qt/view" rel="noopener noreferrer"
-                                           target="_blank" className="button-initial button two">
+                                           target="_blank" className="button-initial button ml-3">
                                             FOUNDATION DELEGATION
                                         </a>
                                     </div>
@@ -126,19 +126,9 @@ const XPRTEcosystem = () => {
                                                 <div className="links">
                                                     {
                                                         socialList.map((item, index) => (
-                                                            <OverlayTrigger
-                                                                key={item.iconName}
-                                                                placement="bottom"
-                                                                overlay={
-                                                                    <Tooltip id={`tooltip-${item.iconName}}`}>
-                                                                        {item.tooltip}
-                                                                    </Tooltip>
-                                                                }
-                                                            >
                                                                 <a href={item.url} onClick={() => socialIcon(item.iconName)} rel="noopener noreferrer"
                                                                    target="_blank"><Icon viewClass="social_icon_imgg"
                                                                                          icon={item.iconName} /></a>
-                                                            </OverlayTrigger>
                                                         ))
                                                     }
 
@@ -146,12 +136,12 @@ const XPRTEcosystem = () => {
                                         </div>
                                     </Card.Text>
 
-                                    <div className={"comingsoon button-section mt-5"}>
+                                    <div className={"comingsoon cards-buttons button-section mt-5"}>
                                         <a href="/ecosystem" rel="noopener noreferrer" className="button-initial button">
                                             ECOSYSTEM
                                         </a>
                                         <a href="https://bit.ly/38VBfme" rel="noopener noreferrer"
-                                            className="button-initial button two">
+                                            className="button-initial button ml-3">
                                             GUARDIAN PROGRAM
                                         </a>
                                     </div>

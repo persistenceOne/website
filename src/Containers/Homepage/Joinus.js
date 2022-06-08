@@ -12,7 +12,7 @@ const Joinus = () => {
                             </div>
                             <a href="https://angel.co/company/persistence-one-1" rel="noopener noreferrer"
                                target="_blank" className="button-initial button">
-                                join us!
+                                Join us
                             </a>
                         </div>
                     </div>

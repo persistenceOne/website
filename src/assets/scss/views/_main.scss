@@ -787,7 +787,9 @@ a {
     color: #ffffff !important;
     padding: 8px 20px !important;
   }
-
+  .btn-subscribe.btn-primary.disabled, .btn-subscribe.btn-primary:disabled{
+    opacity: 0.6 !important;
+  }
   .footer-text {
     font-weight: 400;
     font-family: "Poppins", sans-serif;

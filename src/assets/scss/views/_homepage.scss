@@ -733,6 +733,9 @@
   }
   .react-multi-carousel-list{
     padding-bottom: 100px;
+    .react-multiple-carousel__arrow{
+      background: #212529;
+    }
   }
   .blog-title{
     position: absolute;
@@ -1109,6 +1112,10 @@
         .card-section{
           background: #fff;
           .card-body{
+            .button-section.cards-buttons{
+              display: flex;
+              justify-content: normal;
+            }
             .button-section .button-initial.button.two{
               color: #181818;
               &:hover{
@@ -1288,15 +1295,23 @@ margin: 0 7.5px;
   }
     .tech-box{
       display: flex;
+      flex-direction: column;
 .content-container{
   h2{
     color: #fff;
-    width: 400px;
+    width: 60%;
+    margin: auto;
     font-weight: 700;
     font-size: 48px;
+    text-align: center;
   }
 }
-
+.allassets{
+  text-align: center;
+  img{
+    width: 60%;
+  }
+}
 
 
   }
