@@ -1040,7 +1040,7 @@
       padding: 24px;
       border: 1px solid transparent;
       transition: all 0.5s ease-in-out;
-      margin: 24px 10px;
+      margin: 10px;
       position: relative;
       &:hover {
         border: 1px solid #303132;
@@ -1313,7 +1313,11 @@ margin: 0 7.5px;
 }
 .allassets{
   text-align: center;
-
+img{
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+}
 }
 
 

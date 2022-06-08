@@ -97,6 +97,7 @@
   }
   .xprt-banner-section .content .left .buttons{
     margin-top: 1.5rem;
+    margin-bottom: 10px;
   }
   .aim-section{
       padding: 70px 0;
@@ -229,10 +230,13 @@
   .home-ecosystem-section .sub-heading{
     margin: auto auto 40px auto;
   }
+  .home-ecosystem-section .sortbuttons{
+    margin-bottom: 10px;
+  }
   .home-ecosystem-section .card-tiles .card-group .h-100.card{
     height: auto!important;
     margin-bottom: 15px;
-    margin: 0 15px;
+    margin: 10px 15px;
   }
   .joinus .jointext{
     .text-head{
@@ -271,6 +275,9 @@
   .footer .contact-us .mail-chimp-section input{
     width: 150px;
     max-width: 500px;
+  }
+  .banner-section .text span{
+    display:inline;
   }
   .contact-us{
     width:100%;
