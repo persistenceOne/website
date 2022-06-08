@@ -321,8 +321,7 @@ a {
           font-weight: 400;
           display: inline-block; }
           .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item:hover {
-            color: #000;
-            font-weight: 400; }
+            color: #000; }
           .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item .icon {
             width: 10px; }
           .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item.para {
@@ -2105,12 +2104,30 @@ button:disabled {
     padding: 20px 0;
     background: #070B09; }
 
+  .xprt-banner-section .aquire-content .logos {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; }
+    .xprt-banner-section .aquire-content .logos a {
+      text-align: center;
+      margin: 10px 0px; }
+
   .gradient {
     display: none; }
 
   .fixed-top {
     position: static; } }
 @media (max-width: 767.8px) {
+  .xprt-banner-section .aquire-content .logos {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column; }
+    .xprt-banner-section .aquire-content .logos a {
+      text-align: center;
+      margin: 10px 0px; }
+
   .footer {
     text-align: center; }
     .footer .mail-chimp-section {

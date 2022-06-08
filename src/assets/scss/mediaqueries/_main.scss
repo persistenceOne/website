@@ -57,6 +57,16 @@
     padding: 20px 0;
     background: #070B09;
   }
+  .xprt-banner-section .aquire-content .logos {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    a{
+      text-align: center;
+      margin: 10px 0px;
+    }
+  }
   .gradient{
     display: none;
   }
@@ -65,6 +75,16 @@
   }
 }
 @media (max-width: 767.8px) {
+  .xprt-banner-section .aquire-content .logos {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    a{
+      text-align: center;
+      margin: 10px 0px;
+    }
+  }
   .footer {
     text-align: center;
 
