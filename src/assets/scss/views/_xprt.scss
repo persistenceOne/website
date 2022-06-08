@@ -48,7 +48,7 @@
       .heading {
         font-weight: 700;
         font-size: 24px;
-        line-height: 60px;
+        line-height: 1.5;
         display: flex;
         align-items: center;
         color: #FFFFFF;
@@ -214,7 +214,7 @@
       //}
       .boxes{
         //display: flex;
-        margin-bottom: 2rem;
+
 
         .box{
           background: linear-gradient(151.51deg, #1F2023 2.98%, rgba(19, 20, 22, 0.48) 85.16%);
@@ -222,7 +222,7 @@
           box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.06);
           border-radius: 6px;
           padding: 3rem 2.5rem;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
           //flex: 1;
           //margin: 10px;
           text-align: center;
