@@ -64,6 +64,9 @@
   }
 }
 @media (max-width: 991.98px) {
+  .home-ecosystem-section h3.section-title{
+    margin-top: 0px;
+  }
   .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .inner-item.ml-3{
     margin: 0!important;
   }
@@ -86,13 +89,14 @@
     background: #070B09;
   }
   .xprt-banner-section .aquire-content .logos {
-    display: flex;
+    display: block;
     align-content: center;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
-    a{
+    a img{
       text-align: center;
-      margin: 10px 0px;
+      margin: 10px;
     }
   }
   .gradient{
@@ -104,6 +108,9 @@
 }
 @media (max-width: 767.8px) {
 
+  .home-ecosystem-section h3.section-title{
+    margin-top: 0px;
+  }
   .home-ecosystem-section .sortbuttons button{
     font-size: 10px;
   }
