@@ -43,7 +43,7 @@ const EcosystemContent = () => {
     }, []);
 
     return (
-    <section className="home-ecosystem-section ecosystem-section">
+    <section className="home-ecosystem-section ecosystem-section ecos">
         <div className="container">
             <h3 className="section-title">Persistence Ecosystem</h3>
             <p className="sub-heading">Discover the suite of applications, wallets, explorers and tools within the ecosystem
