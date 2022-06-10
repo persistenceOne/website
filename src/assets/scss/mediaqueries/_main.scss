@@ -64,6 +64,30 @@
   }
 }
 @media (max-width: 991.98px) {
+  .opportunities-section {
+    padding: 0px 0 100px 0;
+    background: #000000;
+  }
+  .opportunities-section .staking-boxes .boxes .box .apr{
+    font-size: 42px;
+    line-height: 1.5;
+  }
+  .stay-updated.xprt .title{
+    font-size: 32px;
+    line-height: 1.5;
+
+  }
+  .opportunities-section .title{
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  .home-ecosystem-section{
+    padding: 85px 0;
+  }
+  .xprt-banner-section {
+    background-image: none;
+    padding: 85px 0;
+  }
   .home-ecosystem-section h3.section-title{
     margin-top: 0px;
   }
@@ -114,10 +138,7 @@
   .home-ecosystem-section .sortbuttons button{
     font-size: 10px;
   }
-  .xprt-banner-section{
-    background-image:none;
-    padding:100px 0;
-  }
+
   .banner-section .button-initial.button{
     margin: 5px;
   }
@@ -205,10 +226,7 @@
       min-height: 60vw;
     }
   }
-  .opportunities-section .title{
-    font-size: 32px;
-    line-height: 1.5;
-  }
+
 }
 
 @media (max-width: 575.8px) {
