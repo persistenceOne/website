@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, withRouter, Link } from 'react-router-dom';
-import Alert from 'react-bootstrap/Alert'
 import logo from '../../assets/images1/pstakesymbolblack.svg'
-import rightarrow from '../../assets/images1/right-arrow.svg'
-import close from '../../assets/images1/close_icon.png'
 import logotwo from '../../assets/images1/logo.svg'
 import {Nav, Navbar, NavDropdown} from "react-bootstrap";
 import { useTranslation } from "react-i18next";
@@ -46,7 +43,6 @@ const socialList = [
 ];
 
 const Header = () => {
-    const [banner, setBanner] = useState(true);
     const [mobileMenu, setMobileMenu] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
@@ -54,12 +50,11 @@ const Header = () => {
     useEffect(() => {
         document.body.classList = "";
         window.addEventListener("scroll", scrollNavigation, true);
+        setIsActive(current => !current);
+
 
     }, []);
-    const closeBanner = () => {
-        setBanner(false);
-        setIsActive(current => !current);
-    }
+
     const toggleMenu = () => {
         // setIsOPen(!isOpen);
         setMobileMenu(!mobileMenu);
@@ -115,23 +110,6 @@ const Header = () => {
     return (
         <React.Fragment>
             <Navbar className="navbar-custom fixed-top" expand="lg" expanded={mobileMenu} id="nav-bar">
-                <div className="container-fluid bannernav-section">
-                    {banner ?
-                        <div className="container">
-                            <Alert className="nav-banner alert-dismissible">
-                                <p>
-                                    <a href="https://t.me/Persistenceatconsensus" rel="noopener noreferrer"
-                                       target="_blank">
-                                        <span>Persistence is at Consensus 2022 </span>&emsp;
-                                        <img src={rightarrow} alt="arrow"/></a>
-                                </p>
-                                <img src={close} alt="close" className="close" onClick={closeBanner}/>
-                            </Alert>
-                        </div>
-                        : null}
-
-
-                </div>
                 <div className="container p-0">
                 <Navbar.Brand href="#home">
                     <NavLink to="/">
