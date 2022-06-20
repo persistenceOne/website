@@ -105,7 +105,7 @@ const XPRTEcosystem = () => {
                                            target="_blank" className="button-initial button">
                                             DOCS
                                         </a>
-                                        <a href="https://drive.google.com/file/d/1FRFNZxh894K5LIfvZ5n5zvXTXZ_YF3Qt/view" rel="noopener noreferrer"
+                                        <a href="https://drive.google.com/file/d/1ZhbBaViq0a6_ZR2_CSmzrWjfQ4_klzj8/view" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button ml-3">
                                             FOUNDATION DELEGATION
                                         </a>
