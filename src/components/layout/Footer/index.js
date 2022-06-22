@@ -94,7 +94,7 @@ const Footer = (props) => {
                                         <ul className="list-unstyled footer-list">
                                             <li><a href="https://drive.google.com/file/d/1gEdSvITrKA6wTtujOf9EIzl6M0QtltRV/view?usp=sharing" rel="noopener noreferrer" target="_blank">{t("Grants ")}</a></li>
                                             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeeewzYI2E3HXDZaZHa2KH3NULw30HnRmiu33EYL75H1op-Dw/viewform" rel="noopener noreferrer" target="_blank">{t("Guardians Program")}</a></li>
-                                            <li><a href="https://drive.google.com/file/d/1FRFNZxh894K5LIfvZ5n5zvXTXZ_YF3Qt/view?usp=sharing" rel="noopener noreferrer" target="_blank">{t("Foundation Delegation")}</a></li>
+                                            <li><a href="https://drive.google.com/file/d/1ZhbBaViq0a6_ZR2_CSmzrWjfQ4_klzj8/view" rel="noopener noreferrer" target="_blank">{t("Foundation Delegation")}</a></li>
                                         </ul>
                                     </div>
                                 </div>
