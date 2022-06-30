@@ -221,9 +221,9 @@ const Faq = () => {
                                             <p>
                                                 What Currently, Persistence Ecosystem of projects includes
                                             </p>
-                                            <ContextAwareToggle eventKey="7">Click me!</ContextAwareToggle>
+                                            <ContextAwareToggle eventKey="8">Click me!</ContextAwareToggle>
                                         </Card.Header>
-                                        <Accordion.Collapse eventKey="7">
+                                        <Accordion.Collapse eventKey="8">
                                             <Card.Body>
                                                 <ul className="links">
                                                     <li>
@@ -250,9 +250,9 @@ const Faq = () => {
                                             <p>
                                                 What was the StakeDrop campaign?
                                             </p>
-                                            <ContextAwareToggle eventKey="8">Click me!</ContextAwareToggle>
+                                            <ContextAwareToggle eventKey="9">Click me!</ContextAwareToggle>
                                         </Card.Header>
-                                        <Accordion.Collapse eventKey="8">
+                                        <Accordion.Collapse eventKey="9">
                                             <Card.Body>StakeDrop was a token distribution mechanism that allowed token
                                                 holders of some of the most prominent Proof-of-Stake networks to get
                                                 exposure to XPRT (native Persistence tokens).</Card.Body>
@@ -263,9 +263,9 @@ const Faq = () => {
                                             <p>
                                                 What networks were part of the StakeDrop campaign?
                                             </p>
-                                            <ContextAwareToggle eventKey="9">Click me!</ContextAwareToggle>
+                                            <ContextAwareToggle eventKey="10">Click me!</ContextAwareToggle>
                                         </Card.Header>
-                                        <Accordion.Collapse eventKey="9">
+                                        <Accordion.Collapse eventKey="10">
                                             <Card.Body>Terra, Kava, Polygon, and Cosmos were part of the stakedrop
                                                 campaign</Card.Body>
                                         </Accordion.Collapse>

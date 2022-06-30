@@ -43,7 +43,7 @@ const Ecosystem = () => {
                             </div>
                                 <Card.Title className={'mb-3 mt-4'}>&nbsp;</Card.Title>
                                 <Card.Text>
-                                    Borrowing & Lending protocol for staked assets
+                                    Borrowing & lending protocol for staked assets
                                 </Card.Text>
                                 <div className={"comingsoon mt-5"}>
                                     <h6>COMING SOON</h6>

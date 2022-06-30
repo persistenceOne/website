@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@cloudflare/wrangler": "^1.19.12",
+
     "@metamask/detect-provider": "^1.2.0"
   }
 }
