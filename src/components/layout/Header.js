@@ -253,10 +253,17 @@ const Header = () => {
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item buttoneco">
+<div className={'mt-2 mb-2'}>
+    <a href="/ecosystem" rel="noopener noreferrer"
+       className="inner-item">Explore All Apps </a>
+</div>
 
-                                    <a href="/ecosystem" rel="noopener noreferrer"
-                                       className="inner-item">Explore All Apps </a>
+                                    <div className={'mt-2 mb-2'}>
+                                        <a href="/xprt" rel="noopener noreferrer"
+                                           className="inner-item">XPRT </a>
+                                    </div>
                                 </div>
+
                             </div>
                         </NavDropdown>
                         <NavDropdown className={isActive ? 'custom-dropdown' : ''} title={communityTitle} id="community-dropdown">

@@ -57,8 +57,8 @@ const XPRTEcosystem = () => {
     return (
         <section className="home-ecosystem-section xprtecosystem">
             <div className="container">
-                <h3 className="section-title">Powered by XPRT</h3>
-                <p className="sub-heading">Get Involved In the <span>Persistence Ecosystem</span></p>
+                <h3 className="section-title">Get Involved In the Persistence Ecosystem Powered by <span className={"subt"}>X<span>P</span>RT</span> </h3>
+                <p className="sub-heading"></p>
                 <div className="card-tiles">
                     <CardGroup>
                         <Card className={'h-100'}>

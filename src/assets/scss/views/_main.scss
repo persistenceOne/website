@@ -382,13 +382,20 @@ a {
           .nav-dropdown-item.buttoneco{
             display: flex;
             align-items: center;
+            flex-direction: column;
+            div{
+              width: 202px;
+            }
             a{
               background: #000;
-              padding: 10px 45px;
+              padding: 10px 0;
               border-radius: 6px;
               font-size: 14px;
               font-weight: 600;
               color: #fff;
+              width: 100%;
+              display: block;
+              text-align: center;
               &:hover{
                 color:#fff
               }
