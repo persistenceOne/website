@@ -228,7 +228,11 @@ const Header = () => {
                                            target="_blank" className="inner-item">Hubble  <Icon viewClass="social_icon_imgg"
                                                                                                 icon={'exlink'} /></a>
                                         </div>
-
+                                        <div className="inner-item-container">
+                                            <a href="https://cosmoscan.net/persistence" rel="noopener noreferrer"
+                                               target="_blank" className="inner-item">Cosmoscan <Icon viewClass="social_icon_imgg"
+                                                                                                    icon={'exlink'} /></a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="nav-dropdown-item">
@@ -260,7 +264,7 @@ const Header = () => {
 
                                     <div className={'mt-2 mb-2'}>
                                         <a href="/xprt" rel="noopener noreferrer"
-                                           className="inner-item">XPRT </a>
+                                           className="inner-item">$XPRT </a>
                                     </div>
                                 </div>
 

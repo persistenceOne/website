@@ -18,20 +18,20 @@ const responsive = {
 };
 const images = [
     {
-        url:'https://medium.com/persistence-blog/the-vision-for-persistence-and-xprt-value-accrual-53fd56619e3d',
-        image:'https://miro.medium.com/max/1400/1*yyGtq7g0FQRKsmzIWdP6Rw.png',
+        url:'https://blog.persistence.one/2022/02/10/the-vision-for-persistence-and-xprt-value-accrual/',
+        image:'https://blog.persistence.one/wp-content/uploads/2022/06/XPRT-utility-and-value-accrual.png',
         title:"The Vision for Persistence",
         subtitle:"$XPRT TOKEN"
     },
     {
-        url:'https://medium.com/persistence-blog/from-the-founders-desk-mission-2022-d3a2a1d20de1',
-        image:'https://miro.medium.com/max/1400/0*ZgVUN-HPoMTO5AEO',
+        url:'https://blog.persistence.one/2022/02/07/from-the-founders-desk-mission-2022/',
+        image:'https://blog.persistence.one/wp-content/uploads/2022/06/0-ZgVUN-HPoMTO5AEO.jpg',
         title:"From the Founder’s Desk",
         subtitle:"MISSION 2022"
     },
     {
-        url:'https://medium.com/persistence-blog/community-newsletter-20-may-2022-afb562173221',
-        image:'https://miro.medium.com/max/1400/0*0WYZ8Pk5xU5ods2l',
+        url:'https://blog.persistence.one/2022/06/03/community-newsletter-20-may-2022/',
+        image:'https://blog.persistence.one/wp-content/uploads/2022/06/Persistence-Monthly-Newsletter-For-May-2022.png',
         title:"Community Newsletter #20",
         subtitle:"MAY 2022"
     }

@@ -45,7 +45,7 @@ const socialList = [
         tooltip: 'youtube'
     }, {
         url:  PERSISTENCEONE_MEDIUM_URL ,
-        iconName: 'medium-m',
+        iconName: 'mediumlink',
         tooltip: 'medium'
     }, {
         url: PERSISTENCEONE_LINKEDIN_URL ,
