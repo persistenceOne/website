@@ -24,7 +24,7 @@ const Ecosystem = () => {
 
                                 </Card.Text>
                                 <div className={'networks mt-4'}>
-                                    <h5><span>Building&nbsp;on&nbsp;</span><img src={eth} title="ETH"/><img src={bnb} title="BNB"/><img src={atom} title="Atom"/><img src={sol} title="Solana"/><img src={avax} title="Avalanche"/></h5>
+                                    <h5><span>Building&nbsp;on&nbsp;</span><img src={eth} alt="ETH" title="ETH"/><img src={bnb} alt={"BNB"} title="BNB"/><img src={atom} alt="Atom" title="Atom"/><img src={sol} alt="Solana" title="Solana"/><img src={avax} alt="Avalanche" title="Avalanche"/></h5>
                                     <div className={"button-section"}>
                                         <a href="https://app.pstake.finance/" rel="noopener noreferrer"
                                            target="_blank" className="button-initial button">
