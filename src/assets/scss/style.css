@@ -3222,6 +3222,7 @@ button:disabled {
     font-size: 12px;
     padding: 8px 10px;
     margin-left: 5px !important;
+    width: 115px;
   }
 
   .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section {

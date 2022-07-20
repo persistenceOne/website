@@ -14,7 +14,7 @@ const Ecosystem = () => {
                 <h3 className="section-title">Maximise Capital Efficiency</h3>
                 <p className="sub-heading">Persistence ecosystem applications are bridging Staking and DeFi</p>
                 <div className="card-tiles">
-                    <CardGroup className={'col-md-12'}>
+                    <CardGroup>
                         <Card className={'h-100'}>
                             <div className={'card-section'}>
                             <Card.Body >
