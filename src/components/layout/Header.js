@@ -191,33 +191,10 @@ const Header = () => {
                                         </a>
                                         </div>
                                     </div>
-                                    <div className="inner-items mt-2">
-                                        <div className="inner-item-container">
-                                        <p className="inner-item ml-3 mb-0">
-                                            BORROWING & LENDING
-                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
-                                        </p>
-                                        </div>
-                                    </div>
-                                    <div className="inner-items">
-                                        <div className="inner-item-container">
-                                        <p className="inner-item ml-3 mb-0">
-                                            INTERCHAIN DEX
-                                            <p className="header logo inner m-0 p-0">Coming Soon</p>
-                                        </p>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div className="nav-dropdown-item">
                                     <p className="header">EXPLORER</p>
                                     <div className="inner-items">
-                                        <div className="inner-item-container">
-                                        <a href="https://explorer.persistence.one/" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Persistence Explorer&nbsp;
-                                            <Icon viewClass="social_icon_imgg"
-                                                  icon={'exlink'} />
-                                        </a>
-                                        </div>
                                         <div className="inner-item-container">
                                         <a href="https://www.mintscan.io/persistence" rel="noopener noreferrer"
                                            target="_blank" className="inner-item">Mintscan  <Icon viewClass="social_icon_imgg"
