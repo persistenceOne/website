@@ -8,20 +8,6 @@ export const netwrokData = [
         wikilink: "https://pstake.finance/"
     },
     {
-        network: "Borrowing & Lending",
-        description: "Borrowing and Lending Protocol for staked assets.",
-        icon: "borrowlending",
-        name: "dApp",
-        status: "ComingSoon",
-    },
-    {
-        network: "Interchain DEX",
-        description: "Interchain DEX for staked assets.",
-        icon: "interchaindex",
-        name: "dApp",
-        status: "ComingSoon",
-    },
-    {
         network: "pWallet",
         description: "Persistence Ecosystem Wallet",
         icon: "xprt",

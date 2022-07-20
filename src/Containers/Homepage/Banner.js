@@ -23,19 +23,19 @@ const Banner = () => {
                     </div>
                         <div className="stats-container text-white">
                             <div className="stats-section">
-                                <h2>$182B</h2>
+                                <h2>$161B</h2>
                                 <h6 className="home-desc">POS MarketCap</h6>
                             </div>
                             <div className="stats-section">
-                                <h2>$120B</h2>
+                                <h2>$108B</h2>
                                 <h6 className="home-desc">Staked Assets Value</h6>
                             </div>
                             <div className="stats-section">
-                                <h2>$156B</h2>
+                                <h2>$85B</h2>
                                 <h6 className="home-desc">DeFi TVL</h6>
                             </div>
                             <div className="stats-section">
-                                <h2>$500B</h2>
+                                <h2>$400B</h2>
                                 <h6 className="home-desc">Addressable Market</h6>
                             </div>
                         </div>
