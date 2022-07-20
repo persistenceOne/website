@@ -1248,7 +1248,9 @@ justify-content: center;
       border: 0;
 margin: 0 7.5px;
       .card-section{
-        background: linear-gradient(156.29deg, #1F2023 4.39%, rgba(19, 20, 22, 0.48) 84.74%);
+        width: 900px;
+        margin: auto;
+        background: linear-gradient(156.29deg,#1f2023 4.39%,rgba(19,20,22,.48) 84.74%);
         border-radius: 6px;
         .card-body{
           padding: 40px 30px 30px 30px;
@@ -1296,7 +1298,31 @@ margin: 0 7.5px;
             color: #BCBCBC;
             font-weight: 400;
             font-size: 16px;
+            span{
+              display: inline-block;
+            }
           }
+        }
+      }
+      .button-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .networks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5{
+          display: inline-flex;
+          color: #fff;
+          align-items: center;
+        }
+        img{
+          max-width: 50px;
+          width: 100%;
+          height: auto;
+          margin: 0 10px;
         }
       }
       img {

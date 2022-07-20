@@ -224,6 +224,26 @@
   }
 }
 @media (max-width: 991px){
+  .home-ecosystem-section .card-tiles .card-group .card .card-section {
+    width:100%;
+  }
+  .home-ecosystem-section .card-tiles .card-group .card .networks h5{
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  .home-ecosystem-section .card-tiles .card-group .card .networks img{
+    max-width: 35px;
+    width: 100%;
+    height: auto;
+    margin: 0 5px;
+  }
+  .home-ecosystem-section .card-tiles .card-group .card .networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+  }
   .network-section .tech-box{
     flex-direction: column;
   }
@@ -355,6 +375,12 @@
 
 }
 
-@media (min-width: 1400px) {
+@media (max-width: 480px){
+  .home-ecosystem-section .card-tiles .card-group .card .networks img{
+    max-width: 25px;
 
+  }
+  .home-ecosystem-section .card-tiles .card-group .card .networks h5{
+    font-size: 14px;
+  }
 }
