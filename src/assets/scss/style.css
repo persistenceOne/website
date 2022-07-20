@@ -2076,7 +2076,9 @@ button:disabled {
   margin: 0 7.5px;
 }
 .home-ecosystem-section .card-tiles .card-group .card .card-section {
-  background: linear-gradient(156.29deg, #1F2023 4.39%, rgba(19, 20, 22, 0.48) 84.74%);
+  width: 900px;
+  margin: auto;
+  background: linear-gradient(156.29deg, #1f2023 4.39%, rgba(19, 20, 22, 0.48) 84.74%);
   border-radius: 6px;
 }
 .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body {
@@ -2126,6 +2128,30 @@ button:disabled {
   color: #BCBCBC;
   font-weight: 400;
   font-size: 16px;
+}
+.home-ecosystem-section .card-tiles .card-group .card .card-section .card-body p span {
+  display: inline-block;
+}
+.home-ecosystem-section .card-tiles .card-group .card .button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-ecosystem-section .card-tiles .card-group .card .networks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-ecosystem-section .card-tiles .card-group .card .networks h5 {
+  display: inline-flex;
+  color: #fff;
+  align-items: center;
+}
+.home-ecosystem-section .card-tiles .card-group .card .networks img {
+  max-width: 50px;
+  width: 100%;
+  height: auto;
+  margin: 0 10px;
 }
 .home-ecosystem-section .card-tiles .card-group .card img {
   max-width: 218px;
@@ -3122,6 +3148,29 @@ button:disabled {
   }
 }
 @media (max-width: 991px) {
+  .home-ecosystem-section .card-tiles .card-group .card .card-section {
+    width: 100%;
+  }
+
+  .home-ecosystem-section .card-tiles .card-group .card .networks h5 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .home-ecosystem-section .card-tiles .card-group .card .networks img {
+    max-width: 35px;
+    width: 100%;
+    height: auto;
+    margin: 0 5px;
+  }
+
+  .home-ecosystem-section .card-tiles .card-group .card .networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .network-section .tech-box {
     flex-direction: column;
   }
@@ -3272,6 +3321,15 @@ button:disabled {
   .network-section .tech-box {
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .home-ecosystem-section .card-tiles .card-group .card .networks img {
+    max-width: 25px;
+  }
+
+  .home-ecosystem-section .card-tiles .card-group .card .networks h5 {
+    font-size: 14px;
   }
 }
 
