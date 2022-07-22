@@ -309,7 +309,7 @@ const Header = () => {
                             </div>
                         </NavDropdown>
                         <Nav.Link className="nav-link dropdown-toggle" rel="noopener noreferrer"
-                                  target="_blank" href="https://medium.com/persistence-blog"
+                                  target="_blank" href="http://blog.persistence.one/"
                                  data-toggle="dropdown" aria-haspopup="true"
                                  aria-expanded="false">
                             {t("BLOG")}

@@ -1947,8 +1947,13 @@ button:disabled {
 .home-ecosystem-section.xprtecosystem .card-tiles {
   display: block;
 }
+.home-ecosystem-section.xprtecosystem .card-tiles .card-group .card {
+  background-color: #fff;
+}
 .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section {
   background: #fff;
+  width: auto;
+  margin: 0;
 }
 .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body .button-section.cards-buttons {
   display: flex;
