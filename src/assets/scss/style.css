@@ -1947,8 +1947,13 @@ button:disabled {
 .home-ecosystem-section.xprtecosystem .card-tiles {
   display: block;
 }
+.home-ecosystem-section.xprtecosystem .card-tiles .card-group .card {
+  background-color: #fff;
+}
 .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section {
   background: #fff;
+  width: auto;
+  margin: 0;
 }
 .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body .button-section.cards-buttons {
   display: flex;
@@ -2416,6 +2421,12 @@ button:disabled {
 .opportunities-section .staking-boxes .heading:after {
   margin-left: 0%;
   width: 34%;
+}
+.opportunities-section .staking-boxes .boxes .datasource p {
+  color: #A6A6A6;
+}
+.opportunities-section .staking-boxes .boxes .datasource p a {
+  color: #007bff;
 }
 .opportunities-section .staking-boxes .boxes .box {
   background: linear-gradient(151.51deg, #1F2023 2.98%, rgba(19, 20, 22, 0.48) 85.16%);

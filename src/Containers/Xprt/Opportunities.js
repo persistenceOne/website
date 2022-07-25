@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import { percent } from "../../utils/FormatNumber";
 import osmo from "../../assets/images1/osmo.svg";
 import juno_swap from "../../assets/images1/juno_swap.svg";
+import axios from "axios";
+let poolURl = process.env.REACT_APP_POOL_DATA_URL
 
 const Opportunities = () => {
+    const [xprtOsmo, setXprtOsmo] = useState("");
+    const [xprtUsdc, setXprtUsdc] = useState("");
+    const [xprtAtom, setXprtAtom] = useState("");
+
+    useEffect(() => {
+        axios.get(`${poolURl}`)
+            .then(res => {
+                const poolsData = res.data;
+                poolsData.map(function(value){
+                    if(value && value.pool && value.pool.length && value.pool.length>=2 && value.pool[0]==='XPRT' && value.pool[1]==='OSMO'){
+                        setXprtOsmo(value.total_apr) ;
+                    }
+                    if(value && value.pool && value.pool.length && value.pool.length>=2 && value.pool[0]==='XPRT' && value.pool[1]==='USDC'){
+                        setXprtUsdc(value.total_apr);
+                    }
+                    if(value && value.pool && value.pool.length && value.pool.length>=2 && value.pool[0]==='ATOM' && value.pool[1]==='XPRT'){
+                        setXprtAtom(value.total_apr);
+                    }
+                    return false;
+                });
+            })
+
+
+    }, []);
     return (
         <section className="opportunities-section">
             <div className="container">
@@ -57,7 +84,7 @@ const Opportunities = () => {
                                         <img src={osmo} alt="osmo" />
                                     </p>
                                     <p className="sub-title">XPRT/USDC Pool</p>
-                                    <p className="apr">~230% <span className="apr-text">APR</span></p>
+                                    <p className="apr">{percent(xprtUsdc)} <span className="apr-text">APR</span></p>
                                     <div className="buttons">
                                         <a href="https://app.osmosis.zone/pool/719" target="_blank" rel="noopener noreferrer" className="primary">
                                             Provide Liquidity
@@ -72,7 +99,7 @@ const Opportunities = () => {
                                     </p>
                                     <p className="sub-title">XPRT/ATOM Pool</p>
 
-                                    <p className="apr">~50% <span className="apr-text">APR</span></p>
+                                    <p className="apr">{percent(xprtAtom)}<span className="apr-text">APR</span></p>
                                     <div className="buttons">
                                         <a href="https://app.osmosis.zone/pool/13" target="_blank" rel="noopener noreferrer" className="primary">
                                             Provide Liquidity
@@ -88,7 +115,7 @@ const Opportunities = () => {
                                         <img src={osmo} alt="osmo" />
                                     </p>
                                     <p className="sub-title">XPRT/OSMO Pool</p>
-                                    <p className="apr">~45% <span className="apr-text">APR</span></p>
+                                    <p className="apr">{percent(xprtOsmo)} <span className="apr-text">APR</span></p>
                                     <div className="buttons">
                                         <a href="https://app.osmosis.zone/pool/15" target="_blank" rel="noopener noreferrer" className="primary">
                                             Provide Liquidity
@@ -110,6 +137,11 @@ const Opportunities = () => {
 
                                     </div>
                                 </div>
+                            </div>
+                            <div className={"col-md-12 text-right datasource"}>
+                                <p className={"text-right"}>Data Source: <a href={'http://imperator.co/'}>Imperator.co
+                                </a></p>
+
                             </div>
                         </div>
                     </div>
