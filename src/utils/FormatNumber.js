@@ -1,0 +1,1 @@
+export const percent = (n: number): string => (n * 100).toFixed(2) + "%";

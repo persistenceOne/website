@@ -213,7 +213,14 @@
       //  background-color: #ccc;
       //}
       .boxes{
-        //display: flex;
+        .datasource {
+          p{
+            color: #A6A6A6;
+            a{
+              color: #007bff;
+            }
+          }
+        }
 
 
         .box{

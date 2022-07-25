@@ -2422,6 +2422,12 @@ button:disabled {
   margin-left: 0%;
   width: 34%;
 }
+.opportunities-section .staking-boxes .boxes .datasource p {
+  color: #A6A6A6;
+}
+.opportunities-section .staking-boxes .boxes .datasource p a {
+  color: #007bff;
+}
 .opportunities-section .staking-boxes .boxes .box {
   background: linear-gradient(151.51deg, #1F2023 2.98%, rgba(19, 20, 22, 0.48) 85.16%);
   border: 1px solid rgba(92, 92, 92, 0.1);
