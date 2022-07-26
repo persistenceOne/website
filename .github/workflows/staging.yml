@@ -32,6 +32,7 @@ jobs:
           REACT_APP_MATIC_API_KEY: ${{ secrets.MATIC_STATUS_API }}
           REACT_APP_EXPLORER_URL: ${{ secrets.CORE_EXPLORER }}
           REACT_APP_BLOCK_EXPLORER_URL: ${{ secrets.CRUST_EXPLORER }}
+          REACT_APP_POOL_DATA_URL: ${{ secrets.POOL_DATA_APY }}
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:

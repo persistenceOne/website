@@ -139,7 +139,7 @@ const Opportunities = () => {
                                 </div>
                             </div>
                             <div className={"col-md-12 text-right datasource"}>
-                                <p className={"text-right"}>Data Source: <a href={'http://imperator.co/'}>Imperator.co
+                                <p className={"text-right"}>Data Source: <a rel="noopener noreferrer" target="_blank" href={'http://imperator.co/'}>Imperator.co
                                 </a></p>
 
                             </div>
