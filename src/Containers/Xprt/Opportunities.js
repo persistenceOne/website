@@ -3,15 +3,16 @@ import { percent } from "../../utils/FormatNumber";
 import osmo from "../../assets/images1/osmo.svg";
 import juno_swap from "../../assets/images1/juno_swap.svg";
 import axios from "axios";
-let poolURl = process.env.REACT_APP_POOL_DATA_URL
-
+import {
+    POOL_DATA_URL
+} from "../../constants/config";
 const Opportunities = () => {
     const [xprtOsmo, setXprtOsmo] = useState("");
     const [xprtUsdc, setXprtUsdc] = useState("");
     const [xprtAtom, setXprtAtom] = useState("");
 
     useEffect(() => {
-        axios.get(`${poolURl}`)
+        axios.get(POOL_DATA_URL)
             .then(res => {
                 const poolsData = res.data;
                 poolsData.map(function(value){
