@@ -122,3 +122,4 @@ export const TEAM_SIX_LINKEDIN_URL = 'https://www.linkedin.com/in/abhitejsingh23
 export const TEAM_SEVEN_TWITTER_URL = 'https://twitter.com/PandeyMikhil'
 export const TEAM_SEVEN_LINKEDIN_URL = 'https://www.linkedin.com/in/mikhilpandey/'
 export const TEAM_EIGHT_LINKEDIN_URL = 'https://www.linkedin.com/in/aditi-maheshwari-a17906107/'
+export const POOL_DATA_URL = 'https://qchzc6iq5k.execute-api.us-east-2.amazonaws.com/api/pool?returnPeriod=yearly&bondingPeriod=14'
