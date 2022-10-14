@@ -240,8 +240,8 @@ const Header = () => {
 </div>
 
                                     <div className={'mt-2 mb-2'}>
-                                        <a href="/xprt" rel="noopener noreferrer"
-                                           className="inner-item">$XPRT </a>
+                                        <a href="https://blog.persistence.one/2021/03/25/xprt-tokenomics-and-utility-powering-the-persistence-ecosystem/" rel="noopener noreferrer"
+                                           className="inner-item" target="_blank">$XPRT </a>
                                     </div>
                                 </div>
 
