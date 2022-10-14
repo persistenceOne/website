@@ -9,11 +9,11 @@ const Banner = () => {
                         <p className="banner-heading"><span>Liquid Staking Hub</span></p>
                         <p className="text">
                             Persistence is a Tendermint based specialized Layer-1 powering an ecosystem
-                            <span> of DeFi dApps focused on unlocking the liquidity of staked assets.</span>
+                            <span> of DeFi applications focused on unlocking the liquidity of staked assets.</span>
                         </p>
                         <div className={"button-section text-center d-inline-block"}>
-                        <a href="/xprt" rel="noopener noreferrer"
-                            className="button-initial button one">
+                        <a href="https://blog.persistence.one/2021/03/25/xprt-tokenomics-and-utility-powering-the-persistence-ecosystem/" rel="noopener noreferrer"
+                            className="button-initial button one" target="_blank">
                             $XPRT
                         </a>
                             <a href="https://drive.google.com/file/d/12cjxcyqFdVDY55i4Wh_31k9viVciemRr/view" rel="noopener noreferrer"

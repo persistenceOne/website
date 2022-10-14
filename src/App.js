@@ -8,7 +8,6 @@ import 'aos/dist/aos.css';
 import Homepage from "./views/Homepage";
 import Ecosystem from "./views/Ecosystem";
 import "react-multi-carousel/lib/styles.css";
-import Xprt from "./views/Xprt";
 import Faq from "./views/Faq";
 
 ReactGA.initialize(process.env.REACT_APP_GA_ID);
@@ -39,7 +38,6 @@ const App = () => {
         <Switch>
             <AppRoute exact path="/" component={Homepage} layout={LayoutDefault} />
             <AppRoute exact path="/ecosystem" component={Ecosystem} layout={LayoutDefault} />
-            <AppRoute exact path="/xprt" component={Xprt} layout={LayoutDefault} />
             <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} />
         </Switch>
   );

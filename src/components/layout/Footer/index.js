@@ -77,8 +77,8 @@ const Footer = (props) => {
                                     <h6>{t("General")}</h6>
                                     <div className="text-muted mt-30">
                                         <ul className="list-unstyled footer-list">
-                                            <li><a href="/xprt"
-                                                   rel="noopener noreferrer">XPRT</a></li>
+                                            <li><a href="https://blog.persistence.one/2021/03/25/xprt-tokenomics-and-utility-powering-the-persistence-ecosystem/"
+                                                   rel="noopener noreferrer" target="_blank">XPRT</a></li>
                                             <li><a href="/ecosystem"
                                                    rel="noopener noreferrer">Ecosystem</a></li>
                                             <li><a href="https://angel.co/company/persistence-one-1" target="_blank"
