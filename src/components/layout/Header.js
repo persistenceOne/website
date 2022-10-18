@@ -201,11 +201,6 @@ const Header = () => {
                                                                                                   icon={'exlink'} /></a>
                                         </div>
                                         <div className="inner-item-container">
-                                        <a href="https://hubble.figment.io/persistence/chains/core-1" rel="noopener noreferrer"
-                                           target="_blank" className="inner-item">Hubble  <Icon viewClass="social_icon_imgg"
-                                                                                                icon={'exlink'} /></a>
-                                        </div>
-                                        <div className="inner-item-container">
                                             <a href="https://cosmoscan.net/persistence" rel="noopener noreferrer"
                                                target="_blank" className="inner-item">Cosmoscan <Icon viewClass="social_icon_imgg"
                                                                                                     icon={'exlink'} /></a>
