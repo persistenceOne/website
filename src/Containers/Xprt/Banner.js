@@ -40,7 +40,7 @@ const Banner = () => {
                                 the maximum supply cap is expected to be reached by the year 2035.
                             </p>
                             <div className="buttons">
-                                <a href="https://medium.com/persistence-blog/xprt-tokenomics-and-utility-powering-the-persistence-ecosystem-70fc49e10362"
+                                <a href="https://blog.persistence.one/2021/03/25/xprt-tokenomics-and-utility-powering-the-persistence-ecosystem/"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    className="primary">
