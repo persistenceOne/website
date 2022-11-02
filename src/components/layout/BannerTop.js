@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Alert from "react-bootstrap/Alert";
-gimport close from "../../assets/images1/close_icon.png";
+import close from "../../assets/images1/close_icon.png";
 
 
 const BannerTop = () => {
