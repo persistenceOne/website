@@ -15,6 +15,7 @@ import {
 
 } from "../../constants/config";
 import ReactGa from "react-ga";
+import BannerTop from "./BannerTop";
 
 const socialList = [
     {
@@ -110,6 +111,7 @@ const Header = () => {
     return (
         <React.Fragment>
             <Navbar className="navbar-custom fixed-top" expand="lg" expanded={mobileMenu} id="nav-bar">
+                <BannerTop/>
                 <div className="container p-0">
                 <Navbar.Brand href="#home">
                     <NavLink to="/">

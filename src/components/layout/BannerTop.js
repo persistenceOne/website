@@ -16,10 +16,8 @@ const BannerTop = () => {
                 <div className="container">
                     <Alert className="nav-banner alert-dismissible">
                         <p>
-                            <a href="https://t.me/Persistenceatconsensus" rel="noopener noreferrer"
-                               target="_blank">
-                                <span>Persistence is at Consensus 2022 </span>&emsp;
-                                <img src={rightarrow} alt="arrow"/></a>
+                            Liquid staking solution for ATOM launching on 8th November
+                            <img src={rightarrow} className="ml-3" alt="arrow"/>
                         </p>
                         <img src={close} alt="close" className="close" onClick={closeBanner}/>
                     </Alert>
