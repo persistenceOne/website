@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import Alert from "react-bootstrap/Alert";
-import rightarrow from "../../assets/images1/right-arrow.svg";
 import close from "../../assets/images1/close_icon.png";
-
+import stkATOM from "../../assets/images1/stkAtom.svg";
 
 const BannerTop = () => {
     const [banner, setBanner] = useState(true);
@@ -11,23 +10,19 @@ const BannerTop = () => {
         setBanner(false);
     }
     return (
+        banner ?
         <div className="container-fluid bannernav-section">
-            {banner ?
                 <div className="container">
-                    <Alert className="nav-banner alert-dismissible">
+                    <Alert className="nav-banner alert-dismissible d-flex align-items-center justify-content-center">
+                        <img src={stkATOM} alt={"stkATOM"} width={"26px"} className="pr-2"/>
                         <p>
-                            <a href="https://t.me/Persistenceatconsensus" rel="noopener noreferrer"
-                               target="_blank">
-                                <span>Persistence is at Consensus 2022 </span>&emsp;
-                                <img src={rightarrow} alt="arrow"/></a>
+                            Liquid staking solution for ATOM launching on 8th November.
                         </p>
                         <img src={close} alt="close" className="close" onClick={closeBanner}/>
                     </Alert>
                 </div>
-                : null}
-
-
         </div>
+                : null
 
     );
 };
