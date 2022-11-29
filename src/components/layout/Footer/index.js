@@ -83,10 +83,10 @@ const Footer = (props) => {
                                                    rel="noopener noreferrer">Ecosystem</a></li>
                                             <li><a href="https://angel.co/company/persistence-one-1" target="_blank"
                                                 rel="noopener noreferrer">Careers</a></li>
-                                            <li><a href="https://drive.google.com/drive/folders/19JZsrnyMZDamjNMJCVxxYOvYPRO3dkUp?usp=sharing" target="_blank"
-                                                   rel="noopener noreferrer">Press & Brand</a></li>
+                                            <li><a href="http://mediakit.persistence.one/" target="_blank"
+                                                   rel="noopener noreferrer">Press & Media</a></li>
                                             <li><a href="/summary"
-                                                   rel="noopener noreferrer">Persistence summary</a></li>
+                                                   rel="noopener noreferrer">Summary</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -151,10 +151,6 @@ const Footer = (props) => {
                     </div>
                 </div>
                 <div>
-                    <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.425 2.83202C13.4335 2.95544 13.4335 3.07886 13.4335 3.20342C13.4335 6.99878 10.5485 11.376 5.27301 11.376V11.3737C3.71463 11.376 2.18861 10.9289 0.876709 10.086C1.10331 10.1133 1.33105 10.127 1.55935 10.1275C2.85081 10.1287 4.10536 9.69471 5.12137 8.8956C3.89409 8.87228 2.81787 8.07089 2.44191 6.90095C2.87183 6.98399 3.31481 6.96692 3.73678 6.85147C2.39875 6.58073 1.43611 5.4034 1.43611 4.03609C1.43611 4.02358 1.43611 4.01163 1.43611 3.99969C1.8348 4.22208 2.28119 4.3455 2.7378 4.35915C1.47757 3.51567 1.08911 1.83668 1.85013 0.52398C3.30629 2.31843 5.45475 3.40931 7.76109 3.52477C7.52994 2.52716 7.84571 1.48178 8.59082 0.780492C9.74598 -0.306983 11.5628 -0.251244 12.6486 0.905051C13.291 0.778217 13.9066 0.54218 14.47 0.207748C14.2559 0.872631 13.8078 1.43741 13.2092 1.7963C13.7777 1.72919 14.3331 1.57676 14.8562 1.34414C14.4711 1.922 13.9861 2.42535 13.425 2.83202Z" fill="#787878"/>
-                    </svg>
-
                 </div>
             </footer>
         </>
