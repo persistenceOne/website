@@ -3,27 +3,30 @@
   .content{
     .title{
       font-weight: 700;
-      font-size: 24px;
+      font-size: 26px;
       line-height: 1.5;
       display: flex;
       align-items: center;
       color: #FFFFFF;
-      margin-bottom: 1rem
+      margin-bottom: 1rem;
     }
     .data{
+      margin-bottom: 2.5rem;
       .data-heading{
         font-weight: 600;
-        font-size: 20px;
+        font-size: 22px;
         line-height: 25px;
         letter-spacing: 0.15668px;
         color: #FFFFFF;
         margin-bottom: 1.25rem;
+        margin-top: 1.5rem;
       }
       .sub-heading{
         font-weight: 500;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 24px;
         color: #FFFFFF;
+        margin-top: 1.5rem;
       }
       p, ul li, ol li{
         font-weight: 300;
