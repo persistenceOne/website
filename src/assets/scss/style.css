@@ -2164,60 +2164,64 @@ button:disabled {
   padding: 180px 0; }
   .summary-section .content .title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.5;
     display: flex;
     align-items: center;
     color: #FFFFFF;
     margin-bottom: 1rem; }
-  .summary-section .content .data .data-heading {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 25px;
-    letter-spacing: 0.15668px;
-    color: #FFFFFF;
-    margin-bottom: 1.25rem; }
-  .summary-section .content .data .sub-heading {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF; }
-  .summary-section .content .data p, .summary-section .content .data ul li, .summary-section .content .data ol li {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 30px;
-    color: #A6A6A6; }
-  .summary-section .content .data ul li b {
-    color: #FFFFFF; }
-  .summary-section .content .data .img-section {
-    margin: auto;
-    max-width: 500px; }
-    .summary-section .content .data .img-section .img-box {
-      margin-bottom: 1rem;
-      width: 100%; }
-  .summary-section .content .data a {
-    color: #007bff; }
-  .summary-section .content .data .buttons {
-    margin-bottom: 1.5rem; }
-    .summary-section .content .data .buttons .primary {
-      background: transparent;
-      border-radius: 6px;
-      padding: 0.5rem 2rem;
+  .summary-section .content .data {
+    margin-bottom: 2.5rem; }
+    .summary-section .content .data .data-heading {
       font-weight: 600;
-      transition: all 0.5s ease-in-out;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: 0.15668px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+      margin-top: 1.5rem; }
+    .summary-section .content .data .sub-heading {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+      margin-top: 1.5rem; }
+    .summary-section .content .data p, .summary-section .content .data ul li, .summary-section .content .data ol li {
+      font-weight: 300;
       font-size: 14px;
-      line-height: 150%;
-      text-align: center;
-      text-transform: uppercase;
-      color: #FCFCFC;
-      box-shadow: none;
-      border: 1px solid #303132;
-      outline: none;
-      margin-right: 10px;
-      text-decoration: none; }
-      .summary-section .content .data .buttons .primary:hover {
-        background: #E50913;
-        border: 1px solid #E50913; }
+      line-height: 30px;
+      color: #A6A6A6; }
+    .summary-section .content .data ul li b {
+      color: #FFFFFF; }
+    .summary-section .content .data .img-section {
+      margin: auto;
+      max-width: 500px; }
+      .summary-section .content .data .img-section .img-box {
+        margin-bottom: 1rem;
+        width: 100%; }
+    .summary-section .content .data a {
+      color: #007bff; }
+    .summary-section .content .data .buttons {
+      margin-bottom: 1.5rem; }
+      .summary-section .content .data .buttons .primary {
+        background: transparent;
+        border-radius: 6px;
+        padding: 0.5rem 2rem;
+        font-weight: 600;
+        transition: all 0.5s ease-in-out;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FCFCFC;
+        box-shadow: none;
+        border: 1px solid #303132;
+        outline: none;
+        margin-right: 10px;
+        text-decoration: none; }
+        .summary-section .content .data .buttons .primary:hover {
+          background: #E50913;
+          border: 1px solid #E50913; }
 
 /*--------------------------------------------------------------
 # xprt page mediaqueries styles

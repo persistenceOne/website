@@ -84,7 +84,7 @@ const Footer = (props) => {
                                             <li><a href="https://angel.co/company/persistence-one-1" target="_blank"
                                                 rel="noopener noreferrer">Careers</a></li>
                                             <li><a href="http://mediakit.persistence.one/" target="_blank"
-                                                   rel="noopener noreferrer">Press & Media</a></li>
+                                                   rel="noopener noreferrer">Media Kit</a></li>
                                             <li><a href="/summary"
                                                    rel="noopener noreferrer">Summary</a></li>
                                         </ul>
