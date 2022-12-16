@@ -9,7 +9,7 @@ import {
     PERSISTENCEONE_TELEGRAM_URL,
     PERSISTENCEONE_TWITTER_URL, PERSISTENCEONE_YOUTUBE_URL
 } from "../../constants/config";
-import ReactGa from "react-ga";
+import ReactGa from "react-ga4";
 const socialList = [
     {
         url: PERSISTENCEONE_TWITTER_URL,
