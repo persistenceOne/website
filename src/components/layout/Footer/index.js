@@ -1,7 +1,7 @@
 import React from 'react';
 import icon from '../../../assets/images1/persistencefooterlogo.svg'
 import Mailchimp from "./MailChimp";
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 import Icon from "../../Icon";
 import { useTranslation } from "react-i18next";
 import {

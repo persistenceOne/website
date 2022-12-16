@@ -14,7 +14,7 @@ import {
     PERSISTENCEONE_REDDIT_URL
 
 } from "../../constants/config";
-import ReactGa from "react-ga";
+import ReactGa from "react-ga4";
 
 const socialList = [
     {

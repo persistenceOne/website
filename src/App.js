@@ -1,7 +1,7 @@
 import React, {  useEffect } from 'react';
 import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import LayoutDefault from './layouts/LayoutDefault';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -15,8 +15,8 @@ import Summary from "./views/Summary";
 ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
 const trackPage = page => {
-  ReactGA.set({ page });
-  ReactGA.pageview(page);
+    ReactGA.set({ page });
+    ReactGA.send(page);
 };
 
 const App = () => {

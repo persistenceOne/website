@@ -4,7 +4,7 @@ import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import './components/Internationalization/i18n'
 import App from './App';
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 import * as serviceWorker from './serviceWorker';
 
 //import './App.css';
