@@ -16,12 +16,20 @@ export const netwrokData = [
         wikilink: "https://wallet.persistence.one/"
     },
     {
-        network: "pExplorer",
-        description: "Persistence Ecosystem Explorer",
-        icon: "xprt",
-        name: "Explorer",
-        status: "Live",
-        wikilink: "https://explorer.persistence.one/"
+        network: "Bamboo",
+        description: "Lending Protocol For Yield-Generating Assets",
+        icon: "bamboo",
+        name: "dApp",
+        status: "Coming soon",
+        wikilink: "https://bamboo.zone/"
+    },
+    {
+        network: "Dexter",
+        description: "Interchain DEX for Yield-Generating Assets",
+        icon: "dexter",
+        name: "dApp",
+        status: "Coming Soon",
+        wikilink: "https://dexter.zone/"
     },
     {
         network: "Persistence Bridge",
@@ -80,6 +88,14 @@ export const netwrokData = [
         wikilink: "https://coin98.com"
     },
     {
+        network: "Leap",
+        description: "non-custodial super wallet for web3",
+        icon: "leap",
+        name: "Wallet",
+        status: "Live",
+        wikilink: "https://www.leapwallet.io/"
+    },
+    {
         network: "Ledger",
         description: "Hardware Wallet",
         icon: "ledger",
@@ -102,22 +118,6 @@ export const netwrokData = [
         name: "Explorer",
         status: "Live",
         wikilink: "https://www.mintscan.io/persistence"
-    },
-    {
-        network: "Hubble",
-        description: "The Web3 Explorer",
-        icon: "hubble",
-        name: "Explorer",
-        status: "Live",
-        wikilink: "https://hubble.figment.io/persistence/chains/core-1"
-    },
-    {
-        network: "Aneka",
-        description: "Block Explorer",
-        icon: "aneka",
-        name: "Explorer",
-        status: "Live",
-        wikilink: "https://persistence.aneka.io/"
     },
     {
         network: "Ping.pub",
@@ -150,22 +150,6 @@ export const netwrokData = [
         name: "Defi",
         status: "Live",
         wikilink: "https://injective.exchange/spot/xprt-usdt"
-    },
-    {
-        network: "Comdex",
-        description: "Decentralised synthetics protocol",
-        icon: "comdex",
-        name: "Defi",
-        status: "Live",
-        wikilink: "https://comdex.one"
-    },
-    {
-        network: "Asset Mantle",
-        description: "Multi-tenant NFT marketplace framework",
-        icon: "assetmantle",
-        name: "dApp",
-        status: "Live",
-        wikilink: "https://assetmantle.one/"
     },
     {
         network: "SushiSwap",
@@ -208,6 +192,23 @@ export const netwrokData = [
         status: "Live",
         wikilink: "https://www.dexmos.app/"
     },
+    {
+        network: "Obervatory",
+        description: "Chain Analytics",
+        icon: "observe",
+        name: "Tools",
+        status: "Live",
+        wikilink: "https://observatory.zone/persistence"
+    },
+    {
+        network: "Pulsar",
+        description: "Asset Tracking Application",
+        icon: "pulsar",
+        name: "Tools",
+        status: "Live",
+        wikilink: "https://app.pulsar.finance/portfolio"
+    },
+
 ]
 
 
