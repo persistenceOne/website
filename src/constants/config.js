@@ -24,8 +24,7 @@ export const PERSISTENCEONE_GITHUB_URL = "https://github.com/persistenceOne";
 export const PERSISTENCEONE_EXPLORER_URL = "https://explorer.persistence.one/";
 export const PERSISTENCEJS_URL =
   "https://github.com/persistenceOne/persistenceJS";
-export const PERSISTENCEONE_TELEGRAM_URL =
-  "https://t.me/PersistenceValidatorsUpdates";
+export const PERSISTENCEONE_TELEGRAM_URL = "https://t.me/PersistenceOne";
 export const PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL =
   "https://t.me/PersistenceOne";
 export const PERSISTENCEONE_DISCORD_URL = "https://discord.gg/qXRmTTGcYD";
