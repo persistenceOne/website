@@ -89,7 +89,7 @@ export const netwrokData = [
   },
   {
     network: "Leap",
-    description: "non-custodial super wallet for web3",
+    description: "Non-custodial super wallet for web3",
     icon: "leap",
     name: "Wallet",
     status: "Live",
