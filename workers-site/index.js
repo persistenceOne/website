@@ -1,4 +1,4 @@
-import { getAssetFromKV, mapRequestToAsset, serveSinglePageApp } from '@cloudflare/kv-asset-handler'
+import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
 
 /**
  * The DEBUG flag will do two things that help during development:
@@ -25,14 +25,8 @@ addEventListener('fetch', event => {
 })
 
 async function handleEvent(event) {
-  const url = new URL(event.request.url)
-  let options = {}
-
-  /**
-   * You can add custom logic to how we fetch your assets
-   * by configuring the function `mapRequestToAsset`
-   */
-  // options.mapRequestToAsset = handlePrefix(/^\/docs/)
+  // const url = new URL(event.request.url)
+  const options = {}
 
   try {
     if (DEBUG) {
@@ -40,8 +34,7 @@ async function handleEvent(event) {
       options.cacheControl = {
         bypassCache: true,
       };
-    }
-    options.mapRequestToAsset = serveSinglePageApp
+    } 
     const page = await getAssetFromKV(event, options);
 
     // allow headers to be altered
@@ -59,35 +52,13 @@ async function handleEvent(event) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
       try {
-        let notFoundResponse = await getAssetFromKV(event, {
+        const notFoundResponse = await getAssetFromKV(event, {
           mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
         })
-
         return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 })
       } catch (e) {}
     }
 
     return new Response(e.message || e.toString(), { status: 500 })
-  }
-}
-
-/**
- * Here's one example of how to modify a request to
- * remove a specific prefix, in this case `/docs` from
- * the url. This can be useful if you are deploying to a
- * route on a zone, or if you only want your static content
- * to exist at a specific path.
- */
-function handlePrefix(prefix) {
-  return request => {
-    // compute the default (e.g. / -> index.html)
-    let defaultAssetKey = mapRequestToAsset(request)
-    let url = new URL(defaultAssetKey.url)
-
-    // strip the prefix from the path for lookup
-    url.pathname = url.pathname.replace(prefix, '/')
-
-    // inherit all other props from the default request
-    return new Request(url.toString(), defaultAssetKey)
   }
 }
