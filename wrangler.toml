@@ -1,9 +1,6 @@
 name = "persistence-website"
-type = "webpack"
 account_id = '1b234fd75823c727716b84645046a3ff'
-usage_model = ''
 compatibility_flags = []
-workers_dev = true
 site = {bucket = "./build",entry-point = "workers-site"}
 compatibility_date = "2022-06-06"
 
