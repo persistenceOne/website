@@ -1,5 +1,6 @@
 name = "persistence-website"
 
+zone_id = '000fde296cba847a78e918414382ba7a'
 account_id = '1b234fd75823c727716b84645046a3ff'
 compatibility_flags = []
 site = {bucket = "./build"}
