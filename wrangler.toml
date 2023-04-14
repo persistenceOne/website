@@ -1,7 +1,9 @@
 name = "persistence-website"
+
 account_id = '1b234fd75823c727716b84645046a3ff'
 compatibility_flags = []
-site = {bucket = "./build",entry-point = "workers-site"}
+site = {bucket = "./build"}
+main = "workers-site/index.js"
 compatibility_date = "2022-06-06"
 
 [env.staging]
