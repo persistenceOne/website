@@ -852,14 +852,19 @@ a {
   }
 
   .social-links-section {
+    display: flex;
+    align-items: center;
+
+    .title{
+      margin: 0;
+      margin-right: 16px;
+    }
     ul {
       display: flex;
-      margin-top: 0px;
+      margin: 0px;
       flex-wrap: wrap;
       justify-content: center;
     }
-
-    padding-top: 15px;
 
     a {
       width: 28px;
@@ -1115,4 +1120,10 @@ button:disabled {
 .react-multi-carousel-item{
   margin-right: 25px;
   cursor: pointer;
+}
+
+.footer-item{
+  display: inline-block;
+  color:#000;
+  margin:  0 16px
 }

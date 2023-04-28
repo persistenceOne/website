@@ -8,12 +8,12 @@ export const netwrokData = [
     wikilink: "https://pstake.finance/"
   },
   {
-    network: "pWallet",
-    description: "Persistence Ecosystem Wallet",
-    icon: "xprt",
-    name: "Wallet",
+    network: "Dexter",
+    description: "Interchain DEX for Yield-Generating Assets",
+    icon: "dexter",
+    name: "dApp",
     status: "Live",
-    wikilink: "https://wallet.persistence.one/"
+    wikilink: "https://dexter.zone/"
   },
   {
     network: "Bamboo",
@@ -24,12 +24,12 @@ export const netwrokData = [
     wikilink: "https://bamboo.zone/"
   },
   {
-    network: "Dexter",
-    description: "Interchain DEX for Yield-Generating Assets",
-    icon: "dexter",
-    name: "dApp",
-    status: "Coming Soon",
-    wikilink: "https://dexter.zone/"
+    network: "pWallet",
+    description: "Persistence Ecosystem Wallet",
+    icon: "xprt",
+    name: "Wallet",
+    status: "Live",
+    wikilink: "https://wallet.persistence.one/"
   },
   {
     network: "Persistence Bridge",
@@ -54,14 +54,6 @@ export const netwrokData = [
     name: "Defi",
     status: "Live",
     wikilink: "https://junoswap.com/pools/JUNO-XPRT"
-  },
-  {
-    network: "Sifchain",
-    description: "Decentralised Exchange",
-    icon: "sifchain",
-    name: "Defi",
-    status: "Live",
-    wikilink: "https://sifchain.network/"
   },
   {
     network: "Keplr",
@@ -159,6 +151,14 @@ export const netwrokData = [
     status: "Live",
     wikilink:
       "https://analytics.sushi.com/tokens/0x44017598f2af1bd733f9d87b5017b4e7c1b28dde"
+  },
+  {
+    network: "Restake",
+    description: "Decentralised Exchange",
+    icon: "sushiswap",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://restake.app/persistence"
   },
   {
     network: "Smart Nodes",

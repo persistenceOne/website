@@ -635,10 +635,14 @@ a {
     line-height: 1.31;
     color: rgba(0, 0, 0, 0.69); }
   .footer .social-links-section {
-    padding-top: 15px; }
+    display: flex;
+    align-items: center; }
+    .footer .social-links-section .title {
+      margin: 0;
+      margin-right: 16px; }
     .footer .social-links-section ul {
       display: flex;
-      margin-top: 0px;
+      margin: 0px;
       flex-wrap: wrap;
       justify-content: center; }
     .footer .social-links-section a {
@@ -826,6 +830,11 @@ button:disabled {
 .react-multi-carousel-item {
   margin-right: 25px;
   cursor: pointer; }
+
+.footer-item {
+  display: inline-block;
+  color: #000;
+  margin: 0 16px; }
 
 /*--------------------------------------------------------------
 # Homepage styles
@@ -1590,14 +1599,17 @@ button:disabled {
       display: block; }
   .home-ecosystem-section.xprtecosystem .sub-heading {
     color: #868686; }
-  .home-ecosystem-section.xprtecosystem .card-tiles {
-    display: block; }
-    .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card {
-      background-color: #fff; }
-      .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section {
-        background: #fff;
-        width: auto;
-        margin: 0; }
+  .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card {
+    background-color: #fff; }
+    .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section {
+      background: #fff;
+      width: auto;
+      margin: 0; }
+      .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; }
         .home-ecosystem-section.xprtecosystem .card-tiles .card-group .card .card-section .card-body .button-section.cards-buttons {
           display: flex;
           justify-content: normal; }
@@ -1693,6 +1705,7 @@ button:disabled {
     flex-wrap: wrap;
     justify-content: center; }
     .home-ecosystem-section .card-tiles .card-group {
+      flex-wrap: wrap;
       margin-right: -15px;
       margin-left: -15px; }
       .home-ecosystem-section .card-tiles .card-group .card {
@@ -1700,8 +1713,7 @@ button:disabled {
         border: 0;
         margin: 0 7.5px; }
         .home-ecosystem-section .card-tiles .card-group .card .card-section {
-          width: 900px;
-          margin: auto;
+          height: 100%;
           background: linear-gradient(156.29deg, #1f2023 4.39%, rgba(19, 20, 22, 0.48) 84.74%);
           border-radius: 6px; }
           .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body {
@@ -1745,8 +1757,9 @@ button:disabled {
               .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body p span {
                 display: inline-block; }
         .home-ecosystem-section .card-tiles .card-group .card .button-section {
+          padding-top: 16px;
           display: flex;
-          justify-content: center;
+          justify-content: start;
           align-items: center; }
         .home-ecosystem-section .card-tiles .card-group .card .networks {
           display: flex;
@@ -1757,7 +1770,7 @@ button:disabled {
             color: #fff;
             align-items: center; }
           .home-ecosystem-section .card-tiles .card-group .card .networks img {
-            max-width: 50px;
+            max-width: 25px;
             width: 100%;
             height: auto;
             margin: 0 10px; }
@@ -2631,7 +2644,6 @@ button:disabled {
 
   .home-ecosystem-section .card-tiles .card-group .card .networks {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center; }
 
