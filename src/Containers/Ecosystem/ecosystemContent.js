@@ -1,53 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { netwrokData } from "../Ecosystem/netwoks";
 import Icon from "../../components/Icon";
+import { ecosystemList } from "./netwoks";
 
 const EcosystemContent = () => {
   const [availableNetwork, setAvailableNetwork] = useState();
-  const [active, setActive] = useState("1");
-  const handleClick = (event) => {
-    setActive(event.target.id);
-    if (event.target.id === "1") {
-      setAvailableNetwork(netwrokData);
-    }
-    if (event.target.id === "2") {
+  const [active, setActive] = useState("All");
+  const handleClick = (name) => {
+    setActive(name);
+    if (name === "All") {
+      setAvailableNetwork(ecosystemList);
+    } else if (name === "builtOnPersistence") {
       setAvailableNetwork(
-        netwrokData.filter(function (item) {
-          return item.name === "dApp";
+        ecosystemList.filter(function (item) {
+          return item.builtOnPersistence === true;
         })
       );
-    }
-    if (event.target.id === "3") {
+    } else {
       setAvailableNetwork(
-        netwrokData.filter(function (item) {
-          return item.name === "Explorer";
-        })
-      );
-    }
-    if (event.target.id === "4") {
-      setAvailableNetwork(
-        netwrokData.filter(function (item) {
-          return item.name === "Wallet";
-        })
-      );
-    }
-    if (event.target.id === "5") {
-      setAvailableNetwork(
-        netwrokData.filter(function (item) {
-          return item.name === "Defi";
-        })
-      );
-    }
-    if (event.target.id === "6") {
-      setAvailableNetwork(
-        netwrokData.filter(function (item) {
-          return item.name === "Tools";
+        ecosystemList.filter(function (item) {
+          return item.name === name;
         })
       );
     }
   };
   useEffect(() => {
-    setAvailableNetwork(netwrokData);
+    setAvailableNetwork(ecosystemList);
   }, []);
 
   return (
@@ -55,55 +32,60 @@ const EcosystemContent = () => {
       <div className="container">
         <h3 className="section-title">Persistence Ecosystem</h3>
         <p className="sub-heading">
-          Discover the suite of applications, wallets, explores, and tools
-          across the ecosystem.
+          <span className="d-block">
+            Discover the suite of applications, wallets, explores, and tools
+            across the ecosystem. <br /> Are you building something cool?
+          </span>
+          <a
+            href={"https://docs.persistence.one/build/grants"}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-center d-inline-block grants-text"
+          >
+            Apply for grant.
+          </a>
         </p>
+
         <div className={"sortbuttons"} id={"myDIV"}>
           <button
-            key={1}
-            className={active === "1" ? "active" : undefined}
-            id={"1"}
-            onClick={handleClick}
+            className={active === "All" ? "active" : undefined}
+            onClick={() => handleClick("All")}
           >
             All
           </button>
           <button
-            key={2}
-            className={active === "2" ? "active" : undefined}
-            id={"2"}
-            onClick={handleClick}
+            className={active === "builtOnPersistence" ? "active" : undefined}
+            onClick={() => handleClick("builtOnPersistence")}
+          >
+            Built on Persistence
+          </button>
+          <button
+            className={active === "dApp" ? "active" : undefined}
+            onClick={() => handleClick("dApp")}
           >
             DAPPS
           </button>
           <button
-            key={3}
-            className={active === "3" ? "active" : undefined}
-            id={"3"}
-            onClick={handleClick}
+            className={active === "Explorer" ? "active" : undefined}
+            onClick={() => handleClick("Explorer")}
           >
             EXPLORER
           </button>
           <button
-            key={4}
-            className={active === "4" ? "active" : undefined}
-            id={"4"}
-            onClick={handleClick}
+            className={active === "Wallet" ? "active" : undefined}
+            onClick={() => handleClick("Wallet")}
           >
             WALLETS
           </button>
           <button
-            key={5}
-            className={active === "5" ? "active" : undefined}
-            id={"5"}
-            onClick={handleClick}
+            className={active === "Defi" ? "active" : undefined}
+            onClick={() => handleClick("Defi")}
           >
             DEFI
           </button>
           <button
-            key={6}
-            className={active === "6" ? "active" : undefined}
-            id={"6"}
-            onClick={handleClick}
+            className={active === "Tools" ? "active" : undefined}
+            onClick={() => handleClick("Tools")}
           >
             TOOLS
           </button>
@@ -111,8 +93,13 @@ const EcosystemContent = () => {
         <div className="network-section">
           {availableNetwork &&
             availableNetwork.map((item, i) => (
-              <a href={item.wikilink} target="_blank" rel="noopener noreferrer">
-                <div key={i} className="networklist-tiles">
+              <a
+                href={item.wikilink}
+                key={i}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="networklist-tiles">
                   <Icon viewClass="social_icon_imgg" icon={item.icon} />
                   <h5>{item.network}</h5>
                   <h6>{item.description}</h6>

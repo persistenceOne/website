@@ -110,6 +110,7 @@ const Footer = (props) => {
                     {socialList.map((item, index) => (
                       <a
                         href={item.url}
+                        key={index}
                         onClick={() => socialIcon(item.iconName)}
                         rel="noopener noreferrer"
                         target="_blank"

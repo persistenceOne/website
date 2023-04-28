@@ -1699,6 +1699,10 @@ button:disabled {
     font-weight: 400;
     word-break: break-word;
     margin: auto auto 70px auto; }
+    .home-ecosystem-section .sub-heading .grants-text {
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: underline; }
   .home-ecosystem-section .card-tiles {
     margin-top: 20px;
     display: flex;
@@ -2128,32 +2132,49 @@ button:disabled {
     padding-bottom: 20px; }
   .ecosystem-faq-section .row {
     justify-content: center; }
-  .ecosystem-faq-section .accordion {
-    padding-top: 40px; }
-    .ecosystem-faq-section .accordion .accordion-button {
-      background: none;
-      border: 0px solid;
-      outline: 0; }
-    .ecosystem-faq-section .accordion .card {
-      background: transparent;
-      border: 0px solid;
-      margin-bottom: 20px; }
-      .ecosystem-faq-section .accordion .card .card-header {
-        background-color: #313134;
-        display: flex;
-        align-items: center;
-        justify-content: space-between; }
-        .ecosystem-faq-section .accordion .card .card-header p {
-          margin: 0;
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 2;
-          color: #FFFFFF; }
-      .ecosystem-faq-section .accordion .card .card-body {
-        font-family: 'Poppins', sans-serif;
+  .ecosystem-faq-section .info {
+    border: 1px solid #313134;
+    padding: 20px 40px;
+    border-radius: 6px;
+    margin-bottom: 20px; }
+    .ecosystem-faq-section .info .info-heading {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 600; }
+  .ecosystem-faq-section .accordion .accordion-button {
+    background: none;
+    border: 0px solid;
+    outline: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 2;
+    color: #FFFFFF;
+    display: flex;
+    width: 100%;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: space-between; }
+  .ecosystem-faq-section .accordion .card {
+    background: transparent;
+    border: 0px solid;
+    margin-bottom: 20px; }
+    .ecosystem-faq-section .accordion .card .card-header {
+      background-color: #313134;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .ecosystem-faq-section .accordion .card .card-header p {
+        margin: 0;
+        font-weight: 600;
         font-size: 14px;
         line-height: 2;
-        color: #F3F3F3; }
+        color: #FFFFFF; }
+    .ecosystem-faq-section .accordion .card .card-body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      line-height: 2;
+      color: #F3F3F3; }
 
 .info-form {
   text-align: center;
@@ -2252,7 +2273,7 @@ button:disabled {
     text-align: left;
     height: auto;
     margin: 0 0;
-    padding: 0 0 !important; }
+    padding: 10px 20px !important; }
   .navbar.navbar-custom .navbar-nav .nav-item.dropdown {
     padding: 10px 0; }
   .navbar.navbar-custom .navbar-nav .nav-item {

@@ -14,13 +14,32 @@
   .row{
     justify-content: center;
   }
+  .info{
+    border: 1px solid #313134;
+    padding: 20px 40px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    .info-heading{
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
   .accordion {
-    padding-top: 40px;
-
     .accordion-button {
       background: none;
       border: 0px solid ;
       outline: 0;
+      margin: 0;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 2;
+      color: #FFFFFF;
+      display: flex;
+      width: 100%;
+      color: #FFFFFF;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .card {

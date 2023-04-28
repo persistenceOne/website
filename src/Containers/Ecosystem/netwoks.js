@@ -1,11 +1,12 @@
-export const netwrokData = [
+export const ecosystemList = [
   {
     network: "pSTAKE",
     description: "Liquid Staking protocol",
     icon: "pstake-icon",
     name: "dApp",
     status: "Live",
-    wikilink: "https://pstake.finance/"
+    wikilink: "https://pstake.finance/",
+    builtOnPersistence: true
   },
   {
     network: "Dexter",
@@ -13,7 +14,8 @@ export const netwrokData = [
     icon: "dexter",
     name: "dApp",
     status: "Live",
-    wikilink: "https://dexter.zone/"
+    wikilink: "https://dexter.zone/",
+    builtOnPersistence: true
   },
   {
     network: "Bamboo",
@@ -21,7 +23,8 @@ export const netwrokData = [
     icon: "bamboo",
     name: "dApp",
     status: "Coming soon",
-    wikilink: "https://bamboo.zone/"
+    wikilink: "https://bamboo.zone/",
+    builtOnPersistence: true
   },
   {
     network: "pWallet",
@@ -29,7 +32,8 @@ export const netwrokData = [
     icon: "xprt",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://wallet.persistence.one/"
+    wikilink: "https://wallet.persistence.one/",
+    builtOnPersistence: true
   },
   {
     network: "Persistence Bridge",
@@ -37,7 +41,8 @@ export const netwrokData = [
     icon: "xprt",
     name: "Tools",
     status: "Live",
-    wikilink: "https://bridge.persistence.one/"
+    wikilink: "https://bridge.persistence.one/",
+    builtOnPersistence: true
   },
   {
     network: "Osmosis",
@@ -45,7 +50,8 @@ export const netwrokData = [
     icon: "osmosis",
     name: "Defi",
     status: "Live",
-    wikilink: "https://info.osmosis.zone/token/XPRT"
+    wikilink: "https://info.osmosis.zone/token/XPRT",
+    builtOnPersistence: false
   },
   {
     network: "Junoswap",
@@ -53,7 +59,36 @@ export const netwrokData = [
     icon: "junoswap",
     name: "Defi",
     status: "Live",
-    wikilink: "https://junoswap.com/pools/JUNO-XPRT"
+    wikilink: "https://junoswap.com/pools/JUNO-XPRT",
+    builtOnPersistence: false
+  },
+  {
+    network: "Crescent",
+    description:
+      "Decentralised Exchange(stkATOM’s DeFi Partner for ranged pool)",
+    icon: "crescent",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://app.crescent.network/farm?open_modal_pool_id=57",
+    builtOnPersistence: false
+  },
+  {
+    network: "Umee",
+    description: "Borrowing lending platform",
+    icon: "umee",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://app.umee.cc/#/markets/",
+    builtOnPersistence: false
+  },
+  {
+    network: "Helix",
+    description: "Decentralised Exchange",
+    icon: "helix",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://helixapp.com/",
+    builtOnPersistence: false
   },
   {
     network: "Keplr",
@@ -61,7 +96,8 @@ export const netwrokData = [
     icon: "keplr",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://wallet.keplr.app/#/core/stake"
+    wikilink: "https://wallet.keplr.app/#/core/stake",
+    builtOnPersistence: false
   },
   {
     network: "Cosmostation",
@@ -69,7 +105,17 @@ export const netwrokData = [
     icon: "cosmostation",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://www.cosmostation.io/"
+    wikilink: "https://www.cosmostation.io/",
+    builtOnPersistence: false
+  },
+  {
+    network: "Frontier",
+    description: "Wallet",
+    icon: "frontier",
+    name: "Wallet",
+    status: "Live",
+    wikilink: "https://www.frontier.xyz/",
+    builtOnPersistence: false
   },
   {
     network: "Coin98",
@@ -77,7 +123,8 @@ export const netwrokData = [
     icon: "coin98",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://coin98.com"
+    wikilink: "https://coin98.com",
+    builtOnPersistence: false
   },
   {
     network: "Leap",
@@ -85,7 +132,8 @@ export const netwrokData = [
     icon: "leap",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://www.leapwallet.io/"
+    wikilink: "https://www.leapwallet.io/",
+    builtOnPersistence: false
   },
   {
     network: "Ledger",
@@ -93,7 +141,8 @@ export const netwrokData = [
     icon: "ledger",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://www.ledger.com"
+    wikilink: "https://www.ledger.com",
+    builtOnPersistence: false
   },
   {
     network: "Steakwallet",
@@ -101,7 +150,8 @@ export const netwrokData = [
     icon: "steakwallet",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://steakwallet.fi/"
+    wikilink: "https://steakwallet.fi/",
+    builtOnPersistence: false
   },
   {
     network: "Mintscan",
@@ -109,7 +159,8 @@ export const netwrokData = [
     icon: "mintscan",
     name: "Explorer",
     status: "Live",
-    wikilink: "https://www.mintscan.io/persistence"
+    wikilink: "https://www.mintscan.io/persistence",
+    builtOnPersistence: false
   },
   {
     network: "Ping.pub",
@@ -117,7 +168,8 @@ export const netwrokData = [
     icon: "pingpub",
     name: "Explorer",
     status: "Live",
-    wikilink: "https://ping.pub/persistence"
+    wikilink: "https://ping.pub/persistence",
+    builtOnPersistence: false
   },
   {
     network: "Atomscan",
@@ -125,7 +177,18 @@ export const netwrokData = [
     icon: "atomscan",
     name: "Explorer",
     status: "Live",
-    wikilink: "https://atomscan.com/persistence"
+    wikilink: "https://atomscan.com/persistence",
+    builtOnPersistence: false
+  },
+  {
+    network: "Map of Zones",
+    description: "Cosmos Ecosystem Explorer",
+    icon: "map-of-zones",
+    name: "Explorer",
+    status: "Live",
+    wikilink:
+      "https://mapofzones.com/home/core-1/overview?columnKey=ibcVolume&period=24h&searchZone=pers",
+    builtOnPersistence: false
   },
   {
     network: "SmartStake",
@@ -133,7 +196,26 @@ export const netwrokData = [
     icon: "smartstake",
     name: "Tools",
     status: "Live",
-    wikilink: "https://xprt.smartstake.io/"
+    wikilink: "https://xprt.smartstake.io/",
+    builtOnPersistence: false
+  },
+  {
+    network: "Cosmwasm",
+    description: "",
+    icon: "cosmwasm",
+    name: "Tools",
+    status: "Live",
+    wikilink: "https://cosmwasm.com/",
+    builtOnPersistence: false
+  },
+  {
+    network: "Defillama",
+    description: "Dashboard",
+    icon: "defillama",
+    name: "Tools",
+    status: "Live",
+    wikilink: "https://defillama.com/chain/Persistence",
+    builtOnPersistence: false
   },
   {
     network: "Injective Protocol",
@@ -141,24 +223,17 @@ export const netwrokData = [
     icon: "inj",
     name: "Defi",
     status: "Live",
-    wikilink: "https://injective.exchange/spot/xprt-usdt"
-  },
-  {
-    network: "SushiSwap",
-    description: "Decentralised Exchange",
-    icon: "sushiswap",
-    name: "Defi",
-    status: "Live",
-    wikilink:
-      "https://analytics.sushi.com/tokens/0x44017598f2af1bd733f9d87b5017b4e7c1b28dde"
+    wikilink: "https://injective.exchange/spot/xprt-usdt",
+    builtOnPersistence: false
   },
   {
     network: "Restake",
-    description: "Decentralised Exchange",
-    icon: "sushiswap",
+    description: "Defi partner",
+    icon: "restake",
     name: "Defi",
     status: "Live",
-    wikilink: "https://restake.app/persistence"
+    wikilink: "https://restake.app/persistence",
+    builtOnPersistence: false
   },
   {
     network: "Smart Nodes",
@@ -166,7 +241,8 @@ export const netwrokData = [
     icon: "smartnode",
     name: "Explorer",
     status: "Live",
-    wikilink: "https://smartnodes.one/dashboard/persistence"
+    wikilink: "https://smartnodes.one/dashboard/persistence",
+    builtOnPersistence: false
   },
   {
     network: "Citadel One",
@@ -174,7 +250,8 @@ export const netwrokData = [
     icon: "citadelone",
     name: "Wallet",
     status: "Live",
-    wikilink: "https://app.citadel.one/"
+    wikilink: "https://app.citadel.one/",
+    builtOnPersistence: false
   },
 
   {
@@ -183,7 +260,8 @@ export const netwrokData = [
     icon: "gravitybridge",
     name: "Tools",
     status: "Live",
-    wikilink: "https://spacestation.zone/"
+    wikilink: "https://spacestation.zone/",
+    builtOnPersistence: false
   },
   {
     network: "Dexmos.app",
@@ -191,7 +269,8 @@ export const netwrokData = [
     icon: "dexmosapp",
     name: "Tools",
     status: "Live",
-    wikilink: "https://www.dexmos.app/"
+    wikilink: "https://www.dexmos.app/",
+    builtOnPersistence: false
   },
   {
     network: "Obervatory",
@@ -199,7 +278,17 @@ export const netwrokData = [
     icon: "observe",
     name: "Tools",
     status: "Live",
-    wikilink: "https://observatory.zone/persistence"
+    wikilink: "https://observatory.zone/persistence",
+    builtOnPersistence: false
+  },
+  {
+    network: "TFM",
+    description: "Bridge",
+    icon: "tfm",
+    name: "Tools",
+    status: "Live",
+    wikilink: "https://tfm.com/bridge",
+    builtOnPersistence: false
   },
   {
     network: "Pulsar",
@@ -207,7 +296,8 @@ export const netwrokData = [
     icon: "pulsar",
     name: "Tools",
     status: "Live",
-    wikilink: "https://app.pulsar.finance/portfolio"
+    wikilink: "https://app.pulsar.finance/portfolio",
+    builtOnPersistence: false
   },
   {
     network: "Cosmosdash",
@@ -215,6 +305,7 @@ export const netwrokData = [
     icon: "cosmosdash",
     name: "Tools",
     status: "Live",
-    wikilink: "https://www.cosmodash.zone/"
+    wikilink: "https://www.cosmodash.zone/",
+    builtOnPersistence: false
   }
 ];

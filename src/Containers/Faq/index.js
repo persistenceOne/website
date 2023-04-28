@@ -23,57 +23,53 @@ function ContextAwareToggle({ children, eventKey, callback }) {
       className="accordion-button"
       onClick={decoratedOnClick}
     >
+      {children}
       <Icon viewClass="icon" icon={isCurrentEventKey ? "minus" : "plus"} />
     </button>
   );
 }
 
-const list = [
+const aboutPersistence = [
   {
     title: "What is Persistence?",
     content:
-      "Poised to become a Liquid Staking Hub, Persistence is a Tendermint based" +
-      " layer-1 chain with a goal to build an ecosystem of decentralised applications " +
-      "focused around liquid-staked assets that together accrue value to XPRT."
+      "Persistence is an app chain for Liquid Staking powering an ecosystem of " +
+      "DeFi applications focused on unlocking the liquidity of staked assets."
   },
   {
-    title: "What is the mission of Persistence?",
-    content:
-      "Persistence is on a mission to become a true liquid staking hub, offering" +
-      " users a seamless and capital-efficient staking and DeFi experience by " +
-      "enabling developers to build innovative applications around liquid-staked assets."
+    title: "What is the vision of Persistence?",
+    content: (
+      <>
+        Persistence’s vision is to be a one-stop shop for all things liquid
+        staking by offering users a seamless Staking and DeFi experience &
+        enabling developers to build innovative applications around LSTs.
+      </>
+    )
   },
   {
     title: "What consensus mechanism does Persistence use?",
-    content: "Persistence uses Tendermint dPOS BFT Consensus Mechanism."
+    content: "Persistence uses the Tendermint dPOS BFT Consensus Mechanism."
   },
   {
     title: "Is Persistence an IBC-enabled chain?",
     content: "Yes, Persistence is an IBC-enabled chain."
   },
   {
-    title: "How does XPRT accrue value?",
-    content:
-      "XPRT accrues value from the economic activity within the Persistence ecosystem of applications through multiple channels like transaction fees, fee sharing with ecosystem dApps, IBC hub-routing, etc."
-  },
-  {
     title: "What is the Persistence Foundation?",
     content: (
-      <div>
+      <>
         The{" "}
         <a
           href="https://www.notion.so/learn/persistence-foundation"
           target="_blank"
           rel="noopener noreferrer"
         >
+          {" "}
           <u>Persistence Foundation</u>
         </a>{" "}
-        is committed to driving utility for the Persistence ecosystem’s fuel –
-        XPRT. The foundation will engage with all stakeholders to ensure
-        incentive alignment and direct collective efforts toward the ecosystem
-        vision. The ultimate goal for the foundation is the welfare of the XPRT
-        holders and Stakers by driving utility for the asset.
-      </div>
+        is committed to ensuring the welfare of the XPRT holders and Stakers by
+        driving utility for the asset.
+      </>
     )
   },
   {
@@ -94,10 +90,16 @@ const list = [
         <p>The two main pillars of Persistence Labs are:</p>
         <ul className="links">
           <li>
-            <b>The Persistence Core-1 Chain-</b> The absolute core of the
-            ecosystem, the blockchain powering all activity for users and
-            allowing developers to build innovative use cases to become part of
-            the ecosystem
+            <a
+              href="https://www.mintscan.io/persistence"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <u>The Persistence Core-1 Chain-</u>
+            </a>{" "}
+            The absolute core of the ecosystem, the blockchain powers all
+            activity for users and allows developers to build innovative use
+            cases to become part of the ecosystem
           </li>
           <li>
             <a
@@ -117,72 +119,87 @@ const list = [
   },
   {
     title:
-      "Which products are currently live on the Persistence Core-1 chains?",
+      "What are the liquid staking products on the Persistence Core-1 chain?",
     content: (
       <div>
-        Persistence is the Liquid Staking Hub for Cosmos. The products built on
-        the Persistence Core-1 chain are focused on providing innovative use
-        cases for liquid-staked assets.
-        <p>
-          {" "}
-          Currently, there are two products live natively on the Persistence
-          chain:
-        </p>
+        Persistence hosts a suite of DeFi applications focused on LSTs. The
+        dApps built on the Persistence Core-1 chain are:
         <ul className="links">
           <li>
-            <b>pSTAKE for Cosmos: </b> the Liquid staking Protocol allowing
-            users to liquid-stake ATOM to earn staking rewards and participate
-            in DeFi without locking liquidity.
+            <a
+              href="https://pstake.finance/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <b>
+                <u>pSTAKE Finance</u>—
+              </b>
+            </a>
+            a multi-chain liquid staking protocol for issuing LSTs that allows
+            users to stake their assets while participating in DeFi.
           </li>
           <li>
-            <b>Dexter:</b> the Interchain DEX for yield-generating assets like
-            liquid-staked assets. More projects will be announced soon.
+            <a
+              href="https://www.dexter.zone/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <b>
+                <u>Dexter</u>:
+              </b>
+            </a>
+            the Interchain DEX for yield-generating assets like LSTs
+          </li>
+          <li>
+            <a
+              href="https://bamboo.zone/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <b>
+                <u>Bamboo</u>:
+              </b>{" "}
+            </a>
+            a borrowing/lending protocol and a vault product for LSTs is in the
+            works.
           </li>
         </ul>
       </div>
     )
   },
   {
-    title:
-      "How many validators are in the active set of the Persistence Network?",
-    content:
-      "The Persistence active set consists of 100 validators validating the blocks and securing the network."
-  },
-  {
-    title: "What do the Persistence Network validators do?",
-    content:
-      "A set of 100 validators, an absolute critical part to keep the Persistence Ecosystem safe and secure at all times. Besides validation and block production, many of the Persistence Validators are also contributing to governance, infrastructure, tools & analytics for the wider ecosystem."
-  },
-  {
-    title: "How decentralized is the Persistence chain validator set? ",
-    content:
-      "With a Validator Nakamoto coefficient of 9, Persistence is among Cosmos’s top 3 most decentralized chains in Cosmos."
-  },
-  {
-    title: "What is the Persistence Foundation Grants Program?",
+    title: "How many validators are active on Persistence Network?",
     content: (
-      <div>
-        The Persistence Foundation Grants program is an assistance program that
-        supports selected project teams to develop and scale innovative products
-        focused on liquid staking on the Persistence network. More details{" "}
+      <>
+        The Persistence active set consists of{" "}
         <a
-          href="https://docs.persistence.one/build/grants"
+          href="https://www.mintscan.io/persistence"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <u>here</u>
+          <u>100 validators</u>{" "}
         </a>
-      </div>
+        producing blocks and securing the network.
+      </>
+    )
+  },
+  {
+    title: "How decentralized is the Persistence chain? ",
+    content: (
+      <>
+        Persistence is one of the most decentralized chains in Cosmos, with one
+        of the highest Nakamoto Coefficient and Network Scores.
+      </>
     )
   },
   {
     title: "What is the Persistence Foundation Delegation Program?",
     content: (
       <div>
-        The Persistence Foundation Delegation Program is an initiative to
-        improve the overall health and robustness of the Persistence network by
-        providing support to contributing validators in the form of foundation
-        delegations. More details{" "}
+        The{" "}
         <a
           href={
             "https://docs.persistence.one/build/validators/foundation-delegations"
@@ -190,102 +207,269 @@ const list = [
           target="_blank"
           rel="noopener noreferrer"
         >
-          <u>here</u>
-        </a>
+          <u>Persistence Foundation Delegation Program </u>
+        </a>{" "}
+        is an initiative to improve the overall health and robustness of the
+        Persistence network by providing support to contributing validators in
+        the form of foundation delegations.
       </div>
     )
   },
   {
-    title: "Does the Persistence Core-1 chain support CosmWasm?",
-    content:
-      "Yes, the Persistence Core-1 chain has enabled support for CosmWasm, which is a smart contract platform for building decentralized applications on the Cosmos network. In fact, one example of CosmWasm-powered DeFi primitive on Persistence is Dexter DEX, which is currently live and running on the network."
+    title: "Does the Persistence Core-1 chain support Smart Contracts?",
+    content: (
+      <>
+        Yes, the Persistence Core-1 chain supports CosmWasm, a smart contract
+        platform in Cosmos. CosmWasm currently powers DeFi primitives such as
+        Dexter & bamboo on Persistence Chain.
+      </>
+    )
   },
+  {
+    title: "What is Persistence Bridge?",
+    content: (
+      <>
+        The Persistence Bridge is a tool that facilitates the bidirectional
+        transfer of tokens, such as $PSTAKE, between the Ethereum network and
+        the Core-1 chain.
+      </>
+    )
+  }
+];
+
+const aboutXprt = [
   {
     title: "What is $XPRT?",
     content:
       "$XPRT is the native staking token of the Persistence Core-1 chain."
   },
   {
-    title: "What is the role of $XPRT?",
-    content:
-      "The role of $XPRT is to bootstrap ecosystem applications to propel network adoption, and to secure the core infrastructure through staking. $XPRT stakers can also participate in governance to steer the network and contribute to the ecosystem's long-term success."
+    title: "What is the role of XPRT in the ecosystem?",
+    content: (
+      <>
+        XPRT powers the Persistence Ecosystem—Core-1 chain security, transaction
+        fees, on-chain dApps, IBC hub-routing, and network’s governance.{" "}
+      </>
+    )
   },
   {
-    title: "Where does $XPRT drive its utility from?",
-    content:
-      "$XPRT is valuable because it plays a crucial role in the Persistence ecosystem, which includes modular apps like pSTAKE and dApps like Dexter that use smart contracts to create use cases for staked assets. As more ecosystems utilize these apps, the core-1 chain becomes the hub for the entire ecosystem through its support of IBC."
-  },
-  {
-    title: "Where can users acquire $XPRT from?",
+    title: "Where can you acquire $XPRT?",
     content: (
       <div>
-        Users can acquire $XPRT either on Centralised Exchanges such as Huobi,
-        Kucoin, Gate.io, Ascendex etc and Decentralized Exchanges such as
-        Osmosis, Dexter, Junoswap,Helix etc.
-        <p>
-          sers can acquire $XPRT either on Centralised Exchanges such as Huobi,
-          Kucoin, Gate.io, Ascendex etc and Decentralized Exchanges such as
-          Osmosis, Dexter, Junoswap,Helix etc.{" "}
-        </p>
-        <p>
-          Note that these references are just for informational purposes; they
-          don't form an endorsement of the particular exchange or incorporate
-          any financial or investment advice.
-        </p>
+        $XPRT is listed on Centralised Exchanges such as{" "}
+        <a
+          href={"https://www.huobi.com/en-us/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Huobi</u>
+        </a>
+        <a
+          href={"https://www.kucoin.com/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Kucoin</u>
+        </a>
+        <a
+          href={"https://www.gate.io/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Gate.io </u>
+        </a>
+        <a
+          href={"https://ascendex.com/en/global-digital-asset-platform"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Ascendex </u>
+        </a>
+        , etc, and Decentralized Exchanges such as Osmosis, Dexter, and Helix.
+        (Please note that this is only for informational purposes; it is in no
+        way an endorsement of any particular exchange or financial or investment
+        advice.
       </div>
     )
   },
   {
-    title: "Can $XPRT holders stake their tokens?",
-    content:
-      "$XPRT token holders will be able to delegate their tokens to one of the networks' validators for staking. Stakers will receive staking rewards in the form of XPRT in return for contributing to the security of the network."
-  },
-  {
-    title: "What is the unbonding period for $XPRT?",
-    content:
-      "When $XPRT stakers unstake their tokens, there is a 21-day unbonding(waiting) period before the tokens become available for use again."
+    title: "What is the unbonding period for staked $XPRT?",
+    content: "21 days"
   },
   {
     title: "How does the community decide the future of the network?",
     content: (
-      <div>
-        The Persistence Network has an on-chain governance mechanism for passing
-        proposals, voting on software upgrades, changing consensus parameters
-        and spending funds from the community pool or the ecosystem funds etc.
-        The easiest way to vote currently is via the{" "}
+      <>
+        The Persistence Network has an on-chain governance mechanism where the
+        community votes for passing proposals, voting on software upgrades,
+        changing consensus parameters and spending funds from the community pool
+        or the ecosystem funds etc. The easiest way to vote currently is via the
         <a
           href={"https://wallet.keplr.app/chains/persistence?tab=governance"}
           target="_blank"
           rel="noopener noreferrer"
         >
           <u>Keplr Dashboard.</u>
-        </a>{" "}
-        The community can also pitch any ideas or suggestions on the{" "}
+        </a>
+        The community members can also pitch ideas and share suggestions or
+        feedback on the
         <a
-          href="https://forum.persistence.one/"
+          href={"https://forum.persistence.one/"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <u>forum</u>
+          <u>forum.</u>
         </a>
-        .
-      </div>
+      </>
     )
   },
   {
     title: "What are the current DeFi opportunities for $XPRT?",
-    content:
-      "Currently, $XPRT users can provide liquidity on XPRT/OSMO, XPRT/USDC, XPRT/ATOM pools on Osmosis or XPRT/ATOM LP pool on Dexter. "
+    content: (
+      <>
+        Currently, $XPRT users can provide liquidity on{" "}
+        <a
+          href={"https://app.osmosis.zone/pool/15"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u> XPRT/OSMO</u>{" "}
+        </a>
+        on Osmosis or{" "}
+        <a
+          href={
+            "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg"
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>XPRT/ATOM</u>
+        </a>{" "}
+        pool on Dexter.{" "}
+      </>
+    )
   },
   {
     title: "Which wallets support $XPRT?",
-    content:
-      "Keplr, Cosmostation, Ledger, Leap, Coin98, CitadelOne, and Frontier are some wallets supporting $XPRT."
+    content: (
+      <>
+        <a
+          href={"https://wallet.keplr.app/#/core/stake"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Keplr</u>,{" "}
+        </a>
+        <a
+          href={"https://www.cosmostation.io/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Cosmostation</u>,{" "}
+        </a>
+        <a
+          href="https://www.ledger.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Ledger</u>,{" "}
+        </a>
+        <a
+          href="https://www.leapwallet.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Leap</u>,{" "}
+        </a>
+        <a href="https://coin98.com/" target="_blank" rel="noopener noreferrer">
+          <u>Coin98</u>,{" "}
+        </a>
+        <a
+          href="https://app.citadel.one/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>CitadelOne</u>{" "}
+        </a>
+        and{" "}
+        <a
+          href="https://www.frontier.xyz/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Frontier</u>{" "}
+        </a>
+        are some wallets supporting $XPRT. <br />
+        An integration with Ledger Live is expected to go live in the near
+        future.
+      </>
+    )
   },
   {
-    title: "What is Persistence Bridge?",
-    content:
-      "The Persistence Bridge is a tool that facilitates the transfer of assets, such as $PSTAKE, between the Ethereum network and the Core-1 chain."
+    title:
+      "Which coin-type address is supported on the Persistence Core-1 chain?",
+    content: (
+      <>
+        Currently, both 118 & 750 coin-type addresses are supported by the
+        Persistence Core-1 chain and will work as normal. <br /> However, we
+        advise users to migrate to the coin-type 118 wallet address as the
+        support for 750 coin-type wallets is proposed to deprecate in December
+        2024.
+      </>
+    )
+  }
+];
+
+const liquidStaking = [
+  {
+    title: "What is liquid Staking?",
+    content: (
+      <>
+        Liquid Staking is the process of staking your proof-of-stake (PoS)
+        tokens and receiving a liquid token in return, which can be used in DeFi
+        for trading, liquidity provisioning, lending, or borrowing.
+      </>
+    )
+  },
+  {
+    title: "What are the benefits of Liquid Staking?",
+    content: (
+      <>
+        Liquid Staking provides several benefits, including unlocking the
+        liquidity of otherwise locked staked assets, maximising its capital
+        efficiency, and providing greater flexibility and potentially higher
+        returns compared to traditional staking methods. With Liquid Staking,
+        users no longer have to choose between staking and DeFi; they can do
+        both.
+      </>
+    )
+  }
+];
+
+const getInvolve = [
+  {
+    title: "How to get involved?",
+    content: (
+      <>
+        To get involved, you can reach out to us on any of our social channels -
+        Twitter, Telegram, Discord, Forum.
+      </>
+    )
+  },
+  {
+    title: "Who are the core team members of Persistence?",
+    content: (
+      <div>
+        The Persistence team currently comprises ~30 members. The Core team
+        members of Persistence are -
+        <ul className="links">
+          <li>Tushar Aggarwal: Founder & CEO</li>
+          <li>Jeroen Develter: Ecosystem lead</li>
+          <li>Mikhil Pandey: pSTAKE lead</li>
+          <li>Puneet Mahajan: Tech lead</li>
+        </ul>
+      </div>
+    )
   }
 ];
 const Faq = () => {
@@ -298,15 +482,66 @@ const Faq = () => {
         <div className="container">
           <h1 className="section-title">FAQs</h1>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-10">
               <div className="info">
+                <p className="info-heading">About Persistence</p>
                 <Accordion>
-                  {list.map((item, index) => (
-                    <Card>
+                  {aboutPersistence.map((item, index) => (
+                    <Card key={index}>
                       <Card.Header>
-                        <p>{item.title}</p>
                         <ContextAwareToggle eventKey={index.toString()}>
-                          Click me!
+                          {item.title}
+                        </ContextAwareToggle>
+                      </Card.Header>
+                      <Accordion.Collapse eventKey={index.toString()}>
+                        <Card.Body>{item.content}</Card.Body>
+                      </Accordion.Collapse>
+                    </Card>
+                  ))}
+                </Accordion>
+              </div>
+              <div className="info">
+                <p className="info-heading">About XPRT</p>
+                <Accordion>
+                  {aboutXprt.map((item, index) => (
+                    <Card key={index}>
+                      <Card.Header>
+                        <ContextAwareToggle eventKey={index.toString()}>
+                          {item.title}
+                        </ContextAwareToggle>
+                      </Card.Header>
+                      <Accordion.Collapse eventKey={index.toString()}>
+                        <Card.Body>{item.content}</Card.Body>
+                      </Accordion.Collapse>
+                    </Card>
+                  ))}
+                </Accordion>
+              </div>
+              <div className="info">
+                <p className="info-heading">Liquid Staking</p>
+                <Accordion>
+                  {liquidStaking.map((item, index) => (
+                    <Card key={index}>
+                      <Card.Header>
+                        <ContextAwareToggle eventKey={index.toString()}>
+                          {item.title}
+                        </ContextAwareToggle>
+                      </Card.Header>
+                      <Accordion.Collapse eventKey={index.toString()}>
+                        <Card.Body>{item.content}</Card.Body>
+                      </Accordion.Collapse>
+                    </Card>
+                  ))}
+                </Accordion>
+              </div>
+              <div className="info">
+                <p className="info-heading">Get involved</p>
+                <Accordion>
+                  {getInvolve.map((item, index) => (
+                    <Card key={index}>
+                      <Card.Header>
+                        <ContextAwareToggle eventKey={index.toString()}>
+                          {item.title}
                         </ContextAwareToggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey={index.toString()}>
