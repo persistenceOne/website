@@ -38,13 +38,11 @@ const socialList = [
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [isActive, setIsActive] = useState(false);
 
   const { t } = useTranslation();
   useEffect(() => {
     document.body.classList = "";
     window.addEventListener("scroll", scrollNavigation, true);
-    setIsActive((current) => !current);
   }, []);
 
   const toggleMenu = () => {

@@ -1,6 +1,5 @@
 import React from "react";
 import icon from "../../../assets/images1/persistencefooterlogo.svg";
-import Mailchimp from "./MailChimp";
 import ReactGa from "react-ga4";
 import Icon from "../../Icon";
 import { useTranslation } from "react-i18next";
@@ -11,8 +10,7 @@ import {
   PERSISTENCEONE_TELEGRAM_ANNOUNCEMENTS_URL,
   PERSISTENCEONE_REDDIT_URL,
   PERSISTENCEONE_YOUTUBE_URL,
-  PERSISTENCEONE_MEDIUM_URL,
-  PERSISTENCEONE_LINKEDIN_URL
+  PERSISTENCEONE_MEDIUM_URL
 } from "../../../constants/config";
 
 const socialList = [
@@ -67,8 +65,8 @@ const Footer = (props) => {
     <>
       <footer className="footer">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-md-12">
+          <div className="row tiles">
+            <div className="col-lg-6 col-md-12 tile">
               <div className="text-muted">
                 <a
                   href="/ecosystem"
@@ -102,27 +100,22 @@ const Footer = (props) => {
                 </a>
               </div>
             </div>
-            <div className="col-lg-6 col-md-12 m-0 row justify-content-end">
-              <div className="contact-us">
-                <div className="social-links-section">
-                  <h6 className="title"> {t("FOLLOW_US")}</h6>
-                  <ul className="list-unstyled footer-list">
-                    {socialList.map((item, index) => (
-                      <a
-                        href={item.url}
-                        key={index}
-                        onClick={() => socialIcon(item.iconName)}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <Icon
-                          viewClass="social_icon_imgg"
-                          icon={item.iconName}
-                        />
-                      </a>
-                    ))}
-                  </ul>
-                </div>
+            <div className="col-lg-6 col-md-12 m-0 row justify-content-lg-end tile">
+              <div className="social-links-section">
+                <h6 className="title"> {t("FOLLOW_US")}</h6>
+                <ul className="list-unstyled footer-list">
+                  {socialList.map((item, index) => (
+                    <a
+                      href={item.url}
+                      key={index}
+                      onClick={() => socialIcon(item.iconName)}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <Icon viewClass="social_icon_imgg" icon={item.iconName} />
+                    </a>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

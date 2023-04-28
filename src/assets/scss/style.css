@@ -636,7 +636,8 @@ a {
     color: rgba(0, 0, 0, 0.69); }
   .footer .social-links-section {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     .footer .social-links-section .title {
       margin: 0;
       margin-right: 16px; }
@@ -2307,7 +2308,20 @@ button:disabled {
     padding: 130px 0 100px 0; }
 
   .navbar.navbar-custom .navbar-brand img {
-    width: 120px; } }
+    width: 120px; }
+
+  .footer .tiles .tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px; }
+    .footer .tiles .tile .footer-item {
+      margin: 10px; }
+    .footer .tiles .tile .social-links-section {
+      justify-content: center; }
+      .footer .tiles .tile .social-links-section .title {
+        font-size: 20px;
+        margin-bottom: 10px; } }
 @media (max-width: 991.98px) {
   .home-ecosystem-section.ecosystem-section.ecos {
     padding: 85px 0; }

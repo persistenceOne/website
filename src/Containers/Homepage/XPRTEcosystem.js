@@ -3,60 +3,7 @@ import { Card, CardGroup } from "react-bootstrap";
 import validator from "../../assets/images1/validatoricon.svg";
 import community from "../../assets/images1/community.svg";
 import build from "../../assets/images1/buildon.svg";
-import Icon from "../../components/Icon";
-import {
-  PERSISTENCEONE_DISCORD_URL,
-  PERSISTENCEONE_GITHUB_URL,
-  PERSISTENCEONE_MEDIUM_URL,
-  PERSISTENCEONE_REDDIT_URL,
-  PERSISTENCEONE_TELEGRAM_URL,
-  PERSISTENCEONE_TWITTER_URL,
-  PERSISTENCEONE_YOUTUBE_URL
-} from "../../constants/config";
-import ReactGa from "react-ga4";
-const socialList = [
-  {
-    url: PERSISTENCEONE_TWITTER_URL,
-    iconName: "twitter-logo",
-    tooltip: "twitter"
-  },
-  {
-    url: PERSISTENCEONE_YOUTUBE_URL,
-    iconName: "youtube",
-    tooltip: "youtube"
-  },
-  {
-    url: PERSISTENCEONE_MEDIUM_URL,
-    iconName: "mediumlink",
-    tooltip: "medium"
-  },
-  {
-    url: PERSISTENCEONE_REDDIT_URL,
-    iconName: "reddit-round",
-    tooltip: "reddit"
-  },
-  {
-    url: PERSISTENCEONE_TELEGRAM_URL,
-    iconName: "telegram-plane",
-    tooltip: "telegram"
-  },
-  {
-    url: PERSISTENCEONE_DISCORD_URL,
-    iconName: "discord",
-    tooltip: "discord"
-  },
-  {
-    url: PERSISTENCEONE_GITHUB_URL,
-    iconName: "github",
-    tooltip: "github"
-  }
-];
-const socialIcon = (iconName) => {
-  ReactGa.event({
-    category: "Sociallinks",
-    action: "Clicked on " + iconName
-  });
-};
+
 const XPRTEcosystem = () => {
   return (
     <section className="home-ecosystem-section xprtecosystem">

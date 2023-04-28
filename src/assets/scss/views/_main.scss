@@ -854,7 +854,7 @@ a {
   .social-links-section {
     display: flex;
     align-items: center;
-
+    flex-wrap: wrap;
     .title{
       margin: 0;
       margin-right: 16px;
