@@ -6,6 +6,12 @@ import {
   useAccordionToggle
 } from "react-bootstrap";
 import Icon from "../../components/Icon";
+import {
+  FORUM_PERSISTENCE,
+  PERSISTENCEONE_DISCORD_URL,
+  PERSISTENCEONE_TELEGRAM_URL,
+  PERSISTENCEONE_TWITTER_URL
+} from "../../constants/config";
 
 function ContextAwareToggle({ children, eventKey, callback }) {
   const currentEventKey = useContext(AccordionContext);
@@ -48,7 +54,7 @@ const aboutPersistence = [
   },
   {
     title: "What consensus mechanism does Persistence use?",
-    content: "Persistence uses the Tendermint dPOS BFT Consensus Mechanism."
+    content: "Persistence uses the CometBFT Consensus Mechanism."
   },
   {
     title: "Is Persistence an IBC-enabled chain?",
@@ -264,6 +270,7 @@ const aboutXprt = [
         >
           <u>Huobi</u>
         </a>
+        ,&nbsp;
         <a
           href={"https://www.kucoin.com/"}
           target="_blank"
@@ -271,6 +278,7 @@ const aboutXprt = [
         >
           <u>Kucoin</u>
         </a>
+        ,&nbsp;
         <a
           href={"https://www.gate.io/"}
           target="_blank"
@@ -278,6 +286,7 @@ const aboutXprt = [
         >
           <u>Gate.io </u>
         </a>
+        ,&nbsp;
         <a
           href={"https://ascendex.com/en/global-digital-asset-platform"}
           target="_blank"
@@ -285,10 +294,10 @@ const aboutXprt = [
         >
           <u>Ascendex </u>
         </a>
-        , etc, and Decentralized Exchanges such as Osmosis, Dexter, and Helix.
-        (Please note that this is only for informational purposes; it is in no
-        way an endorsement of any particular exchange or financial or investment
-        advice.
+        &nbsp;, etc, and Decentralized Exchanges such as Osmosis, Dexter, and
+        Helix. (Please note that this is only for informational purposes; it is
+        in no way an endorsement of any particular exchange or financial or
+        investment advice.
       </div>
     )
   },
@@ -304,6 +313,7 @@ const aboutXprt = [
         community votes for passing proposals, voting on software upgrades,
         changing consensus parameters and spending funds from the community pool
         or the ecosystem funds etc. The easiest way to vote currently is via the
+        &nbsp;
         <a
           href={"https://wallet.keplr.app/chains/persistence?tab=governance"}
           target="_blank"
@@ -311,8 +321,8 @@ const aboutXprt = [
         >
           <u>Keplr Dashboard.</u>
         </a>
-        The community members can also pitch ideas and share suggestions or
-        feedback on the
+        &nbsp; The community members can also pitch ideas and share suggestions
+        or feedback on the&nbsp;
         <a
           href={"https://forum.persistence.one/"}
           target="_blank"
@@ -443,6 +453,18 @@ const liquidStaking = [
         both.
       </>
     )
+  },
+  {
+    title: "What are the risks associated with Liquid Staking?",
+    content: (
+      <>
+        Liquid Staking is a fairly novel mechanism and comes with its own set of
+        risks. Some of them include low LST liquidity, LST depeg on secondary
+        markets, smart contract risk, LST integrations’ counterparty risk,
+        governance risk to underlying chain, network centralization risk,
+        custodial solution risk, slashing risk, among others.
+      </>
+    )
   }
 ];
 
@@ -451,8 +473,34 @@ const getInvolve = [
     title: "How to get involved?",
     content: (
       <>
-        To get involved, you can reach out to us on any of our social channels -
-        Twitter, Telegram, Discord, Forum.
+        To get involved, you can reach out to us on any of our social channels -{" "}
+        <a
+          href={PERSISTENCEONE_TWITTER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Twitter</u>
+        </a>
+        ,{" "}
+        <a
+          href={PERSISTENCEONE_TELEGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Telegram</u>
+        </a>
+        ,{" "}
+        <a
+          href={PERSISTENCEONE_DISCORD_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <u>Discord</u>
+        </a>
+        ,{" "}
+        <a href={FORUM_PERSISTENCE} target="_blank" rel="noopener noreferrer">
+          <u>Forum</u>
+        </a>
       </>
     )
   },
