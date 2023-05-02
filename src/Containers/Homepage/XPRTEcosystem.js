@@ -20,19 +20,19 @@ const XPRTEcosystem = () => {
             <Card className={"h-100"}>
               <div className={"card-section"}>
                 <Card.Body>
-                  <div className={"symbol-section"}>
-                    <Card.Img variant="top" src={build} />
-
-                    <h5>&nbsp;</h5>
+                  <div>
+                    <div className={"symbol-section"}>
+                      <Card.Img variant="top" src={build} />
+                      <h5>&nbsp;</h5>
+                    </div>
+                    <Card.Title className={"mb-3 mt-4"}>
+                      Build on Persistence
+                    </Card.Title>
+                    <Card.Text>
+                      To create innovative use cases around liquid staked assets
+                      / LSTs
+                    </Card.Text>
                   </div>
-
-                  <Card.Title className={"mb-3 mt-4"}>
-                    Build on Persistence
-                  </Card.Title>
-                  <Card.Text>
-                    To create innovative use cases around liquid staked assets /
-                    LSTs
-                  </Card.Text>
                   <div className={"button-section cards-buttons mt-2"}>
                     <a
                       href="https://docs.persistence.one/build/grants"
@@ -57,17 +57,19 @@ const XPRTEcosystem = () => {
             <Card className={"h-100"}>
               <div className={"card-section h-100"}>
                 <Card.Body>
-                  <div className={"symbol-section"}>
-                    <Card.Img variant="top" src={validator} />
-                    <h5>&nbsp;</h5>
+                  <div>
+                    <div className={"symbol-section"}>
+                      <Card.Img variant="top" src={validator} />
+                      <h5>&nbsp;</h5>
+                    </div>
+                    <Card.Title className={"mb-3 mt-4"}>
+                      Govern with XPRT
+                    </Card.Title>
+                    <Card.Text>
+                      To become the voice of the Persistence community in
+                      deciding the future of the network
+                    </Card.Text>
                   </div>
-                  <Card.Title className={"mb-3 mt-4"}>
-                    Govern with XPRT
-                  </Card.Title>
-                  <Card.Text>
-                    To become the voice of the Persistence community in deciding
-                    the future of the network
-                  </Card.Text>
 
                   <div
                     className={"comingsoon cards-buttons button-section mt-2"}
@@ -95,15 +97,16 @@ const XPRTEcosystem = () => {
             <Card className={"h-100"}>
               <div className={"card-section h-100"}>
                 <Card.Body>
-                  <div className={"symbol-section"}>
-                    <Card.Img variant="top" src={community} />
-                    <h5>&nbsp;</h5>
+                  <div>
+                    <div className={"symbol-section"}>
+                      <Card.Img variant="top" src={community} />
+                      <h5>&nbsp;</h5>
+                    </div>
+                    <Card.Title className={"mb-3 mt-4"}>
+                      Become a validator
+                    </Card.Title>
+                    <Card.Text>To help secure the core-1 chain</Card.Text>
                   </div>
-                  <Card.Title className={"mb-3 mt-4"}>
-                    Become a validator
-                  </Card.Title>
-                  <Card.Text>To help secure the core-1 chain</Card.Text>
-
                   <div
                     className={"comingsoon cards-buttons button-section mt-2"}
                   >
