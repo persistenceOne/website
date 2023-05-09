@@ -29,8 +29,7 @@ const XPRTEcosystem = () => {
                       Build on Persistence
                     </Card.Title>
                     <Card.Text>
-                      To create innovative use cases around liquid staked assets
-                      / LSTs
+                      To create innovative use cases around liquid staked assets/LSTs
                     </Card.Text>
                   </div>
                   <div className={"button-section cards-buttons mt-2"}>
