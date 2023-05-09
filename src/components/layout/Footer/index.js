@@ -69,14 +69,14 @@ const Footer = (props) => {
             <div className="col-lg-6 col-md-12 tile">
               <div className="text-muted">
                 <a
-                  href="/ecosystem"
+                  href="https://docs.persistence.one/"
                   rel="noopener noreferrer"
                   className="footer-item"
                 >
                   Docs
                 </a>
                 <a
-                  href="https://angel.co/company/persistence-one-1"
+                  href="https://careers.persistence.one/jobs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-item"
