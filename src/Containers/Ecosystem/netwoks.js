@@ -218,15 +218,6 @@ export const ecosystemList = [
     builtOnPersistence: false
   },
   {
-    network: "Injective Protocol",
-    description: "Smart Contracts platform optimised for DeFi",
-    icon: "inj",
-    name: "Defi",
-    status: "Live",
-    wikilink: "https://injective.exchange/spot/xprt-usdt",
-    builtOnPersistence: false
-  },
-  {
     network: "Restake",
     description: "Defi partner",
     icon: "restake",

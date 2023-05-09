@@ -17,18 +17,18 @@ const responsive = {
 };
 const images = [
   {
-    url: "https://blog.persistence.one/2022/02/10/the-vision-for-persistence-and-xprt-value-accrual/",
+    url: "https://blog.persistence.one/2023/04/25/persistence-2023-liquid-staking-roadmap-update/",
     image:
-      "https://blog.persistence.one/wp-content/uploads/2022/06/XPRT-utility-and-value-accrual.png",
-    title: "The Vision for Persistence",
-    subtitle: "$XPRT TOKEN"
+      "https://blog.persistence.one/wp-content/uploads/2023/04/23_Persistence-min.png",
+    title: "Roadmap Update",
+    subtitle: "2023"
   },
   {
-    url: "https://blog.persistence.one/2022/02/07/from-the-founders-desk-mission-2022/",
+    url: "https://blog.persistence.one/2023/04/17/persistence-quarterly-recap-q1-2023/",
     image:
-      "https://blog.persistence.one/wp-content/uploads/2022/06/0-ZgVUN-HPoMTO5AEO.jpg",
-    title: "From the Founder’s Desk",
-    subtitle: "MISSION 2022"
+      "https://blog.persistence.one/wp-content/uploads/2023/04/Q1_Persistence-min.png",
+    title: "Persistence Quarterly Recap",
+    subtitle: "Q1 2023"
   },
   {
     url: "https://blog.persistence.one/2022/06/03/community-newsletter-20-may-2022/",

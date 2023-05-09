@@ -69,25 +69,25 @@ const EcosystemContent = () => {
             className={active === "Explorer" ? "active" : undefined}
             onClick={() => handleClick("Explorer")}
           >
-            EXPLORER
+           Explorer
           </button>
           <button
             className={active === "Wallet" ? "active" : undefined}
             onClick={() => handleClick("Wallet")}
           >
-            WALLETS
+            Wallets
           </button>
           <button
             className={active === "Defi" ? "active" : undefined}
             onClick={() => handleClick("Defi")}
           >
-            DEFI
+            Defi partner
           </button>
           <button
             className={active === "Tools" ? "active" : undefined}
             onClick={() => handleClick("Tools")}
           >
-            TOOLS
+            Tool/Dashboard
           </button>
         </div>
         <div className="network-section">

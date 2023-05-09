@@ -294,8 +294,28 @@ const aboutXprt = [
         >
           <u>Ascendex </u>
         </a>
-        &nbsp;, etc, and Decentralized Exchanges such as Osmosis, Dexter, and
-        Helix. (Please note that this is only for informational purposes; it is
+        &nbsp;, etc, and Decentralized Exchanges such as <a
+          href={"https://osmosis.zone/"}
+          target="_blank"
+          rel="noopener noreferrer"
+      >
+          <u>Osmosis </u>
+      </a>
+          &nbsp;, <a
+          href={"https://www.dexter.zone/"}
+          target="_blank"
+          rel="noopener noreferrer"
+      >
+          <u>Dexter </u>
+      </a>
+          &nbsp;and&nbsp;
+          <a
+              href={"https://helixapp.com/"}
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+              <u>Helix </u>
+          </a>. (Please note that this is only for informational purposes; it is
         in no way an endorsement of any particular exchange or financial or
         investment advice.
       </div>
@@ -511,10 +531,40 @@ const getInvolve = [
         The Persistence team currently comprises ~30 members. The Core team
         members of Persistence are -
         <ul className="links">
-          <li>Tushar Aggarwal: Founder & CEO</li>
-          <li>Jeroen Develter: Ecosystem lead</li>
-          <li>Mikhil Pandey: pSTAKE lead</li>
-          <li>Puneet Mahajan: Tech lead</li>
+          <li>
+              <a
+                  href="https://twitter.com/Tushar307?s=20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                  <u>Tushar Aggarwal: Founder & CEO</u>{" "}
+              </a>
+          </li>
+          <li>
+              <a
+                  href="https://twitter.com/dneorej?s=20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                  <u>Jeroen Develter: Ecosystem lead</u>{" "}
+              </a>
+              </li>
+          <li>
+              <a
+              href="https://twitter.com/PandeyMikhil?s=20"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+              <u>Mikhil Pandey: pSTAKE lead</u>{" "}
+          </a>
+              </li>
+          <li><a
+              href="https://twitter.com/puneet_m_?s=20"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+              <u>Puneet Mahajan: Tech lead</u>{" "}
+          </a></li>
         </ul>
       </div>
     )

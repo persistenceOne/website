@@ -88,7 +88,7 @@ const XPRTEcosystem = () => {
                       target="_blank"
                       className="button-initial button ml-3"
                     >
-                      on-chain proposals
+                      Proposals
                     </a>
                   </div>
                 </Card.Body>
