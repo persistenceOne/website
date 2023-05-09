@@ -60,12 +60,6 @@ const EcosystemContent = () => {
             Built on Persistence
           </button>
           <button
-            className={active === "dApp" ? "active" : undefined}
-            onClick={() => handleClick("dApp")}
-          >
-            DAPPS
-          </button>
-          <button
             className={active === "Explorer" ? "active" : undefined}
             onClick={() => handleClick("Explorer")}
           >
