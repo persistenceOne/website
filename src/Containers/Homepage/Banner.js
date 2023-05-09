@@ -10,13 +10,8 @@ const Banner = () => {
               <span>Liquid Staking Hub</span>
             </p>
             <p className="text">
-              Persistence is a Tendermint based specialized Layer-1 powering an
-              ecosystem
-              <span>
-                {" "}
-                of DeFi applications focused on unlocking the liquidity of
-                staked assets.
-              </span>
+              Persistence is an app chain for Liquid Staking powering an ecosystem<br/>
+              of DeFi applications focused on unlocking the liquidity of staked assets.
             </p>
             <div className={"button-section text-center d-inline-block"}>
               <a
