@@ -5,11 +5,23 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  .on-chain{
+      margin-top: 40px;
+    h6{
+      font-size: 16px;
+      font-weight: 400;
+      color: #B0B0B0;
+    }
+    img{
+      margin: 0px 10px;
+    }
+  }
 
   .stats-container{
     display: flex;
     position: relative;
-    margin-top: 64px;
+    margin-top: 24px;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0px 15px;
     .stats-section {

@@ -16,6 +16,7 @@
     "react-bootstrap": "^1.4.3",
     "react-copy-to-clipboard": "^5.0.3",
     "react-countdown": "^2.3.1",
+    "react-countup": "^6.4.2",
     "react-dom": "^16.13.1",
     "react-ga4": "^1.4.1",
     "react-i18next": "^11.8.6",
@@ -58,7 +59,6 @@
   },
   "devDependencies": {
     "@cloudflare/wrangler": "^1.19.12",
-
     "@metamask/detect-provider": "^1.2.0"
   }
 }

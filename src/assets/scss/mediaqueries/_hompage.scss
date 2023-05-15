@@ -259,10 +259,6 @@
     font-size: 32px;
   }
   .banner-section .stats-container{
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
 .stats-section{
   margin: 10px 0;
 }
@@ -277,7 +273,7 @@
     font-size: 14px;
   }
   .banner-section .stats-container .stats-section h2{
-    font-size: 32px;
+    font-size: 24px;
   }
   .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body{
     padding: 40px 20px 30px 20px;

@@ -120,8 +120,13 @@ const Footer = (props) => {
             </div>
           </div>
         </div>
-        <div className="container footer-bottom-section">
-          <div className="col-lg-6 footer-logo-section container ">
+        <div className="container">
+          <div className="row footer-bottom-section">
+          <div className={"col-lg-6"}>
+            <span className="copy-rights mr-3 ml-3">{new Date().getFullYear()}</span>
+          </div>
+          <div className="col-lg-6 footer-logo-section">
+            <span className="mr-3 ml-3">POWERED BY</span>
             <img
               className="dark-logo"
               src={icon}
@@ -129,11 +134,7 @@ const Footer = (props) => {
               title="logo"
             />
             &emsp;
-            {/*<span className="copy-rights mb-sm-0">{new Date().getFullYear()} © {t("Persistence.one | Privacy | Security")}</span>*/}
           </div>
-          <div className={"col-lg-6 text-right"}>
-            {/*<p className="copy-rights mb-sm-0">Built with <Icon viewClass="social_icon_imgg"*/}
-            {/*                                                    icon={'love'} /></p>*/}
           </div>
         </div>
         <div></div>

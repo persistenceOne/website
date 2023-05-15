@@ -28,7 +28,7 @@ const Ecosystem = () => {
                   </Card.Text>
                   <div className={"networks mt-4"}>
                     <h5>
-                      <span>Live&nbsp;on&nbsp;</span>
+                      <span>Live&nbsp;for&nbsp;</span>
                       <img src={atom} alt="Atom" title="Atom" />
                       <img src={bnb} alt={"BNB"} title="BNB" />
                       <img src={eth} alt="ETH" title="ETH" />
@@ -49,7 +49,7 @@ const Ecosystem = () => {
                       target="_blank"
                       className="button-initial button two"
                     >
-                      Explore
+                      Learn More
                     </a>
                   </div>
                 </Card.Body>
@@ -85,7 +85,7 @@ const Ecosystem = () => {
                         target="_blank"
                         className="button-initial button two"
                       >
-                        Explore
+                        Learn More
                       </a>
                     </div>
                   </div>

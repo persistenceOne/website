@@ -4,7 +4,6 @@ import xprt_value from "../../assets/images1/value.png";
 import economics from "../../assets/images1/economics.png";
 import ecosystem from "../../assets/images1/ecosystem.svg";
 import helix from "../../assets/images1/aquire/helix.svg";
-import juno_swap from "../../assets/images1/aquire/juno_swap.svg";
 import osmosis from "../../assets/images1/aquire/osmosis.svg";
 import ascendex from "../../assets/images1/aquire/ascendex.png";
 import houbi from "../../assets/images1/aquire/houbi.svg";
@@ -17,7 +16,7 @@ const Banner = () => {
     <section className="xprt-banner-section">
       <div className="container">
         <div className="content row">
-          <div className="left col-md-6">
+          <div className="left col-md-5">
             <div className="xprt-title-box">
               <p>
                 X<span>P</span>RT
@@ -66,7 +65,7 @@ const Banner = () => {
                 </a>
 
                 <a
-                  href="https://medium.com/persistence-blog/the-vision-for-persistence-and-xprt-value-accrual-53fd56619e3d"
+                  href="https://blog.persistence.one/2022/02/10/the-vision-for-persistence-and-xprt-value-accrual/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button-secondary"
@@ -76,7 +75,7 @@ const Banner = () => {
               </div>
             </div>
           </div>
-          <div className="right col-md-6">
+          <div className="right col-md-7">
             <img src={ecosystem} alt={ecosystem} />
           </div>
         </div>
@@ -138,14 +137,6 @@ const Banner = () => {
               className="inner-item"
             >
               <img src={osmosis} alt={osmosis} className="logo-img" />
-            </a>
-            <a
-              href="https://junoswap.com/pools/JUNO-XPRT"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={juno_swap} alt={juno_swap} className="logo-img" />
             </a>
           </div>
         </div>

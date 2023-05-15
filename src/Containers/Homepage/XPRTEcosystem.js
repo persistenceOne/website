@@ -110,7 +110,7 @@ const XPRTEcosystem = () => {
                     className={"comingsoon cards-buttons button-section mt-2"}
                   >
                     <a
-                      href="https://github.com/persistenceOne/awesome-persistence/blob/main/Validator.md"
+                      href="https://docs.persistence.one/build/validators"
                       rel="noopener noreferrer"
                       className="button-initial button"
                     >
@@ -121,7 +121,7 @@ const XPRTEcosystem = () => {
                       rel="noopener noreferrer"
                       className="button-initial button ml-3"
                     >
-                      Foundation-delegations
+                      Foundation Delegation
                     </a>
                   </div>
                 </Card.Body>
