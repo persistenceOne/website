@@ -126,7 +126,7 @@ const Footer = (props) => {
             <span className="copy-rights mr-3 ml-3">{new Date().getFullYear()}</span>
           </div>
           <div className="col-lg-6 footer-logo-section">
-            <span className="mr-3 ml-3">POWERED BY</span>
+            <span className="mr-3 ml-3">Powered by</span>
             <img
               className="dark-logo"
               src={icon}

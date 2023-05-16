@@ -75,7 +75,7 @@ const Banner = () => {
                 <h6 className="home-desc">Chain TVL</h6>
               </div>
               <div className="stats-section col-6">
-                <h2> $<CountUp start={0} end={Number(5430300)} duration={3}/></h2>
+                <h2> $<CountUp start={0} end={Number(5317000)} duration={3}/></h2>
                 <h6 className="home-desc">IBC volume (30 Days)</h6>
               </div>
             </div>

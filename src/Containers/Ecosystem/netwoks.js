@@ -54,15 +54,6 @@ export const ecosystemList = [
     builtOnPersistence: false
   },
   {
-    network: "Junoswap",
-    description: "Decentralised Exchange",
-    icon: "junoswap",
-    name: "Defi",
-    status: "Live",
-    wikilink: "https://junoswap.com/pools/JUNO-XPRT",
-    builtOnPersistence: false
-  },
-  {
     network: "Shade",
     description: "The Super App For Private DeFi",
     icon: "shade",
@@ -242,6 +233,15 @@ export const ecosystemList = [
     name: "Defi",
     status: "Live",
     wikilink: "https://restake.app/persistence",
+    builtOnPersistence: false
+  },
+  {
+    network: "Junoswap",
+    description: "Decentralised Exchange",
+    icon: "junoswap",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://junoswap.com/pools/JUNO-XPRT",
     builtOnPersistence: false
   },
   {
