@@ -26,11 +26,6 @@ const images = [
     image: "https://miro.medium.com/max/1400/1*ZQmstOH9DYK30v8zQWB8-g.png",
     text: "XPRT Staking Guide"
   },
-  {
-    url: "https://medium.com/persistence-blog/the-vision-for-persistence-and-xprt-value-accrual-53fd56619e3d",
-    image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*yyGtq7g0FQRKsmzIWdP6Rw.png",
-    text: "Utility and XPRT Value Accrual"
-  }
 ];
 
 const Blogs = ({ deviceType }) => {

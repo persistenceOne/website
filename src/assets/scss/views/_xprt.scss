@@ -133,7 +133,7 @@
       align-items: center;
       justify-content: center;
       img{
-        max-width: 520px;
+        max-width: 640px;
         width: 100%;
       }
     }
@@ -346,6 +346,7 @@
 
 .stay-updated.xprt{
   .react-multi-carousel-list {
+    justify-content: center;
     padding-bottom: 50px;
     .react-multi-carousel-item{
       height: 235px;
