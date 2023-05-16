@@ -63,9 +63,27 @@ export const ecosystemList = [
     builtOnPersistence: false
   },
   {
+    network: "Shade",
+    description: "The Super App For Private DeFi",
+    icon: "shade",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://shadeprotocol.io/",
+    builtOnPersistence: false
+  },
+  {
+    network: "Yieldmos",
+    description: "Yield Optimizer",
+    icon: "yieldmos",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://www.yieldmos.com/strategies/",
+    builtOnPersistence: false
+  },
+  {
     network: "Crescent",
     description:
-      "Decentralised Exchange(stkATOM’s DeFi Partner for ranged pool)",
+      "Decentralised Exchange",
     icon: "crescent",
     name: "Defi",
     status: "Live",

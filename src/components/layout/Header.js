@@ -100,12 +100,20 @@ const Header = () => {
               <NavLink to="/ecosystem" className="nav-link dropdown-toggle">
                 Ecosystem
               </NavLink>
-              <NavLink to="/xprt" className="nav-link dropdown-toggle">
-                XPRT
-              </NavLink>
               <NavLink to="/faq" className="nav-link dropdown-toggle">
                 FAQ
               </NavLink>
+              <Nav.Link
+                  className="nav-link dropdown-toggle"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="http://docs.persistence.one/"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+              >
+                {t("DOCS")}
+              </Nav.Link>
               <Nav.Link
                 className="nav-link dropdown-toggle"
                 rel="noopener noreferrer"

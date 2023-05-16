@@ -27,9 +27,9 @@ const images = [
     text: "XPRT Staking Guide"
   },
   {
-    url: "https://www.youtube.com/watch?v=QG7VCqGFc_8",
-    image: "https://img.youtube.com/vi/QG7VCqGFc_8/hqdefault.jpg",
-    text: "Provide Liquidity on Osmosis"
+    url: "https://medium.com/persistence-blog/the-vision-for-persistence-and-xprt-value-accrual-53fd56619e3d",
+    image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*yyGtq7g0FQRKsmzIWdP6Rw.png",
+    text: "Utility and XPRT Value Accrual"
   }
 ];
 

@@ -69,7 +69,7 @@ const EcosystemContent = () => {
             className={active === "Wallet" ? "active" : undefined}
             onClick={() => handleClick("Wallet")}
           >
-            Wallets
+            Wallet
           </button>
           <button
             className={active === "Defi" ? "active" : undefined}

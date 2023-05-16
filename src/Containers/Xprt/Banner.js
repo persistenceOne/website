@@ -3,13 +3,6 @@ import xprt_role from "../../assets/images1/role.png";
 import xprt_value from "../../assets/images1/value.png";
 import economics from "../../assets/images1/economics.png";
 import ecosystem from "../../assets/images1/ecosystem.svg";
-import helix from "../../assets/images1/aquire/helix.svg";
-import osmosis from "../../assets/images1/aquire/osmosis.svg";
-import ascendex from "../../assets/images1/aquire/ascendex.png";
-import houbi from "../../assets/images1/aquire/houbi.svg";
-import gate_io from "../../assets/images1/aquire/gate_io.svg";
-import kucoin from "../../assets/images1/aquire/kucoin.svg";
-import dexter from "../../assets/images1/logos/dexter.svg";
 
 const Banner = () => {
   return (
@@ -36,7 +29,7 @@ const Banner = () => {
                 long-term success of the ecosystem.
               </p>
               <p className="item-heading">
-                <img src={xprt_value} alt={xprt_value} /> Value Accrual
+                <img src={xprt_value} alt={xprt_value} />Token Utility
               </p>
               <p className="item-text">
                 XPRT accrues value from the ecosystem’s financial activity
@@ -77,67 +70,6 @@ const Banner = () => {
           </div>
           <div className="right col-md-7">
             <img src={ecosystem} alt={ecosystem} />
-          </div>
-        </div>
-        <div className="aquire-content">
-          <p className="title">Acquire XPRT</p>
-          <div className="logos">
-            <a
-              href="https://www.huobi.com/en-us/exchange/xprt_usdt/"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={houbi} alt={houbi} className="logo-img" />
-            </a>
-            <a
-              href="https://www.kucoin.com/trade/XPRT-USDT"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={kucoin} alt={kucoin} className="logo-img" />
-            </a>
-            <a
-              href="https://ascendex.com/en/cashtrade-spottrading/usdt/xprt"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={ascendex} alt={ascendex} className="logo-img" />
-            </a>
-            <a
-              href="https://www.gate.io/trade/XPRT_USDT"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={gate_io} alt={gate_io} className="logo-img" />
-            </a>
-            <a
-              href="https://www.dexter.zone/"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={dexter} width={120} alt={dexter} className="logo-img" />
-            </a>
-            <a
-              href="https://helixapp.com/"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={helix} width={120} alt={helix} className="logo-img" />
-            </a>
-            <a
-              href="https://info.osmosis.zone/token/XPRT"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="inner-item"
-            >
-              <img src={osmosis} alt={osmosis} className="logo-img" />
-            </a>
           </div>
         </div>
       </div>
