@@ -316,5 +316,14 @@ export const ecosystemList = [
     status: "Live",
     wikilink: "https://www.cosmodash.zone/",
     builtOnPersistence: false
-  }
+  },
+  {
+    network: "Unagii",
+    description: "Multi Chain native web3 & DeFi integrations",
+    icon: "unagii",
+    name: "Defi",
+    status: "Live",
+    wikilink: "https://www.unagii.com/",
+    builtOnPersistence: false
+  },
 ];
