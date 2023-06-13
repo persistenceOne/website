@@ -13,7 +13,7 @@ const Banner = () => {
     }
     fetch();
   },[])
-  console.log(Number(chainTvl), "dddd");
+
   return (
     <section className="banner-section">
       <div className="container">

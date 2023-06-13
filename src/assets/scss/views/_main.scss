@@ -270,31 +270,41 @@ a {
     flex-direction: column;
     .bannernav-section {
       width: 100%;
-      background: #FFFFFF;
+      background-image: url(./../../images1/top_banner_bg.svg) , linear-gradient(90deg, #015D74 0%, #023B53 100%);;
       position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
       top: 0px;
       .alert-dismissible .close {
         position: absolute;
         top: 3px;
         cursor: pointer;
         right: -25px;
-        padding: 0.75rem 1.25rem;
-        color: inherit;
-        color: #fff;
-        width: 50px;
+        padding: 0.25rem;
+        color: #FCFCFC;
         opacity: 1;
+        .icon{
+          fill: #fff;
+          width: 10px;
+          height: 10px;
+        }
       }
       .nav-banner {
+        .logo{
+          width: 32px;
+          height: 24px;
+        }
         p {
           margin: 0;
-          font-weight: 500;
-          font-size: 12px;
-          color: #000;
+          font-weight: 400;
+          font-size: 14px;
+          color: #FCFCFC;
           a {
-            color: #000;
-
+            color: #FCFCFC;
+            font-weight: 500;
+            text-decoration: underline;
             &:hover {
-              color: #000;
+              color: #FCFCFC;
             }
           }
         }

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Alert from "react-bootstrap/Alert";
-import close from "../../assets/images1/close_icon.png";
-import stkATOM from "../../assets/images1/stkAtom.svg";
+import stkATOM from "../../assets/images1/logos/dexter_icon.svg";
+import Icon from "../Icon";
 
 const BannerTop = () => {
     const [banner, setBanner] = useState(true);
@@ -9,16 +9,30 @@ const BannerTop = () => {
     const closeBanner = () => {
         setBanner(false);
     }
+
     return (
         banner ?
         <div className="container-fluid bannernav-section">
                 <div className="container">
                     <Alert className="nav-banner alert-dismissible d-flex align-items-center justify-content-center">
-                        <img src={stkATOM} alt={"stkATOM"} width={"26px"} className="pr-2"/>
+                        <img src={stkATOM} alt={"stkATOM"} className="pr-2 logo"/>
                         <p>
-                            Liquid staking solution for ATOM launching on 8th November.
+                            Dexter's Trading Rebate Program is now LIVE. Learn more and trade&nbsp;
+                            <a
+                                className="link"
+                                href={'https://app.dexter.zone/rebate-program'}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <b>here!</b>
+                            </a>
                         </p>
-                        <img src={close} alt="close" className="close" onClick={closeBanner}/>
+                        <div onClick={closeBanner} className="close">
+                        <Icon
+                            viewClass="close fill-[#fff] absolute top-[13px] right-[20px] cursor-pointer"
+                            icon="close"
+                        />
+                        </div>
                     </Alert>
                 </div>
         </div>
