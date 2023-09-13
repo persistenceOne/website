@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Alert from "react-bootstrap/Alert";
-import stkATOM from "../../assets/images1/logos/dexter_icon.svg";
+import stkATOM from "../../assets/images1/stkAtom.svg";
 import Icon from "../Icon";
 
 const BannerTop = () => {
@@ -17,10 +17,10 @@ const BannerTop = () => {
                     <Alert className="nav-banner alert-dismissible d-flex align-items-center justify-content-center">
                         <img src={stkATOM} alt={"stkATOM"} className="pr-2 logo"/>
                         <p>
-                            Dexter's Trading Rebate Program is now LIVE. Learn more and trade&nbsp;
+                            LSM support now live on pSTAKE. Liquid stake your already staked ATOM now.&nbsp;
                             <a
                                 className="link"
-                                href={'https://app.dexter.zone/rebate-program'}
+                                href={'https://cosmos.pstake.finance/'}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
