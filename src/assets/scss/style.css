@@ -222,33 +222,42 @@ a {
   flex-direction: column; }
   .navbar.navbar-custom .bannernav-section {
     width: 100%;
-    background: #FFFFFF;
+    background-image: url(./../../images1/atom_topbar.svg), radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDD 25.4%, #83339D 100%);
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
     top: 0px; }
     .navbar.navbar-custom .bannernav-section .alert-dismissible .close {
       position: absolute;
       top: 3px;
       cursor: pointer;
       right: -25px;
-      padding: 0.75rem 1.25rem;
-      color: inherit;
-      color: #fff;
-      width: 50px;
+      padding: 0.25rem;
+      color: #FCFCFC;
       opacity: 1; }
+      .navbar.navbar-custom .bannernav-section .alert-dismissible .close .icon {
+        fill: #fff;
+        width: 10px;
+        height: 10px; }
     .navbar.navbar-custom .bannernav-section .nav-banner {
       width: 100%;
       text-align: center;
       padding: 10px 0;
       margin: 0; }
+      .navbar.navbar-custom .bannernav-section .nav-banner .logo {
+        width: 32px;
+        height: 24px; }
       .navbar.navbar-custom .bannernav-section .nav-banner p {
         margin: 0;
-        font-weight: 500;
-        font-size: 12px;
-        color: #000; }
+        font-weight: 400;
+        font-size: 14px;
+        color: #FCFCFC; }
         .navbar.navbar-custom .bannernav-section .nav-banner p a {
-          color: #000; }
+          color: #FCFCFC;
+          font-weight: 500;
+          text-decoration: underline; }
           .navbar.navbar-custom .bannernav-section .nav-banner p a:hover {
-            color: #000; }
+            color: #FCFCFC; }
   .navbar.navbar-custom .links a {
     width: 32px;
     height: 32px;
@@ -593,7 +602,7 @@ a {
     color: rgba(0, 0, 0, 0.89); }
   .footer .copy-rights {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.314;
     color: #70747c;
     display: inline-block; }
@@ -669,7 +678,8 @@ a {
     padding-top: 20px;
     display: flex;
     padding-bottom: 20px;
-    align-items: self-end; }
+    align-items: center;
+    justify-content: flex-end; }
     .footer .footer-logo-section .dark-logo {
       height: 20px;
       width: 140px;
@@ -829,7 +839,7 @@ button:disabled {
   .container-xl {
     max-width: 1340px !important; } }
 .react-multi-carousel-item {
-  margin-right: 25px;
+  padding-right: 25px;
   cursor: pointer; }
 
 .footer-item {
@@ -846,10 +856,19 @@ button:disabled {
   background-image: url(./../../images1/animate.gif);
   background-repeat: no-repeat;
   background-size: cover; }
+  .banner-section .on-chain {
+    margin-top: 40px; }
+    .banner-section .on-chain h6 {
+      font-size: 16px;
+      font-weight: 400;
+      color: #B0B0B0; }
+    .banner-section .on-chain img {
+      margin: 0px 10px; }
   .banner-section .stats-container {
     display: flex;
     position: relative;
-    margin-top: 64px;
+    margin-top: 24px;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0px 15px; }
     .banner-section .stats-container .stats-section h2 {
@@ -1942,7 +1961,7 @@ button:disabled {
       align-items: center;
       justify-content: center; }
       .xprt-banner-section .content .right img {
-        max-width: 520px;
+        max-width: 640px;
         width: 100%; }
   .xprt-banner-section .aquire-content .title {
     font-weight: 700;
@@ -2099,6 +2118,7 @@ button:disabled {
 .stay-updated.xprt {
   background: #FCFCFC; }
   .stay-updated.xprt .react-multi-carousel-list {
+    justify-content: center;
     padding-bottom: 50px; }
     .stay-updated.xprt .react-multi-carousel-list .react-multi-carousel-item {
       height: 235px; }
@@ -2153,9 +2173,9 @@ button:disabled {
     color: #FFFFFF;
     display: flex;
     width: 100%;
-    color: #FFFFFF;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    text-align: left; }
   .ecosystem-faq-section .accordion .card {
     background: transparent;
     border: 0px solid;
@@ -2255,6 +2275,74 @@ button:disabled {
         margin-right: 10px;
         text-decoration: none; }
         .summary-section .content .data .buttons .primary:hover {
+          background: #E50913;
+          border: 1px solid #E50913; }
+
+/*--------------------------------------------------------------
+# terms page styles
+--------------------------------------------------------------*/
+.terms-section {
+  padding: 180px 0; }
+  .terms-section .content .title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 1rem; }
+  .terms-section .content .last-update {
+    color: #e50913 !important; }
+  .terms-section .content .data {
+    margin-bottom: 2.5rem; }
+    .terms-section .content .data .data-heading {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: 0.15668px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+      margin-top: 1.5rem; }
+    .terms-section .content .data .sub-heading {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+      margin-top: 1.5rem; }
+    .terms-section .content .data p, .terms-section .content .data ul li, .terms-section .content .data ol li {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 30px;
+      color: #A6A6A6; }
+    .terms-section .content .data ul li b {
+      color: #FFFFFF; }
+    .terms-section .content .data .img-section {
+      margin: auto;
+      max-width: 500px; }
+      .terms-section .content .data .img-section .img-box {
+        margin-bottom: 1rem;
+        width: 100%; }
+    .terms-section .content .data a {
+      color: #007bff; }
+    .terms-section .content .data .buttons {
+      margin-bottom: 1.5rem; }
+      .terms-section .content .data .buttons .primary {
+        background: transparent;
+        border-radius: 6px;
+        padding: 0.5rem 2rem;
+        font-weight: 600;
+        transition: all 0.5s ease-in-out;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FCFCFC;
+        box-shadow: none;
+        border: 1px solid #303132;
+        outline: none;
+        margin-right: 10px;
+        text-decoration: none; }
+        .terms-section .content .data .buttons .primary:hover {
           background: #E50913;
           border: 1px solid #E50913; }
 
@@ -2474,7 +2562,13 @@ button:disabled {
     padding: 60px 0px 0px 0px; }
 
   .navbar.navbar-custom .navbar-nav .dropdown-menu .nav-dropdown-items .nav-dropdown-item .inner-items .links a {
-    margin: 0px; } }
+    margin: 0px; }
+
+  .ecosystem-faq-section .info {
+    padding: 16px 10px; }
+
+  .accordion .card .card-header {
+    padding: 10px; } }
 @media (min-width: 768px) and (max-width: 991.8px) {
   .footer .contact-us {
     justify-content: flex-start; }
@@ -2697,14 +2791,10 @@ button:disabled {
   .banner-section .banner-heading span, .home-ecosystem-section h3 {
     font-size: 32px; }
 
-  .banner-section .stats-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0; }
-    .banner-section .stats-container .stats-section {
-      margin: 10px 0; }
-    .banner-section .stats-container .home-ecosystem-section {
-      padding: 70px 0; }
+  .banner-section .stats-container .stats-section {
+    margin: 10px 0; }
+  .banner-section .stats-container .home-ecosystem-section {
+    padding: 70px 0; }
 
   .home-ecosystem-section .card-tiles {
     display: block; }
@@ -2713,7 +2803,7 @@ button:disabled {
     font-size: 14px; }
 
   .banner-section .stats-container .stats-section h2 {
-    font-size: 32px; }
+    font-size: 24px; }
 
   .home-ecosystem-section .card-tiles .card-group .card .card-section .card-body {
     padding: 40px 20px 30px 20px; }
@@ -2760,7 +2850,7 @@ button:disabled {
 
   .footer .copy-rights {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.314;
     color: #70747c;
     display: block;

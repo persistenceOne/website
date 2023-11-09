@@ -7,6 +7,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Homepage from "./pages/Homepage";
 import Ecosystem from "./pages/Ecosystem";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/privacy";
 import "react-multi-carousel/lib/styles.css";
 import Faq from "./pages/Faq";
 import Xprt from "./pages/Xprt";
@@ -49,6 +51,13 @@ const App = () => {
         exact
         path="/summary"
         component={Summary}
+        layout={LayoutDefault}
+      />
+      <AppRoute exact path="/terms" component={Terms} layout={LayoutDefault} />
+      <AppRoute
+        exact
+        path="/privacy"
+        component={Privacy}
         layout={LayoutDefault}
       />
     </Switch>

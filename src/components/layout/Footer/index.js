@@ -122,19 +122,37 @@ const Footer = (props) => {
         </div>
         <div className="container">
           <div className="row footer-bottom-section">
-          <div className={"col-lg-6"}>
-            <span className="copy-rights mr-3 ml-3">{new Date().getFullYear()}</span>
-          </div>
-          <div className="col-lg-6 footer-logo-section">
-            <span className="mr-3 ml-3">Powered by</span>
-            <img
-              className="dark-logo"
-              src={icon}
-              alt="icon-logo"
-              title="logo"
-            />
-            &emsp;
-          </div>
+            <div className={"col-lg-6"}>
+              <span className="copy-rights mr-3 ml-3">
+                {new Date().getFullYear()}
+              </span>
+              <a
+                href="/terms"
+                rel="noopener noreferrer"
+                target={"_blank"}
+                className="copy-rights px-2"
+              >
+                Terms of use
+              </a>
+              <a
+                href="/privacy"
+                target={"_blank"}
+                rel="noopener noreferrer"
+                className="copy-rights px-2"
+              >
+                Privacy Policy
+              </a>
+            </div>
+            <div className="col-lg-6 footer-logo-section">
+              <span className="mr-3 ml-3">Powered by</span>
+              <img
+                className="dark-logo"
+                src={icon}
+                alt="icon-logo"
+                title="logo"
+              />
+              &emsp;
+            </div>
           </div>
         </div>
         <div></div>
