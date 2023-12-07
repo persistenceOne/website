@@ -222,7 +222,7 @@ a {
   flex-direction: column; }
   .navbar.navbar-custom .bannernav-section {
     width: 100%;
-    background-image: url(./../../images1/atom_topbar.svg), radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDD 25.4%, #83339D 100%);
+    background-image: url(./../../images1/atom_topbar.svg), linear-gradient(80.17deg, #7268FD -4.31%, #CA2EBD 111.08%, #CA2EBD 127.68%);
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
