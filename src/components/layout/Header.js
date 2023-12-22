@@ -12,7 +12,7 @@ import {
   PERSISTENCEONE_DISCORD_URL
 } from "../../constants/config";
 import ReactGa from "react-ga4";
-import BannerTop from "./BannerTop";
+import GeofenceNotice from "../geofence-banner";
 
 const socialList = [
   {
@@ -82,7 +82,7 @@ const Header = () => {
         expanded={mobileMenu}
         id="nav-bar"
       >
-        <BannerTop/>
+        <GeofenceNotice />
         <div className="container p-0">
           <NavLink to="/" className="navbar-brand">
             <img src={logotwo} alt="logo" />
@@ -106,13 +106,13 @@ const Header = () => {
                 FAQ
               </NavLink>
               <Nav.Link
-                  className="nav-link dropdown-toggle"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="http://docs.persistence.one/"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                className="nav-link dropdown-toggle"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="http://docs.persistence.one/"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
                 {t("DOCS")}
               </Nav.Link>
