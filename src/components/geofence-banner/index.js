@@ -2,7 +2,32 @@ import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
 import Alert from "react-bootstrap/Alert";
 
-const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
+const countries = [
+  "BB",
+  "BF",
+  "CM",
+  "CD",
+  "CG",
+  "GI",
+  "HT",
+  "IR",
+  "JM",
+  "KP",
+  "ML",
+  "MZ",
+  "MM",
+  "SN",
+  "SS",
+  "SY",
+  "TZ",
+  "UG",
+  "YE",
+  "UM",
+  "US",
+  "GB",
+  "CU",
+  "CA"
+];
 
 const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
@@ -28,15 +53,16 @@ const GeofenceNotice = () => {
           <Alert className="nav-banner alert-dismissible d-flex align-items-center justify-content-center">
             <p>
               <span className={"font-semibold"}>IMPORTANT NOTICE:</span>&nbsp;
-              Starting 15/01/2024, this site won&apos;t be accessible anymore
-              from your location. See more details&nbsp;
+              Please note that from 15 January 2024, applications on the
+              persistence.one domain will no longer be accessible from your
+              location. See more details&nbsp;
               <a
                 className="link"
                 href="https://geofence-notice.pages.dev/?ref=persistence"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <b>here</b>
+                <b>here.</b>
               </a>
             </p>
             <div
