@@ -12,7 +12,7 @@ import {
   PERSISTENCEONE_DISCORD_URL
 } from "../../constants/config";
 import ReactGa from "react-ga4";
-import GeofenceNotice from "../geofence-banner";
+import BannerTop from "./BannerTop";
 
 const socialList = [
   {
@@ -82,7 +82,7 @@ const Header = () => {
         expanded={mobileMenu}
         id="nav-bar"
       >
-        <GeofenceNotice />
+        <BannerTop />
         <div className="container p-0">
           <NavLink to="/" className="navbar-brand">
             <img src={logotwo} alt="logo" />
