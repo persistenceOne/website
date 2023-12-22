@@ -2,7 +2,32 @@ import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
 import Alert from "react-bootstrap/Alert";
 
-const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
+const countries = [
+  "BB",
+  "BF",
+  "CM",
+  "CD",
+  "CG",
+  "GI",
+  "HT",
+  "IR",
+  "JM",
+  "KP",
+  "ML",
+  "MZ",
+  "MM",
+  "SN",
+  "SS",
+  "SY",
+  "TZ",
+  "UG",
+  "YE",
+  "UM",
+  "US",
+  "GB",
+  "CU",
+  "CA"
+];
 
 const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
