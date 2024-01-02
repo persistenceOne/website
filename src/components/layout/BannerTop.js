@@ -60,7 +60,7 @@ const BannerTop = () => {
             <Alert className="nav-banner alert-dismissible d-flex align-items-center justify-content-center">
               <p>
                 <b className={"font-semibold"}>IMPORTANT NOTICE:</b>&nbsp;
-                Please note that from 15 January 2024, applications on the
+                Please note that from 1 February 2024, applications on the
                 persistence.one domain will no longer be accessible from your
                 location. See more details&nbsp;
                 <a
