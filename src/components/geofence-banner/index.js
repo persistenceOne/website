@@ -53,7 +53,7 @@ const GeofenceNotice = () => {
           <Alert className="nav-banner alert-dismissible d-flex align-items-center justify-content-center">
             <p>
               <span className={"font-semibold"}>IMPORTANT NOTICE:</span>&nbsp;
-              Please note that from 15 January 2024, applications on the
+              Please note that from 1 March 2024, applications on the
               persistence.one domain will no longer be accessible from your
               location. See more details&nbsp;
               <a
