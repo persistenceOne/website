@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Alert from "react-bootstrap/Alert";
-import stkOsmo from "../../assets/images1/stkOsmo.svg";
+import stk_dydx from "../../assets/images1/stk_dydx.svg";
 import Icon from "../Icon";
 
 const countries = [
@@ -94,20 +94,17 @@ const BannerTop = () => {
     <div className="container-fluid bannernav-section">
       <div className="container">
         <Alert className="nav-banner alert-dismissible d-flex align-items-center justify-content-center">
-          <img src={stkOsmo} alt={"stkOsmo"} className="pr-2 logo" />
+          <img src={stk_dydx} alt={"stk_dydx"} className="pr-2 logo" />
           <p>
-            stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
-            validators&nbsp;
+            Secure, decentralized DYDX liquid staking is NOW{" "}
             <a
               className="link"
-              href={
-                "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis"
-              }
+              href={"https://app.pstake.finance/cosmos"}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <b>now</b>
-            </a>
+              <b>LIVE</b>
+            </a>{" "}
           </p>
           <div onClick={closeBanner} className="close">
             <Icon
