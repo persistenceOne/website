@@ -1,9 +1,9 @@
-import BlogCard from "@/components/atoms/blog-card";
+import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Box, Button, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
-const resourcesList = [
+const resourcesList: BlogCardInterface[] = [
   {
     id: 0,
     resourceImage: "/images/resources/resource-1.png",

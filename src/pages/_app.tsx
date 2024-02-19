@@ -5,7 +5,8 @@ import Header from "@/components/molecules/header";
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "@/components/molecules/footer";
 import theme from "@/styles/theme";
-const App = ({ Component, pageProps }) => {
+import { AppProps } from "next/app";
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider theme={theme}>
       <Head>

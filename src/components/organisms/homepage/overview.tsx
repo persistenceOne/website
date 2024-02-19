@@ -1,8 +1,9 @@
+import { FeatureCardInterface } from "@/components/atoms/feature-card";
 import FeatureCards from "@/components/molecules/feature-cards";
 import { Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
-const cards = [
+const cards: FeatureCardInterface[] = [
   {
     category: "Ecosystem",
     title: "Title",

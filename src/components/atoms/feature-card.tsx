@@ -10,6 +10,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+export interface FeatureCardInterface {
+  category: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  linkText: string;
+}
 const FeatureCard = ({
   category,
   title,
@@ -17,7 +25,7 @@ const FeatureCard = ({
   image,
   link,
   linkText
-}) => {
+}: FeatureCardInterface) => {
   return (
     <Card>
       <CardHeader>{category}</CardHeader>

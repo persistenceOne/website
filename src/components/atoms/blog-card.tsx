@@ -4,12 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+export interface BlogCardInterface {
+  id: number;
+  resourceCTA: string;
+  resourceImage: string;
+  resourceType: string;
+  resourceLink: string;
+}
+
 const BlogCard = ({
   resourceCTA,
   resourceImage,
   resourceType,
   resourceLink
-}) => {
+}: BlogCardInterface) => {
   return (
     <Link href={resourceLink}>
       <Card w="full" h="100%" borderRadius={20}>
