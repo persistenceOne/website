@@ -8,7 +8,7 @@ module.exports = {
         emphasis: "#ECECEC",
         mid: "#A6A6A6",
         low: "#787878",
-        disabled: "#A9A9A9",
+        disabled: "#A9A9A9"
       },
       atomPrimary: "#595d7b",
       bnbPrimary: "#f0b90b",
@@ -35,15 +35,14 @@ module.exports = {
         "white-high": "#FCFCFC",
         "white-emphasis": "#ECECEC",
         "white-mid": "#A6A6A6",
-        "white-low": "#787878",
+        "white-low": "#787878"
       },
       red: "#e50913",
       green: "#24b574",
-      "red-light": "#cb575bfa",
+      "red-light": "#cb575bfa"
     },
     backgroundImage: {
-      osmoPrimaryButton: "linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%)",
-      homeBannerBg: "url('/images/bg_images/home_bg.svg')",
+      heroContent: "url('/images/hero-bg.svg')",
       immunefiWhite: "url('/images/audits/immunefi_header.svg')",
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
@@ -62,8 +61,6 @@ module.exports = {
       bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
       ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
       xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
-      ethBanner:
-        "url('/images/bg_images/eth_banner_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0%, #FFFFFF 0%, #F5F5F5 50.14%, #D3D3D3 100%)",
       atomBanner:
         "url('/images/bg_images/atomBanner2.svg'), url('/images/bg_images/atomBanner1.svg') ",
       osmoBanner:
@@ -76,7 +73,7 @@ module.exports = {
         "linear-gradient(91deg, rgba(196, 3, 11, 0.60) -15.72%, rgba(30, 0, 3, 0.60) 125.37%)",
       lsmHighlight:
         "linear-gradient(rgba(140, 2, 8, 1), rgba(211, 73, 79, 1), rgba(140, 2, 8, 1))",
-      title_bg: "url('/images/bg_images/title_bg_grid.svg')",
+      title_bg: "url('/images/bg_images/title_bg_grid.svg')"
     },
     backgroundColor: {
       none: "none",
@@ -109,10 +106,10 @@ module.exports = {
       atomPrimary: "#595d7b",
       bnbPrimary: "#f0b90b",
       ethPrimary: "#C73238",
-      dydxPrimary: "#6966FF",
+      dydxPrimary: "#6966FF"
     },
     fontFamily: {
-      primary: ["Poppins", "sans-serif"],
+      primary: ["Poppins", "sans-serif"]
     },
     fontSize: {
       xsm: "0.75rem", // 12px
@@ -135,7 +132,7 @@ module.exports = {
       body2: ["0.875rem", { lineHeight: "1.25rem" }],
       button: ["0.875rem", { lineHeight: "1rem" }],
       caption: ["0.75rem", { lineHeight: "0.875rem" }],
-      overline: ["0.625rem", { lineHeight: "1rem" }],
+      overline: ["0.625rem", { lineHeight: "1rem" }]
     },
     screens: {
       "2xl": { max: "1535px" },
@@ -143,23 +140,23 @@ module.exports = {
       xl: { max: "1279px" },
       lg: { max: "1023px" },
       md: { max: "767px" },
-      sm: { max: "511px" },
+      sm: { max: "511px" }
     },
     extend: {
       keyframes: {
         "menu-open": {
           "0%": {
             opacity: "0",
-            transform: "scale(0.9)",
+            transform: "scale(0.9)"
           },
           "100%": {
             opacity: "1",
-            transform: "scale(1)",
-          },
-        },
+            transform: "scale(1)"
+          }
+        }
       },
       animation: {
-        "menu-open": "menu-open 200ms ease-in-out",
+        "menu-open": "menu-open 200ms ease-in-out"
       },
       screens: {
         "-2xl": { min: "1536px" },
@@ -167,27 +164,27 @@ module.exports = {
         "-xl": { min: "1280px" },
         "-lg": { min: "1024px" },
         "-md": { min: "768px" },
-        "-sm": { min: "640px" },
+        "-sm": { min: "640px" }
       },
       backgroundSize: {
-        atomBanner: "30%, cover",
+        heroContent: "30%",
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
         osmoBanner: "25%, cover",
         dydxBanner: "20%, cover",
-        title_bg: "auto",
+        title_bg: "auto"
       },
       backgroundPosition: {
-        atomBanner: "100% 0,100% 100%",
+        heroContent: "100% 0",
         bnbBanner: "100% 0,100% 100%",
         ethBanner: "100% 0,100% 100%",
         osmoBanner: "100% 0,100% 100%",
         dydxBanner: "100% 5%,100% 100%",
-        title_bg: "0% -150px",
-      },
-    },
+        title_bg: "0% -150px"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 //
 // background-size: auto;

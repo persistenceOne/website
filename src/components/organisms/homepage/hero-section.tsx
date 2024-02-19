@@ -36,7 +36,9 @@ const homePagesStats = [
 
 const HeroSection = () => {
   return (
-    <Box px={16}>
+    <Box px={16} className={"hero-content"}>
+      <Spacer h={20} />
+
       <Flex justify={"space-between"} mb={20}>
         <VStack align={"stretch"}>
           <Heading variant={"main"}>
@@ -55,50 +57,9 @@ const HeroSection = () => {
             <Button>Explore Ecosystem</Button>
           </HStack>
         </VStack>
-        <Box overflow={"no-scroll"}>
-          <Image
-            src={"/images/persistence-p.svg"}
-            alt="Persistence"
-            width={127}
-            height={202}
-          />
-          <Box
-            pos={"absolute"}
-            top={"10px"}
-            right={"-48"}
-            background={"white"}
-            w={"500px"}
-            h={"500px"}
-            zIndex={-1}
-            borderRadius={60}
-            transform={"rotate(24deg)"}
-          />
-          <Box
-            pos={"absolute"}
-            top={"0px"}
-            right={"-44"}
-            background={"primary.red"}
-            w={"560px"}
-            h={"560px"}
-            zIndex={-2}
-            borderRadius={60}
-            transform={"rotate(24deg)"}
-          />
-          <Box
-            pos={"absolute"}
-            top={"16"}
-            right={"-80"}
-            background={"primary.black"}
-            w={"620px"}
-            h={"620px"}
-            zIndex={-3}
-            borderRadius={60}
-            transform={"rotate(24deg)"}
-            // transform={"rotate(16.75deg)"}
-          />
-        </Box>
       </Flex>
       <HomePageStats stats={homePagesStats} />
+      <Spacer h={80} />
     </Box>
   );
 };
