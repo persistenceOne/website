@@ -199,7 +199,7 @@ const NotesSection = () => {
           </Flex>
         </HStack>
       </VStack>
-      <Spacer h={80} />
+      <Spacer h={40} />
     </Container>
   );
 };

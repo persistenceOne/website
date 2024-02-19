@@ -1,5 +1,5 @@
 import React from "react";
-const symbol_defs = "/images/icon-symbols.svg";
+const symbol_defs = "/images/symbols.svg";
 
 const Icon = (props) => {
   return (
