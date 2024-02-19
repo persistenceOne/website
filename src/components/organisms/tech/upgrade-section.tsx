@@ -145,7 +145,7 @@ const UpgradeSection = () => {
             );
           })}
         </Slider>
-        <Flex>
+        <Flex mt={4}>
           <Flex
             align={"center"}
             justify={"center"}
