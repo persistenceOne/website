@@ -1,8 +1,8 @@
 import React from "react";
-import { useTranslation } from "next-export-i18n";
+// import { useTranslation } from "next-export-i18n";
 
 const Terms = () => {
-  const { t } = useTranslation("common");
+  // const { t } = useTranslation("common");
   const mainHeading = "font-semibold text-4xl text-light-high mb-4 md:text-xl";
   const subHeading =
     "font-normal text-lg text-light-emphasis mb-4 md:text-base";
