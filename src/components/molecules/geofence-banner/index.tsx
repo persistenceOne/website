@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
 import { shallow } from "zustand/shallow";
-import { Spinner } from "../spinner";
 
 const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
 
