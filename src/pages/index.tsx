@@ -10,9 +10,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <Box>
-      <Spacer h={20} />
       <HeroSection />
-      <Spacer h={20} />
       <Overview />
       <Spacer h={20} />
       <DappsSection />

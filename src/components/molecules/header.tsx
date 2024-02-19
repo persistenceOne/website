@@ -29,8 +29,14 @@ const menuItems = [
 const Header = () => {
   return (
     <>
-      <Flex as={"nav"} justify={"center"} align={"center"} mt={2}>
-        <Box pos={"absolute"} left={"60px"} top={"0px"}>
+      <Flex
+        as={"nav"}
+        justify={"center"}
+        align={"center"}
+        pt={2}
+        className={"navigation-bar"}
+      >
+        <Box pos={"absolute"} left={"60px"} top={"0px"} mt={"10px"}>
           <Link href="/">
             <Image
               src="/images/persistence-logo-dark.svg"

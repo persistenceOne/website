@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "@/components/molecules/footer";
 import theme from "@/styles/theme";
+import { Box } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Header from "@/components/molecules/header";
 const App = ({ Component, pageProps }: AppProps) => {
@@ -16,7 +17,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         {/*Twitter Tags*/}
         <meta content="/ogimage.jpeg" property="twitter:image" />
       </Head>
-      <Header />
+      <Box pos={"fixed"} width="100%" zIndex="sticky">
+        <Header />
+      </Box>
       <Component {...pageProps} />
       <Footer />
     </ChakraProvider>
