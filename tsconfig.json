@@ -16,8 +16,8 @@
     "incremental": true,
     "paths": {
       "@/api/*": ["./src/api/*"],
-      "@/utils": ["./src/utils/"],
-      "@/components": ["./src/components/"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/components/*": ["./src/components/*"],
       "@/*": ["./src/*"]
     }
   },

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import "../styles/globals.css";
-import Header from "@/components/molecules/header";
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "@/components/molecules/footer";
 import theme from "@/styles/theme";
 import { AppProps } from "next/app";
+import Header from "@/components/molecules/header";
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider theme={theme}>
