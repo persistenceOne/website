@@ -1,7 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Box, Flex, HStack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Popover,
+  Text,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverBody
+} from "@chakra-ui/react";
 
 const menuItems = [
   {
@@ -48,9 +58,15 @@ const Header = () => {
         </Box>
         <HStack gap="56px" justify="center" align={"center"} mt={"10px"}>
           {menuItems.map((item) => (
-            <Link href={item.link} key={item.id}>
-              <Text>{item.name}</Text>
-            </Link>
+            <Popover placement={"top-start"}>
+              <PopoverTrigger>
+                <Text cursor={"pointer"}>{item.name}</Text>
+              </PopoverTrigger>
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverBody>Popver content</PopoverBody>
+              </PopoverContent>
+            </Popover>
           ))}
         </HStack>
       </Flex>
