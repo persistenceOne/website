@@ -59,7 +59,7 @@ const HeroSection = () => {
         </VStack>
       </Flex>
       <HomePageStats stats={homePagesStats} />
-      <Spacer h={80} />
+      <Spacer h={60} />
     </Box>
   );
 };

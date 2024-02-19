@@ -17,6 +17,7 @@ const HomePage = () => {
       <GetXprtSection />
       <Spacer h={20} />
       <BlogSection />
+      <Spacer h={20} />
       <BecomePersisterSection />
     </Box>
   );

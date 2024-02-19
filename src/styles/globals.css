@@ -5,9 +5,9 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
-.hero-content{
-    background-image: url("/images/hero-bg.svg");
-    background-position: 100% 0%;
-    background-repeat: no-repeat;
-    background-size: 45% 77%;
+.hero-content {
+  background-image: url("/images/hero-bg.svg");
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 45% 77%;
 }
