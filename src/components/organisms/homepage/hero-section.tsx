@@ -5,18 +5,11 @@ import {
   HStack,
   Heading,
   Spacer,
-  Stat,
-  StatArrow,
-  StatGroup,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
   Text,
   VStack
 } from "@chakra-ui/react";
-import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
-import Image from "next/image";
 import HomePageStats from "@/components/molecules/homepage-stats";
 
 const homePagesStats = [
@@ -36,7 +29,14 @@ const homePagesStats = [
 
 const HeroSection = () => {
   return (
-    <Box px={16} className={"hero-content"}>
+    <Box
+      px={16}
+      className={"hero-content"}
+      backgroundImage="url('/images/hero-bg.svg')"
+      backgroundPosition="100% 0"
+      backgroundRepeat="no-repeat"
+      backgroundSize={"45% 77%"}
+    >
       <Spacer h={20} />
 
       <Flex justify={"space-between"} mb={20}>

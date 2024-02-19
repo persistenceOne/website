@@ -6,6 +6,12 @@ const heading = {
       fontWeight: "700",
       lineHeight: "1.2"
     },
+    secondary: {
+      color: "text.heading1",
+      fontSize: "16px",
+      fontWeight: "600",
+      lineHeight: "24px"
+    },
     footerHeading: {
       color: "#ffffff",
       fontSize: "20px",

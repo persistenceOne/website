@@ -11,7 +11,9 @@ import {
   PopoverContent,
   PopoverArrow,
   PopoverBody,
-  VStack
+  VStack,
+  Container,
+  Spacer
 } from "@chakra-ui/react";
 
 const menuItems = [
@@ -179,15 +181,15 @@ const menuItems = [
 
 const Header = () => {
   return (
-    <>
+    <Container maxW={"1440px"} px={"60px"}>
       <Flex
         as={"nav"}
-        justify={"center"}
+        justify={"between"}
         align={"center"}
         pt={2}
         className={"navigation-bar"}
       >
-        <Box pos={"absolute"} left={"60px"} top={"0px"} mt={"10px"}>
+        <Box>
           <Link href="/">
             <Image
               src="/images/persistence-logo-dark.svg"
@@ -197,6 +199,7 @@ const Header = () => {
             />
           </Link>
         </Box>
+        <Spacer />
         <HStack gap="56px" justify="center" align={"center"} mt={"10px"}>
           {menuItems.map((item) => (
             <Popover placement={"top-start"} trigger="hover" key={item.id}>
@@ -244,8 +247,10 @@ const Header = () => {
             </Popover>
           ))}
         </HStack>
+        <Spacer />
+        <Box />
       </Flex>
-    </>
+    </Container>
   );
 };
 

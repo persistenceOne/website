@@ -10,6 +10,7 @@ const colors = {
   text: {
     headingBlack: "#423F40",
     headingWhite: "#ECECEC",
+    headingSemiWhite: "#FCFCFC",
     headingSemiBlack: "#3D3D3D",
     statLabel: "#423F40"
   },

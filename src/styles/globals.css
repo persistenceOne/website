@@ -11,3 +11,22 @@ body {
   background-repeat: no-repeat;
   background-size: 45% 77%;
 }
+
+/* over riding story page slider dots*/
+
+.history-slider .slick-dots {
+  bottom: -35px;
+}
+
+.history-slider .slick-dots li button:before {
+  color: #000000;
+  background: #000000;
+  opacity: 1;
+  border-radius: 100%;
+}
+
+.history-slider .slick-dots li.slick-active button:before {
+  color: #c73238;
+  background: #c73238;
+  opacity: 1;
+}
