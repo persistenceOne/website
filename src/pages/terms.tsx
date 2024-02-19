@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../1components/molecules/Footer";
 import { useTranslation } from "next-export-i18n";
 
 const Terms = () => {
@@ -1179,7 +1178,7 @@ const Terms = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

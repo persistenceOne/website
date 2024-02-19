@@ -1,26 +1,54 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { Box, Flex, HStack, Text } from "@chakra-ui/react";
+
+const menuItems = [
+  {
+    id: 0,
+    name: "Learn",
+    link: "/tech"
+  },
+  {
+    id: 1,
+    name: "Explore",
+    link: "/faqs"
+  },
+  {
+    id: 2,
+    name: "LSTFi",
+    link: "/people"
+  },
+  {
+    id: 3,
+    name: "About",
+    link: "/story"
+  }
+];
 
 const Header = () => {
   return (
-    <React.Fragment>
-      <div className="top-bar w-full fixed z-[100]">
-        <nav
-          className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
-            items-center navbar navbar-expand-lg navbar-custom flex-column 
-            md:flex-wrap justify-start "bg-white-emphasis"`}
-          id="nav-bar"
-        >
-          <div className="container  mx-auto px-4 flex flex-wrap items-center justify-between ">
-            <Link
-              className="bg-logoDark
-                      [.is-sticky_&]:bg-logoLight w-[108px] h-[26px] bg-no-repeat bg-center"
-              href="/"
+    <>
+      <Flex as={"nav"} justify={"center"} align={"center"} mt={2}>
+        <Box pos={"absolute"} left={"60px"} top={"0px"}>
+          <Link href="/">
+            <Image
+              src="/images/persistence-logo-dark.svg"
+              alt="Persistence Logo"
+              width={251}
+              height={32}
             />
-          </div>
-        </nav>
-      </div>
-    </React.Fragment>
+          </Link>
+        </Box>
+        <HStack gap="56px" justify="center" align={"center"} mt={"10px"}>
+          {menuItems.map((item) => (
+            <Link href={item.link} key={item.id}>
+              <Text>{item.name}</Text>
+            </Link>
+          ))}
+        </HStack>
+      </Flex>
+    </>
   );
 };
 
