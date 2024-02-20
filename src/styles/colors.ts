@@ -12,7 +12,17 @@ const colors = {
     headingWhite: "#ECECEC",
     headingSemiWhite: "#FCFCFC",
     headingSemiBlack: "#3D3D3D",
-    statLabel: "#423F40"
+    statLabel: "#423F40",
+    whiteFull: "#fff",
+    whiteHigh: "#ECECEC",
+    whiteEmphasis: "#FEFEFE",
+    whiteMid: "#3D3D3D",
+    whiteLow: "#232325CC",
+    blackFull: "#000",
+    blackHigh: "#423F40",
+    blackEmphasis: "#232325",
+    blackMid: "#3D3D3D",
+    blackLow: "#232325CC"
   },
   buttons: {
     linkText: "#606060"
