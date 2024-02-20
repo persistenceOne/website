@@ -39,26 +39,36 @@ const homePagesStats = [
 
 const NotesSection = () => {
   return (
-    <Container maxW={"1200px"} px={"60px"}>
-      <Flex justify={"center"} mb={20}>
+    <Container maxW={"1200px"} px={{ base: "20px", md: "60px" }}>
+      <Flex justify={"center"}>
         <Box>
-          <Heading textAlign="center" variant={"main"} mb={"4px"}>
+          <Heading
+            textAlign={"center"}
+            color={"text.blackHigh"}
+            fontSize={{ base: "26px", md: "58px" }}
+            mb={"6px"}
+          >
             Making History With Our Tech.{" "}
           </Heading>
-          <Text textAlign="center">
+          <Text
+            textAlign="center"
+            mb={{ base: "22px", md: "60px" }}
+            color={"text.blackMid"}
+            fontSize={{ base: "16px", md: "22px" }}
+          >
             Pushing boundaries when we commit code.
           </Text>
         </Box>
       </Flex>
       <VStack align={"stretch"} spacing={4}>
-        <Stack spacing={2} direction="row">
+        <Stack spacing={2} direction={{ base: "column", md: "row" }}>
           <Flex
             p={"32px"}
             bg={"#fff"}
             borderRadius={"20px"}
             direction={"column"}
           >
-            <Heading variant={"secondary"}>
+            <Heading variant={"secondary"} color={"text.blackHigh"}>
               First chain to adopt the Liquid Staking Module (LSM) in Cosmos
             </Heading>
             <Box m={"auto"}>
@@ -70,10 +80,10 @@ const NotesSection = () => {
               />
             </Box>
           </Flex>
-          <VStack align={"stretch"} w={"600px"}>
+          <VStack align={"stretch"} w={{ base: "auto", md: "600px" }}>
             <Box pos={"relative"}>
               <Flex p={"32px"} bg={"#fff"} borderRadius={"20px"}>
-                <Heading variant={"secondary"}>
+                <Heading variant={"secondary"} color={"text.blackHigh"}>
                   Building the Restaking Infrastructure for Cosmos
                 </Heading>
                 <Image
@@ -95,7 +105,7 @@ const NotesSection = () => {
               />
             </Box>
             <Flex p={"32px"} bg={"#fff"} borderRadius={"20px"}>
-              <Heading variant={"secondary"}>
+              <Heading variant={"secondary"} color={"text.blackHigh"}>
                 Building the Restaking Infrastructure for Cosmos
               </Heading>
               <Image
@@ -107,11 +117,11 @@ const NotesSection = () => {
             </Flex>
           </VStack>
         </Stack>
-        <HStack align={"stretch"} spacing={4}>
+        <Stack spacing={4} direction={{ base: "column", md: "row" }}>
           <Box
             pos={"relative"}
             h={"300px"}
-            w={"275px"}
+            w={{ base: "auto", md: "275px" }}
             bg={"#fff"}
             borderRadius={"20px"}
           >
@@ -121,7 +131,7 @@ const NotesSection = () => {
               direction={"column"}
               h={"100%"}
             >
-              <Heading variant={"secondary"}>
+              <Heading variant={"secondary"} color={"text.blackHigh"}>
                 Contributing to the Cosmos Hub since 2019
               </Heading>
               <Image
@@ -146,12 +156,12 @@ const NotesSection = () => {
             p={"32px"}
             bg={"#fff"}
             h={"300px"}
-            w={"275px"}
+            w={{ base: "auto", md: "275px" }}
             justify={"space-between"}
             borderRadius={"20px"}
             direction={"column"}
           >
-            <Heading variant={"secondary"}>
+            <Heading variant={"secondary"} color={"text.blackHigh"}>
               Pioneered ATOM liquid staking in 2021
             </Heading>
             <Image
@@ -165,12 +175,12 @@ const NotesSection = () => {
             p={"32px"}
             bg={"#fff"}
             h={"300px"}
-            w={"275px"}
+            w={{ base: "auto", md: "275px" }}
             justify={"space-between"}
             borderRadius={"20px"}
             direction={"column"}
           >
-            <Heading variant={"secondary"}>
+            <Heading variant={"secondary"} color={"text.blackHigh"}>
               One of the first chains to enable IBC
             </Heading>
             <Image
@@ -184,12 +194,14 @@ const NotesSection = () => {
             p={"32px"}
             bg={"#fff"}
             h={"300px"}
-            w={"275px"}
+            w={{ base: "auto", md: "275px" }}
             justify={"space-between"}
             borderRadius={"20px"}
             direction={"column"}
           >
-            <Heading variant={"secondary"}>Audit first, deploy later.</Heading>
+            <Heading variant={"secondary"} color={"text.blackHigh"}>
+              Audit first, deploy later.
+            </Heading>
             <Image
               src={"/images/tech-page/note-img1.svg"}
               alt=""
@@ -197,7 +209,7 @@ const NotesSection = () => {
               height={144}
             />
           </Flex>
-        </HStack>
+        </Stack>
       </VStack>
       <Spacer h={40} />
     </Container>

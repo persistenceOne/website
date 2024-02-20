@@ -34,23 +34,25 @@ const CommunitySection = () => {
       }}
       backgroundPosition="bottom right"
     >
-      <Container maxW={"1440px"} px={"60px"} mb={4} py={"60px"}>
+      <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }} py={"60px"}>
         <Heading
-          fontSize={"32px"}
-          textAlign={"left"}
+          fontSize={{ base: "22px", md: "32px" }}
+          textAlign={{ base: "center", md: "left" }}
           color={"text.headingSemiWhite"}
           pr={"12px"}
           mb={"40px"}
           fontWeight={700}
-          lineHeight={"48px"}
+          lineHeight={{ base: "1.5", md: "48px" }}
         >
           Persistence One brings empowering product
           <br /> and tech, a vibrant community of Persisters,
           <br /> and enduring partnerships under one roof.
         </Heading>
-        <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-          Join our Community
-        </Button>
+        <Box textAlign={{ base: "center", md: "left" }}>
+          <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+            Join our Community
+          </Button>
+        </Box>
       </Container>
     </Box>
   );

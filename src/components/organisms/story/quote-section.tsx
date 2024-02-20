@@ -35,13 +35,17 @@ const QuoteSection = () => {
       }}
       backgroundPosition="bottom right"
     >
-      <Container maxW={"1440px"} px={"60px"} mb={4} py={"70px"}>
+      <Container
+        maxW={"1440px"}
+        px={{ base: "16px", md: "60px" }}
+        py={{ base: "24px", md: "60px" }}
+      >
         <Heading
-          fontSize={"44px"}
           textAlign={"center"}
           color={"text.headingSemiWhite"}
           pr={"12px"}
           fontWeight={600}
+          fontSize={{ base: "26px", md: "44px" }}
         >
           “Humility, Integrity, Patience, and Persistence are our four guiding
           principals, pillars of building, and make us who we are.”

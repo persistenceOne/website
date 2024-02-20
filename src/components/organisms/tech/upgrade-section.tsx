@@ -2,6 +2,7 @@ import Icon from "@/components/molecules/Icon";
 import { Box, Heading, Container, Text, Flex } from "@chakra-ui/react";
 import React, { Component, useRef } from "react";
 import Slider from "react-slick";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const upgradeList = [
   {
@@ -62,13 +63,8 @@ const upgradeList = [
 ];
 
 const UpgradeSection = () => {
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1
-  };
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
+  const [isLandScape] = useMediaQuery("(max-width: 990px)");
   let sliderRef: any = useRef(null);
   const next = () => {
     sliderRef.slickNext();
@@ -78,24 +74,30 @@ const UpgradeSection = () => {
   };
   return (
     <Box bg={"#252424"}>
-      <Container maxW={"1440px"} px={"60px"} mb={4} py={"70px"}>
+      <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }} py={"70px"}>
         <Heading
           textAlign={"center"}
           color={"text.headingSemiWhite"}
-          fontSize={"44px"}
-          mb={"80px"}
+          fontSize={{ base: "22px", md: "44px" }}
+          mb={{ base: "40px", md: "80px" }}
         >
           Evolving Constantly. Upgrading Securely
         </Heading>
         <Slider
-          {...settings}
+          {...{
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: isMobile ? 1 : isLandScape ? 3 : 5,
+            slidesToScroll: 1
+          }}
           ref={(slider) => {
             sliderRef = slider;
           }}
         >
           {upgradeList.map((item, index) => {
             return (
-              <Box key={index} w={"183px"}>
+              <Box key={index} w={{ base: "auto", md: "183px" }}>
                 <Flex align={"center"} mb={4}>
                   <Heading
                     variant={"secondary"}
