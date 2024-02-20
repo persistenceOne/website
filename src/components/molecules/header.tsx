@@ -15,6 +15,7 @@ import {
   Container,
   Spacer
 } from "@chakra-ui/react";
+import Icon from "./Icon";
 
 const menuItems = [
   {
@@ -24,7 +25,8 @@ const menuItems = [
       {
         title: "Story",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "/icons/navbar-icons/story.svg",
+        icon: "announcement",
+        iconType: "fill",
         link: "/story",
         isExternal: false,
         comingSoon: false
@@ -32,7 +34,8 @@ const menuItems = [
       {
         title: "XPRT",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "/icons/navbar-icons/xprt.svg",
+        icon: "plogo",
+        iconType: "fill",
         link: "/xprt",
         isExternal: false,
         comingSoon: false
@@ -40,7 +43,8 @@ const menuItems = [
       {
         title: "FAQs",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "/icons/navbar-icons/faqs.svg",
+        icon: "faq",
+        iconType: "stroke",
         link: "/faqs",
         isExternal: false,
         comingSoon: false
@@ -48,7 +52,8 @@ const menuItems = [
       {
         title: "Roadmap",
         description: "",
-        icon: "/icons/navbar-icons/roadmap.svg",
+        icon: "road",
+        iconType: "stroke",
         link: "/roadmap",
         isExternal: false,
         comingSoon: true
@@ -62,7 +67,8 @@ const menuItems = [
       {
         title: "Tech",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "/icons/navbar-icons/try.svg",
+        icon: "tech",
+        iconType: "stroke",
         link: "/tech",
         isExternal: false,
         comingSoon: false
@@ -70,7 +76,8 @@ const menuItems = [
       {
         title: "Stats",
         description: "",
-        icon: "",
+        icon: "stats",
+        iconType: "fill",
         link: "/xprt",
         isExternal: true,
         comingSoon: true
@@ -78,7 +85,8 @@ const menuItems = [
       {
         title: "Ecosystem",
         description: "",
-        icon: "",
+        icon: "ecosystem",
+        iconType: "fill",
         link: "/ecosystem",
         isExternal: false,
         comingSoon: true
@@ -92,7 +100,8 @@ const menuItems = [
       {
         title: "Trade",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "trade",
+        iconType: "fill",
         link: "https://app.dexter.zone",
         isExternal: true,
         comingSoon: false
@@ -100,7 +109,8 @@ const menuItems = [
       {
         title: "Liquid Stake",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "liquidstake",
+        iconType: "stroke",
         link: "https://app.pstake.finance",
         isExternal: true,
         comingSoon: false
@@ -108,7 +118,8 @@ const menuItems = [
       {
         title: "Stake XPRT",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "stake",
+        iconType: "fill",
         link: "https://audit.one",
         isExternal: true,
         comingSoon: false
@@ -116,7 +127,8 @@ const menuItems = [
       {
         title: "Bridge",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "tech",
+        iconType: "stroke",
         link: "https://bridge.persistence.one",
         isExternal: true,
         comingSoon: false
@@ -130,7 +142,8 @@ const menuItems = [
       {
         title: "People",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "people",
+        iconType: "fill",
         link: "/people",
         isExternal: false,
         comingSoon: false
@@ -138,7 +151,8 @@ const menuItems = [
       {
         title: "Blog",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "people",
+        iconType: "fill",
         link: "https://medium.com/persistence-blog",
         isExternal: true,
         comingSoon: false
@@ -146,7 +160,8 @@ const menuItems = [
       {
         title: "Documentation",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "doc",
+        iconType: "fill",
         link: "https://docs.persistence.one",
         isExternal: true,
         comingSoon: false
@@ -154,7 +169,8 @@ const menuItems = [
       {
         title: "Community Forum",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "announcement",
+        iconType: "fill",
         link: "https://forum.persistence.one/",
         isExternal: true,
         comingSoon: false
@@ -162,7 +178,8 @@ const menuItems = [
       {
         title: "Download Media Kit",
         description: "",
-        icon: "",
+        icon: "download",
+        iconType: "stroke",
         link: "/ecosystem",
         isExternal: false,
         comingSoon: false
@@ -170,7 +187,8 @@ const menuItems = [
       {
         title: "Social",
         description: "",
-        icon: "",
+        icon: "ecosystem",
+        iconType: "fill",
         link: "/ecosystem",
         isExternal: false,
         comingSoon: true
@@ -202,7 +220,7 @@ const Header = () => {
         <Spacer />
         <HStack gap="56px" justify="center" align={"center"} mt={"10px"}>
           {menuItems.map((item) => (
-            <Popover placement={"top-start"} trigger="hover" key={item.id}>
+            <Popover placement={"top-start"} trigger="click" key={item.id}>
               <PopoverTrigger>
                 <Text cursor={"pointer"}>{item.name}</Text>
               </PopoverTrigger>
@@ -211,13 +229,35 @@ const Header = () => {
                 <PopoverBody p={4}>
                   <VStack align={"start"} gap={4}>
                     {item.subItems.map((subItem) => (
-                      <HStack key={subItem.title}>
-                        <Image
-                          src={subItem.icon}
-                          alt={subItem.title}
-                          width={21}
-                          height={21}
-                        />
+                      <HStack
+                        key={subItem.title}
+                        cursor={"pointer"}
+                        className={`nav-item ${
+                          subItem.comingSoon ? "coming-soon" : ""
+                        }`}
+                      >
+                        {/*<Image*/}
+                        {/*  src={subItem.icon}*/}
+                        {/*  alt={subItem.title}*/}
+                        {/*  width={21}*/}
+                        {/*  height={21}*/}
+                        {/*/>*/}
+                        <Box
+                          w={"40px"}
+                          h={"40px"}
+                          borderRadius={"100%"}
+                          className={"icon-box"}
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center"
+                          }}
+                        >
+                          <Icon
+                            icon={subItem.icon}
+                            viewClass={`nav-icon ${subItem.iconType}`}
+                          />
+                        </Box>
                         <VStack align={"start"} gap={0}>
                           <Link href={subItem.link}>
                             <Text
