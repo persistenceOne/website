@@ -2,15 +2,15 @@ import React from "react";
 
 import { Box, Center, Divider, HStack, Text, VStack } from "@chakra-ui/react";
 
-type HomePageStat = {
+type PageStat = {
   statValue: string;
   statLabel: string;
 };
 
-const HomePageStats = ({ stats }: { stats: HomePageStat[] }) => {
+const PageStats = ({ stats }: { stats: PageStat[] }) => {
   return (
     <HStack gap={0} maxW={"70%"}>
-      {stats.map((stat: HomePageStat, index: number) => (
+      {stats.map((stat: PageStat, index: number) => (
         <HStack key={stat.statLabel}>
           <VStack key={stat.statLabel} align={"stretch"}>
             <Text color={"primary.red"} fontSize={"44px"} fontWeight={700}>
@@ -36,4 +36,4 @@ const HomePageStats = ({ stats }: { stats: HomePageStat[] }) => {
   );
 };
 
-export default HomePageStats;
+export default PageStats;

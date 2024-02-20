@@ -1,28 +1,15 @@
 import {
   Box,
-  Button,
   Flex,
-  HStack,
   Heading,
-  Spacer,
-  Stat,
-  StatArrow,
-  StatGroup,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
-  Text,
   VStack,
-  Divider,
   Container,
   Stack,
   ListItem,
   UnorderedList
 } from "@chakra-ui/react";
-import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import React from "react";
 import Image from "next/image";
-import HomePageStats from "@/components/molecules/homepage-stats";
 
 const VisionSection = () => {
   return (

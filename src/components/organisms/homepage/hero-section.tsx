@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
-import HomePageStats from "@/components/molecules/homepage-stats";
+import HomePageStats from "@/components/molecules/page-stats";
 
 const homePagesStats = [
   {

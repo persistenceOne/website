@@ -24,7 +24,7 @@ const menuItems = [
       {
         title: "Story",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "/icons/navbar-icons/story.svg",
         link: "/story",
         isExternal: false,
         comingSoon: false
@@ -32,7 +32,7 @@ const menuItems = [
       {
         title: "XPRT",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "/icons/navbar-icons/xprt.svg",
         link: "/xprt",
         isExternal: false,
         comingSoon: false
@@ -40,7 +40,7 @@ const menuItems = [
       {
         title: "FAQs",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "/icons/navbar-icons/faqs.svg",
         link: "/faqs",
         isExternal: false,
         comingSoon: false
@@ -48,7 +48,7 @@ const menuItems = [
       {
         title: "Roadmap",
         description: "",
-        icon: "",
+        icon: "/icons/navbar-icons/roadmap.svg",
         link: "/roadmap",
         isExternal: false,
         comingSoon: true
@@ -62,7 +62,7 @@ const menuItems = [
       {
         title: "Tech",
         description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "",
+        icon: "/icons/navbar-icons/try.svg",
         link: "/tech",
         isExternal: false,
         comingSoon: false
@@ -206,9 +206,9 @@ const Header = () => {
               <PopoverTrigger>
                 <Text cursor={"pointer"}>{item.name}</Text>
               </PopoverTrigger>
-              <PopoverContent>
+              <PopoverContent borderRadius={6}>
                 <PopoverArrow />
-                <PopoverBody>
+                <PopoverBody p={4}>
                   <VStack align={"start"} gap={4}>
                     {item.subItems.map((subItem) => (
                       <HStack key={subItem.title}>
@@ -222,13 +222,14 @@ const Header = () => {
                           <Link href={subItem.link}>
                             <Text
                               cursor={"pointer"}
-                              fontSize={14}
+                              fontSize={16}
                               color={
                                 subItem.comingSoon ? "#3D3D3D" : "primary.red"
                               }
-                              fontWeight={400}
+                              fontWeight={500}
                             >
-                              {subItem.title}
+                              {subItem.title}{" "}
+                              {subItem.comingSoon ? "(Coming Soon)" : ""}
                             </Text>
                           </Link>
                           <Text
