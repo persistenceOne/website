@@ -41,11 +41,11 @@ const CommunityNote = () => {
           pr={"12px"}
           mb={"40px"}
           fontWeight={700}
-          lineHeight={{ base: "1.5", md: "48px" }}
+          lineHeight={{ base: "1.5", md: "42px" }}
         >
-          Persistence One brings empowering product
-          <br /> and tech, a vibrant community of Persisters,
-          <br /> and enduring partnerships under one roof.
+          Persistence One is expanding liquid staking,
+          <br /> creating LSTfi yield opportunities, and bringing
+          <br /> Restaking to Cosmos.
         </Heading>
         <Box textAlign={{ base: "center", md: "left" }}>
           <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
