@@ -19,7 +19,12 @@ export interface XPRTDefiCardInterface {
   }[];
 }
 
-const XPRTDefiCard = ({ tokens, cta, description, stats }) => {
+const XPRTDefiCard = ({
+  tokens,
+  cta,
+  description,
+  stats
+}: XPRTDefiCardInterface) => {
   return (
     <Card
       w="full"
