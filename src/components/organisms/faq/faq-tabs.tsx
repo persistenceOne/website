@@ -1,11 +1,9 @@
-import FeatureCards from "@/components/molecules/feature-cards";
 import {
   Heading,
   Text,
   Tabs,
   TabList,
   Tab,
-  TabIndicator,
   TabPanel,
   TabPanels,
   Container
@@ -68,6 +66,7 @@ const FaqTabs = () => {
         <TabList borderRight={"1px"} borderColor={"#DBE4EF"} w={"266px"}>
           {tabList.map((item) => (
             <Tab
+              key={item.name}
               textAlign={"left"}
               justifyContent={"start"}
               color={"text.blackLow"}
@@ -82,7 +81,7 @@ const FaqTabs = () => {
         </TabList>
         <TabPanels>
           {tabList.map((item) => (
-            <TabPanel>
+            <TabPanel key={item.name}>
               <AccordionList list={item.faqs} />
             </TabPanel>
           ))}

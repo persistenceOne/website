@@ -70,6 +70,7 @@ const HistorySection = () => {
           {list.map((item, index) => {
             return (
               <Box
+                key={item.title}
                 p={{ base: "24px", md: "60px" }}
                 bg={"#FEFEFE"}
                 borderRadius={"20px"}

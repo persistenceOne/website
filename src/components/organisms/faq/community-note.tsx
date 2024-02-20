@@ -1,26 +1,6 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Heading,
-  Spacer,
-  Stat,
-  StatArrow,
-  StatGroup,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
-  Text,
-  VStack,
-  Divider,
-  Container,
-  Stack
-} from "@chakra-ui/react";
-import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { Box, Button, Heading, Container } from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
-import Image from "next/image";
-import HomePageStats from "@/components/molecules/page-stats";
 
 const CommunityNote = () => {
   return (
