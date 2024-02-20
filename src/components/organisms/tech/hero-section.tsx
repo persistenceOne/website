@@ -44,28 +44,55 @@ const HeroSection = () => {
       backgroundRepeat="no-repeat"
       backgroundSize={"40%"}
     >
-      <Container maxW={"1440px"} px={"60px"}>
-        <Spacer h={20} />
-        <Flex justify={"space-between"} mb={20}>
+      <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
+        <Spacer h={{ base: 0, md: 20 }} />
+        <Flex justify={"space-between"} mb={{ base: "40px", md: "180px" }}>
           <Box pt={"150px"}>
-            <Heading variant={"main"}>Technically Super.</Heading>
-            <Heading variant={"main"} color={"primary.red"}>
+            <Heading
+              variant={"main"}
+              textAlign={{ base: "center", md: "left" }}
+              fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+            >
+              Technically Super.
+            </Heading>
+            <Heading
+              variant={"main"}
+              textAlign={{ base: "center", md: "left" }}
+              color={"primary.red"}
+              fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+            >
               Superbly Powerful.
             </Heading>
-            <Text textAlign="left" w={"70%"} my={6}>
+            <Text
+              fontSize={{ base: "16px", md: "22px" }}
+              textAlign={{ base: "center", md: "left" }}
+              w={{ base: "auto", md: "70%" }}
+              color={"text.blackLow"}
+              my={6}
+            >
               Persistence One is one of the most technologically advanced Layer
               1 for liquid staking and restaking.
             </Text>
           </Box>
         </Flex>
-        <HStack gap={0} maxW={"70%"}>
+        <HStack gap={0} maxW={{ base: "100%", md: "70%" }}>
           {homePagesStats.map((stat: any, index: number) => (
             <HStack key={stat.statLabel}>
               <VStack key={stat.statLabel} align={"stretch"}>
-                <Text color={"primary.red"} fontSize={"44px"} fontWeight={700}>
+                <Text
+                  color={"primary.red"}
+                  fontSize={{ base: "16px", md: "44px" }}
+                  fontWeight={700}
+                  textAlign={{ base: "center", md: "left" }}
+                >
                   {stat.statValue}
                 </Text>
-                <Text color="text.statLabel" fontSize={"18px"} fontWeight={400}>
+                <Text
+                  color="text.statLabel"
+                  fontSize={{ base: "14px", md: "18px" }}
+                  fontWeight={400}
+                  textAlign={{ base: "center", md: "left" }}
+                >
                   {stat.statLabel}
                 </Text>
               </VStack>
@@ -75,7 +102,7 @@ const HeroSection = () => {
                   h="80px"
                   borderColor={"#423F4066"}
                   opacity={0.4}
-                  mx={12}
+                  mx={{ base: 6, md: 12 }}
                   borderWidth={1}
                 />
               ) : null}
