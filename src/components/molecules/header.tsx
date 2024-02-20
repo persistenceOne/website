@@ -11,6 +11,7 @@ import {
   PopoverContent,
   PopoverArrow,
   PopoverBody,
+  VStack,
   Container,
   Spacer
 } from "@chakra-ui/react";
@@ -19,22 +20,162 @@ const menuItems = [
   {
     id: 0,
     name: "Learn",
-    link: "/tech"
+    subItems: [
+      {
+        title: "Story",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "/icons/navbar-icons/story.svg",
+        link: "/story",
+        isExternal: false,
+        comingSoon: false
+      },
+      {
+        title: "XPRT",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "/icons/navbar-icons/xprt.svg",
+        link: "/xprt",
+        isExternal: false,
+        comingSoon: false
+      },
+      {
+        title: "FAQs",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "/icons/navbar-icons/faqs.svg",
+        link: "/faqs",
+        isExternal: false,
+        comingSoon: false
+      },
+      {
+        title: "Roadmap",
+        description: "",
+        icon: "/icons/navbar-icons/roadmap.svg",
+        link: "/roadmap",
+        isExternal: false,
+        comingSoon: true
+      }
+    ]
   },
   {
     id: 1,
     name: "Explore",
-    link: "/faqs"
+    subItems: [
+      {
+        title: "Tech",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "/icons/navbar-icons/try.svg",
+        link: "/tech",
+        isExternal: false,
+        comingSoon: false
+      },
+      {
+        title: "Stats",
+        description: "",
+        icon: "",
+        link: "/xprt",
+        isExternal: true,
+        comingSoon: true
+      },
+      {
+        title: "Ecosystem",
+        description: "",
+        icon: "",
+        link: "/ecosystem",
+        isExternal: false,
+        comingSoon: true
+      }
+    ]
   },
   {
     id: 2,
-    name: "LSTFi",
-    link: "/people"
+    name: "dApps",
+    subItems: [
+      {
+        title: "Trade",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "https://app.dexter.zone",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Liquid Stake",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "https://app.pstake.finance",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Stake XPRT",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "https://audit.one",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Bridge",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "https://bridge.persistence.one",
+        isExternal: true,
+        comingSoon: false
+      }
+    ]
   },
   {
     id: 3,
     name: "About",
-    link: "/story"
+    subItems: [
+      {
+        title: "People",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "/people",
+        isExternal: false,
+        comingSoon: false
+      },
+      {
+        title: "Blog",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "https://medium.com/persistence-blog",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Documentation",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "https://docs.persistence.one",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Community Forum",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "",
+        link: "https://forum.persistence.one/",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Download Media Kit",
+        description: "",
+        icon: "",
+        link: "/ecosystem",
+        isExternal: false,
+        comingSoon: false
+      },
+      {
+        title: "Social",
+        description: "",
+        icon: "",
+        link: "/ecosystem",
+        isExternal: false,
+        comingSoon: true
+      }
+    ]
   }
 ];
 
@@ -61,13 +202,48 @@ const Header = () => {
         <Spacer />
         <HStack gap="56px" justify="center" align={"center"} mt={"10px"}>
           {menuItems.map((item) => (
-            <Popover placement={"top-start"}>
+            <Popover placement={"top-start"} trigger="hover" key={item.id}>
               <PopoverTrigger>
                 <Text cursor={"pointer"}>{item.name}</Text>
               </PopoverTrigger>
-              <PopoverContent>
+              <PopoverContent borderRadius={6}>
                 <PopoverArrow />
-                <PopoverBody>Popver content</PopoverBody>
+                <PopoverBody p={4}>
+                  <VStack align={"start"} gap={4}>
+                    {item.subItems.map((subItem) => (
+                      <HStack key={subItem.title}>
+                        <Image
+                          src={subItem.icon}
+                          alt={subItem.title}
+                          width={21}
+                          height={21}
+                        />
+                        <VStack align={"start"} gap={0}>
+                          <Link href={subItem.link}>
+                            <Text
+                              cursor={"pointer"}
+                              fontSize={16}
+                              color={
+                                subItem.comingSoon ? "#3D3D3D" : "primary.red"
+                              }
+                              fontWeight={500}
+                            >
+                              {subItem.title}{" "}
+                              {subItem.comingSoon ? "(Coming Soon)" : ""}
+                            </Text>
+                          </Link>
+                          <Text
+                            fontSize={14}
+                            color={"#3D3D3D"}
+                            fontWeight={400}
+                          >
+                            {subItem.description}
+                          </Text>
+                        </VStack>
+                      </HStack>
+                    ))}
+                  </VStack>
+                </PopoverBody>
               </PopoverContent>
             </Popover>
           ))}

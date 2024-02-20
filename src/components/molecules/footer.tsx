@@ -2,6 +2,7 @@ import { ArrowForwardIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
+  Divider,
   Flex,
   HStack,
   Heading,
@@ -156,6 +157,36 @@ const Footer = () => {
           ))}
         </HStack>
       </Flex>
+      <Box px={16}>
+        <Divider mt={16} borderColor={"#ECECEC"} />
+        <HStack justify={"space-between"} align={"center"} mt={4}>
+          <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
+            © Copyright 2024 Persistence Labs. All rights reserved.
+          </Text>
+          <HStack gap={8}>
+            <Link href={"/"}>
+              <Button
+                variant={"link"}
+                color={"#ffffff"}
+                fontSize={14}
+                fontWeight={400}
+              >
+                Terms of Use
+              </Button>
+            </Link>
+            <Link href={"/"}>
+              <Button
+                variant={"link"}
+                color={"#ffffff"}
+                fontSize={14}
+                fontWeight={400}
+              >
+                Privacy Policy
+              </Button>
+            </Link>
+          </HStack>
+        </HStack>
+      </Box>
     </Box>
   );
 };

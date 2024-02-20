@@ -20,7 +20,7 @@ import {
 import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import React from "react";
 import Image from "next/image";
-import HomePageStats from "@/components/molecules/homepage-stats";
+import HomePageStats from "@/components/molecules/page-stats";
 
 const homePagesStats = [
   {

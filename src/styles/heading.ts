@@ -1,7 +1,7 @@
 const heading = {
   variants: {
     main: {
-      color: "text.heading1",
+      color: "text.headingBlack",
       fontSize: "60px",
       fontWeight: "700",
       lineHeight: "1.2"
