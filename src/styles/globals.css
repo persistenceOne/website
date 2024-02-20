@@ -30,3 +30,54 @@ body {
   background: #c73238;
   opacity: 1;
 }
+
+
+/* navigation bar icon styling */
+.icon-nav-icon{
+  width: 20px;
+  height:20px
+}
+
+.icon-nav-icon.fill{
+  fill: #c73238;
+}
+
+.icon-nav-icon.stroke{
+  stroke: #c73238;
+  fill : transparent;
+}
+
+.nav-item .icon-box{
+  background: #C732381A;
+}
+
+.nav-item:hover .icon-box{
+  background: #c73238;
+}
+
+.nav-item:hover .icon-nav-icon.fill{
+  fill: #FFFEFE;
+}
+
+.nav-item:hover .icon-nav-icon.stroke{
+  stroke: #FFFEFE;
+  fill : transparent;
+}
+
+.nav-item.coming-soon{
+  pointer-events: none;
+}
+
+.nav-item.coming-soon .icon-box{
+background: #F5F5F5;
+}
+
+.nav-item.coming-soon .icon-nav-icon.stroke{
+  stroke: #878787;
+  fill: transparent
+}
+
+.nav-item.coming-soon .icon-nav-icon.fill{
+  fill: #878787;
+}
+/* navigation bar icon styling end */
