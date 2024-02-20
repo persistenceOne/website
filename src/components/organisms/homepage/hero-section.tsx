@@ -37,8 +37,7 @@ const HeroSection = () => {
       backgroundRepeat="no-repeat"
       backgroundSize={"45% 77%"}
     >
-      <Spacer h={20} />
-
+      <Spacer h={"150px"} />
       <Flex justify={"space-between"} mb={20}>
         <VStack align={"stretch"}>
           <Heading variant={"main"}>
