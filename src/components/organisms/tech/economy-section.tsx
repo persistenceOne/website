@@ -86,23 +86,23 @@ const EconomySection = () => {
     sliderRef.slickPrev();
   };
   return (
-    <Container maxW={"1140px"} px={"60px"} mb={4}>
+    <Container maxW={"1140px"} px={{ base: "20px", md: "60px" }}>
       <Box py={"70px"}>
         <Heading
           textAlign={"center"}
-          color={"text.headingSemiBlack"}
-          fontSize={"44px"}
-          mb={"80px"}
+          color={"text.blackHigh"}
+          fontSize={{ base: "26px", md: "58px" }}
+          mb={{ base: "32px", md: "60px" }}
         >
           Building Blocks of the
           <br /> Liquid Staking Economy
         </Heading>
         <VStack align={"stretch"} spacing={4}>
-          <Stack spacing={2} direction="row">
+          <Stack spacing={2} direction={{ base: "column", md: "row" }}>
             <Flex
               p={"32px"}
               bg={"#fff"}
-              w={"50%"}
+              w={{ base: "100%", md: "50%" }}
               borderRadius={"20px"}
               direction={"column"}
             >
@@ -114,14 +114,20 @@ const EconomySection = () => {
                   height={240}
                 />
               </Box>
-              <Heading variant={"secondary"}>
+              <Heading
+                variant={"secondary"}
+                color={"text.blackEmphasis"}
+                mb={"12px"}
+                fontSize={{ base: "16px", md: "20px" }}
+                fontWeight={600}
+              >
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmos
               </Heading>
-              <Text color={"#232325CC"} fontSize={"16px"}>
+              <Text color={"text.blackLow"} fontSize={"16px"}>
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmo
               </Text>
             </Flex>
-            <Box pos={"relative"} w={"50%"}>
+            <Box pos={"relative"} w={{ base: "100%", md: "50%" }}>
               <Flex
                 p={"32px"}
                 bg={"#fff"}
@@ -136,10 +142,16 @@ const EconomySection = () => {
                     height={240}
                   />
                 </Box>
-                <Heading variant={"secondary"}>
+                <Heading
+                  variant={"secondary"}
+                  color={"text.blackEmphasis"}
+                  mb={"12px"}
+                  fontSize={{ base: "16px", md: "20px" }}
+                  fontWeight={600}
+                >
                   First chain to adopt the Liquid Staking Module (LSM) in Cosmos
                 </Heading>
-                <Text color={"#232325CC"} fontSize={"16px"}>
+                <Text color={"text.blackLow"} fontSize={"16px"}>
                   First chain to adopt the Liquid Staking Module (LSM) in Cosmo
                 </Text>
               </Flex>
@@ -155,11 +167,11 @@ const EconomySection = () => {
               />
             </Box>
           </Stack>
-          <Stack spacing={2} direction="row">
+          <Stack spacing={2} direction={{ base: "column", md: "row" }}>
             <Flex
               p={"32px"}
               bg={"#fff"}
-              w={"50%"}
+              w={{ base: "100%", md: "50%" }}
               borderRadius={"20px"}
               direction={"column"}
             >
@@ -171,17 +183,23 @@ const EconomySection = () => {
                   height={240}
                 />
               </Box>
-              <Heading variant={"secondary"}>
+              <Heading
+                variant={"secondary"}
+                color={"text.blackEmphasis"}
+                mb={"12px"}
+                fontSize={{ base: "16px", md: "20px" }}
+                fontWeight={600}
+              >
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmos
               </Heading>
-              <Text color={"#232325CC"} fontSize={"16px"}>
+              <Text color={"text.blackLow"} fontSize={"16px"}>
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmo
               </Text>
             </Flex>
             <Flex
               p={"32px"}
               bg={"#fff"}
-              w={"50%"}
+              w={{ base: "100%", md: "50%" }}
               borderRadius={"20px"}
               direction={"column"}
             >
@@ -193,19 +211,25 @@ const EconomySection = () => {
                   height={240}
                 />
               </Box>
-              <Heading variant={"secondary"}>
+              <Heading
+                variant={"secondary"}
+                color={"text.blackEmphasis"}
+                mb={"12px"}
+                fontSize={{ base: "16px", md: "20px" }}
+                fontWeight={600}
+              >
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmos
               </Heading>
-              <Text color={"#232325CC"} fontSize={"16px"}>
+              <Text color={"text.blackLow"} fontSize={"16px"}>
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmo
               </Text>
             </Flex>
           </Stack>
-          <Stack spacing={2} direction="row">
+          <Stack spacing={2} direction={{ base: "column", md: "row" }}>
             <Flex
               p={"32px"}
               bg={"#fff"}
-              w={"50%"}
+              w={{ base: "100%", md: "50%" }}
               borderRadius={"20px"}
               direction={"column"}
             >
@@ -217,17 +241,23 @@ const EconomySection = () => {
                   height={240}
                 />
               </Box>
-              <Heading variant={"secondary"}>
+              <Heading
+                variant={"secondary"}
+                color={"text.blackEmphasis"}
+                mb={"12px"}
+                fontSize={{ base: "16px", md: "20px" }}
+                fontWeight={600}
+              >
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmos
               </Heading>
-              <Text color={"#232325CC"} fontSize={"16px"}>
+              <Text color={"text.blackLow"} fontSize={"16px"}>
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmo
               </Text>
             </Flex>
             <Flex
               p={"32px"}
               bg={"#fff"}
-              w={"50%"}
+              w={{ base: "100%", md: "50%" }}
               borderRadius={"20px"}
               direction={"column"}
             >
@@ -239,10 +269,16 @@ const EconomySection = () => {
                   height={240}
                 />
               </Box>
-              <Heading variant={"secondary"}>
+              <Heading
+                variant={"secondary"}
+                color={"text.blackEmphasis"}
+                mb={"12px"}
+                fontSize={{ base: "16px", md: "20px" }}
+                fontWeight={600}
+              >
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmos
               </Heading>
-              <Text color={"#232325CC"} fontSize={"16px"}>
+              <Text color={"text.blackLow"} fontSize={"16px"}>
                 First chain to adopt the Liquid Staking Module (LSM) in Cosmo
               </Text>
             </Flex>
