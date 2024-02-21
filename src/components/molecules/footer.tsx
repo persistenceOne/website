@@ -12,6 +12,38 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Icon from "./Icon";
+
+const footerSocialLinks = [
+  {
+    name: "Twitter",
+    link: "https://twitter.com/PersistenceOne",
+    icon: "/icons/footer/twitter.svg",
+    iconType: "stroke",
+    color: "#1DA1F2"
+  },
+  {
+    name: "Discord",
+    link: "https://discord.com/invite/3u3Zv5t",
+    icon: "/icons/footer/discord.svg",
+    iconType: "stroke",
+    color: "#5865F2"
+  },
+  {
+    name: "Telegram",
+    link: "https://t.me/persistenceone",
+    icon: "/icons/footer/telegram.svg",
+    iconType: "stroke",
+    color: "#0077B5"
+  },
+  {
+    name: "Medium",
+    link: "https://medium.com/persistence-blog",
+    icon: "/icons/footer/medium.svg",
+    iconType: "stroke",
+    color: "#000000"
+  }
+];
 
 const footerLinks = [
   {
@@ -131,6 +163,30 @@ const Footer = () => {
               Download Media Kit
             </Button>
           </Link>
+          <HStack gap={2} mt={4}>
+            {footerSocialLinks.map((link) => (
+              <Link href={link.link} key={link.name}>
+                <Box
+                  w={"24px"}
+                  h={"24px"}
+                  borderRadius={"100%"}
+                  className={"icon-box"}
+                  bg={"#9C9C9C"}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                  }}
+                >
+                  <Icon
+                    icon={link.icon}
+                    color="white"
+                    viewClass={`nav-icon ${link.iconType}`}
+                  />
+                </Box>
+              </Link>
+            ))}
+          </HStack>
         </VStack>
         <HStack gap={16} align={"flex-start"}>
           {footerLinks.map((link) => (
