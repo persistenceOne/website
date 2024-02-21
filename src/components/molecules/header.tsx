@@ -220,7 +220,7 @@ const Header = () => {
         <Spacer />
         <HStack gap="56px" justify="center" align={"center"} mt={"10px"}>
           {menuItems.map((item) => (
-            <Popover placement={"top-start"} trigger="click" key={item.id}>
+            <Popover placement={"top-start"} trigger="hover" key={item.id}>
               <PopoverTrigger>
                 <Text cursor={"pointer"}>{item.name}</Text>
               </PopoverTrigger>

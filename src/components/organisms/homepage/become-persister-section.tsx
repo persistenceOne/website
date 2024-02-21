@@ -17,7 +17,11 @@ import {
 import Link from "next/link";
 import React from "react";
 
-const BecomePersisterSection = () => {
+const BecomePersisterSection = ({
+  showEcosystemSection = true
+}: {
+  showEcosystemSection?: boolean;
+}) => {
   return (
     <>
       <VStack align={"center"}>
@@ -68,17 +72,19 @@ const BecomePersisterSection = () => {
           </TabPanels>
         </Tabs>
       </VStack>
-      <VStack align={"center"} px={24} py={10} gap={8} bg={"#FEFEFE"}>
-        <Text fontWeight={600} fontSize={34} textAlign={"center"}>
-          Persistence One is expanding liquid staking, creating LSTfi yield
-          opportunities, and bringing Restaking to Cosmos.
-        </Text>
-        <Link href={"/xprt"}>
-          <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-            Explore Ecosystem
-          </Button>
-        </Link>
-      </VStack>
+      {showEcosystemSection ? (
+        <VStack align={"center"} px={24} py={10} gap={8} bg={"#FEFEFE"}>
+          <Text fontWeight={600} fontSize={34} textAlign={"center"}>
+            Persistence One is expanding liquid staking, creating LSTfi yield
+            opportunities, and bringing Restaking to Cosmos.
+          </Text>
+          <Link href={"/xprt"}>
+            <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+              Explore Ecosystem
+            </Button>
+          </Link>
+        </VStack>
+      ) : null}
     </>
   );
 };
