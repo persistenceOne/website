@@ -18,28 +18,28 @@ const footerSocialLinks = [
   {
     name: "Twitter",
     link: "https://twitter.com/PersistenceOne",
-    icon: "/icons/footer/twitter.svg",
+    icon: "twitter",
     iconType: "stroke",
     color: "#1DA1F2"
   },
   {
     name: "Discord",
     link: "https://discord.com/invite/3u3Zv5t",
-    icon: "/icons/footer/discord.svg",
+    icon: "discord",
     iconType: "stroke",
     color: "#5865F2"
   },
   {
     name: "Telegram",
     link: "https://t.me/persistenceone",
-    icon: "/icons/footer/telegram.svg",
+    icon: "telegram",
     iconType: "stroke",
     color: "#0077B5"
   },
   {
     name: "Medium",
     link: "https://medium.com/persistence-blog",
-    icon: "/icons/footer/medium.svg",
+    icon: "medium",
     iconType: "stroke",
     color: "#000000"
   }
@@ -163,7 +163,7 @@ const Footer = () => {
               Download Media Kit
             </Button>
           </Link>
-          <HStack gap={2} mt={4}>
+          <HStack gap={4} mt={4}>
             {footerSocialLinks.map((link) => (
               <Link href={link.link} key={link.name}>
                 <Box
@@ -181,7 +181,7 @@ const Footer = () => {
                   <Icon
                     icon={link.icon}
                     color="white"
-                    viewClass={`nav-icon ${link.iconType}`}
+                    viewClass={`footer-icon ${link.iconType}`}
                   />
                 </Box>
               </Link>
