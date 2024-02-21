@@ -84,3 +84,9 @@ background: #F5F5F5;
   fill: #878787;
 }
 /* navigation bar icon styling end */
+
+.icon-footer-icon{
+  fill: #252424;
+  width: 14px;
+  height: auto;
+}
