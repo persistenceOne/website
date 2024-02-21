@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <Box>
       <HeroSection />
-      {/* <Overview /> */}
+      <Overview />
       <Spacer h={20} />
       <DappsSection />
       <GetXprtSection />

@@ -216,8 +216,9 @@ const Header = () => {
   return (
     <Container
       className={"navbar-container"}
-      maxW={"1440px"}
+      maxW={"full"}
       px={"60px"}
+      transition={"all 0.3s"}
       py={"20px"}
       id={"is-sticky"}
     >
