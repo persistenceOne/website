@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -196,15 +196,35 @@ const menuItems = [
     ]
   }
 ];
-
 const Header = () => {
+  useEffect(() => {
+    let body: any = document.getElementsByTagName("body")[0];
+    body.classList = "";
+    window.addEventListener("scroll", scrollNavigation, true);
+  }, []);
+
+  const scrollNavigation = () => {
+    const doc = document.documentElement;
+    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    let topbar = document.getElementById("is-sticky") as HTMLElement;
+    if (top > 50) {
+      topbar.classList.add("nav-bar");
+    } else {
+      topbar.classList.remove("nav-bar");
+    }
+  };
   return (
-    <Container maxW={"1440px"} px={"60px"}>
+    <Container
+      className={"navbar-container"}
+      maxW={"1440px"}
+      px={"60px"}
+      py={"20px"}
+      id={"is-sticky"}
+    >
       <Flex
         as={"nav"}
         justify={"between"}
         align={"center"}
-        pt={2}
         className={"navigation-bar"}
       >
         <Box>
@@ -218,7 +238,7 @@ const Header = () => {
           </Link>
         </Box>
         <Spacer />
-        <HStack gap="56px" justify="center" align={"center"} mt={"10px"}>
+        <HStack gap="56px" justify="center" align={"center"}>
           {menuItems.map((item) => (
             <Popover placement={"top-start"} trigger="click" key={item.id}>
               <PopoverTrigger>

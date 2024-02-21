@@ -31,8 +31,11 @@ body {
   opacity: 1;
 }
 
-
 /* navigation bar icon styling */
+.navbar-container.nav-bar{
+  background: #F5F5F5;
+}
+
 .icon-nav-icon{
   width: 20px;
   height:20px
