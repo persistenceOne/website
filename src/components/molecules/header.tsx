@@ -249,60 +249,97 @@ const Header = () => {
                 <PopoverArrow />
                 <PopoverBody p={4}>
                   <VStack align={"start"} gap={4}>
-                    {item.subItems.map((subItem) => (
-                      <HStack
-                        key={subItem.title}
-                        cursor={"pointer"}
-                        className={`nav-item ${
-                          subItem.comingSoon ? "coming-soon" : ""
-                        }`}
-                      >
-                        {/*<Image*/}
-                        {/*  src={subItem.icon}*/}
-                        {/*  alt={subItem.title}*/}
-                        {/*  width={21}*/}
-                        {/*  height={21}*/}
-                        {/*/>*/}
-                        <Box
-                          w={"40px"}
-                          h={"40px"}
-                          borderRadius={"100%"}
-                          className={"icon-box"}
-                          style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center"
-                          }}
+                    {item.subItems.map((subItem) =>
+                      subItem.comingSoon ? (
+                        <HStack
+                          key={subItem.title}
+                          cursor={"not-allowed"}
+                          className={"nav-item coming-soon"}
+                          gap={4}
+                          fontWeight={500}
+                          _hover={{ fontWeight: 700 }}
                         >
-                          <Icon
-                            icon={subItem.icon}
-                            viewClass={`nav-icon ${subItem.iconType}`}
-                          />
-                        </Box>
-                        <VStack align={"start"} gap={0}>
-                          <Link href={subItem.link}>
+                          <Box
+                            w={"40px"}
+                            h={"40px"}
+                            borderRadius={"100%"}
+                            className={"icon-box"}
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center"
+                            }}
+                          >
+                            <Icon
+                              icon={subItem.icon}
+                              viewClass={`nav-icon ${subItem.iconType}`}
+                            />
+                          </Box>
+                          <VStack align={"start"} gap={0}>
                             <Text
                               cursor={"pointer"}
                               fontSize={16}
-                              color={
-                                subItem.comingSoon ? "#3D3D3D" : "primary.red"
-                              }
-                              fontWeight={500}
+                              color={"#878787"}
                             >
                               {subItem.title}{" "}
-                              {subItem.comingSoon ? "(Coming Soon)" : ""}
+                              <Text as={"span"} fontWeight={300} fontSize={12}>
+                                (Coming Soon)
+                              </Text>
                             </Text>
-                          </Link>
-                          <Text
-                            fontSize={14}
-                            color={"#3D3D3D"}
-                            fontWeight={400}
+                            <Text
+                              fontSize={14}
+                              color={"#3D3D3D"}
+                              fontWeight={400}
+                            >
+                              {subItem.description}
+                            </Text>
+                          </VStack>
+                        </HStack>
+                      ) : (
+                        <Link href={subItem.link} key={subItem.title}>
+                          <HStack
+                            cursor={"pointer"}
+                            className={"nav-item"}
+                            gap={4}
+                            fontWeight={500}
+                            _hover={{ fontWeight: 700 }}
                           >
-                            {subItem.description}
-                          </Text>
-                        </VStack>
-                      </HStack>
-                    ))}
+                            <Box
+                              w={"40px"}
+                              h={"40px"}
+                              borderRadius={"100%"}
+                              className={"icon-box"}
+                              style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                              }}
+                            >
+                              <Icon
+                                icon={subItem.icon}
+                                viewClass={`nav-icon ${subItem.iconType}`}
+                              />
+                            </Box>
+                            <VStack align={"start"} gap={0}>
+                              <Text
+                                cursor={"pointer"}
+                                fontSize={16}
+                                color={"primary.red"}
+                              >
+                                {subItem.title}{" "}
+                              </Text>
+                              <Text
+                                fontSize={14}
+                                color={"#3D3D3D"}
+                                fontWeight={400}
+                              >
+                                {subItem.description}
+                              </Text>
+                            </VStack>
+                          </HStack>
+                        </Link>
+                      )
+                    )}
                   </VStack>
                 </PopoverBody>
               </PopoverContent>
