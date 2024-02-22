@@ -17,25 +17,8 @@ import {
   Container,
   Stack
 } from "@chakra-ui/react";
-import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import React from "react";
 import Image from "next/image";
-import HomePageStats from "@/components/molecules/page-stats";
-
-const homePagesStats = [
-  {
-    statValue: "232,947",
-    statLabel: "Blocks"
-  },
-  {
-    statValue: "45+",
-    statLabel: "IBC Connection"
-  },
-  {
-    statValue: "5+",
-    statLabel: "Audits"
-  }
-];
 
 const NotesSection = () => {
   return (
@@ -67,6 +50,7 @@ const NotesSection = () => {
             bg={"#fff"}
             borderRadius={"20px"}
             direction={"column"}
+            boxShadow={"md"}
           >
             <Heading variant={"secondary"} color={"text.blackHigh"}>
               First chain to adopt the Liquid Staking Module (LSM) in Cosmos
@@ -82,7 +66,12 @@ const NotesSection = () => {
           </Flex>
           <VStack align={"stretch"} w={{ base: "auto", md: "600px" }}>
             <Box pos={"relative"}>
-              <Flex p={"32px"} bg={"#fff"} borderRadius={"20px"}>
+              <Flex
+                p={"32px"}
+                bg={"#fff"}
+                borderRadius={"20px"}
+                boxShadow={"md"}
+              >
                 <Heading variant={"secondary"} color={"text.blackHigh"}>
                   Building the Restaking Infrastructure for Cosmos
                 </Heading>
@@ -104,7 +93,7 @@ const NotesSection = () => {
                 borderRadius={"20px"}
               />
             </Box>
-            <Flex p={"32px"} bg={"#fff"} borderRadius={"20px"}>
+            <Flex p={"32px"} bg={"#fff"} borderRadius={"20px"} boxShadow={"md"}>
               <Heading variant={"secondary"} color={"text.blackHigh"}>
                 Building the Restaking Infrastructure for Cosmos
               </Heading>
@@ -124,6 +113,7 @@ const NotesSection = () => {
             w={{ base: "auto", md: "275px" }}
             bg={"#fff"}
             borderRadius={"20px"}
+            boxShadow={"md"}
           >
             <Flex
               p={"32px"}
@@ -160,6 +150,7 @@ const NotesSection = () => {
             justify={"space-between"}
             borderRadius={"20px"}
             direction={"column"}
+            boxShadow={"md"}
           >
             <Heading variant={"secondary"} color={"text.blackHigh"}>
               Pioneered ATOM liquid staking in 2021
@@ -179,6 +170,7 @@ const NotesSection = () => {
             justify={"space-between"}
             borderRadius={"20px"}
             direction={"column"}
+            boxShadow={"md"}
           >
             <Heading variant={"secondary"} color={"text.blackHigh"}>
               One of the first chains to enable IBC
@@ -198,6 +190,7 @@ const NotesSection = () => {
             justify={"space-between"}
             borderRadius={"20px"}
             direction={"column"}
+            boxShadow={"md"}
           >
             <Heading variant={"secondary"} color={"text.blackHigh"}>
               Audit first, deploy later.

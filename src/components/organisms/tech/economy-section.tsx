@@ -98,6 +98,7 @@ const EconomySection = () => {
                 w={{ base: "100%", md: "50%" }}
                 borderRadius={"20px"}
                 direction={"column"}
+                boxShadow={"md"}
               >
                 <Box m={"auto"}>
                   <Image
