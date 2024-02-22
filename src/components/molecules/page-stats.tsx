@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 
 import { Box, Center, Divider, HStack, Text, VStack } from "@chakra-ui/react";
 
@@ -18,7 +19,12 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
               fontSize={{ base: "22px", md: "44px" }}
               fontWeight={700}
             >
-              {stat.statValue}
+              $
+              {Number(stat.statValue) > 0 ? (
+                <CountUp start={0} end={Number(stat.statValue)} duration={3} />
+              ) : (
+                0
+              )}
             </Text>
             <Text
               color="text.blackHigh"
