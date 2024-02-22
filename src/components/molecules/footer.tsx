@@ -87,27 +87,27 @@ const footerLinks = [
     links: [
       {
         title: "Trade",
-        link: "/",
+        link: "https://app.dexter.zone",
         isExternal: true
       },
       {
         title: "Liquid Stake",
-        link: "/",
+        link: "https://app.pstake.finance",
         isExternal: true
       },
       {
         title: "Bridge",
-        link: "/",
+        link: "https://bridge.persistence.one",
         isExternal: true
       },
       {
         title: "Wallet",
-        link: "/",
+        link: "https://wallet.persistence.one",
         isExternal: true
       },
       {
         title: "Stake XPRT",
-        link: "/",
+        link: "https://audit.one",
         isExternal: true
       }
     ]
@@ -154,7 +154,12 @@ const Footer = () => {
             <Text fontWeight={400} fontSize={12}>
               Managed By Persistence Labs
             </Text>
-            <Link href={"/"}>
+            <Link
+              href={
+                "https://persistence.notion.site/Persistence-Media-Kit-50e8f0eacab1466ebe7899d3773a48a3"
+              }
+              target={"_blank"}
+            >
               <Button
                 variant={"link"}
                 rightIcon={<ArrowForwardIcon />}
@@ -195,7 +200,11 @@ const Footer = () => {
               <VStack key={link.title} align={"flex-start"} gap={4}>
                 <Heading variant={"footerHeading"}>{link.title}</Heading>
                 {link.links.map((item) => (
-                  <Link href={item.link} key={item.title}>
+                  <Link
+                    href={item.link}
+                    key={item.title}
+                    target={item.isExternal ? "_blank" : "_self"}
+                  >
                     <Button
                       variant={"link"}
                       key={item.title}
@@ -222,7 +231,7 @@ const Footer = () => {
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
-              <Link href={"/"}>
+              <Link href={"/terms"}>
                 <Button
                   variant={"link"}
                   color={"#ffffff"}
@@ -232,7 +241,7 @@ const Footer = () => {
                   Terms of Use
                 </Button>
               </Link>
-              <Link href={"/"}>
+              <Link href={"/privacy"}>
                 <Button
                   variant={"link"}
                   color={"#ffffff"}
