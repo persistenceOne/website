@@ -2,6 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 
 import { Box, Center, Divider, HStack, Text, VStack } from "@chakra-ui/react";
+import { numberFormat } from "@/utils/helpers";
 
 type PageStat = {
   statValue: string;
@@ -20,11 +21,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
               fontWeight={700}
             >
               $
-              {Number(stat.statValue) > 0 ? (
-                <CountUp start={0} end={Number(stat.statValue)} duration={3} />
-              ) : (
-                0
-              )}
+              {Number(stat.statValue) > 0 ? numberFormat(stat.statValue, 3) : 0}
             </Text>
             <Text
               color="text.blackHigh"
