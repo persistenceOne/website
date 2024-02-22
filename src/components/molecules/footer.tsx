@@ -7,7 +7,8 @@ import {
   HStack,
   Heading,
   Text,
-  VStack
+  VStack,
+  Container
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -140,109 +141,111 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <Box as={"footer"} bg={"#252424"} py={16}>
-      <Flex justify={"space-around"} align={"flex-start"} color={"#ffffff"}>
-        <VStack align={"flex-start"}>
-          <Image
-            src={"images/persistence-logo.svg"}
-            width={186}
-            height={24}
-            alt={"Persistence Logo"}
-          />
-          <Text fontWeight={400} fontSize={12}>
-            Managed By Persistence Labs
-          </Text>
-          <Link href={"/"}>
-            <Button
-              variant={"link"}
-              rightIcon={<ArrowForwardIcon />}
-              color={"#ECECEC"}
-              fontWeight={600}
-              fontSize={16}
-            >
-              Download Media Kit
-            </Button>
-          </Link>
-          <HStack gap={4} mt={4}>
-            {footerSocialLinks.map((link) => (
-              <Link href={link.link} key={link.name}>
-                <Box
-                  w={"24px"}
-                  h={"24px"}
-                  borderRadius={"100%"}
-                  className={"icon-box"}
-                  bg={"#9C9C9C"}
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                  }}
-                >
-                  <Icon
-                    icon={link.icon}
-                    color="white"
-                    viewClass={`footer-icon ${link.iconType}`}
-                  />
-                </Box>
-              </Link>
-            ))}
-          </HStack>
-        </VStack>
-        <HStack gap={16} align={"flex-start"}>
-          {footerLinks.map((link) => (
-            <VStack key={link.title} align={"flex-start"} gap={4}>
-              <Heading variant={"footerHeading"}>{link.title}</Heading>
-              {link.links.map((item) => (
-                <Link href={item.link} key={item.title}>
-                  <Button
-                    variant={"link"}
-                    key={item.title}
-                    color={"#ffffff"}
-                    fontSize={16}
-                    fontWeight={400}
-                    opacity={0.69}
-                    rightIcon={
-                      item.isExternal ? <ExternalLinkIcon /> : undefined
-                    }
+    <Box as={"footer"} bg={"#252424"}>
+      <Container maxW={"1300px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
+        <Flex justify={"space-between"} align={"flex-start"} color={"#ffffff"}>
+          <VStack align={"flex-start"}>
+            <Image
+              src={"images/persistence-logo.svg"}
+              width={186}
+              height={24}
+              alt={"Persistence Logo"}
+            />
+            <Text fontWeight={400} fontSize={12}>
+              Managed By Persistence Labs
+            </Text>
+            <Link href={"/"}>
+              <Button
+                variant={"link"}
+                rightIcon={<ArrowForwardIcon />}
+                color={"#ECECEC"}
+                fontWeight={600}
+                fontSize={16}
+              >
+                Download Media Kit
+              </Button>
+            </Link>
+            <HStack gap={4} mt={4}>
+              {footerSocialLinks.map((link) => (
+                <Link href={link.link} key={link.name}>
+                  <Box
+                    w={"24px"}
+                    h={"24px"}
+                    borderRadius={"100%"}
+                    className={"icon-box"}
+                    bg={"#9C9C9C"}
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center"
+                    }}
                   >
-                    {item.title}
-                  </Button>
+                    <Icon
+                      icon={link.icon}
+                      color="white"
+                      viewClass={`footer-icon ${link.iconType}`}
+                    />
+                  </Box>
                 </Link>
               ))}
-            </VStack>
-          ))}
-        </HStack>
-      </Flex>
-      <Box px={16}>
-        <Divider mt={16} borderColor={"#ECECEC"} />
-        <HStack justify={"space-between"} align={"center"} mt={4}>
-          <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
-            © Copyright 2024 Persistence Labs. All rights reserved.
-          </Text>
-          <HStack gap={8}>
-            <Link href={"/"}>
-              <Button
-                variant={"link"}
-                color={"#ffffff"}
-                fontSize={14}
-                fontWeight={400}
-              >
-                Terms of Use
-              </Button>
-            </Link>
-            <Link href={"/"}>
-              <Button
-                variant={"link"}
-                color={"#ffffff"}
-                fontSize={14}
-                fontWeight={400}
-              >
-                Privacy Policy
-              </Button>
-            </Link>
+            </HStack>
+          </VStack>
+          <HStack gap={16} align={"flex-start"}>
+            {footerLinks.map((link) => (
+              <VStack key={link.title} align={"flex-start"} gap={4}>
+                <Heading variant={"footerHeading"}>{link.title}</Heading>
+                {link.links.map((item) => (
+                  <Link href={item.link} key={item.title}>
+                    <Button
+                      variant={"link"}
+                      key={item.title}
+                      color={"#ffffff"}
+                      fontSize={16}
+                      fontWeight={400}
+                      opacity={0.69}
+                      rightIcon={
+                        item.isExternal ? <ExternalLinkIcon /> : undefined
+                      }
+                    >
+                      {item.title}
+                    </Button>
+                  </Link>
+                ))}
+              </VStack>
+            ))}
           </HStack>
-        </HStack>
-      </Box>
+        </Flex>
+        <Box>
+          <Divider mt={"20px"} borderColor={"#ECECEC33"} />
+          <HStack justify={"space-between"} align={"center"} mt={4}>
+            <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
+              © Copyright 2024 Persistence Labs. All rights reserved.
+            </Text>
+            <HStack gap={8}>
+              <Link href={"/"}>
+                <Button
+                  variant={"link"}
+                  color={"#ffffff"}
+                  fontSize={14}
+                  fontWeight={400}
+                >
+                  Terms of Use
+                </Button>
+              </Link>
+              <Link href={"/"}>
+                <Button
+                  variant={"link"}
+                  color={"#ffffff"}
+                  fontSize={14}
+                  fontWeight={400}
+                >
+                  Privacy Policy
+                </Button>
+              </Link>
+            </HStack>
+          </HStack>
+        </Box>
+      </Container>
     </Box>
   );
 };

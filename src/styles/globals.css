@@ -32,60 +32,60 @@ body {
 }
 
 /* navigation bar icon styling */
-.navbar-container.nav-bar{
-  background: #F5F5F5;
+.navbar-container.nav-bar {
+  background: #f5f5f5;
 }
 
-.icon-nav-icon{
+.icon-nav-icon {
   width: 20px;
-  height:20px
+  height: 20px;
 }
 
-.icon-nav-icon.fill{
+.icon-nav-icon.fill {
   fill: #c73238;
 }
 
-.icon-nav-icon.stroke{
+.icon-nav-icon.stroke {
   stroke: #c73238;
-  fill : transparent;
+  fill: transparent;
 }
 
-.nav-item .icon-box{
-  background: #C732381A;
+.nav-item .icon-box {
+  background: #c732381a;
 }
 
-.nav-item:hover .icon-box{
+.nav-item:hover .icon-box {
   background: #c73238;
 }
 
-.nav-item:hover .icon-nav-icon.fill{
-  fill: #FFFEFE;
+.nav-item:hover .icon-nav-icon.fill {
+  fill: #fffefe;
 }
 
-.nav-item:hover .icon-nav-icon.stroke{
-  stroke: #FFFEFE;
-  fill : transparent;
+.nav-item:hover .icon-nav-icon.stroke {
+  stroke: #fffefe;
+  fill: transparent;
 }
 
-.nav-item.coming-soon{
+.nav-item.coming-soon {
   pointer-events: none;
 }
 
-.nav-item.coming-soon .icon-box{
-background: #F5F5F5;
+.nav-item.coming-soon .icon-box {
+  background: #f5f5f5;
 }
 
-.nav-item.coming-soon .icon-nav-icon.stroke{
+.nav-item.coming-soon .icon-nav-icon.stroke {
   stroke: #878787;
-  fill: transparent
+  fill: transparent;
 }
 
-.nav-item.coming-soon .icon-nav-icon.fill{
+.nav-item.coming-soon .icon-nav-icon.fill {
   fill: #878787;
 }
 /* navigation bar icon styling end */
 
-.icon-footer-icon{
+.icon-footer-icon {
   fill: #252424;
   width: 14px;
   height: auto;

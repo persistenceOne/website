@@ -1,5 +1,5 @@
 import DappCard, { DappCardInterface } from "@/components/atoms/dapp-card";
-import { Box, HStack, Heading, Text, VStack } from "@chakra-ui/react";
+import { Container, Box, Stack, Heading, Text, Flex } from "@chakra-ui/react";
 import React from "react";
 
 const dApps: DappCardInterface[] = [
@@ -49,10 +49,11 @@ const dApps: DappCardInterface[] = [
       }
     ],
     supportingAssets: [
-      { asset: "stkOSMO", assetIcon: "/images/stkosmo.svg" },
-      { asset: "stkXPRT", assetIcon: "/images/stkxprt.svg" },
-      { asset: "stkATOM", assetIcon: "/images/stkatom.svg" },
-      { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" }
+      { asset: "XPRT", assetIcon: "/images/tokens/xprt.svg" },
+      { asset: "ATOM", assetIcon: "/images/tokens/atom.svg" },
+      { asset: "DYDX", assetIcon: "/images/tokens/dydx.svg" },
+      { asset: "USDT", assetIcon: "/images/usdt.svg" },
+      { asset: "USDC", assetIcon: "/images/usdc.svg" }
     ],
     website: { link: "https://dexter.zone", linkText: "dexter.zone" },
     button: {
@@ -68,21 +69,43 @@ const dApps: DappCardInterface[] = [
 const DappsSection = () => {
   return (
     <Box pos={"relative"}>
-      <VStack px={16}>
-        <Heading>#Built on Persistence</Heading>
-        <Text>Discover the future of Web3 Finance Powered by Persistence</Text>
-        <HStack spacing={8} mt={12} mb={24}>
+      <Container maxW={"1200px"} px={{ base: "16px", md: "30px" }}>
+        <Flex justify={"center"}>
+          <Box>
+            <Heading
+              textAlign={"center"}
+              color={"text.blackHigh"}
+              fontSize={{ base: "26px", md: "58px" }}
+              mb={"4px"}
+            >
+              #Built on Persistence
+            </Heading>
+            <Text
+              textAlign="center"
+              mb={{ base: "22px", md: "60px" }}
+              color={"text.blackMid"}
+              fontSize={{ base: "16px", md: "22px" }}
+            >
+              Discover the future of Web3 Finance Powered by Persistence
+            </Text>
+          </Box>
+        </Flex>
+        <Stack
+          spacing={8}
+          mb={"80px"}
+          direction={{ base: "column", md: "row" }}
+        >
           {dApps.map((dApp) => (
             <DappCard key={dApp.dAppName} {...dApp} />
           ))}
-        </HStack>
-      </VStack>
+        </Stack>
+      </Container>
       <Box
         bg="primary.red"
         w={"full"}
         h={"200px"}
         pos={"absolute"}
-        bottom={0}
+        bottom={"-80px"}
         zIndex={-1}
       />
     </Box>

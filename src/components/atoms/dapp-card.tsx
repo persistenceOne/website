@@ -53,54 +53,69 @@ const DappCard = ({
   button
 }: DappCardInterface) => {
   return (
-    <Card p={4} w={"full"} borderRadius={"20px"}>
-      <CardHeader>
+    <Card px={"44px"} py={"38px"} w={"full"} borderRadius={"20px"}>
+      <CardHeader p={""}>
         <HStack justify={"space-between"}>
           <Box>
             <Image src={dAppLogo} alt="" width={56} height={56} />
-            <Heading>{dAppName}</Heading>
+            <Heading fontWeight={600} fontSize={"32px"} mt={"16px"}>
+              {dAppName}
+            </Heading>
           </Box>
           <Button
             rightIcon={<ExternalLinkIcon />}
             variant={"unstyled"}
             alignSelf={"flex-start"}
-            color={"buttons.linkText"}
             fontWeight={400}
+            fontSize={"18px"}
+            color={"#606060"}
           >
             {website.linkText}
           </Button>
         </HStack>
-        <Divider mt={4} />
+        <Divider my={5} />
       </CardHeader>
-      <CardBody mt={-4}>
-        <Text>{dAppDescription}</Text>
-        <HStack my={4} gap={12}>
+      <CardBody p={"0"}>
+        <Text
+          fontSize={"20px"}
+          color={"text.blackHigh"}
+          lineHeight={"30px"}
+          pb={"20px"}
+        >
+          {dAppDescription}
+        </Text>
+        <HStack gap={12} mb={"24px"}>
           {dAppStats.map((stat) => (
             <Box key={stat.label}>
-              <Text fontSize={"14px"}>{stat.label}</Text>
-              <Text fontWeight={700} fontSize={24}>
+              <Text fontSize={"14px"} color={"#423F40B2"}>
+                {stat.label}
+              </Text>
+              <Text fontWeight={700} fontSize={"24px"}>
                 {stat.value}
               </Text>
             </Box>
           ))}
         </HStack>
-        <Text fontSize={"14px"}>Supporting Assets</Text>
-        <HStack>
+        <Text fontSize={"14px"} color={"#423F40B2"} pb={"4px"}>
+          Supporting Assets
+        </Text>
+        <HStack gap={"16px"}>
           {supportingAssets.map((asset) => (
             <Image
               key={asset.asset}
               src={asset.assetIcon}
               alt={asset.asset}
-              width={50}
-              height={50}
+              width={48}
+              height={48}
             />
           ))}
         </HStack>
       </CardBody>
-      <CardFooter>
+      <CardFooter px={"0"} pb={"0"} pt={"36px"}>
         <Button
           bg={button.background}
           color={button.color}
+          w={"240px"}
           rightIcon={<ArrowForwardIcon />}
         >
           {button.text}

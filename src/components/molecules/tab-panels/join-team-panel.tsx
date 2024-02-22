@@ -53,25 +53,42 @@ const openPositionsList = [
 
 const JoinTeamPanel = () => {
   return (
-    <Box as="section">
-      <Text my={4}>
+    <Box as="section" maxW={"1100px"}>
+      <Text mb={"30px"} mt={"24px"} color={"text.blackHigh"} fontSize={"20px"}>
         Explore opportunities to contribute to Persistence One’s mission of
-        maximizing liquid staking yield with Persistence Labs.
+        maximizing
+        <br /> liquid staking yield with Persistence Labs.
       </Text>
       <Flex gap={4}>
-        <Card borderRadius={"20px"}>
-          <VStack align={"flex-start"} p={8} pr={16}>
+        <Card borderRadius={"20px"} p={8}>
+          <VStack align={"flex-start"}>
             <Text fontSize={12}>Mission</Text>
-            <Text fontWeight={700} fontSize={42}>
+            <Text
+              fontWeight={700}
+              fontSize={{ base: "20px", md: "42px" }}
+              color={"text.blackHigh"}
+            >
               Humility
             </Text>
-            <Text fontWeight={700} fontSize={42}>
+            <Text
+              fontWeight={700}
+              fontSize={{ base: "20px", md: "42px" }}
+              color={"text.blackHigh"}
+            >
               Integrity
             </Text>
-            <Text fontWeight={700} fontSize={42}>
+            <Text
+              fontWeight={700}
+              fontSize={{ base: "20px", md: "42px" }}
+              color={"text.blackHigh"}
+            >
               Patience
             </Text>
-            <Text fontWeight={700} fontSize={42}>
+            <Text
+              fontWeight={700}
+              fontSize={{ base: "20px", md: "42px" }}
+              color={"text.blackHigh"}
+            >
               Persistence
             </Text>
             <Link href={"/"}>
@@ -86,8 +103,8 @@ const JoinTeamPanel = () => {
             </Link>
           </VStack>
         </Card>
-        <Card borderRadius={20}>
-          <HStack justify={"space-between"} px={6} pt={4}>
+        <Card borderRadius={20} flex={1} p={8}>
+          <HStack justify={"space-between"} pb={"30px"}>
             <VStack align={"flex-start"} gap={0}>
               <Text fontWeight={600} fontSize={20} color="#3D3D3D">
                 Open Positions
@@ -107,7 +124,7 @@ const JoinTeamPanel = () => {
               </Button>
             </Link>
           </HStack>
-          <SimpleGrid columns={2} gap={4} p={4} px={6} mt={4}>
+          <SimpleGrid columns={2} gap={4}>
             {openPositionsList.map((position) => (
               <Link href={position.link} key={position.id}>
                 <HStack
