@@ -64,7 +64,7 @@ const xprtUsageCards = [
 
 const XPRTUsageSection = () => {
   return (
-    <Container maxW={"1440px"} px={"40px"}>
+    <Container maxW={"1400px"} px={"40px"} pt={"100px"}>
       <VStack align={"center"}>
         <Heading variant={"main"} fontSize={58}>
           What is XPRT used for?

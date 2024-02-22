@@ -67,7 +67,7 @@ const xprtDefiCards: XPRTDefiCardInterface[] = [
 
 const XPRTInDefiSection = () => {
   return (
-    <Container maxW={"1440px"} px={"40px"}>
+    <Container maxW={"1200px"} px={"50px"}>
       <VStack align={"center"}>
         <Heading variant={"main"} fontSize={58}>
           XPRT in DeFi
