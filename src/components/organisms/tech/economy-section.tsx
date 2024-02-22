@@ -90,6 +90,7 @@ const EconomySection = () => {
               spacing={2}
               direction={{ base: "column", md: "row" }}
               align={"stretch"}
+              key={index}
             >
               <Flex
                 p={"32px"}
