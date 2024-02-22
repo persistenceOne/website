@@ -12,63 +12,50 @@ import React, { Component, useRef } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 
-const upgradeList = [
-  {
-    title: "v10.4 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Launched secure and decentralized DYDX liquid staking on Persistence One."
-  },
-  {
-    title: "v10 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Improved on-chain security monitoring and simplified the XPRT governance process."
-  },
-  {
-    title: "v9 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Enabled support for the Liquid Staking Module (LSM) to convert natively staked ATOM in liquid staked stkATOM in a single click without 21-day unbonding."
-  },
-  {
-    title: "v8 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Added 5 new modules like IBC Hooks, Packet Forwarding, Skip Protocol, and updated 6 existing modules to make the Persistence One chain a technical leader in Cosmos."
-  },
-  {
-    title: "v5 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content: "Improved security measures for liquid staking on Persistence One."
-  },
-  {
-    title: "v4 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Added Inter Chain Queries (ICQ) and the pSTAKE Module to launch native liquid staking."
-  },
-  {
-    title: "v3 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Enabled CosmWasm for developers to build and deploy secure smart-contract dApps."
-  },
-  {
-    title: "v2 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Added Authz and feegrant modules to improve user experience and modular development."
-  }
-];
+const list: any = {
+  item0: [
+    {
+      imgUrl: "/images/tech-page/note-img0.svg",
+      title: "Interblockchain Communication Protocol (IBC)",
+      content:
+        "Persistence One is connected to 43 cosmos app chains to trustlessly communicate, transfer tokens, liquid stake and restake tokens."
+    },
+    {
+      imgUrl: "/images/tech-page/note-img0.svg",
+      title: "Interchain Accounts (ICA)",
+      content:
+        "Chain Abstraction enables cross-chain execution on chains like Neutron right from Persistence One."
+    }
+  ],
+  item1: [
+    {
+      imgUrl: "/images/tech-page/note-img0.svg",
+      title: "Liquid Staking Module (LSM)",
+      content:
+        "LSTfi applications like instant transfer of staked XPRT tokens between wallets are possible only on Persistence One."
+    },
+    {
+      imgUrl: "/images/tech-page/note-img0.svg",
+      title: "Restaking Module",
+      content:
+        "Restake anything on Persistence One like LSTs, Stablecoins, and LP tokens of leading DEXs to improve chain security and earn extra yields. "
+    }
+  ],
+  item2: [
+    {
+      imgUrl: "/images/tech-page/note-img0.svg",
+      title: "CometBFT Consensus",
+      content:
+        "Short block times and instant finality handles the transaction demand on Persistence One while upholding security."
+    },
+    {
+      imgUrl: "/images/tech-page/note-img0.svg",
+      title: "CosmWasm",
+      content:
+        "Smart contracts can be deployed on Persistence One in a fast, semi-permissioned, and interoperable manner."
+    }
+  ]
+};
 
 const EconomySection = () => {
   const settings = {
@@ -98,45 +85,22 @@ const EconomySection = () => {
           <br /> Liquid Staking Economy
         </Heading>
         <VStack align={"stretch"} spacing={4}>
-          <Stack spacing={2} direction={{ base: "column", md: "row" }}>
-            <Flex
-              p={"32px"}
-              bg={"#fff"}
-              w={{ base: "100%", md: "50%" }}
-              borderRadius={"20px"}
-              direction={"column"}
+          {Object.keys(list).map((key, index) => (
+            <Stack
+              spacing={2}
+              direction={{ base: "column", md: "row" }}
+              align={"stretch"}
             >
-              <Box m={"auto"}>
-                <Image
-                  src={"/images/tech-page/note-img0.svg"}
-                  alt=""
-                  width={290}
-                  height={240}
-                />
-              </Box>
-              <Heading
-                variant={"secondary"}
-                color={"text.blackEmphasis"}
-                mb={"12px"}
-                fontSize={{ base: "16px", md: "20px" }}
-                fontWeight={600}
-              >
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmos
-              </Heading>
-              <Text color={"text.blackLow"} fontSize={"16px"}>
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmo
-              </Text>
-            </Flex>
-            <Box pos={"relative"} w={{ base: "100%", md: "50%" }}>
               <Flex
                 p={"32px"}
                 bg={"#fff"}
+                w={{ base: "100%", md: "50%" }}
                 borderRadius={"20px"}
                 direction={"column"}
               >
                 <Box m={"auto"}>
                   <Image
-                    src={"/images/tech-page/note-img0.svg"}
+                    src={list[key][0].imgUrl}
                     alt=""
                     width={290}
                     height={240}
@@ -149,140 +113,173 @@ const EconomySection = () => {
                   fontSize={{ base: "16px", md: "20px" }}
                   fontWeight={600}
                 >
-                  First chain to adopt the Liquid Staking Module (LSM) in Cosmos
+                  {list[key][0].title}
                 </Heading>
                 <Text color={"text.blackLow"} fontSize={"16px"}>
-                  First chain to adopt the Liquid Staking Module (LSM) in Cosmo
+                  {list[key][0].content}
                 </Text>
               </Flex>
-              <Box
-                pos={"absolute"}
-                top={"-20px"}
-                right={"-20px"}
-                background={"#C73339"}
-                w={"340px"}
-                h={"340px"}
-                zIndex={-1}
-                borderRadius={"20px"}
-              />
-            </Box>
-          </Stack>
-          <Stack spacing={2} direction={{ base: "column", md: "row" }}>
-            <Flex
-              p={"32px"}
-              bg={"#fff"}
-              w={{ base: "100%", md: "50%" }}
-              borderRadius={"20px"}
-              direction={"column"}
-            >
-              <Box m={"auto"}>
-                <Image
-                  src={"/images/tech-page/note-img0.svg"}
-                  alt=""
-                  width={290}
-                  height={240}
-                />
-              </Box>
-              <Heading
-                variant={"secondary"}
-                color={"text.blackEmphasis"}
-                mb={"12px"}
-                fontSize={{ base: "16px", md: "20px" }}
-                fontWeight={600}
-              >
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmos
-              </Heading>
-              <Text color={"text.blackLow"} fontSize={"16px"}>
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmo
-              </Text>
-            </Flex>
-            <Flex
-              p={"32px"}
-              bg={"#fff"}
-              w={{ base: "100%", md: "50%" }}
-              borderRadius={"20px"}
-              direction={"column"}
-            >
-              <Box m={"auto"}>
-                <Image
-                  src={"/images/tech-page/note-img0.svg"}
-                  alt=""
-                  width={290}
-                  height={240}
-                />
-              </Box>
-              <Heading
-                variant={"secondary"}
-                color={"text.blackEmphasis"}
-                mb={"12px"}
-                fontSize={{ base: "16px", md: "20px" }}
-                fontWeight={600}
-              >
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmos
-              </Heading>
-              <Text color={"text.blackLow"} fontSize={"16px"}>
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmo
-              </Text>
-            </Flex>
-          </Stack>
-          <Stack spacing={2} direction={{ base: "column", md: "row" }}>
-            <Flex
-              p={"32px"}
-              bg={"#fff"}
-              w={{ base: "100%", md: "50%" }}
-              borderRadius={"20px"}
-              direction={"column"}
-            >
-              <Box m={"auto"}>
-                <Image
-                  src={"/images/tech-page/note-img0.svg"}
-                  alt=""
-                  width={290}
-                  height={240}
-                />
-              </Box>
-              <Heading
-                variant={"secondary"}
-                color={"text.blackEmphasis"}
-                mb={"12px"}
-                fontSize={{ base: "16px", md: "20px" }}
-                fontWeight={600}
-              >
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmos
-              </Heading>
-              <Text color={"text.blackLow"} fontSize={"16px"}>
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmo
-              </Text>
-            </Flex>
-            <Flex
-              p={"32px"}
-              bg={"#fff"}
-              w={{ base: "100%", md: "50%" }}
-              borderRadius={"20px"}
-              direction={"column"}
-            >
-              <Box m={"auto"}>
-                <Image
-                  src={"/images/tech-page/note-img0.svg"}
-                  alt=""
-                  width={290}
-                  height={240}
-                />
-              </Box>
-              <Heading
-                variant={"secondary"}
-                color={"text.blackEmphasis"}
-                mb={"12px"}
-                fontSize={{ base: "16px", md: "20px" }}
-                fontWeight={600}
-              >
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmos
-              </Heading>
-              <Text color={"text.blackLow"} fontSize={"16px"}>
-                First chain to adopt the Liquid Staking Module (LSM) in Cosmo
-              </Text>
-            </Flex>
-          </Stack>
+              <Flex pos={"relative"} w={{ base: "100%", md: "50%" }}>
+                <Flex
+                  p={"32px"}
+                  bg={"#fff"}
+                  borderRadius={"20px"}
+                  direction={"column"}
+                >
+                  <Box m={"auto"}>
+                    <Image
+                      src={list[key][1].imgUrl}
+                      alt=""
+                      width={290}
+                      height={240}
+                    />
+                  </Box>
+                  <Heading
+                    variant={"secondary"}
+                    color={"text.blackEmphasis"}
+                    mb={"12px"}
+                    fontSize={{ base: "16px", md: "20px" }}
+                    fontWeight={600}
+                  >
+                    {list[key][1].title}
+                  </Heading>
+                  <Text color={"text.blackLow"} fontSize={"16px"}>
+                    {list[key][1].content}
+                  </Text>
+                </Flex>
+                {index === 0 ? (
+                  <Box
+                    pos={"absolute"}
+                    top={"-20px"}
+                    right={"-20px"}
+                    background={"#C73339"}
+                    w={"340px"}
+                    h={"340px"}
+                    zIndex={-1}
+                    borderRadius={"20px"}
+                  />
+                ) : (
+                  ""
+                )}
+              </Flex>
+            </Stack>
+          ))}
+          {/*<Stack spacing={2} direction={{ base: "column", md: "row" }}>*/}
+          {/*  <Flex*/}
+          {/*    p={"32px"}*/}
+          {/*    bg={"#fff"}*/}
+          {/*    w={{ base: "100%", md: "50%" }}*/}
+          {/*    borderRadius={"20px"}*/}
+          {/*    direction={"column"}*/}
+          {/*  >*/}
+          {/*    <Box m={"auto"}>*/}
+          {/*      <Image*/}
+          {/*        src={"/images/tech-page/note-img0.svg"}*/}
+          {/*        alt=""*/}
+          {/*        width={290}*/}
+          {/*        height={240}*/}
+          {/*      />*/}
+          {/*    </Box>*/}
+          {/*    <Heading*/}
+          {/*      variant={"secondary"}*/}
+          {/*      color={"text.blackEmphasis"}*/}
+          {/*      mb={"12px"}*/}
+          {/*      fontSize={{ base: "16px", md: "20px" }}*/}
+          {/*      fontWeight={600}*/}
+          {/*    >*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmos*/}
+          {/*    </Heading>*/}
+          {/*    <Text color={"text.blackLow"} fontSize={"16px"}>*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmo*/}
+          {/*    </Text>*/}
+          {/*  </Flex>*/}
+          {/*  <Flex*/}
+          {/*    p={"32px"}*/}
+          {/*    bg={"#fff"}*/}
+          {/*    w={{ base: "100%", md: "50%" }}*/}
+          {/*    borderRadius={"20px"}*/}
+          {/*    direction={"column"}*/}
+          {/*  >*/}
+          {/*    <Box m={"auto"}>*/}
+          {/*      <Image*/}
+          {/*        src={"/images/tech-page/note-img0.svg"}*/}
+          {/*        alt=""*/}
+          {/*        width={290}*/}
+          {/*        height={240}*/}
+          {/*      />*/}
+          {/*    </Box>*/}
+          {/*    <Heading*/}
+          {/*      variant={"secondary"}*/}
+          {/*      color={"text.blackEmphasis"}*/}
+          {/*      mb={"12px"}*/}
+          {/*      fontSize={{ base: "16px", md: "20px" }}*/}
+          {/*      fontWeight={600}*/}
+          {/*    >*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmos*/}
+          {/*    </Heading>*/}
+          {/*    <Text color={"text.blackLow"} fontSize={"16px"}>*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmo*/}
+          {/*    </Text>*/}
+          {/*  </Flex>*/}
+          {/*</Stack>*/}
+          {/*<Stack spacing={2} direction={{ base: "column", md: "row" }}>*/}
+          {/*  <Flex*/}
+          {/*    p={"32px"}*/}
+          {/*    bg={"#fff"}*/}
+          {/*    w={{ base: "100%", md: "50%" }}*/}
+          {/*    borderRadius={"20px"}*/}
+          {/*    direction={"column"}*/}
+          {/*  >*/}
+          {/*    <Box m={"auto"}>*/}
+          {/*      <Image*/}
+          {/*        src={"/images/tech-page/note-img0.svg"}*/}
+          {/*        alt=""*/}
+          {/*        width={290}*/}
+          {/*        height={240}*/}
+          {/*      />*/}
+          {/*    </Box>*/}
+          {/*    <Heading*/}
+          {/*      variant={"secondary"}*/}
+          {/*      color={"text.blackEmphasis"}*/}
+          {/*      mb={"12px"}*/}
+          {/*      fontSize={{ base: "16px", md: "20px" }}*/}
+          {/*      fontWeight={600}*/}
+          {/*    >*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmos*/}
+          {/*    </Heading>*/}
+          {/*    <Text color={"text.blackLow"} fontSize={"16px"}>*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmo*/}
+          {/*    </Text>*/}
+          {/*  </Flex>*/}
+          {/*  <Flex*/}
+          {/*    p={"32px"}*/}
+          {/*    bg={"#fff"}*/}
+          {/*    w={{ base: "100%", md: "50%" }}*/}
+          {/*    borderRadius={"20px"}*/}
+          {/*    direction={"column"}*/}
+          {/*  >*/}
+          {/*    <Box m={"auto"}>*/}
+          {/*      <Image*/}
+          {/*        src={"/images/tech-page/note-img0.svg"}*/}
+          {/*        alt=""*/}
+          {/*        width={290}*/}
+          {/*        height={240}*/}
+          {/*      />*/}
+          {/*    </Box>*/}
+          {/*    <Heading*/}
+          {/*      variant={"secondary"}*/}
+          {/*      color={"text.blackEmphasis"}*/}
+          {/*      mb={"12px"}*/}
+          {/*      fontSize={{ base: "16px", md: "20px" }}*/}
+          {/*      fontWeight={600}*/}
+          {/*    >*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmos*/}
+          {/*    </Heading>*/}
+          {/*    <Text color={"text.blackLow"} fontSize={"16px"}>*/}
+          {/*      First chain to adopt the Liquid Staking Module (LSM) in Cosmo*/}
+          {/*    </Text>*/}
+          {/*  </Flex>*/}
+          {/*</Stack>*/}
         </VStack>
       </Box>
     </Container>

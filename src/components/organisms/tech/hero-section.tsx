@@ -46,7 +46,7 @@ const HeroSection = () => {
     >
       <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
         <Spacer h={{ base: 0, md: 20 }} />
-        <Flex justify={"space-between"} mb={{ base: "40px", md: "180px" }}>
+        <Flex justify={"space-between"} mb={{ base: "40px", md: "100px" }}>
           <Box pt={"150px"}>
             <Heading
               variant={"main"}
@@ -68,7 +68,7 @@ const HeroSection = () => {
               textAlign={{ base: "center", md: "left" }}
               w={{ base: "auto", md: "70%" }}
               color={"text.blackLow"}
-              my={6}
+              mt={6}
             >
               Persistence One is one of the most technologically advanced Layer
               1 for liquid staking and restaking.
