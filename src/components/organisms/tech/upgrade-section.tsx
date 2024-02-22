@@ -87,7 +87,7 @@ const UpgradeSection = () => {
           {...{
             dots: false,
             arrows: false,
-            infinite: true,
+            infinite: false,
             slidesToShow: isMobile ? 1 : isLandScape ? 3 : 5,
             slidesToScroll: 1
           }}

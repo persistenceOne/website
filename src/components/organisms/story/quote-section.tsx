@@ -37,7 +37,7 @@ const QuoteSection = () => {
     >
       <Container
         maxW={"1440px"}
-        px={{ base: "16px", md: "60px" }}
+        px={{ base: "16px", md: "100px" }}
         py={{ base: "24px", md: "60px" }}
       >
         <Heading

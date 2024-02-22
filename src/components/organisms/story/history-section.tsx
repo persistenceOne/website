@@ -11,27 +11,90 @@ import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 
-const list = [
+interface ListProps {
+  imgUrl: string;
+  title: string;
+  content: {
+    [key in string]: any;
+  };
+}
+
+const list: ListProps[] = [
   {
-    title: "v10.4 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Launched secure and decentralized DYDX liquid staking on Persistence One."
+    imgUrl: "/images/tech-page/note-img0.svg",
+    title: "Proof-of-Stake will become the norm",
+    content: {
+      item0: (
+        <Text>
+          Started out building <b>Real World Assets</b> (RWAs) use cases.
+        </Text>
+      ),
+      item1: (
+        <Text>
+          <b> Participated in early Cosmos community activities</b> like Game of
+          Zones and Game of Stakes in 2019.
+        </Text>
+      ),
+      item2: (
+        <Text>
+          <b>Pivoted to building a liquid staking economy</b> after the
+          participation of millions of in staked tokens for the XPRT token
+          StakeDrop launch in 2020.
+        </Text>
+      )
+    }
   },
   {
-    title: "v10 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Improved on-chain security monitoring and simplified the XPRT governance process."
+    imgUrl: "/images/tech-page/note-img0.svg",
+    title: "Building blocks of LSTfi ",
+    content: {
+      item0: (
+        <Text>
+          pSTAKE was born and <b>launched stkATOM on Ethereum</b> in mid-2021.
+        </Text>
+      ),
+      item1: (
+        <Text>
+          <b>pSTAKE launched natively on Persistence One in early 2023</b> with
+          support for ATOM, OSMO, and DYDX liquid staking live.
+        </Text>
+      ),
+      item2: (
+        <Text>
+          <b>Dexter launched in mid-2023</b> on Persistence One to build
+          liquidity and offer yields for LSTs, Stablecoins, and other tokens.
+        </Text>
+      )
+    }
   },
   {
-    title: "v9 Upgrade",
-    link: "",
-    date: "FEB 2024",
-    content:
-      "Enabled support for the Liquid Staking Module (LSM) to convert natively staked ATOM in liquid staked stkATOM in a single click without 21-day unbonding."
+    imgUrl: "/images/tech-page/note-img0.svg",
+    title: "Liquid Staking Economy ",
+    content: {
+      item0: (
+        <Text>
+          Today, Persistence One has 54,000+ on-chain accounts with{" "}
+          <b>5000+ daily transactions and $12M+ TVL.</b>
+        </Text>
+      ),
+      item1: (
+        <Text>
+          The{" "}
+          <b>
+            Persistence One Ecosystem is ever expanding by partnering with
+            leading projects
+          </b>{" "}
+          like the Cosmos Hub, Kujira, Neutron, Agoric, Shade Protocol, and more
+          and diversifying XPRT liquidity in Cosmos.
+        </Text>
+      ),
+      item2: (
+        <Text>
+          The <b>next big leap is bringing the Restaking</b> of LSTs,
+          Stablecoins, and LP tokens on Persistence One.
+        </Text>
+      )
+    }
   }
 ];
 const HistorySection = () => {
@@ -77,32 +140,30 @@ const HistorySection = () => {
               >
                 <Flex w={"100%"} direction={{ base: "column", md: "row" }}>
                   <Box w={{ base: "100%", md: "40%" }}>
-                    <Image
-                      src={"/images/tech-page/note-img0.svg"}
-                      alt=""
-                      width={290}
-                      height={240}
-                    />
+                    <Image src={item.imgUrl} alt="" width={290} height={240} />
                   </Box>
                   <Box w={{ base: "100%", md: "60%" }}>
                     <Heading
                       variant={"secondary"}
-                      fontSize={{ base: "18px", mb: "36px" }}
+                      fontSize={{ base: "18px", md: "36px" }}
                       fontWeight={600}
+                      lineHeight={{ base: "30px", md: "54px" }}
                       color={"text.blackMid"}
                       mb={{ base: 4, md: 8 }}
                     >
-                      Early days in Cosmos
+                      {item.title}
                     </Heading>
                     <UnorderedList color={"text.blackMid"} fontSize={"16px"}>
-                      <ListItem mb={4}>
-                        The world will be full of secure and interoperable PoS
-                        blockchains with flourishing DeFi, Liquid Staking, and
-                        Restaking.{" "}
-                      </ListItem>
-                      <ListItem mb={4}>
-                        Staking will become the fixed income of crypto
-                      </ListItem>
+                      {Object.keys(item.content).map((key, subIndex) => (
+                        <ListItem
+                          mb={4}
+                          lineHeight={"27px"}
+                          fontSize={{ base: "14px", md: "18px" }}
+                          key={subIndex}
+                        >
+                          {item.content[key]}
+                        </ListItem>
+                      ))}
                     </UnorderedList>
                   </Box>
                 </Flex>
