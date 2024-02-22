@@ -10,6 +10,7 @@ import {
   GridItem,
   HStack,
   Text,
+  Stack,
   VStack
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -18,7 +19,12 @@ import Link from "next/link";
 const FeatureCards = () => {
   return (
     <VStack gap={4} mt={16}>
-      <HStack gap={4} pos={"relative"}>
+      <Stack
+        gap={4}
+        pos={"relative"}
+        align={"stretch"}
+        direction={{ base: "column", md: "row" }}
+      >
         <FeatureCard
           width="60%"
           height="380px"
@@ -55,9 +61,14 @@ const FeatureCards = () => {
           zIndex={-1}
           borderRadius={"20px"}
         />
-      </HStack>
+      </Stack>
 
-      <HStack align={"stretch"} gap={4} pos={"relative"}>
+      <Stack
+        align={"stretch"}
+        gap={4}
+        pos={"relative"}
+        direction={{ base: "column", md: "row" }}
+      >
         <FeatureCard
           category="Technology"
           title={`Technically Super. Superbly Powerful.`}
@@ -71,16 +82,16 @@ const FeatureCards = () => {
           width="40%"
           height="450px"
         />
-        <Box
-          pos={"absolute"}
-          bottom={"-20px"}
-          left={"-20px"}
-          background={"#C73339"}
-          w={"220px"}
-          h={"210px"}
-          zIndex={-1}
-          borderRadius={"20px"}
-        />
+        {/*<Box*/}
+        {/*  pos={"absolute"}*/}
+        {/*  bottom={"-20px"}*/}
+        {/*  left={"-20px"}*/}
+        {/*  background={"#C73339"}*/}
+        {/*  w={"220px"}*/}
+        {/*  h={"210px"}*/}
+        {/*  zIndex={-1}*/}
+        {/*  borderRadius={"20px"}*/}
+        {/*/>*/}
 
         <VStack align={"stretch"} gap={4}>
           <FeatureCard
@@ -112,7 +123,51 @@ const FeatureCards = () => {
             </Link>
           </Flex>
         </VStack>
-      </HStack>
+      </Stack>
+
+      <Stack
+        gap={4}
+        pos={"relative"}
+        align={"stretch"}
+        direction={{ base: "column", md: "row" }}
+      >
+        <FeatureCard
+          width="70%"
+          height="380px"
+          category="Roadmap"
+          title="Building in Cosmos since 2019."
+          description="Skim through the biggest milestones of the past 4 years of building out our vision and what’s next."
+          image="/images/tech-page/note-img0.svg"
+          cta={{
+            link: "/story",
+            linkText: ""
+          }}
+        />
+        <Box
+          pos={"absolute"}
+          bottom={"-20px"}
+          left={"-20px"}
+          background={"#C73339"}
+          w={"220px"}
+          h={"210px"}
+          zIndex={-1}
+          borderRadius={"20px"}
+        />
+        <FeatureCard
+          width="30%"
+          height="380px"
+          category=""
+          title=""
+          description=""
+          image="/images/ecosystem.svg"
+          cta={{
+            link: "/xprt",
+            linkText: ""
+          }}
+          type="vertical"
+          cardType={"img"}
+        />
+      </Stack>
     </VStack>
   );
 };

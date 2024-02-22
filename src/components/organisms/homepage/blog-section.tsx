@@ -1,6 +1,14 @@
 import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Box, Button, HStack, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  HStack,
+  Heading,
+  Text,
+  VStack,
+  Container
+} from "@chakra-ui/react";
 import React from "react";
 
 const resourcesList: BlogCardInterface[] = [
@@ -29,27 +37,40 @@ const resourcesList: BlogCardInterface[] = [
 
 const BlogSection = () => {
   return (
-    <Box px={16}>
-      <VStack align={"flex-start"} spacing={2}>
-        <Heading color="text.headingSemiBlack">Latest on Persistence</Heading>
-        <Text maxW={"45%"}>
-          Explore the biggest news, blogs, interviews, and governance
-          discussions around liquid staking and restaking.
-        </Text>
-        <Button
-          variant={"link"}
-          color={"primary.black"}
-          rightIcon={<ArrowForwardIcon />}
-        >
-          Explore All
-        </Button>
-      </VStack>
-      <HStack spacing={8} mt={8}>
-        {resourcesList.map((resource, index) => (
-          <BlogCard key={resource.id} {...resource} />
-        ))}
-      </HStack>
-    </Box>
+    <Container maxW={"1340px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
+      <Box px={16}>
+        <VStack align={"flex-start"} mb={"60px"}>
+          <Heading
+            color="text.headingSemiBlack"
+            fontSize={{ base: "26px", md: "58px" }}
+          >
+            Latest on Persistence
+          </Heading>
+          <Text
+            maxW={"75%"}
+            fontSize={{ base: "16px", md: "22px" }}
+            color={"text.blackMid"}
+          >
+            Explore the biggest news, blogs, interviews, and governance
+            discussions around liquid staking and restaking.
+          </Text>
+          <Button
+            variant={"link"}
+            color={"primary.black"}
+            fontWeight={600}
+            fontSize={{ base: "16px", md: "20px" }}
+            rightIcon={<ArrowForwardIcon />}
+          >
+            Explore All
+          </Button>
+        </VStack>
+        <HStack spacing={6}>
+          {resourcesList.map((resource, index) => (
+            <BlogCard key={resource.id} {...resource} />
+          ))}
+        </HStack>
+      </Box>
+    </Container>
   );
 };
 

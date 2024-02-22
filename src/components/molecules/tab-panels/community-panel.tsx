@@ -44,8 +44,8 @@ const socialCardContents = [
 ];
 const CommunityPanel = () => {
   return (
-    <Box as="section">
-      <Text my={4}>
+    <Box as="section" maxW={"930px"} mx={"auto"}>
+      <Text mb={"30px"} mt={"24px"} color={"text.blackHigh"} fontSize={"20px"}>
         Learn more about Persistence One, chat with fellow Persisters, and have
         your voice be heard for the future of the liquid staking economy.
       </Text>

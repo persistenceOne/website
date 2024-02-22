@@ -6,7 +6,9 @@ import {
   Heading,
   Spacer,
   Text,
-  VStack
+  VStack,
+  Container,
+  Stack
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
@@ -35,30 +37,43 @@ const HeroSection = () => {
       backgroundImage="url('/images/hero-bg.svg')"
       backgroundPosition="100% 0"
       backgroundRepeat="no-repeat"
-      backgroundSize={"45% 77%"}
+      backgroundSize={"45% 90%"}
     >
-      <Spacer h={"150px"} />
-      <Flex justify={"space-between"} mb={20}>
-        <VStack align={"stretch"}>
-          <Heading variant={"main"}>
-            Staking. <br />
-            Liquid Staking. <br />
-            Restaking.
-          </Heading>
-          <Text textAlign="left" w={"55%"} my={6}>
-            Persistence One is an app chain for dApps to securely build an
-            economy that maximizes liquid staking and restaking yield.
-          </Text>
-          <HStack gap={4}>
-            <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-              See Our Story
-            </Button>
-            <Button>Explore Ecosystem</Button>
-          </HStack>
-        </VStack>
-      </Flex>
-      <HomePageStats stats={homePagesStats} />
-      <Spacer h={60} />
+      <Container maxW={"1440px"} px={"0"}>
+        <Spacer h={"150px"} />
+        <Flex justify={"space-between"} mb={"60px"}>
+          <VStack align={"stretch"}>
+            <Heading
+              variant={"main"}
+              color={"text.blackHigh"}
+              textAlign={{ base: "center", md: "left" }}
+              fontSize={{ base: "26px", md: "60px" }}
+              lineHeight={{ base: "32px", md: "72px" }}
+              mb={"20px"}
+            >
+              Staking. <br />
+              Liquid Staking. <br />
+              Restaking.
+            </Heading>
+            <Text
+              textAlign={{ base: "center", md: "left" }}
+              w={{ base: "100%", md: "55%" }}
+              mb={6}
+            >
+              Persistence One is an app chain for dApps to securely build an
+              economy that maximizes liquid staking and restaking yield.
+            </Text>
+            <Stack direction={{ base: "column", md: "row" }} gap={4}>
+              <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                See Our Story
+              </Button>
+              <Button>Explore Ecosystem</Button>
+            </Stack>
+          </VStack>
+        </Flex>
+        <HomePageStats stats={homePagesStats} />
+        <Spacer h={"85px"} />
+      </Container>
     </Box>
   );
 };

@@ -1,4 +1,4 @@
-import { HStack, Text, VStack } from "@chakra-ui/react";
+import { Stack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,17 +16,19 @@ const SocialCard = ({
 }) => {
   return (
     <Link href={link} target="_blank" rel="noreferrer" key={title}>
-      <HStack
+      <Stack
         bg={"#FEFEFE"}
         borderRadius={10}
-        p={4}
+        px={"24px"}
+        py={"28px"}
         cursor={"pointer"}
         boxShadow={
           "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03)"
         }
+        direction={{ base: "column", md: "row" }}
       >
         <Image src={image} alt={title} width={45} height={45} />
-        <VStack align={"flex-start"} justify={"center"} gap={0}>
+        <VStack align={"flex-start"} justify={"center"} gap={0} ml={"12px"}>
           <Text color={"#3D3D3D"} fontSize={18} fontWeight={600}>
             {title}
           </Text>
@@ -34,7 +36,7 @@ const SocialCard = ({
             {description}
           </Text>
         </VStack>
-      </HStack>
+      </Stack>
     </Link>
   );
 };

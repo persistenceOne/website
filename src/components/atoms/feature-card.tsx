@@ -6,10 +6,11 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  HStack,
+  Stack,
   Heading,
   Text,
-  VStack
+  VStack,
+  Flex
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,6 +28,7 @@ export interface FeatureCardInterface {
   type?: "horizontal" | "vertical";
   width?: string;
   height?: string;
+  cardType?: "img" | "content";
 }
 const FeatureCard = ({
   category,
@@ -36,52 +38,101 @@ const FeatureCard = ({
   cta,
   type = "horizontal",
   width = "100%",
-  height = "100%"
+  height = "100%",
+  cardType = "content"
 }: FeatureCardInterface) => {
   return (
-    <Card borderRadius={20} width={width} height={height}>
-      <CardHeader fontSize={12}>{category}</CardHeader>
+    <Card
+      borderRadius={20}
+      width={{ base: "100%", md: width }}
+      // height={height}
+      py={"25px"}
+      px={"30px"}
+    >
+      <CardHeader
+        fontSize={12}
+        p={"0"}
+        fontWeight={"300"}
+        color={"text.blackFull"}
+      >
+        {category}
+      </CardHeader>
       {type === "horizontal" ? (
-        <CardBody>
-          <HStack spacing={4} align={"center"}>
-            <VStack align={"flex-start"} gap={4}>
-              <Heading fontSize={22}>{title}</Heading>
-              <Text fontSize={14}>{description}</Text>
-              <Link href={cta.link}>
-                <Button
-                  variant={"link"}
-                  rightIcon={<ArrowForwardIcon />}
-                  color={"#423F40"}
-                  fontSize={16}
-                >
-                  {cta.linkText}
-                </Button>
-              </Link>
-            </VStack>
+        <CardBody p={"0"} style={{ display: "flex" }}>
+          <Stack
+            spacing={4}
+            align={"end"}
+            direction={{ base: "column", md: "row" }}
+          >
+            <Box>
+              <Heading
+                fontSize={"22px"}
+                pb={"4px"}
+                lineHeight={"33px"}
+                color={"text.blackHigh"}
+              >
+                {title}
+              </Heading>
+              <Text fontSize={14} pb={"24px"} color={"text.blackHigh"}>
+                {description}
+              </Text>
+              {cta.linkText !== "" ? (
+                <Link href={cta.link}>
+                  <Button
+                    variant={"link"}
+                    rightIcon={<ArrowForwardIcon />}
+                    color={"#423F40"}
+                    fontSize={16}
+                  >
+                    {cta.linkText}
+                  </Button>
+                </Link>
+              ) : (
+                ""
+              )}
+            </Box>
             <Image src={image} alt={title} width={270} height={240} />
-          </HStack>
+          </Stack>
         </CardBody>
       ) : (
-        <CardBody>
-          <VStack align={"flex-start"} gap={4} mt={-4}>
-            <Box alignSelf={"center"}>
-              <Image src={image} alt={title} width={126} height={126} />
-            </Box>
-            <Heading fontSize={22} maxW={"80%"}>
-              {title}
-            </Heading>
-            <Text fontSize={14}>{description}</Text>
-            <Link href={cta.link}>
-              <Button
-                variant={"link"}
-                rightIcon={<ArrowForwardIcon />}
-                color={"#423F40"}
-                fontSize={16}
+        <CardBody p={"0"}>
+          {cardType !== "img" ? (
+            <VStack align={"flex-start"} gap={4} mt={-4}>
+              <Box alignSelf={"center"}>
+                <Image src={image} alt={title} width={126} height={126} />
+              </Box>
+              <Heading
+                fontSize={"22px"}
+                lineHeight={"33px"}
+                maxW={"80%"}
+                pb={"4px"}
+                color={"text.blackHigh"}
               >
-                {cta.linkText}
-              </Button>
-            </Link>
-          </VStack>
+                {title}
+              </Heading>
+              <Text fontSize={14} color={"text.blackHigh"}>
+                {description}
+              </Text>
+              {cta.linkText !== "" ? (
+                <Link href={cta.link}>
+                  <Button
+                    variant={"link"}
+                    rightIcon={<ArrowForwardIcon />}
+                    color={"#423F40"}
+                    fontSize={16}
+                  >
+                    {cta.linkText}
+                  </Button>
+                </Link>
+              ) : (
+                ""
+              )}
+            </VStack>
+          ) : (
+            <Flex align={"center"} justify={"center"}>
+              <Image src={image} alt={title} width={320} height={280} />
+            </Flex>
+          )}
         </CardBody>
       )}
     </Card>
