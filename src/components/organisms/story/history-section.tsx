@@ -111,7 +111,7 @@ const HistorySection = () => {
     )
   };
   return (
-    <Container maxW={"1140px"} px={{ base: "20px", md: "60px" }}>
+    <Container maxW={"1400px"} px={{ base: "20px", md: "60px" }}>
       <Box py={"70px"}>
         <Heading
           textAlign={"center"}
@@ -135,8 +135,9 @@ const HistorySection = () => {
               <Box
                 key={item.title}
                 p={{ base: "24px", md: "60px" }}
-                bg={"#FEFEFE"}
+                bg={"#FFF"}
                 borderRadius={"20px"}
+                boxShadow={"md"}
               >
                 <Flex w={"100%"} direction={{ base: "column", md: "row" }}>
                   <Box w={{ base: "100%", md: "40%" }}>

@@ -58,6 +58,7 @@ const VisionSection = () => {
               borderRadius={"20px"}
               direction={"column"}
               key={index}
+              boxShadow={"lg"}
             >
               <Box mb={4}>
                 <Image src={item.imgUrl} alt="" width={290} height={240} />
@@ -82,87 +83,9 @@ const VisionSection = () => {
                     {contentItem}
                   </ListItem>
                 ))}
-                {/*<ListItem>*/}
-                {/*  The world will be full of secure and interoperable PoS*/}
-                {/*  blockchains with flourishing DeFi, Liquid Staking, and*/}
-                {/*  Restaking.{" "}*/}
-                {/*</ListItem>*/}
-                {/*<ListItem>*/}
-                {/*  Staking will become the fixed income of crypto*/}
-                {/*</ListItem>*/}
               </UnorderedList>
             </Flex>
           ))}
-
-          {/*<Flex*/}
-          {/*  p={{ base: "16px", md: "30px" }}*/}
-          {/*  bg={"#fff"}*/}
-          {/*  w={{ base: "300px", md: "400px" }}*/}
-          {/*  borderRadius={"20px"}*/}
-          {/*  direction={"column"}*/}
-          {/*>*/}
-          {/*  <Box mb={4}>*/}
-          {/*    <Image*/}
-          {/*      src={"/images/tech-page/note-img0.svg"}*/}
-          {/*      alt=""*/}
-          {/*      width={290}*/}
-          {/*      height={240}*/}
-          {/*    />*/}
-          {/*  </Box>*/}
-          {/*  <Heading*/}
-          {/*    variant={"secondary"}*/}
-          {/*    color={"text.blackEmphasis"}*/}
-          {/*    fontSize={"18px"}*/}
-          {/*    fontWeight={600}*/}
-          {/*    mb={4}*/}
-          {/*  >*/}
-          {/*    All roads originate from Cosmos*/}
-          {/*  </Heading>*/}
-          {/*  <UnorderedList color={"text.blackLow"} fontSize={"16px"}>*/}
-          {/*    <ListItem>*/}
-          {/*      Sovereignty and modularity over monolithic chains.{" "}*/}
-          {/*    </ListItem>*/}
-          {/*    <ListItem>*/}
-          {/*      The bull case for app chains is the opportunity for building a*/}
-          {/*      liquid staking economy on Persistence One.*/}
-          {/*    </ListItem>*/}
-          {/*  </UnorderedList>*/}
-          {/*</Flex>*/}
-          {/*<Flex*/}
-          {/*  p={{ base: "16px", md: "30px" }}*/}
-          {/*  bg={"#fff"}*/}
-          {/*  w={{ base: "300px", md: "400px" }}*/}
-          {/*  borderRadius={"20px"}*/}
-          {/*  direction={"column"}*/}
-          {/*>*/}
-          {/*  <Box mb={4}>*/}
-          {/*    <Image*/}
-          {/*      src={"/images/tech-page/note-img0.svg"}*/}
-          {/*      alt=""*/}
-          {/*      width={290}*/}
-          {/*      height={240}*/}
-          {/*    />*/}
-          {/*  </Box>*/}
-          {/*  <Heading*/}
-          {/*    variant={"secondary"}*/}
-          {/*    color={"text.blackEmphasis"}*/}
-          {/*    fontSize={"18px"}*/}
-          {/*    fontWeight={600}*/}
-          {/*    mb={4}*/}
-          {/*  >*/}
-          {/*    Native PoS tokens will exist as liquid staked*/}
-          {/*  </Heading>*/}
-          {/*  <UnorderedList color={"text.blackLow"} fontSize={"16px"}>*/}
-          {/*    <ListItem>*/}
-          {/*      Liquid Staked Tokens (LSTs) will become the default medium of*/}
-          {/*      exchange and utility in DeFi.*/}
-          {/*    </ListItem>*/}
-          {/*    <ListItem>*/}
-          {/*      Liquid Staking and Restaking will become the base layer of value*/}
-          {/*      in crypto*/}
-          {/*    </ListItem>*/}
-          {/*  </UnorderedList>*/}
-          {/*</Flex>*/}
         </Wrap>
       </Box>
     </Container>

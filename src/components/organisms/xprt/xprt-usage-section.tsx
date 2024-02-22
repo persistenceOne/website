@@ -80,6 +80,7 @@ const XPRTUsageSection = () => {
               direction={"column"}
               key={card.title}
               pos={"relative"}
+              boxShadow={"md"}
             >
               <Box mb={4}>
                 <Image src={card.image} alt="" width={290} height={240} />

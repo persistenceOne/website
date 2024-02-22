@@ -18,6 +18,10 @@ body {
   bottom: -35px;
 }
 
+.history-slider .slick-slide{
+  padding: 24px;
+}
+
 .history-slider .slick-dots li button:before {
   color: #000000;
   background: #000000;
