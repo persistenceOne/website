@@ -1,6 +1,7 @@
 import DappCard, { DappCardInterface } from "@/components/atoms/dapp-card";
 import { Container, Box, Stack, Heading, Text, Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
+import { fetchTokenPrices, getCosmosTVL } from "@/pages/api";
 
 const dApps: DappCardInterface[] = [
   {
@@ -67,6 +68,18 @@ const dApps: DappCardInterface[] = [
 ];
 
 const DappsSection = () => {
+  useEffect(() => {
+    const fetch = async () => {
+      const [cosmosTvlResponse, osmoTvlResponse, dydxTvlResponse, tokenPrices] =
+        await Promise.all([
+          getCosmosTVL("cosmos"),
+          getCosmosTVL("osmo"),
+          getCosmosTVL("dydx"),
+          fetchTokenPrices()
+        ]);
+    };
+    fetch();
+  }, []);
   return (
     <Box pos={"relative"}>
       <Container maxW={"1200px"} px={{ base: "16px", md: "30px" }}>

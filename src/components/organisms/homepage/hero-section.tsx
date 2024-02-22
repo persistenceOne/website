@@ -11,25 +11,20 @@ import {
   Stack
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HomePageStats from "@/components/molecules/page-stats";
-
-const homePagesStats = [
-  {
-    statValue: "$ 11.68M",
-    statLabel: "TVL"
-  },
-  {
-    statValue: "$ 18.38M",
-    statLabel: "IBC Volume (30 Days)"
-  },
-  {
-    statValue: "$ 0.23947",
-    statLabel: "Average Transaction Cost"
-  }
-];
+import { fetchChainTVL } from "@/pages/api";
 
 const HeroSection = () => {
+  const [chainTvl, setChainTvl] = useState("0");
+  useEffect(() => {
+    const fetch = async () => {
+      const res = await fetchChainTVL();
+      setChainTvl(res.toString());
+    };
+    fetch();
+  }, []);
+
   return (
     <Box
       px={"60px"}
@@ -71,7 +66,22 @@ const HeroSection = () => {
             </Stack>
           </VStack>
         </Flex>
-        <HomePageStats stats={homePagesStats} />
+        <HomePageStats
+          stats={[
+            {
+              statValue: chainTvl,
+              statLabel: "TVL"
+            },
+            {
+              statValue: "14995000",
+              statLabel: "IBC Volume (30 Days)"
+            },
+            {
+              statValue: "0.23947",
+              statLabel: "Average Transaction Cost"
+            }
+          ]}
+        />
         <Spacer h={"85px"} />
       </Container>
     </Box>
