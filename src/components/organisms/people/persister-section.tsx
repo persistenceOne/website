@@ -57,7 +57,7 @@ const PersisterSection = () => {
           Persistence is more than just a name. It is our way of being.{" "}
         </Text>
       </VStack>
-      <Container maxW={"100%"} mt={-16} px={16}>
+      <Container maxW={"1440px"} mt={-16} px={16}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} rowGap={20}>
           {persisterValues.map((value) => (
             <PersisterValuesCard key={value.title} {...value} />

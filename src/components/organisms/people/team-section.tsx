@@ -338,7 +338,7 @@ const TeamSection = () => {
       <Heading variant={"main"} fontSize={58} color={"text.headingSemiBlack"}>
         Meet Fellow Persisters
       </Heading>
-      <Flex justify={"center"} flexWrap={"wrap"} rowGap={8}>
+      <Flex justify={"center"} flexWrap={"wrap"} rowGap={8} w={"1140px"}>
         {teamMembers.map((member) => (
           <TeamMemberCard
             key={member.name}
