@@ -33,8 +33,13 @@ const HeroSection = () => {
   return (
     <Container maxW={"1440px"} px={"40px"}>
       <Spacer h={20} />
-      <Flex justify={"space-between"} mb={20} align={"center"}>
-        <VStack align={"stretch"}>
+      <Flex
+        justify={"space-between"}
+        align={"flex-start"}
+        pos={"relative"}
+        mb={"100px"}
+      >
+        <VStack mt={"100px"} align={"stretch"}>
           <Heading variant={"main"}>
             Powering Liquid Staking <br /> and Restaking with XPRT
           </Heading>
@@ -49,12 +54,14 @@ const HeroSection = () => {
             <Button>Get XPRT</Button>
           </HStack>
         </VStack>
-        <Image
-          src="/images/xprt-page/persistence-coin.svg"
-          alt="Persistence Coin"
-          width={400}
-          height={400}
-        />
+        <Box pos={"absolute"} right={"0"}>
+          <Image
+            src="/images/xprt-page/persistence-coin.svg"
+            alt="Persistence Coin"
+            width={400}
+            height={400}
+          />
+        </Box>
       </Flex>
       <PageStats stats={xprtPageStats} />
     </Container>
