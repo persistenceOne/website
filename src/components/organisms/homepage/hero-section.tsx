@@ -32,7 +32,7 @@ const homePagesStats = [
 const HeroSection = () => {
   return (
     <Box
-      px={16}
+      px={"60px"}
       className={"hero-content"}
       backgroundImage="url('/images/hero-bg.svg')"
       backgroundPosition="100% 0"

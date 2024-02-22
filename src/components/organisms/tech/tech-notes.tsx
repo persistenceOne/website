@@ -165,7 +165,7 @@ const NotesSection = () => {
               Pioneered ATOM liquid staking in 2021
             </Heading>
             <Image
-              src={"/images/tech-page/note-img2.svg"}
+              src={"/images/tech-page/pioneered.svg"}
               alt=""
               width={220}
               height={144}
@@ -184,7 +184,7 @@ const NotesSection = () => {
               One of the first chains to enable IBC
             </Heading>
             <Image
-              src={"/images/tech-page/note-img1.svg"}
+              src={"/images/tech-page/ibc.svg"}
               alt=""
               width={220}
               height={144}
@@ -203,7 +203,7 @@ const NotesSection = () => {
               Audit first, deploy later.
             </Heading>
             <Image
-              src={"/images/tech-page/note-img1.svg"}
+              src={"/images/tech-page/audit.svg"}
               alt=""
               width={220}
               height={144}

@@ -180,8 +180,8 @@ const menuItems = [
         description: "",
         icon: "download",
         iconType: "stroke",
-        link: "/ecosystem",
-        isExternal: false,
+        link: "https://persistence.notion.site/Persistence-Media-Kit-50e8f0eacab1466ebe7899d3773a48a3",
+        isExternal: true,
         comingSoon: false
       },
       {
@@ -217,7 +217,7 @@ const Header = () => {
     <Box id={"is-sticky"} className={"navbar-container"}>
       <Container
         maxW={"1440px"}
-        px={"30px"}
+        px={"70px"}
         transition={"all 0.3s"}
         py={"20px"}
       >
@@ -242,7 +242,15 @@ const Header = () => {
             {menuItems.map((item) => (
               <Popover placement={"top-start"} trigger="hover" key={item.id}>
                 <PopoverTrigger>
-                  <Text cursor={"pointer"}>{item.name}</Text>
+                  <Text
+                    cursor={"pointer"}
+                    px={"12px"}
+                    py={"8px"}
+                    borderRadius={"6px"}
+                    _hover={{ bg: "#C732381A", color: "#C73238" }}
+                  >
+                    {item.name}
+                  </Text>
                 </PopoverTrigger>
                 <PopoverContent borderRadius={6}>
                   <PopoverArrow />
@@ -299,7 +307,11 @@ const Header = () => {
                             </VStack>
                           </HStack>
                         ) : (
-                          <Link href={subItem.link} key={subItem.title}>
+                          <Link
+                            href={subItem.link}
+                            key={subItem.title}
+                            target={subItem.isExternal ? "_blank" : "_self"}
+                          >
                             <HStack
                               cursor={"pointer"}
                               className={"nav-item"}

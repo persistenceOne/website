@@ -90,3 +90,12 @@ body {
   width: 14px;
   height: auto;
 }
+
+.terms-sections  .subHeading{
+  margin-bottom: 16px;
+  font-size: 18px;
+    color: #423F40;
+}
+.terms-sections .contentClass{
+  margin-bottom: 16px;
+}
