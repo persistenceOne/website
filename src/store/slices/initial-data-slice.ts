@@ -83,7 +83,7 @@ const initialState: InitialDataSliceState = {
   blocks: 0,
   ibcConnections: 45,
   audits: 5,
-  stakedXPRT: 77,
+  stakedXPRT: 0,
   inflationDate: "April 2025",
   tokenPrices: {
     BNB: 0,

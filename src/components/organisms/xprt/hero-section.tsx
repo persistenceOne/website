@@ -17,6 +17,7 @@ import {
   fetchDexterInfo,
   fetchDexterPoolInfo,
   fetchOsmosisPoolInfo,
+  getBondedTokens,
   getMarketCap
 } from "@/pages/api";
 import { useAppStore } from "@/store/store";
@@ -24,21 +25,29 @@ import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
 
 const HeroSection = () => {
-  const [setPersistenceMarketCap, marketCap, stakedXPRT, inflationDate] =
-    useAppStore(
-      (state) => [
-        state.setPersistenceMarketCap,
-        state.marketCap,
-        state.stakedXPRT,
-        state.inflationDate
-      ],
-      shallow
-    );
+  const [
+    setPersistenceMarketCap,
+    marketCap,
+    stakedXPRT,
+    inflationDate,
+    setStakedXprt
+  ] = useAppStore(
+    (state) => [
+      state.setPersistenceMarketCap,
+      state.marketCap,
+      state.stakedXPRT,
+      state.inflationDate,
+      state.setStakedXprt
+    ],
+    shallow
+  );
 
   useEffect(() => {
     const fetch = async () => {
       const response = await getMarketCap();
+      const responseTwo = await getBondedTokens();
       console.log("getMarketCap", response);
+      setStakedXprt(responseTwo);
       setPersistenceMarketCap(response);
     };
     fetch();
