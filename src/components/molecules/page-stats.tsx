@@ -1,8 +1,5 @@
 import React from "react";
-import CountUp from "react-countup";
-
-import { Box, Center, Divider, HStack, Text, VStack } from "@chakra-ui/react";
-import { numberFormat } from "@/utils/helpers";
+import { Box, Stack, Divider, HStack, Text, VStack } from "@chakra-ui/react";
 
 type PageStat = {
   statValue: any;
@@ -11,10 +8,19 @@ type PageStat = {
 
 const PageStats = ({ stats }: { stats: PageStat[] }) => {
   return (
-    <HStack gap={0} maxW={"70%"}>
+    <Stack
+      gap={0}
+      maxW={{ base: "100%", md: "70%" }}
+      direction={{ base: "column", md: "row" }}
+    >
       {stats.map((stat: PageStat, index: number) => (
         <HStack key={stat.statLabel}>
-          <VStack key={stat.statLabel} align={"center"} gap={0}>
+          <VStack
+            key={stat.statLabel}
+            align={{ base: "start", md: "center" }}
+            gap={0}
+            mb={{ base: "16px", md: "0px" }}
+          >
             <Text
               color={"primary.red"}
               fontSize={{ base: "22px", md: "44px" }}
@@ -32,6 +38,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
           </VStack>
           {index !== stats.length - 1 ? (
             <Divider
+              display={{ base: "none", md: "block" }}
               borderColor={"#423F4066"}
               orientation="vertical"
               h="80px"
@@ -42,7 +49,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
           ) : null}
         </HStack>
       ))}
-    </HStack>
+    </Stack>
   );
 };
 

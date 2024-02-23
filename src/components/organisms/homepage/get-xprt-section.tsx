@@ -20,7 +20,7 @@ const GetXprtSection = () => {
             <Heading
               color="text.headingWhite"
               fontSize={{ base: "26px", md: "48px" }}
-              lineHeight={"72px"}
+              lineHeight={{ base: "38px", md: "72px" }}
               mb={4}
             >
               Fuelling the <br /> Persistence Ecosystem
@@ -28,7 +28,7 @@ const GetXprtSection = () => {
             <Text
               color="text.whiteHigh"
               fontSize={{ base: "16px", md: "18px" }}
-              mb={"50px"}
+              mb={{ base: "30px", md: "50px" }}
             >
               XPRT empowers a range of on-chain activities including staking for
               rewards to enhance chain security, decentralized governance for

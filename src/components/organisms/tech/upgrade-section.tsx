@@ -94,6 +94,7 @@ const UpgradeSection = () => {
           ref={(slider) => {
             sliderRef = slider;
           }}
+          className={"upgrade-slider"}
         >
           {upgradeList.map((item, index) => {
             return (
@@ -147,7 +148,7 @@ const UpgradeSection = () => {
             );
           })}
         </Slider>
-        <Flex mt={4}>
+        <Flex mt={4} className={"upgrade-slider-arrow"}>
           <Flex
             align={"center"}
             justify={"center"}

@@ -7,7 +7,8 @@ import {
   HStack,
   SimpleGrid,
   Text,
-  VStack
+  VStack,
+  Stack
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
@@ -54,13 +55,18 @@ const openPositionsList = [
 const JoinTeamPanel = () => {
   return (
     <Box as="section" maxW={"1100px"}>
-      <Text mb={"30px"} mt={"24px"} color={"text.blackHigh"} fontSize={"20px"}>
+      <Text
+        mb={"30px"}
+        mt={"24px"}
+        color={"text.blackHigh"}
+        fontSize={{ base: "16px", md: "20px" }}
+      >
         Explore opportunities to contribute to Persistence One’s mission of
         maximizing
         <br /> liquid staking yield with Persistence Labs.
       </Text>
-      <Flex gap={4}>
-        <Card borderRadius={"20px"} p={8}>
+      <Box gap={4} display={{ base: "block", md: "flex" }}>
+        <Card borderRadius={"20px"} p={8} mb={{ base: "10px", md: "0" }}>
           <VStack align={"flex-start"}>
             <Text fontSize={12}>Mission</Text>
             <Text
@@ -104,8 +110,12 @@ const JoinTeamPanel = () => {
           </VStack>
         </Card>
         <Card borderRadius={20} flex={1} p={8}>
-          <HStack justify={"space-between"} pb={"30px"}>
-            <VStack align={"flex-start"} gap={0}>
+          <Stack
+            justify={"space-between"}
+            pb={{ base: "16px", md: "30px" }}
+            direction={{ base: "column", md: "row" }}
+          >
+            <VStack align={"flex-start"} gap={0} mb={{ base: "10px", md: "0" }}>
               <Text fontWeight={600} fontSize={20} color="#3D3D3D">
                 Open Positions
               </Text>
@@ -122,13 +132,18 @@ const JoinTeamPanel = () => {
                 variant={"primary"}
                 color={"text.headingBlack"}
                 fontSize={14}
+                w={{ base: "100%", md: "auto" }}
                 px={12}
               >
                 View All
               </Button>
             </Link>
-          </HStack>
-          <SimpleGrid columns={2} gap={4}>
+          </Stack>
+          <SimpleGrid
+            columns={2}
+            gap={4}
+            display={{ base: "none", md: "grid" }}
+          >
             {openPositionsList.map((position) => (
               <Link href={position.link} key={position.id}>
                 <HStack
@@ -159,7 +174,7 @@ const JoinTeamPanel = () => {
             ))}
           </SimpleGrid>
         </Card>
-      </Flex>
+      </Box>
     </Box>
   );
 };

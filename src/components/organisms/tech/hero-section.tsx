@@ -7,7 +7,8 @@ import {
   Text,
   VStack,
   Divider,
-  Container
+  Container,
+  Stack
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { getBlockNumber, getBondedTokens } from "@/pages/api";
@@ -81,29 +82,37 @@ const HeroSection = () => {
             </Text>
           </Box>
         </Flex>
-        <HStack gap={0} maxW={{ base: "100%", md: "70%" }}>
+        <Stack
+          gap={0}
+          maxW={{ base: "100%", md: "70%" }}
+          direction={{ base: "column", md: "row" }}
+        >
           {homePagesStats.map((stat: any, index: number) => (
             <HStack key={stat.statLabel}>
-              <VStack key={stat.statLabel} align={"stretch"}>
+              <VStack
+                key={stat.statLabel}
+                align={{ base: "start", md: "stretch" }}
+                gap={0}
+                mb={{ base: "16px", md: "0px" }}
+              >
                 <Text
                   color={"primary.red"}
-                  fontSize={{ base: "16px", md: "44px" }}
+                  fontSize={{ base: "22px", md: "44px" }}
                   fontWeight={700}
-                  textAlign={{ base: "center", md: "left" }}
                 >
                   {stat.statValue}
                 </Text>
                 <Text
                   color="text.statLabel"
-                  fontSize={{ base: "14px", md: "18px" }}
+                  fontSize={{ base: "16px", md: "18px" }}
                   fontWeight={400}
-                  textAlign={{ base: "center", md: "left" }}
                 >
                   {stat.statLabel}
                 </Text>
               </VStack>
               {index !== homePagesStats.length - 1 ? (
                 <Divider
+                  display={{ base: "none", md: "block" }}
                   orientation="vertical"
                   h="80px"
                   borderColor={"#423F4066"}
@@ -114,7 +123,7 @@ const HeroSection = () => {
               ) : null}
             </HStack>
           ))}
-        </HStack>
+        </Stack>
         <Spacer h={"120px"} />
       </Container>
     </Box>

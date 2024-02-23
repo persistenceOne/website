@@ -5,13 +5,6 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
-.hero-content {
-  background-image: url("/images/hero-bg.svg");
-  background-position: 100% 0%;
-  background-repeat: no-repeat;
-  background-size: 45% 77%;
-}
-
 /* over riding story page slider dots*/
 
 .history-slider .slick-dots {
@@ -19,7 +12,7 @@ body {
 }
 
 .history-slider .slick-slide{
-  padding: 24px;
+  padding: 12px;
 }
 
 .history-slider .slick-dots li button:before {
@@ -29,12 +22,20 @@ body {
   border-radius: 100%;
 }
 
+
 .history-slider .slick-dots li.slick-active button:before {
   color: #c73238;
   background: #c73238;
   opacity: 1;
 }
 
+.upgrade-slider-arrow .icon {
+stroke: #ececec;
+}
+
+.blog-slider-arrow .icon {
+  stroke: #000000;
+}
 /* navigation bar icon styling */
 .navbar-container.nav-bar {
   background: #f5f5f5;

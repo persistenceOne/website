@@ -82,16 +82,6 @@ const FeatureCards = () => {
           width="40%"
           height="450px"
         />
-        {/*<Box*/}
-        {/*  pos={"absolute"}*/}
-        {/*  bottom={"-20px"}*/}
-        {/*  left={"-20px"}*/}
-        {/*  background={"#C73339"}*/}
-        {/*  w={"220px"}*/}
-        {/*  h={"210px"}*/}
-        {/*  zIndex={-1}*/}
-        {/*  borderRadius={"20px"}*/}
-        {/*/>*/}
 
         <VStack align={"stretch"} gap={4}>
           <FeatureCard
@@ -113,7 +103,11 @@ const FeatureCards = () => {
             pl={8}
             align={"center"}
           >
-            <Text color={"#FCFCFC"} fontSize={27} fontWeight={700}>
+            <Text
+              color={"#FCFCFC"}
+              fontSize={{ base: "16px", md: "27px" }}
+              fontWeight={700}
+            >
               Yields. TVL. Traction
             </Text>
             <Link
@@ -121,7 +115,11 @@ const FeatureCards = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button rightIcon={<ArrowForwardIcon />} variant={"secondary"}>
+              <Button
+                px={{ base: "16px", md: "24px" }}
+                rightIcon={<ArrowForwardIcon />}
+                variant={"secondary"}
+              >
                 View Stats
               </Button>
             </Link>

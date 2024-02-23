@@ -7,7 +7,8 @@ import {
   Heading,
   Text,
   VStack,
-  Container
+  Container,
+  Stack
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -43,7 +44,7 @@ const BlogSection = () => {
           <Heading
             color="text.headingSemiBlack"
             fontSize={{ base: "26px", md: "58px" }}
-            lineHeight={"87px"}
+            lineHeight={{ base: "26x", md: "87px" }}
           >
             Community Resources
           </Heading>
@@ -65,11 +66,11 @@ const BlogSection = () => {
             Explore All
           </Button>
         </VStack>
-        <HStack spacing={6}>
+        <Stack spacing={6} direction={{ base: "column", md: "row" }}>
           {resourcesList.map((resource, index) => (
             <BlogCard key={resource.id} {...resource} />
           ))}
-        </HStack>
+        </Stack>
       </Box>
     </Container>
   );

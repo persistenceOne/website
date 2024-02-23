@@ -137,12 +137,12 @@ const XPRTInDefiSection = () => {
 
   const xprtDefiCards = getData(dexterPoolsInfo, osmoPoolsInfo);
   return (
-    <Container maxW={"1200px"} px={"50px"}>
+    <Container maxW={"1200px"} px={{ base: "16px", md: "50px" }}>
       <VStack align={"center"}>
-        <Heading variant={"main"} fontSize={58}>
+        <Heading variant={"main"} fontSize={{ base: "26px", md: "58px" }}>
           XPRT in DeFi
         </Heading>
-        <SimpleGrid columns={2} spacing={4} mt={8}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} mt={8}>
           {xprtDefiCards.map((card, index) => (
             <XPRTDefiCard key={index} {...card} />
           ))}

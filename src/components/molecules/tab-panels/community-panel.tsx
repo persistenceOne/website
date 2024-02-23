@@ -45,11 +45,16 @@ const socialCardContents = [
 const CommunityPanel = () => {
   return (
     <Box as="section" maxW={"930px"} mx={"auto"}>
-      <Text mb={"30px"} mt={"24px"} color={"text.blackHigh"} fontSize={"20px"}>
+      <Text
+        mb={"30px"}
+        mt={"24px"}
+        color={"text.blackHigh"}
+        fontSize={{ base: "16px", md: "20px" }}
+      >
         Learn more about Persistence One, chat with fellow Persisters, and have
         your voice be heard for the future of the liquid staking economy.
       </Text>
-      <SimpleGrid columns={2} spacing={6}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
         {socialCardContents.map((card, index) => (
           <SocialCard key={index} {...card} />
         ))}

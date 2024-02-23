@@ -49,19 +49,22 @@ const HeroSection = () => {
     fetch();
   }, []);
   return (
-    <Container maxW={"1440px"} px={"40px"}>
+    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
       <Spacer h={20} />
       <Flex
         justify={"space-between"}
         align={"flex-start"}
         pos={"relative"}
-        mb={"100px"}
+        mb={{ base: "40px", md: "100px" }}
       >
         <VStack mt={"100px"} align={"stretch"}>
-          <Heading variant={"main"}>
+          <Heading
+            fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+            variant={"main"}
+          >
             Powering Liquid Staking <br /> and Restaking with XPRT
           </Heading>
-          <Text textAlign="left" my={6}>
+          <Text textAlign="left" my={6} fontSize={{ base: "16px", md: "22px" }}>
             XPRT is the multi-purpose native token of the Persistence One
             Ecosystem.
           </Text>
@@ -84,7 +87,11 @@ const HeroSection = () => {
             </Link>
           </HStack>
         </VStack>
-        <Box pos={"absolute"} right={"0"}>
+        <Box
+          pos={"absolute"}
+          right={"0"}
+          display={{ base: "none", md: "block" }}
+        >
           <Image
             src="/images/xprt-page/persistence-coin.svg"
             alt="Persistence Coin"

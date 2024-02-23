@@ -71,6 +71,7 @@ const NotesSection = () => {
                 bg={"#fff"}
                 borderRadius={"20px"}
                 boxShadow={"md"}
+                display={{ base: "block", md: "flex" }}
               >
                 <Heading variant={"secondary"} color={"text.blackHigh"}>
                   Building the Restaking Infrastructure for Cosmos
@@ -93,7 +94,13 @@ const NotesSection = () => {
                 borderRadius={"20px"}
               />
             </Box>
-            <Flex p={"32px"} bg={"#fff"} borderRadius={"20px"} boxShadow={"md"}>
+            <Flex
+              p={"32px"}
+              bg={"#fff"}
+              borderRadius={"20px"}
+              boxShadow={"md"}
+              display={{ base: "block", md: "flex" }}
+            >
               <Heading variant={"secondary"} color={"text.blackHigh"}>
                 Building the Restaking Infrastructure for Cosmos
               </Heading>

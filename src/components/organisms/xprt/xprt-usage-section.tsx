@@ -64,18 +64,27 @@ const xprtUsageCards = [
 
 const XPRTUsageSection = () => {
   return (
-    <Container maxW={"1400px"} px={"40px"} pt={"100px"}>
+    <Container maxW={"1400px"} px={{ base: "16px", md: "30px" }} pt={"100px"}>
       <VStack align={"center"}>
-        <Heading variant={"main"} fontSize={58}>
+        <Heading
+          variant={"main"}
+          fontSize={{ base: "26px", md: "58px" }}
+          lineHeight={{ base: "38px", md: "72px" }}
+        >
           What is XPRT used for?
         </Heading>
         <Text>Lorem ipsum dolor sit amet consectetur.</Text>
-        <Stack spacing={4} direction="row" justify={"space-between"} mt={4}>
+        <Stack
+          spacing={4}
+          direction={{ base: "column", md: "row" }}
+          justify={"space-between"}
+          mt={4}
+        >
           {xprtUsageCards.map((card, index) => (
             <Flex
               p={"32px"}
               bg={"#fff"}
-              w={"25%"}
+              w={{ base: "100%", md: "25%" }}
               borderRadius={"20px"}
               direction={"column"}
               key={card.title}

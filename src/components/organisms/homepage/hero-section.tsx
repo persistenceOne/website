@@ -32,7 +32,7 @@ const HeroSection = () => {
 
   return (
     <Box
-      px={"60px"}
+      px={{ base: "20px", md: "60px" }}
       className={"hero-content"}
       backgroundImage="url('/images/hero-bg.svg')"
       backgroundPosition="100% 0"
@@ -41,36 +41,38 @@ const HeroSection = () => {
     >
       <Container maxW={"1440px"} px={"0"}>
         <Spacer h={"150px"} />
-        <Flex justify={"space-between"} mb={"60px"}>
+        <Flex justify={"space-between"} mb={{ base: "20px", md: "60px" }}>
           <VStack align={"stretch"}>
             <Heading
               variant={"main"}
               color={"text.blackHigh"}
-              textAlign={{ base: "center", md: "left" }}
-              fontSize={{ base: "26px", md: "60px" }}
-              lineHeight={{ base: "32px", md: "72px" }}
+              textAlign={"left"}
+              fontSize={{ base: "32px", md: "60px" }}
+              lineHeight={{ base: "42px", md: "72px" }}
               mb={"20px"}
             >
               Staking. <br />
               Liquid Staking. <br />
               Restaking.
             </Heading>
-            <Text
-              textAlign={{ base: "center", md: "left" }}
-              w={{ base: "100%", md: "55%" }}
-              mb={6}
-            >
+            <Text textAlign={"left"} w={{ base: "100%", md: "55%" }} mb={6}>
               Persistence One is an app chain for dApps to securely build an
               economy that maximizes liquid staking and restaking yield.
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link href="/story" passHref>
-                <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                <Button
+                  variant={"secondary"}
+                  rightIcon={<ArrowForwardIcon />}
+                  w={{ base: "100%", md: "auto" }}
+                >
                   See Our Story
                 </Button>
               </Link>
               <Link href="/xprt" passHref>
-                <Button>Explore Ecosystem</Button>
+                <Button w={{ base: "100%", md: "auto" }}>
+                  Explore Ecosystem
+                </Button>
               </Link>
             </Stack>
           </VStack>
