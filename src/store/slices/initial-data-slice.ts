@@ -77,13 +77,13 @@ const initialState: InitialDataSliceState = {
     tvl: 0
   },
   tvl: 0,
-  ibcVolume: 0,
-  transactionCost: 0,
+  ibcVolume: 14995000,
+  transactionCost: 0.23947,
   marketCap: 0,
   blocks: 0,
-  ibcConnections: 0,
-  audits: 0,
-  stakedXPRT: 0,
+  ibcConnections: 45,
+  audits: 5,
+  stakedXPRT: 77,
   inflationDate: "April 2025",
   tokenPrices: {
     BNB: 0,

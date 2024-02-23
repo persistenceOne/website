@@ -11,19 +11,22 @@ import {
   Stack
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import HomePageStats from "@/components/molecules/page-stats";
-import { fetchChainTVL } from "@/pages/api";
+import { numberFormat } from "@/utils/helpers";
+import { useAppStore } from "@/store/store";
+import { shallow } from "zustand/shallow";
 
 const HeroSection = () => {
-  const [chainTvl, setChainTvl] = useState("0");
-  useEffect(() => {
-    const fetch = async () => {
-      const res = await fetchChainTVL();
-      setChainTvl(res.toString());
-    };
-    fetch();
-  }, []);
+  const [tvl, ibcVolume, transactionCost] = useAppStore(
+    (state) => [
+      state.tvl,
+      state.ibcVolume,
+      state.transactionCost,
+      state.inflationDate
+    ],
+    shallow
+  );
 
   return (
     <Box
@@ -69,15 +72,15 @@ const HeroSection = () => {
         <HomePageStats
           stats={[
             {
-              statValue: chainTvl,
+              statValue: `$${numberFormat(tvl, 3)}`,
               statLabel: "TVL"
             },
             {
-              statValue: "14995000",
+              statValue: `$${numberFormat(ibcVolume, 3)}`,
               statLabel: "IBC Volume (30 Days)"
             },
             {
-              statValue: "0.23947",
+              statValue: `$${transactionCost}`,
               statLabel: "Average Transaction Cost"
             }
           ]}

@@ -5,7 +5,7 @@ import { Box, Center, Divider, HStack, Text, VStack } from "@chakra-ui/react";
 import { numberFormat } from "@/utils/helpers";
 
 type PageStat = {
-  statValue: string;
+  statValue: any;
   statLabel: string;
 };
 
@@ -20,8 +20,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
               fontSize={{ base: "22px", md: "44px" }}
               fontWeight={700}
             >
-              $
-              {Number(stat.statValue) > 0 ? numberFormat(stat.statValue, 3) : 0}
+              {stat.statValue}
             </Text>
             <Text
               color="text.blackHigh"
