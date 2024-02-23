@@ -13,6 +13,17 @@ export interface ValidatorsInfo {
   dydx: ValidatorInfo[];
 }
 
+type AvailablePools = 2 | 3 | 5;
+
+export type PoolInfo = {
+  tvl: number;
+  apy: number;
+};
+
+export type DexterPoolsInfo = {
+  [key in AvailablePools]: PoolInfo;
+};
+
 export interface InitialDataSliceState {
   pstakInfo: {
     tvl: number;
@@ -38,6 +49,8 @@ export interface InitialDataSliceState {
     DYDX: number;
     XPRT: number;
   };
+  dexterPoolsInfo: DexterPoolsInfo;
+  osmoPoolsInfo: PoolInfo;
 }
 
 export interface InitialDataSliceActions {
@@ -50,6 +63,8 @@ export interface InitialDataSliceActions {
   setPersistenceMarketCap: (value: any) => void;
   setPersistenceChainBlock: (value: any) => void;
   setStakedXprt: (value: any) => void;
+  setDexterPoolInfo: (value: any) => void;
+  setOsmoPoolInfo: (value: any) => void;
 }
 
 const initialState: InitialDataSliceState = {
@@ -76,6 +91,24 @@ const initialState: InitialDataSliceState = {
     OSMO: 0,
     DYDX: 0,
     XPRT: 0
+  },
+  dexterPoolsInfo: {
+    2: {
+      tvl: 0,
+      apy: 0
+    },
+    3: {
+      tvl: 0,
+      apy: 0
+    },
+    5: {
+      tvl: 0,
+      apy: 0
+    }
+  },
+  osmoPoolsInfo: {
+    tvl: 0,
+    apy: 0
   }
 };
 
@@ -132,5 +165,13 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
   setStakedXprt: (value) =>
     set((state) => ({
       stakedXPRT: value
+    })),
+  setDexterPoolInfo: (value) =>
+    set((state) => ({
+      dexterPoolsInfo: value
+    })),
+  setOsmoPoolInfo: (value) =>
+    set((state) => ({
+      osmoPoolsInfo: value
     }))
 });

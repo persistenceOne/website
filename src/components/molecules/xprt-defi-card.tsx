@@ -1,3 +1,4 @@
+import { numberFormat } from "@/utils/helpers";
 import { Box, Button, Card, HStack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
@@ -69,7 +70,9 @@ const XPRTDefiCard = ({
                 {stat.label}
               </Text>
               <Text fontSize={24} fontWeight={700}>
-                {stat.value}
+                {stat.label === "TVL"
+                  ? `$${numberFormat(Number(stat.value), 3)}`
+                  : `${stat.value}%`}
               </Text>
             </VStack>
           );

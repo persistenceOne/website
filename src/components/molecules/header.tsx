@@ -19,6 +19,7 @@ import Icon from "./Icon";
 import {
   fetchDexterInfo,
   fetchDexterPoolInfo,
+  fetchOsmosisPoolInfo,
   fetchTokenPrices,
   getBnbTVL,
   getCosmosTVL
@@ -224,16 +225,24 @@ const Header = () => {
     }
   };
 
-  const [setTokenPrices, setPstakeTvl, setDexterTVl, setDexterTotalVolume] =
-    useAppStore(
-      (state) => [
-        state.setTokenPrices,
-        state.setPstakeTvl,
-        state.setDexterTVl,
-        state.setDexterTotalVolume
-      ],
-      shallow
-    );
+  const [
+    setTokenPrices,
+    setPstakeTvl,
+    setDexterTVl,
+    setDexterTotalVolume,
+    setDexterPoolInfo,
+    setOsmoPoolInfo
+  ] = useAppStore(
+    (state) => [
+      state.setTokenPrices,
+      state.setPstakeTvl,
+      state.setDexterTVl,
+      state.setDexterTotalVolume,
+      state.setDexterPoolInfo,
+      state.setOsmoPoolInfo
+    ],
+    shallow
+  );
 
   //fetching pstake info
   useEffect(() => {
@@ -260,11 +269,14 @@ const Header = () => {
   //fetching dexter info
   useEffect(() => {
     const fetch = async () => {
-      fetchDexterPoolInfo();
+      const response = await fetchDexterPoolInfo();
       const resp = await fetchDexterInfo();
+      const osmoResponse = await fetchOsmosisPoolInfo();
       setDexterTVl(resp.tvl);
       setDexterTotalVolume(resp.volume);
-      console.log(resp, "fetchDexterInfo");
+      setDexterPoolInfo(response);
+      setOsmoPoolInfo(osmoResponse);
+      console.log(resp, "fetchDexterInfo", response);
     };
     fetch();
   }, []);
