@@ -9,11 +9,11 @@ export const STK_OSMO_TVL_API =
   "https://staging.api.persistence.one/pstake/stkosmo/osmo_tvu";
 export const STK_DYDX_TVL_API =
   "https://staging.api.persistence.one/pstake/stkdydx/dydx_tvu";
-export const XPRT_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/15";
+export const XPRT_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/1101";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const OSMO_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=15";
-export const OSMO_TVL_URL = "https://api-osmosis.imperator.co/pools/v2/15";
+export const OSMO_TVL_URL = "https://api-osmosis.imperator.co/pools/v2/1101";
 export const MarketCap_API =
   "https://api.coingecko.com/api/v3/coins/persistence";
 export const LATEST_BLOCK_HEIGHT_URL =
