@@ -56,7 +56,11 @@ export const getCosmosTVL = async (prefix: string) => {
 };
 
 export const fetchTokenPrices = async () => {
-  console.log(process.env.BNB_CHAIN_RPC_URL, "BNB_CHAIN_RPC_URL");
+  console.log(
+    process.env.BNB_CHAIN_RPC_URL,
+    "BNB_CHAIN_RPC_URL",
+    process.env.NEXT_PUBLIC_COINGECKO_API_KEY
+  );
   let data = {
     BNB: 0,
     ATOM: 0,
@@ -72,7 +76,7 @@ export const fetchTokenPrices = async () => {
       )}&vs_currencies=usd`,
       {
         headers: {
-          "x-cg-pro-api-key": process.env.COINGECKO_API_KEY
+          "x-cg-pro-api-key": process.env.NEXT_PUBLIC_COINGECKO_API_KEY
         }
       }
     );
@@ -152,6 +156,50 @@ export const fetchDexterInfo = async () => {
     return {
       tvl: total_liquidity.current_liquidity_usd || 0,
       volume: volume_usd
+    };
+  } catch (e) {
+    console.log(e, "error in fetchDexterInfo");
+    return {
+      tvl: 0,
+      volume: 0
+    };
+  }
+};
+
+export const fetchDexterPoolInfo = async () => {
+  try {
+    const res = await fetch(DEXTER_POOL_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        query: `{
+           pools(where: {poolAssets_: {identifier_contains: "uxprt"}}) {
+            poolId
+            poolAssets {
+              identifier
+            }
+          }
+          pool_weekly_aggregate_with_apr(where: {pool_id: {_in: [2, 3, 5]}}) {
+            pool_id
+            total_swap_fee
+            current_liquidity_usd
+            total_volume
+            apr
+          }
+          pool_current_incentive_apr(where: {pool_id: {_in: [2, 3, 5]}}) {
+            incentive_apr
+            pool_id
+          }
+          }`
+      })
+    });
+    const responseJson = await res.json();
+    console.log(responseJson, "responseJson-pools");
+    return {
+      tvl: 0,
+      volume: 0
     };
   } catch (e) {
     console.log(e, "error in fetchDexterInfo");
