@@ -26,7 +26,7 @@ const socialCardContents = [
   {
     title: "Blogs",
     description: "Learn about Persistence One",
-    link: "https://medium.com/persistence/",
+    link: "https://blog.persistence.one/",
     image: "/icons/medium.svg"
   },
   {

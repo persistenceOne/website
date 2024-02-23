@@ -165,7 +165,7 @@ const menuItems = [
         description: "Lorem ipsum dolor sit Lorem ipsum",
         icon: "people",
         iconType: "fill",
-        link: "https://medium.com/persistence-blog",
+        link: "https://blog.persistence.one/",
         isExternal: true,
         comingSoon: false
       },

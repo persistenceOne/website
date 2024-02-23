@@ -1,6 +1,8 @@
 import { numberFormat } from "@/utils/helpers";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Box, Button, Card, HStack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export interface XPRTDefiCardInterface {
@@ -57,9 +59,11 @@ const XPRTDefiCard = ({
           </Text>
         </HStack>
 
-        <Button bg={cta.bg} color="white">
-          {cta.label}
-        </Button>
+        <Link href={cta.link} target="_blank" rel="noopener noreferrer">
+          <Button bg={cta.bg} color="white" rightIcon={<ArrowForwardIcon />}>
+            {cta.label}
+          </Button>
+        </Link>
       </HStack>
       <Text mt={4}>{description}</Text>
       <HStack gap={8} mt={4}>

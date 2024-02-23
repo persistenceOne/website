@@ -25,7 +25,7 @@ const footerSocialLinks = [
   },
   {
     name: "Discord",
-    link: "https://discord.com/invite/3u3Zv5t",
+    link: "https://discord.com/invite/vyvp3scWnH",
     icon: "discord",
     iconType: "stroke",
     color: "#5865F2"
@@ -122,7 +122,7 @@ const footerLinks = [
       },
       {
         title: "Blogs",
-        link: "https://medium.com/persistence-blog",
+        link: "https://blog.persistence.one/",
         isExternal: true
       },
       {
