@@ -18,6 +18,7 @@ import {
 import Icon from "./Icon";
 import {
   fetchDexterInfo,
+  fetchDexterPoolInfo,
   fetchTokenPrices,
   getBnbTVL,
   getCosmosTVL
@@ -259,6 +260,7 @@ const Header = () => {
   //fetching dexter info
   useEffect(() => {
     const fetch = async () => {
+      fetchDexterPoolInfo();
       const resp = await fetchDexterInfo();
       setDexterTVl(resp.tvl);
       setDexterTotalVolume(resp.volume);
