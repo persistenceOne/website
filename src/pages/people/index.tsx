@@ -9,7 +9,6 @@ const PeoplePage = () => {
   return (
     <>
       <HeroSection />
-      <Spacer h={20} />
       <PersisterSection />
       <Spacer h={20} />
       <TeamSection />

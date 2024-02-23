@@ -50,14 +50,22 @@ const PersisterSection = () => {
   return (
     <>
       <VStack align={"center"} pt={12} pb={36} bg={"#252424"}>
-        <Heading variant={"main"} fontSize={58} color="#ECECEC">
+        <Heading
+          variant={"main"}
+          fontSize={{ base: "26px", md: "58px" }}
+          color="#ECECEC"
+        >
           What makes a Persister?
         </Heading>
-        <Text color="#ECECEC">
+        <Text
+          color="#ECECEC"
+          fontSize={{ base: "18px", md: "22px" }}
+          textAlign={"center"}
+        >
           Persistence is more than just a name. It is our way of being.{" "}
         </Text>
       </VStack>
-      <Container maxW={"1440px"} mt={-16} px={16}>
+      <Container maxW={"1440px"} mt={-16} px={{ base: 6, md: 16 }}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} rowGap={20}>
           {persisterValues.map((value) => (
             <PersisterValuesCard key={value.title} {...value} />

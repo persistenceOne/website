@@ -17,8 +17,16 @@ const HeroSection = () => {
     <Container maxW={"1440px"} px={"40px"}>
       <Spacer h={20} />
       <Flex justify={"space-between"} align={"flex-start"} pos={"relative"}>
-        <VStack mt={"250px"} align={"flex-start"}>
-          <Heading variant={"main"} color={"text.blackHigh"}>
+        <VStack
+          mt={{ base: "100px", md: "250px" }}
+          align={"flex-start"}
+          pb={"120px"}
+        >
+          <Heading
+            variant={"main"}
+            color={"text.blackHigh"}
+            fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+          >
             Humility. Integrity. <br /> Patience. Persistence.
           </Heading>
           <Text textAlign="left" color="#3D3D3DB2">
@@ -26,9 +34,14 @@ const HeroSection = () => {
             be a<br /> Persister, and how to become one.
           </Text>
         </VStack>
-        <Box pos={"absolute"} right={"0"}>
+        <Box
+          pos={"absolute"}
+          right={"0"}
+          bottom={0}
+          display={{ base: "none", md: "block" }}
+        >
           <Image
-            src="/images/xprt-page/persistence-coin.svg"
+            src="/images/people_hero.svg"
             alt="Persistence Coin"
             width={400}
             height={400}
