@@ -66,6 +66,7 @@ export const fetchTokenPrices = async () => {
   try {
     const response = await fetch(`/api/prices`);
     const pricesResponse = await response.json();
+    console.log(pricesResponse, "pricesResponse");
     data.BNB = Number(pricesResponse.data["binancecoin"].usd);
     data.ATOM = Number(pricesResponse.data["cosmos"].usd);
     data.OSMO = Number(pricesResponse.data["osmosis"].usd);
