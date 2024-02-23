@@ -10,7 +10,7 @@ import {
   Container
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { getBlockNumber } from "@/pages/api";
+import { getBlockNumber, getBondedTokens } from "@/pages/api";
 
 const getList = (blockNumber: number) => {
   const homePagesStats = [

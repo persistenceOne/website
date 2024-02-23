@@ -286,3 +286,30 @@ export const getBlockNumber = async () => {
     return 0;
   }
 };
+
+export const getBondedTokens = async () => {
+  try {
+    const responses = await axios.all([
+      axios.get(
+        "https://rest.core.persistence.one/cosmos/staking/v1beta1/pool"
+      ),
+      axios.get(
+        "https://rest.core.persistence.one/cosmos/bank/v1beta1/supply/by_denom?denom=uxprt"
+      )
+    ]);
+    const responseOne = responses[0];
+    const responseTwo = responses[1];
+    let bondedTokens = 0;
+    let supply = 0;
+    if (responseOne && responseOne.data) {
+      bondedTokens = responseOne.data.pool.bonded_tokens;
+    }
+    if (responseTwo && responseTwo.data) {
+      supply = responseTwo.data.amount.amount;
+    }
+    const total = (bondedTokens * 100) / supply;
+    return total.toFixed(2);
+  } catch (e) {
+    return 0;
+  }
+};
