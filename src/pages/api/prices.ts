@@ -16,8 +16,6 @@ export default async function handler(
         }
       }
     );
-    // const list = await data.json();
-    console.log(data, "data-fetch");
     res.status(200).json({ data: await data.json(), error: null });
   } catch (e) {
     res.status(500).json({ data: null, error: e });

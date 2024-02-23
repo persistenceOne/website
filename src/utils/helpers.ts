@@ -8,12 +8,9 @@ export const APP_ETHERS_PROVIDER = new ethers.providers.JsonRpcProvider(
   SPEEDY_NODE_URL
 );
 
-export const SDK_ENV =
-  process.env.NEXT_PUBLIC_ENVIRONMENT === "Mainnet" ? 0 : 1;
-
 export const sdkInstance = StkBNBWebSDK.getInstance({
   signerOrProvider: APP_ETHERS_PROVIDER,
-  env: SDK_ENV
+  env: 0
 });
 
 export const numberFormat = (number: any, decPlaces: number) => {
