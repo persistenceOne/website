@@ -56,6 +56,7 @@ export const getCosmosTVL = async (prefix: string) => {
 };
 
 export const fetchTokenPrices = async () => {
+  console.log(process.env.BNB_CHAIN_RPC_URL, "BNB_CHAIN_RPC_URL");
   let data = {
     BNB: 0,
     ATOM: 0,
