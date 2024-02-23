@@ -15,39 +15,39 @@ import React from "react";
 const openPositionsList = [
   {
     id: 0,
-    jobRole: "Marketing Associate",
+    jobRole: "Video Editor",
     jobLocation: "Remote",
-    link: "/"
+    link: "https://careers.persistence.one/jobs/f2S3LPfQ_734/video-editor-remote"
   },
   {
     id: 1,
-    jobRole: "Software Engineer",
+    jobRole: "Marketing Associate",
     jobLocation: "Remote",
-    link: "/"
+    link: "https://careers.persistence.one/jobs/W6OH4p6zAMPm/marketing-associate-remote"
   },
   {
     id: 2,
-    jobRole: "Marketing Associate",
+    jobRole: "Social Media Specialist",
     jobLocation: "Remote",
-    link: "/"
+    link: "https://careers.persistence.one/jobs/14_H7W1gmRcg/social-media-specialist-remote"
   },
   {
     id: 3,
-    jobRole: "Software Engineer",
+    jobRole: "Frontend Engineer",
     jobLocation: "Remote",
-    link: "/"
+    link: "https://careers.persistence.one/jobs/gHvya2A-f2oa/front-end-engineer-remote"
   },
   {
     id: 4,
-    jobRole: "Marketing Associate",
+    jobRole: "Golang Engineer",
     jobLocation: "Remote",
-    link: "/"
+    link: "https://careers.persistence.one/jobs/YJ7cvfyUm4eW/golang-engineer-remote"
   },
   {
     id: 5,
-    jobRole: "Software Engineer",
+    jobRole: "Senior Rust Engineer",
     jobLocation: "Remote",
-    link: "/"
+    link: "https://careers.persistence.one/jobs/Um1WiGrfyzOk/senior-rust-engineer-remote"
   }
 ];
 
@@ -91,7 +91,7 @@ const JoinTeamPanel = () => {
             >
               Persistence
             </Text>
-            <Link href={"/"}>
+            <Link href={"/people"}>
               <Button
                 variant={"link"}
                 rightIcon={<ArrowForwardIcon />}
@@ -113,7 +113,11 @@ const JoinTeamPanel = () => {
                 Ready to join? Reach out to us!
               </Text>
             </VStack>
-            <Link href={"/"}>
+            <Link
+              href={"https://careers.persistence.one/jobs"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant={"primary"}
                 color={"text.headingBlack"}
@@ -136,10 +140,10 @@ const JoinTeamPanel = () => {
                   borderRadius={20}
                 >
                   <VStack align={"flex-start"} gap={0}>
-                    <Text fontWeight={600} fontSize={16} color={"#3D3D3D"}>
+                    <Text fontWeight={600} fontSize={14} color={"#3D3D3D"}>
                       {position.jobRole}
                     </Text>
-                    <Text fontSize={14} color={"#3D3D3D"} opacity={0.7}>
+                    <Text fontSize={12} color={"#3D3D3D"} opacity={0.7}>
                       {position.jobLocation}
                     </Text>
                   </VStack>

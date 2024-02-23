@@ -14,6 +14,7 @@ import {
 import Image from "next/image";
 import React from "react";
 import { numberFormat } from "@/utils/helpers";
+import Link from "next/link";
 
 export interface DappCardInterface {
   dAppName: string;
@@ -58,16 +59,18 @@ const DappCard = ({
               {dAppName}
             </Heading>
           </Box>
-          <Button
-            rightIcon={<ExternalLinkIcon />}
-            variant={"unstyled"}
-            alignSelf={"flex-start"}
-            fontWeight={400}
-            fontSize={"18px"}
-            color={"#606060"}
-          >
-            {website.linkText}
-          </Button>
+          <Link href={website.link} target="_blank" rel="noopener noreferrer">
+            <Button
+              rightIcon={<ExternalLinkIcon />}
+              variant={"unstyled"}
+              alignSelf={"flex-start"}
+              fontWeight={400}
+              fontSize={"18px"}
+              color={"#606060"}
+            >
+              {website.linkText}
+            </Button>
+          </Link>
         </HStack>
         <Divider my={5} />
       </CardHeader>
@@ -108,14 +111,16 @@ const DappCard = ({
         </HStack>
       </CardBody>
       <CardFooter px={"0"} pb={"0"} pt={"36px"}>
-        <Button
-          bg={button.background}
-          color={button.color}
-          w={"240px"}
-          rightIcon={<ArrowForwardIcon />}
-        >
-          {button.text}
-        </Button>
+        <Link href={button.link} target="_blank" rel="noopener noreferrer">
+          <Button
+            bg={button.background}
+            color={button.color}
+            w={"240px"}
+            rightIcon={<ArrowForwardIcon />}
+          >
+            {button.text}
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
