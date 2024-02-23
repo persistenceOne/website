@@ -10,16 +10,12 @@ import {
   VStack
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import PageStats from "@/components/molecules/page-stats";
-import {
-  fetchDexterInfo,
-  fetchDexterPoolInfo,
-  fetchOsmosisPoolInfo,
-  getBondedTokens,
-  getMarketCap
-} from "@/pages/api";
+import Link from "next/link";
+
+import { getBondedTokens, getMarketCap } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
@@ -70,10 +66,22 @@ const HeroSection = () => {
             Ecosystem.
           </Text>
           <HStack gap={4}>
-            <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-              Stake XPRT
-            </Button>
-            <Button>Get XPRT</Button>
+            <Link
+              href={"https://wallet.keplr.app/chains/persistence"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                Stake XPRT
+              </Button>
+            </Link>
+            <Link
+              href={"https://www.coingecko.com/en/coins/persistence"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Get XPRT</Button>
+            </Link>
           </HStack>
         </VStack>
         <Box pos={"absolute"} right={"0"}>

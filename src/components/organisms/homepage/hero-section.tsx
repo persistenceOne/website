@@ -13,6 +13,8 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import HomePageStats from "@/components/molecules/page-stats";
+import { fetchChainTVL } from "@/pages/api";
+import Link from "next/link";
 import { numberFormat } from "@/utils/helpers";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
@@ -62,10 +64,14 @@ const HeroSection = () => {
               economy that maximizes liquid staking and restaking yield.
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
-              <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-                See Our Story
-              </Button>
-              <Button>Explore Ecosystem</Button>
+              <Link href="/story" passHref>
+                <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                  See Our Story
+                </Button>
+              </Link>
+              <Link href="/xprt" passHref>
+                <Button>Explore Ecosystem</Button>
+              </Link>
             </Stack>
           </VStack>
         </Flex>

@@ -17,7 +17,7 @@ const HeroSection = () => {
     <Container maxW={"1440px"} px={"40px"}>
       <Spacer h={20} />
       <Flex justify={"space-between"} align={"flex-start"} pos={"relative"}>
-        <VStack mt={"250px"}>
+        <VStack mt={"250px"} align={"flex-start"}>
           <Heading variant={"main"} color={"text.blackHigh"}>
             Humility. Integrity. <br /> Patience. Persistence.
           </Heading>

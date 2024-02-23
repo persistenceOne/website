@@ -1,6 +1,7 @@
 import { Box, Button, Heading, Container } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
+import Link from "next/link";
 
 const CommunityNote = () => {
   return (
@@ -28,9 +29,15 @@ const CommunityNote = () => {
           <br /> Restaking to Cosmos.
         </Heading>
         <Box textAlign={{ base: "center", md: "left" }}>
-          <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-            Join our Community
-          </Button>
+          <Link
+            href={"https://discord.com/invite/vyvp3scWnH"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+              Join our Community
+            </Button>
+          </Link>
         </Box>
       </Container>
     </Box>

@@ -36,12 +36,12 @@ const persisterValues: PersisterValuesCardInterface[] = [
   },
   {
     title: "Team",
-    description: "Win or Lose Together. Improve Together.",
+    description: "Winning together.",
     icon: "/icons/team-page/compounding.svg"
   },
   {
     title: "Vibes",
-    description: "Good vibes only.",
+    description: "Good vibes.",
     icon: "/icons/team-page/true-to-roots.svg"
   }
 ];

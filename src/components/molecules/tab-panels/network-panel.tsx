@@ -25,7 +25,11 @@ const NetworkPanel = () => {
               </Text>
             </Box>
             <Box justifySelf={"flex-end"}>
-              <Link href={"/"}>
+              <Link
+                href={"https://discord.com/invite/vyvp3scWnH"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant={"primary"}
                   color={"text.headingBlack"}

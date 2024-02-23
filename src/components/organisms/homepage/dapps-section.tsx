@@ -3,6 +3,7 @@ import { Container, Box, Stack, Heading, Text, Flex } from "@chakra-ui/react";
 import React from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
+import { numberFormat } from "@/utils/helpers";
 
 const getData = (pstakeInfo: any, dexterInfo: any) => {
   const dApps: DappCardInterface[] = [
@@ -14,11 +15,11 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       dAppStats: [
         {
           label: "Total Value Locked",
-          value: `${pstakeInfo.tvl}`
+          value: `$${numberFormat(Number(pstakeInfo.tvl), 3)}`
         },
         {
           label: "All Time Users",
-          value: `${pstakeInfo.allTimeUsers}`
+          value: `${numberFormat(Number(pstakeInfo.allTimeUsers), 3)}+`
         }
       ],
       supportingAssets: [
@@ -44,11 +45,11 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       dAppStats: [
         {
           label: "Total Value Locked",
-          value: `${dexterInfo.tvl}`
+          value: `$${numberFormat(Number(dexterInfo.tvl), 3)}`
         },
         {
           label: "Total Volume",
-          value: `${dexterInfo.total_volume}`
+          value: `$${numberFormat(Number(dexterInfo.total_volume), 3)}`
         }
       ],
       supportingAssets: [

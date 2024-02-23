@@ -116,7 +116,11 @@ const FeatureCards = () => {
             <Text color={"#FCFCFC"} fontSize={27} fontWeight={700}>
               Yields. TVL. Traction
             </Text>
-            <Link href={"/stats"} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={"https://defillama.com/chain/Persistence"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button rightIcon={<ArrowForwardIcon />} variant={"secondary"}>
                 View Stats
               </Button>

@@ -132,7 +132,7 @@ const menuItems = [
         description: "Lorem ipsum dolor sit Lorem ipsum",
         icon: "stake",
         iconType: "fill",
-        link: "https://audit.one",
+        link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true,
         comingSoon: false
       },
@@ -165,7 +165,7 @@ const menuItems = [
         description: "Lorem ipsum dolor sit Lorem ipsum",
         icon: "people",
         iconType: "fill",
-        link: "https://medium.com/persistence-blog",
+        link: "https://blog.persistence.one/",
         isExternal: true,
         comingSoon: false
       },
@@ -293,7 +293,11 @@ const Header = () => {
   }, []);
 
   return (
-    <Box id={"is-sticky"} className={"navbar-container"}>
+    <Box
+      id={"is-sticky"}
+      className={"navbar-container"}
+      transition={"all 0.3s"}
+    >
       <Container
         maxW={"1440px"}
         px={"70px"}

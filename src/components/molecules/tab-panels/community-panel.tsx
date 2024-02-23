@@ -20,13 +20,13 @@ const socialCardContents = [
   {
     title: "Discord",
     description: "Join our community",
-    link: "https://discord.com/invite/4YkRz6V",
+    link: "https://discord.com/invite/vyvp3scWnH",
     image: "/icons/discord.svg"
   },
   {
     title: "Blogs",
     description: "Learn about Persistence One",
-    link: "https://medium.com/persistence/",
+    link: "https://blog.persistence.one/",
     image: "/icons/medium.svg"
   },
   {

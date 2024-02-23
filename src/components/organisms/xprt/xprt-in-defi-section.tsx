@@ -22,7 +22,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       ],
       cta: {
         label: "Dexter",
-        link: "https://app.dexter.zone",
+        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
         bg: "buttons.ctaBlue"
       },
       description:
@@ -51,7 +51,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       ],
       cta: {
         label: "Osmosis",
-        link: "https://app.osmosis.zone",
+        link: "https://app.osmosis.zone/pool/1101",
         bg: "buttons.ctaPink"
       },
       description:
@@ -80,7 +80,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       ],
       cta: {
         label: "Dexter",
-        link: "https://app.dexter.zone",
+        link: "https://app.dexter.zone/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
         bg: "buttons.ctaBlue"
       },
       description:
@@ -109,7 +109,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       ],
       cta: {
         label: "Dexter",
-        link: "https://app.dexter.zone",
+        link: "https://app.dexter.zone/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
         bg: "buttons.ctaBlue"
       },
       description:

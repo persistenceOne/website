@@ -5,7 +5,8 @@ import {
   HStack,
   Container,
   Heading,
-  Text
+  Text,
+  Link
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
@@ -35,10 +36,22 @@ const GetXprtSection = () => {
               incentivization and transaction fees on Persistence One.
             </Text>
             <HStack gap={4}>
-              <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-                Stake XPRT
-              </Button>
-              <Button color={"#ffffff"}>Get XPRT</Button>
+              <Link
+                href={"https://wallet.keplr.app/chains/persistence"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                  Stake XPRT
+                </Button>
+              </Link>
+              <Link
+                href={"https://www.coingecko.com/en/coins/persistence"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button color={"#ffffff"}>Get XPRT</Button>
+              </Link>
             </HStack>
           </Box>
           <Image

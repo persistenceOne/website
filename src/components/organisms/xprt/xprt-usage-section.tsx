@@ -34,8 +34,8 @@ const xprtUsageCards = [
     image: "/images/xprt-page/transaction-fees.svg",
     cta: {
       text: "Start Staking",
-      link: "/xprt",
-      isExternal: false
+      link: "https://wallet.keplr.app/chains/persistence?tab=staking",
+      isExternal: true
     }
   },
   {
@@ -45,8 +45,8 @@ const xprtUsageCards = [
     image: "/images/xprt-page/transaction-fees.svg",
     cta: {
       text: "Participate",
-      link: "/xprt",
-      isExternal: false
+      link: "https://www.mintscan.io/persistence/proposals",
+      isExternal: true
     }
   },
   {
@@ -56,8 +56,8 @@ const xprtUsageCards = [
     image: "/images/xprt-page/transaction-fees.svg",
     cta: {
       text: "Explore",
-      link: "/xprt",
-      isExternal: false
+      link: "https://app.dexter.zone/pools",
+      isExternal: true
     }
   }
 ];
