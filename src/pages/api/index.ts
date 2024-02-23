@@ -56,11 +56,6 @@ export const getCosmosTVL = async (prefix: string) => {
 };
 
 export const fetchTokenPrices = async () => {
-  console.log(
-    process.env.BNB_CHAIN_RPC_URL,
-    "BNB_CHAIN_RPC_URL",
-    process.env.NEXT_PUBLIC_COINGECKO_API_KEY
-  );
   let data = {
     BNB: 0,
     ATOM: 0,
@@ -69,17 +64,8 @@ export const fetchTokenPrices = async () => {
     XPRT: 0
   };
   try {
-    const tokens = ["cosmos", "osmosis", "binancecoin", "dydx", "persistence"];
-    const pricesResponse = await axios.get(
-      `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
-        ","
-      )}&vs_currencies=usd`,
-      {
-        headers: {
-          "x-cg-pro-api-key": process.env.NEXT_PUBLIC_COINGECKO_API_KEY
-        }
-      }
-    );
+    const response = await fetch(`/api/prices`);
+    const pricesResponse = await response.json();
     data.BNB = Number(pricesResponse.data["binancecoin"].usd);
     data.ATOM = Number(pricesResponse.data["cosmos"].usd);
     data.OSMO = Number(pricesResponse.data["osmosis"].usd);
