@@ -6,22 +6,34 @@ import React from "react";
 
 const NetworkPanel = () => {
   return (
-    <Box as="section" maxW={"85%"}>
-      <Text mb={"30px"} mt={"24px"} color={"text.blackHigh"} fontSize={"20px"}>
+    <Box as="section" maxW={{ base: "100%", md: "85%" }}>
+      <Text
+        mb={"30px"}
+        mt={"24px"}
+        color={"text.blackHigh"}
+        fontSize={{ base: "16px", md: "20px" }}
+      >
         Contribute to the Persistence One network infrastructure by running a
         validator,
         <br /> relayer, or helping the devs do something.
       </Text>
       <Card borderRadius={"20px"} mt={8}>
-        <Flex justify={"space-between"}>
+        <Box
+          display={{ base: "block", md: "flex" }}
+          justifyContent={"space-between"}
+        >
           <VStack align={"flex-start"} p={8} justify={"space-between"}>
             <Box>
-              <Text fontSize={12} textAlign={"left"}>
+              <Text fontSize={"12px"} textAlign={"left"}>
                 Support Network
               </Text>
-              <Text fontWeight={700} fontSize={27} textAlign={"left"} mt={2}>
-                Contribute to the Persistence One network infrastructure by
-                running a validator, relayer, or helping the devs do something.
+              <Text
+                fontWeight={700}
+                fontSize={{ base: "22px", md: "32px" }}
+                textAlign={"left"}
+                mt={2}
+              >
+                Help the Persistence Network remain Secure and Persistent.
               </Text>
             </Box>
             <Box justifySelf={"flex-end"}>
@@ -48,7 +60,7 @@ const NetworkPanel = () => {
             width={436}
             height={357}
           />
-        </Flex>
+        </Box>
       </Card>
     </Box>
   );

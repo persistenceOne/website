@@ -38,9 +38,9 @@ const BecomePersisterSection = ({
           <Tabs align="center" colorScheme="black" size="md" pb={8}>
             <TabList border={"none"}>
               <Tab
-                px={8}
-                py={"18px"}
-                fontSize={"20px"}
+                px={{ base: "16px", md: 8 }}
+                py={{ base: "14px", md: "18px" }}
+                fontSize={{ base: "14px", md: "20px" }}
                 color={"text.blackFull"}
                 fontWeight={500}
                 borderBottom={"2px solid rgb(226, 232, 240)"}
@@ -53,9 +53,9 @@ const BecomePersisterSection = ({
                 Community
               </Tab>
               <Tab
-                px={8}
-                py={"18px"}
-                fontSize={"20px"}
+                px={{ base: "16px", md: 8 }}
+                py={{ base: "14px", md: "18px" }}
+                fontSize={{ base: "14px", md: "20px" }}
                 color={"text.blackFull"}
                 fontWeight={500}
                 borderBottom={"2px solid rgb(226, 232, 240)"}
@@ -68,9 +68,9 @@ const BecomePersisterSection = ({
                 Join the Team
               </Tab>
               <Tab
-                px={8}
-                py={"18px"}
-                fontSize={"20px"}
+                px={{ base: "16px", md: 8 }}
+                py={{ base: "14px", md: "18px" }}
+                fontSize={{ base: "14px", md: "20px" }}
                 color={"text.blackFull"}
                 fontWeight={500}
                 borderBottom={"2px solid rgb(226, 232, 240)"}
@@ -98,8 +98,18 @@ const BecomePersisterSection = ({
         </Box>
       </Container>
       {showEcosystemSection ? (
-        <VStack align={"center"} px={24} py={10} gap={8} bg={"#FEFEFE"}>
-          <Text fontWeight={600} fontSize={34} textAlign={"center"}>
+        <VStack
+          align={"center"}
+          px={{ base: "26px", md: "34px" }}
+          py={10}
+          gap={8}
+          bg={"#FEFEFE"}
+        >
+          <Text
+            fontWeight={600}
+            fontSize={{ base: "22px", md: "34px" }}
+            textAlign={"center"}
+          >
             Persistence One is expanding liquid staking, creating LSTfi yield
             opportunities, and bringing Restaking to Cosmos.
           </Text>

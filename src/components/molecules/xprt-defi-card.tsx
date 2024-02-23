@@ -1,6 +1,14 @@
 import { numberFormat } from "@/utils/helpers";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Box, Button, Card, HStack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Card,
+  HStack,
+  Text,
+  VStack,
+  Stack
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -38,7 +46,10 @@ const XPRTDefiCard = ({
         "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03)"
       }
     >
-      <HStack justify={"space-between"}>
+      <Stack
+        justify={"space-between"}
+        direction={{ base: "column", md: "row" }}
+      >
         <HStack>
           <HStack spacing="-2">
             {tokens.map((token, index) => {
@@ -54,18 +65,24 @@ const XPRTDefiCard = ({
               );
             })}
           </HStack>
-          <Text fontSize={32} fontWeight={700}>
+          <Text fontSize={{ base: "16px", md: "32px" }} fontWeight={700}>
             {tokens.map((token) => token.name).join("/")}
           </Text>
         </HStack>
-
         <Link href={cta.link} target="_blank" rel="noopener noreferrer">
-          <Button bg={cta.bg} color="white" rightIcon={<ArrowForwardIcon />}>
+          <Button
+            bg={cta.bg}
+            w={{ base: "100%", md: "auto" }}
+            color="white"
+            rightIcon={<ArrowForwardIcon />}
+          >
             {cta.label}
           </Button>
         </Link>
-      </HStack>
-      <Text mt={4}>{description}</Text>
+      </Stack>
+      <Text mt={4} fontSize={{ base: "14px", md: "16px" }}>
+        {description}
+      </Text>
       <HStack gap={8} mt={4}>
         {stats.map((stat) => {
           return (
@@ -73,7 +90,7 @@ const XPRTDefiCard = ({
               <Text color={"#423F40"} fontSize={16}>
                 {stat.label}
               </Text>
-              <Text fontSize={24} fontWeight={700}>
+              <Text fontSize={{ base: "18px", md: "24px" }} fontWeight={700}>
                 {stat.label === "TVL"
                   ? `$${numberFormat(Number(stat.value), 3)}`
                   : `${stat.value}%`}

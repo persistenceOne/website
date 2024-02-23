@@ -1,4 +1,5 @@
 import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
+import Icon from "@/components/molecules/Icon";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
   Box,
@@ -7,9 +8,12 @@ import {
   Heading,
   Text,
   VStack,
-  Container
+  Container,
+  useMediaQuery,
+  Flex
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef } from "react";
+import Slider from "react-slick";
 
 const resourcesList: BlogCardInterface[] = [
   {
@@ -32,13 +36,36 @@ const resourcesList: BlogCardInterface[] = [
     resourceType: "Podcast",
     resourceCTA: "Listen",
     resourceLink: "/"
+  },
+  {
+    id: 3,
+    resourceImage: "/images/resources/resource-3.png",
+    resourceType: "Podcast",
+    resourceCTA: "Listen",
+    resourceLink: "/"
+  },
+  {
+    id: 4,
+    resourceImage: "/images/resources/resource-3.png",
+    resourceType: "Podcast",
+    resourceCTA: "Listen",
+    resourceLink: "/"
   }
 ];
 
 const BlogSection = () => {
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
+  const [isLandScape] = useMediaQuery("(max-width: 990px)");
+  let sliderRef: any = useRef(null);
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
   return (
-    <Container maxW={"1340px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
-      <Box px={16}>
+    <Container maxW={"1200px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
+      <Box>
         <VStack align={"flex-start"} mb={"60px"}>
           <Heading
             color="text.headingSemiBlack"
@@ -64,12 +91,54 @@ const BlogSection = () => {
             Explore All
           </Button>
         </VStack>
-        <HStack spacing={6}>
+        <Slider
+          {...{
+            dots: false,
+            arrows: false,
+            infinite: false,
+            slidesToShow: isMobile ? 1 : 3,
+            slidesToScroll: 1
+          }}
+          ref={(slider) => {
+            sliderRef = slider;
+          }}
+        >
           {resourcesList.map((resource, index) => (
             <BlogCard key={resource.id} {...resource} />
           ))}
-        </HStack>
+        </Slider>
       </Box>
+      <Flex mt={6} className={"upgrade-slider-arrow"} px={"25px"}>
+        <Flex
+          align={"center"}
+          justify={"center"}
+          cursor={"pointer"}
+          w={"24px"}
+          h={"24px"}
+          bg={"#423f40d9"}
+          borderRadius={"100%"}
+          onClick={previous}
+          mr={5}
+        >
+          <Box w={"12px"} h={"12px"} onClick={previous}>
+            <Icon icon="left_chevron" />
+          </Box>
+        </Flex>
+        <Flex
+          align={"center"}
+          justify={"center"}
+          w={"24px"}
+          h={"24px"}
+          cursor={"pointer"}
+          onClick={next}
+          borderRadius={"100%"}
+          bg={"#423f40d9"}
+        >
+          <Box w={"12px"} h={"12px"} onClick={previous}>
+            <Icon icon="right_chevron" />
+          </Box>
+        </Flex>
+      </Flex>
     </Container>
   );
 };

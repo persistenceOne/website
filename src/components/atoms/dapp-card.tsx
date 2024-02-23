@@ -9,7 +9,9 @@ import {
   Divider,
   HStack,
   Heading,
-  Text
+  Text,
+  Stack,
+  useMediaQuery
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
@@ -49,13 +51,28 @@ const DappCard = ({
   website,
   button
 }: DappCardInterface) => {
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
   return (
-    <Card px={"44px"} py={"38px"} w={"full"} borderRadius={"20px"}>
+    <Card
+      px={{ base: "24px", md: "44px" }}
+      py={{ base: "26px", md: "38px" }}
+      w={"full"}
+      borderRadius={"20px"}
+    >
       <CardHeader p={""}>
-        <HStack justify={"space-between"}>
+        <Stack justify={"space-between"} direction={"row"}>
           <Box>
-            <Image src={dAppLogo} alt="" width={56} height={56} />
-            <Heading fontWeight={600} fontSize={"32px"} mt={"16px"}>
+            <Image
+              src={dAppLogo}
+              alt=""
+              width={isMobile ? 28 : 56}
+              height={isMobile ? 28 : 56}
+            />
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: "16px", md: "32px" }}
+              mt={"16px"}
+            >
               {dAppName}
             </Heading>
           </Box>
@@ -71,12 +88,12 @@ const DappCard = ({
               {website.linkText}
             </Button>
           </Link>
-        </HStack>
+        </Stack>
         <Divider my={5} />
       </CardHeader>
       <CardBody p={"0"}>
         <Text
-          fontSize={"20px"}
+          fontSize={{ base: "16px", md: "20px" }}
           color={"text.blackHigh"}
           lineHeight={"30px"}
           pb={"20px"}
@@ -89,7 +106,7 @@ const DappCard = ({
               <Text fontSize={"14px"} color={"#423F40B2"}>
                 {stat.label}
               </Text>
-              <Text fontWeight={700} fontSize={"24px"}>
+              <Text fontWeight={700} fontSize={{ base: "18px", md: "24px" }}>
                 {stat.value}
               </Text>
             </Box>
@@ -104,13 +121,13 @@ const DappCard = ({
               key={asset.asset}
               src={asset.assetIcon}
               alt={asset.asset}
-              width={48}
-              height={48}
+              width={isMobile ? 30 : 48}
+              height={isMobile ? 30 : 48}
             />
           ))}
         </HStack>
       </CardBody>
-      <CardFooter px={"0"} pb={"0"} pt={"36px"}>
+      <CardFooter px={"0"} pb={"0"} pt={{ base: "20px", md: "36px" }}>
         <Link href={button.link} target="_blank" rel="noopener noreferrer">
           <Button
             bg={button.background}

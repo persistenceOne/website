@@ -8,7 +8,9 @@ import {
   Heading,
   Text,
   VStack,
-  Container
+  Container,
+  Stack,
+  SimpleGrid
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -142,9 +144,22 @@ const footerLinks = [
 const Footer = () => {
   return (
     <Box as={"footer"} bg={"#252424"}>
-      <Container maxW={"1300px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
-        <Flex justify={"space-between"} align={"flex-start"} color={"#ffffff"}>
-          <VStack align={"flex-start"}>
+      <Container
+        maxW={"1300px"}
+        px={{ base: "12px", md: "30px" }}
+        py={{ base: "30px", md: "60px" }}
+      >
+        <Flex
+          display={{ base: "block", md: "flex" }}
+          justify={"space-between"}
+          align={"flex-start"}
+          color={"#ffffff"}
+        >
+          <VStack
+            align={"flex-start"}
+            mb={{ base: "20px", md: "0" }}
+            w={{ base: "100%", md: "30%" }}
+          >
             <Image
               src={"images/persistence-logo.svg"}
               width={186}
@@ -170,7 +185,7 @@ const Footer = () => {
                 Download Media Kit
               </Button>
             </Link>
-            <HStack gap={4} mt={4}>
+            <HStack gap={4} mt={4} display={{ base: "none", md: "flex" }}>
               {footerSocialLinks.map((link) => (
                 <Link href={link.link} key={link.name}>
                   <Box
@@ -195,10 +210,23 @@ const Footer = () => {
               ))}
             </HStack>
           </VStack>
-          <HStack gap={16} align={"flex-start"}>
+          {/*<Stack*/}
+          {/*  gap={16}*/}
+          {/*  align={"flex-start"}*/}
+          {/*  direction={{ base: "column", md: "row" }}*/}
+          {/*>*/}
+          <SimpleGrid
+            flex={1}
+            columns={2}
+            gap={4}
+            justifyContent={"space-between"}
+            display={{ base: "grid", md: "flex" }}
+          >
             {footerLinks.map((link) => (
               <VStack key={link.title} align={"flex-start"} gap={4}>
-                <Heading variant={"footerHeading"}>{link.title}</Heading>
+                <Heading variant={"footerHeading"} fontSize={"20px"}>
+                  {link.title}
+                </Heading>
                 {link.links.map((item) => (
                   <Link
                     href={item.link}
@@ -209,7 +237,7 @@ const Footer = () => {
                       variant={"link"}
                       key={item.title}
                       color={"#ffffff"}
-                      fontSize={16}
+                      fontSize={{ base: "14px", md: "16px" }}
                       fontWeight={400}
                       opacity={0.69}
                       rightIcon={
@@ -222,9 +250,38 @@ const Footer = () => {
                 ))}
               </VStack>
             ))}
-          </HStack>
+          </SimpleGrid>
         </Flex>
-        <Box>
+        <HStack
+          gap={4}
+          mt={4}
+          display={{ base: "flex", md: "none" }}
+          justify={"center"}
+        >
+          {footerSocialLinks.map((link) => (
+            <Link href={link.link} key={link.name}>
+              <Box
+                w={"24px"}
+                h={"24px"}
+                borderRadius={"100%"}
+                className={"icon-box"}
+                bg={"#9C9C9C"}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <Icon
+                  icon={link.icon}
+                  color="white"
+                  viewClass={`footer-icon ${link.iconType}`}
+                />
+              </Box>
+            </Link>
+          ))}
+        </HStack>
+        <Box display={{ base: "none", md: "block" }}>
           <Divider mt={"20px"} borderColor={"#ECECEC33"} />
           <HStack justify={"space-between"} align={"center"} mt={4}>
             <Text fontSize={14} fontWeight={400} color={"#ffffff"}>

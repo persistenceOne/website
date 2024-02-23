@@ -6,7 +6,7 @@ import React from "react";
 const Overview = () => {
   return (
     <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
-      <Box px={16}>
+      <Box>
         <Heading
           mb={"4px"}
           color={"text.blackMid"}
