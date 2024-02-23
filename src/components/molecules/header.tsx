@@ -131,7 +131,7 @@ const menuItems = [
         description: "Lorem ipsum dolor sit Lorem ipsum",
         icon: "stake",
         iconType: "fill",
-        link: "https://audit.one",
+        link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true,
         comingSoon: false
       },

@@ -107,7 +107,7 @@ const footerLinks = [
       },
       {
         title: "Stake XPRT",
-        link: "https://audit.one",
+        link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true
       }
     ]

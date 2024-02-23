@@ -21,6 +21,7 @@ import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import React from "react";
 import Image from "next/image";
 import HomePageStats from "@/components/molecules/page-stats";
+import Link from "next/link";
 
 const CommunitySection = () => {
   return (
@@ -49,9 +50,15 @@ const CommunitySection = () => {
           <br /> and enduring partnerships under one roof.
         </Heading>
         <Box textAlign={{ base: "center", md: "left" }}>
-          <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-            Join our Community
-          </Button>
+          <Link
+            href={"https://discord.com/invite/vyvp3scWnH"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+              Join our Community
+            </Button>
+          </Link>
         </Box>
       </Container>
     </Box>
