@@ -55,7 +55,7 @@ const GetXprtSection = () => {
             </HStack>
           </Box>
           <Image
-            src={"/images/fuelling-ecosystem-image.svg"}
+            src={"/images/p_fuel.svg"}
             alt="Persistence"
             width={450}
             height={450}

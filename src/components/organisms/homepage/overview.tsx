@@ -13,15 +13,15 @@ const Overview = () => {
           textAlign={"center"}
           fontSize={{ base: "26px", md: "58px" }}
         >
-          Core Features
+          Why Persistence One?
         </Heading>
         <Text
           color={"text.blackMid"}
           textAlign={"center"}
           fontSize={{ base: "18px", md: "22px" }}
         >
-          Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet
-          consectetur.
+          Our vision, technical expertise, and values shape a thriving Liquid
+          Staking and Restaking economy.
         </Text>
         <FeatureCards />
       </Box>

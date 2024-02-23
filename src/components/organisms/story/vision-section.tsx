@@ -14,7 +14,7 @@ import Image from "next/image";
 
 const list = [
   {
-    imgUrl: "/images/tech-page/note-img0.svg",
+    imgUrl: "/images/story-page/locker.svg",
     title: "Proof-of-Stake will become the norm",
     content: [
       "The world will be full of secure and interoperable PoS blockchains with flourishing DeFi, Liquid Staking, and Restaking. ",
@@ -22,7 +22,7 @@ const list = [
     ]
   },
   {
-    imgUrl: "/images/tech-page/note-img0.svg",
+    imgUrl: "/images/story-page/roads.svg",
     title: "All roads originate from Cosmos",
     content: [
       "Sovereignty and modularity over monolithic chains.",
@@ -30,7 +30,7 @@ const list = [
     ]
   },
   {
-    imgUrl: "/images/tech-page/note-img0.svg",
+    imgUrl: "/images/story-page/pos.svg",
     title: "Native PoS tokens will exist as liquid staked",
     content: [
       "Liquid Staked Tokens (LSTs) will become the default medium of exchange and utility in DeFi."
@@ -60,7 +60,7 @@ const VisionSection = () => {
               key={index}
               boxShadow={"lg"}
             >
-              <Box mb={4}>
+              <Box mb={4} w={"60%"} mx={"auto"}>
                 <Image src={item.imgUrl} alt="" width={290} height={240} />
               </Box>
               <Heading

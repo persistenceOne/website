@@ -57,9 +57,9 @@ const HeroSection = () => {
         pos={"relative"}
         mb={{ base: "40px", md: "100px" }}
       >
-        <VStack mt={"100px"} align={"stretch"}>
+        <VStack mt={"100px"} w={"60%"} align={"stretch"}>
           <Heading
-            fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+            fontSize={{ base: "26px", md: "40px", lg: "50px" }}
             variant={"main"}
           >
             Powering Liquid Staking <br /> and Restaking with XPRT
@@ -89,11 +89,13 @@ const HeroSection = () => {
         </VStack>
         <Box
           pos={"absolute"}
+          w={"40%"}
+          top={"80px"}
           right={"0"}
           display={{ base: "none", md: "block" }}
         >
           <Image
-            src="/images/xprt-page/persistence-coin.svg"
+            src="/images/xprt-page/xprt_hero.svg"
             alt="Persistence Coin"
             width={400}
             height={400}

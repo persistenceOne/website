@@ -21,7 +21,7 @@ interface ListProps {
 
 const list: ListProps[] = [
   {
-    imgUrl: "/images/tech-page/note-img0.svg",
+    imgUrl: "/images/story-page/clock.svg",
     title: "Proof-of-Stake will become the norm",
     content: {
       item0: (
@@ -45,7 +45,7 @@ const list: ListProps[] = [
     }
   },
   {
-    imgUrl: "/images/tech-page/note-img0.svg",
+    imgUrl: "/images/story-page/block.svg",
     title: "Building blocks of LSTfi ",
     content: {
       item0: (
@@ -68,7 +68,7 @@ const list: ListProps[] = [
     }
   },
   {
-    imgUrl: "/images/tech-page/note-img0.svg",
+    imgUrl: "/images/liquidity.svg",
     title: "Liquid Staking Economy ",
     content: {
       item0: (

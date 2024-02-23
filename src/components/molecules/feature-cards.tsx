@@ -88,7 +88,7 @@ const FeatureCards = () => {
             category="People"
             title="Humility. Integrity. Patience. Persistence."
             description="Understand our core values and learn how to become a Persister and contribute."
-            image="/images/tech-page/note-img0.svg"
+            image="/images/cylinders.svg"
             cta={{
               link: "/people",
               linkText: "Explore People"
@@ -139,7 +139,7 @@ const FeatureCards = () => {
           category="Roadmap"
           title="Building in Cosmos since 2019."
           description="Skim through the biggest milestones of the past 4 years of building out our vision and what’s next."
-          image="/images/tech-page/note-img0.svg"
+          image="/images/tech-page/note-img1.svg"
           cta={{
             link: "/story",
             linkText: ""
@@ -161,7 +161,7 @@ const FeatureCards = () => {
           category=""
           title=""
           description=""
-          image="/images/ecosystem.svg"
+          image="/images/liquidity.svg"
           cta={{
             link: "/xprt",
             linkText: ""

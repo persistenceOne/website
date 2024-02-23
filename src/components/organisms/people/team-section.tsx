@@ -1,7 +1,7 @@
 import TeamMemberCard, {
   TeamMemberCardInterface
 } from "@/components/atoms/team-member-card";
-import { Flex, Heading, SimpleGrid, VStack } from "@chakra-ui/react";
+import { Flex, Heading, Container, Box } from "@chakra-ui/react";
 import React from "react";
 
 const teamMembers: TeamMemberCardInterface[] = [
@@ -334,11 +334,17 @@ const teamMembers: TeamMemberCardInterface[] = [
 
 const TeamSection = () => {
   return (
-    <VStack align={"center"} py={12} gap={16}>
-      <Heading variant={"main"} fontSize={58} color={"text.headingSemiBlack"}>
+    <Container maxW={"1440px"} px={{ base: "20px", md: "50px" }}>
+      <Heading
+        variant={"main"}
+        textAlign={"center"}
+        fontSize={{ base: "26px", md: "58px" }}
+        mb={{ base: "32px", md: "60px" }}
+        color={"text.headingSemiBlack"}
+      >
         Meet Fellow Persisters
       </Heading>
-      <Flex justify={"center"} flexWrap={"wrap"} rowGap={8} w={"1140px"}>
+      <Flex justify={"center"} flexWrap={"wrap"} rowGap={10} w={"100%"}>
         {teamMembers.map((member) => (
           <TeamMemberCard
             key={member.name}
@@ -349,7 +355,7 @@ const TeamSection = () => {
           />
         ))}
       </Flex>
-    </VStack>
+    </Container>
   );
 };
 

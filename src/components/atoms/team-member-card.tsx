@@ -22,7 +22,13 @@ const TeamMemberCard = ({
   socialLinks
 }: TeamMemberCardInterface) => {
   return (
-    <VStack flexBasis={"calc(100% / 4 )"}>
+    <VStack
+      flexBasis={{
+        base: "calc(100% / 2 )",
+        md: "calc(100% / 3 )",
+        lg: "calc(100% / 5 )"
+      }}
+    >
       <Box style={{ width: "200px", height: "200px", position: "relative" }}>
         <Image
           src={image}
