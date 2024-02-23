@@ -9,15 +9,11 @@ import {
   Divider,
   HStack,
   Heading,
-  Stat,
-  StatLabel,
-  StatNumber,
   Text
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
-import { title } from "process";
 import React from "react";
+import { numberFormat } from "@/utils/helpers";
 
 export interface DappCardInterface {
   dAppName: string;
@@ -91,7 +87,7 @@ const DappCard = ({
                 {stat.label}
               </Text>
               <Text fontWeight={700} fontSize={"24px"}>
-                {stat.value}
+                ${numberFormat(Number(stat.value), 3)}
               </Text>
             </Box>
           ))}

@@ -1,0 +1,136 @@
+import { StateCreator } from "zustand";
+
+export interface ValidatorInfo {
+  identity: string;
+  name: string;
+  weight: string;
+  delegationAmount: string;
+  targetDelegation: string;
+}
+
+export interface ValidatorsInfo {
+  osmo: ValidatorInfo[];
+  dydx: ValidatorInfo[];
+}
+
+export interface InitialDataSliceState {
+  pstakInfo: {
+    tvl: number;
+    allTimeUsers: number;
+  };
+  dexterInfo: {
+    total_volume: number;
+    tvl: number;
+  };
+  tvl: number;
+  ibcVolume: number;
+  transactionCost: number;
+  marketCap: number;
+  blocks: number;
+  ibcConnections: number;
+  audits: number;
+  stakedXPRT: number;
+  inflationDate: string;
+  tokenPrices: {
+    BNB: number;
+    ATOM: number;
+    OSMO: number;
+    DYDX: number;
+    XPRT: number;
+  };
+}
+
+export interface InitialDataSliceActions {
+  setPstakeTvl: (value: any) => void;
+  setPstakeUsers: (value: any) => void;
+  setDexterTVl: (value: any) => void;
+  setDexterTotalVolume: (value: any) => void;
+  setTokenPrices: (value: any) => void;
+  setPersistenceTvl: (value: any) => void;
+  setPersistenceMarketCap: (value: any) => void;
+  setPersistenceChainBlock: (value: any) => void;
+  setStakedXprt: (value: any) => void;
+}
+
+const initialState: InitialDataSliceState = {
+  pstakInfo: {
+    tvl: 0,
+    allTimeUsers: 56000
+  },
+  dexterInfo: {
+    total_volume: 0,
+    tvl: 0
+  },
+  tvl: 0,
+  ibcVolume: 0,
+  transactionCost: 0,
+  marketCap: 0,
+  blocks: 0,
+  ibcConnections: 0,
+  audits: 0,
+  stakedXPRT: 0,
+  inflationDate: "April 2025",
+  tokenPrices: {
+    BNB: 0,
+    ATOM: 0,
+    OSMO: 0,
+    DYDX: 0,
+    XPRT: 0
+  }
+};
+
+export type InitialDataSlice = InitialDataSliceState & InitialDataSliceActions;
+
+export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
+  set
+) => ({
+  ...initialState,
+  setPstakeTvl: (value) =>
+    set((state) => ({
+      pstakInfo: {
+        ...state.pstakInfo,
+        tvl: value
+      }
+    })),
+  setPstakeUsers: (value) =>
+    set((state) => ({
+      pstakInfo: {
+        ...state.pstakInfo,
+        allTimeUsers: value
+      }
+    })),
+  setDexterTVl: (value) =>
+    set((state) => ({
+      dexterInfo: {
+        ...state.dexterInfo,
+        tvl: value
+      }
+    })),
+  setDexterTotalVolume: (value) =>
+    set((state) => ({
+      dexterInfo: {
+        ...state.dexterInfo,
+        total_volume: value
+      }
+    })),
+  setTokenPrices: (value) =>
+    set((state) => ({
+      tokenPrices: value
+    })),
+  setPersistenceTvl: (value) =>
+    set((state) => ({
+      tvl: value
+    })),
+  setPersistenceMarketCap: (value) =>
+    set((state) => ({
+      marketCap: value
+    })),
+  setPersistenceChainBlock: (value) =>
+    set((state) => ({
+      blocks: value
+    })),
+  setStakedXprt: (value) =>
+    set((state) => ({
+      stakedXPRT: value
+    }))
+});

@@ -1,3 +1,21 @@
+import { ethers } from "ethers";
+import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
+import { Decimal } from "@cosmjs/math";
+
+export const SPEEDY_NODE_URL = process.env.NEXT_PUBLIC_BNB_CHAIN_RPC_URL;
+
+export const APP_ETHERS_PROVIDER = new ethers.providers.JsonRpcProvider(
+  SPEEDY_NODE_URL
+);
+
+export const SDK_ENV =
+  process.env.NEXT_PUBLIC_ENVIRONMENT === "Mainnet" ? 0 : 1;
+
+export const sdkInstance = StkBNBWebSDK.getInstance({
+  signerOrProvider: APP_ETHERS_PROVIDER,
+  env: SDK_ENV
+});
+
 export const numberFormat = (number: any, decPlaces: number) => {
   // 2 decimal places => 100, 3 => 1000, etc
   decPlaces = Math.pow(10, decPlaces);
@@ -29,4 +47,23 @@ export const numberFormat = (number: any, decPlaces: number) => {
   }
 
   return number;
+};
+
+export const decimalize = (valueString: any, decimals = 6) => {
+  console.log(valueString, "valueString");
+  let truncate;
+  if (typeof valueString === "string") {
+    truncate = Number(valueString);
+  } else {
+    truncate = valueString;
+  }
+  console.log(valueString, "valueString");
+  return Decimal.fromAtomics(
+    Math.trunc(truncate).toString(),
+    decimals
+  ).toString();
+};
+
+export const decimalizeRaw = (valueString: any, decimals = 6) => {
+  return Decimal.fromAtomics(valueString, decimals).toString();
 };
