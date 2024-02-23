@@ -87,7 +87,7 @@ const DappCard = ({
                 {stat.label}
               </Text>
               <Text fontWeight={700} fontSize={"24px"}>
-                ${numberFormat(Number(stat.value), 3)}
+                {stat.value}
               </Text>
             </Box>
           ))}

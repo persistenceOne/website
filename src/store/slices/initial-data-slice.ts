@@ -70,7 +70,7 @@ export interface InitialDataSliceActions {
 const initialState: InitialDataSliceState = {
   pstakInfo: {
     tvl: 0,
-    allTimeUsers: 56000
+    allTimeUsers: 5000
   },
   dexterInfo: {
     total_volume: 0,
