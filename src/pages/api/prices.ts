@@ -11,13 +11,14 @@ export default async function handler(
         ","
       )}&vs_currencies=usd`,
       {
-        method: "GET",
         headers: {
-          "x-cg-pro-api-key": process.env.COINGECKO_API_KEY!
+          "x-cg-pro-api-key": process.env.NEXT_PUBLIC_COINGECKO_API_KEY!
         }
       }
     );
-    res.status(200).json({ data: data, error: null });
+    // const list = await data.json();
+    console.log(data, "data-fetch");
+    res.status(200).json({ data: await data.json(), error: null });
   } catch (e) {
     res.status(500).json({ data: null, error: e });
   }
