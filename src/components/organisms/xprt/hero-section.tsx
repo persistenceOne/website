@@ -10,27 +10,44 @@ import {
   VStack
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import PageStats from "@/components/molecules/page-stats";
 import Link from "next/link";
 
-const xprtPageStats = [
-  {
-    statValue: "$70M",
-    statLabel: "Market Cap"
-  },
-  {
-    statValue: "April 2025",
-    statLabel: "Next XPRT Inflation Halving"
-  },
-  {
-    statValue: "77%",
-    statLabel: "Staked XPRT (total supply)"
-  }
-];
+import { getBondedTokens, getMarketCap } from "@/pages/api";
+import { useAppStore } from "@/store/store";
+import { shallow } from "zustand/shallow";
+import { numberFormat } from "@/utils/helpers";
 
 const HeroSection = () => {
+  const [
+    setPersistenceMarketCap,
+    marketCap,
+    stakedXPRT,
+    inflationDate,
+    setStakedXprt
+  ] = useAppStore(
+    (state) => [
+      state.setPersistenceMarketCap,
+      state.marketCap,
+      state.stakedXPRT,
+      state.inflationDate,
+      state.setStakedXprt
+    ],
+    shallow
+  );
+
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await getMarketCap();
+      const responseTwo = await getBondedTokens();
+      console.log("getMarketCap", response);
+      setStakedXprt(responseTwo);
+      setPersistenceMarketCap(response);
+    };
+    fetch();
+  }, []);
   return (
     <Container maxW={"1440px"} px={"40px"}>
       <Spacer h={20} />
@@ -76,7 +93,24 @@ const HeroSection = () => {
           />
         </Box>
       </Flex>
-      <PageStats stats={xprtPageStats} />
+      <PageStats
+        stats={[
+          {
+            statValue: `$${
+              Number(marketCap) > 0 ? numberFormat(marketCap, 3) : 0
+            }`,
+            statLabel: "Market Cap"
+          },
+          {
+            statValue: `${inflationDate}`,
+            statLabel: "Next XPRT Inflation Halving"
+          },
+          {
+            statValue: `${stakedXPRT}%`,
+            statLabel: "Staked XPRT (total supply)"
+          }
+        ]}
+      />
     </Container>
   );
 };

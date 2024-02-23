@@ -14,6 +14,10 @@ export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const OSMO_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=15";
 export const OSMO_TVL_URL = "https://api-osmosis.imperator.co/pools/v2/15";
+export const MarketCap_API =
+  "https://api.coingecko.com/api/v3/coins/persistence";
+export const LATEST_BLOCK_HEIGHT_URL =
+  "https://rest.core.persistence.one/cosmos/base/tendermint/v1beta1/blocks/latest";
 
 export const fetchChainTVL = async () => {
   try {
@@ -255,5 +259,57 @@ export const fetchOsmosisPoolInfo = async () => {
   } catch (e) {
     console.log(e, "error in fetchOsmoPool2Info");
     return osmoInfo;
+  }
+};
+
+export const getMarketCap = async () => {
+  try {
+    const res = await axios.get(MarketCap_API);
+    if (res && res.data) {
+      return Number(res.data.market_data?.market_cap.usd);
+    }
+    return 0;
+  } catch (e) {
+    return 0;
+  }
+};
+
+export const getBlockNumber = async () => {
+  try {
+    const res = await axios.get(LATEST_BLOCK_HEIGHT_URL);
+    if (res && res.data) {
+      console.log(res, "res-block-height");
+      return res!.data!.block!.header.height;
+    }
+    return 0;
+  } catch (e) {
+    return 0;
+  }
+};
+
+export const getBondedTokens = async () => {
+  try {
+    const responses = await axios.all([
+      axios.get(
+        "https://rest.core.persistence.one/cosmos/staking/v1beta1/pool"
+      ),
+      axios.get(
+        "https://rest.core.persistence.one/cosmos/bank/v1beta1/supply/by_denom?denom=uxprt"
+      )
+    ]);
+    const responseOne = responses[0];
+    const responseTwo = responses[1];
+    let bondedTokens = 0;
+    let supply = 0;
+    if (responseOne && responseOne.data) {
+      bondedTokens = responseOne.data.pool.bonded_tokens;
+    }
+    if (responseTwo && responseTwo.data) {
+      supply = responseTwo.data.amount.amount;
+    }
+    const total = (bondedTokens * 100) / supply;
+    return total.toFixed(2);
+  } catch (e) {
+    return 0;
   }
 };

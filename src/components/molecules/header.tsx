@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import Icon from "./Icon";
 import {
+  fetchChainTVL,
   fetchDexterInfo,
   fetchDexterPoolInfo,
   fetchOsmosisPoolInfo,
@@ -231,7 +232,8 @@ const Header = () => {
     setDexterTVl,
     setDexterTotalVolume,
     setDexterPoolInfo,
-    setOsmoPoolInfo
+    setOsmoPoolInfo,
+    setPersistenceTvl
   ] = useAppStore(
     (state) => [
       state.setTokenPrices,
@@ -239,10 +241,19 @@ const Header = () => {
       state.setDexterTVl,
       state.setDexterTotalVolume,
       state.setDexterPoolInfo,
-      state.setOsmoPoolInfo
+      state.setOsmoPoolInfo,
+      state.setPersistenceTvl
     ],
     shallow
   );
+
+  useEffect(() => {
+    const fetch = async () => {
+      const chainTvl = await fetchChainTVL();
+      setPersistenceTvl(chainTvl);
+    };
+    fetch();
+  }, []);
 
   //fetching pstake info
   useEffect(() => {
