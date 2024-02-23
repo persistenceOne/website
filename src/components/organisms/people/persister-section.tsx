@@ -36,7 +36,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
   },
   {
     title: "Team",
-    description: "Winning together",
+    description: "Winning together.",
     icon: "/icons/team-page/compounding.svg"
   },
   {

@@ -293,7 +293,11 @@ const Header = () => {
   }, []);
 
   return (
-    <Box id={"is-sticky"} className={"navbar-container"}>
+    <Box
+      id={"is-sticky"}
+      className={"navbar-container"}
+      transition={"all 0.3s"}
+    >
       <Container
         maxW={"1440px"}
         px={"70px"}
