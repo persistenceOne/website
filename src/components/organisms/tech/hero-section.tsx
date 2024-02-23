@@ -1,42 +1,48 @@
 import {
   Box,
-  Button,
   Flex,
   HStack,
   Heading,
   Spacer,
-  Stat,
-  StatArrow,
-  StatGroup,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
   Text,
   VStack,
   Divider,
   Container
 } from "@chakra-ui/react";
-import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
-import React from "react";
-import Image from "next/image";
-import HomePageStats from "@/components/molecules/page-stats";
+import React, { useEffect, useState } from "react";
+import { getBlockNumber } from "@/pages/api";
 
-const homePagesStats = [
-  {
-    statValue: "232,947",
-    statLabel: "Blocks"
-  },
-  {
-    statValue: "45+",
-    statLabel: "IBC Connection"
-  },
-  {
-    statValue: "5+",
-    statLabel: "Audits"
-  }
-];
+const getList = (blockNumber: number) => {
+  const homePagesStats = [
+    {
+      statValue: Number(blockNumber).toLocaleString(),
+      statLabel: "Blocks"
+    },
+    {
+      statValue: "45+",
+      statLabel: "IBC Connection"
+    },
+    {
+      statValue: "5+",
+      statLabel: "Audits"
+    }
+  ];
+  return homePagesStats;
+};
 
 const HeroSection = () => {
+  const [blockNumber, setBlockNumber] = useState(0);
+
+  // fetch data on every 3 sec
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      const response = await getBlockNumber();
+      setBlockNumber(response);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const homePagesStats = getList(blockNumber);
   return (
     <Box
       backgroundImage="url('/images/tech-page/tech-hero-bg.svg')"

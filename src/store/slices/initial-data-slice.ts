@@ -81,8 +81,8 @@ const initialState: InitialDataSliceState = {
   transactionCost: 0.23947,
   marketCap: 0,
   blocks: 0,
-  ibcConnections: 0,
-  audits: 0,
+  ibcConnections: 45,
+  audits: 5,
   stakedXPRT: 77,
   inflationDate: "April 2025",
   tokenPrices: {
