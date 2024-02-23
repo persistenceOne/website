@@ -16,6 +16,15 @@ import {
   Spacer
 } from "@chakra-ui/react";
 import Icon from "./Icon";
+import {
+  fetchDexterInfo,
+  fetchTokenPrices,
+  getBnbTVL,
+  getCosmosTVL
+} from "@/pages/api";
+import { useAppStore } from "@/store/store";
+import { shallow } from "zustand/shallow";
+import { decimalize, decimalizeRaw } from "@/utils/helpers";
 
 const menuItems = [
   {
@@ -213,6 +222,51 @@ const Header = () => {
       topbar.classList.remove("nav-bar");
     }
   };
+
+  const [setTokenPrices, setPstakeTvl, setDexterTVl, setDexterTotalVolume] =
+    useAppStore(
+      (state) => [
+        state.setTokenPrices,
+        state.setPstakeTvl,
+        state.setDexterTVl,
+        state.setDexterTotalVolume
+      ],
+      shallow
+    );
+
+  //fetching pstake info
+  useEffect(() => {
+    const fetch = async () => {
+      const tokenPrices = await fetchTokenPrices();
+      const [cosmosTvlResponse, osmoTvlResponse, dydxTvlResponse, bnbTvl] =
+        await Promise.all([
+          getCosmosTVL("cosmos"),
+          getCosmosTVL("osmo"),
+          getCosmosTVL("dydx"),
+          getBnbTVL()
+        ]);
+      const pstkeTvl =
+        Number(decimalize(cosmosTvlResponse)) * tokenPrices.ATOM +
+        bnbTvl * tokenPrices.BNB +
+        Number(decimalize(osmoTvlResponse)) * tokenPrices.OSMO +
+        Number(decimalizeRaw(dydxTvlResponse, 18)) * tokenPrices.DYDX;
+      setPstakeTvl(pstkeTvl);
+      setTokenPrices(tokenPrices);
+    };
+    fetch();
+  }, []);
+
+  //fetching dexter info
+  useEffect(() => {
+    const fetch = async () => {
+      const resp = await fetchDexterInfo();
+      setDexterTVl(resp.tvl);
+      setDexterTotalVolume(resp.volume);
+      console.log(resp, "fetchDexterInfo");
+    };
+    fetch();
+  }, []);
+
   return (
     <Box id={"is-sticky"} className={"navbar-container"}>
       <Container
