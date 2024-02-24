@@ -84,13 +84,13 @@ const BecomePersisterSection = ({
               </Tab>
             </TabList>
             <TabPanels>
-              <TabPanel>
+              <TabPanel h={"500px"}>
                 <CommunityPanel />
               </TabPanel>
-              <TabPanel>
+              <TabPanel h={"500px"}>
                 <JoinTeamPanel />
               </TabPanel>
-              <TabPanel>
+              <TabPanel h={"500px"}>
                 <NetworkPanel />
               </TabPanel>
             </TabPanels>

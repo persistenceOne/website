@@ -23,7 +23,7 @@ const GetXprtSection = () => {
               lineHeight={{ base: "38px", md: "72px" }}
               mb={4}
             >
-              Fuelling the <br /> Persistence Ecosystem
+              Fuelling the <br /> Persistence One Ecosystem
             </Heading>
             <Text
               color="text.whiteHigh"

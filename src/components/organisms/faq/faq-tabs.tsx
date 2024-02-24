@@ -6,10 +6,14 @@ import {
   Tab,
   TabPanel,
   TabPanels,
-  Container
+  Container,
+  Box,
+  Button,
+  VStack
 } from "@chakra-ui/react";
 import React from "react";
 import AccordionList from "@/components/organisms/faq/accordion-list";
+import Link from "next/link";
 
 const tabList = [
   {
@@ -63,7 +67,7 @@ const FaqTabs = () => {
         You can find some answers to commonly asked question below.
       </Text>
       <Tabs position="relative" variant="unstyled" orientation={"vertical"}>
-        <TabList borderRight={"1px"} borderColor={"#DBE4EF"} w={"266px"}>
+        <TabList borderRight={"1px"} borderColor={"#DBE4EF"} w={"35%"}>
           {tabList.map((item) => (
             <Tab
               key={item.name}
@@ -78,6 +82,33 @@ const FaqTabs = () => {
               {item.name}
             </Tab>
           ))}
+          <Box p={4} bg="white" borderRadius={8} mr={2} boxShadow={"md"}>
+            <VStack align="start" spacing={2}>
+              <Text color="#423F40" fontWeight={700} fontSize={16}>
+                Got More Questions?
+              </Text>
+              <Text color="#423F40B2" fontSize={14}>
+                Drop us a message on Discord!
+              </Text>
+              <Link
+                href="https://discord.com/invite/vyvp3scWnH"
+                target="_blank"
+                rel="noopenner noreferrer"
+                style={{ width: "100%" }}
+              >
+                <Button
+                  bg="#5A64EC"
+                  w="full"
+                  border={"none"}
+                  color="white"
+                  borderRadius={4}
+                  mt={2}
+                >
+                  Go To Discord
+                </Button>
+              </Link>
+            </VStack>
+          </Box>
         </TabList>
         <TabPanels>
           {tabList.map((item) => (

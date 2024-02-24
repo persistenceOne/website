@@ -14,7 +14,6 @@ const PeoplePage = () => {
       <TeamSection />
       <Spacer h={20} />
       <BecomePersisterSection showEcosystemSection={false} />
-      <Spacer h={20} />
     </>
   );
 };

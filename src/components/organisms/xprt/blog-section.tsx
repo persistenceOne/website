@@ -8,7 +8,8 @@ import {
   Text,
   VStack,
   Container,
-  Stack
+  Stack,
+  Flex
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -57,7 +58,7 @@ const BlogSection = () => {
           >
             All you need to know about XPRT.
           </Text>
-          <Button
+          {/* <Button
             variant={"link"}
             color={"primary.black"}
             fontWeight={600}
@@ -65,13 +66,18 @@ const BlogSection = () => {
             rightIcon={<ArrowForwardIcon />}
           >
             Explore All
-          </Button>
+          </Button> */}
         </VStack>
-        <Stack spacing={6} direction={{ base: "column", md: "row" }}>
+        <Flex
+          gap={6}
+          w={"full"}
+          direction={{ base: "column", md: "row" }}
+          // justify={""}
+        >
           {resourcesList.map((resource, index) => (
-            <BlogCard key={resource.id} {...resource} />
+            <BlogCard key={resource.id} {...resource} width="350px" />
           ))}
-        </Stack>
+        </Flex>
       </Box>
     </Container>
   );

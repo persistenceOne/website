@@ -17,7 +17,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
         <HStack key={stat.statLabel}>
           <VStack
             key={stat.statLabel}
-            align={{ base: "start", md: "center" }}
+            align={{ base: "start", md: "start" }}
             gap={0}
             mb={{ base: "16px", md: "0px" }}
           >

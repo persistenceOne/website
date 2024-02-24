@@ -10,13 +10,15 @@ export interface BlogCardInterface {
   resourceImage: string;
   resourceType: string;
   resourceLink: string;
+  width?: string;
 }
 
 const BlogCard = ({
   resourceCTA,
   resourceImage,
   resourceType,
-  resourceLink
+  resourceLink,
+  width = "full"
 }: BlogCardInterface) => {
   return (
     <Link href={resourceLink} target="_blank" rel="noopenner noreferrer">
@@ -24,7 +26,7 @@ const BlogCard = ({
         <Card w="full" h="100%" borderRadius={20}>
           <Box
             bgImage={`url(${resourceImage})`}
-            w="full"
+            w={width}
             h="200px"
             bgPosition="center"
             borderTopLeftRadius={20}
