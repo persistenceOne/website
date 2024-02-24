@@ -41,7 +41,7 @@ const menuItems = [
     subItems: [
       {
         title: "Story",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        description: "Learn about the Persistent Vision and our origin story.",
         icon: "announcement",
         iconType: "fill",
         link: "/story",
@@ -49,21 +49,22 @@ const menuItems = [
         comingSoon: false
       },
       {
-        title: "XPRT",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "plogo",
-        iconType: "fill",
-        link: "/xprt",
-        isExternal: false,
-        comingSoon: false
-      },
-      {
         title: "FAQs",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        description: "Frequently Asked Questions",
         icon: "faq",
         iconType: "stroke",
         link: "/faqs",
         isExternal: false,
+        comingSoon: false
+      },
+      {
+        title: "Blog",
+        description:
+          "Read about the latest partnerships and major product and tech updates",
+        icon: "people",
+        iconType: "fill",
+        link: "https://blog.persistence.one/",
+        isExternal: true,
         comingSoon: false
       },
       {
@@ -79,8 +80,17 @@ const menuItems = [
   },
   {
     id: 1,
-    name: "Explore",
+    name: "Network",
     subItems: [
+      {
+        title: "XPRT",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "plogo",
+        iconType: "fill",
+        link: "/xprt",
+        isExternal: false,
+        comingSoon: false
+      },
       {
         title: "Tech",
         description: "Lorem ipsum dolor sit Lorem ipsum",
@@ -91,10 +101,19 @@ const menuItems = [
         comingSoon: false
       },
       {
+        title: "Documentation",
+        description: "Lorem ipsum dolor sit Lorem ipsum",
+        icon: "doc1",
+        iconType: "stroke",
+        link: "https://docs.persistence.one",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
         title: "Stats",
         description: "",
-        icon: "stats",
-        iconType: "fill",
+        icon: "stats1",
+        iconType: "stroke",
         link: "/xprt",
         isExternal: true,
         comingSoon: true
@@ -112,20 +131,12 @@ const menuItems = [
   },
   {
     id: 2,
-    name: "dApps",
+    name: "Products",
     subItems: [
       {
-        title: "Trade",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "trade",
-        iconType: "fill",
-        link: "https://app.dexter.zone",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "Liquid Stake",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        title: "pSTAKE Finance",
+        description:
+          "Liquid Stake leading Cosmos tokens like ATOM, DYDX, and OSMO.",
         icon: "liquidstake",
         iconType: "stroke",
         link: "https://app.pstake.finance",
@@ -133,17 +144,37 @@ const menuItems = [
         comingSoon: false
       },
       {
-        title: "Stake XPRT",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "stake",
+        title: "Dexter",
+        description:
+          "Trade and provide liquidity of Liquid Staked Tokens, Stablecoins, and other Cosmos assets.",
+        icon: "trade",
         iconType: "fill",
+        link: "https://app.dexter.zone",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "XPRT Staking",
+        description:
+          "Stake XPRT to help secure the network and earn staking rewards",
+        icon: "secure",
+        iconType: "stroke",
         link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true,
         comingSoon: false
       },
       {
-        title: "Bridge",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        title: "pWallet",
+        description: "Manage and transfer XPRT tokens and staked delegations",
+        icon: "secure",
+        iconType: "stroke",
+        link: "https://wallet.keplr.app/chains/persistence",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "pBridge",
+        description: "Transfer tokens between Ethereum and Persistence One",
         icon: "tech",
         iconType: "stroke",
         link: "https://bridge.persistence.one",
@@ -154,11 +185,12 @@ const menuItems = [
   },
   {
     id: 3,
-    name: "About",
+    name: "Community",
     subItems: [
       {
         title: "People",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        description:
+          "Get to know Persistence One contributors, our values and how to become a Persister.",
         icon: "people",
         iconType: "fill",
         link: "/people",
@@ -166,26 +198,19 @@ const menuItems = [
         comingSoon: false
       },
       {
-        title: "Blog",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        title: "Careers",
+        description:
+          "Find opportunities to contribute to the ecosystem with Persistence Labs",
         icon: "people",
         iconType: "fill",
-        link: "https://blog.persistence.one/",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "Documentation",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
-        icon: "doc",
-        iconType: "fill",
-        link: "https://docs.persistence.one",
+        link: "https://forum.persistence.one/",
         isExternal: true,
         comingSoon: false
       },
       {
         title: "Community Forum",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        description:
+          "Participate in community discussions or share your ideas to grow Persistence One",
         icon: "announcement",
         iconType: "fill",
         link: "https://forum.persistence.one/",
@@ -194,7 +219,7 @@ const menuItems = [
       },
       {
         title: "Download Media Kit",
-        description: "",
+        description: "All your media and press needs.",
         icon: "download",
         iconType: "stroke",
         link: "https://persistence.notion.site/Persistence-Media-Kit-50e8f0eacab1466ebe7899d3773a48a3",
@@ -219,7 +244,7 @@ const getMenuList = (
   trigger: "click" | "hover" | undefined
 ) => {
   return menuItems.map((item: any) => (
-    <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
+    <Popover placement={placement} trigger={"click"} key={`hover-${item.id}`}>
       <PopoverTrigger>
         <Text
           cursor={"pointer"}
@@ -286,21 +311,23 @@ const getMenuList = (
                     fontWeight={500}
                     _hover={{ fontWeight: 700 }}
                   >
-                    <Box
-                      w={"40px"}
-                      h={"40px"}
-                      borderRadius={"100%"}
-                      className={"icon-box"}
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center"
-                      }}
-                    >
-                      <Icon
-                        icon={subItem.icon}
-                        viewClass={`nav-icon ${subItem.iconType}`}
-                      />
+                    <Box>
+                      <Box
+                        w={"40px"}
+                        h={"40px"}
+                        borderRadius={"100%"}
+                        className={"icon-box"}
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center"
+                        }}
+                      >
+                        <Icon
+                          icon={subItem.icon}
+                          viewClass={`nav-icon ${subItem.iconType}`}
+                        />
+                      </Box>
                     </Box>
                     <VStack align={"start"} gap={0}>
                       <Text
