@@ -15,24 +15,25 @@ import React from "react";
 const resourcesList: BlogCardInterface[] = [
   {
     id: 0,
-    resourceImage: "/images/resources/resource-1.png",
+    resourceImage: "/images/resources/xprt-0.png",
     resourceType: "Blog",
     resourceCTA: "Read",
-    resourceLink: "/"
+    resourceLink:
+      "https://blog.persistence.one/2024/01/05/all-you-need-to-know-about-xprt-staking/"
   },
   {
     id: 1,
-    resourceImage: "/images/resources/resource-2.png",
-    resourceType: "Video",
-    resourceCTA: "Watch",
-    resourceLink: "/"
+    resourceImage: "/images/resources/xprt-1.webp",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink: "https://luganodes.com/blog/XPRTSG/"
   },
   {
     id: 2,
-    resourceImage: "/images/resources/resource-3.png",
-    resourceType: "Podcast",
-    resourceCTA: "Listen",
-    resourceLink: "/"
+    resourceImage: "/images/resources/xprt-2.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=TuP4d368lU8"
   }
 ];
 
