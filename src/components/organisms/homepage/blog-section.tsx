@@ -18,38 +18,101 @@ import Slider from "react-slick";
 const resourcesList: BlogCardInterface[] = [
   {
     id: 0,
-    resourceImage: "/images/resources/resource-1.png",
+    resourceImage: "/images/resources/resource-0.webp",
     resourceType: "Blog",
     resourceCTA: "Read",
-    resourceLink: "/"
+    resourceLink:
+      "https://blog.persistence.one/2024/02/07/persistence-one-to-bring-restaking-to-cosmos/"
   },
   {
     id: 1,
-    resourceImage: "/images/resources/resource-2.png",
+    resourceImage: "/images/resources/resource-1.jpeg",
     resourceType: "Video",
     resourceCTA: "Watch",
-    resourceLink: "/"
+    resourceLink: "https://www.youtube.com/watch?v=iokAN0FsiDM"
   },
   {
     id: 2,
-    resourceImage: "/images/resources/resource-3.png",
-    resourceType: "Podcast",
-    resourceCTA: "Listen",
-    resourceLink: "/"
+    resourceImage: "/images/resources/resource-2.png",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink:
+      "https://blog.persistence.one/2024/01/05/all-you-need-to-know-about-xprt-staking/"
   },
   {
     id: 3,
-    resourceImage: "/images/resources/resource-3.png",
-    resourceType: "Podcast",
-    resourceCTA: "Listen",
-    resourceLink: "/"
+    resourceImage: "/images/resources/resource-3.jpeg",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink:
+      "https://blog.persistence.one/2024/02/13/persistence-one-launches-dydx-liquid-staking/"
   },
   {
     id: 4,
-    resourceImage: "/images/resources/resource-3.png",
-    resourceType: "Podcast",
-    resourceCTA: "Listen",
-    resourceLink: "/"
+    resourceImage: "/images/resources/resource-4.jpeg",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink:
+      "https://blog.persistence.one/2024/02/20/cosmos-restaking-on-persistence-one/"
+  },
+  {
+    id: 5,
+    resourceImage: "/images/resources/resource-5.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=zLVLwlM7PHQ"
+  },
+  {
+    id: 6,
+    resourceImage: "/images/resources/resource-6.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=PouqTQ0dXdM&t=1s"
+  },
+  {
+    id: 7,
+    resourceImage: "/images/resources/resource-7.jpeg",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink:
+      "https://blog.persistence.one/2023/12/12/persistence-cosmos-app-chain-for-liquid-staking-defi/"
+  },
+  {
+    id: 8,
+    resourceImage: "/images/resources/resource-8.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=9BPBLeZ4g-c&t=2580s"
+  },
+  {
+    id: 9,
+    resourceImage: "/images/resources/resource-9.png",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink:
+      "https://blog.persistence.one/2024/01/16/persistence-one-integrates-with-kava-for-1-click-usdt-transfers/"
+  },
+  {
+    id: 10,
+    resourceImage: "/images/resources/resource-10.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=_g_TJSNjRW0"
+  },
+  {
+    id: 11,
+    resourceImage: "/images/resources/resource-11.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=M2XJRPLc--g&t=599s"
+  },
+  {
+    id: 12,
+    resourceImage: "/images/resources/resource-12.jpeg",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink:
+      "https://blog.persistence.one/2024/02/16/persistence-one-x-kujira/"
   }
 ];
 
@@ -78,10 +141,10 @@ const BlogSection = () => {
             fontSize={{ base: "16px", md: "22px" }}
             color={"text.blackMid"}
           >
-            Explore the biggest news, blogs, interviews, and governance
-            discussions around liquid staking and restaking.
+            Explore the biggest news, blogs, interviews, and discussions around
+            liquid staking and restaking.
           </Text>
-          <Button
+          {/* <Button
             variant={"link"}
             color={"primary.black"}
             fontWeight={600}
@@ -89,7 +152,7 @@ const BlogSection = () => {
             rightIcon={<ArrowForwardIcon />}
           >
             Explore All
-          </Button>
+          </Button> */}
         </VStack>
         <Slider
           {...{

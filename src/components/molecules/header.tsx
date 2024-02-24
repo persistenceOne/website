@@ -84,7 +84,8 @@ const menuItems = [
     subItems: [
       {
         title: "XPRT",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        description:
+          "Learn about the native token fueling the Persistence One Ecosystem",
         icon: "plogo",
         iconType: "fill",
         link: "/xprt",
@@ -93,7 +94,8 @@ const menuItems = [
       },
       {
         title: "Tech",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        description:
+          "Discover how Persistence One sits at the cutting-edge of decentralized tech.",
         icon: "tech",
         iconType: "stroke",
         link: "/tech",
@@ -102,7 +104,8 @@ const menuItems = [
       },
       {
         title: "Documentation",
-        description: "Lorem ipsum dolor sit Lorem ipsum",
+        description:
+          "Explore Persistence One's developer docs, on-chain modules, and guides.",
         icon: "doc1",
         iconType: "stroke",
         link: "https://docs.persistence.one",
@@ -190,7 +193,7 @@ const menuItems = [
       {
         title: "People",
         description:
-          "Get to know Persistence One contributors, our values and how to become a Persister.",
+          "Meet our team of Persisters and what it takes to become one of us. ",
         icon: "people",
         iconType: "fill",
         link: "/people",
@@ -199,8 +202,7 @@ const menuItems = [
       },
       {
         title: "Careers",
-        description:
-          "Find opportunities to contribute to the ecosystem with Persistence Labs",
+        description: "Read about all the major updates and news.",
         icon: "people",
         iconType: "fill",
         link: "https://forum.persistence.one/",
@@ -210,7 +212,7 @@ const menuItems = [
       {
         title: "Community Forum",
         description:
-          "Participate in community discussions or share your ideas to grow Persistence One",
+          "Join the forum to find answers or discuss your ideas for Persistence..",
         icon: "announcement",
         iconType: "fill",
         link: "https://forum.persistence.one/",

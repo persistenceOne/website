@@ -8,14 +8,8 @@ const teamMembers: TeamMemberCardInterface[] = [
   {
     image: "/images/team/tushar-aggarwal.png",
     name: "Tushar Aggarwal",
-    role: "Founder",
+    role: "Founder and Chief Executive Officer",
     socialLinks: [
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
       {
         name: "Twitter",
         link: "https://twitter.com/Tushar307",
@@ -24,7 +18,7 @@ const teamMembers: TeamMemberCardInterface[] = [
       },
       {
         name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }
@@ -36,20 +30,14 @@ const teamMembers: TeamMemberCardInterface[] = [
     role: "Chief Strategy Officer",
     socialLinks: [
       {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
         name: "Twitter",
-        link: "https://twitter.com/Tushar307",
+        link: "https://twitter.com/PandeyMikhil",
         icon: "/icons/twitter.svg",
         color: "#0077B5"
       },
       {
         name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        link: "https://www.linkedin.com/in/mikhilpandey/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }
@@ -61,20 +49,14 @@ const teamMembers: TeamMemberCardInterface[] = [
     role: "Chief Operating Officer",
     socialLinks: [
       {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
         name: "Twitter",
-        link: "https://twitter.com/Tushar307",
+        link: "https://twitter.com/dneorej",
         icon: "/icons/twitter.svg",
         color: "#0077B5"
       },
       {
         name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        link: "https://www.linkedin.com/in/jeroendevelter/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }
@@ -83,223 +65,57 @@ const teamMembers: TeamMemberCardInterface[] = [
   {
     image: "/images/team/zhi-hao.png",
     name: "Zhi Hao Loy",
-    role: "General Counsel",
+    role: "Chief Legal Officer",
     socialLinks: [
       {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
         name: "Twitter",
-        link: "https://twitter.com/Tushar307",
+        link: "https://twitter.com/loyzhihao",
         icon: "/icons/twitter.svg",
         color: "#0077B5"
       },
       {
         name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        link: "https://www.linkedin.com/in/loyzhihao/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }
     ]
   },
-  {
-    image: "/images/team/kevin-poh.png",
-    name: "Kevin Poh",
-    role: "Head of BD",
-    socialLinks: [
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Tushar307",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
-        icon: "/icons/linkedin.svg",
-        color: "#0077B5"
-      }
-    ]
-  },
+
   {
     image: "/images/team/rajesh-iyer.png",
     name: "Rajesh Iyer",
-    role: "Product Manager",
+    role: "Product",
     socialLinks: [
       {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
         name: "Twitter",
-        link: "https://twitter.com/Tushar307",
+        link: "https://twitter.com/LNarayanIyer_",
         icon: "/icons/twitter.svg",
         color: "#0077B5"
       },
       {
         name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        link: "https://www.linkedin.com/in/rajeshiyer17/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }
     ]
   },
+
   {
     image: "/images/team/bart-van-der-voort.png",
-    name: "Bart Van Der Voort",
-    role: "Head of Strategy",
+    name: "Bart",
+    role: "Strategy",
     socialLinks: [
       {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
         name: "Twitter",
-        link: "https://twitter.com/Tushar307",
+        link: "https://twitter.com/unimonkey21",
         icon: "/icons/twitter.svg",
         color: "#0077B5"
       },
       {
         name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
-        icon: "/icons/linkedin.svg",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/puneet-mahajan.png",
-    name: "Puneet Mahajan",
-    role: "Engineering",
-    socialLinks: [
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Tushar307",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
-        icon: "/icons/linkedin.svg",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/marc-puig-torres.png",
-    name: "Marc Puig Torres",
-    role: "Engineering",
-    socialLinks: [
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Tushar307",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
-        icon: "/icons/linkedin.svg",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/maksim-kupriianov.png",
-    name: "Maksim Kupriianov",
-    role: "Engineering",
-    socialLinks: [
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Tushar307",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
-        icon: "/icons/linkedin.svg",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/pranjal-paliwal.png",
-    name: "Pranjal Paliwal",
-    role: "Engineering",
-    socialLinks: [
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Tushar307",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
-        icon: "/icons/linkedin.svg",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/sukriti-taneja.png",
-    name: "Sukriti Taneja",
-    role: "Marketing",
-    socialLinks: [
-      {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Tushar307",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        link: "https://www.linkedin.com/in/bartvandervoort/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }
@@ -325,6 +141,120 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        icon: "/icons/linkedin.svg",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/kevin-poh.png",
+    name: "Kevin Poh",
+    role: "Business Development",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/kevinnnpoh",
+        icon: "/icons/twitter.svg",
+        color: "#0077B5"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/kevinpohchengen/",
+        icon: "/icons/linkedin.svg",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/marc-puig-torres.png",
+    name: "Marc Puig Torres",
+    role: "Engineering",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/krusspy",
+        icon: "/icons/twitter.svg",
+        color: "#0077B5"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/marcpt/",
+        icon: "/icons/linkedin.svg",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/sukriti-taneja.png",
+    name: "Sukriti Taneja",
+    role: "Marketing",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/Sukriti2108",
+        icon: "/icons/twitter.svg",
+        color: "#0077B5"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/sukriti-taneja-b624731a0/",
+        icon: "/icons/linkedin.svg",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/puneet-mahajan.png",
+    name: "Puneet Mahajan",
+    role: "Engineering",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/puneet_m_",
+        icon: "/icons/twitter.svg",
+        color: "#0077B5"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/puneet-mahajan-/",
+        icon: "/icons/linkedin.svg",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/maksim-kupriianov.png",
+    name: "Maksim Kupriianov",
+    role: "Engineering",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/xlab_gg",
+        icon: "/icons/twitter.svg",
+        color: "#0077B5"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/mkupriianov/",
+        icon: "/icons/linkedin.svg",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/pranjal-paliwal.png",
+    name: "Pranjal Paliwal",
+    role: "Engineering",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/betterclever",
+        icon: "/icons/twitter.svg",
+        color: "#0077B5"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/betterclever/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }

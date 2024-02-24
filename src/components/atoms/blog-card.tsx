@@ -19,10 +19,19 @@ const BlogCard = ({
   resourceLink
 }: BlogCardInterface) => {
   return (
-    <Link href={resourceLink}>
+    <Link href={resourceLink} target="_blank" rel="noopenner noreferrer">
       <Box px={"10px"}>
         <Card w="full" h="100%" borderRadius={20}>
-          <Image src={resourceImage} alt="" width={380} height={200} />
+          <Box
+            bgImage={`url(${resourceImage})`}
+            w="full"
+            h="200px"
+            bgPosition="center"
+            borderTopLeftRadius={20}
+            borderTopRightRadius={20}
+            bgSize="cover"
+          />
+          {/* <Image src={resourceImage} alt="" layout="fill" objectFit="cover" /> */}
           <CardFooter my={-4}>
             <Button variant={"unstyled"} rightIcon={<ExternalLinkIcon />}>
               {resourceCTA}

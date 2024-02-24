@@ -99,7 +99,8 @@ const DappsSection = () => {
               color={"text.blackMid"}
               fontSize={{ base: "16px", md: "22px" }}
             >
-              Discover the future of Web3 Finance Powered by Persistence
+              Discover the Products empowering the Liquid Staking and Restaking
+              economy.
             </Text>
           </Box>
         </Flex>
