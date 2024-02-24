@@ -244,7 +244,7 @@ const getMenuList = (
   trigger: "click" | "hover" | undefined
 ) => {
   return menuItems.map((item: any) => (
-    <Popover placement={placement} trigger={"click"} key={`hover-${item.id}`}>
+    <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
       <PopoverTrigger>
         <Text
           cursor={"pointer"}
