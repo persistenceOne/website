@@ -134,7 +134,7 @@ const BlogSection = () => {
             color="text.headingSemiBlack"
             fontSize={{ base: "26px", md: "58px" }}
           >
-            Latest on Persistence
+            Latest on Persistence One
           </Heading>
           <Text
             maxW={"75%"}

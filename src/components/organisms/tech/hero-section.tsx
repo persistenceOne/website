@@ -46,10 +46,10 @@ const HeroSection = () => {
   const homePagesStats = getList(blockNumber);
   return (
     <Box
-      backgroundImage="url('/images/tech-page/tech-hero-bg.svg')"
-      backgroundPosition="100% 0"
+      backgroundImage="url('/images/tech-page/tech-hero.svg')"
+      backgroundPosition="100% 40%"
       backgroundRepeat="no-repeat"
-      backgroundSize={"40%"}
+      backgroundSize={"42%"}
     >
       <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
         <Spacer h={{ base: 0, md: 20 }} />
@@ -71,14 +71,14 @@ const HeroSection = () => {
               Superbly Powerful.
             </Heading>
             <Text
-              fontSize={{ base: "16px", md: "22px" }}
+              fontSize={{ base: "16px", md: "20px" }}
               textAlign={{ base: "center", md: "left" }}
-              w={{ base: "auto", md: "70%" }}
+              w={{ base: "auto", md: "55%" }}
               color={"text.blackLow"}
               mt={6}
             >
-              Persistence One is one of the most technologically advanced Layer
-              1 for liquid staking and restaking.
+              Persistence One is operating at the bleeding edge of innovation
+              when it comes to Liquid Staking and Restaking.
             </Text>
           </Box>
         </Flex>

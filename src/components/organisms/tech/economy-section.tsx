@@ -127,6 +127,7 @@ const EconomySection = () => {
                   bg={"#fff"}
                   borderRadius={"20px"}
                   direction={"column"}
+                  boxShadow={"md"}
                 >
                   <Box m={"auto"}>
                     <Image

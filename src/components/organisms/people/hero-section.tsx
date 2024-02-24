@@ -18,7 +18,7 @@ const HeroSection = () => {
       <Spacer h={20} />
       <Flex justify={"space-between"} align={"flex-start"} pos={"relative"}>
         <VStack
-          mt={{ base: "100px", md: "250px" }}
+          mt={{ base: "80px", md: "100px" }}
           align={"flex-start"}
           pb={"120px"}
         >
@@ -26,8 +26,10 @@ const HeroSection = () => {
             variant={"main"}
             color={"text.blackHigh"}
             fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+            lineHeight={{ base: "38px", md: "50px", lg: "90px" }}
           >
-            Humility. Integrity. <br /> Patience. Persistence.
+            Humility. <br /> Integrity. <br /> Patience.
+            <br /> Persistence.
           </Heading>
           <Text textAlign="left" color="#3D3D3DB2">
             Learn more about the people behind Persistence One, what it means to
@@ -43,7 +45,7 @@ const HeroSection = () => {
           <Image
             src="/images/people_hero.svg"
             alt="Persistence Coin"
-            width={400}
+            width={450}
             height={400}
           />
         </Box>

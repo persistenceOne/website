@@ -7,55 +7,55 @@ import Link from "next/link";
 
 const upgradeList = [
   {
-    title: "v10.4 Upgrade",
+    title: "v10.4",
     link: "https://blog.persistence.one/2024/02/13/persistence-one-launches-dydx-liquid-staking/",
     date: "FEB 2024",
     content:
       "Launched secure and decentralized DYDX liquid staking on Persistence One."
   },
   {
-    title: "v10 Upgrade",
+    title: "v10",
     link: "https://www.mintscan.io/persistence/proposals/55",
     date: "FEB 2024",
     content:
       "Improved on-chain security monitoring and simplified the XPRT governance process."
   },
   {
-    title: "v9 Upgrade",
+    title: "v9",
     link: "https://blog.pstake.finance/2023/09/12/cosmos-lsm-atom-liquid-staking-made-simpler-with-pstake/",
     date: "FEB 2024",
     content:
       "Enabled support for the Liquid Staking Module (LSM) to convert natively staked ATOM in liquid staked stkATOM in a single click without 21-day unbonding."
   },
   {
-    title: "v8 Upgrade",
+    title: "v8",
     link: "https://x.com/PersistenceOne/status/1699056096311410866?s=20",
     date: "FEB 2024",
     content:
       "Added 5 new modules like IBC Hooks, Packet Forwarding, Skip Protocol, and updated 6 existing modules to make the Persistence One chain a technical leader in Cosmos."
   },
   {
-    title: "v5 Upgrade",
+    title: "v5",
     link: "https://www.mintscan.io/persistence/proposals/9",
     date: "FEB 2024",
     content: "Improved security measures for liquid staking on Persistence One."
   },
   {
-    title: "v4 Upgrade",
+    title: "v4",
     link: "https://blog.pstake.finance/2022/10/18/interchain-accounts-queries-a-new-chapter-for-liquid-staking-in-cosmos/",
     date: "FEB 2024",
     content:
       "Added Inter Chain Queries (ICQ) and the pSTAKE Module to launch native liquid staking."
   },
   {
-    title: "v3 Upgrade",
+    title: "v3",
     link: "https://cosmos.network/cosmwasm/",
     date: "FEB 2024",
     content:
       "Enabled CosmWasm for developers to build and deploy secure smart-contract dApps."
   },
   {
-    title: "v2 Upgrade",
+    title: "v2",
     link: "https://www.mintscan.io/persistence/proposals/3",
     date: "FEB 2024",
     content:
@@ -145,6 +145,7 @@ const UpgradeSection = () => {
                   {item.date}
                 </Heading> */}
                 <Text
+                  w={"80%"}
                   mt={4}
                   color={"text.headingSemiWhite"}
                   fontSize={"12px"}

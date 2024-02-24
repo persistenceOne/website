@@ -64,7 +64,7 @@ const HeroSection = () => {
           >
             Powering Liquid Staking <br /> and Restaking with XPRT
           </Heading>
-          <Text textAlign="left" my={6} fontSize={{ base: "16px", md: "22px" }}>
+          <Text textAlign="left" my={6} fontSize={{ base: "16px", md: "20px" }}>
             XPRT is the multi-purpose native token of the Persistence One
             Ecosystem.
           </Text>
@@ -97,7 +97,7 @@ const HeroSection = () => {
           <Image
             src="/images/xprt-page/xprt_hero.svg"
             alt="Persistence Coin"
-            width={400}
+            width={500}
             height={400}
           />
         </Box>

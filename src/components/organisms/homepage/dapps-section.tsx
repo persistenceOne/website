@@ -91,7 +91,7 @@ const DappsSection = () => {
               fontSize={{ base: "26px", md: "58px" }}
               mb={"4px"}
             >
-              #Built on Persistence
+              Built on Persistence One
             </Heading>
             <Text
               textAlign="center"

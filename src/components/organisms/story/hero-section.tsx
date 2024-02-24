@@ -1,33 +1,13 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Heading,
-  Spacer,
-  Stat,
-  StatArrow,
-  StatGroup,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
-  Text,
-  VStack,
-  Divider,
-  Container
-} from "@chakra-ui/react";
-import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { Box, Flex, Heading, Spacer, Text, Container } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
-import HomePageStats from "@/components/molecules/page-stats";
 
 const HeroSection = () => {
   return (
     <Box
-      backgroundImage="url('/images/story-page/story-hero-bg.svg')"
-      backgroundPosition="100% 0"
-      backgroundRepeat="no-repeat"
-      backgroundSize={"30%"}
+    // backgroundImage="url('/images/story-page/story-hero-bg.svg')"
+    // backgroundPosition="100% 0"
+    // backgroundRepeat="no-repeat"
+    // backgroundSize={"30%"}
     >
       <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
         <Spacer h={{ base: 0, md: 60 }} />
@@ -40,9 +20,9 @@ const HeroSection = () => {
               textAlign={{ base: "center", md: "left" }}
               fontSize={{ base: "26px", md: "40px", lg: "67px" }}
             >
-              Building with Persistence
+              Building With Persistence
               <br />
-              since day One in Cosmos.
+              Since Day One In Cosmos.
             </Heading>
 
             <Text

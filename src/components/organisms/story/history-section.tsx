@@ -22,7 +22,7 @@ interface ListProps {
 const list: ListProps[] = [
   {
     imgUrl: "/images/story-page/clock.svg",
-    title: "Proof-of-Stake will become the norm",
+    title: "Early days in Cosmos",
     content: {
       item0: (
         <Text>

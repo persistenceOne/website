@@ -53,10 +53,25 @@ const footerLinks = [
     title: "Learn",
     links: [
       {
-        title: "Our Story",
+        title: "Story",
         link: "/story",
         isExternal: false
       },
+      {
+        title: "FAQs",
+        link: "/faqs",
+        isExternal: false
+      },
+      {
+        title: "Blog",
+        link: "https://blog.persistence.one/",
+        isExternal: true
+      }
+    ]
+  },
+  {
+    title: "Network",
+    links: [
       {
         title: "XPRT",
         link: "/xprt",
@@ -66,6 +81,11 @@ const footerLinks = [
         title: "Tech",
         link: "/tech",
         isExternal: false
+      },
+      {
+        title: "Documentation",
+        link: "https://docs.persistence.one",
+        isExternal: true
       }
     ]
   },
@@ -81,41 +101,26 @@ const footerLinks = [
         title: "Dexter",
         link: "https://dexter.zone",
         isExternal: true
-      }
-    ]
-  },
-  {
-    title: "dApps",
-    links: [
+      },
       {
-        title: "Trade",
-        link: "https://app.dexter.zone",
+        title: "XPRT Staking",
+        link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true
       },
       {
-        title: "Liquid Stake",
-        link: "https://app.pstake.finance",
-        isExternal: true
-      },
-      {
-        title: "Bridge",
-        link: "https://bridge.persistence.one",
-        isExternal: true
-      },
-      {
-        title: "Wallet",
+        title: "pWallet",
         link: "https://wallet.persistence.one",
         isExternal: true
       },
       {
-        title: "Stake XPRT",
-        link: "https://wallet.keplr.app/chains/persistence",
+        title: "pBridge",
+        link: "https://bridge.persistence.one",
         isExternal: true
       }
     ]
   },
   {
-    title: "Get Connected",
+    title: "Community",
     links: [
       {
         title: "People",
@@ -123,13 +128,8 @@ const footerLinks = [
         isExternal: false
       },
       {
-        title: "Blogs",
-        link: "https://blog.persistence.one/",
-        isExternal: true
-      },
-      {
-        title: "Documentation",
-        link: "https://docs.persistence.one",
+        title: "Careers",
+        link: "https://careers.persistence.one/",
         isExternal: true
       },
       {
@@ -187,7 +187,12 @@ const Footer = () => {
             </Link>
             <HStack gap={4} mt={4} display={{ base: "none", md: "flex" }}>
               {footerSocialLinks.map((link) => (
-                <Link href={link.link} key={link.name}>
+                <Link
+                  href={link.link}
+                  key={link.name}
+                  target="_blank"
+                  rel="noopenner noreferrer"
+                >
                   <Box
                     w={"24px"}
                     h={"24px"}
@@ -232,6 +237,7 @@ const Footer = () => {
                     href={item.link}
                     key={item.title}
                     target={item.isExternal ? "_blank" : "_self"}
+                    rel={item.isExternal ? "noopener noreferrer" : ""}
                   >
                     <Button
                       variant={"link"}
@@ -282,7 +288,7 @@ const Footer = () => {
           ))}
         </HStack>
         <Box display={{ base: "none", md: "block" }}>
-          <Divider mt={"20px"} borderColor={"#ECECEC33"} />
+          <Divider mt={"28px"} borderColor={"#ECECEC33"} />
           <HStack justify={"space-between"} align={"center"} mt={4}>
             <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
               © Copyright 2024 Persistence Labs. All rights reserved.

@@ -14,7 +14,7 @@ const PersisterValuesCard = ({
   icon
 }: PersisterValuesCardInterface) => {
   return (
-    <Card borderRadius={20} pt={12} px={8}>
+    <Card borderRadius={20} pt={12} pb={2} px={8}>
       <VStack pos={"relative"} mt={8} mb={6} spacing={2} align={"flex-start"}>
         <Heading color={"#3D3D3D"} fontSize={26} fontWeight={600}>
           {title}

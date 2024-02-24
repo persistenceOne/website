@@ -7,7 +7,8 @@ import {
   Container,
   Stack,
   ListItem,
-  UnorderedList
+  UnorderedList,
+  Text
 } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
@@ -16,25 +17,20 @@ const list = [
   {
     imgUrl: "/images/story-page/locker.svg",
     title: "Proof-of-Stake will become the norm",
-    content: [
-      "The world will be full of secure and interoperable PoS blockchains with flourishing DeFi, Liquid Staking, and Restaking. ",
-      "Staking will become the fixed income of crypto"
-    ]
+    content:
+      "The world will be full of secure and interoperable PoS blockchains with flourishing DeFi as staking becomes the fixed income of crypto"
   },
   {
     imgUrl: "/images/story-page/roads.svg",
     title: "All roads originate from Cosmos",
-    content: [
-      "Sovereignty and modularity over monolithic chains.",
-      "The bull case for app chains is the opportunity for building a liquid staking economy on Persistence One."
-    ]
+    content:
+      "The bull case for sovereign and modular app chains is the opportunity for building a Liquid Staking and Restaking economy on Persistence One."
   },
   {
     imgUrl: "/images/story-page/pos.svg",
     title: "Native PoS tokens will exist as liquid staked",
-    content: [
-      "Liquid Staked Tokens (LSTs) will become the default medium of exchange and utility in DeFi."
-    ]
+    content:
+      "Liquid Staked Tokens (LSTs) will become the default capital-efficient medium of exchange and utility in DeFi."
   }
 ];
 const VisionSection = () => {
@@ -60,8 +56,13 @@ const VisionSection = () => {
               key={index}
               boxShadow={"lg"}
             >
-              <Box mb={4} w={"60%"} mx={"auto"}>
-                <Image src={item.imgUrl} alt="" width={290} height={240} />
+              <Box mb={4} w={"60%"} h={"220px"} mx={"auto"} pos={"relative"}>
+                <Image
+                  src={item.imgUrl}
+                  alt={item.title}
+                  layout="fill"
+                  // objectFit="cover"
+                />
               </Box>
               <Heading
                 variant={"secondary"}
@@ -73,17 +74,13 @@ const VisionSection = () => {
               >
                 {item.title}
               </Heading>
-              <UnorderedList color={"text.blackLow"} fontSize={"16px"}>
-                {item.content.map((contentItem, subIndex) => (
-                  <ListItem
-                    lineHeight={"27px"}
-                    fontSize={{ base: "14px", md: "18px" }}
-                    key={subIndex}
-                  >
-                    {contentItem}
-                  </ListItem>
-                ))}
-              </UnorderedList>
+              <Text
+                color={"text.blackLow"}
+                lineHeight={"27px"}
+                fontSize={{ base: "14px", md: "18px" }}
+              >
+                {item.content}
+              </Text>
             </Flex>
           ))}
         </Wrap>

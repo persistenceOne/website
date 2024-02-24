@@ -56,25 +56,25 @@ const HeroSection = () => {
               Restaking.
             </Heading>
             <Text textAlign={"left"} w={{ base: "100%", md: "55%" }} mb={6}>
-              Persistence One is an app chain for dApps to securely build an
-              economy that maximizes liquid staking and restaking yield.
+              Persistence One is a purpose built Layer 1 on a mission to
+              maximize yield and security through Liquid Restaking.
             </Text>
-            <Stack direction={{ base: "column", md: "row" }} gap={4}>
-              <Link href="/story" passHref>
-                <Button
-                  variant={"secondary"}
-                  rightIcon={<ArrowForwardIcon />}
-                  w={{ base: "100%", md: "auto" }}
-                >
-                  See Our Story
-                </Button>
-              </Link>
-              <Link href="/xprt" passHref>
+            {/* <Stack direction={{ base: "column", md: "row" }} gap={4}> */}
+            <Link href="/story" passHref>
+              <Button
+                variant={"secondary"}
+                rightIcon={<ArrowForwardIcon />}
+                w={{ base: "100%", md: "auto" }}
+              >
+                Learn More
+              </Button>
+            </Link>
+            {/* <Link href="/xprt" passHref>
                 <Button w={{ base: "100%", md: "auto" }}>
                   Explore Ecosystem
                 </Button>
-              </Link>
-            </Stack>
+              </Link> */}
+            {/* </Stack> */}
           </VStack>
         </Flex>
         <HomePageStats
