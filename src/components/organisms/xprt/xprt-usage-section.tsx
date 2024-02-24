@@ -73,7 +73,6 @@ const XPRTUsageSection = () => {
         >
           What is XPRT used for?
         </Heading>
-        <Text>Lorem ipsum dolor sit amet consectetur.</Text>
         <Stack
           spacing={4}
           direction={{ base: "column", md: "row" }}

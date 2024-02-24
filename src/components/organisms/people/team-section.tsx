@@ -128,13 +128,13 @@ const teamMembers: TeamMemberCardInterface[] = [
     socialLinks: [
       {
         name: "Twitter",
-        link: "https://twitter.com/Tushar307",
+        link: "https://twitter.com/VandkarAditya",
         icon: "/icons/twitter.svg",
         color: "#0077B5"
       },
       {
         name: "Linkedin",
-        link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/?originalSubdomain=sg",
+        link: "https://www.linkedin.com/in/aditya-vandkar-9a9675177/",
         icon: "/icons/linkedin.svg",
         color: "#0077B5"
       }
