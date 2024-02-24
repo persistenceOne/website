@@ -82,6 +82,7 @@ const DappCard = ({
               variant={"unstyled"}
               alignSelf={"flex-start"}
               fontWeight={400}
+              mt={-4}
               fontSize={"18px"}
               color={"#606060"}
             >

@@ -3,59 +3,60 @@ import { Box, Heading, Container, Text, Flex } from "@chakra-ui/react";
 import React, { Component, useRef } from "react";
 import Slider from "react-slick";
 import { useMediaQuery } from "@chakra-ui/react";
+import Link from "next/link";
 
 const upgradeList = [
   {
     title: "v10.4 Upgrade",
-    link: "",
+    link: "https://blog.persistence.one/2024/02/13/persistence-one-launches-dydx-liquid-staking/",
     date: "FEB 2024",
     content:
       "Launched secure and decentralized DYDX liquid staking on Persistence One."
   },
   {
     title: "v10 Upgrade",
-    link: "",
+    link: "https://www.mintscan.io/persistence/proposals/55",
     date: "FEB 2024",
     content:
       "Improved on-chain security monitoring and simplified the XPRT governance process."
   },
   {
     title: "v9 Upgrade",
-    link: "",
+    link: "https://blog.pstake.finance/2023/09/12/cosmos-lsm-atom-liquid-staking-made-simpler-with-pstake/",
     date: "FEB 2024",
     content:
       "Enabled support for the Liquid Staking Module (LSM) to convert natively staked ATOM in liquid staked stkATOM in a single click without 21-day unbonding."
   },
   {
     title: "v8 Upgrade",
-    link: "",
+    link: "https://x.com/PersistenceOne/status/1699056096311410866?s=20",
     date: "FEB 2024",
     content:
       "Added 5 new modules like IBC Hooks, Packet Forwarding, Skip Protocol, and updated 6 existing modules to make the Persistence One chain a technical leader in Cosmos."
   },
   {
     title: "v5 Upgrade",
-    link: "",
+    link: "https://www.mintscan.io/persistence/proposals/9",
     date: "FEB 2024",
     content: "Improved security measures for liquid staking on Persistence One."
   },
   {
     title: "v4 Upgrade",
-    link: "",
+    link: "https://blog.pstake.finance/2022/10/18/interchain-accounts-queries-a-new-chapter-for-liquid-staking-in-cosmos/",
     date: "FEB 2024",
     content:
       "Added Inter Chain Queries (ICQ) and the pSTAKE Module to launch native liquid staking."
   },
   {
     title: "v3 Upgrade",
-    link: "",
+    link: "https://cosmos.network/cosmwasm/",
     date: "FEB 2024",
     content:
       "Enabled CosmWasm for developers to build and deploy secure smart-contract dApps."
   },
   {
     title: "v2 Upgrade",
-    link: "",
+    link: "https://www.mintscan.io/persistence/proposals/3",
     date: "FEB 2024",
     content:
       "Added Authz and feegrant modules to improve user experience and modular development."
@@ -99,18 +100,24 @@ const UpgradeSection = () => {
           {upgradeList.map((item, index) => {
             return (
               <Box key={index} w={{ base: "auto", md: "183px" }}>
-                <Flex align={"center"} mb={4}>
-                  <Heading
-                    variant={"secondary"}
-                    color={"text.headingSemiWhite"}
-                    pr={"12px"}
-                  >
-                    {item.title}
-                  </Heading>
-                  <Box w={"9px"} h={"9px"}>
-                    <Icon icon="external_redirect" />
-                  </Box>
-                </Flex>
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Flex align={"center"} mb={4}>
+                    <Heading
+                      variant={"secondary"}
+                      color={"text.headingSemiWhite"}
+                      pr={"12px"}
+                    >
+                      {item.title}
+                    </Heading>
+                    <Box w={"9px"} h={"9px"}>
+                      <Icon icon="external_redirect" />
+                    </Box>
+                  </Flex>
+                </Link>
 
                 <Box
                   borderTopWidth={"3px"}
@@ -129,15 +136,16 @@ const UpgradeSection = () => {
                     left: "0"
                   }}
                 />
-                <Heading
+                {/* <Heading
                   variant={"secondary"}
                   pr={"12px"}
                   color={"text.headingSemiWhite"}
                   mt={4}
                 >
                   {item.date}
-                </Heading>
+                </Heading> */}
                 <Text
+                  mt={4}
                   color={"text.headingSemiWhite"}
                   fontSize={"12px"}
                   pr={"12px"}
