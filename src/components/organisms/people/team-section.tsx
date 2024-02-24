@@ -127,12 +127,6 @@ const teamMembers: TeamMemberCardInterface[] = [
     role: "Growth",
     socialLinks: [
       {
-        name: "Telegram",
-        link: "https://t.me/tusharaggarwal",
-        icon: "/icons/telegram.svg",
-        color: "#0077B5"
-      },
-      {
         name: "Twitter",
         link: "https://twitter.com/Tushar307",
         icon: "/icons/twitter.svg",
