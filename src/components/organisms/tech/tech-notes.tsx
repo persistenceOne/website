@@ -77,7 +77,7 @@ const NotesSection = () => {
                   Building the Restaking Infrastructure for Cosmos
                 </Heading>
                 <Image
-                  src={"/images/tech-page/note-img1.svg"}
+                  src={"/images/tech-page/factory.svg"}
                   alt=""
                   width={220}
                   height={177}

@@ -44,7 +44,7 @@ const FeatureCards = () => {
           category="Ecosystem"
           title="Persistence One."
           description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the One ecosystem for staking, liquid staking, and restaking. "
-          image="/images/ecosystem.svg"
+          image="/images/p-ecosystem.svg"
           cta={{
             link: "/xprt",
             linkText: "Explore Ecosystem"
@@ -139,7 +139,7 @@ const FeatureCards = () => {
           category="Roadmap"
           title="Building in Cosmos since 2019."
           description="Skim through the biggest milestones of the past 4 years of building out our vision and what’s next."
-          image="/images/tech-page/note-img1.svg"
+          image="/images/story-page/story-hero.svg"
           cta={{
             link: "/story",
             linkText: ""

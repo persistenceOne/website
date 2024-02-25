@@ -4,21 +4,21 @@ import React from "react";
 const HeroSection = () => {
   return (
     <Box
-    // backgroundImage="url('/images/story-page/story-hero-bg.svg')"
-    // backgroundPosition="100% 0"
-    // backgroundRepeat="no-repeat"
-    // backgroundSize={"30%"}
+      backgroundImage="url('/images/story-page/story-hero.svg')"
+      backgroundPosition="100% 40%"
+      backgroundRepeat="no-repeat"
+      backgroundSize={"42%"}
     >
       <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
-        <Spacer h={{ base: 0, md: 60 }} />
+        <Spacer h={{ base: 60, md: 60 }} />
         <Flex justify={"space-between"} mb={{ base: "40px", md: "90px" }}>
-          <Box pt={"150px"}>
+          <Box py={"50px"}>
             <Heading
               variant={"main"}
               color={"text.blackHigh"}
               mb={5}
               textAlign={{ base: "center", md: "left" }}
-              fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+              fontSize={{ base: "26px", md: "50px" }}
             >
               Building With Persistence
               <br />
@@ -26,7 +26,7 @@ const HeroSection = () => {
             </Heading>
 
             <Text
-              w={{ base: "auto", md: "70%" }}
+              w={{ base: "auto", md: "50%" }}
               color={"text.blackLow"}
               fontSize={{ base: "16px", md: "22px" }}
               textAlign={{ base: "center", md: "left" }}

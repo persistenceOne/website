@@ -13,13 +13,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/Tushar307",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/tushar-aggarwal-2823b02b/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -32,13 +32,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/PandeyMikhil",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/mikhilpandey/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -51,13 +51,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/dneorej",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/jeroendevelter/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -70,13 +70,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/loyzhihao",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/loyzhihao/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -90,13 +90,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/LNarayanIyer_",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/rajeshiyer17/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -110,13 +110,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/unimonkey21",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/bartvandervoort/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -129,13 +129,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/VandkarAditya",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/aditya-vandkar-9a9675177/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -148,13 +148,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/kevinnnpoh",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/kevinpohchengen/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -167,13 +167,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/krusspy",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/marcpt/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -186,13 +186,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/Sukriti2108",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/sukriti-taneja-b624731a0/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -205,13 +205,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/puneet_m_",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/puneet-mahajan-/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -224,13 +224,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/xlab_gg",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/mkupriianov/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]
@@ -243,13 +243,13 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Twitter",
         link: "https://twitter.com/betterclever",
-        icon: "/icons/twitter.svg",
-        color: "#0077B5"
+        icon: "x",
+        color: "#000000"
       },
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/betterclever/",
-        icon: "/icons/linkedin.svg",
+        icon: "linkedin",
         color: "#0077B5"
       }
     ]

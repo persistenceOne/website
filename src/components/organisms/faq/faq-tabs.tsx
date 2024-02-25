@@ -14,41 +14,24 @@ import {
 import React from "react";
 import AccordionList from "@/components/organisms/faq/accordion-list";
 import Link from "next/link";
+import {
+  aboutPersistence,
+  aboutXprt,
+  liquidStaking
+} from "@/components/organisms/faq/faqList";
 
 const tabList = [
   {
-    name: "Introduction",
-    faqs: [
-      { qtn: "question1", answer: "answer1" },
-      { qtn: "question1", answer: "answer1" },
-      { qtn: "question1", answer: "answer1" },
-      { qtn: "question1", answer: "answer1" },
-      { qtn: "question1", answer: "answer1" }
-    ]
+    name: "About Persistence One",
+    faqs: aboutPersistence
   },
   {
     name: "XPRT",
-    faqs: [{ qtn: "", answer: "" }]
+    faqs: aboutXprt
   },
   {
     name: "Liquid Staking",
-    faqs: [{ qtn: "question1", answer: "answer1" }]
-  },
-  {
-    name: "Restaking",
-    faqs: [{ qtn: "question1", answer: "answer1" }]
-  },
-  {
-    name: "Get Involved",
-    faqs: [{ qtn: "question1", answer: "answer1" }]
-  },
-  {
-    name: "Ecosystem",
-    faqs: [{ qtn: "question1", answer: "answer1" }]
-  },
-  {
-    name: "Other",
-    faqs: [{ qtn: "question1", answer: "answer1" }]
+    faqs: liquidStaking
   }
 ];
 
@@ -59,6 +42,7 @@ const FaqTabs = () => {
       px={{ base: "20px", md: "80px" }}
       pt={"120px"}
       pb={"80px"}
+      bg={"#FEFEFE"}
     >
       <Heading fontSize={"36px"} color={"text.blackHigh"}>
         Question? We have answers.
@@ -82,7 +66,14 @@ const FaqTabs = () => {
               {item.name}
             </Tab>
           ))}
-          <Box p={4} bg="white" borderRadius={8} mr={2} boxShadow={"md"}>
+          <Box
+            p={4}
+            bg="white"
+            borderRadius={8}
+            mr={2}
+            boxShadow={"md"}
+            mt={"16px"}
+          >
             <VStack align="start" spacing={2}>
               <Text color="#423F40" fontWeight={700} fontSize={16}>
                 Got More Questions?
