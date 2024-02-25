@@ -54,12 +54,14 @@ const GetXprtSection = () => {
               </Link>
             </HStack>
           </Box>
-          <Image
-            src={"/images/p_fuel.svg"}
-            alt="Persistence"
-            width={450}
-            height={450}
-          />
+          <Box display={{ base: "none", md: "block" }}>
+            <Image
+              src={"/images/p_fuel.svg"}
+              alt="Persistence"
+              width={450}
+              height={450}
+            />
+          </Box>
         </HStack>
       </Container>
     </Box>

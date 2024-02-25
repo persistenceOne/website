@@ -2,6 +2,7 @@ import { Box, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Icon from "../molecules/Icon";
 
 export interface TeamMemberCardInterface {
   image: string;
@@ -50,7 +51,21 @@ const TeamMemberCard = ({
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={item.icon} alt={item.icon} width={24} height={24} />
+            <Box
+              w={"24px"}
+              h={"24px"}
+              p={"6px"}
+              bg={"#9C9C9C"}
+              borderRadius={"100%"}
+              _hover={{ bg: item.color }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <Icon icon={item.icon} />
+            </Box>
           </Link>
         ))}
       </HStack>

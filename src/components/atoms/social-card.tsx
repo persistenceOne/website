@@ -22,10 +22,13 @@ const SocialCard = ({
         borderRadius={10}
         px={{ base: "20px", md: "24px" }}
         py={{ base: "20px", md: "28px" }}
+        borderWidth={"1px"}
+        borderColor={"#FEFEFE"}
         cursor={"pointer"}
         boxShadow={
           "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03)"
         }
+        _hover={{ borderColor: "#C73238" }}
         direction={{ base: "column", md: "row" }}
       >
         <Image

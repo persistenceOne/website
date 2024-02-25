@@ -57,7 +57,7 @@ const HeroSection = () => {
         pos={"relative"}
         mb={{ base: "40px", md: "100px" }}
       >
-        <VStack mt={"100px"} w={"60%"} align={"stretch"}>
+        <VStack mt={"100px"} w={{ base: "100%", md: "50%" }} align={"stretch"}>
           <Heading
             fontSize={{ base: "26px", md: "40px", lg: "50px" }}
             variant={"main"}

@@ -10,8 +10,8 @@ import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 
 interface Props {
   list: {
-    qtn: string;
-    answer: string;
+    title: string;
+    content: any;
   }[];
 }
 
@@ -37,7 +37,7 @@ const AccordionList = ({ list }: Props) => {
                   fontWeight={isExpanded ? 600 : 500}
                 >
                   <Box as="span" flex="1" textAlign="left">
-                    {item.qtn}
+                    {item.title}
                   </Box>
                   {isExpanded ? (
                     <MinusIcon fontSize="12px" />
@@ -46,7 +46,7 @@ const AccordionList = ({ list }: Props) => {
                   )}
                 </AccordionButton>
               </h2>
-              <AccordionPanel pb={"0"}>{item.answer}</AccordionPanel>
+              <AccordionPanel pb={"0"}>{item.content}</AccordionPanel>
             </>
           )}
         </AccordionItem>

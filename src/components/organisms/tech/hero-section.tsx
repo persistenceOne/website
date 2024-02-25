@@ -46,7 +46,10 @@ const HeroSection = () => {
   const homePagesStats = getList(blockNumber);
   return (
     <Box
-      backgroundImage="url('/images/tech-page/tech-hero.svg')"
+      backgroundImage={{
+        base: "",
+        md: "url('/images/tech-page/tech-hero.svg')"
+      }}
       backgroundPosition="100% 40%"
       backgroundRepeat="no-repeat"
       backgroundSize={"42%"}
