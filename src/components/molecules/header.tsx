@@ -193,7 +193,7 @@ const menuItems = [
       {
         title: "People",
         description:
-          "Meet our team of Persisters and what it takes to become one of us. ",
+          "Get to know the Persistence One contributors, our values, and how to become a Persister.",
         icon: "people",
         iconType: "fill",
         link: "/people",
@@ -202,7 +202,8 @@ const menuItems = [
       },
       {
         title: "Careers",
-        description: "Read about all the major updates and news.",
+        description:
+          "Explore opportunities to contribute to the ecosystem with Persistence Labs.",
         icon: "people",
         iconType: "fill",
         link: "https://forum.persistence.one/",
@@ -212,7 +213,7 @@ const menuItems = [
       {
         title: "Community Forum",
         description:
-          "Join the forum to find answers or discuss your ideas for Persistence..",
+          "Participate in community discussions or share your ideas to grow Persistence One",
         icon: "announcement",
         iconType: "fill",
         link: "https://forum.persistence.one/",
