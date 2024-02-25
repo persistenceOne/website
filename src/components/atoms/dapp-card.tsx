@@ -15,8 +15,8 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
-import { numberFormat } from "@/utils/helpers";
 import Link from "next/link";
+import { TooltipWithTouch } from "./tooltip-with-touch";
 
 export interface DappCardInterface {
   dAppName: string;
@@ -118,13 +118,30 @@ const DappCard = ({
         </Text>
         <HStack gap={"16px"}>
           {supportingAssets.map((asset) => (
-            <Image
+            <TooltipWithTouch
+              label={
+                <Text bg={"white"} color="primary.black">
+                  {asset.asset}
+                </Text>
+              }
+              bg={"#FFFFFF"}
+              px={4}
+              py={2}
+              boxShadow={
+                "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03);"
+              }
+              borderRadius={4}
+              mt={-2}
               key={asset.asset}
-              src={asset.assetIcon}
-              alt={asset.asset}
-              width={isMobile ? 30 : 48}
-              height={isMobile ? 30 : 48}
-            />
+            >
+              <Image
+                src={asset.assetIcon}
+                alt={asset.asset}
+                width={isMobile ? 30 : 48}
+                height={isMobile ? 30 : 48}
+                style={{ cursor: "pointer" }}
+              />
+            </TooltipWithTouch>
           ))}
         </HStack>
       </CardBody>
