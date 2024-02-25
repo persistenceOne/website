@@ -206,7 +206,7 @@ const menuItems = [
           "Explore opportunities to contribute to the ecosystem with Persistence Labs.",
         icon: "people",
         iconType: "fill",
-        link: "https://forum.persistence.one/",
+        link: "https://careers.persistence.one/",
         isExternal: true,
         comingSoon: false
       },
