@@ -57,7 +57,9 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         { asset: "ATOM", assetIcon: "/images/tokens/atom.svg" },
         { asset: "DYDX", assetIcon: "/images/tokens/dydx.svg" },
         { asset: "USDT", assetIcon: "/images/usdt.svg" },
-        { asset: "USDC", assetIcon: "/images/usdc.svg" }
+        { asset: "USDC", assetIcon: "/images/usdc.svg" },
+        { asset: "stkATOM", assetIcon: "/images/stkatom.svg" },
+        { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" }
       ],
       website: { link: "https://dexter.zone", linkText: "dexter.zone" },
       button: {
