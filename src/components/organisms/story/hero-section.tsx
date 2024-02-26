@@ -17,7 +17,7 @@ const HeroSection = () => {
         <Flex
           justify={"space-between"}
           mb={{ base: "40px", md: "90px" }}
-          w={{ base: "auto", md: "60%" }}
+          w={{ base: "auto", md: "55%" }}
         >
           <Box py={"50px"}>
             <Heading

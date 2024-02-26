@@ -63,7 +63,7 @@ const JoinTeamPanel = () => {
       >
         Explore opportunities to contribute to Persistence One’s mission of
         maximizing
-        <br /> liquid staking yield with Persistence Labs.
+        <br /> Liquid Staking yield with Persistence Labs.
       </Text>
       <Box gap={4} display={{ base: "block", md: "flex" }}>
         <Card borderRadius={"20px"} p={8} mb={{ base: "10px", md: "0" }}>

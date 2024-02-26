@@ -160,7 +160,7 @@ const NotesSection = () => {
             boxShadow={"md"}
           >
             <Heading variant={"secondary"} color={"text.blackHigh"}>
-              Pioneered ATOM liquid staking in 2021
+              Pioneered ATOM Liquid Staking in 2021
             </Heading>
             <Image
               src={"/images/tech-page/pioneered.svg"}

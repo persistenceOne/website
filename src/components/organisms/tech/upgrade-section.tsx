@@ -18,7 +18,7 @@ const upgradeList = [
     link: "https://www.mintscan.io/persistence/proposals/55",
     date: "FEB 2024",
     content:
-      "Launched secure and decentralized DYDX liquid staking, improved on-chain security monitoring and simplified the XPRT governance process."
+      "Launched secure and decentralized DYDX Liquid Staking, improved on-chain security monitoring and simplified the XPRT governance process."
   },
   {
     title: "v9",
@@ -38,14 +38,14 @@ const upgradeList = [
     title: "v5",
     link: "https://www.mintscan.io/persistence/proposals/9",
     date: "FEB 2024",
-    content: "Improved security measures for liquid staking on Persistence One."
+    content: "Improved security measures for Liquid Staking on Persistence One."
   },
   {
     title: "v4",
     link: "https://blog.pstake.finance/2022/10/18/interchain-accounts-queries-a-new-chapter-for-liquid-staking-in-cosmos/",
     date: "FEB 2024",
     content:
-      "Added Inter Chain Queries (ICQ) and the pSTAKE Module to launch native liquid staking."
+      "Added Inter Chain Queries (ICQ) and the pSTAKE Module to launch native Liquid Staking."
   },
   {
     title: "v3",

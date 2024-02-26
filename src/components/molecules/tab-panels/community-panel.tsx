@@ -53,7 +53,7 @@ const CommunityPanel = () => {
         fontSize={{ base: "16px", md: "20px" }}
       >
         Learn more about Persistence One, chat with fellow Persisters, and have
-        your voice be heard for the future of the liquid staking economy.
+        your voice be heard for the future of the Liquid Staking economy.
       </Text>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
         {socialCardContents.map((card, index) => (
