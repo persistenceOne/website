@@ -30,6 +30,7 @@ export interface FeatureCardInterface {
   width?: string;
   height?: string;
   cardType?: "img" | "content";
+  imgWidth: number;
 }
 const FeatureCard = ({
   category,
@@ -40,7 +41,8 @@ const FeatureCard = ({
   type = "horizontal",
   width = "100%",
   height = "100%",
-  cardType = "content"
+  cardType = "content",
+  imgWidth
 }: FeatureCardInterface) => {
   return (
     <Card
@@ -100,7 +102,12 @@ const FeatureCard = ({
                 ""
               )}
             </Box>
-            <Image src={image} alt={title} width={270} height={240} />
+            <Image
+              src={image}
+              alt={title}
+              width={category === "Story" ? 212 : 270}
+              height={240}
+            />
           </Stack>
         </CardBody>
       ) : (
@@ -108,7 +115,12 @@ const FeatureCard = ({
           {cardType !== "img" ? (
             <VStack align={"flex-start"} gap={4} mt={-4}>
               <Box alignSelf={"center"}>
-                <Image src={image} alt={title} width={126} height={126} />
+                <Image
+                  src={image}
+                  alt={title}
+                  width={category === "Ecosystem" ? 196 : 126}
+                  height={126}
+                />
               </Box>
               <Heading
                 fontSize={"22px"}
@@ -123,11 +135,7 @@ const FeatureCard = ({
                 {description}
               </Text>
               {cta.linkText !== "" ? (
-                <Link
-                  href={cta.link}
-                  target={cta.isExternal ? "_blank" : ""}
-                  rel={cta.isExternal ? "noopener noreferrer" : ""}
-                >
+                <Link href={cta.link}>
                   <Button
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}
