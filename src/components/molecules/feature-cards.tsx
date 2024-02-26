@@ -30,6 +30,7 @@ const FeatureCards = () => {
           width="60%"
           height="380px"
           category="Story"
+          imgWidth={210}
           title="Proof-of-Stake is Everything. Everything will be Restaked."
           description="Learn about our vision, history, and why we foresee a future where Liquid Staking and Restaking becomes the base value layer in crypto."
           image="/images/lock.svg"
@@ -47,6 +48,7 @@ const FeatureCards = () => {
           title="Persistence One."
           description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the One ecosystem for Staking, Liquid Staking, and Restaking. "
           image="/images/p-ecosystem.svg"
+          imgWidth={190}
           cta={{
             link: MINTSCAN_ECOSYSTEM_LINK,
             linkText: "Explore Ecosystem",
@@ -77,6 +79,7 @@ const FeatureCards = () => {
           title={`Technically Superb. Superbly Powerful.`}
           description="See how Persistence One offers a technically advanced, secure, and robust infrastructure for modular and smart-contract dApps."
           image="/images/robot-arm.svg"
+          imgWidth={130}
           cta={{
             link: "/tech",
             linkText: "Explore Tech",
@@ -93,6 +96,7 @@ const FeatureCards = () => {
             title={`Humility. Integrity. Patience. Persistence.`}
             description="Understand our core values and learn how to become a Persister and contribute."
             image="/images/cylinders.svg"
+            imgWidth={280}
             cta={{
               link: "/people",
               linkText: "Explore People",
@@ -145,6 +149,7 @@ const FeatureCards = () => {
           title="Building in Cosmos since 2019."
           description="From being one of the first Cosmos app chains to enable IBC, CosmWasm, and Liquid Staking Module (LSM) to deploying pSTAKE Finance and Dexter and bringing Restaking to Cosmos, Persistence One’s development pushes the boundaries of the Proof-of-Stake landscape."
           image="/images/story-page/story-hero.svg"
+          imgWidth={366}
           cta={{
             link: "/story",
             linkText: ""
@@ -166,6 +171,7 @@ const FeatureCards = () => {
           category=""
           title=""
           description=""
+          imgWidth={319}
           image="/images/liquidity.svg"
           cta={{
             link: "/xprt",
