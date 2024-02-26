@@ -16,12 +16,16 @@ const list: any = {
   item0: [
     {
       imgUrl: "/images/tech-page/inter-blockchain.svg",
+      imgWidth: "266px",
+      imgHeight: "235px",
       title: "Interblockchain Communication Protocol (IBC)",
       content:
         "Persistence One is connected to 54 Cosmos app chains to trustlessly communicate, transfer tokens, liquid stake and restake tokens."
     },
     {
       imgUrl: "/images/tech-page/interchain-accounts.svg",
+      imgWidth: "460px",
+      imgHeight: "235px",
       title: "Interchain Accounts (ICA)",
       content:
         "Chain Abstraction enables cross-chain execution on chains like Neutron right from Persistence One."
@@ -30,12 +34,16 @@ const list: any = {
   item1: [
     {
       imgUrl: "/images/tech-page/liquidstake.svg",
+      imgWidth: "201px",
+      imgHeight: "235px",
       title: "Liquid Staking Module (LSM)",
       content:
         "LSTfi applications like instant transfer of staked XPRT tokens between wallets are possible only on Persistence One."
     },
     {
       imgUrl: "/images/tech-page/restake.svg",
+      imgWidth: "270px",
+      imgHeight: "235px",
       title: "Restaking Module",
       content:
         "Restake anything on Persistence One like LSTs, Stablecoins, and LP tokens of leading DEXs to improve chain security and earn extra yields. "
@@ -44,12 +52,16 @@ const list: any = {
   item2: [
     {
       imgUrl: "/images/tech-page/cometbft.svg",
+      imgWidth: "260px",
+      imgHeight: "235px",
       title: "CometBFT Consensus",
       content:
         "Short block times and instant finality handles the transaction demand on Persistence One while upholding security."
     },
     {
       imgUrl: "/images/tech-page/cosmwasm.svg",
+      imgWidth: "225px",
+      imgHeight: "235px",
       title: "CosmWasm",
       content:
         "Smart contracts can be deployed on Persistence One in a fast, semi-permissioned, and interoperable manner."
@@ -73,7 +85,7 @@ const EconomySection = () => {
     sliderRef.slickPrev();
   };
   return (
-    <Container maxW={"1140px"} px={{ base: "20px", md: "60px" }}>
+    <Container maxW={"1340px"} px={{ base: "20px", md: "100px" }}>
       <Box py={"70px"}>
         <Heading
           textAlign={"center"}
@@ -84,10 +96,10 @@ const EconomySection = () => {
           Building Blocks of the
           <br /> Liquid Staking Economy
         </Heading>
-        <VStack align={"stretch"} spacing={4}>
+        <VStack align={"stretch"} spacing={"28px"}>
           {Object.keys(list).map((key, index) => (
             <Stack
-              spacing={2}
+              spacing={"28px"}
               direction={{ base: "column", md: "row" }}
               align={"stretch"}
               key={index}
@@ -101,11 +113,12 @@ const EconomySection = () => {
                 boxShadow={"md"}
               >
                 <Box
-                  m={"auto"}
-                  p={"20px"}
+                  mx={"auto"}
+                  px={"20px"}
+                  mb={"20px"}
                   style={{
-                    width: "350px",
-                    height: "200px",
+                    width: list[key][0].imgWidth,
+                    height: list[key][0].imgHeight,
                     position: "relative"
                   }}
                 >
@@ -133,10 +146,12 @@ const EconomySection = () => {
                   boxShadow={"md"}
                 >
                   <Box
-                    m={"auto"}
+                    mx={"auto"}
+                    px={"20px"}
+                    mb={"20px"}
                     style={{
-                      width: "350px",
-                      height: "200px",
+                      width: list[key][1].imgWidth,
+                      height: list[key][1].imgHeight,
                       position: "relative"
                     }}
                   >

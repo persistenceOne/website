@@ -104,3 +104,7 @@ stroke: #ececec;
 .terms-sections .contentClass{
   margin-bottom: 16px;
 }
+
+.ml-auto{
+  margin-left: auto;
+}
