@@ -278,15 +278,39 @@ const TeamSection = () => {
             socialLinks={member.socialLinks}
           />
         ))}
-        <Text
-          alignSelf={"center"}
-          color="primary.black"
-          fontSize={22}
-          fontWeight={600}
-          ml={8}
+        <Box
+          style={{
+            width: "200px",
+            height: "200px",
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+          borderRadius={"100%"}
+          bg={"#252424"}
+          ml={"20px"}
         >
-          +17 Persisters
-        </Text>
+          <Box>
+            <Text
+              alignSelf={"center"}
+              color="text.whiteMid"
+              fontSize={"70px"}
+              fontWeight={600}
+              lineHeight={"60px"}
+            >
+              +17
+            </Text>
+            <Text
+              alignSelf={"center"}
+              color="text.whiteMid"
+              fontSize={"22px"}
+              fontWeight={600}
+            >
+              Persisters
+            </Text>
+          </Box>
+        </Box>
       </Flex>
     </Container>
   );
