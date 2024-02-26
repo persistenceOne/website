@@ -81,7 +81,7 @@ const list: ListProps[] = [
         <Text>
           The{" "}
           <b>
-            Persistence One Ecosystem is expanding by partnering ith leading
+            Persistence One Ecosystem is expanding by partnering with leading
             projects
           </b>{" "}
           like the Cosmos Hub, Kujira, Neutron, Osmosis, Astroport, Shade
@@ -103,7 +103,8 @@ const HistorySection = () => {
     arrows: false,
     infinite: true,
     autoplay: true,
-    speed: 2000,
+    autoplaySpeed: 10000,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots: any) => (
@@ -140,6 +141,7 @@ const HistorySection = () => {
                 bg={"#FFF"}
                 borderRadius={"20px"}
                 boxShadow={"md"}
+                h={{ base: "600px", md: "420px" }}
               >
                 <Flex
                   w={"100%"}
