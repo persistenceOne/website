@@ -8,11 +8,25 @@
         <symbol viewBox="0 0 9 15" id="icon-right_chevron">
             <path d="M1.5 1.19922L7.5 7.19922L1.5 13.1992" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         </symbol>
-        <symbol viewBox="0 0 8 15" id="icon-left_chevron">
-            <path d="M7 13.5625L1 7.5625L7 1.5625" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <symbol viewBox="0 0 9 13"  id="icon-left_chevron">
+            <g clip-path="url(#clip0_30_22)">
+                <path d="M6.50806 1.01221L1.54931 6.05313L6.59023 11.0119"  stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <defs>
+                <clipPath id="clip0_30_22">
+                    <rect width="12" height="8" transform="translate(7.99976) rotate(89.5291)"></rect>
+                </clipPath>
+            </defs>
         </symbol>
-        <symbol viewBox="0 0 8 15" id="icon-right_chevron">
-            <path d="M1 1.5625L7 7.5625L1 13.5625" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <symbol viewBox="0 0 9 13" id="icon-right_chevron">
+            <g clip-path="url(#clip0_30_20)">
+                <path d="M1.50269 11.0042L6.51641 6.01791L1.53017 1.00419" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <defs>
+                <clipPath id="clip0_30_20">
+                    <rect width="12" height="8" transform="translate(0 12) rotate(-89.8425)"></rect>
+                </clipPath>
+            </defs>
         </symbol>
         <symbol viewBox="0 0 22 22" id="icon-announcement">
             <g clip-path="url(#clip0_2343_6536)">

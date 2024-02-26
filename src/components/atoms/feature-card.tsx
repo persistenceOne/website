@@ -65,7 +65,7 @@ const FeatureCard = ({
         <CardBody p={"0"} style={{ display: "flex" }}>
           <Stack
             spacing={4}
-            align={"end"}
+            align={category === "Story" ? "center" : "end"}
             direction={{ base: "column", md: "row" }}
           >
             <Box>
@@ -111,7 +111,7 @@ const FeatureCard = ({
           </Stack>
         </CardBody>
       ) : (
-        <CardBody p={"0"}>
+        <CardBody p={"0"} display={category === "" ? "flex" : "block"}>
           {cardType !== "img" ? (
             <VStack align={"flex-start"} gap={4} mt={-4}>
               <Box alignSelf={"center"}>
