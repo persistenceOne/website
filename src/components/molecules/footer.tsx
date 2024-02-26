@@ -23,21 +23,21 @@ const footerSocialLinks = [
     link: "https://twitter.com/PersistenceOne",
     icon: "twitter",
     iconType: "stroke",
-    color: "#1DA1F2"
+    color: "#000000"
   },
   {
     name: "Discord",
     link: "https://discord.com/invite/vyvp3scWnH",
     icon: "discord",
     iconType: "stroke",
-    color: "#5865F2"
+    color: "#767EF0"
   },
   {
     name: "Telegram",
     link: "https://t.me/persistenceone",
     icon: "telegram",
     iconType: "stroke",
-    color: "#0077B5"
+    color: "#418FCD"
   },
   {
     name: "Medium",
@@ -58,7 +58,7 @@ const footerSocialLinks = [
     link: "https://www.mintscan.io/persistence/",
     icon: "mintscan",
     iconType: "stroke",
-    color: "#000000"
+    color: "#9C9C9C"
   }
 ];
 
@@ -207,24 +207,35 @@ const Footer = () => {
                   target="_blank"
                   rel="noopenner noreferrer"
                 >
-                  <Box
-                    w={"24px"}
-                    h={"24px"}
-                    borderRadius={"100%"}
-                    className={"icon-box"}
-                    bg={"#9C9C9C"}
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center"
-                    }}
-                  >
-                    <Icon
-                      icon={link.icon}
-                      color="white"
-                      viewClass={`footer-icon ${link.iconType}`}
-                    />
-                  </Box>
+                  {link.icon !== "github" ? (
+                    <Box
+                      w={"24px"}
+                      h={"24px"}
+                      // _hover={{ bg: link.color }}
+                      borderRadius={"100%"}
+                      className={"icon-box"}
+                      bg={"#9C9C9C"}
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                      }}
+                    >
+                      <Icon
+                        icon={link.icon}
+                        color="white"
+                        viewClass={`footer-icon ${link.iconType}`}
+                      />
+                    </Box>
+                  ) : (
+                    <Box w={"24px"} h={"24px"}>
+                      <Icon
+                        icon={link.icon}
+                        color="white"
+                        viewClass={` ${link.iconType}`}
+                      />
+                    </Box>
+                  )}
                 </Link>
               ))}
             </HStack>
