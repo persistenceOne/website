@@ -87,7 +87,7 @@ const FeatureCards = () => {
           height="450px"
         />
 
-        <VStack align={"stretch"} gap={4}>
+        <VStack align={"stretch"} gap={0} justify={"space-between"}>
           <FeatureCard
             category="People"
             title="Humility. Integrity. Patience. Persistence."

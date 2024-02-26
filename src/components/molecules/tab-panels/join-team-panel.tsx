@@ -103,6 +103,7 @@ const JoinTeamPanel = () => {
                 rightIcon={<ArrowForwardIcon />}
                 color={"text.headingBlack"}
                 fontSize={14}
+                _hover={{ color: "primary.red" }}
               >
                 Learn more about working with us
               </Button>

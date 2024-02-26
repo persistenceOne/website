@@ -22,7 +22,7 @@ const xprtUsageCards = [
       "XPRT is used as transaction fees for the ~5000+ daily on-chain transactions related to XPRT staking, IBC transfers, LSTfi activity on Persistence One, and more.",
     image: "/images/xprt-page/transaction-fees.svg",
     cta: {
-      text: "Learn more",
+      text: "Learn More",
       link: "https://www.mintscan.io/persistence/tx",
       isExternal: true
     }

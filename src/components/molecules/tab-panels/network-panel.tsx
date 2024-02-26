@@ -33,7 +33,7 @@ const NetworkPanel = () => {
                 textAlign={"left"}
                 mt={2}
               >
-                Help the Persistence Network remain Secure and Persistent.
+                Help the Persistence One network remain secure and persistent.
               </Text>
             </Box>
             <Box justifySelf={"flex-end"}>
