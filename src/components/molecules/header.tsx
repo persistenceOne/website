@@ -19,7 +19,7 @@ import {
   useDisclosure,
   PlacementWithLogical
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Icon from "./Icon";
 import {
   fetchChainTVL,
@@ -42,8 +42,8 @@ const menuItems = [
       {
         title: "Story",
         description: "Learn about the Persistent Vision and our origin story.",
-        icon: "announcement",
-        iconType: "fill",
+        icon: "book",
+        iconType: "stroke",
         link: "/story",
         isExternal: false,
         comingSoon: false
@@ -61,8 +61,8 @@ const menuItems = [
         title: "Blog",
         description:
           "Read about the latest partnerships and major product and tech updates",
-        icon: "people",
-        iconType: "fill",
+        icon: "blog",
+        iconType: "stroke",
         link: "https://blog.persistence.one/",
         isExternal: true,
         comingSoon: false
@@ -86,7 +86,7 @@ const menuItems = [
         title: "XPRT",
         description:
           "Learn about the native token fueling the Persistence One Ecosystem",
-        icon: "plogo",
+        icon: "xprt-nav",
         iconType: "fill",
         link: "/xprt",
         isExternal: false,
@@ -96,7 +96,7 @@ const menuItems = [
         title: "Tech",
         description:
           "Discover how Persistence One sits at the cutting-edge of decentralized tech.",
-        icon: "tech",
+        icon: "code",
         iconType: "stroke",
         link: "/tech",
         isExternal: false,
@@ -169,7 +169,7 @@ const menuItems = [
       {
         title: "pWallet",
         description: "Manage and transfer XPRT tokens and staked delegations",
-        icon: "secure",
+        icon: "wallet",
         iconType: "stroke",
         link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true,
@@ -178,7 +178,7 @@ const menuItems = [
       {
         title: "pBridge",
         description: "Transfer tokens between Ethereum and Persistence One",
-        icon: "tech",
+        icon: "bridge",
         iconType: "stroke",
         link: "https://bridge.persistence.one",
         isExternal: true,
@@ -204,8 +204,8 @@ const menuItems = [
         title: "Careers",
         description:
           "Explore opportunities to contribute to the ecosystem with Persistence Labs.",
-        icon: "people",
-        iconType: "fill",
+        icon: "career",
+        iconType: "stroke",
         link: "https://careers.persistence.one/",
         isExternal: true,
         comingSoon: false
@@ -214,8 +214,8 @@ const menuItems = [
         title: "Community Forum",
         description:
           "Participate in community discussions or share your ideas to grow Persistence One",
-        icon: "announcement",
-        iconType: "fill",
+        icon: "community",
+        iconType: "stroke",
         link: "https://forum.persistence.one/",
         isExternal: true,
         comingSoon: false
@@ -333,13 +333,15 @@ const getMenuList = (
                       </Box>
                     </Box>
                     <VStack align={"start"} gap={0}>
-                      <Text
-                        cursor={"pointer"}
-                        fontSize={16}
+                      <Box
+                        style={{ display: "flex", alignItems: "center" }}
                         color={"primary.red"}
                       >
-                        {subItem.title}{" "}
-                      </Text>
+                        <Text cursor={"pointer"} fontSize={16} pr={"5px"}>
+                          {subItem.title}
+                        </Text>
+                        {subItem.isExternal ? <ExternalLinkIcon /> : null}
+                      </Box>
                       <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
                         {subItem.description}
                       </Text>
@@ -449,7 +451,7 @@ const Header = () => {
     >
       <Container
         maxW={"1440px"}
-        px={{ base: "20px", md: "70px" }}
+        px={{ base: "20px", md: "60px" }}
         transition={"all 0.3s"}
         py={"20px"}
       >

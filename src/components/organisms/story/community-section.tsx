@@ -35,7 +35,7 @@ const CommunitySection = () => {
       }}
       backgroundPosition="bottom right"
     >
-      <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }} py={"60px"}>
+      <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"60px"}>
         <Heading
           fontSize={{ base: "22px", md: "32px" }}
           textAlign={{ base: "center", md: "left" }}

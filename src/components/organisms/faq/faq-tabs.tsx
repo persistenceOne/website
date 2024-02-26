@@ -72,7 +72,7 @@ const FaqTabs = () => {
             borderRadius={8}
             mr={2}
             boxShadow={"md"}
-            mt={"16px"}
+            mt={"30px"}
           >
             <VStack align="start" spacing={2}>
               <Text color="#423F40" fontWeight={700} fontSize={16}>

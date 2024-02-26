@@ -35,7 +35,7 @@ const list = [
 ];
 const VisionSection = () => {
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "60px", lg: "80px" }}>
+    <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
       <Box pt={{ base: "32px", md: "60px" }} pb={{ base: "32px", md: "100px" }}>
         <Heading
           textAlign={"center"}

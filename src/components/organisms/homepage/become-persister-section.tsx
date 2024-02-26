@@ -97,28 +97,32 @@ const BecomePersisterSection = ({
           </Tabs>
         </Box>
       </Container>
+
       {showEcosystemSection ? (
-        <VStack
-          align={"center"}
-          px={{ base: "26px", md: "34px" }}
-          py={10}
-          gap={8}
-          bg={"#FEFEFE"}
-        >
-          <Text
-            fontWeight={600}
-            fontSize={{ base: "22px", md: "34px" }}
-            textAlign={"center"}
+        <Box bg={"#FEFEFE"}>
+          <Container
+            maxW={"1300px"}
+            px={{ base: "16px", md: "30px" }}
+            py={"50px"}
           >
-            Persistence One is expanding liquid staking, creating LSTfi yield
-            opportunities, and bringing Restaking to Cosmos.
-          </Text>
-          <Link href={"/xprt"}>
-            <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-              Explore Ecosystem
-            </Button>
-          </Link>
-        </VStack>
+            <VStack align={"center"} px={{ base: "26px", md: "34px" }}>
+              <Text
+                fontWeight={600}
+                fontSize={{ base: "22px", md: "34px" }}
+                textAlign={"center"}
+                mb={"26px"}
+              >
+                Persistence One is expanding liquid staking, creating LSTfi
+                yield opportunities, and bringing Restaking to Cosmos.
+              </Text>
+              <Link href={"/xprt"}>
+                <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                  Explore Ecosystem
+                </Button>
+              </Link>
+            </VStack>
+          </Container>
+        </Box>
       ) : null}
     </>
   );

@@ -5,7 +5,7 @@ import React from "react";
 
 const Overview = () => {
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
+    <Container maxW={"1140px"} px={{ base: "20px", md: "30px" }}>
       <Box>
         <Heading
           mb={"4px"}
