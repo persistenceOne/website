@@ -22,10 +22,22 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
             mb={{ base: "16px", md: "0px" }}
           >
             <Text
-              color={"primary.red"}
+              color={"text.headingBlack"}
               fontSize={{ base: "22px", md: "44px" }}
               fontWeight={700}
             >
+              {stat.statLabel == "Average Transaction Cost" ? (
+                <Text
+                  as={"span"}
+                  fontFamily={"sans-serif"}
+                  mr={2}
+                  fontWeight={900}
+                >
+                  &lt;
+                </Text>
+              ) : (
+                ""
+              )}
               {stat.statValue}
             </Text>
             <Text

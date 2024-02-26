@@ -80,15 +80,15 @@ const HeroSection = () => {
         <HomePageStats
           stats={[
             {
-              statValue: `$${numberFormat(tvl, 3)}`,
+              statValue: `$${numberFormat(tvl, 2)}`,
               statLabel: "Total Value Locked"
             },
             {
-              statValue: `$${numberFormat(ibcVolume, 3)}`,
+              statValue: `$${numberFormat(ibcVolume, 2)}`,
               statLabel: "IBC Volume (30 Days)"
             },
             {
-              statValue: `< $${transactionCost}`,
+              statValue: `$${transactionCost}`,
               statLabel: "Average Transaction Cost"
             }
           ]}

@@ -50,9 +50,9 @@ const FaqTabs = () => {
       <Heading fontSize={"36px"} color={"text.blackHigh"}>
         Question? We have answers.
       </Heading>
-      <Text pb={"40px"} fontSize={"18px"} color={"#423F40B2"}>
+      {/* <Text pb={"40px"} fontSize={"18px"} color={"#423F40B2"}>
         You can find some answers to commonly asked question below.
-      </Text>
+      </Text> */}
       <Tabs position="relative" variant="unstyled" orientation={"vertical"}>
         <TabList borderRight={"1px"} borderColor={"#DBE4EF"} w={"35%"}>
           {tabList.map((item) => (
@@ -61,7 +61,7 @@ const FaqTabs = () => {
               textAlign={"left"}
               justifyContent={"start"}
               color={"text.blackLow"}
-              fontWeight={700}
+              fontWeight={500}
               pt={"24px"}
               fontSize={"18px"}
               _selected={{ color: "#000", fontWeight: 700, fontSize: "18px" }}

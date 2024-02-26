@@ -90,7 +90,7 @@ const FeatureCards = () => {
         <VStack align={"stretch"} gap={0} justify={"space-between"}>
           <FeatureCard
             category="People"
-            title="Humility. Integrity. Patience. Persistence."
+            title={`Humility. Integrity. Patience. Persistence.`}
             description="Understand our core values and learn how to become a Persister and contribute."
             image="/images/cylinders.svg"
             cta={{
@@ -143,7 +143,7 @@ const FeatureCards = () => {
           height="380px"
           category="Roadmap"
           title="Building in Cosmos since 2019."
-          description="Skim through the biggest milestones of the past 4 years of building out our vision and what’s next."
+          description="From being one of the first Cosmos app chains to enable IBC, CosmWasm, and Liquid Staking Module (LSM) to deploying pSTAKE Finance and Dexter and bringing Restaking to Cosmos, Persistence One’s development pushes the boundaries of the Proof-of-Stake landscape."
           image="/images/story-page/story-hero.svg"
           cta={{
             link: "/story",
