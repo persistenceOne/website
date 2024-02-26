@@ -45,6 +45,20 @@ const footerSocialLinks = [
     icon: "medium",
     iconType: "stroke",
     color: "#000000"
+  },
+  {
+    name: "Github",
+    link: "https://github.com/persistenceOne/",
+    icon: "github",
+    iconType: "stroke",
+    color: "#0077B5"
+  },
+  {
+    name: "Mintscan",
+    link: "https://www.mintscan.io/persistence/",
+    icon: "mintscan",
+    iconType: "stroke",
+    color: "#000000"
   }
 ];
 

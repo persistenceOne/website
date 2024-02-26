@@ -127,7 +127,7 @@ const BlogSection = () => {
     sliderRef.slickPrev();
   };
   return (
-    <Container maxW={"1200px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
+    <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
       <Box>
         <VStack align={"flex-start"} mb={"60px"}>
           <Heading

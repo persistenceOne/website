@@ -85,6 +85,7 @@ const DappCard = ({
               mt={-4}
               fontSize={"18px"}
               color={"#606060"}
+              _hover={{ color: "#C73238" }}
             >
               {website.linkText}
             </Button>
@@ -135,6 +136,7 @@ const DappCard = ({
             color={button.color}
             w={"240px"}
             rightIcon={<ArrowForwardIcon />}
+            _hover={{ color: "#C73238" }}
           >
             {button.text}
           </Button>

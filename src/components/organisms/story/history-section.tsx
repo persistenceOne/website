@@ -111,7 +111,7 @@ const HistorySection = () => {
     )
   };
   return (
-    <Container maxW={"1400px"} px={{ base: "20px", md: "60px" }}>
+    <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }}>
       <Box py={"70px"}>
         <Heading
           textAlign={"center"}

@@ -82,6 +82,7 @@ const FeatureCard = ({
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}
                     color={"#423F40"}
+                    _hover={{ color: "#C73238" }}
                     fontSize={16}
                   >
                     {cta.linkText}
@@ -120,6 +121,7 @@ const FeatureCard = ({
                     rightIcon={<ArrowForwardIcon />}
                     color={"#423F40"}
                     fontSize={16}
+                    _hover={{ color: "#C73238" }}
                   >
                     {cta.linkText}
                   </Button>
