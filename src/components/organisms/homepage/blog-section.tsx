@@ -129,7 +129,7 @@ const BlogSection = () => {
   return (
     <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
       <Box>
-        <VStack align={"flex-start"} mb={"60px"}>
+        <VStack align={"center"} mb={"60px"}>
           <Heading
             color="text.headingSemiBlack"
             fontSize={{ base: "26px", md: "58px" }}
@@ -137,7 +137,7 @@ const BlogSection = () => {
             Latest on Persistence One
           </Heading>
           <Text
-            maxW={"75%"}
+            // maxW={"75%"}
             fontSize={{ base: "16px", md: "22px" }}
             color={"text.blackMid"}
           >
