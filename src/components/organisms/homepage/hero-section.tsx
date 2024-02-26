@@ -32,14 +32,13 @@ const HeroSection = () => {
 
   return (
     <Box
-      px={{ base: "20px", md: "60px" }}
       className={"hero-content"}
       backgroundImage={{ base: "", md: "url('/images/hero-bg.svg')" }}
       backgroundPosition="100% 0"
       backgroundRepeat="no-repeat"
-      backgroundSize={"35% 100%"}
+      backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "25% 90%" }}
     >
-      <Container maxW={"1440px"} px={"0"}>
+      <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
         <Spacer h={"150px"} />
         <Flex justify={"space-between"} mb={{ base: "20px", md: "60px" }}>
           <VStack align={"stretch"}>

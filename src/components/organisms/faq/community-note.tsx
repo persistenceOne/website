@@ -7,6 +7,7 @@ import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 const CommunityNote = () => {
   return (
     <Box
+      bg={"#FEFEFE"}
       style={{
         backgroundImage: "url('/images/p-coin-white.svg')",
         backgroundPosition: "100% 100%",

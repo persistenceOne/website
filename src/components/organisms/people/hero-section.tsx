@@ -14,7 +14,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <Container maxW={"1440px"} px={"40px"}>
+    <Container maxW={"1440px"} px={"60px"}>
       <Spacer h={20} />
       <Flex justify={"space-between"} align={"flex-start"} pos={"relative"}>
         <VStack

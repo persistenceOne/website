@@ -45,16 +45,16 @@ const HeroSection = () => {
 
   const homePagesStats = getList(blockNumber);
   return (
-    <Box
-      backgroundImage={{
-        base: "",
-        md: "url('/images/tech-page/tech-hero.svg')"
-      }}
-      backgroundPosition="100% 40%"
-      backgroundRepeat="no-repeat"
-      backgroundSize={"42%"}
-    >
-      <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
+    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
+      <Box
+        backgroundImage={{
+          base: "",
+          md: "url('/images/tech-page/tech-hero.svg')"
+        }}
+        backgroundPosition="100% 40%"
+        backgroundRepeat="no-repeat"
+        backgroundSize={"42%"}
+      >
         <Spacer h={{ base: 0, md: 20 }} />
         <Flex justify={"space-between"} mb={{ base: "40px", md: "100px" }}>
           <Box pt={"150px"}>
@@ -128,8 +128,8 @@ const HeroSection = () => {
           ))}
         </Stack>
         <Spacer h={"120px"} />
-      </Container>
-    </Box>
+      </Box>
+    </Container>
   );
 };
 
