@@ -42,7 +42,7 @@ const BlogSection = () => {
   return (
     <Container maxW={"1340px"} px={{ base: "16px", md: "50px" }} py={"60px"}>
       <Box>
-        <VStack align={"flex-start"} mb={"40px"}>
+        <VStack align={"center"} mb={"40px"}>
           <Heading
             color="text.headingSemiBlack"
             fontSize={{ base: "26px", md: "58px" }}
@@ -50,14 +50,7 @@ const BlogSection = () => {
           >
             Community Resources
           </Heading>
-          <Text
-            maxW={"75%"}
-            fontSize={{ base: "16px", md: "22px" }}
-            color={"text.blackMid"}
-            mb={"10px"}
-          >
-            All you need to know about XPRT.
-          </Text>
+
           {/* <Button
             variant={"link"}
             color={"primary.black"}
