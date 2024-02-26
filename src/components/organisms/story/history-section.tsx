@@ -102,6 +102,8 @@ const HistorySection = () => {
     dots: true,
     arrows: false,
     infinite: true,
+    autoplay: true,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots: any) => (
