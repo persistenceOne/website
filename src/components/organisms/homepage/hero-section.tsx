@@ -37,7 +37,7 @@ const HeroSection = () => {
       backgroundImage={{ base: "", md: "url('/images/hero-bg.svg')" }}
       backgroundPosition="100% 0"
       backgroundRepeat="no-repeat"
-      backgroundSize={"45% 90%"}
+      backgroundSize={"35% 100%"}
     >
       <Container maxW={"1440px"} px={"0"}>
         <Spacer h={"150px"} />
