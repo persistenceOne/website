@@ -1,3 +1,3 @@
 # Website
 
-persistence.one website source code
+persistence.one website source code.

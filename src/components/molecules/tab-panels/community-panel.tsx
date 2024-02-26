@@ -21,7 +21,7 @@ const socialCardContents = [
   {
     title: "Discord",
     description: "Join our community",
-    link: TELEGRAM_PERSISTENCE_COMMUNITY_LINK,
+    link: "https://discord.com/invite/vyvp3scWnH",
     image: "/icons/discord.svg"
   },
   {

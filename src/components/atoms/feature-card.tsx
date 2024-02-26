@@ -123,7 +123,11 @@ const FeatureCard = ({
                 {description}
               </Text>
               {cta.linkText !== "" ? (
-                <Link href={cta.link}>
+                <Link
+                  href={cta.link}
+                  target={cta.isExternal ? "_blank" : ""}
+                  rel={cta.isExternal ? "noopener noreferrer" : ""}
+                >
                   <Button
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}

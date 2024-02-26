@@ -41,7 +41,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       dAppName: "Dexter",
       dAppLogo: "/images/dexter-logo.svg",
       dAppDescription:
-        "Dexter is a decentralized exchange governed by $XPRT to bootstrap liquidity for LSTs, Stablecoins, LRTs, and other IBC tokens.",
+        "Dexter is a decentralized exchange governed by XPRT to bootstrap liquidity for LSTs, Stablecoins, LRTs, and other IBC tokens.",
       dAppStats: [
         {
           label: "Total Value Locked",

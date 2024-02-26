@@ -42,7 +42,7 @@ const menuItems = [
     subItems: [
       {
         title: "Story",
-        description: "Learn about the Persistent Vision and our origin story.",
+        description: "Learn about our persistent vision and origin story.",
         icon: "book",
         iconType: "stroke",
         link: "/story",

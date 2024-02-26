@@ -208,9 +208,8 @@ export const aboutPersistence = [
 
 export const aboutXprt = [
   {
-    title: "What is $XPRT?",
-    content:
-      "$XPRT is the native staking token of the Persistence Core-1 chain."
+    title: "What is XPRT?",
+    content: "XPRT is the native staking token of the Persistence Core-1 chain."
   },
   {
     title: "What is the role of XPRT in the ecosystem?",
@@ -222,10 +221,10 @@ export const aboutXprt = [
     )
   },
   {
-    title: "Where can you acquire $XPRT?",
+    title: "Where can you acquire XPRT?",
     content: (
       <div>
-        $XPRT is listed on Centralised Exchanges such as{" "}
+        XPRT is listed on Centralised Exchanges such as{" "}
         <a
           href={"https://www.huobi.com/en-us/"}
           target="_blank"
@@ -288,7 +287,7 @@ export const aboutXprt = [
     )
   },
   {
-    title: "What is the unbonding period for staked $XPRT?",
+    title: "What is the unbonding period for staked XPRT?",
     content: "21 days"
   },
   {
@@ -320,10 +319,10 @@ export const aboutXprt = [
     )
   },
   {
-    title: "What are the current DeFi opportunities for $XPRT?",
+    title: "What are the current DeFi opportunities for XPRT?",
     content: (
       <>
-        Currently, $XPRT users can provide liquidity on{" "}
+        Currently, XPRT users can provide liquidity on{" "}
         <a
           href={"https://app.osmosis.zone/pool/15"}
           target="_blank"
@@ -346,7 +345,7 @@ export const aboutXprt = [
     )
   },
   {
-    title: "Which wallets support $XPRT?",
+    title: "Which wallets support XPRT?",
     content: (
       <>
         <a
@@ -395,7 +394,7 @@ export const aboutXprt = [
         >
           <u>Frontier</u>{" "}
         </a>
-        are some wallets supporting $XPRT. <br />
+        are some wallets supporting XPRT. <br />
         An integration with Ledger Live is expected to go live in the near
         future.
       </>
