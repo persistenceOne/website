@@ -82,7 +82,7 @@ const UpgradeSection = () => {
           fontSize={{ base: "22px", md: "44px" }}
           mb={{ base: "40px", md: "80px" }}
         >
-          Evolving Constantly. Upgrading Securely
+          Evolving Constantly. Upgrading Securely.
         </Heading>
         <Slider
           {...{
