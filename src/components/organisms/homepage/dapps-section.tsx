@@ -11,7 +11,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       dAppName: "pSTAKE Finance",
       dAppLogo: "/images/pstake-logo.svg",
       dAppDescription:
-        "pSTAKE is a multi-chain liquid staking protocol that unlocks liquidity for your staked assets.",
+        "pSTAKE is a multi-chain Liquid Staking protocol that unlocks liquidity for your staked assets.",
       dAppStats: [
         {
           label: "Total Value Locked",

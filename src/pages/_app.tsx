@@ -27,7 +27,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           name="keywords"
-          content="persistence, liquid staking, pstake, $pstake, cosmos, bamboo, dexter, xprt, xprt token"
+          content="persistence, liquid staking, restaking, pstake, $pstake, cosmos, bamboo, dexter, xprt, xprt token"
         />
         <link rel="manifest" href="/manifest.json" />
 

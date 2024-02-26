@@ -26,7 +26,7 @@ const CommunityNote = () => {
           fontWeight={700}
           lineHeight={{ base: "1.5", md: "42px" }}
         >
-          Persistence One is expanding liquid staking,
+          Persistence One is expanding Liquid Staking,
           <br /> creating LSTfi yield opportunities, and bringing
           <br /> Restaking to Cosmos.
         </Heading>

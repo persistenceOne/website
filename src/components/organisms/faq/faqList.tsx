@@ -10,7 +10,7 @@ export const aboutPersistence = [
     content: (
       <>
         Persistence One&apos;s vision is to be a one-stop shop for all things
-        liquid staking by offering users a seamless Staking and DeFi experience
+        Liquid Staking by offering users a seamless Staking and DeFi experience
         &amp; enabling developers to build innovative applications around LSTs.
       </>
     )
@@ -26,7 +26,7 @@ export const aboutPersistence = [
   },
   {
     title:
-      "What are the liquid staking products on the Persistence Core-1 chain?",
+      "What are the Liquid Staking products on the Persistence Core-1 chain?",
     content: (
       <div>
         Persistence One hosts a suite of DeFi applications focused on LSTs. The
@@ -43,7 +43,7 @@ export const aboutPersistence = [
                 <u>pSTAKE Finance</u>—
               </b>
             </a>
-            a multi-chain liquid staking protocol for issuing LSTs that allows
+            a multi-chain Liquid Staking protocol for issuing LSTs that allows
             users to stake their assets while participating in DeFi.
           </li>
           <li>
@@ -355,7 +355,7 @@ export const aboutXprt = [
 
 export const liquidStaking = [
   {
-    title: "What is liquid Staking?",
+    title: "What is Liquid Staking?",
     content: (
       <>
         Liquid Staking is the process of staking your proof-of-stake (PoS)
