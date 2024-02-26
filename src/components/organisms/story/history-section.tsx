@@ -139,8 +139,13 @@ const HistorySection = () => {
                 borderRadius={"20px"}
                 boxShadow={"md"}
               >
-                <Flex w={"100%"} direction={{ base: "column", md: "row" }}>
-                  <Box w={{ base: "100%", md: "40%" }}>
+                <Flex
+                  w={"100%"}
+                  direction={{ base: "column", md: "row" }}
+                  justify={"center"}
+                  align={"center"}
+                >
+                  <Box w={{ base: "50%", md: "40%" }}>
                     <Image src={item.imgUrl} alt="" width={290} height={240} />
                   </Box>
                   <Box w={{ base: "100%", md: "60%" }}>

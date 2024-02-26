@@ -34,7 +34,7 @@ const HeroSection = () => {
     <Box
       px={{ base: "20px", md: "60px" }}
       className={"hero-content"}
-      backgroundImage="url('/images/hero-bg.svg')"
+      backgroundImage={{ base: "", md: "url('/images/hero-bg.svg')" }}
       backgroundPosition="100% 0"
       backgroundRepeat="no-repeat"
       backgroundSize={"45% 90%"}
