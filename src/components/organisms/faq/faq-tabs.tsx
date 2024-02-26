@@ -45,7 +45,6 @@ const FaqTabs = () => {
       px={{ base: "20px", md: "80px" }}
       pt={"120px"}
       pb={"80px"}
-      bg={"#FEFEFE"}
     >
       <Heading fontSize={"36px"} color={"text.blackHigh"}>
         Question? We have answers.
