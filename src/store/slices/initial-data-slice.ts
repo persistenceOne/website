@@ -78,7 +78,7 @@ const initialState: InitialDataSliceState = {
   },
   tvl: 0,
   ibcVolume: 14995000,
-  transactionCost: 0.23947,
+  transactionCost: 0.005,
   marketCap: 0,
   blocks: 0,
   ibcConnections: 45,

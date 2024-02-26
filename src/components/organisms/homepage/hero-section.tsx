@@ -88,7 +88,7 @@ const HeroSection = () => {
               statLabel: "IBC Volume (30 Days)"
             },
             {
-              statValue: `$${transactionCost}`,
+              statValue: `< $${transactionCost}`,
               statLabel: "Average Transaction Cost"
             }
           ]}
