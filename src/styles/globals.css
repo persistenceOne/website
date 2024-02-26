@@ -31,6 +31,7 @@ body {
 
 .upgrade-slider-arrow .icon {
 stroke: #ececec;
+  fill: transparent;
 }
 
 .blog-slider-arrow .icon {
