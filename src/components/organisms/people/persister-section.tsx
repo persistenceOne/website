@@ -40,7 +40,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
     icon: "/icons/team-page/team.svg"
   },
   {
-    title: "Fulfilling Life",
+    title: "Fulfiling Life",
     description: "Mental, physical and emotional health always come first.",
     icon: "/icons/team-page/health.svg"
   }

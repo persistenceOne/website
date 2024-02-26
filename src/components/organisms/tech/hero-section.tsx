@@ -99,7 +99,7 @@ const HeroSection = () => {
                 mb={{ base: "16px", md: "0px" }}
               >
                 <Text
-                  color={"primary.red"}
+                  color={"text.headingBlack"}
                   fontSize={{ base: "22px", md: "44px" }}
                   fontWeight={700}
                 >

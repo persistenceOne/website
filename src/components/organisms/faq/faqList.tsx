@@ -1,97 +1,35 @@
 export const aboutPersistence = [
   {
-    title: "What is Persistence?",
+    title: "What is Persistence One?",
     content:
-      "Persistence is an app chain for Liquid Staking powering an ecosystem of " +
+      "Persistence One is an app chain for Liquid Staking powering an ecosystem of " +
       "DeFi applications focused on unlocking the liquidity of staked assets."
   },
   {
-    title: "What is the vision of Persistence?",
+    title: "What is the vision of Persistence One?",
     content: (
       <>
-        Persistence’s vision is to be a one-stop shop for all things liquid
-        staking by offering users a seamless Staking and DeFi experience &
-        enabling developers to build innovative applications around LSTs.
+        Persistence One&apos;s vision is to be a one-stop shop for all things
+        liquid staking by offering users a seamless Staking and DeFi experience
+        &amp; enabling developers to build innovative applications around LSTs.
       </>
     )
   },
+
   {
-    title: "What consensus mechanism does Persistence use?",
-    content: "Persistence uses the CometBFT Consensus Mechanism."
+    title: "What consensus mechanism does Persistence One use?",
+    content: "Persistence One uses the CometBFT Consensus Mechanism."
   },
   {
-    title: "Is Persistence an IBC-enabled chain?",
-    content: "Yes, Persistence is an IBC-enabled chain."
-  },
-  {
-    title: "What is the Persistence Foundation?",
-    content: (
-      <>
-        The{" "}
-        <a
-          href="https://www.notion.so/learn/persistence-foundation"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <u>Persistence Foundation</u>
-        </a>{" "}
-        is committed to ensuring the welfare of the XPRT holders and Stakers by
-        driving utility for the asset.
-      </>
-    )
-  },
-  {
-    title: "What is the Persistence Lab?",
-    content: (
-      <div>
-        The{" "}
-        <a
-          href="https://www.notion.so/learn/persistence-labs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <u>Persistence Labs</u>
-        </a>{" "}
-        is committed to building products, apps, and other tools/services on the
-        Persistence network by supporting and incubating external teams to
-        further the growth of the Persistence liquid staking ecosystem.
-        <p>The two main pillars of Persistence Labs are:</p>
-        <ul className="links">
-          <li>
-            <a
-              href="https://www.mintscan.io/persistence"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <u>The Persistence Core-1 Chain-</u>
-            </a>{" "}
-            The absolute core of the ecosystem, the blockchain powers all
-            activity for users and allows developers to build innovative use
-            cases to become part of the ecosystem
-          </li>
-          <li>
-            <a
-              href="https://www.notion.so/learn/persistence-labs"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <u>AUDIT.one-</u>
-            </a>{" "}
-            The Research and Validator arm of Persistence Labs, securing
-            multiple Proof-of-Stake networks, driving innovation and adoption of
-            Proof-of-Stake and secure blockchain infrastructure.
-          </li>
-        </ul>
-      </div>
-    )
+    title: "Is Persistence One an IBC-enabled chain?",
+    content: "Yes, Persistence One is an IBC-enabled chain."
   },
   {
     title:
       "What are the liquid staking products on the Persistence Core-1 chain?",
     content: (
       <div>
-        Persistence hosts a suite of DeFi applications focused on LSTs. The
+        Persistence One hosts a suite of DeFi applications focused on LSTs. The
         dApps built on the Persistence Core-1 chain are:
         <ul className="links">
           <li>
@@ -140,10 +78,10 @@ export const aboutPersistence = [
     )
   },
   {
-    title: "How many validators are active on Persistence Network?",
+    title: "How many validators are active on Persistence One Network?",
     content: (
       <>
-        The Persistence active set consists of{" "}
+        The Persistence One active set consists of{" "}
         <a
           href="https://www.mintscan.io/persistence"
           target="_blank"
@@ -156,16 +94,16 @@ export const aboutPersistence = [
     )
   },
   {
-    title: "How decentralized is the Persistence chain? ",
+    title: "How decentralized is the Persistence Core-1 chain?",
     content: (
       <>
-        Persistence is one of the most decentralized chains in Cosmos, with one
-        of the highest Nakamoto Coefficient and Network Scores.
+        Persistence Core-1 is one of the most decentralized chains in Cosmos,
+        with one of the highest Nakamoto Coefficient and Network Scores.
       </>
     )
   },
   {
-    title: "What is the Persistence Foundation Delegation Program?",
+    title: "What is the Persistence One Foundation Delegation Program?",
     content: (
       <div>
         The{" "}
@@ -176,7 +114,7 @@ export const aboutPersistence = [
           target="_blank"
           rel="noopener noreferrer"
         >
-          <u>Persistence Foundation Delegation Program </u>
+          <u>Persistence One Foundation Delegation Program </u>
         </a>{" "}
         is an initiative to improve the overall health and robustness of the
         Persistence network by providing support to contributing validators in

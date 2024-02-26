@@ -158,9 +158,12 @@ const BlogSection = () => {
           {...{
             dots: false,
             arrows: false,
-            infinite: false,
+            infinite: true,
             slidesToShow: isMobile ? 1 : 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 4000
           }}
           ref={(slider) => {
             sliderRef = slider;
