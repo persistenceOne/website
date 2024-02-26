@@ -99,6 +99,7 @@ const DappCard = ({
           color={"text.blackHigh"}
           lineHeight={"30px"}
           pb={"20px"}
+          h={28}
         >
           {dAppDescription}
         </Text>
