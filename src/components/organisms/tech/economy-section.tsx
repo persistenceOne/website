@@ -29,7 +29,7 @@ const list: any = {
   ],
   item1: [
     {
-      imgUrl: "/images/tech-page/liquidstaking.svg",
+      imgUrl: "/images/tech-page/liquidstake.svg",
       title: "Liquid Staking Module (LSM)",
       content:
         "LSTfi applications like instant transfer of staked XPRT tokens between wallets are possible only on Persistence One."
@@ -100,13 +100,16 @@ const EconomySection = () => {
                 direction={"column"}
                 boxShadow={"md"}
               >
-                <Box m={"auto"} p={"20px"}>
-                  <Image
-                    src={list[key][0].imgUrl}
-                    alt=""
-                    width={290}
-                    height={240}
-                  />
+                <Box
+                  m={"auto"}
+                  p={"20px"}
+                  style={{
+                    width: "350px",
+                    height: "200px",
+                    position: "relative"
+                  }}
+                >
+                  <Image src={list[key][0].imgUrl} alt="" fill sizes="100vw" />
                 </Box>
                 <Heading
                   variant={"secondary"}
@@ -129,12 +132,19 @@ const EconomySection = () => {
                   direction={"column"}
                   boxShadow={"md"}
                 >
-                  <Box m={"auto"}>
+                  <Box
+                    m={"auto"}
+                    style={{
+                      width: "350px",
+                      height: "200px",
+                      position: "relative"
+                    }}
+                  >
                     <Image
                       src={list[key][1].imgUrl}
                       alt=""
-                      width={290}
-                      height={240}
+                      fill
+                      sizes="100vw"
                     />
                   </Box>
                   <Heading

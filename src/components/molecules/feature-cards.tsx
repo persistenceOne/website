@@ -32,7 +32,7 @@ const FeatureCards = () => {
           category="Story"
           title="Proof-of-Stake is Everything. Everything will be Restaked."
           description="Learn about our vision, history, and why we foresee a future where Liquid Staking and Restaking becomes the base value layer in crypto."
-          image="/images/tech-page/note-img0.svg"
+          image="/images/lock.svg"
           cta={{
             link: "/story",
             linkText: "Explore Our Story",

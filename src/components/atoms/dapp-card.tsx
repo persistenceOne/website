@@ -153,7 +153,6 @@ const DappCard = ({
             color={button.color}
             w={"240px"}
             rightIcon={<ArrowForwardIcon />}
-            _hover={{ color: "#C73238" }}
           >
             {button.text}
           </Button>
