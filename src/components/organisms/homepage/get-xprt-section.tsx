@@ -13,9 +13,9 @@ import React from "react";
 
 const GetXprtSection = () => {
   return (
-    <Box bg="#000000">
-      <Container maxW={"1200px"} px={{ base: "16px", md: "30px" }} py={"65px"}>
-        <HStack bg="#000000" justify={"space-between"}>
+    <Box bg="#252424">
+      <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"65px"}>
+        <HStack bg="#" justify={"space-between"}>
           <Box w={"650px"}>
             <Heading
               color="text.headingWhite"
