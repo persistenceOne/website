@@ -8,7 +8,7 @@ import { numberFormat } from "@/utils/helpers";
 const getData = (pstakeInfo: any, dexterInfo: any) => {
   const dApps: DappCardInterface[] = [
     {
-      dAppName: "PSTAKE Finance",
+      dAppName: "pSTAKE Finance",
       dAppLogo: "/images/pstake-logo.svg",
       dAppDescription:
         "pSTAKE is a multi-chain liquid staking protocol that unlocks liquidity for your staked assets.",
@@ -24,7 +24,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       ],
       supportingAssets: [
         { asset: "stkOSMO", assetIcon: "/images/stkosmo.svg" },
-        { asset: "stkXPRT", assetIcon: "/images/stkxprt.svg" },
+        // { asset: "stkXPRT", assetIcon: "/images/stkxprt.svg" },
         { asset: "stkATOM", assetIcon: "/images/stkatom.svg" },
         { asset: "stkBNB", assetIcon: "/images/stkbnb.svg" },
         { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" }
@@ -41,7 +41,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       dAppName: "Dexter",
       dAppLogo: "/images/dexter-logo.svg",
       dAppDescription:
-        "Dexter is an Interchain DEX for yield generating assets such as LSTs.",
+        "Dexter is a decentralized exchange governed by $XPRT to bootstrap liquidity for LSTs, Stablecoins, LRTs, and other IBC tokens.",
       dAppStats: [
         {
           label: "Total Value Locked",

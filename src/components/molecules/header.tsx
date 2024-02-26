@@ -33,6 +33,7 @@ import {
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { decimalize, decimalizeRaw } from "@/utils/helpers";
+import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 
 const menuItems = [
   {
@@ -66,16 +67,16 @@ const menuItems = [
         link: "https://blog.persistence.one/",
         isExternal: true,
         comingSoon: false
-      },
-      {
-        title: "Roadmap",
-        description: "",
-        icon: "road",
-        iconType: "stroke",
-        link: "/roadmap",
-        isExternal: false,
-        comingSoon: true
       }
+      // {
+      //   title: "Roadmap",
+      //   description: "",
+      //   icon: "road",
+      //   iconType: "stroke",
+      //   link: "/roadmap",
+      //   isExternal: false,
+      //   comingSoon: true
+      // }
     ]
   },
   {
@@ -84,8 +85,7 @@ const menuItems = [
     subItems: [
       {
         title: "XPRT",
-        description:
-          "Learn about the native token fueling the Persistence One Ecosystem",
+        description: "Learn about the native token fuelling the ecosystem",
         icon: "plogo",
         iconType: "fill",
         link: "/xprt",
@@ -95,7 +95,7 @@ const menuItems = [
       {
         title: "Tech",
         description:
-          "Discover how Persistence One sits at the cutting-edge of decentralized tech.",
+          "Discover how we sit at the cutting-edge of decentralized tech",
         icon: "tech",
         iconType: "stroke",
         link: "/tech",
@@ -104,8 +104,7 @@ const menuItems = [
       },
       {
         title: "Documentation",
-        description:
-          "Explore Persistence One's developer docs, on-chain modules, and guides.",
+        description: "Explore our developer docs, on-chain modules, and guides",
         icon: "doc1",
         iconType: "stroke",
         link: "https://docs.persistence.one",
@@ -114,21 +113,23 @@ const menuItems = [
       },
       {
         title: "Stats",
-        description: "",
+        description:
+          "Interact with on-chain data like TVL, volume, yields, and more",
         icon: "stats1",
         iconType: "stroke",
-        link: "/xprt",
+        link: "https://defillama.com/chain/Persistence",
         isExternal: true,
-        comingSoon: true
+        comingSoon: false
       },
       {
         title: "Ecosystem",
-        description: "",
+        description:
+          "Explore the dApps, validators, and partners contributing to the ecosystem",
         icon: "ecosystem",
         iconType: "fill",
-        link: "/ecosystem",
-        isExternal: false,
-        comingSoon: true
+        link: MINTSCAN_ECOSYSTEM_LINK,
+        isExternal: true,
+        comingSoon: false
       }
     ]
   },
@@ -139,7 +140,7 @@ const menuItems = [
       {
         title: "pSTAKE Finance",
         description:
-          "Liquid Stake leading Cosmos tokens like ATOM, DYDX, and OSMO.",
+          "Liquid Stake leading Cosmos tokens like ATOM, DYDX, and OSMO",
         icon: "liquidstake",
         iconType: "stroke",
         link: "https://app.pstake.finance",
@@ -149,7 +150,7 @@ const menuItems = [
       {
         title: "Dexter",
         description:
-          "Trade and provide liquidity of Liquid Staked Tokens, Stablecoins, and other Cosmos assets.",
+          "Trade and provide liquidity of Liquid Staked Tokens, Stablecoins, and other Cosmos assets",
         icon: "trade",
         iconType: "fill",
         link: "https://app.dexter.zone",
@@ -193,7 +194,7 @@ const menuItems = [
       {
         title: "People",
         description:
-          "Get to know the Persistence One contributors, our values, and how to become a Persister.",
+          "Get to know our contributors, our values, and how to become a Persister",
         icon: "people",
         iconType: "fill",
         link: "/people",
@@ -203,7 +204,7 @@ const menuItems = [
       {
         title: "Careers",
         description:
-          "Explore opportunities to contribute to the ecosystem with Persistence Labs.",
+          "Explore opportunities to contribute to the ecosystem with Persistence Labs",
         icon: "people",
         iconType: "fill",
         link: "https://careers.persistence.one/",
@@ -222,22 +223,22 @@ const menuItems = [
       },
       {
         title: "Download Media Kit",
-        description: "All your media and press needs.",
+        description: "All your media and press needs",
         icon: "download",
         iconType: "stroke",
         link: "https://persistence.notion.site/Persistence-Media-Kit-50e8f0eacab1466ebe7899d3773a48a3",
         isExternal: true,
         comingSoon: false
-      },
-      {
-        title: "Social",
-        description: "",
-        icon: "ecosystem",
-        iconType: "fill",
-        link: "/ecosystem",
-        isExternal: false,
-        comingSoon: true
       }
+      // {
+      //   title: "Social",
+      //   description: "",
+      //   icon: "ecosystem",
+      //   iconType: "fill",
+      //   link: "/ecosystem",
+      //   isExternal: false,
+      //   comingSoon: true
+      // }
     ]
   }
 ];

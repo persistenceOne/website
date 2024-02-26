@@ -20,13 +20,13 @@ const persisterValues: PersisterValuesCardInterface[] = [
   {
     title: "Compounding",
     description:
-      "Whether it's yield, partnerships or efforts, We compound daily.",
+      "Whether it's yield, partnerships or efforts, we compound daily.",
     icon: "/icons/team-page/compounding.svg"
   },
   {
     title: "True to Roots",
     description:
-      "Staying humble when things are great, persistent when things are bad.",
+      "Humility when things are going well. Persistence when things are not going well.",
     icon: "/icons/team-page/true-to-roots.svg"
   },
   {
@@ -41,7 +41,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
   },
   {
     title: "Fulfilling Life",
-    description: "Mental, physical and emotional health always comes first.",
+    description: "Mental, physical and emotional health always come first.",
     icon: "/icons/team-page/health.svg"
   }
 ];

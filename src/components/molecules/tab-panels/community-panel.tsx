@@ -1,4 +1,5 @@
 import SocialCard from "@/components/atoms/social-card";
+import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 import { Box, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +21,7 @@ const socialCardContents = [
   {
     title: "Discord",
     description: "Join our community",
-    link: "https://discord.com/invite/vyvp3scWnH",
+    link: TELEGRAM_PERSISTENCE_COMMUNITY_LINK,
     image: "/icons/discord.svg"
   },
   {
@@ -36,7 +37,7 @@ const socialCardContents = [
     image: "/icons/github.svg"
   },
   {
-    title: "Governance",
+    title: "Forum",
     description: "Join discussions",
     link: "https://forum.persistence.one/",
     image: "/icons/forum.svg"

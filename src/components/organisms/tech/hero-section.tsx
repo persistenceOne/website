@@ -20,8 +20,8 @@ const getList = (blockNumber: number) => {
       statLabel: "Blocks"
     },
     {
-      statValue: "45+",
-      statLabel: "IBC Connection"
+      statValue: "50+",
+      statLabel: "IBC Connections"
     },
     {
       statValue: "5+",
@@ -63,7 +63,7 @@ const HeroSection = () => {
               textAlign={{ base: "center", md: "left" }}
               fontSize={{ base: "26px", md: "40px", lg: "67px" }}
             >
-              Technically Super.
+              Technically Superb.
             </Heading>
             <Heading
               variant={"main"}

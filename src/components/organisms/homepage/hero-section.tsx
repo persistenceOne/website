@@ -57,7 +57,7 @@ const HeroSection = () => {
             </Heading>
             <Text textAlign={"left"} w={{ base: "100%", md: "55%" }} mb={6}>
               Persistence One is a purpose built Layer 1 on a mission to
-              maximize yield and security through Liquid Restaking.
+              maximize yield and security through Liquid Staking and Restaking.
             </Text>
             {/* <Stack direction={{ base: "column", md: "row" }} gap={4}> */}
             <Link href="/story" passHref>
@@ -81,7 +81,7 @@ const HeroSection = () => {
           stats={[
             {
               statValue: `$${numberFormat(tvl, 3)}`,
-              statLabel: "TVL"
+              statLabel: "Total Value Locked"
             },
             {
               statValue: `$${numberFormat(ibcVolume, 3)}`,

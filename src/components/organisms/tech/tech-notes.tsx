@@ -102,7 +102,7 @@ const NotesSection = () => {
               display={{ base: "block", md: "flex" }}
             >
               <Heading variant={"secondary"} color={"text.blackHigh"}>
-                Building the Restaking Infrastructure for Cosmos
+                Secure infra for modular and smart-contract dApps
               </Heading>
               <Image
                 src={"/images/tech-page/note-img1.svg"}

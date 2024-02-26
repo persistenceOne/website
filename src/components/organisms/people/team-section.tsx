@@ -1,7 +1,7 @@
 import TeamMemberCard, {
   TeamMemberCardInterface
 } from "@/components/atoms/team-member-card";
-import { Flex, Heading, Container, Box } from "@chakra-ui/react";
+import { Flex, Heading, Container, Box, Text } from "@chakra-ui/react";
 import React from "react";
 
 const teamMembers: TeamMemberCardInterface[] = [
@@ -104,7 +104,7 @@ const teamMembers: TeamMemberCardInterface[] = [
 
   {
     image: "/images/team/bart-van-der-voort.png",
-    name: "Bart",
+    name: "Bart Van Der Voort",
     role: "Strategy",
     socialLinks: [
       {
@@ -278,6 +278,15 @@ const TeamSection = () => {
             socialLinks={member.socialLinks}
           />
         ))}
+        <Text
+          alignSelf={"center"}
+          color="primary.black"
+          fontSize={22}
+          fontWeight={600}
+          ml={8}
+        >
+          +17 Persisters
+        </Text>
       </Flex>
     </Container>
   );

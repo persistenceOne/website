@@ -32,7 +32,7 @@ const GetXprtSection = () => {
             >
               XPRT empowers a range of on-chain activities including staking for
               rewards to enhance chain security, decentralized governance for
-              upgrades, and liquid staking and restaking traction through
+              upgrades, and Liquid Staking and Restaking traction through
               incentivization and transaction fees on Persistence One.
             </Text>
             <HStack gap={4}>

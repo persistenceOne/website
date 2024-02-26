@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Link from "next/link";
+import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 
 const FeatureCards = () => {
   return (
@@ -30,11 +31,12 @@ const FeatureCards = () => {
           height="380px"
           category="Story"
           title="Proof-of-Stake is Everything. Everything will be Restaked."
-          description="Learn about our vision, history, and why we foresee a future where liquid staking and restaking becomes the base value layer in crypto."
+          description="Learn about our vision, history, and why we foresee a future where Liquid Staking and Restaking becomes the base value layer in crypto."
           image="/images/tech-page/note-img0.svg"
           cta={{
             link: "/story",
-            linkText: "Explore Our Story"
+            linkText: "Explore Our Story",
+            isExternal: false
           }}
         />
 
@@ -46,8 +48,9 @@ const FeatureCards = () => {
           description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the One ecosystem for staking, liquid staking, and restaking. "
           image="/images/p-ecosystem.svg"
           cta={{
-            link: "/xprt",
-            linkText: "Explore Ecosystem"
+            link: MINTSCAN_ECOSYSTEM_LINK,
+            linkText: "Explore Ecosystem",
+            isExternal: true
           }}
           type="vertical"
         />
@@ -71,12 +74,13 @@ const FeatureCards = () => {
       >
         <FeatureCard
           category="Technology"
-          title={`Technically Super. Superbly Powerful.`}
+          title={`Technically Superb. Superbly Powerful.`}
           description="See how Persistence One offers a technically advanced, secure, and robust infrastructure for modular and smart-contract dApps."
           image="/images/robot-arm.svg"
           cta={{
             link: "/tech",
-            linkText: "Explore Tech"
+            linkText: "Explore Tech",
+            isExternal: false
           }}
           type="vertical"
           width="40%"
@@ -91,7 +95,8 @@ const FeatureCards = () => {
             image="/images/cylinders.svg"
             cta={{
               link: "/people",
-              linkText: "Explore People"
+              linkText: "Explore People",
+              isExternal: false
             }}
           />
 

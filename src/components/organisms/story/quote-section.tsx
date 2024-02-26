@@ -47,8 +47,8 @@ const QuoteSection = () => {
           fontWeight={600}
           fontSize={{ base: "26px", md: "44px" }}
         >
-          “Humility, Integrity, Patience, and Persistence are our four guiding
-          principals, pillars of building, and make us who we are.”
+          Humility, Integrity, Patience, and Persistence are our guiding
+          principles and make us who we are.
         </Heading>
       </Container>
     </Box>
