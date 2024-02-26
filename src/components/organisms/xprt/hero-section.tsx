@@ -89,15 +89,16 @@ const HeroSection = () => {
         </VStack>
         <Box
           pos={"absolute"}
-          w={"40%"}
-          top={"80px"}
+          w={"50%"}
+          top={"0px"}
           right={"0"}
           display={{ base: "none", md: "block" }}
         >
           <Image
+            className={"ml-auto"}
             src="/images/xprt-page/xprt_hero.svg"
             alt="Persistence Coin"
-            width={500}
+            width={600}
             height={400}
           />
         </Box>
