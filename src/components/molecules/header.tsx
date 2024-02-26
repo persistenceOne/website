@@ -193,7 +193,7 @@ const menuItems = [
       {
         title: "People",
         description:
-          "Meet our team of Persisters and what it takes to become one of us. ",
+          "Get to know the Persistence One contributors, our values, and how to become a Persister.",
         icon: "people",
         iconType: "fill",
         link: "/people",
@@ -202,17 +202,18 @@ const menuItems = [
       },
       {
         title: "Careers",
-        description: "Read about all the major updates and news.",
+        description:
+          "Explore opportunities to contribute to the ecosystem with Persistence Labs.",
         icon: "career",
         iconType: "stroke",
-        link: "https://forum.persistence.one/",
+        link: "https://careers.persistence.one/",
         isExternal: true,
         comingSoon: false
       },
       {
         title: "Community Forum",
         description:
-          "Join the forum to find answers or discuss your ideas for Persistence..",
+          "Participate in community discussions or share your ideas to grow Persistence One",
         icon: "community",
         iconType: "stroke",
         link: "https://forum.persistence.one/",
@@ -246,7 +247,7 @@ const getMenuList = (
   trigger: "click" | "hover" | undefined
 ) => {
   return menuItems.map((item: any) => (
-    <Popover placement={placement} trigger={"click"} key={`hover-${item.id}`}>
+    <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
       <PopoverTrigger>
         <Text
           cursor={"pointer"}

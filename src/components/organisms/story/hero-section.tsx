@@ -4,7 +4,10 @@ import React from "react";
 const HeroSection = () => {
   return (
     <Box
-      backgroundImage="url('/images/story-page/story-hero.svg')"
+      backgroundImage={{
+        base: "",
+        md: "url('/images/story-page/story-hero.svg')"
+      }}
       backgroundPosition="100% 40%"
       backgroundRepeat="no-repeat"
       backgroundSize={"42%"}
