@@ -22,6 +22,7 @@ import React from "react";
 import Image from "next/image";
 import HomePageStats from "@/components/molecules/page-stats";
 import Link from "next/link";
+import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 
 const CommunitySection = () => {
   return (
@@ -51,7 +52,7 @@ const CommunitySection = () => {
         </Heading>
         <Box textAlign={{ base: "center", md: "left" }}>
           <Link
-            href={"https://discord.com/invite/vyvp3scWnH"}
+            href={TELEGRAM_PERSISTENCE_COMMUNITY_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >

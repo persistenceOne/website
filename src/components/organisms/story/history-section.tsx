@@ -38,8 +38,8 @@ const list: ListProps[] = [
       item2: (
         <Text>
           <b>Pivoted to building a liquid staking economy</b> after the
-          participation of millions of in staked tokens for the XPRT token
-          StakeDrop launch in 2020.
+          participation of millions of dollars in staked tokens for the XPRT
+          token StakeDrop launch in 2020.
         </Text>
       )
     }
@@ -81,11 +81,11 @@ const list: ListProps[] = [
         <Text>
           The{" "}
           <b>
-            Persistence One Ecosystem is ever expanding by partnering with
-            leading projects
+            Persistence One Ecosystem is expanding by partnering ith leading
+            projects
           </b>{" "}
-          like the Cosmos Hub, Kujira, Neutron, Agoric, Shade Protocol, and more
-          and diversifying XPRT liquidity in Cosmos.
+          like the Cosmos Hub, Kujira, Neutron, Osmosis, Astroport, Shade
+          Protocol and diversifying XPRT liquidity in Cosmos.
         </Text>
       ),
       item2: (

@@ -16,39 +16,39 @@ import React from "react";
 const openPositionsList = [
   {
     id: 0,
-    jobRole: "Video Editor",
-    jobLocation: "Remote",
-    link: "https://careers.persistence.one/jobs/f2S3LPfQ_734/video-editor-remote"
-  },
-  {
-    id: 1,
-    jobRole: "Marketing Associate",
-    jobLocation: "Remote",
-    link: "https://careers.persistence.one/jobs/W6OH4p6zAMPm/marketing-associate-remote"
-  },
-  {
-    id: 2,
-    jobRole: "Social Media Specialist",
-    jobLocation: "Remote",
-    link: "https://careers.persistence.one/jobs/14_H7W1gmRcg/social-media-specialist-remote"
-  },
-  {
-    id: 3,
     jobRole: "Frontend Engineer",
     jobLocation: "Remote",
     link: "https://careers.persistence.one/jobs/gHvya2A-f2oa/front-end-engineer-remote"
   },
   {
-    id: 4,
+    id: 1,
+    jobRole: "Video Editor",
+    jobLocation: "Remote",
+    link: "https://careers.persistence.one/jobs/f2S3LPfQ_734/video-editor-remote"
+  },
+  {
+    id: 2,
     jobRole: "Golang Engineer",
     jobLocation: "Remote",
     link: "https://careers.persistence.one/jobs/YJ7cvfyUm4eW/golang-engineer-remote"
   },
   {
-    id: 5,
+    id: 3,
+    jobRole: "Marketing Associate",
+    jobLocation: "Remote",
+    link: "https://careers.persistence.one/jobs/W6OH4p6zAMPm/marketing-associate-remote"
+  },
+  {
+    id: 4,
     jobRole: "Senior Rust Engineer",
     jobLocation: "Remote",
     link: "https://careers.persistence.one/jobs/Um1WiGrfyzOk/senior-rust-engineer-remote"
+  },
+  {
+    id: 5,
+    jobRole: "Social Media Specialist",
+    jobLocation: "Remote",
+    link: "https://careers.persistence.one/jobs/14_H7W1gmRcg/social-media-specialist-remote"
   }
 ];
 
@@ -119,9 +119,9 @@ const JoinTeamPanel = () => {
               <Text fontWeight={600} fontSize={20} color="#3D3D3D">
                 Open Positions
               </Text>
-              <Text fontSize={14} color={"#3D3D3D"} opacity={0.7}>
+              {/* <Text fontSize={14} color={"#3D3D3D"} opacity={0.7}>
                 Ready to join? Reach out to us!
-              </Text>
+              </Text> */}
             </VStack>
             <Link
               href={"https://careers.persistence.one/jobs"}
@@ -149,10 +149,15 @@ const JoinTeamPanel = () => {
                 <HStack
                   align={"center"}
                   justify={"space-between"}
+                  border={"1px solid transparent"}
                   bg="#F5F5F5"
                   py={4}
                   px={6}
                   borderRadius={20}
+                  boxShadow={
+                    "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03)"
+                  }
+                  _hover={{ border: "1px solid #C73238" }}
                 >
                   <VStack align={"flex-start"} gap={0}>
                     <Text fontWeight={600} fontSize={14} color={"#3D3D3D"}>

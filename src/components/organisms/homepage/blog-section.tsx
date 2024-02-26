@@ -142,7 +142,7 @@ const BlogSection = () => {
             color={"text.blackMid"}
           >
             Explore the biggest news, blogs, interviews, and discussions around
-            liquid staking and restaking.
+            Liquid Staking and Restaking.
           </Text>
           {/* <Button
             variant={"link"}

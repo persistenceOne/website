@@ -24,6 +24,7 @@ export interface FeatureCardInterface {
   cta: {
     link: string;
     linkText: string;
+    isExternal?: boolean;
   };
   type?: "horizontal" | "vertical";
   width?: string;
@@ -77,13 +78,19 @@ const FeatureCard = ({
                 {description}
               </Text>
               {cta.linkText !== "" ? (
-                <Link href={cta.link}>
+                <Link
+                  href={cta.link}
+                  target={cta.isExternal ? "_blank" : ""}
+                  rel={cta.isExternal ? "noopener noreferrer" : ""}
+                >
                   <Button
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}
                     color={"#423F40"}
-                    _hover={{ color: "#C73238" }}
                     fontSize={16}
+                    _hover={{
+                      color: "primary.red"
+                    }}
                   >
                     {cta.linkText}
                   </Button>
@@ -121,7 +128,9 @@ const FeatureCard = ({
                     rightIcon={<ArrowForwardIcon />}
                     color={"#423F40"}
                     fontSize={16}
-                    _hover={{ color: "#C73238" }}
+                    _hover={{
+                      color: "primary.red"
+                    }}
                   >
                     {cta.linkText}
                   </Button>

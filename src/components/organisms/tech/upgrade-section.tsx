@@ -6,19 +6,19 @@ import { useMediaQuery } from "@chakra-ui/react";
 import Link from "next/link";
 
 const upgradeList = [
-  {
-    title: "v10.4",
-    link: "https://blog.persistence.one/2024/02/13/persistence-one-launches-dydx-liquid-staking/",
-    date: "FEB 2024",
-    content:
-      "Launched secure and decentralized DYDX liquid staking on Persistence One."
-  },
+  // {
+  //   title: "v10.4",
+  //   link: "https://blog.persistence.one/2024/02/13/persistence-one-launches-dydx-liquid-staking/",
+  //   date: "FEB 2024",
+  //   content:
+  //     "Launched secure and decentralized DYDX liquid staking on Persistence One."
+  // },
   {
     title: "v10",
     link: "https://www.mintscan.io/persistence/proposals/55",
     date: "FEB 2024",
     content:
-      "Improved on-chain security monitoring and simplified the XPRT governance process."
+      "Launched secure and decentralized DYDX liquid staking, improved on-chain security monitoring and simplified the XPRT governance process."
   },
   {
     title: "v9",

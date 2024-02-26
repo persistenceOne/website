@@ -23,7 +23,7 @@ const HeroSection = () => {
               textAlign={{ base: "center", md: "left" }}
               fontSize={{ base: "26px", md: "50px" }}
             >
-              Building With Persistence
+              Building With Persistence One
               <br />
               Since Day One In Cosmos.
             </Heading>
@@ -34,7 +34,7 @@ const HeroSection = () => {
               fontSize={{ base: "16px", md: "22px" }}
               textAlign={{ base: "center", md: "left" }}
             >
-              Persistence One is one of the first cosmos app chains and has been
+              Persistence One is one of the first Cosmos app chains and has been
               relentlessly building a liquid staking economy since 2019.
             </Text>
           </Box>

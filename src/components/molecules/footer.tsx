@@ -195,6 +195,9 @@ const Footer = () => {
                 color={"#ECECEC"}
                 fontWeight={600}
                 fontSize={16}
+                _hover={{
+                  color: "primary.red"
+                }}
               >
                 Download Media Kit
               </Button>
@@ -274,6 +277,9 @@ const Footer = () => {
                       rightIcon={
                         item.isExternal ? <ExternalLinkIcon /> : undefined
                       }
+                      _hover={{
+                        color: "primary.red"
+                      }}
                     >
                       {item.title}
                     </Button>

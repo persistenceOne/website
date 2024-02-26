@@ -23,8 +23,8 @@ const xprtUsageCards = [
     image: "/images/xprt-page/transaction-fees.svg",
     cta: {
       text: "Learn more",
-      link: "/xprt",
-      isExternal: false
+      link: "https://www.mintscan.io/persistence/tx",
+      isExternal: true
     }
   },
   {
@@ -105,7 +105,11 @@ const XPRTUsageSection = () => {
               <Text mt={4} mb={12} fontSize={14} fontWeight={400}>
                 {card.description}
               </Text>
-              <Link href={card.cta.link}>
+              <Link
+                href={card.cta.link}
+                target={card.cta.isExternal ? "_blank" : ""}
+                rel={card.cta.isExternal ? "noopener noreferrer" : ""}
+              >
                 <Button
                   variant={"link"}
                   rightIcon={<ArrowForwardIcon />}
@@ -114,6 +118,9 @@ const XPRTUsageSection = () => {
                   pos={"absolute"}
                   bottom={0}
                   mb={8}
+                  _hover={{
+                    color: "primary.red"
+                  }}
                 >
                   {card.cta.text}
                 </Button>

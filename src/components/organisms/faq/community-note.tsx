@@ -2,6 +2,7 @@ import { Box, Button, Heading, Container } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
+import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 
 const CommunityNote = () => {
   return (
@@ -30,7 +31,7 @@ const CommunityNote = () => {
         </Heading>
         <Box textAlign={{ base: "center", md: "left" }}>
           <Link
-            href={"https://discord.com/invite/vyvp3scWnH"}
+            href={TELEGRAM_PERSISTENCE_COMMUNITY_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
