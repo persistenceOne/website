@@ -26,14 +26,14 @@ const QuoteSection = () => {
   return (
     <Box
       bg={"#252424"}
-      style={{
-        backgroundImage:
-          "url('/images/story-page/story-quote-bg1.svg'), url('/images/story-page/story-quote-bg.svg')",
-        backgroundPosition: "top left,  bottom right",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100px"
-      }}
-      backgroundPosition="bottom right"
+      // style={{
+      //   backgroundImage:
+      //     "url('/images/story-page/story-quote-bg1.svg'), url('/images/story-page/story-quote-bg.svg')",
+      //   backgroundPosition: "top left,  bottom right",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundSize: "100px"
+      // }}
+      // backgroundPosition="bottom right"
     >
       <Container
         maxW={"1440px"}
@@ -47,7 +47,7 @@ const QuoteSection = () => {
           fontWeight={600}
           fontSize={{ base: "26px", md: "44px" }}
         >
-          Humility, Integrity, Patience, and Persistence are our guiding
+          Humility, Integrity, Patience, and Persistence <br /> are our guiding
           principles and make us who we are.
         </Heading>
       </Container>

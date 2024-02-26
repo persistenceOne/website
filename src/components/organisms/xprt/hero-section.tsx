@@ -106,7 +106,7 @@ const HeroSection = () => {
         stats={[
           {
             statValue: `$${
-              Number(marketCap) > 0 ? numberFormat(marketCap, 3) : 0
+              Number(marketCap) > 0 ? numberFormat(marketCap, 2) : 0
             }`,
             statLabel: "Market Cap"
           },

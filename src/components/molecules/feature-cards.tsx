@@ -45,7 +45,7 @@ const FeatureCards = () => {
           height="380px"
           category="Ecosystem"
           title="Persistence One."
-          description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the One ecosystem for staking, liquid staking, and restaking. "
+          description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the One ecosystem for Staking, Liquid Staking, and Restaking. "
           image="/images/p-ecosystem.svg"
           cta={{
             link: MINTSCAN_ECOSYSTEM_LINK,
@@ -87,7 +87,7 @@ const FeatureCards = () => {
           height="450px"
         />
 
-        <VStack align={"stretch"} gap={4}>
+        <VStack align={"stretch"} gap={0} justify={"space-between"}>
           <FeatureCard
             category="People"
             title="Humility. Integrity. Patience. Persistence."
@@ -113,7 +113,7 @@ const FeatureCards = () => {
               fontSize={{ base: "16px", md: "27px" }}
               fontWeight={700}
             >
-              Yields. TVL. Traction
+              Yields. TVL. Traction.
             </Text>
             <Link
               href={"https://defillama.com/chain/Persistence"}
