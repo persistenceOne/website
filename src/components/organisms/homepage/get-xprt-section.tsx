@@ -16,14 +16,14 @@ const GetXprtSection = () => {
     <Box bg="#252424">
       <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"65px"}>
         <HStack bg="#" justify={"space-between"}>
-          <Box w={"650px"}>
+          <Box w={"700px"}>
             <Heading
               color="text.headingWhite"
               fontSize={{ base: "26px", md: "48px" }}
               lineHeight={{ base: "38px", md: "72px" }}
               mb={4}
             >
-              Fuelling the <br /> Persistence One Ecosystem
+              Fueling the <br /> Persistence One Ecosystem
             </Heading>
             <Text
               color="text.whiteHigh"

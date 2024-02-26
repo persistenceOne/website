@@ -17,7 +17,7 @@ const HeroSection = () => {
         <Flex
           justify={"space-between"}
           mb={{ base: "40px", md: "90px" }}
-          w={{ base: "auto", md: "60%" }}
+          w={{ base: "auto", md: "55%" }}
         >
           <Box py={"50px"}>
             <Heading
@@ -27,7 +27,9 @@ const HeroSection = () => {
               textAlign={{ base: "center", md: "left" }}
               fontSize={{ base: "26px", md: "50px" }}
             >
-              Building With Persistence One Since Day One In Cosmos.
+              Building Persistence One
+              <br />
+              Since Day One In Cosmos.
             </Heading>
 
             <Text
@@ -36,7 +38,8 @@ const HeroSection = () => {
               textAlign={{ base: "center", md: "left" }}
             >
               Persistence One is one of the first Cosmos app chains and has been
-              relentlessly building a liquid staking economy since 2019.
+              relentlessly building at the edge of the Proof-of-Stake landscape
+              since 2019.
             </Text>
           </Box>
         </Flex>

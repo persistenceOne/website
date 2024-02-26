@@ -105,7 +105,7 @@ const NotesSection = () => {
                 Secure infra for modular and smart-contract dApps
               </Heading>
               <Image
-                src={"/images/tech-page/note-img1.svg"}
+                src={"/images/tech-page/secure.svg"}
                 alt=""
                 width={220}
                 height={177}
@@ -160,7 +160,7 @@ const NotesSection = () => {
             boxShadow={"md"}
           >
             <Heading variant={"secondary"} color={"text.blackHigh"}>
-              Pioneered ATOM liquid staking in 2021
+              Pioneered ATOM Liquid Staking in 2021
             </Heading>
             <Image
               src={"/images/tech-page/pioneered.svg"}
@@ -200,7 +200,7 @@ const NotesSection = () => {
             boxShadow={"md"}
           >
             <Heading variant={"secondary"} color={"text.blackHigh"}>
-              Audit first, deploy later.
+              Audit first, deploy later
             </Heading>
             <Image
               src={"/images/tech-page/audit.svg"}

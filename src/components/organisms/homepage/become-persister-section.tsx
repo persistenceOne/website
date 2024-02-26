@@ -113,7 +113,7 @@ const BecomePersisterSection = ({
                 textAlign={"center"}
                 mb={"26px"}
               >
-                Persistence One is expanding liquid staking, creating LSTfi
+                Persistence One is expanding Liquid Staking, creating LSTfi
                 yield opportunities, and bringing Restaking to Cosmos.
               </Text>
               <Link

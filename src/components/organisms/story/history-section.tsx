@@ -37,7 +37,7 @@ const list: ListProps[] = [
       ),
       item2: (
         <Text>
-          <b>Pivoted to building a liquid staking economy</b> after the
+          <b>Pivoted to building a Liquid Staking economy</b> after the
           participation of millions of dollars in staked tokens for the XPRT
           token StakeDrop launch in 2020.
         </Text>
@@ -56,7 +56,7 @@ const list: ListProps[] = [
       item1: (
         <Text>
           <b>pSTAKE launched natively on Persistence One in early 2023</b> with
-          support for ATOM, OSMO, and DYDX liquid staking live.
+          support for ATOM, OSMO, and DYDX Liquid Staking live.
         </Text>
       ),
       item2: (

@@ -129,7 +129,7 @@ const BlogSection = () => {
   return (
     <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
       <Box>
-        <VStack align={"flex-start"} mb={"60px"}>
+        <VStack align={"center"} mb={"60px"}>
           <Heading
             color="text.headingSemiBlack"
             fontSize={{ base: "26px", md: "58px" }}
@@ -137,7 +137,7 @@ const BlogSection = () => {
             Latest on Persistence One
           </Heading>
           <Text
-            maxW={"75%"}
+            // maxW={"75%"}
             fontSize={{ base: "16px", md: "22px" }}
             color={"text.blackMid"}
           >
@@ -158,9 +158,12 @@ const BlogSection = () => {
           {...{
             dots: false,
             arrows: false,
-            infinite: false,
+            infinite: true,
             slidesToShow: isMobile ? 1 : 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 4000
           }}
           ref={(slider) => {
             sliderRef = slider;

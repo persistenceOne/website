@@ -20,7 +20,7 @@ const list: any = {
       imgHeight: "235px",
       title: "Interblockchain Communication Protocol (IBC)",
       content:
-        "Persistence One is connected to 43 cosmos app chains to trustlessly communicate, transfer tokens, liquid stake and restake tokens."
+        "Persistence One is connected to 54 Cosmos app chains to trustlessly communicate, transfer tokens, liquid stake and restake tokens."
     },
     {
       imgUrl: "/images/tech-page/interchain-accounts.svg",
