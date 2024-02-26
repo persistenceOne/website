@@ -16,7 +16,7 @@ const colors = {
     whiteFull: "#fff",
     whiteHigh: "#ECECEC",
     whiteEmphasis: "#FEFEFE",
-    whiteMid: "#3D3D3D",
+    whiteMid: "#F5F5F5",
     whiteLow: "#232325CC",
     blackFull: "#000",
     blackHigh: "#423F40",
