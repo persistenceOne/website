@@ -9,8 +9,21 @@ import { AppProps } from "next/app";
 import Header from "@/components/molecules/header";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import * as gtag from "../utils/gtag";
+import { useRouter } from "next/router";
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url: any) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ChakraProvider theme={theme}>
       <Head>
