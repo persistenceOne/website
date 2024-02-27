@@ -55,7 +55,7 @@ const FeatureCards = () => {
           height="380px"
           category="Ecosystem"
           title="Persistence One."
-          description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the One ecosystem for Staking, Liquid Staking, and Restaking. "
+          description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the ecosystem for Staking, Liquid Staking, and Restaking. "
           image="/images/p-ecosystem.svg"
           cta={{
             link: MINTSCAN_ECOSYSTEM_LINK,
