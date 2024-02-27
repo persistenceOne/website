@@ -42,7 +42,6 @@ const HeroSection = () => {
     const fetch = async () => {
       const response = await getMarketCap();
       const responseTwo = await getBondedTokens();
-      console.log("getMarketCap", response);
       setStakedXprt(responseTwo);
       setPersistenceMarketCap(response);
     };
