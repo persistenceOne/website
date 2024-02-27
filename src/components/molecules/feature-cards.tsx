@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FeatureCard, {
   FeatureCardInterface
 } from "@/components/atoms/feature-card";
@@ -16,8 +16,18 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
+import Image from "next/image";
 
 const FeatureCards = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <VStack gap={4} mt={16}>
       <Stack
@@ -63,6 +73,8 @@ const FeatureCards = () => {
           h={"210px"}
           zIndex={-1}
           borderRadius={"20px"}
+          opacity={isVisible ? 1 : 0}
+          transition="opacity 1s"
         />
       </Stack>
 
@@ -159,6 +171,8 @@ const FeatureCards = () => {
           h={"210px"}
           zIndex={-1}
           borderRadius={"20px"}
+          opacity={isVisible ? 1 : 0}
+          transition="opacity 1s"
         />
         <FeatureCard
           width="30%"

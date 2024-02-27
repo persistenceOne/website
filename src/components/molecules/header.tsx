@@ -438,7 +438,6 @@ const Header = () => {
       setDexterTotalVolume(resp.volume);
       setDexterPoolInfo(response);
       setOsmoPoolInfo(osmoResponse);
-      console.log(resp, "fetchDexterInfo", response);
     };
     fetch();
   }, []);

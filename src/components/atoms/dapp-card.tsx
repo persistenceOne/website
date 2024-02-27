@@ -70,7 +70,7 @@ const DappCard = ({
             />
             <Heading
               fontWeight={600}
-              fontSize={{ base: "16px", md: "32px" }}
+              fontSize={{ base: "16px", md: "24px" }}
               mt={"16px"}
             >
               {dAppName}
@@ -95,11 +95,11 @@ const DappCard = ({
       </CardHeader>
       <CardBody p={"0"}>
         <Text
-          fontSize={{ base: "16px", md: "20px" }}
+          fontSize={{ base: "16px", md: "18px" }}
           color={"text.blackHigh"}
           lineHeight={"30px"}
           pb={"20px"}
-          h={28}
+          h={{ base: "auto", md: 28 }}
         >
           {dAppDescription}
         </Text>
