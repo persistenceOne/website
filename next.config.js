@@ -9,7 +9,10 @@ const nextConfig = {
   },
   images: {
     domains: ["raw.githubusercontent.com"],
-    unoptimized: true,
+    unoptimized: true
+  },
+  compiler: {
+    removeConsole: { exclude: ["error"] }
   },
   async redirects() {
     return [
@@ -17,13 +20,13 @@ const nextConfig = {
         source: "/tokensale",
         destination:
           "https://blog.pstake.finance/2021/12/13/pstake-tokenomics/",
-        permanent: true,
-      },
+        permanent: true
+      }
     ];
   },
   generateBuildId: async () => {
     return `${new Date().getTime()}`;
-  },
+  }
 };
 
 module.exports = nextConfig;

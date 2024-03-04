@@ -32,8 +32,8 @@ const HeroSection = () => {
             <br /> Persistence.
           </Heading>
           <Text textAlign="left" color="#3D3D3DB2">
-            Learn more about the people behind Persistence One, what it means to
-            be a<br /> Persister, and how to become one.
+            Learn more about the people behind Persistence One, <br /> what it
+            means to be a Persister, and how to become one.
           </Text>
         </VStack>
         <Box
