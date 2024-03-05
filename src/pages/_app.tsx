@@ -35,7 +35,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
         <meta
-          content="Persistence is an app chain for Liquid Staking powering an ecosystem of DeFi applications focused on unlocking the liquidity of staked assets."
+          content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking and Restaking."
           name="description"
         />
         <meta
@@ -44,20 +44,23 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <link rel="manifest" href="/manifest.json" />
 
-        <meta content="Persistence: Liquid Staking Hub" property="og:title" />
+        <meta
+          content="Persistence One | Staking, Liquid Staking and Restaking"
+          property="og:title"
+        />
         <meta property="og:image" content="/ogimage.jpeg" />
         <meta
           property="og:description"
-          content="Persistence is an app chain for Liquid Staking powering an ecosystem of DeFi applications focused on unlocking the liquidity of staked assets."
+          content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking and Restaking."
         />
         <meta property="og:site_name" content="Persistence" />
 
         <meta
-          content="Persistence: Liquid Staking Hub"
+          content="Persistence One | Staking, Liquid Staking and Restaking"
           property="twitter:title"
         />
         <meta
-          content="Persistence is an app chain for Liquid Staking powering an ecosystem of DeFi applications focused on unlocking the liquidity of staked assets."
+          content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking and Restaking."
           property="twitter:description"
         />
 
