@@ -217,25 +217,6 @@ const teamMembers: TeamMemberCardInterface[] = [
     ]
   },
   {
-    image: "/images/team/maksim-kupriianov.png",
-    name: "Maksim Kupriianov",
-    role: "Engineering",
-    socialLinks: [
-      {
-        name: "Twitter",
-        link: "https://twitter.com/xlab_gg",
-        icon: "x",
-        color: "#000000"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/mkupriianov/",
-        icon: "linkedin",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
     image: "/images/team/pranjal-paliwal.png",
     name: "Pranjal Paliwal",
     role: "Engineering",
