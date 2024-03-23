@@ -132,7 +132,7 @@ const FeatureCards = () => {
               Yields. TVL. Traction.
             </Text>
             <Link
-              href={"https://defillama.com/chain/Persistence"}
+              href={"https://stats.persistence.one"}
               target="_blank"
               rel="noopener noreferrer"
             >

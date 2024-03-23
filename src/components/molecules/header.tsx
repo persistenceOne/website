@@ -117,7 +117,7 @@ const menuItems = [
           "Interact with on-chain data like TVL, volume, yields, and more",
         icon: "stats1",
         iconType: "stroke",
-        link: "https://defillama.com/chain/Persistence",
+        link: "https://stats.persistence.one",
         isExternal: true,
         comingSoon: false
       },
