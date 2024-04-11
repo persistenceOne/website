@@ -14,7 +14,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <Container maxW={"1440px"} px={"60px"}>
+    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
       <Spacer h={20} />
       <Flex justify={"space-between"} align={"flex-start"} pos={"relative"}>
         <VStack
@@ -33,8 +33,8 @@ const HeroSection = () => {
           </Heading>
           <Text
             textAlign="left"
-            color="#3D3D3DB2"
-            fontSize={{ base: "12px", md: "16px" }}
+            color={"text.blackLow"}
+            fontSize={{ base: "16px", md: "22px" }}
           >
             Learn more about the people behind Persistence One, <br /> what it
             means to be a Persister, and how to become one.

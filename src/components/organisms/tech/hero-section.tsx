@@ -77,10 +77,10 @@ const HeroSection = () => {
               Superbly Powerful.
             </Heading>
             <Text
-              fontSize={{ base: "16px", md: "20px" }}
+              color={"text.blackLow"}
+              fontSize={{ base: "16px", md: "22px" }}
               textAlign={{ base: "left", md: "left" }}
               w={{ base: "auto", md: "55%" }}
-              color={"text.blackLow"}
               mt={6}
             >
               Persistence One is operating at the bleeding edge of innovation

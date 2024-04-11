@@ -37,7 +37,7 @@ const HeroSection = () => {
             <Text
               color={"text.blackLow"}
               fontSize={{ base: "16px", md: "22px" }}
-              textAlign={{ base: "center", md: "left" }}
+              textAlign={{ base: "left", md: "left" }}
               mb={{ base: 4, md: 0 }}
             >
               Persistence One is one of the first Cosmos app chains and has been

@@ -54,7 +54,13 @@ const HeroSection = () => {
               Liquid Staking. <br />
               Restaking.
             </Heading>
-            <Text textAlign={"left"} w={{ base: "100%", md: "55%" }} mb={6}>
+            <Text
+              textAlign={"left"}
+              w={{ base: "100%", md: "55%" }}
+              mb={6}
+              color={"text.blackLow"}
+              fontSize={{ base: "16px", md: "22px" }}
+            >
               Persistence One is a purpose built Layer 1 on a mission to
               maximize yield and security through Liquid Staking and Restaking.
             </Text>
