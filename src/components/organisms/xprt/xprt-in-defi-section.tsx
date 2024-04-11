@@ -1,7 +1,7 @@
 import XPRTDefiCard, {
   XPRTDefiCardInterface
 } from "@/components/molecules/xprt-defi-card";
-import { Container, VStack, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Container, VStack, Heading, SimpleGrid, Grid } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
@@ -142,11 +142,16 @@ const XPRTInDefiSection = () => {
         <Heading variant={"main"} fontSize={{ base: "26px", md: "58px" }}>
           XPRT in DeFi
         </Heading>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} mt={8}>
+        <Grid
+          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+          gap={4}
+          mt={8}
+          justifyContent="center"
+        >
           {xprtDefiCards.map((card, index) => (
             <XPRTDefiCard key={index} {...card} />
           ))}
-        </SimpleGrid>
+        </Grid>
       </VStack>
     </Container>
   );

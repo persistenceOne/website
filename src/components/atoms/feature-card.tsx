@@ -26,7 +26,7 @@ export interface FeatureCardInterface {
     linkText: string;
     isExternal?: boolean;
   };
-  type?: "horizontal" | "vertical";
+  type?: "horizontal" | "vertical" | "vertical-bottom";
   width?: string;
   height?: string;
   cardType?: "img" | "content";
@@ -110,7 +110,7 @@ const FeatureCard = ({
             />
           </Stack>
         </CardBody>
-      ) : (
+      ) : type === "vertical" ? (
         <CardBody p={"0"} display={category === "" ? "flex" : "block"}>
           {cardType !== "img" ? (
             <VStack align={"flex-start"} gap={4} mt={-4}>
@@ -118,7 +118,7 @@ const FeatureCard = ({
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 196 : 126}
+                  width={category === "Ecosystem" ? 126 : 126}
                   height={126}
                 />
               </Box>
@@ -151,6 +151,54 @@ const FeatureCard = ({
               ) : (
                 ""
               )}
+            </VStack>
+          ) : (
+            <Flex align={"center"} justify={"center"}>
+              <Image src={image} alt={title} width={320} height={280} />
+            </Flex>
+          )}
+        </CardBody>
+      ) : (
+        <CardBody p={"0"} display={category === "" ? "flex" : "block"}>
+          {cardType !== "img" ? (
+            <VStack align={"flex-start"} gap={4} mt={4}>
+              <Heading
+                fontSize={"22px"}
+                lineHeight={"33px"}
+                maxW={"80%"}
+                pb={"4px"}
+                color={"text.blackHigh"}
+              >
+                {title}
+              </Heading>
+              <Text fontSize={14} color={"text.blackHigh"}>
+                {description}
+              </Text>
+              {cta.linkText !== "" ? (
+                <Link href={cta.link}>
+                  <Button
+                    variant={"link"}
+                    rightIcon={<ArrowForwardIcon />}
+                    color={"#423F40"}
+                    fontSize={16}
+                    _hover={{
+                      color: "primary.red"
+                    }}
+                  >
+                    {cta.linkText}
+                  </Button>
+                </Link>
+              ) : (
+                ""
+              )}
+              <Box alignSelf={"center"}>
+                <Image
+                  src={image}
+                  alt={title}
+                  width={category === "Ecosystem" ? 126 : 326}
+                  height={126}
+                />
+              </Box>
             </VStack>
           ) : (
             <Flex align={"center"} justify={"center"}>

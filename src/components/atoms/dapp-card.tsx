@@ -118,7 +118,7 @@ const DappCard = ({
         <Text fontSize={"14px"} color={"#423F40B2"} pb={"4px"}>
           Supporting Assets
         </Text>
-        <HStack gap={"16px"}>
+        <HStack gap={"16px"} wrap={"wrap"}>
           {supportingAssets.map((asset) => (
             <TooltipWithTouch
               label={

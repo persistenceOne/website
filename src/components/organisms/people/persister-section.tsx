@@ -49,7 +49,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
 const PersisterSection = () => {
   return (
     <>
-      <VStack align={"center"} pt={12} pb={36} bg={"#252424"}>
+      <VStack align={"center"} pt={12} pb={36} px={4} bg={"#252424"}>
         <Heading
           variant={"main"}
           fontSize={{ base: "26px", md: "58px" }}
@@ -59,7 +59,7 @@ const PersisterSection = () => {
         </Heading>
         <Text
           color="#ECECEC"
-          fontSize={{ base: "18px", md: "22px" }}
+          fontSize={{ base: "14px", md: "22px" }}
           textAlign={"center"}
         >
           Persistence is more than just a name. It is our way of being.{" "}

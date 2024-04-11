@@ -15,7 +15,7 @@ import Image from "next/image";
 const list: any = {
   item0: [
     {
-      imgUrl: "/images/tech-page/inter-blockchain.svg",
+      imgUrl: "/images/tech-page/tech-ibc.png",
       imgWidth: "266px",
       imgHeight: "235px",
       title: "Interblockchain Communication Protocol (IBC)",
@@ -23,7 +23,7 @@ const list: any = {
         "Persistence One is connected to 54 Cosmos app chains to trustlessly communicate, transfer tokens, liquid stake and restake tokens."
     },
     {
-      imgUrl: "/images/tech-page/interchain-accounts.svg",
+      imgUrl: "/images/tech-page/tech-ica.png",
       imgWidth: "460px",
       imgHeight: "235px",
       title: "Interchain Accounts (ICA)",
@@ -33,7 +33,7 @@ const list: any = {
   ],
   item1: [
     {
-      imgUrl: "/images/tech-page/liquidstake.svg",
+      imgUrl: "/images/tech-page/tech-building-blocks-lsm.png",
       imgWidth: "201px",
       imgHeight: "235px",
       title: "Liquid Staking Module (LSM)",
@@ -41,7 +41,7 @@ const list: any = {
         "LSTfi applications like instant transfer of staked XPRT tokens between wallets are possible only on Persistence One."
     },
     {
-      imgUrl: "/images/tech-page/restake.svg",
+      imgUrl: "/images/tech-page/tech-restaking-module.png",
       imgWidth: "270px",
       imgHeight: "235px",
       title: "Restaking Module",
@@ -51,7 +51,7 @@ const list: any = {
   ],
   item2: [
     {
-      imgUrl: "/images/tech-page/cometbft.svg",
+      imgUrl: "/images/tech-page/tech-cometbft.png",
       imgWidth: "260px",
       imgHeight: "235px",
       title: "CometBFT Consensus",
@@ -59,7 +59,7 @@ const list: any = {
         "Short block times and instant finality handles the transaction demand on Persistence One while upholding security."
     },
     {
-      imgUrl: "/images/tech-page/cosmwasm.svg",
+      imgUrl: "/images/tech-page/tech-cosmwasm.png",
       imgWidth: "225px",
       imgHeight: "235px",
       title: "CosmWasm",
@@ -116,11 +116,9 @@ const EconomySection = () => {
                   mx={"auto"}
                   px={"20px"}
                   mb={"20px"}
-                  style={{
-                    width: list[key][0].imgWidth,
-                    height: list[key][0].imgHeight,
-                    position: "relative"
-                  }}
+                  w={{ base: "100%", md: list[key][0].imgWidth }}
+                  h={{ base: "150px", md: list[key][0].imgHeight }}
+                  position={"relative"}
                 >
                   <Image src={list[key][0].imgUrl} alt="" fill sizes="100vw" />
                 </Box>
@@ -149,11 +147,12 @@ const EconomySection = () => {
                     mx={"auto"}
                     px={"20px"}
                     mb={"20px"}
-                    style={{
-                      width: list[key][1].imgWidth,
-                      height: list[key][1].imgHeight,
-                      position: "relative"
+                    w={{ base: "100%", md: list[key][1].imgWidth }}
+                    h={{
+                      base: list[key][1].imgHeight,
+                      md: list[key][1].imgHeight
                     }}
+                    position={"relative"}
                   >
                     <Image
                       src={list[key][1].imgUrl}
@@ -185,6 +184,7 @@ const EconomySection = () => {
                     h={"340px"}
                     zIndex={-1}
                     borderRadius={"20px"}
+                    display={{ base: "none", md: "block" }}
                   />
                 ) : (
                   ""

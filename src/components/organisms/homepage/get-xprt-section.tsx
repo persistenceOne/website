@@ -55,7 +55,7 @@ const GetXprtSection = () => {
           </Box>
           <Box display={{ base: "none", md: "block" }}>
             <Image
-              src={"/images/p_fuel.svg"}
+              src={"/images/home-page/fuelling-ecosystem.png"}
               alt="Persistence"
               width={450}
               height={450}
