@@ -22,6 +22,7 @@ export interface XPRTDefiCardInterface {
     label: string;
     link: string;
     bg: string;
+    hover: string;
   };
   description: string;
   stats: {
@@ -72,6 +73,7 @@ const XPRTDefiCard = ({
         <Link href={cta.link} target="_blank" rel="noopener noreferrer">
           <Button
             bg={cta.bg}
+            _hover={{ bg: cta.hover }}
             w={{ base: "100%", md: "auto" }}
             color="white"
             rightIcon={<ArrowForwardIcon />}

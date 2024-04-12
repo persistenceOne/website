@@ -23,7 +23,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Dexter",
         link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
-        bg: "buttons.ctaBlue"
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
       },
       description:
         "Provide liquidity to the ATOM/XPRT pool to earn trading fees and external incentives",
@@ -52,7 +53,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Osmosis",
         link: "https://app.osmosis.zone/pool/1101",
-        bg: "buttons.ctaPink"
+        bg: "buttons.ctaPink",
+        hover: "buttons.ctaPurpleHover"
       },
       description:
         "Provide liquidity to the XPRT/OSMO Supercharged pool to earn trading fees and external incentives. ",
@@ -81,7 +83,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Dexter",
         link: "https://app.dexter.zone/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
-        bg: "buttons.ctaBlue"
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
       },
       description:
         "Provide liquidity to the USDT/XPRT pool to earn trading fees and external incentives",
@@ -110,7 +113,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Dexter",
         link: "https://app.dexter.zone/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
-        bg: "buttons.ctaBlue"
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
       },
       description:
         "Provide liquidity to the PSTAKE/XPRT pool to earn trading fees and external incentives",
