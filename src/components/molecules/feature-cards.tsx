@@ -43,7 +43,7 @@ const FeatureCards = () => {
           imgWidth={210}
           title="Proof-of-Stake is Everything. Everything will be Restaked."
           description="Learn about our vision, history, and why we foresee a future where Liquid Staking and Restaking becomes the base value layer in crypto."
-          image="/images/home-page/story.png"
+          image="/images/home-page/story.svg"
           cta={{
             link: "/story",
             linkText: "Explore Our Story",
@@ -57,8 +57,8 @@ const FeatureCards = () => {
           category="Ecosystem"
           title="Persistence One."
           description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the ecosystem for Staking, Liquid Staking, and Restaking. "
-          image="/images/home-page/ecosystem.png"
-          imgWidth={50}
+          image="/images/home-page/ecosystem.svg"
+          imgWidth={196}
           cta={{
             link: MINTSCAN_ECOSYSTEM_LINK,
             linkText: "Explore Ecosystem",
@@ -90,7 +90,7 @@ const FeatureCards = () => {
           category="Technology"
           title={`Technically Superb. Superbly Powerful.`}
           description="See how Persistence One offers a technically advanced, secure, and robust infrastructure for modular and smart-contract dApps."
-          image="/images/home-page/tech.png"
+          image="/images/home-page/tech.svg"
           imgWidth={280}
           cta={{
             link: "/tech",
@@ -107,7 +107,7 @@ const FeatureCards = () => {
             category="People"
             title={`Humility. Integrity. Patience. Persistence.`}
             description="Understand our core values and learn how to become a Persister and contribute."
-            image="/images/home-page/people.png"
+            image="/images/home-page/people.svg"
             imgWidth={280}
             cta={{
               link: "/people",
@@ -160,7 +160,7 @@ const FeatureCards = () => {
           category="Roadmap"
           title="Building in Cosmos since 2019."
           description="From being one of the first Cosmos app chains to enable IBC, CosmWasm, and Liquid Staking Module (LSM) to deploying pSTAKE Finance and Dexter and bringing Restaking to Cosmos, Persistence One’s development pushes the boundaries of the Proof-of-Stake landscape."
-          image="/images/home-page/roadmap.png"
+          image="/images/home-page/roadmap.svg"
           imgWidth={366}
           cta={{
             link: "/story",

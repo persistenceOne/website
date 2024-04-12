@@ -48,6 +48,9 @@ const NetworkPanel = () => {
                   fontSize={16}
                   textColor={"#423F40"}
                   px={8}
+                  _hover={{
+                    color: "primary.redHover"
+                  }}
                 >
                   Reach Out
                 </Button>
@@ -56,7 +59,7 @@ const NetworkPanel = () => {
           </VStack>
           <Flex w={"full"} justify={"center"} py={8}>
             <Image
-              src={"images/home-page/network.png"}
+              src={"images/home-page/network.svg"}
               alt={"Network Panel"}
               width={373}
               height={311}

@@ -49,13 +49,18 @@ const GetXprtSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button color={"#ffffff"}>Get XPRT</Button>
+                <Button
+                  color={"#ffffff"}
+                  _hover={{ borderColor: "#C73238CC", bg: "#C732381A" }}
+                >
+                  Get XPRT
+                </Button>
               </Link>
             </HStack>
           </Box>
           <Box display={{ base: "none", md: "block" }}>
             <Image
-              src={"/images/home-page/fuelling-ecosystem.png"}
+              src={"/images/home-page/fuelling-ecosystem.svg"}
               alt="Persistence"
               width={450}
               height={450}

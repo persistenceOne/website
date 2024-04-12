@@ -20,7 +20,7 @@ const xprtUsageCards = [
     title: "Transaction Fees",
     description:
       "XPRT is used as transaction fees for the ~5000+ daily on-chain transactions related to XPRT staking, IBC transfers, LSTfi activity on Persistence One, and more.",
-    image: "/images/xprt-page/xprt-transaction.png",
+    image: "/images/xprt-page/xprt-transaction.svg",
     cta: {
       text: "Learn More",
       link: "https://www.mintscan.io/persistence/tx",
@@ -31,7 +31,7 @@ const xprtUsageCards = [
     title: "Chain Security",
     description:
       "XPRT is used as economic security of the Persistence One blockchain with a Proof-of-Stake mechanism. Network participants like validators and delegators stake XPRT to earn staking rewards.",
-    image: "/images/xprt-page/xprt-security.png",
+    image: "/images/xprt-page/xprt-security.svg",
     cta: {
       text: "Start Staking",
       link: "https://wallet.keplr.app/chains/persistence?tab=staking",
@@ -42,7 +42,7 @@ const xprtUsageCards = [
     title: "Decentralized Governance",
     description:
       "Persistence One is governed by Persisters with XPRT. On-chain governance has the final say on chain upgrades, community pool spends, dApp launches and improvements, and more.",
-    image: "/images/xprt-page/xprt-governance.png",
+    image: "/images/xprt-page/xprt-governance.svg",
     cta: {
       text: "Participate",
       link: "https://www.mintscan.io/persistence/proposals",
@@ -53,7 +53,7 @@ const xprtUsageCards = [
     title: "On-chain Traction",
     description:
       "XPRT is an enabler for traction and the base asset and incentivizing tool on Dexter, the home of on-chain liquidity. Any dApps deployed on Persistence One in the future can be built with XPRT taking center stage.",
-    image: "/images/xprt-page/xprt-traction.png",
+    image: "/images/xprt-page/xprt-traction.svg",
     cta: {
       text: "Explore",
       link: "https://app.dexter.zone/pools",

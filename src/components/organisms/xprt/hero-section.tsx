@@ -86,7 +86,9 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button w={"100%"}>Get XPRT</Button>
+              <Button w={"100%"} _hover={{ color: "primary.redHover" }}>
+                Get XPRT
+              </Button>
             </Link>
           </Flex>
         </VStack>
@@ -99,7 +101,7 @@ const HeroSection = () => {
         >
           <Image
             className={"ml-auto"}
-            src="/images/xprt-page/xprt-hero.png"
+            src="/images/xprt-page/xprt-hero.svg"
             alt="Persistence Coin"
             width={600}
             height={400}

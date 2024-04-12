@@ -50,7 +50,7 @@ const HeroSection = () => {
       <Box
         backgroundImage={{
           base: "",
-          md: "url('/images/tech-page/tech-hero.png')"
+          md: "url('/images/tech-page/tech-hero.svg')"
         }}
         backgroundPosition="100% 40%"
         backgroundRepeat="no-repeat"
@@ -135,7 +135,7 @@ const HeroSection = () => {
           display={{ base: "block", md: "none" }}
         >
           <Image
-            src="/images/tech-page/tech-hero.png"
+            src="/images/tech-page/tech-hero.svg"
             alt="Persistence Coin"
             width={400}
             height={400}

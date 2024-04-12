@@ -8,7 +8,7 @@ const HeroSection = () => {
       <Box
         backgroundImage={{
           base: "",
-          md: "url('/images/story-page/story-hero.png')"
+          md: "url('/images/story-page/story-hero.svg')"
         }}
         backgroundPosition="100% 100%"
         backgroundRepeat="no-repeat"
@@ -27,7 +27,7 @@ const HeroSection = () => {
               mb={5}
               textAlign={{ base: "left", md: "left" }}
               fontSize={{ base: "42px", md: "50px" }}
-              lineHeight={{ base: "50px", md: "50px", lg: "90px" }}
+              lineHeight={{ base: "50px", md: "50px", lg: "50px" }}
             >
               Building With Persistence
               <br />
@@ -49,7 +49,7 @@ const HeroSection = () => {
               display={{ base: "block", md: "none" }}
             >
               <Image
-                src="/images/story-page/story-hero.png"
+                src="/images/story-page/story-hero.svg"
                 alt="Persistence Coin"
                 width={400}
                 height={400}

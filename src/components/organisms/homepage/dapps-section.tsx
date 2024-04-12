@@ -36,6 +36,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         text: "Liquid Stake Now",
         link: "https://app.pstake.finance",
         background: "primary.red",
+        hover: "primary.redHover",
         color: "white"
       }
     },
@@ -74,6 +75,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         link: "https://app.dexter.zone",
         background:
           "linear-gradient(284.42deg, #00AFFA -49.92%, #32A2BA 54.24%, #24FFCA 169.83%);",
+        hover: "#01BDBD",
         color: "white"
       }
     }

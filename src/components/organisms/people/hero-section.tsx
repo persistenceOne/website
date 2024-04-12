@@ -44,7 +44,7 @@ const HeroSection = () => {
             display={{ base: "block", md: "none" }}
           >
             <Image
-              src="/images/team/people-hero.png"
+              src="/images/team/people-hero.svg"
               alt="Persistence Coin"
               width={640}
               height={400}
@@ -58,7 +58,7 @@ const HeroSection = () => {
           display={{ base: "none", md: "block" }}
         >
           <Image
-            src="/images/team/people-hero.png"
+            src="/images/team/people-hero.svg"
             alt="Persistence Coin"
             width={640}
             height={400}

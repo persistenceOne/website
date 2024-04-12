@@ -38,6 +38,7 @@ export interface DappCardInterface {
     text: string;
     link: string;
     background: string;
+    hover: string;
     color: string;
   };
 }
@@ -85,7 +86,7 @@ const DappCard = ({
               mt={-4}
               fontSize={"18px"}
               color={"#606060"}
-              _hover={{ color: "#C73238" }}
+              _hover={{ color: button.hover }}
             >
               {website.linkText}
             </Button>
@@ -153,6 +154,9 @@ const DappCard = ({
             bg={button.background}
             color={button.color}
             w={"240px"}
+            _hover={{
+              bg: button.hover
+            }}
             rightIcon={<ArrowForwardIcon />}
           >
             {button.text}

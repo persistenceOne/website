@@ -1,19 +1,10 @@
 import {
   Box,
-  Button,
   Flex,
-  HStack,
   Heading,
   Spacer,
-  Stat,
-  StatArrow,
-  StatGroup,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
   Text,
   VStack,
-  Divider,
   Container,
   Stack
 } from "@chakra-ui/react";
@@ -77,7 +68,7 @@ const NotesSection = () => {
             </Heading>
             <Box m={"auto"} w={{ base: "40%", md: "50%" }}>
               <Image
-                src={"/images/tech-page/tech-lsm.png"}
+                src={"/images/tech-page/tech-lsm.svg"}
                 alt=""
                 width={182}
                 height={240}
@@ -120,7 +111,7 @@ const NotesSection = () => {
                   Building the Restaking Infrastructure for Cosmos
                 </Heading>
                 <Image
-                  src={"/images/tech-page/tech-restaking.png"}
+                  src={"/images/tech-page/tech-restaking.svg"}
                   alt=""
                   width={220}
                   height={177}
@@ -166,7 +157,7 @@ const NotesSection = () => {
                 Secure infra for modular and smart-contract dApps
               </Heading>
               <Image
-                src={"/images/tech-page/tech-infra.png"}
+                src={"/images/tech-page/tech-infra.svg"}
                 alt=""
                 width={220}
                 height={177}
@@ -199,7 +190,7 @@ const NotesSection = () => {
                 />
               </Box>
               <Image
-                src={"/images/tech-page/tech-contribution.png"}
+                src={"/images/tech-page/tech-contribution.svg"}
                 alt=""
                 width={227}
                 height={194}
@@ -258,7 +249,7 @@ const NotesSection = () => {
               Pioneered ATOM Liquid Staking in 2021
             </Heading>
             <Image
-              src={"/images/tech-page/tech-liquid-staking.png"}
+              src={"/images/tech-page/tech-liquid-staking.svg"}
               alt=""
               width={105}
               height={144}
@@ -287,7 +278,7 @@ const NotesSection = () => {
             </Box>
             <Box mt={8}>
               <Image
-                src={"/images/tech-page/tech-first-app-chain.png"}
+                src={"/images/tech-page/tech-first-app-chain.svg"}
                 alt=""
                 width={160}
                 height={144}
@@ -335,7 +326,7 @@ const NotesSection = () => {
               Audit first, deploy later
             </Heading>
             <Image
-              src={"/images/tech-page/tech-audit.png"}
+              src={"/images/tech-page/tech-audit.svg"}
               alt=""
               width={200}
               height={144}

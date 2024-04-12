@@ -23,7 +23,7 @@ interface ListProps {
 
 const list: ListProps[] = [
   {
-    imgUrl: "/images/story-page/story-early-days.png",
+    imgUrl: "/images/story-page/story-early-days.svg",
     imgWidth: 320,
     imgHeight: 200,
     title: "Early days in Cosmos",
@@ -49,7 +49,7 @@ const list: ListProps[] = [
     }
   },
   {
-    imgUrl: "/images/story-page/story-building-blocks.png",
+    imgUrl: "/images/story-page/story-building-blocks.svg",
     imgWidth: 320,
     imgHeight: 200,
     title: "Building blocks of LSTfi ",
@@ -74,7 +74,7 @@ const list: ListProps[] = [
     }
   },
   {
-    imgUrl: "/images/story-page/story-economy.png",
+    imgUrl: "/images/story-page/story-economy.svg",
     imgWidth: 250,
     imgHeight: 200,
     title: "Liquid Staking Economy ",
