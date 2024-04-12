@@ -247,7 +247,7 @@ const menuItems = [
   }
 ];
 
-const getMenuList1 = (onClose, isOpen) => {
+const getMenuList = (onClose: () => void) => {
   return (
     <Accordion h="100vh" mt={8}>
       {menuItems.map((item: any) => (
@@ -382,120 +382,6 @@ const getMenuList1 = (onClose, isOpen) => {
       ))}
     </Accordion>
   );
-};
-const getMenuList = (
-  placement: PlacementWithLogical | undefined,
-  trigger: "click" | "hover" | undefined
-) => {
-  return menuItems.map((item: any) => (
-    <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
-      <PopoverTrigger>
-        <Text
-          cursor={"pointer"}
-          px={"12px"}
-          py={"8px"}
-          borderRadius={"6px"}
-          _hover={{ bg: "#C732381A", color: "#C73238" }}
-        >
-          {item.name}
-        </Text>
-      </PopoverTrigger>
-      <PopoverContent borderRadius={6}>
-        <PopoverArrow />
-        <PopoverBody p={4}>
-          <VStack align={"start"} gap={4}>
-            {item.subItems.map((subItem: any) =>
-              subItem.comingSoon ? (
-                <HStack
-                  key={subItem.title}
-                  cursor={"not-allowed"}
-                  className={"nav-item coming-soon"}
-                  gap={4}
-                  fontWeight={500}
-                  _hover={{ fontWeight: 700 }}
-                >
-                  <Box
-                    w={"40px"}
-                    h={"40px"}
-                    borderRadius={"100%"}
-                    className={"icon-box"}
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center"
-                    }}
-                  >
-                    <Icon
-                      icon={subItem.icon}
-                      viewClass={`nav-icon ${subItem.iconType}`}
-                    />
-                  </Box>
-                  <VStack align={"start"} gap={0}>
-                    <Text cursor={"pointer"} fontSize={16} color={"#878787"}>
-                      {subItem.title}{" "}
-                      <Text as={"span"} fontWeight={300} fontSize={12}>
-                        (Coming Soon)
-                      </Text>
-                    </Text>
-                    <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
-                      {subItem.description}
-                    </Text>
-                  </VStack>
-                </HStack>
-              ) : (
-                <Link
-                  href={subItem.link}
-                  key={subItem.title}
-                  target={subItem.isExternal ? "_blank" : "_self"}
-                >
-                  <HStack
-                    cursor={"pointer"}
-                    className={"nav-item"}
-                    gap={4}
-                    fontWeight={500}
-                    _hover={{ fontWeight: 700 }}
-                  >
-                    <Box>
-                      <Box
-                        w={"40px"}
-                        h={"40px"}
-                        borderRadius={"100%"}
-                        className={"icon-box"}
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center"
-                        }}
-                      >
-                        <Icon
-                          icon={subItem.icon}
-                          viewClass={`nav-icon ${subItem.iconType}`}
-                        />
-                      </Box>
-                    </Box>
-                    <VStack align={"start"} gap={0}>
-                      <Box
-                        style={{ display: "flex", alignItems: "center" }}
-                        color={"primary.red"}
-                      >
-                        <Text cursor={"pointer"} fontSize={16} pr={"5px"}>
-                          {subItem.title}
-                        </Text>
-                        {subItem.isExternal ? <ExternalLinkIcon /> : null}
-                      </Box>
-                      <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
-                        {subItem.description}
-                      </Text>
-                    </VStack>
-                  </HStack>
-                </Link>
-              )
-            )}
-          </VStack>
-        </PopoverBody>
-      </PopoverContent>
-    </Popover>
-  ));
 };
 
 const Header = () => {
@@ -650,7 +536,7 @@ const Header = () => {
             onClick={isOpen ? onClose : onOpen}
           />
         </Flex>
-        {isOpen ? getMenuList1(onClose, isOpen) : null}
+        {isOpen ? getMenuList(onClose) : null}
       </Container>
     </Box>
   );
