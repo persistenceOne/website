@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { getBlockNumber, getBondedTokens } from "@/pages/api";
+import Image from "next/image";
 
 const getList = (blockNumber: number) => {
   const homePagesStats = [
@@ -60,24 +61,26 @@ const HeroSection = () => {
           <Box pt={"150px"}>
             <Heading
               variant={"main"}
-              textAlign={{ base: "center", md: "left" }}
-              fontSize={{ base: "26px", md: "40px", lg: "67px" }}
+              textAlign={{ base: "left", md: "left" }}
+              fontSize={{ base: "42px", md: "50px" }}
+              lineHeight={{ base: "50px", md: "50px", lg: "60px" }}
             >
               Technically Superb.
             </Heading>
             <Heading
               variant={"main"}
-              textAlign={{ base: "center", md: "left" }}
+              textAlign={{ base: "left", md: "left" }}
+              fontSize={{ base: "42px", md: "50px" }}
+              lineHeight={{ base: "50px", md: "50px", lg: "60px" }}
               color={"primary.red"}
-              fontSize={{ base: "26px", md: "40px", lg: "67px" }}
             >
               Superbly Powerful.
             </Heading>
             <Text
-              fontSize={{ base: "16px", md: "20px" }}
-              textAlign={{ base: "center", md: "left" }}
-              w={{ base: "auto", md: "55%" }}
               color={"text.blackLow"}
+              fontSize={{ base: "16px", md: "22px" }}
+              textAlign={{ base: "left", md: "left" }}
+              w={{ base: "auto", md: "55%" }}
               mt={6}
             >
               Persistence One is operating at the bleeding edge of innovation
@@ -127,7 +130,18 @@ const HeroSection = () => {
             </HStack>
           ))}
         </Stack>
-        <Spacer h={"120px"} />
+        <Box
+          // bottom={0}
+          display={{ base: "block", md: "none" }}
+        >
+          <Image
+            src="/images/tech-page/tech-hero.svg"
+            alt="Persistence Coin"
+            width={400}
+            height={400}
+          />
+        </Box>
+        <Spacer h={{ base: "40px", md: "120px" }} />
       </Box>
     </Container>
   );

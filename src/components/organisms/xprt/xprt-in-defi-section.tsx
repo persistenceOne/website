@@ -1,7 +1,7 @@
 import XPRTDefiCard, {
   XPRTDefiCardInterface
 } from "@/components/molecules/xprt-defi-card";
-import { Container, VStack, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Container, VStack, Heading, SimpleGrid, Grid } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
@@ -23,7 +23,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Dexter",
         link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
-        bg: "buttons.ctaBlue"
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
       },
       description:
         "Provide liquidity to the ATOM/XPRT pool to earn trading fees and external incentives",
@@ -52,7 +53,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Osmosis",
         link: "https://app.osmosis.zone/pool/1101",
-        bg: "buttons.ctaPink"
+        bg: "buttons.ctaPink",
+        hover: "buttons.ctaPurpleHover"
       },
       description:
         "Provide liquidity to the XPRT/OSMO Supercharged pool to earn trading fees and external incentives. ",
@@ -81,7 +83,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Dexter",
         link: "https://app.dexter.zone/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
-        bg: "buttons.ctaBlue"
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
       },
       description:
         "Provide liquidity to the USDT/XPRT pool to earn trading fees and external incentives",
@@ -110,7 +113,8 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       cta: {
         label: "Dexter",
         link: "https://app.dexter.zone/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
-        bg: "buttons.ctaBlue"
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
       },
       description:
         "Provide liquidity to the PSTAKE/XPRT pool to earn trading fees and external incentives",
@@ -142,11 +146,16 @@ const XPRTInDefiSection = () => {
         <Heading variant={"main"} fontSize={{ base: "26px", md: "58px" }}>
           XPRT in DeFi
         </Heading>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} mt={8}>
+        <Grid
+          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+          gap={4}
+          mt={8}
+          justifyContent="center"
+        >
           {xprtDefiCards.map((card, index) => (
             <XPRTDefiCard key={index} {...card} />
           ))}
-        </SimpleGrid>
+        </Grid>
       </VStack>
     </Container>
   );

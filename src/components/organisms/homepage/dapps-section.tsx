@@ -27,13 +27,16 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         // { asset: "stkXPRT", assetIcon: "/images/stkxprt.svg" },
         { asset: "stkATOM", assetIcon: "/images/stkatom.svg" },
         { asset: "stkBNB", assetIcon: "/images/stkbnb.svg" },
-        { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" }
+        { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" },
+        { asset: "stkSTARS", assetIcon: "/images/stkstars.svg" },
+        { asset: "stkHUAHUA", assetIcon: "/images/stkhuahua.svg" }
       ],
       website: { link: "https://pstake.finance", linkText: "pstake.finance" },
       button: {
         text: "Liquid Stake Now",
         link: "https://app.pstake.finance",
         background: "primary.red",
+        hover: "primary.redHover",
         color: "white"
       }
     },
@@ -58,8 +61,13 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         { asset: "DYDX", assetIcon: "/images/tokens/dydx.svg" },
         { asset: "USDT", assetIcon: "/images/usdt.svg" },
         { asset: "USDC", assetIcon: "/images/usdc.svg" },
+        { asset: "SHD", assetIcon: "/images/shd.svg" },
+        { asset: "STARS", assetIcon: "/images/stars.svg" },
+        { asset: "HUAHUA", assetIcon: "/images/huahua.svg" },
         { asset: "stkATOM", assetIcon: "/images/stkatom.svg" },
-        { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" }
+        { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" },
+        { asset: "stkSTARS", assetIcon: "/images/stkstars.svg" },
+        { asset: "stkHUAHUA", assetIcon: "/images/stkhuahua.svg" }
       ],
       website: { link: "https://dexter.zone", linkText: "dexter.zone" },
       button: {
@@ -67,6 +75,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         link: "https://app.dexter.zone",
         background:
           "linear-gradient(284.42deg, #00AFFA -49.92%, #32A2BA 54.24%, #24FFCA 169.83%);",
+        hover: "#01BDBD",
         color: "white"
       }
     }

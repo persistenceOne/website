@@ -15,19 +15,19 @@ import Image from "next/image";
 
 const list = [
   {
-    imgUrl: "/images/story-page/locker.svg",
+    imgUrl: "/images/story-page/story-pos.svg",
     title: "Proof-of-Stake will become the norm",
     content:
       "The world will be full of secure and interoperable PoS blockchains with flourishing DeFi as staking becomes the fixed income of crypto"
   },
   {
-    imgUrl: "/images/story-page/roads.svg",
+    imgUrl: "/images/story-page/story-roads.svg",
     title: "All roads originate from Cosmos",
     content:
       "The bull case for sovereign and modular app chains is the opportunity for building a Liquid Staking and Restaking economy on Persistence One."
   },
   {
-    imgUrl: "/images/story-page/pos.svg",
+    imgUrl: "/images/story-page/story-native-pos.svg",
     title: "Native PoS tokens will exist as liquid staked",
     content:
       "Liquid Staked Tokens (LSTs) will become the default capital-efficient medium of exchange and utility in DeFi."
@@ -56,7 +56,13 @@ const VisionSection = () => {
               key={index}
               boxShadow={"lg"}
             >
-              <Box mb={4} w={"60%"} h={"220px"} mx={"auto"} pos={"relative"}>
+              <Box
+                mb={4}
+                w={{ base: "100%", md: "60%" }}
+                h={"220px"}
+                mx={"auto"}
+                pos={"relative"}
+              >
                 <Image
                   src={item.imgUrl}
                   alt={item.title}
@@ -67,7 +73,7 @@ const VisionSection = () => {
               <Heading
                 variant={"secondary"}
                 color={"text.blackEmphasis"}
-                fontSize={{ base: "16px", md: "26px" }}
+                fontSize={{ base: "20px", md: "26px" }}
                 fontWeight={600}
                 lineHeight={"40px"}
                 mb={4}
