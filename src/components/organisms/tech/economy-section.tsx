@@ -15,17 +15,17 @@ import Image from "next/image";
 const list: any = {
   item0: [
     {
-      imgUrl: "/images/tech-page/inter-blockchain.svg",
-      imgWidth: "266px",
-      imgHeight: "235px",
+      imgUrl: "/images/tech-page/tech-ibc.svg",
+      imgWidth: "315px",
+      imgHeight: "297px",
       title: "Interblockchain Communication Protocol (IBC)",
       content:
         "Persistence One is connected to 54 Cosmos app chains to trustlessly communicate, transfer tokens, liquid stake and restake tokens."
     },
     {
-      imgUrl: "/images/tech-page/interchain-accounts.svg",
+      imgUrl: "/images/tech-page/tech-ica.svg",
       imgWidth: "460px",
-      imgHeight: "235px",
+      imgHeight: "287px",
       title: "Interchain Accounts (ICA)",
       content:
         "Chain Abstraction enables cross-chain execution on chains like Neutron right from Persistence One."
@@ -33,16 +33,16 @@ const list: any = {
   ],
   item1: [
     {
-      imgUrl: "/images/tech-page/liquidstake.svg",
-      imgWidth: "201px",
+      imgUrl: "/images/tech-page/tech-building-blocks-lsm.svg",
+      imgWidth: "252px",
       imgHeight: "235px",
       title: "Liquid Staking Module (LSM)",
       content:
         "LSTfi applications like instant transfer of staked XPRT tokens between wallets are possible only on Persistence One."
     },
     {
-      imgUrl: "/images/tech-page/restake.svg",
-      imgWidth: "270px",
+      imgUrl: "/images/tech-page/tech-restaking-module.svg",
+      imgWidth: "249px",
       imgHeight: "235px",
       title: "Restaking Module",
       content:
@@ -51,15 +51,15 @@ const list: any = {
   ],
   item2: [
     {
-      imgUrl: "/images/tech-page/cometbft.svg",
-      imgWidth: "260px",
+      imgUrl: "/images/tech-page/tech-cometbft.svg",
+      imgWidth: "221px",
       imgHeight: "235px",
       title: "CometBFT Consensus",
       content:
         "Short block times and instant finality handles the transaction demand on Persistence One while upholding security."
     },
     {
-      imgUrl: "/images/tech-page/cosmwasm.svg",
+      imgUrl: "/images/tech-page/tech-cosmwasm.svg",
       imgWidth: "225px",
       imgHeight: "235px",
       title: "CosmWasm",
@@ -116,11 +116,9 @@ const EconomySection = () => {
                   mx={"auto"}
                   px={"20px"}
                   mb={"20px"}
-                  style={{
-                    width: list[key][0].imgWidth,
-                    height: list[key][0].imgHeight,
-                    position: "relative"
-                  }}
+                  w={{ base: "100%", md: list[key][0].imgWidth }}
+                  h={{ base: "150px", md: list[key][0].imgHeight }}
+                  position={"relative"}
                 >
                   <Image src={list[key][0].imgUrl} alt="" fill sizes="100vw" />
                 </Box>
@@ -149,11 +147,12 @@ const EconomySection = () => {
                     mx={"auto"}
                     px={"20px"}
                     mb={"20px"}
-                    style={{
-                      width: list[key][1].imgWidth,
-                      height: list[key][1].imgHeight,
-                      position: "relative"
+                    w={{ base: "100%", md: list[key][1].imgWidth }}
+                    h={{
+                      base: list[key][1].imgHeight,
+                      md: list[key][1].imgHeight
                     }}
+                    position={"relative"}
                   >
                     <Image
                       src={list[key][1].imgUrl}
@@ -185,6 +184,7 @@ const EconomySection = () => {
                     h={"340px"}
                     zIndex={-1}
                     borderRadius={"20px"}
+                    display={{ base: "none", md: "block" }}
                   />
                 ) : (
                   ""

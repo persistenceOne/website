@@ -2,6 +2,7 @@ const colors = {
   primary: {
     white: "#FFFFFF",
     red: "#C73238",
+    redHover: "#BB2F35",
     black: "#252424",
     lightGray: "#F2F4F8",
     gray: "#D9D9D9",
@@ -29,7 +30,9 @@ const colors = {
     ctaBlue:
       "linear-gradient(284.42deg, #00AFFA -49.92%, #32A2BA 54.24%, #24FFCA 169.83%);",
     ctaPink:
-      "linear-gradient(90deg, rgba(0, 2, 146, 0.7) 0.08%, rgba(125, 0, 199, 0.7) 100.14%);"
+      "linear-gradient(90deg, rgba(0, 2, 146, 0.7) 0.08%, rgba(125, 0, 199, 0.7) 100.14%);",
+    ctaBlueHover: "#01BDBD",
+    ctaPurpleHover: "#9E5DD6"
   }
 };
 

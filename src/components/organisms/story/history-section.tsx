@@ -13,6 +13,8 @@ import Image from "next/image";
 
 interface ListProps {
   imgUrl: string;
+  imgWidth?: number;
+  imgHeight?: number;
   title: string;
   content: {
     [key in string]: any;
@@ -21,7 +23,9 @@ interface ListProps {
 
 const list: ListProps[] = [
   {
-    imgUrl: "/images/story-page/clock.svg",
+    imgUrl: "/images/story-page/story-early-days.svg",
+    imgWidth: 320,
+    imgHeight: 200,
     title: "Early days in Cosmos",
     content: {
       item0: (
@@ -45,7 +49,9 @@ const list: ListProps[] = [
     }
   },
   {
-    imgUrl: "/images/story-page/block.svg",
+    imgUrl: "/images/story-page/story-building-blocks.svg",
+    imgWidth: 320,
+    imgHeight: 200,
     title: "Building blocks of LSTfi ",
     content: {
       item0: (
@@ -68,7 +74,9 @@ const list: ListProps[] = [
     }
   },
   {
-    imgUrl: "/images/liquidity.svg",
+    imgUrl: "/images/story-page/story-economy.svg",
+    imgWidth: 250,
+    imgHeight: 200,
     title: "Liquid Staking Economy ",
     content: {
       item0: (
@@ -141,16 +149,21 @@ const HistorySection = () => {
                 bg={"#FFF"}
                 borderRadius={"20px"}
                 boxShadow={"md"}
-                h={{ base: "600px", md: "420px" }}
+                h={{ base: "680px", md: "420px" }}
               >
                 <Flex
                   w={"100%"}
                   direction={{ base: "column", md: "row" }}
                   justify={"center"}
-                  align={"center"}
+                  align={{ base: "center", md: "flex-start" }}
                 >
                   <Box w={{ base: "50%", md: "40%" }}>
-                    <Image src={item.imgUrl} alt="" width={290} height={240} />
+                    <Image
+                      src={item.imgUrl}
+                      alt=""
+                      width={item.imgWidth}
+                      height={item.imgHeight}
+                    />
                   </Box>
                   <Box w={{ base: "100%", md: "60%" }}>
                     <Heading

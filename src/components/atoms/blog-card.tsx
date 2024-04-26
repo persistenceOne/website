@@ -10,7 +10,7 @@ export interface BlogCardInterface {
   resourceImage: string;
   resourceType: string;
   resourceLink: string;
-  width?: string;
+  width?: { base: string; md: string } | string;
 }
 
 const BlogCard = ({

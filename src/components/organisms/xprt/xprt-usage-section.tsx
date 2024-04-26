@@ -20,7 +20,7 @@ const xprtUsageCards = [
     title: "Transaction Fees",
     description:
       "XPRT is used as transaction fees for the ~5000+ daily on-chain transactions related to XPRT staking, IBC transfers, LSTfi activity on Persistence One, and more.",
-    image: "/images/xprt-page/transaction-fees.svg",
+    image: "/images/xprt-page/xprt-transaction.svg",
     cta: {
       text: "Learn More",
       link: "https://www.mintscan.io/persistence/tx",
@@ -31,7 +31,7 @@ const xprtUsageCards = [
     title: "Chain Security",
     description:
       "XPRT is used as economic security of the Persistence One blockchain with a Proof-of-Stake mechanism. Network participants like validators and delegators stake XPRT to earn staking rewards.",
-    image: "/images/xprt-page/security.svg",
+    image: "/images/xprt-page/xprt-security.svg",
     cta: {
       text: "Start Staking",
       link: "https://wallet.keplr.app/chains/persistence?tab=staking",
@@ -42,7 +42,7 @@ const xprtUsageCards = [
     title: "Decentralized Governance",
     description:
       "Persistence One is governed by Persisters with XPRT. On-chain governance has the final say on chain upgrades, community pool spends, dApp launches and improvements, and more.",
-    image: "/images/xprt-page/governance.svg",
+    image: "/images/xprt-page/xprt-governance.svg",
     cta: {
       text: "Participate",
       link: "https://www.mintscan.io/persistence/proposals",
@@ -53,7 +53,7 @@ const xprtUsageCards = [
     title: "On-chain Traction",
     description:
       "XPRT is an enabler for traction and the base asset and incentivizing tool on Dexter, the home of on-chain liquidity. Any dApps deployed on Persistence One in the future can be built with XPRT taking center stage.",
-    image: "/images/xprt-page/traction.svg",
+    image: "/images/xprt-page/xprt-traction.svg",
     cta: {
       text: "Explore",
       link: "https://app.dexter.zone/pools",
@@ -64,7 +64,11 @@ const xprtUsageCards = [
 
 const XPRTUsageSection = () => {
   return (
-    <Container maxW={"1400px"} px={{ base: "16px", md: "30px" }} pt={"100px"}>
+    <Container
+      maxW={"1400px"}
+      px={{ base: "16px", md: "30px" }}
+      mt={{ base: "50px", md: "100px" }}
+    >
       <VStack align={"center"}>
         <Heading
           variant={"main"}
@@ -90,9 +94,20 @@ const XPRTUsageSection = () => {
               pos={"relative"}
               boxShadow={"md"}
             >
-              <Box mb={4}>
-                <Image src={card.image} alt="" width={290} height={240} />
-              </Box>
+              <Flex
+                mb={12}
+                // w={"50%"}
+                justify={"center"}
+              >
+                <Box h={{ base: "240px", md: "240px" }}>
+                  <Image
+                    src={card.image}
+                    alt=""
+                    // width={"100%"}
+                    // height={"100%"}
+                  />
+                </Box>
+              </Flex>
               <Heading
                 variant={"secondary"}
                 color={"#423F401"}
@@ -135,6 +150,7 @@ const XPRTUsageSection = () => {
                   h={"210px"}
                   zIndex={-1}
                   borderRadius={"20px"}
+                  display={{ base: "none", md: "block" }}
                 />
               )}
               {index === 0 && (
@@ -147,6 +163,7 @@ const XPRTUsageSection = () => {
                   h={"210px"}
                   zIndex={-1}
                   borderRadius={"20px"}
+                  display={{ base: "none", md: "block" }}
                 />
               )}
             </Flex>

@@ -41,20 +41,26 @@ const HeroSection = () => {
       <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
         <Spacer h={"150px"} />
         <Flex justify={"space-between"} mb={{ base: "20px", md: "60px" }}>
-          <VStack align={"stretch"}>
+          <VStack align={"stretch"} spacing={0}>
             <Heading
               variant={"main"}
               color={"text.blackHigh"}
               textAlign={"left"}
-              fontSize={{ base: "32px", md: "60px" }}
-              lineHeight={{ base: "42px", md: "72px" }}
+              fontSize={{ base: "42px", md: "60px" }}
+              lineHeight={{ base: "50px", md: "72px" }}
               mb={"20px"}
             >
               Staking. <br />
               Liquid Staking. <br />
               Restaking.
             </Heading>
-            <Text textAlign={"left"} w={{ base: "100%", md: "55%" }} mb={6}>
+            <Text
+              textAlign={"left"}
+              w={{ base: "100%", md: "55%" }}
+              mb={6}
+              color={"text.blackLow"}
+              fontSize={{ base: "16px", md: "22px" }}
+            >
               Persistence One is a purpose built Layer 1 on a mission to
               maximize yield and security through Liquid Staking and Restaking.
             </Text>

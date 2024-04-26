@@ -38,7 +38,7 @@ const variants = {
       color: "rgba(255,255,255,0.4)"
     },
     _hover: {
-      background: "primary.dexBlue50",
+      background: "primary.redHover",
       borderColor: "stroke.dexBlue",
       _disabled: {
         background: "primary.ctaDisabled"

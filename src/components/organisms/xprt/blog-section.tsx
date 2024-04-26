@@ -68,7 +68,11 @@ const BlogSection = () => {
           // justify={""}
         >
           {resourcesList.map((resource, index) => (
-            <BlogCard key={resource.id} {...resource} width="350px" />
+            <BlogCard
+              key={resource.id}
+              {...resource}
+              width={{ base: "100%", md: "350px" }}
+            />
           ))}
         </Flex>
       </Box>
