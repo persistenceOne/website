@@ -12,7 +12,7 @@ export default async function handler(
       )}&vs_currencies=usd`,
       {
         headers: {
-          "x-cg-pro-api-key": process.env.NEXT_PUBLIC_COINGECKO_API_KEY!
+          "x-cg-pro-api-key": process.env.COINGECKO_API_KEY!
         }
       }
     );
