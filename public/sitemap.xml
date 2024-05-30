@@ -9,6 +9,44 @@
 
 <url>
   <loc>https://persistence.one/</loc>
-  <lastmod>2021-10-08T16:06:22+00:00</lastmod>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://persistence.one/story</loc>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://persistence.one/faqs</loc>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://persistence.one/xprt</loc>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://persistence.one/tech</loc>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://persistence.one/people</loc>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://persistence.one/terms</loc>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://persistence.one/privacy</loc>
+  <lastmod>2024-05-30T09:40:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>

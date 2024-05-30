@@ -41,7 +41,7 @@ const HeroSection = () => {
       <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
         <Spacer h={"150px"} />
         <Flex justify={"space-between"} mb={{ base: "20px", md: "60px" }}>
-          <VStack align={"stretch"} spacing={0}>
+          <Box>
             <Heading
               variant={"main"}
               color={"text.blackHigh"}
@@ -65,7 +65,7 @@ const HeroSection = () => {
               maximize yield and security through Liquid Staking and Restaking.
             </Text>
             {/* <Stack direction={{ base: "column", md: "row" }} gap={4}> */}
-            <Link href="/story" passHref>
+            <Link href="/story" passHref className={"inline-block"}>
               <Button
                 variant={"secondary"}
                 rightIcon={<ArrowForwardIcon />}
@@ -80,7 +80,7 @@ const HeroSection = () => {
                 </Button>
               </Link> */}
             {/* </Stack> */}
-          </VStack>
+          </Box>
         </Flex>
         <HomePageStats
           stats={[

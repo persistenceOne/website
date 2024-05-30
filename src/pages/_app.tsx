@@ -66,14 +66,17 @@ const App = ({ Component, pageProps }: AppProps) => {
           <link rel="manifest" href="/manifest.json" />
 
           <meta
-          content="Persistence One | Staking, Liquid Staking and Restaking"
-          property="og:title"
-        />
+            content="Persistence One | Staking, Liquid Staking and Restaking"
+            property="og:title"
+          />
           <meta property="og:image" content="/ogimage.jpeg" />
           <meta
             property="og:description"
             content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking and Restaking."
           />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://persistence.one" />
+
           <meta property="og:site_name" content="Persistence" />
 
           <meta
@@ -84,7 +87,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking and Restaking."
             property="twitter:description"
           />
-
+          <link rel="canonical" href="https://persistence.one/" />
           {/*Twitter Tags*/}
           <meta content="/ogimage.jpeg" property="twitter:image" />
         </Head>
