@@ -1,8 +1,5 @@
 import SocialCard from "@/components/atoms/social-card";
-import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
-import { Box, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/react";
-import Image from "next/image";
-import Link from "next/link";
+import { Box, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const socialCardContents = [
