@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Heading, Text, Center, VStack, Button } from "@chakra-ui/react";
+import { Heading, Center, VStack, Button } from "@chakra-ui/react";
 
 export default function Custom404() {
   return (
