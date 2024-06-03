@@ -544,7 +544,7 @@ const Header = () => {
       setPersistenceTvl(chainTvl);
     };
     fetch();
-  }, []);
+  }, [setPersistenceTvl]);
 
   //fetching pstake info
   useEffect(() => {
@@ -566,7 +566,7 @@ const Header = () => {
       setTokenPrices(tokenPrices);
     };
     fetch();
-  }, []);
+  }, [setPstakeTvl, setTokenPrices]);
 
   //fetching dexter info
   useEffect(() => {
@@ -580,7 +580,7 @@ const Header = () => {
       setOsmoPoolInfo(osmoResponse);
     };
     fetch();
-  }, []);
+  }, [setDexterTVl, setDexterTotalVolume, setDexterPoolInfo, setOsmoPoolInfo]);
 
   return (
     <Box

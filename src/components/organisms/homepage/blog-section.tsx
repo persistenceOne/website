@@ -163,7 +163,7 @@ const BlogSection = () => {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,
-            speed: 4000
+            speed: 1000
           }}
           ref={(slider) => {
             sliderRef = slider;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
 import { shallow } from "zustand/shallow";
+import Image from "next/image";
 
 const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
 
@@ -73,11 +74,18 @@ const GeofenceNotice = () => {
       }
     >
       <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
-        <img
+        {/* <img
           src={"/images/stk_dydx.svg"}
           alt={"stkAtom"}
           width={"16px"}
           height={"16px"}
+          className="logo mr-1"
+        /> */}
+        <Image
+          src="/images/stk_dydx.svg"
+          alt="stkAtom"
+          width={16}
+          height={16}
           className="logo mr-1"
         />
         <span>stkDYDX is NOW LIVE. Liquid Stake your DYDX with&nbsp;</span>
