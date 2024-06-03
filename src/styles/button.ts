@@ -86,10 +86,12 @@ const sizes = {
   })
 };
 
-export default {
+const config = {
   variants,
   sizes,
   defaultProps: {
     variant: "primary"
   }
 };
+
+export default config;

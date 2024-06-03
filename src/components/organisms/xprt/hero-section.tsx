@@ -46,7 +46,7 @@ const HeroSection = () => {
       setPersistenceMarketCap(response);
     };
     fetch();
-  }, []);
+  }, [setStakedXprt, setPersistenceMarketCap]);
   return (
     <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
       <Spacer h={20} />
