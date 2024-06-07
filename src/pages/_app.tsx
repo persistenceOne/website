@@ -56,12 +56,12 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
           <meta
-            content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking."
+            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
             name="description"
           />
           <meta
             name="keywords"
-            content="persistence, liquid staking, bitcoin, pstake, $pstake, cosmos, dexter, xprt, xprt token"
+            content="persistence, liquid staking, bitcoin, babylon, pstake, $pstake, cosmos, xprt, xprt token"
           />
           <link rel="manifest" href="/manifest.json" />
 
@@ -72,7 +72,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <meta property="og:image" content="/ogimage.jpeg" />
           <meta
             property="og:description"
-            content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking."
+            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://persistence.one" />
@@ -84,7 +84,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             property="twitter:title"
           />
           <meta
-            content="Persistence One is a purpose built Layer 1 on a mission to maximize yield and security through Liquid Staking."
+            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
             property="twitter:description"
           />
           <link rel="canonical" href="https://persistence.one/" />
