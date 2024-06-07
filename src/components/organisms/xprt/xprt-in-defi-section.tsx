@@ -6,6 +6,8 @@ import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { DexterPoolsInfo, PoolInfo } from "@/store/slices/initial-data-slice";
+import Slider from "react-slick";
+import BlogCard from "@/components/atoms/blog-card";
 
 const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
   const defiCards: XPRTDefiCardInterface[] = [
@@ -141,22 +143,43 @@ const XPRTInDefiSection = () => {
 
   const xprtDefiCards = getData(dexterPoolsInfo, osmoPoolsInfo);
   return (
-    <Container maxW={"1200px"} px={{ base: "16px", md: "50px" }}>
-      <VStack align={"center"}>
-        <Heading variant={"main"} fontSize={{ base: "26px", md: "58px" }}>
-          XPRT in DeFi
-        </Heading>
-        <Grid
-          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
-          gap={4}
-          mt={8}
-          justifyContent="center"
-        >
-          {xprtDefiCards.map((card, index) => (
-            <XPRTDefiCard key={index} {...card} />
-          ))}
-        </Grid>
-      </VStack>
+    <Container
+      maxW={"1200px"}
+      px={{ base: "16px", md: "50px" }}
+      className={"xprt-defi-cards"}
+    >
+      <Heading
+        variant={"main"}
+        fontSize={{ base: "26px", md: "58px" }}
+        textAlign={"center"}
+      >
+        XPRT in DeFi
+      </Heading>
+      {/*<Grid*/}
+      {/*  templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}*/}
+      {/*  gap={4}*/}
+      {/*  mt={8}*/}
+      {/*  justifyContent="center"*/}
+      {/*>*/}
+      {/*  {xprtDefiCards.map((card, index) => (*/}
+      {/*    <XPRTDefiCard key={index} {...card} />*/}
+      {/*  ))}*/}
+      {/*</Grid>*/}
+      <Slider
+        {...{
+          rows: 2,
+          dots: true,
+          arrows: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }}
+      >
+        {xprtDefiCards.map((card, index) => (
+          <XPRTDefiCard key={index} {...card} />
+        ))}
+      </Slider>
     </Container>
   );
 };
