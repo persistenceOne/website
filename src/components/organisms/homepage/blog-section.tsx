@@ -62,13 +62,26 @@ const resourcesList: BlogCardInterface[] = [
     resourceCTA: "Watch",
     resourceLink: "https://youtu.be/fcvhZme2iik?si=AGYuAXKLhBw6eTpr"
   },
-
   {
     id: 6,
     resourceImage: "/images/resources/resource-6.jpeg",
     resourceType: "Video",
     resourceCTA: "Watch",
     resourceLink: "https://youtu.be/nGofnPQQNoM?si=Rjs2CyzcS4SxHjFO"
+  },
+  {
+    id: 7,
+    resourceImage: "/images/resources/resource-7-xprt-base.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=zkoGFkiTpek"
+  },
+  {
+    id: 8,
+    resourceImage: "/images/resources/resource-8-aerodrome.jpeg",
+    resourceType: "Video",
+    resourceCTA: "Watch",
+    resourceLink: "https://www.youtube.com/watch?v=Rx5RxljGRbk"
   }
 ];
 
