@@ -16,25 +16,27 @@ import React from "react";
 const resourcesList: BlogCardInterface[] = [
   {
     id: 0,
-    resourceImage: "/images/resources/xprt-0.png",
+    resourceImage: "/images/resources/resource-0.jpeg",
     resourceType: "Blog",
     resourceCTA: "Read",
     resourceLink:
-      "https://blog.persistence.one/2024/01/05/all-you-need-to-know-about-xprt-staking/"
+      "https://blog.persistence.one/2024/06/04/introducing-xprt-to-the-base-ecosystem-going-multi-chain-and-building-liquidity/"
   },
   {
     id: 1,
-    resourceImage: "/images/resources/xprt-1.webp",
+    resourceImage: "/images/resources/resource-1.jpeg",
     resourceType: "Blog",
     resourceCTA: "Read",
-    resourceLink: "https://luganodes.com/blog/XPRTSG/"
+    resourceLink:
+      "https://blog.persistence.one/2024/05/22/introducing-wbtc-to-persistence-one-building-wbtc-liquidity-on-dexter/"
   },
   {
     id: 2,
-    resourceImage: "/images/resources/xprt-2.jpeg",
-    resourceType: "Video",
-    resourceCTA: "Watch",
-    resourceLink: "https://www.youtube.com/watch?v=TuP4d368lU8"
+    resourceImage: "/images/resources/resource-2.jpg",
+    resourceType: "Blog",
+    resourceCTA: "Read",
+    resourceLink:
+      "https://blog.persistence.one/2024/04/16/introducing-stkxprt-the-star-of-persistence-one/"
   }
 ];
 

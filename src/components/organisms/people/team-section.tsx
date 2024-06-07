@@ -46,7 +46,7 @@ const teamMembers: TeamMemberCardInterface[] = [
   {
     image: "/images/team/jeroen-develter.png",
     name: "Jeroen Develter",
-    role: "COO",
+    role: "Chief Operating Officer",
     socialLinks: [
       {
         name: "Twitter",
@@ -65,7 +65,7 @@ const teamMembers: TeamMemberCardInterface[] = [
   {
     image: "/images/team/zhi-hao.png",
     name: "Zhi Hao Loy",
-    role: "CLO",
+    role: "Chief Legal Officer",
     socialLinks: [
       {
         name: "Twitter",

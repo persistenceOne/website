@@ -39,14 +39,14 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       website: {
         link: "https://app.persistence.one",
         linkText: "app.persistence.one",
-        hover: "#C73238"
+        hover: "primary.redHover"
       },
       button: {
         text: "Trade Now",
         link: "https://app.persistence.one",
-        background: "transparent",
-        hover: "#C732381A",
-        color: "#DE5656"
+        background: "primary.red",
+        hover: "primary.redHover",
+        color: "white"
       }
     },
     {
