@@ -21,6 +21,7 @@ const colors = {
     whiteLow: "#232325CC",
     blackFull: "#000",
     blackHigh: "#423F40",
+    blackTitle: "#080014",
     blackEmphasis: "#232325",
     blackMid: "#3D3D3D",
     blackLow: "#232325CC"

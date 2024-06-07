@@ -3,6 +3,8 @@ import { sdkInstance } from "@/utils/helpers";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
 
 const defillamaApi = "https://defillama-datasets.llama.fi/lite/protocols2";
+export const STK_XPRT_TVL_URL =
+  "https://api.persistence.one/pstake/stkxprt/xprt_tvu";
 export const STK_ATOM_TVL_URL =
   "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
 export const STK_OSMO_TVL_API =
@@ -51,6 +53,8 @@ export const getCosmosTVL = async (prefix: string) => {
         ? STK_ATOM_TVL_URL
         : prefix === "osmo"
         ? STK_OSMO_TVL_API
+        : prefix === "xprt"
+        ? STK_XPRT_TVL_URL
         : STK_DYDX_TVL_API
     );
     if (res && res.data) {
@@ -78,7 +82,7 @@ export const fetchTokenPrices = async () => {
     data.ATOM = Number(pricesResponse.data["cosmos"].usd);
     data.OSMO = Number(pricesResponse.data["osmosis"].usd);
     data.DYDX = Number(pricesResponse.data["dydx"].usd);
-    data.DYDX = Number(pricesResponse.data["persistence"].usd);
+    data.XPRT = Number(pricesResponse.data["persistence"].usd);
     return data;
   } catch (e) {
     return data;
@@ -158,6 +162,14 @@ export const fetchDexterPoolInfo = async () => {
     5: {
       tvl: 0,
       apy: 0
+    },
+    12: {
+      tvl: 0,
+      apy: 0
+    },
+    13: {
+      tvl: 0,
+      apy: 0
     }
   };
   try {
@@ -174,14 +186,14 @@ export const fetchDexterPoolInfo = async () => {
               identifier
             }
           }
-          pool_weekly_aggregate_with_apr(where: {pool_id: {_in: [2, 3, 5]}}) {
+          pool_weekly_aggregate_with_apr(where: {pool_id: {_in: [2, 3, 5, 12, 13]}}) {
             pool_id
             total_swap_fee
             current_liquidity_usd
             total_volume
             apr
           }
-          pool_current_incentive_apr(where: {pool_id: {_in: [2, 3, 5]}}) {
+          pool_current_incentive_apr(where: {pool_id: {_in: [2, 3, 5, 12, 13]}}) {
             incentive_apr
             pool_id
           }

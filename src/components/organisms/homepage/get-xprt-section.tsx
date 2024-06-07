@@ -18,8 +18,8 @@ const GetXprtSection = () => {
         <HStack bg="#" justify={"space-between"}>
           <Box w={"700px"}>
             <Heading
-              color="text.headingWhite"
-              fontSize={{ base: "26px", md: "48px" }}
+              color="text.headingSemiWhite"
+              fontSize={{ base: "26px", md: "44px" }}
               lineHeight={{ base: "38px", md: "72px" }}
               mb={4}
             >

@@ -29,7 +29,7 @@ const BecomePersisterSection = ({
       <Container maxW={"1300px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
         <Box>
           <Heading
-            color="text.headingSemiBlack"
+            color="text.bloackHeading"
             fontSize={{ base: "26px", md: "58px" }}
             mb={"8px"}
             textAlign={"center"}

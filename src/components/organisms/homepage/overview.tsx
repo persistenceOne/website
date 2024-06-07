@@ -9,20 +9,12 @@ const Overview = () => {
       <Box>
         <Heading
           mb={"4px"}
-          color={"text.blackMid"}
+          color={"text.blackTitle"}
           textAlign={"center"}
           fontSize={{ base: "26px", md: "58px" }}
         >
           Why Persistence One?
         </Heading>
-        <Text
-          color={"text.blackMid"}
-          textAlign={"center"}
-          fontSize={{ base: "18px", md: "22px" }}
-        >
-          Our vision, technical expertise, and values shape a thriving Liquid
-          Staking and Restaking economy.
-        </Text>
         <FeatureCards />
       </Box>
     </Container>

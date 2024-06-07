@@ -23,15 +23,13 @@ const HeroSection = () => {
           <Box py={"50px"}>
             <Heading
               variant={"main"}
-              color={"text.blackHigh"}
+              color={"text.blackHeading"}
               mb={5}
               textAlign={{ base: "left", md: "left" }}
               fontSize={{ base: "42px", md: "50px" }}
               lineHeight={{ base: "50px", md: "50px", lg: "50px" }}
             >
-              Building With Persistence
-              <br />
-              Since Day One In Cosmos.
+              Building with Persistence.
             </Heading>
 
             <Text

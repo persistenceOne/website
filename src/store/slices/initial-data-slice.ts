@@ -13,7 +13,7 @@ export interface ValidatorsInfo {
   dydx: ValidatorInfo[];
 }
 
-type AvailablePools = 2 | 3 | 5;
+type AvailablePools = 2 | 3 | 5 | 12 | 13;
 
 export type PoolInfo = {
   tvl: number;
@@ -102,6 +102,14 @@ const initialState: InitialDataSliceState = {
       apy: 0
     },
     5: {
+      tvl: 0,
+      apy: 0
+    },
+    12: {
+      tvl: 0,
+      apy: 0
+    },
+    13: {
       tvl: 0,
       apy: 0
     }

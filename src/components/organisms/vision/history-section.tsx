@@ -77,29 +77,20 @@ const list: ListProps[] = [
     imgUrl: "/images/story-page/story-economy.svg",
     imgWidth: 250,
     imgHeight: 200,
-    title: "Liquid Staking Economy ",
+    title: "BTC Trading and Security",
     content: {
       item0: (
-        <Text>
-          Today, Persistence One has 54,000+ on-chain accounts with{" "}
-          <b>5000+ daily transactions and $12M+ TVL.</b>
-        </Text>
+        <Text>Integrating with Babylon to adopt Bitcoin Shared Security</Text>
       ),
       item1: (
         <Text>
-          The{" "}
-          <b>
-            Persistence One Ecosystem is expanding by partnering with leading
-            projects
-          </b>{" "}
-          like the Cosmos Hub, Kujira, Neutron, Osmosis, Astroport, Shade
-          Protocol and diversifying XPRT liquidity in Cosmos.
+          Launched <b>WBTC/XPRT</b> pool on the Persistence DEX and Osmosis
         </Text>
       ),
       item2: (
         <Text>
-          The <b>next big leap is bringing the Restaking</b> of LSTs,
-          Stablecoins, and LP tokens on Persistence One.
+          Upcoming launch of additionally DeFi functionalities focused around
+          BTC assets.
         </Text>
       )
     }
@@ -126,7 +117,7 @@ const HistorySection = () => {
       <Box py={"70px"}>
         <Heading
           textAlign={"center"}
-          color={"text.blackHigh"}
+          color={"text.blackHeading"}
           fontSize={{ base: "26px", md: "58px" }}
           mb={"6px"}
         >

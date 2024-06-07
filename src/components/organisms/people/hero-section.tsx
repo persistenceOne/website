@@ -24,7 +24,7 @@ const HeroSection = () => {
         >
           <Heading
             variant={"main"}
-            color={"text.blackHigh"}
+            color={"text.blackHeading"}
             fontSize={{ base: "42px", md: "42px", lg: "67px" }}
             lineHeight={{ base: "50px", md: "50px", lg: "90px" }}
           >
@@ -34,7 +34,7 @@ const HeroSection = () => {
           <Text
             textAlign="left"
             color={"text.blackLow"}
-            fontSize={{ base: "16px", md: "22px" }}
+            fontSize={{ base: "16px", md: "18px" }}
           >
             Learn more about the people behind Persistence One, <br /> what it
             means to be a Persister, and how to become one.
@@ -45,8 +45,8 @@ const HeroSection = () => {
           >
             <Image
               src="/images/team/people-hero.svg"
-              alt="Persistence Coin"
-              width={640}
+              alt="People"
+              width={540}
               height={400}
             />
           </Box>
@@ -60,7 +60,7 @@ const HeroSection = () => {
           <Image
             src="/images/team/people-hero.svg"
             alt="Persistence Coin"
-            width={640}
+            width={540}
             height={400}
           />
         </Box>

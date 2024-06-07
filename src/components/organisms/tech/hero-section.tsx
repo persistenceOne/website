@@ -64,8 +64,11 @@ const HeroSection = () => {
               textAlign={{ base: "left", md: "left" }}
               fontSize={{ base: "42px", md: "50px" }}
               lineHeight={{ base: "50px", md: "50px", lg: "60px" }}
+              color={"text.blackHeading"}
             >
-              Technically Superb.
+              Technically
+              <br />
+              Superb.
             </Heading>
             <Heading
               variant={"main"}
@@ -74,18 +77,10 @@ const HeroSection = () => {
               lineHeight={{ base: "50px", md: "50px", lg: "60px" }}
               color={"primary.red"}
             >
-              Superbly Powerful.
+              Superbly
+              <br />
+              Powerful.
             </Heading>
-            <Text
-              color={"text.blackLow"}
-              fontSize={{ base: "16px", md: "22px" }}
-              textAlign={{ base: "left", md: "left" }}
-              w={{ base: "auto", md: "55%" }}
-              mt={6}
-            >
-              Persistence One is operating at the bleeding edge of innovation
-              when it comes to Liquid Staking and Restaking.
-            </Text>
           </Box>
         </Flex>
         <Stack

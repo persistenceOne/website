@@ -20,7 +20,7 @@ const list: any = {
       imgHeight: "297px",
       title: "Interblockchain Communication Protocol (IBC)",
       content:
-        "Persistence One is connected to 54 Cosmos app chains to trustlessly communicate, transfer tokens, liquid stake and restake tokens."
+        "Persistence One is connected to 54 Cosmos app chains to trustlessly communicate and transfer tokens like BTC and more."
     },
     {
       imgUrl: "/images/tech-page/tech-ica.svg",
@@ -41,12 +41,12 @@ const list: any = {
         "LSTfi applications like instant transfer of staked XPRT tokens between wallets are possible only on Persistence One."
     },
     {
-      imgUrl: "/images/tech-page/tech-restaking-module.svg",
+      imgUrl: "/images/tech-page/trustless-btc.svg",
       imgWidth: "249px",
       imgHeight: "235px",
-      title: "Restaking Module",
+      title: "Trustless Bitcoin Staking Protocol via Babylon",
       content:
-        "Restake anything on Persistence One like LSTs, Stablecoins, and LP tokens of leading DEXs to improve chain security and earn extra yields. "
+        "Persistence One will integrate with Babylon’s Trustless BTC staking Protocol to enhance the chain security."
     }
   ],
   item2: [
@@ -89,7 +89,7 @@ const EconomySection = () => {
       <Box py={"70px"}>
         <Heading
           textAlign={"center"}
-          color={"text.blackHigh"}
+          color={"text.blackHeading"}
           fontSize={{ base: "26px", md: "58px" }}
           mb={{ base: "32px", md: "60px" }}
         >

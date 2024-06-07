@@ -16,15 +16,15 @@ import Image from "next/image";
 const list = [
   {
     imgUrl: "/images/story-page/story-pos.svg",
-    title: "Proof-of-Stake will become the norm",
+    title: "BTCFi will catch up and overtake ETH DeFi",
     content:
-      "The world will be full of secure and interoperable PoS blockchains with flourishing DeFi as staking becomes the fixed income of crypto"
+      "Bitcoinization will rule the DeFi sector. Persistence One will lead the charge for BTCfi and all BTC assets will be traded on Persistence One. "
   },
   {
     imgUrl: "/images/story-page/story-roads.svg",
-    title: "All roads originate from Cosmos",
+    title: "Chain security will always be needed in abundance",
     content:
-      "The bull case for sovereign and modular app chains is the opportunity for building a Liquid Staking and Restaking economy on Persistence One."
+      "BTC Shared Security will become the most reliable source of safeguarding PoS chains without overpaying for it with the native token inflation."
   },
   {
     imgUrl: "/images/story-page/story-native-pos.svg",
@@ -39,7 +39,7 @@ const VisionSection = () => {
       <Box pt={{ base: "32px", md: "60px" }} pb={{ base: "32px", md: "100px" }}>
         <Heading
           textAlign={"center"}
-          color={"text.blackHigh"}
+          color={"text.blackHeading"}
           fontSize={{ base: "26px", md: "58px" }}
           mb={{ base: "32px", md: "60px" }}
         >
@@ -73,7 +73,7 @@ const VisionSection = () => {
               <Heading
                 variant={"secondary"}
                 color={"text.blackEmphasis"}
-                fontSize={{ base: "20px", md: "26px" }}
+                fontSize={{ base: "20px", md: "24px" }}
                 fontWeight={600}
                 lineHeight={"40px"}
                 mb={4}
@@ -83,7 +83,7 @@ const VisionSection = () => {
               <Text
                 color={"text.blackLow"}
                 lineHeight={"27px"}
-                fontSize={{ base: "14px", md: "18px" }}
+                fontSize={{ base: "14px", md: "16px" }}
               >
                 {item.content}
               </Text>

@@ -60,12 +60,13 @@ const HeroSection = () => {
           <Heading
             fontSize={{ base: "42px", md: "42px", lg: "50px" }}
             variant={"main"}
+            color={"primary.blackHeading"}
           >
-            Powering Liquid Staking <br /> and Restaking with XPRT
+            Powering BTC <br /> and LSTs Trading with XPRT
           </Heading>
           <Text textAlign="left" my={6} fontSize={{ base: "16px", md: "20px" }}>
-            XPRT is the multi-purpose native token of the Persistence One
-            Ecosystem.
+            XPRT is the multi-purpose native token of the <br /> Persistence DEX
+            and network.
           </Text>
           <Flex gap={4} direction={{ base: "column", md: "row" }}>
             <Link
