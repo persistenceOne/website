@@ -80,7 +80,9 @@ const list: ListProps[] = [
     title: "BTC Trading and Security",
     content: {
       item0: (
-        <Text>Integrating with Babylon to adopt Bitcoin Shared Security</Text>
+        <Text>
+          Integrating with <b>Babylon</b> to adopt Bitcoin Shared Security
+        </Text>
       ),
       item1: (
         <Text>

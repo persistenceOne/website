@@ -10,7 +10,8 @@ import {
   Heading,
   Text,
   VStack,
-  Flex
+  Flex,
+  useMediaQuery
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,6 +45,7 @@ const FeatureCard = ({
   cardType = "content",
   imgWidth
 }: FeatureCardInterface) => {
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
   return (
     <Card
       borderRadius={20}
@@ -65,7 +67,9 @@ const FeatureCard = ({
         <CardBody p={"0"} style={{ display: "flex" }}>
           <Stack
             spacing={4}
-            align={category === "Story" ? "center" : "end"}
+            align={
+              category === "Story" ? "center" : isMobile ? "center" : "end"
+            }
             direction={{ base: "column", md: "row" }}
           >
             <Box>
@@ -118,8 +122,8 @@ const FeatureCard = ({
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 296 : 126}
-                  height={category === "Ecosystem" ? 154 : 126}
+                  width={category === "Ecosystem" ? 296 : 296}
+                  height={category === "Ecosystem" ? 154 : 154}
                 />
               </Box>
               <Heading

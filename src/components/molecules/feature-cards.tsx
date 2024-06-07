@@ -11,7 +11,8 @@ import {
   HStack,
   Text,
   Stack,
-  VStack
+  VStack,
+  useMediaQuery
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Link from "next/link";
@@ -20,6 +21,7 @@ import Image from "next/image";
 
 const FeatureCards = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -49,6 +51,7 @@ const FeatureCards = () => {
             linkText: "Explore Our Vision",
             isExternal: false
           }}
+          type={isMobile ? "vertical" : "horizontal"}
         />
 
         <FeatureCard

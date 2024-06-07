@@ -299,7 +299,7 @@ const XPRTInDefiSection = () => {
           textAlign={"center"}
           mb={10}
         >
-          XPRT in DeFi
+          XPRT in Multi-Chain DeFi
         </Heading>
         <Slider
           {...{
@@ -342,8 +342,8 @@ const XPRTInDefiSection = () => {
             fontWeight={700}
             lineHeight={{ base: "1.5", md: "48px" }}
           >
-            Find correct details about all the IBC Denom <br /> or Token
-            Contract for XPRT on <br /> the respective chains here.
+            Find correct details about all the IBC Denoms <br /> or Token
+            Contract Addresses for XPRT on <br /> the respective chains.
           </Heading>
           <Box textAlign={{ base: "center", md: "left" }}>
             <Link
