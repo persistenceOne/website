@@ -13,8 +13,12 @@ import {
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
-import { DexterPoolsInfo, PoolInfo } from "@/store/slices/initial-data-slice";
 import Slider from "react-slick";
+import {
+  DexterPoolsInfo,
+  OsmosisPoolsInfo,
+  PoolInfo
+} from "@/store/slices/initial-data-slice";
 import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
@@ -22,7 +26,10 @@ import {
   TOKEN_CONTRACT_ADDRESS_LINK
 } from "@/utils/config";
 
-const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
+const getData = (
+  dexterInfo: DexterPoolsInfo,
+  osmoPoolsInfo: OsmosisPoolsInfo
+) => {
   console.log({ dexterInfo });
   const defiCards: XPRTDefiCardInterface[] = [
     {
@@ -37,7 +44,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
         }
       ],
       cta: {
-        label: "pDEX",
+        label: "Persistence",
         link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
@@ -67,7 +74,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
         }
       ],
       cta: {
-        label: "pDEX",
+        label: "Persistence",
         link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
@@ -85,33 +92,34 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
         }
       ]
     },
+
     {
       tokens: [
         {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
+          name: "WBTC",
+          image: "/images/tokens/wbtc.svg"
         },
         {
-          name: "USDC",
-          image: "/images/tokens/usdc.svg"
+          name: "XPRT",
+          image: "/images/tokens/xprt.svg"
         }
       ],
       cta: {
-        label: "Aerodrome",
-        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
-        bg: "buttons.ctaBlue",
-        hover: "buttons.ctaBlueHover"
+        label: "Osmosis",
+        link: "https://app.osmosis.zone/pool/1773",
+        bg: "buttons.ctaPink",
+        hover: "buttons.ctaPurpleHover"
       },
       description:
-        "Provide liquidity to the XPRT/USDC supercharged pool to earn trading fees and external incentives",
+        "Provide liquidity to the WBTC/XPRT Supercharged pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",
-          value: "43827"
+          value: osmoPoolsInfo[1773].tvl.toString()
         },
         {
           label: "APR",
-          value: "0"
+          value: osmoPoolsInfo[1773].apy.toString()
         }
       ]
     },
@@ -127,7 +135,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
         }
       ],
       cta: {
-        label: "Dexter",
+        label: "Persistence",
         link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
@@ -142,6 +150,36 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
         {
           label: "APR",
           value: dexterInfo[2].apy.toString()
+        }
+      ]
+    },
+    {
+      tokens: [
+        {
+          name: "XPRT",
+          image: "/images/tokens/xprt.svg"
+        },
+        {
+          name: "USDC",
+          image: "/images/tokens/usdc.svg"
+        }
+      ],
+      cta: {
+        label: "Aerodrome",
+        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        bg: "buttons.ctaDarkBlue",
+        hover: "buttons.ctaDarkBlueHover"
+      },
+      description:
+        "Provide liquidity to the XPRT/USDC supercharged pool to earn trading fees and external incentives",
+      stats: [
+        {
+          label: "TVL",
+          value: "43827"
+        },
+        {
+          label: "APR",
+          value: "0"
         }
       ]
     },
@@ -167,11 +205,11 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
       stats: [
         {
           label: "TVL",
-          value: osmoPoolsInfo.tvl.toString()
+          value: osmoPoolsInfo[1101].tvl.toString()
         },
         {
           label: "APR",
-          value: osmoPoolsInfo.apy.toString()
+          value: osmoPoolsInfo[1101].apy.toString()
         }
       ]
     },
@@ -187,7 +225,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
         }
       ],
       cta: {
-        label: "Dexter",
+        label: "Persistence",
         link: "https://app.dexter.zone/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
@@ -217,7 +255,7 @@ const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
         }
       ],
       cta: {
-        label: "Dexter",
+        label: "Persistence",
         link: "https://app.dexter.zone/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"

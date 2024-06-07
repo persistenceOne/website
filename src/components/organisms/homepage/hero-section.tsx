@@ -20,12 +20,12 @@ import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 
 const HeroSection = () => {
-  const [tvl, ibcVolume, transactionCost] = useAppStore(
+  const [tvl, ibcVolume, transactionCost, dexterInfo] = useAppStore(
     (state) => [
       state.tvl,
       state.ibcVolume,
       state.transactionCost,
-      state.inflationDate
+      state.dexterInfo
     ],
     shallow
   );
@@ -93,8 +93,8 @@ const HeroSection = () => {
               statLabel: "On-chain Total Value Locked"
             },
             {
-              statValue: `$${numberFormat(ibcVolume, 2)}`,
-              statLabel: "Total Trading Volume"
+              statValue: `$${numberFormat(dexterInfo.total_volume, 2)}`,
+              statLabel: "DEX Trading Volume"
             },
             {
               statValue: `$${transactionCost}`,

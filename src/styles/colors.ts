@@ -33,7 +33,9 @@ const colors = {
     ctaPink:
       "linear-gradient(90deg, rgba(0, 2, 146, 0.7) 0.08%, rgba(125, 0, 199, 0.7) 100.14%);",
     ctaBlueHover: "#01BDBD",
-    ctaPurpleHover: "#9E5DD6"
+    ctaPurpleHover: "#9E5DD6",
+    ctaDarkBlue: "#2A54F3",
+    ctaDarkBlueHover: "#2A53D3"
   }
 };
 

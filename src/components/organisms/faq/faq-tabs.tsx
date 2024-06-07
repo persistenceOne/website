@@ -52,13 +52,13 @@ const FaqTabs = () => {
         </Heading>
         <AccordionList list={aboutPersistence} />
         <Box
-          p={{ base: 2, md: 4 }}
-          // px={{ base: 4, md: 8 }}
+          p={{ base: 4, md: 4 }}
+          px={{ base: 4, md: 4 }}
           pt={{ base: 4, md: 4 }}
           bg="white"
           borderRadius={8}
           alignSelf={"center"}
-          w={"400px"}
+          w={["70vw", "40vw"]}
           mr={2}
           boxShadow={"md"}
           mt={"40px"}
