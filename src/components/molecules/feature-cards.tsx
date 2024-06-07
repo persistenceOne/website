@@ -39,14 +39,14 @@ const FeatureCards = () => {
         <FeatureCard
           width="60%"
           height="380px"
-          category="Story"
+          category="Vision"
           imgWidth={210}
-          title="Proof-of-Stake is Everything. Everything will be Restaked."
-          description="Learn about our vision, history, and why we foresee a future where Liquid Staking and Restaking becomes the base value layer in crypto."
+          title="BTCFi will catch up and overtake ETH DeFi"
+          description="Learn about our vision and the belief in the Bitcoinization of crypto."
           image="/images/home-page/story.svg"
           cta={{
             link: "/story",
-            linkText: "Explore Our Story",
+            linkText: "Explore Our Vision",
             isExternal: false
           }}
         />
@@ -55,8 +55,8 @@ const FeatureCards = () => {
           width="40%"
           height="380px"
           category="Ecosystem"
-          title="Persistence One."
-          description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the ecosystem for Staking, Liquid Staking, and Restaking. "
+          title="Our partners in the journey"
+          description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the ecosystem."
           image="/images/home-page/ecosystem.svg"
           imgWidth={196}
           cta={{
@@ -89,7 +89,7 @@ const FeatureCards = () => {
         <FeatureCard
           category="Technology"
           title={`Technically Superb. Superbly Powerful.`}
-          description="See how Persistence One offers a technically advanced, secure, and robust infrastructure for modular and smart-contract dApps."
+          description="See how Persistence One offers a technically advanced, secure, and robust infrastructure for Bitcoin and Liquid Staked Tokens trading."
           image="/images/home-page/tech.svg"
           imgWidth={280}
           cta={{
@@ -148,7 +148,7 @@ const FeatureCards = () => {
         </VStack>
       </Stack>
 
-      <Stack
+      {/* <Stack
         gap={4}
         pos={"relative"}
         align={"stretch"}
@@ -178,8 +178,8 @@ const FeatureCards = () => {
           borderRadius={"20px"}
           opacity={isVisible ? 1 : 0}
           transition="opacity 1s"
-        />
-        {/* <FeatureCard
+        /> */}
+      {/* <FeatureCard
           width="30%"
           height="380px"
           category=""
@@ -194,7 +194,7 @@ const FeatureCards = () => {
           type="vertical"
           cardType={"img"}
         /> */}
-      </Stack>
+      {/* </Stack> */}
     </VStack>
   );
 };

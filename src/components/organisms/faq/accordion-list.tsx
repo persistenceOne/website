@@ -17,7 +17,7 @@ interface Props {
 
 const AccordionList = ({ list }: Props) => {
   return (
-    <Accordion allowToggle>
+    <Accordion allowToggle w="full">
       {list.map((item, index) => (
         <AccordionItem
           key={index}

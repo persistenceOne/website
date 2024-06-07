@@ -49,7 +49,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ChakraProvider theme={theme}>
         <Head>
           <meta charSet="utf-8" />
-          <title>Persistence One | Staking, Liquid Staking and Restaking</title>
+          <title>Persistence One | Securely Trade BTC and LSTs</title>
           <link rel="shortcut icon" href="/favicon.png" />
           <meta
             name="viewport"
@@ -61,12 +61,12 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
           <meta
             name="keywords"
-            content="persistence, liquid staking, restaking, pstake, $pstake, cosmos, bamboo, dexter, xprt, xprt token"
+            content="persistence, liquid staking, bitcoin, pstake, $pstake, cosmos, dexter, xprt, xprt token"
           />
           <link rel="manifest" href="/manifest.json" />
 
           <meta
-            content="Persistence One | Staking, Liquid Staking and Restaking"
+            content="Persistence One | Securely Trade BTC and LSTs"
             property="og:title"
           />
           <meta property="og:image" content="/ogimage.jpeg" />
@@ -80,7 +80,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <meta property="og:site_name" content="Persistence" />
 
           <meta
-            content="Persistence One | Staking, Liquid Staking and Restaking"
+            content="Persistence One | Securely Trade BTC and LSTs"
             property="twitter:title"
           />
           <meta

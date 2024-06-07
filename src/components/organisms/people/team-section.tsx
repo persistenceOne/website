@@ -8,7 +8,7 @@ const teamMembers: TeamMemberCardInterface[] = [
   {
     image: "/images/team/tushar-aggarwal.png",
     name: "Tushar Aggarwal",
-    role: "Founder and Chief Executive Officer",
+    role: "Founder",
     socialLinks: [
       {
         name: "Twitter",
@@ -105,7 +105,7 @@ const teamMembers: TeamMemberCardInterface[] = [
   {
     image: "/images/team/bart-van-der-voort.png",
     name: "Bart Van Der Voort",
-    role: "Strategy",
+    role: "Head of Strategy",
     socialLinks: [
       {
         name: "Twitter",
@@ -116,82 +116,6 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/bartvandervoort/",
-        icon: "linkedin",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/aditya-vandkar.png",
-    name: "Aditya Vandkar",
-    role: "Growth",
-    socialLinks: [
-      {
-        name: "Twitter",
-        link: "https://twitter.com/VandkarAditya",
-        icon: "x",
-        color: "#000000"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/aditya-vandkar-9a9675177/",
-        icon: "linkedin",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/kevin-poh.png",
-    name: "Kevin Poh",
-    role: "Business Development",
-    socialLinks: [
-      {
-        name: "Twitter",
-        link: "https://twitter.com/kevinnnpoh",
-        icon: "x",
-        color: "#000000"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/kevinpohchengen/",
-        icon: "linkedin",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/marc-puig-torres.png",
-    name: "Marc Puig Torres",
-    role: "Engineering",
-    socialLinks: [
-      {
-        name: "Twitter",
-        link: "https://twitter.com/krusspy",
-        icon: "x",
-        color: "#000000"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/marcpt/",
-        icon: "linkedin",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
-    image: "/images/team/sukriti-taneja.png",
-    name: "Sukriti Taneja",
-    role: "Marketing",
-    socialLinks: [
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Sukriti2108",
-        icon: "x",
-        color: "#000000"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/sukriti-taneja-b624731a0/",
         icon: "linkedin",
         color: "#0077B5"
       }
@@ -217,6 +141,25 @@ const teamMembers: TeamMemberCardInterface[] = [
     ]
   },
   {
+    image: "/images/team/marc-puig-torres.png",
+    name: "Marc Puig Torres",
+    role: "Engineering",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/krusspy",
+        icon: "x",
+        color: "#000000"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/marcpt/",
+        icon: "linkedin",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
     image: "/images/team/pranjal-paliwal.png",
     name: "Pranjal Paliwal",
     role: "Engineering",
@@ -230,6 +173,44 @@ const teamMembers: TeamMemberCardInterface[] = [
       {
         name: "Linkedin",
         link: "https://www.linkedin.com/in/betterclever/",
+        icon: "linkedin",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/sukriti-taneja.png",
+    name: "Sukriti Taneja",
+    role: "Marketing",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/Sukriti2108",
+        icon: "x",
+        color: "#000000"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/sukriti-taneja-b624731a0/",
+        icon: "linkedin",
+        color: "#0077B5"
+      }
+    ]
+  },
+  {
+    image: "/images/team/aditya-vandkar.png",
+    name: "Aditya Vandkar",
+    role: "Growth",
+    socialLinks: [
+      {
+        name: "Twitter",
+        link: "https://twitter.com/VandkarAditya",
+        icon: "x",
+        color: "#000000"
+      },
+      {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/aditya-vandkar-9a9675177/",
         icon: "linkedin",
         color: "#0077B5"
       }

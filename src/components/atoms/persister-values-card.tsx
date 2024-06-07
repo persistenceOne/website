@@ -19,7 +19,7 @@ const PersisterValuesCard = ({
         <Heading color={"#3D3D3D"} fontSize={26} fontWeight={600}>
           {title}
         </Heading>
-        <Text color={"#3D3D3DB2"} fontSize={18} fontWeight={400}>
+        <Text color={"rgba(8, 0, 20, 0.80)"} fontSize={18} fontWeight={400}>
           {description}
         </Text>
       </VStack>

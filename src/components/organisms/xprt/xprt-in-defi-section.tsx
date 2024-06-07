@@ -1,14 +1,119 @@
 import XPRTDefiCard, {
   XPRTDefiCardInterface
 } from "@/components/molecules/xprt-defi-card";
-import { Container, VStack, Heading, SimpleGrid, Grid } from "@chakra-ui/react";
+import {
+  Container,
+  VStack,
+  Heading,
+  SimpleGrid,
+  Grid,
+  Box,
+  Button
+} from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { DexterPoolsInfo, PoolInfo } from "@/store/slices/initial-data-slice";
+import Link from "next/link";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+import {
+  TELEGRAM_PERSISTENCE_COMMUNITY_LINK,
+  TOKEN_CONTRACT_ADDRESS_LINK
+} from "@/utils/config";
 
 const getData = (dexterInfo: DexterPoolsInfo, osmoPoolsInfo: PoolInfo) => {
+  console.log({ dexterInfo });
   const defiCards: XPRTDefiCardInterface[] = [
+    {
+      tokens: [
+        {
+          name: "WBTC",
+          image: "/images/tokens/wbtc.svg"
+        },
+        {
+          name: "XPRT",
+          image: "/images/tokens/xprt.svg"
+        }
+      ],
+      cta: {
+        label: "pDEX",
+        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
+      },
+      description:
+        "Provide liquidity to the WBTC/XPRT pool to earn trading fees and external incentives",
+      stats: [
+        {
+          label: "TVL",
+          value: dexterInfo[13].tvl.toString()
+        },
+        {
+          label: "APR",
+          value: dexterInfo[13].apy.toString()
+        }
+      ]
+    },
+    {
+      tokens: [
+        {
+          name: "stkXPRT",
+          image: "/images/tokens/stkxprt.svg"
+        },
+        {
+          name: "XPRT",
+          image: "/images/tokens/xprt.svg"
+        }
+      ],
+      cta: {
+        label: "pDEX",
+        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
+      },
+      description:
+        "Provide liquidity to the stkXPRT/XPRT pool to earn trading fees and external incentives",
+      stats: [
+        {
+          label: "TVL",
+          value: dexterInfo[12].tvl.toString()
+        },
+        {
+          label: "APR",
+          value: dexterInfo[12].apy.toString()
+        }
+      ]
+    },
+    {
+      tokens: [
+        {
+          name: "XPRT",
+          image: "/images/tokens/xprt.svg"
+        },
+        {
+          name: "USDC",
+          image: "/images/tokens/usdc.svg"
+        }
+      ],
+      cta: {
+        label: "Aerodrome",
+        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        bg: "buttons.ctaBlue",
+        hover: "buttons.ctaBlueHover"
+      },
+      description:
+        "Provide liquidity to the XPRT/USDC supercharged pool to earn trading fees and external incentives",
+      stats: [
+        {
+          label: "TVL",
+          value: "43827"
+        },
+        {
+          label: "APR",
+          value: "0"
+        }
+      ]
+    },
     {
       tokens: [
         {
@@ -138,26 +243,73 @@ const XPRTInDefiSection = () => {
     (state) => [state.dexterPoolsInfo, state.osmoPoolsInfo],
     shallow
   );
-
+  console.log({ dexterPoolsInfo });
   const xprtDefiCards = getData(dexterPoolsInfo, osmoPoolsInfo);
   return (
-    <Container maxW={"1200px"} px={{ base: "16px", md: "50px" }}>
-      <VStack align={"center"}>
-        <Heading variant={"main"} fontSize={{ base: "26px", md: "58px" }}>
-          XPRT in DeFi
-        </Heading>
-        <Grid
-          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
-          gap={4}
-          mt={8}
-          justifyContent="center"
+    <>
+      <Container maxW={"1200px"} px={{ base: "16px", md: "50px" }}>
+        <VStack align={"center"}>
+          <Heading
+            variant={"main"}
+            fontSize={{ base: "26px", md: "58px" }}
+            color={"primary.blackHeading"}
+          >
+            XPRT in DeFi
+          </Heading>
+          <Grid
+            templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+            gap={4}
+            mt={8}
+            justifyContent="center"
+          >
+            {xprtDefiCards.map((card, index) => (
+              <XPRTDefiCard key={index} {...card} />
+            ))}
+          </Grid>
+        </VStack>
+      </Container>
+      <Box
+        bg={"#252424"}
+        mt={12}
+        style={{
+          backgroundImage: "url('/images/story-page/story-community-bg.svg')",
+          backgroundPosition: "100% 100%",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "22%"
+        }}
+        backgroundPosition="bottom right"
+      >
+        <Container
+          maxW={"1440px"}
+          px={{ base: "20px", md: "100px" }}
+          py={"60px"}
         >
-          {xprtDefiCards.map((card, index) => (
-            <XPRTDefiCard key={index} {...card} />
-          ))}
-        </Grid>
-      </VStack>
-    </Container>
+          <Heading
+            fontSize={{ base: "22px", md: "32px" }}
+            textAlign={{ base: "center", md: "left" }}
+            color={"text.headingSemiWhite"}
+            pr={"12px"}
+            mb={"40px"}
+            fontWeight={700}
+            lineHeight={{ base: "1.5", md: "48px" }}
+          >
+            Find correct details about all the IBC Denom <br /> or Token
+            Contract for XPRT on <br /> the respective chains here.
+          </Heading>
+          <Box textAlign={{ base: "center", md: "left" }}>
+            <Link
+              href={TOKEN_CONTRACT_ADDRESS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                Token contract addresses
+              </Button>
+            </Link>
+          </Box>
+        </Container>
+      </Box>
+    </>
   );
 };
 

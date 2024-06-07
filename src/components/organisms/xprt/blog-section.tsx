@@ -44,7 +44,7 @@ const BlogSection = () => {
       <Box>
         <VStack align={"center"} mb={"40px"}>
           <Heading
-            color="text.headingSemiBlack"
+            color={"primary.blackHeading"}
             fontSize={{ base: "26px", md: "58px" }}
             lineHeight={{ base: "26x", md: "87px" }}
           >

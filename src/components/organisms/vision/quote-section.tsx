@@ -43,12 +43,13 @@ const QuoteSection = () => {
         <Heading
           textAlign={"center"}
           color={"text.headingSemiWhite"}
-          pr={"12px"}
+          pr={"4px"}
           fontWeight={600}
           fontSize={{ base: "26px", md: "44px" }}
+          lineHeight={"170%"}
         >
-          Humility, Integrity, Patience, and Persistence <br /> are our guiding
-          principles and make us who we are.
+          &quot;Humility, Integrity, Patience, and Persistence <br /> are our
+          guiding principles and make us who we are.&quot;
         </Heading>
       </Container>
     </Box>

@@ -1,26 +1,6 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Heading,
-  Spacer,
-  Stat,
-  StatArrow,
-  StatGroup,
-  StatHelpText,
-  StatLabel,
-  StatNumber,
-  Text,
-  VStack,
-  Divider,
-  Container,
-  Stack
-} from "@chakra-ui/react";
-import { ArrowForwardIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { Box, Button, Heading, Container } from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
-import Image from "next/image";
-import HomePageStats from "@/components/molecules/page-stats";
 import Link from "next/link";
 import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 
@@ -46,9 +26,8 @@ const CommunitySection = () => {
           fontWeight={700}
           lineHeight={{ base: "1.5", md: "48px" }}
         >
-          Persistence One brings empowering product
-          <br /> and tech, a vibrant community of Persisters,
-          <br /> and enduring partnerships under one roof.
+          Persistence One brings empowering tech, a vibrant community and
+          enduring partnerships
         </Heading>
         <Box textAlign={{ base: "center", md: "left" }}>
           <Link

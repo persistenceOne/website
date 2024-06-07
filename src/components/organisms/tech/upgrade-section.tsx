@@ -14,6 +14,13 @@ const upgradeList = [
   //     "Launched secure and decentralized DYDX liquid staking on Persistence One."
   // },
   {
+    title: "v11",
+    link: "https://www.mintscan.io/persistence/proposals/84",
+    date: "FEB 2024",
+    content:
+      "Facilitate the launch of stkXPRT, add ratesync module, and enable Timewave integration."
+  },
+  {
     title: "v10",
     link: "https://www.mintscan.io/persistence/proposals/55",
     date: "FEB 2024",

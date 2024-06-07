@@ -67,8 +67,8 @@ const footerLinks = [
     title: "Learn",
     links: [
       {
-        title: "Story",
-        link: "/story",
+        title: "Vision",
+        link: "/vision",
         isExternal: false
       },
       {
@@ -107,13 +107,13 @@ const footerLinks = [
     title: "Products",
     links: [
       {
-        title: "pSTAKE Finance",
-        link: "https://pstake.finance",
+        title: "Persistence DEX",
+        link: "https://app.persistence.one",
         isExternal: true
       },
       {
-        title: "Dexter",
-        link: "https://dexter.zone",
+        title: "pSTAKE Finance",
+        link: "https://pstake.finance",
         isExternal: true
       },
       {

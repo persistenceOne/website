@@ -18,7 +18,7 @@ const NotesSection = () => {
         <Box>
           <Heading
             textAlign={"center"}
-            color={"text.blackHigh"}
+            color={"text.blackHeading"}
             fontSize={{ base: "26px", md: "58px" }}
             mb={"6px"}
           >
@@ -108,7 +108,7 @@ const NotesSection = () => {
                   mt={4}
                   lineHeight={"32px"}
                 >
-                  Building the Restaking Infrastructure for Cosmos
+                  Building the trading hub for Bitcoin and LSTs
                 </Heading>
                 <Image
                   src={"/images/tech-page/tech-restaking.svg"}
@@ -154,7 +154,7 @@ const NotesSection = () => {
                 mt={4}
                 lineHeight={"32px"}
               >
-                Secure infra for modular and smart-contract dApps
+                Secured with Babylon’s Trustless Bitcoin Staking Protocol
               </Heading>
               <Image
                 src={"/images/tech-page/tech-infra.svg"}
@@ -291,7 +291,7 @@ const NotesSection = () => {
               fontSize={20}
               lineHeight={"32px"}
             >
-              One of the first chains to enable IBC
+              One of the first app chains to enable IBC
             </Heading>
           </Flex>
           <Flex
@@ -318,12 +318,13 @@ const NotesSection = () => {
             <Heading
               variant={"secondary"}
               color={"text.blackHigh"}
+              alignSelf={"flex-start"}
               fontWeight={600}
               fontSize={20}
               mt={6}
               lineHeight={"32px"}
             >
-              Audit first, deploy later
+              Audit first, <br /> deploy later
             </Heading>
             <Image
               src={"/images/tech-page/tech-audit.svg"}
