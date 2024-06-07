@@ -554,19 +554,24 @@ const Header = () => {
   useEffect(() => {
     const fetch = async () => {
       const tokenPrices = await fetchTokenPrices();
-      const [xprtTvlResponse, cosmosTvlResponse, osmoTvlResponse] =
-        await Promise.all([
-          getCosmosTVL("xprt"),
-          getCosmosTVL("cosmos"),
-          getCosmosTVL("osmo")
-          // getCosmosTVL("dydx"),
-          // getBnbTVL()
-        ]);
-      const pstkeTvl = Number(decimalize(xprtTvlResponse)) * tokenPrices.XPRT;
-      Number(decimalize(cosmosTvlResponse)) * tokenPrices.ATOM +
+      const [
+        xprtTvlResponse,
+        cosmosTvlResponse,
+        osmoTvlResponse,
+        dydxTvlResponse
+      ] = await Promise.all([
+        getCosmosTVL("xprt"),
+        getCosmosTVL("cosmos"),
+        getCosmosTVL("osmo"),
+        getCosmosTVL("dydx")
+        // getBnbTVL()
+      ]);
+      const pstkeTvl =
+        Number(decimalize(xprtTvlResponse)) * tokenPrices.XPRT +
+        Number(decimalize(cosmosTvlResponse)) * tokenPrices.ATOM +
         // bnbTvl * tokenPrices.BNB +
-        Number(decimalize(osmoTvlResponse)) * tokenPrices.OSMO;
-      // Number(decimalizeRaw(dydxTvlResponse, 18)) * tokenPrices.DYDX;
+        Number(decimalize(osmoTvlResponse)) * tokenPrices.OSMO +
+        Number(decimalizeRaw(dydxTvlResponse, 18)) * tokenPrices.DYDX;
       setPstakeTvl(pstkeTvl);
       setTokenPrices(tokenPrices);
     };
