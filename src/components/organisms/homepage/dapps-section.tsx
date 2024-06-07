@@ -29,7 +29,11 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         { asset: "USDC", assetIcon: "/images/tokens/usdc.svg" },
         { asset: "USDT", assetIcon: "/images/tokens/usdt.svg" },
         { asset: "stkATOM", assetIcon: "/images/tokens/stkatom.svg" },
-        { asset: "ATOM", assetIcon: "/images/tokens/atom.svg" }
+        { asset: "ATOM", assetIcon: "/images/tokens/atom.svg" },
+        {
+          asset: "SHD, STARS, HUAHUA, DYDX, stkDYDX, stkSTARS, stkHUAHUA",
+          assetIcon: "/images/tokens/more.svg"
+        }
         // { asset: "SHD", assetIcon: "/images/shd.svg" },
       ],
       website: {
@@ -63,7 +67,9 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       supportingAssets: [
         { asset: "stkXPRT", assetIcon: "/images/tokens/stkxprt.svg" },
         { asset: "stkATOM", assetIcon: "/images/tokens/stkatom.svg" },
-        { asset: "stkOSMO", assetIcon: "/images/tokens/stkosmo.svg" }
+        { asset: "stkOSMO", assetIcon: "/images/tokens/stkosmo.svg" },
+        { asset: "stkDYDX", assetIcon: "/images/tokens/stkdydx.svg" },
+        { asset: "stkSTARS, stkHUAHUA", assetIcon: "/images/tokens/more.svg" }
         // { asset: "stkBNB", assetIcon: "/images/tokens/stkbnb.svg" },
         // { asset: "stkDYDX", assetIcon: "/images/tokens/stkdydx.svg" },
         // { asset: "stkSTARS", assetIcon: "/images/tokens/stkstars.svg" },
