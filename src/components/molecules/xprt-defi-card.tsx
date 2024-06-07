@@ -41,6 +41,10 @@ const XPRTDefiCard = ({
     <Box px={"10px"}>
       <Card
         w="full"
+        height={{ base: "300px", md: "auto" }}
+        display={"flex"}
+        justify={"space-between"}
+        flexDirection={{ base: "column", md: "column" }}
         px={6}
         m={2}
         py={8}
@@ -59,7 +63,10 @@ const XPRTDefiCard = ({
                 return (
                   <Box
                     key={token.name}
-                    ml={index !== tokens.length - 1 ? 0 : -3}
+                    ml={{
+                      base: index !== tokens.length - 1 ? 0 : -1,
+                      md: index !== tokens.length - 1 ? 0 : -3
+                    }}
                   >
                     <Image
                       src={token.image}
@@ -71,7 +78,7 @@ const XPRTDefiCard = ({
                 );
               })}
             </HStack>
-            <Text fontSize={{ base: "16px", md: "32px" }} fontWeight={700}>
+            <Text fontSize={{ base: "14px", md: "28px" }} fontWeight={700}>
               {tokens.map((token) => token.name).join("/")}
             </Text>
           </HStack>
@@ -80,6 +87,8 @@ const XPRTDefiCard = ({
               bg={cta.bg}
               _hover={{ bg: cta.hover }}
               w={{ base: "100%", md: "auto" }}
+              fontSize={{ base: "12px", md: "20px" }}
+              h={{ base: "36px", md: "48px" }}
               color="white"
               rightIcon={<ArrowForwardIcon />}
             >
@@ -87,17 +96,21 @@ const XPRTDefiCard = ({
             </Button>
           </Link>
         </Stack>
-        <Text mt={4} fontSize={{ base: "14px", md: "16px" }}>
+        <Text
+          mt={4}
+          fontSize={{ base: "12px", md: "16px" }}
+          h={{ base: "100px", md: "auto" }}
+        >
           {description}
         </Text>
-        <HStack gap={8} mt={4}>
+        <HStack gap={{ base: 4, md: 8 }} mt={4}>
           {stats.map((stat) => {
             return (
               <VStack key={stat.label} align={"stretch"} gap={0}>
-                <Text color={"#423F40"} fontSize={16}>
+                <Text color={"#423F40"} fontSize={{ base: "12px", md: "16px" }}>
                   {stat.label}
                 </Text>
-                <Text fontSize={{ base: "18px", md: "24px" }} fontWeight={700}>
+                <Text fontSize={{ base: "12px", md: "24px" }} fontWeight={700}>
                   {stat.label === "TVL"
                     ? `$${numberFormat(Number(stat.value), 3)}`
                     : `${stat.value}%`}

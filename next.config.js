@@ -11,9 +11,9 @@ const nextConfig = {
     domains: ["raw.githubusercontent.com"],
     unoptimized: true
   },
-  // compiler: {
-  //   removeConsole: { exclude: ["error"] }
-  // },
+  compiler: {
+    removeConsole: { exclude: ["error"] }
+  },
   async redirects() {
     return [
       {

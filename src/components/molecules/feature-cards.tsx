@@ -45,7 +45,7 @@ const FeatureCards = () => {
           description="Learn about our vision and the belief in the Bitcoinization of crypto."
           image="/images/home-page/story.svg"
           cta={{
-            link: "/story",
+            link: "/vision",
             linkText: "Explore Our Vision",
             isExternal: false
           }}

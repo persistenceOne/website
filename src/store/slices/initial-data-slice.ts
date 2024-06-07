@@ -42,6 +42,7 @@ export interface InitialDataSliceState {
   tvl: number;
   ibcVolume: number;
   transactionCost: number;
+  transactions: string;
   marketCap: number;
   blocks: number;
   ibcConnections: number;
@@ -85,6 +86,7 @@ const initialState: InitialDataSliceState = {
   tvl: 0,
   ibcVolume: 11084000,
   transactionCost: 0.005,
+  transactions: "4M+",
   marketCap: 0,
   blocks: 0,
   ibcConnections: 45,

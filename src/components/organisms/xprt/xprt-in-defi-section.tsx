@@ -8,7 +8,8 @@ import {
   SimpleGrid,
   Grid,
   Box,
-  Button
+  Button,
+  useMediaQuery
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
@@ -30,7 +31,6 @@ const getData = (
   dexterInfo: DexterPoolsInfo,
   osmoPoolsInfo: OsmosisPoolsInfo
 ) => {
-  console.log({ dexterInfo });
   const defiCards: XPRTDefiCardInterface[] = [
     {
       tokens: [
@@ -45,7 +45,7 @@ const getData = (
       ],
       cta: {
         label: "Persistence",
-        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        link: "https://app.dexter.zone/pools/persistence197pewl43m55d970yrdhfj9hu9fxez443p37cn8ltfjwrh908ytdqhemas8",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
@@ -75,7 +75,7 @@ const getData = (
       ],
       cta: {
         label: "Persistence",
-        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        link: "https://app.dexter.zone/pools/persistence1v2efcqkp2qtev06t0ksjnx6trxdd0f7fxg2zdrtzr8cr9wdpjkyq8r0cyc",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
@@ -89,37 +89,6 @@ const getData = (
         {
           label: "APR",
           value: dexterInfo[12].apy.toString()
-        }
-      ]
-    },
-
-    {
-      tokens: [
-        {
-          name: "WBTC",
-          image: "/images/tokens/wbtc.svg"
-        },
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        }
-      ],
-      cta: {
-        label: "Osmosis",
-        link: "https://app.osmosis.zone/pool/1773",
-        bg: "buttons.ctaPink",
-        hover: "buttons.ctaPurpleHover"
-      },
-      description:
-        "Provide liquidity to the WBTC/XPRT Supercharged pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: osmoPoolsInfo[1773].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: osmoPoolsInfo[1773].apy.toString()
         }
       ]
     },
@@ -156,6 +125,37 @@ const getData = (
     {
       tokens: [
         {
+          name: "WBTC",
+          image: "/images/tokens/wbtc.svg"
+        },
+        {
+          name: "XPRT",
+          image: "/images/tokens/xprt.svg"
+        }
+      ],
+      cta: {
+        label: "Osmosis",
+        link: "https://app.osmosis.zone/pool/1773",
+        bg: "buttons.ctaPink",
+        hover: "buttons.ctaPurpleHover"
+      },
+      description:
+        "Provide liquidity to the WBTC/XPRT Supercharged pool to earn trading fees and external incentives.",
+      stats: [
+        {
+          label: "TVL",
+          value: osmoPoolsInfo[1773].tvl.toString()
+        },
+        {
+          label: "APR",
+          value: osmoPoolsInfo[1773].apy.toString()
+        }
+      ]
+    },
+
+    {
+      tokens: [
+        {
           name: "XPRT",
           image: "/images/tokens/xprt.svg"
         },
@@ -166,7 +166,7 @@ const getData = (
       ],
       cta: {
         label: "Aerodrome",
-        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        link: "https://aerodrome.finance/pools?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200",
         bg: "buttons.ctaDarkBlue",
         hover: "buttons.ctaDarkBlueHover"
       },
@@ -282,7 +282,7 @@ const XPRTInDefiSection = () => {
     (state) => [state.dexterPoolsInfo, state.osmoPoolsInfo],
     shallow
   );
-  console.log({ dexterPoolsInfo });
+  const [isMobile] = useMediaQuery("(max-width: 468px)");
   const xprtDefiCards = getData(dexterPoolsInfo, osmoPoolsInfo);
   return (
     <>
@@ -297,13 +297,14 @@ const XPRTInDefiSection = () => {
           fontSize={{ base: "26px", md: "58px" }}
           color={"primary.blackHeading"}
           textAlign={"center"}
+          mb={10}
         >
           XPRT in DeFi
         </Heading>
         <Slider
           {...{
             rows: 2,
-            dots: true,
+            // dots: true,
             arrows: true,
             infinite: true,
             speed: 300,

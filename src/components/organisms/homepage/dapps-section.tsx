@@ -49,7 +49,7 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
       dAppName: "pSTAKE Finance",
       dAppLogo: "/images/pstake-logo.svg",
       dAppDescription:
-        "pSTAKE is a multi-chain Liquid Staking protocol that unlocks liquidity for your staked assets.",
+        "pSTAKE on Cosmos LSTs are issued on the Persistence chain and can be used in DeFi on Persistence One and beyond.",
       dAppStats: [
         {
           label: "Total Value Locked",

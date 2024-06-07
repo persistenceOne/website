@@ -20,15 +20,17 @@ import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 
 const HeroSection = () => {
-  const [tvl, ibcVolume, transactionCost, dexterInfo] = useAppStore(
-    (state) => [
-      state.tvl,
-      state.ibcVolume,
-      state.transactionCost,
-      state.dexterInfo
-    ],
-    shallow
-  );
+  const [tvl, ibcVolume, transactionCost, transactions, dexterInfo] =
+    useAppStore(
+      (state) => [
+        state.tvl,
+        state.ibcVolume,
+        state.transactionCost,
+        state.transactions,
+        state.dexterInfo
+      ],
+      shallow
+    );
 
   return (
     <Box
@@ -97,8 +99,8 @@ const HeroSection = () => {
               statLabel: "DEX Trading Volume"
             },
             {
-              statValue: `$${transactionCost}`,
-              statLabel: "Fees Generated"
+              statValue: `${transactions}`,
+              statLabel: "Total Transactions"
             }
           ]}
         />
