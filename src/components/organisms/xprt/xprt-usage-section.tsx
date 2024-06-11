@@ -56,7 +56,7 @@ const xprtUsageCards = [
     image: "/images/xprt-page/xprt-traction.svg",
     cta: {
       text: "Explore",
-      link: "https://app.dexter.zone/pools",
+      link: "https://app.persistence.one/pools",
       isExternal: true
     }
   }

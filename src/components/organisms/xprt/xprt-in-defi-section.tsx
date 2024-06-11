@@ -45,7 +45,7 @@ const getData = (
       ],
       cta: {
         label: "Persistence",
-        link: "https://app.dexter.zone/pools/persistence197pewl43m55d970yrdhfj9hu9fxez443p37cn8ltfjwrh908ytdqhemas8",
+        link: "https://app.persistence.one/pools/persistence197pewl43m55d970yrdhfj9hu9fxez443p37cn8ltfjwrh908ytdqhemas8",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
@@ -75,7 +75,7 @@ const getData = (
       ],
       cta: {
         label: "Persistence",
-        link: "https://app.dexter.zone/pools/persistence1v2efcqkp2qtev06t0ksjnx6trxdd0f7fxg2zdrtzr8cr9wdpjkyq8r0cyc",
+        link: "https://app.persistence.one/pools/persistence1v2efcqkp2qtev06t0ksjnx6trxdd0f7fxg2zdrtzr8cr9wdpjkyq8r0cyc",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
@@ -105,7 +105,7 @@ const getData = (
       ],
       cta: {
         label: "Persistence",
-        link: "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+        link: "https://app.persistence.one/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
@@ -226,7 +226,7 @@ const getData = (
       ],
       cta: {
         label: "Persistence",
-        link: "https://app.dexter.zone/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
+        link: "https://app.persistence.one/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
@@ -256,7 +256,7 @@ const getData = (
       ],
       cta: {
         label: "Persistence",
-        link: "https://app.dexter.zone/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
+        link: "https://app.persistence.one/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },

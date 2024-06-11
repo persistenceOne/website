@@ -460,14 +460,14 @@ export const aboutXprt = [
         on Osmosis or{" "}
         <a
           href={
-            "https://app.dexter.zone/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg"
+            "https://app.persistence.one/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg"
           }
           target="_blank"
           rel="noopener noreferrer"
         >
           <u>XPRT/ATOM</u>
         </a>{" "}
-        pool on Dexter.{" "}
+        pool on Persistence DEX.{" "}
       </>
     )
   },
