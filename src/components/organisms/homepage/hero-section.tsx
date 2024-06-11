@@ -92,7 +92,7 @@ const HeroSection = () => {
           stats={[
             {
               statValue: `$${numberFormat(tvl, 2)}`,
-              statLabel: "TVL"
+              statLabel: "Total Value Locked"
             },
             {
               statValue: `$${numberFormat(dexterInfo.total_volume, 2)}`,
