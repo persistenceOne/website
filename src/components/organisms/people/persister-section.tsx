@@ -26,7 +26,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
   {
     title: "True to Roots",
     description:
-      "Humility when things are going well. Persistence when things are not going well.",
+      "Staying humble when things are great, persistent when things are bad.",
     icon: "/icons/team-page/true-to-roots.svg"
   },
   {

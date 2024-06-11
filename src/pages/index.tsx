@@ -16,7 +16,7 @@ const HomePage = () => {
       <DappsSection />
       <GetXprtSection />
       <BlogSection />
-      <BecomePersisterSection />
+      <BecomePersisterSection showEcosystemSection={false} />
     </Box>
   );
 };

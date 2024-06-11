@@ -29,7 +29,7 @@ const BecomePersisterSection = ({
       <Container maxW={"1300px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
         <Box>
           <Heading
-            color="text.headingSemiBlack"
+            color="text.bloackHeading"
             fontSize={{ base: "26px", md: "58px" }}
             mb={"8px"}
             textAlign={"center"}
@@ -113,8 +113,8 @@ const BecomePersisterSection = ({
                 textAlign={"center"}
                 mb={"26px"}
               >
-                Persistence One is expanding Liquid Staking, creating LSTfi
-                yield opportunities, and bringing Restaking to Cosmos.
+                Persistence One is expanding Liquid Staking and creating LSTfi
+                yield opportunities
               </Text>
               <Link
                 href={MINTSCAN_ECOSYSTEM_LINK}

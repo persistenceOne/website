@@ -13,11 +13,17 @@ export interface ValidatorsInfo {
   dydx: ValidatorInfo[];
 }
 
-type AvailablePools = 2 | 3 | 5;
+type AvailablePools = 2 | 3 | 5 | 12 | 13;
+
+type OsmosisAvailablePools = 1101 | 1773;
 
 export type PoolInfo = {
   tvl: number;
   apy: number;
+};
+
+export type OsmosisPoolsInfo = {
+  [key in OsmosisAvailablePools]: PoolInfo;
 };
 
 export type DexterPoolsInfo = {
@@ -36,6 +42,7 @@ export interface InitialDataSliceState {
   tvl: number;
   ibcVolume: number;
   transactionCost: number;
+  transactions: string;
   marketCap: number;
   blocks: number;
   ibcConnections: number;
@@ -50,7 +57,7 @@ export interface InitialDataSliceState {
     XPRT: number;
   };
   dexterPoolsInfo: DexterPoolsInfo;
-  osmoPoolsInfo: PoolInfo;
+  osmoPoolsInfo: OsmosisPoolsInfo;
 }
 
 export interface InitialDataSliceActions {
@@ -79,6 +86,7 @@ const initialState: InitialDataSliceState = {
   tvl: 0,
   ibcVolume: 11084000,
   transactionCost: 0.005,
+  transactions: "4M+",
   marketCap: 0,
   blocks: 0,
   ibcConnections: 45,
@@ -104,11 +112,25 @@ const initialState: InitialDataSliceState = {
     5: {
       tvl: 0,
       apy: 0
+    },
+    12: {
+      tvl: 0,
+      apy: 0
+    },
+    13: {
+      tvl: 0,
+      apy: 0
     }
   },
   osmoPoolsInfo: {
-    tvl: 0,
-    apy: 0
+    1101: {
+      tvl: 0,
+      apy: 0
+    },
+    1773: {
+      tvl: 0,
+      apy: 0
+    }
   }
 };
 

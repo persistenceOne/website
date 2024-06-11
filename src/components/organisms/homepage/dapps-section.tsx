@@ -8,43 +8,10 @@ import { numberFormat } from "@/utils/helpers";
 const getData = (pstakeInfo: any, dexterInfo: any) => {
   const dApps: DappCardInterface[] = [
     {
-      dAppName: "pSTAKE Finance",
-      dAppLogo: "/images/pstake-logo.svg",
+      dAppName: "Persistence DEX",
+      dAppLogo: "/images/persistence-dex-logo.svg",
       dAppDescription:
-        "pSTAKE is a multi-chain Liquid Staking protocol that unlocks liquidity for your staked assets.",
-      dAppStats: [
-        {
-          label: "Total Value Locked",
-          value: `$${numberFormat(Number(pstakeInfo.tvl), 3)}`
-        },
-        {
-          label: "All Time Users",
-          value: `${numberFormat(Number(pstakeInfo.allTimeUsers), 3)}+`
-        }
-      ],
-      supportingAssets: [
-        { asset: "stkOSMO", assetIcon: "/images/stkosmo.svg" },
-        // { asset: "stkXPRT", assetIcon: "/images/stkxprt.svg" },
-        { asset: "stkATOM", assetIcon: "/images/stkatom.svg" },
-        { asset: "stkBNB", assetIcon: "/images/stkbnb.svg" },
-        { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" },
-        { asset: "stkSTARS", assetIcon: "/images/stkstars.svg" },
-        { asset: "stkHUAHUA", assetIcon: "/images/stkhuahua.svg" }
-      ],
-      website: { link: "https://pstake.finance", linkText: "pstake.finance" },
-      button: {
-        text: "Liquid Stake Now",
-        link: "https://app.pstake.finance",
-        background: "primary.red",
-        hover: "primary.redHover",
-        color: "white"
-      }
-    },
-    {
-      dAppName: "Dexter",
-      dAppLogo: "/images/dexter-logo.svg",
-      dAppDescription:
-        "Dexter is a decentralized exchange governed by XPRT to bootstrap liquidity for LSTs, Stablecoins, LRTs, and other IBC tokens.",
+        "Persistence DEX is decentralized exchange governed by $XPRT to bootstrap liquidity for LSTs, Stablecoins, LRTs, and other IBC tokens.",
       dAppStats: [
         {
           label: "Total Value Locked",
@@ -56,26 +23,68 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         }
       ],
       supportingAssets: [
+        { asset: "WBTC", assetIcon: "/images/tokens/wbtc.svg" },
+        { asset: "stkXPRT", assetIcon: "/images/tokens/stkxprt.svg" },
         { asset: "XPRT", assetIcon: "/images/tokens/xprt.svg" },
+        { asset: "USDC", assetIcon: "/images/tokens/usdc.svg" },
+        { asset: "USDT", assetIcon: "/images/tokens/usdt.svg" },
+        { asset: "stkATOM", assetIcon: "/images/tokens/stkatom.svg" },
         { asset: "ATOM", assetIcon: "/images/tokens/atom.svg" },
-        { asset: "DYDX", assetIcon: "/images/tokens/dydx.svg" },
-        { asset: "USDT", assetIcon: "/images/usdt.svg" },
-        { asset: "USDC", assetIcon: "/images/usdc.svg" },
-        { asset: "SHD", assetIcon: "/images/shd.svg" },
-        { asset: "STARS", assetIcon: "/images/stars.svg" },
-        { asset: "HUAHUA", assetIcon: "/images/huahua.svg" },
-        { asset: "stkATOM", assetIcon: "/images/stkatom.svg" },
-        { asset: "stkDYDX", assetIcon: "/images/stkdydx.svg" },
-        { asset: "stkSTARS", assetIcon: "/images/stkstars.svg" },
-        { asset: "stkHUAHUA", assetIcon: "/images/stkhuahua.svg" }
+        {
+          asset: "SHD, STARS, HUAHUA, DYDX, stkDYDX, stkSTARS, stkHUAHUA",
+          assetIcon: "/images/tokens/more.svg"
+        }
+        // { asset: "SHD", assetIcon: "/images/shd.svg" },
       ],
-      website: { link: "https://dexter.zone", linkText: "dexter.zone" },
+      website: {
+        link: "https://app.persistence.one",
+        linkText: "app.persistence.one",
+        hover: "primary.redHover"
+      },
       button: {
         text: "Trade Now",
-        link: "https://app.dexter.zone",
-        background:
-          "linear-gradient(284.42deg, #00AFFA -49.92%, #32A2BA 54.24%, #24FFCA 169.83%);",
-        hover: "#01BDBD",
+        link: "https://app.persistence.one",
+        background: "primary.red",
+        hover: "primary.redHover",
+        color: "white"
+      }
+    },
+    {
+      dAppName: "pSTAKE Finance",
+      dAppLogo: "/images/pstake-logo.svg",
+      dAppDescription:
+        "pSTAKE on Cosmos LSTs are issued on the Persistence chain and can be used in DeFi on Persistence One and beyond.",
+      dAppStats: [
+        {
+          label: "Total Value Locked",
+          value: `$${numberFormat(Number(pstakeInfo.tvl), 3)}`
+        },
+        {
+          label: "All Time Users",
+          value: `${numberFormat(Number(pstakeInfo.allTimeUsers), 3)}+`
+        }
+      ],
+      supportingAssets: [
+        { asset: "stkXPRT", assetIcon: "/images/tokens/stkxprt.svg" },
+        { asset: "stkATOM", assetIcon: "/images/tokens/stkatom.svg" },
+        { asset: "stkOSMO", assetIcon: "/images/tokens/stkosmo.svg" },
+        { asset: "stkDYDX", assetIcon: "/images/tokens/stkdydx.svg" },
+        { asset: "stkSTARS, stkHUAHUA", assetIcon: "/images/tokens/more.svg" }
+        // { asset: "stkBNB", assetIcon: "/images/tokens/stkbnb.svg" },
+        // { asset: "stkDYDX", assetIcon: "/images/tokens/stkdydx.svg" },
+        // { asset: "stkSTARS", assetIcon: "/images/tokens/stkstars.svg" },
+        // { asset: "stkHUAHUA", assetIcon: "/images/tokens/stkhuahua.svg" }
+      ],
+      website: {
+        link: "https://pstake.finance",
+        linkText: "pstake.finance",
+        hover: "primary.redHover"
+      },
+      button: {
+        text: "Liquid Stake Now",
+        link: "https://app.pstake.finance",
+        background: "primary.red",
+        hover: "primary.redHover",
         color: "white"
       }
     }
@@ -98,21 +107,12 @@ const DappsSection = () => {
           <Box>
             <Heading
               textAlign={"center"}
-              color={"text.blackHigh"}
+              color={"text.blackTitle"}
               fontSize={{ base: "26px", md: "58px" }}
-              mb={"4px"}
+              mb={{ base: "22px", md: "60px" }}
             >
               Built on Persistence One
             </Heading>
-            <Text
-              textAlign="center"
-              mb={{ base: "22px", md: "60px" }}
-              color={"text.blackMid"}
-              fontSize={{ base: "16px", md: "22px" }}
-            >
-              Discover the Products empowering the Liquid Staking and Restaking
-              economy.
-            </Text>
           </Box>
         </Flex>
         <Stack

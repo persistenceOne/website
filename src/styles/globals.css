@@ -29,6 +29,29 @@ body {
   opacity: 1;
 }
 
+.xprt-defi-cards .slick-prev, .xprt-defi-cards .slick-next{
+  /*background: #423f40d9;*/
+    border-radius: 50%;
+}
+
+.xprt-defi-cards .slick-prev{
+  bottom: -50px;
+  top: auto;
+  left: 20px;
+}
+
+.xprt-defi-cards .slick-next{
+  bottom: -50px;
+  right: auto;
+  left: 50px;
+  top: auto;
+}
+
+.xprt-defi-cards .slick-prev:before, .xprt-defi-cards .slick-next:before{
+  color:#423f40d9;
+  font-size: 22px;
+}
+
 .upgrade-slider-arrow .icon {
 stroke: #ececec;
   fill: transparent;

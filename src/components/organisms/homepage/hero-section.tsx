@@ -20,23 +20,25 @@ import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 
 const HeroSection = () => {
-  const [tvl, ibcVolume, transactionCost] = useAppStore(
-    (state) => [
-      state.tvl,
-      state.ibcVolume,
-      state.transactionCost,
-      state.inflationDate
-    ],
-    shallow
-  );
+  const [tvl, ibcVolume, transactionCost, transactions, dexterInfo] =
+    useAppStore(
+      (state) => [
+        state.tvl,
+        state.ibcVolume,
+        state.transactionCost,
+        state.transactions,
+        state.dexterInfo
+      ],
+      shallow
+    );
 
   return (
     <Box
       className={"hero-content"}
-      backgroundImage={{ base: "", md: "url('/images/hero-bg.svg')" }}
+      backgroundImage={{ base: "", md: "url('/images/hero-bg-btc.svg')" }}
       backgroundPosition="100% 0"
       backgroundRepeat="no-repeat"
-      backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "25% 90%" }}
+      backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "32% 100%" }}
     >
       <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
         <Spacer h={"150px"} />
@@ -44,15 +46,14 @@ const HeroSection = () => {
           <Box>
             <Heading
               variant={"main"}
-              color={"text.blackHigh"}
+              color={"text.blackTitle"}
               textAlign={"left"}
               fontSize={{ base: "42px", md: "60px" }}
               lineHeight={{ base: "50px", md: "72px" }}
               mb={"20px"}
             >
-              Staking. <br />
-              Liquid Staking. <br />
-              Restaking.
+              Trade BTC and LSTs <br />
+              on Persistence One.
             </Heading>
             <Text
               textAlign={"left"}
@@ -61,17 +62,22 @@ const HeroSection = () => {
               color={"text.blackLow"}
               fontSize={{ base: "16px", md: "22px" }}
             >
-              Persistence One is a purpose built Layer 1 on a mission to
-              maximize yield and security through Liquid Staking and Restaking.
+              Secured by Bitcoin.
             </Text>
             {/* <Stack direction={{ base: "column", md: "row" }} gap={4}> */}
-            <Link href="/story" passHref className={"inline-block"}>
+            <Link
+              href="https://app.persistence.one"
+              target="_black"
+              rel="noopenner noreferrer"
+              passHref
+              className={"inline-block"}
+            >
               <Button
                 variant={"secondary"}
                 rightIcon={<ArrowForwardIcon />}
                 w={{ base: "100%", md: "auto" }}
               >
-                Learn More
+                Trade Now
               </Button>
             </Link>
             {/* <Link href="/xprt" passHref>
@@ -89,12 +95,12 @@ const HeroSection = () => {
               statLabel: "Total Value Locked"
             },
             {
-              statValue: `$${numberFormat(ibcVolume, 2)}`,
-              statLabel: "IBC Volume (30 Days)"
+              statValue: `$${numberFormat(dexterInfo.total_volume, 2)}`,
+              statLabel: "Volume"
             },
             {
-              statValue: `$${transactionCost}`,
-              statLabel: "Average Transaction Cost"
+              statValue: `${transactions}`,
+              statLabel: "Transactions"
             }
           ]}
         />

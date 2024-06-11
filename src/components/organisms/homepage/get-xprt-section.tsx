@@ -18,8 +18,8 @@ const GetXprtSection = () => {
         <HStack bg="#" justify={"space-between"}>
           <Box w={"700px"}>
             <Heading
-              color="text.headingWhite"
-              fontSize={{ base: "26px", md: "48px" }}
+              color="text.headingSemiWhite"
+              fontSize={{ base: "26px", md: "44px" }}
               lineHeight={{ base: "38px", md: "72px" }}
               mb={4}
             >
@@ -31,8 +31,8 @@ const GetXprtSection = () => {
               mb={{ base: "30px", md: "50px" }}
             >
               XPRT empowers on-chain activities like chain security,
-              decentralized governance, Liquid Staking and Restaking
-              incentivization, and transaction fees on Persistence One.
+              decentralized governance, Liquid Staking, and transaction fees on
+              Persistence One.
             </Text>
             <HStack gap={4}>
               <Link

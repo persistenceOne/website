@@ -28,20 +28,9 @@ const xprtUsageCards = [
     }
   },
   {
-    title: "Chain Security",
-    description:
-      "XPRT is used as economic security of the Persistence One blockchain with a Proof-of-Stake mechanism. Network participants like validators and delegators stake XPRT to earn staking rewards.",
-    image: "/images/xprt-page/xprt-security.svg",
-    cta: {
-      text: "Start Staking",
-      link: "https://wallet.keplr.app/chains/persistence?tab=staking",
-      isExternal: true
-    }
-  },
-  {
     title: "Decentralized Governance",
     description:
-      "Persistence One is governed by Persisters with XPRT. On-chain governance has the final say on chain upgrades, community pool spends, dApp launches and improvements, and more.",
+      "XPRT governance has the final say on chain upgrades, launching new pools/incentives for the DEX, parameter changes, Community pool spends, and more.",
     image: "/images/xprt-page/xprt-governance.svg",
     cta: {
       text: "Participate",
@@ -50,9 +39,20 @@ const xprtUsageCards = [
     }
   },
   {
-    title: "On-chain Traction",
+    title: "Chain Security",
     description:
-      "XPRT is an enabler for traction and the base asset and incentivizing tool on Dexter, the home of on-chain liquidity. Any dApps deployed on Persistence One in the future can be built with XPRT taking center stage.",
+      "XPRT is used to secure the Persistence One blockchain with a PoS mechanism. Network participants like validators, BTC stakers (via Babylon’s Trustless BTC staking), and XPRT stakers receive staking rewards for securing the chain. ",
+    image: "/images/xprt-page/xprt-security.svg",
+    cta: {
+      text: "Start Staking",
+      link: "https://wallet.keplr.app/chains/persistence?tab=staking",
+      isExternal: true
+    }
+  },
+  {
+    title: "DEX Traction",
+    description:
+      "XPRT is an enabler for traction on the Persistence DEX. It’s the base trading asset and incentivization token.",
     image: "/images/xprt-page/xprt-traction.svg",
     cta: {
       text: "Explore",
@@ -74,6 +74,8 @@ const XPRTUsageSection = () => {
           variant={"main"}
           fontSize={{ base: "26px", md: "58px" }}
           lineHeight={{ base: "38px", md: "72px" }}
+          color={"primary.blackHeading"}
+          mb={{ base: "22px", md: "50px" }}
         >
           What is XPRT used for?
         </Heading>

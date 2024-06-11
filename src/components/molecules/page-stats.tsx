@@ -22,7 +22,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
             mb={{ base: "16px", md: "0px" }}
           >
             <Text
-              color={"text.headingBlack"}
+              color={"text.blackTitle"}
               fontSize={{ base: "22px", md: "44px" }}
               fontWeight={700}
             >

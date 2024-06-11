@@ -45,11 +45,11 @@ const menuItems = [
     name: "Learn",
     subItems: [
       {
-        title: "Story",
-        description: "Learn about our persistent vision and origin story.",
+        title: "Vision",
+        description: "Learn about our persistent vision.",
         icon: "book",
         iconType: "stroke",
-        link: "/story",
+        link: "/vision",
         isExternal: false,
         comingSoon: false
       },
@@ -142,22 +142,21 @@ const menuItems = [
     name: "Products",
     subItems: [
       {
-        title: "pSTAKE Finance",
+        title: "Persistence DEX",
         description:
-          "Liquid Stake leading Cosmos tokens like ATOM, DYDX, and OSMO",
-        icon: "liquidstake",
-        iconType: "stroke",
-        link: "https://app.pstake.finance",
+          "Trade or provide liquidity with BTC, LSTs, Stablecoins and more",
+        icon: "trade",
+        iconType: "fill",
+        link: "https://app.persistence.one",
         isExternal: true,
         comingSoon: false
       },
       {
-        title: "Dexter",
-        description:
-          "Trade and provide liquidity of Liquid Staked Tokens, Stablecoins, and other Cosmos assets",
-        icon: "trade",
-        iconType: "fill",
-        link: "https://app.dexter.zone",
+        title: "pSTAKE Finance",
+        description: "Mint Cosmos LSTs on the Persistence Chain",
+        icon: "liquidstake",
+        iconType: "stroke",
+        link: "https://app.pstake.finance",
         isExternal: true,
         comingSoon: false
       },
@@ -524,7 +523,9 @@ const Header = () => {
     setDexterTotalVolume,
     setDexterPoolInfo,
     setOsmoPoolInfo,
-    setPersistenceTvl
+    setPersistenceTvl,
+    pstakInfo,
+    dexterInfo
   ] = useAppStore(
     (state) => [
       state.setTokenPrices,
@@ -533,33 +534,42 @@ const Header = () => {
       state.setDexterTotalVolume,
       state.setDexterPoolInfo,
       state.setOsmoPoolInfo,
-      state.setPersistenceTvl
+      state.setPersistenceTvl,
+      state.pstakInfo,
+      state.dexterInfo
     ],
     shallow
   );
 
   useEffect(() => {
-    const fetch = async () => {
-      const chainTvl = await fetchChainTVL();
-      setPersistenceTvl(chainTvl);
-    };
-    fetch();
-  }, []);
+    // const fetch = async () => {
+    //   const chainTvl = await fetchChainTVL();
+    //   setPersistenceTvl(chainTvl);
+    // };
+    // fetch();
+    setPersistenceTvl(dexterInfo.tvl + pstakInfo.tvl);
+  }, [dexterInfo.tvl, pstakInfo.tvl, setPersistenceTvl]);
 
   //fetching pstake info
   useEffect(() => {
     const fetch = async () => {
       const tokenPrices = await fetchTokenPrices();
-      const [cosmosTvlResponse, osmoTvlResponse, dydxTvlResponse, bnbTvl] =
-        await Promise.all([
-          getCosmosTVL("cosmos"),
-          getCosmosTVL("osmo"),
-          getCosmosTVL("dydx"),
-          getBnbTVL()
-        ]);
+      const [
+        xprtTvlResponse,
+        cosmosTvlResponse,
+        osmoTvlResponse,
+        dydxTvlResponse
+      ] = await Promise.all([
+        getCosmosTVL("xprt"),
+        getCosmosTVL("cosmos"),
+        getCosmosTVL("osmo"),
+        getCosmosTVL("dydx")
+        // getBnbTVL()
+      ]);
       const pstkeTvl =
+        Number(decimalize(xprtTvlResponse)) * tokenPrices.XPRT +
         Number(decimalize(cosmosTvlResponse)) * tokenPrices.ATOM +
-        bnbTvl * tokenPrices.BNB +
+        // bnbTvl * tokenPrices.BNB +
         Number(decimalize(osmoTvlResponse)) * tokenPrices.OSMO +
         Number(decimalizeRaw(dydxTvlResponse, 18)) * tokenPrices.DYDX;
       setPstakeTvl(pstkeTvl);

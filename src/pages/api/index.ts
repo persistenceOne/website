@@ -3,6 +3,8 @@ import { sdkInstance } from "@/utils/helpers";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
 
 const defillamaApi = "https://defillama-datasets.llama.fi/lite/protocols2";
+export const STK_XPRT_TVL_URL =
+  "https://api.persistence.one/pstake/stkxprt/xprt_tvu";
 export const STK_ATOM_TVL_URL =
   "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
 export const STK_OSMO_TVL_API =
@@ -14,6 +16,10 @@ export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const OSMO_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=15";
 export const OSMO_TVL_URL = "https://api-osmosis.imperator.co/pools/v2/1101";
+export const OSMOSIS_XPRT_WBTC_TVL_URL =
+  "https://api-osmosis.imperator.co/pools/v2/1773";
+export const OSMOSIS_XPRT_WBTC_APR_URL =
+  "https://public-osmosis-api.numia.xyz/pools_apr?pool=1773";
 export const MarketCap_API =
   "https://api.coingecko.com/api/v3/coins/persistence";
 export const LATEST_BLOCK_HEIGHT_URL =
@@ -51,6 +57,8 @@ export const getCosmosTVL = async (prefix: string) => {
         ? STK_ATOM_TVL_URL
         : prefix === "osmo"
         ? STK_OSMO_TVL_API
+        : prefix === "xprt"
+        ? STK_XPRT_TVL_URL
         : STK_DYDX_TVL_API
     );
     if (res && res.data) {
@@ -78,7 +86,7 @@ export const fetchTokenPrices = async () => {
     data.ATOM = Number(pricesResponse.data["cosmos"].usd);
     data.OSMO = Number(pricesResponse.data["osmosis"].usd);
     data.DYDX = Number(pricesResponse.data["dydx"].usd);
-    data.DYDX = Number(pricesResponse.data["persistence"].usd);
+    data.XPRT = Number(pricesResponse.data["persistence"].usd);
     return data;
   } catch (e) {
     return data;
@@ -158,6 +166,14 @@ export const fetchDexterPoolInfo = async () => {
     5: {
       tvl: 0,
       apy: 0
+    },
+    12: {
+      tvl: 0,
+      apy: 0
+    },
+    13: {
+      tvl: 0,
+      apy: 0
     }
   };
   try {
@@ -174,14 +190,14 @@ export const fetchDexterPoolInfo = async () => {
               identifier
             }
           }
-          pool_weekly_aggregate_with_apr(where: {pool_id: {_in: [2, 3, 5]}}) {
+          pool_weekly_aggregate_with_apr(where: {pool_id: {_in: [2, 3, 5, 12, 13]}}) {
             pool_id
             total_swap_fee
             current_liquidity_usd
             total_volume
             apr
           }
-          pool_current_incentive_apr(where: {pool_id: {_in: [2, 3, 5]}}) {
+          pool_current_incentive_apr(where: {pool_id: {_in: [2, 3, 5, 12, 13]}}) {
             incentive_apr
             pool_id
           }
@@ -232,8 +248,14 @@ export const fetchDexterPoolInfo = async () => {
 
 export const fetchOsmosisPoolInfo = async () => {
   let osmoInfo: any = {
-    apy: 0,
-    tvl: 0
+    1101: {
+      tvl: 0,
+      apy: 0
+    },
+    1773: {
+      tvl: 0,
+      apy: 0
+    }
   };
   try {
     const responses = await axios.all([
@@ -245,15 +267,39 @@ export const fetchOsmosisPoolInfo = async () => {
 
     if (responseTwo && responseTwo.data) {
       if (responseTwo.data[0].total_apr) {
-        osmoInfo.apy = Number(responseTwo.data[0].total_apr).toFixed(2);
+        osmoInfo[1101].apy = Number(responseTwo.data[0].total_apr).toFixed(2);
       }
     } else {
-      osmoInfo.apy = 0;
+      osmoInfo[1101].apy = 0;
     }
     if (responseOne && responseOne.data) {
-      osmoInfo.tvl = Math.round(responseOne.data[0].liquidity).toFixed(2);
+      osmoInfo[1101].tvl = Math.round(responseOne.data[0].liquidity).toFixed(2);
     } else {
-      osmoInfo.tvl = 0;
+      osmoInfo[1101].tvl = 0;
+    }
+
+    const responsesWbtc = await axios.all([
+      axios.get(OSMOSIS_XPRT_WBTC_TVL_URL),
+      axios.get(OSMOSIS_XPRT_WBTC_APR_URL)
+    ]);
+    const responseWbtcOne = responsesWbtc[0];
+    const responseWbtcTwo = responsesWbtc[1];
+
+    if (responseWbtcTwo && responseWbtcTwo.data) {
+      if (responseWbtcTwo.data[0].total_apr) {
+        osmoInfo[1773].apy = Number(responseWbtcTwo.data[0].total_apr).toFixed(
+          2
+        );
+      }
+    } else {
+      osmoInfo[1773].apy = 0;
+    }
+    if (responseWbtcOne && responseWbtcOne.data) {
+      osmoInfo[1773].tvl = Math.round(
+        responseWbtcOne.data[0].liquidity
+      ).toFixed(2);
+    } else {
+      osmoInfo[1773].tvl = 0;
     }
     return osmoInfo;
   } catch (e) {
