@@ -1,11 +1,5 @@
-import {
-  ListItem,
-  UnorderedList,
-  Text,
-  Box,
-  Container,
-  Heading
-} from "@chakra-ui/react";
+/* eslint-disable react/no-unescaped-entities */
+import { Text, Box, Container } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 
