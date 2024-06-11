@@ -66,7 +66,7 @@ const TermsAndConditions = () => {
               authority to do so.
             </Text>
             <br />
-            <Text className={"contentClass"} fontSize="16px">
+            <Text className={"contentClass"} fontSize="16px" color={"red"}>
               Persistence DEX is not intended for (a) access and/or use by
               Excluded Persons (as defined below); or (b) access and/or use by
               any person or entity in, or accessing or using the Website from,
