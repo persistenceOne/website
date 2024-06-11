@@ -16,7 +16,7 @@ import Image from "next/image";
 const list = [
   {
     imgUrl: "/images/story-page/story-pos.svg",
-    title: "BTCFi will catch up and overtake ETH DeFi",
+    title: "BTCFi will overtake ETH DeFi",
     content:
       "Bitcoinization will rule the DeFi sector. Persistence One will lead the charge for BTCfi and all BTC assets will be traded on Persistence One. "
   },

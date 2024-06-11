@@ -175,7 +175,7 @@ const getData = (
       stats: [
         {
           label: "TVL",
-          value: "43827"
+          value: "46527"
         },
         {
           label: "APR",
@@ -301,7 +301,7 @@ const XPRTInDefiSection = () => {
         >
           XPRT in Multi-Chain DeFi
         </Heading>
-        <Slider
+        {/* <Slider
           {...{
             rows: 2,
             // dots: true,
@@ -311,11 +311,13 @@ const XPRTInDefiSection = () => {
             slidesToShow: 2,
             slidesToScroll: 2
           }}
-        >
+        > */}
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={2}>
           {xprtDefiCards.map((card, index) => (
             <XPRTDefiCard key={index} {...card} />
           ))}
-        </Slider>
+        </SimpleGrid>
+        {/* </Slider> */}
       </Container>
       <Box
         bg={"#252424"}

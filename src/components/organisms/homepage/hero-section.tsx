@@ -92,15 +92,15 @@ const HeroSection = () => {
           stats={[
             {
               statValue: `$${numberFormat(tvl, 2)}`,
-              statLabel: "On-chain Total Value Locked"
+              statLabel: "TVL"
             },
             {
               statValue: `$${numberFormat(dexterInfo.total_volume, 2)}`,
-              statLabel: "DEX Trading Volume"
+              statLabel: "Volume"
             },
             {
               statValue: `${transactions}`,
-              statLabel: "Total Transactions"
+              statLabel: "Transactions"
             }
           ]}
         />

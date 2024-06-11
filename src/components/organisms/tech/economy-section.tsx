@@ -93,8 +93,8 @@ const EconomySection = () => {
           fontSize={{ base: "26px", md: "58px" }}
           mb={{ base: "32px", md: "60px" }}
         >
-          Building Blocks of the
-          <br /> Liquid Staking Economy
+          Building Blocks of
+          <br /> Persistence One
         </Heading>
         <VStack align={"stretch"} spacing={"28px"}>
           {Object.keys(list).map((key, index) => (

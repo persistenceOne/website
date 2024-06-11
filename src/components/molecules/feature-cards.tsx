@@ -43,7 +43,7 @@ const FeatureCards = () => {
           height="380px"
           category="Vision"
           imgWidth={210}
-          title="BTCFi will catch up and overtake ETH DeFi"
+          title="BTCFi will overtake ETH DeFi"
           description="Learn about our vision and the belief in the Bitcoinization of crypto."
           image="/images/home-page/story.svg"
           cta={{
@@ -58,7 +58,7 @@ const FeatureCards = () => {
           width="40%"
           height="380px"
           category="Ecosystem"
-          title="Our partners in the journey"
+          title="Partners on our journey"
           description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the ecosystem."
           image="/images/home-page/ecosystem.svg"
           imgWidth={196}
