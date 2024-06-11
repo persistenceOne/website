@@ -18,7 +18,7 @@ const Terms = () => {
             </Text>
           </Box>
           <Text fontSize={"18px"} mb={4} fontWeight={500}>
-            Last Revised: 11th June 2024
+            Date Last Revised: 11th June 2024
           </Text>
           <Box className="data">
             <Text className={"contentClass"} mb={4}>
