@@ -20,7 +20,7 @@ const TermsAndConditions = () => {
             </Text>
           </Box>
           <Text fontSize={"18px"} mb={4} fontWeight={500}>
-            Last Updated Date: 11th June 2024
+            Last Revised: 11th June 2024
           </Text>
           <Box className="data">
             <Text className={"contentClass"} fontSize="16px">
