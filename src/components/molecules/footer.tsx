@@ -342,7 +342,7 @@ const Footer = () => {
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
-              <Link href={"/terms"}>
+              <Link href={"/termsofuse"}>
                 <Button
                   variant={"link"}
                   color={"#ffffff"}

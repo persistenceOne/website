@@ -123,9 +123,29 @@ const Terms = () => {
               </Text>
               <UnorderedList className={"list-disc pl-5"}>
                 <ListItem className={"contentClass"} mb={4}>
-                  “<b>Affiliates</b>” of an entity means the owners, directors,
-                  officers, employees, advisors, and agents of such entity and
-                  companies in which such entity has an interest;
+                  “<b>Affiliate</b>” means, with respect to any specified
+                  person, any other person who, directly or indirectly,
+                  controls, is controlled by, or is under common control with
+                  such person, including without limitation any general partner,
+                  managing member, officer, director or trustee of such person,
+                  or any venture capital fund or investment company now or
+                  hereafter existing that is controlled by one or more general
+                  partners, managing members or investment adviser of, or shares
+                  the same management company or investment adviser with, such
+                  person.of an entity means the owners, directors, officers,
+                  employees, advisors, and agents of such entity and companies
+                  in which such entity has an interest;
+                </ListItem>
+                <ListItem className={"contentClass"} mb={4}>
+                  “<b>Control</b>” The word &quot;control&quot; (including its
+                  correlative meanings, “controlled by”, “controls” and “under
+                  common control with”) shall mean, with respect to a
+                  corporation, the right to exercise, directly or indirectly,
+                  more than 50 per cent. of the voting rights attributable to
+                  the shares of the controlled corporation and, with respect to
+                  any person other than a corporation, the possession, directly
+                  or indirectly, of the power to direct or cause the direction
+                  of the management or policies of such person;
                 </ListItem>
                 <ListItem className={"contentClass"} mb={4}>
                   “<b>Communication</b>” refers to any communication you may
@@ -281,17 +301,17 @@ const Terms = () => {
                 </ListItem>
               </UnorderedList>
               <Text className={"contentClass"} mb={4}>
-                Non-circumvention. You agree not to do anything, including the
-                use of any technology such as virtual private networks (VPN) for
-                the purposes of circumventing these Terms.
+                1.8 Non-circumvention. You agree not to do anything, including
+                the use of any technology such as virtual private networks (VPN)
+                for the purposes of circumventing these Terms.
               </Text>
               <Text className={"contentClass"} mb={4}>
-                Sole and exclusive use of IP address: You shall not use another
-                person’s IP address and neither will you allow another person to
-                use your IP address associated with your use of Persistence
-                Products. You hereby declare and represent that the IP address
-                associated with your use of Persistence Products is unique and
-                exclusive to you and shall remain as such.
+                1.9 Sole and exclusive use of IP address: You shall not use
+                another person’s IP address and neither will you allow another
+                person to use your IP address associated with your use of
+                Persistence Products. You hereby declare and represent that the
+                IP address associated with your use of Persistence Products is
+                unique and exclusive to you and shall remain as such.
               </Text>
             </Box>
             <Text className={"subHeading"}>
