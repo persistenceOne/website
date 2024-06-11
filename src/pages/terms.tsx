@@ -18,7 +18,7 @@ const Terms = () => {
             </Text>
           </Box>
           <Text fontSize={"18px"} mb={4} fontWeight={500}>
-            Last Updated Date: 3 November 2023
+            Last Updated Date: 11th June 2024
           </Text>
           <Box className="data">
             <Text className={"contentClass"} mb={4}>
@@ -68,12 +68,12 @@ const Terms = () => {
               </b>
             </Text>
             <Text className={"contentClass"} mb={4}>
-              You are entering into these Terms with Persistence Enterprise
-              Solutions Pte. Ltd. (“Company”), an entity formed under the laws
-              of the Republic of Singapore and the Persistence Products are
-              copyrighted works belonging to the Company and/or its Affiliate(s)
-              (each of User and Company, a “<b>Party</b>”, and collectively, the
-              “<b>Parties</b>”).
+              You are entering into these Terms with Persistence Sub One Ltd.
+              (“Company”), an entity formed under the laws of the British Virgin
+              Islands and the Persistence Products are copyrighted works
+              belonging to the Company and/or its Affiliate(s) (each of User and
+              Company, a “<b>Party</b>”, and collectively, the “<b>Parties</b>
+              ”).
             </Text>
             <Text className={"contentClass"} mb={4}>
               You acknowledge that you shall be deemed to have accepted these
@@ -177,7 +177,7 @@ const Terms = () => {
               </Text>
               <UnorderedList className={"list-disc pl-5"}>
                 <ListItem className={"contentClass"} mb={4}>
-                  a “person” includes a reference to any inBoxidual, body
+                  a “person” includes a reference to any individual, body
                   corporate, unincorporated association or partnership;
                 </ListItem>
                 <ListItem className={"contentClass"} mb={4}>
@@ -557,17 +557,17 @@ const Terms = () => {
                   Jurisdiction; or
                 </ListItem>
                 <ListItem className={"contentClass"} mb={4}>
-                  which is under the control of one or more inBoxiduals who
+                  which is under the control of one or more individuals who
                   is/are citizen(s) of, domiciled in, residents of, or
                   physically present / located in, an Excluded Jurisdiction;
                 </ListItem>
               </UnorderedList>
               <Text className={"contentClass"} mb={4}>
-                4.2.3 an inBoxidual or body corporate accessing and/or using
+                4.2.3 an individual or body corporate accessing and/or using
                 Persistence Products from within an Excluded Jurisdiction;
               </Text>
               <Text className={"contentClass"} mb={4}>
-                4.2.4 an inBoxidual or body corporate included in United Nations
+                4.2.4 an individual or body corporate included in United Nations
                 Consolidated List (accessible at
                 <a
                   href="https://www.un.org/securitycouncil/content/un-sc-consolidated-list);"
@@ -579,9 +579,9 @@ const Terms = () => {
                 </a>{" "}
               </Text>
               <Text className={"contentClass"} mb={4}>
-                4.2.5 an inBoxidual or body corporate which is otherwise
+                4.2.5 an individual or body corporate which is otherwise
                 prohibited or ineligible in any way, whether in full or in part,
-                under any laws applicable to such inBoxidual or body corporate
+                under any laws applicable to such individual or body corporate
                 from accessing and/or using Persistence Products; and/or
               </Text>
               <Text className={"contentClass"} mb={4}>
@@ -617,7 +617,7 @@ const Terms = () => {
                 <ListItem className={"contentClass"} mb={4}>
                   any discretionary account or similar account (other than an
                   estate or trust) held by a dealer or other fiduciary
-                  organized, incorporated, or (if an inBoxidual) resident in the
+                  organized, incorporated, or (if an individual) resident in the
                   United States;
                 </ListItem>
                 <ListItem className={"contentClass"} mb={4}>
@@ -643,7 +643,7 @@ const Terms = () => {
                   any discretionary account or similar account (other than an
                   estate or trust) held for the benefit or account of a non-U.S.
                   person by a dealer or other professional fiduciary organized,
-                  incorporated, or (if an inBoxidual) resident in the United
+                  incorporated, or (if an individual) resident in the United
                   States;
                 </ListItem>
                 <ListItem className={"contentClass"} mb={4}>
@@ -711,7 +711,7 @@ const Terms = () => {
                 </ListItem>
               </UnorderedList>
               <Text className={"contentClass"} mb={4}>
-                5.2 apermit others to access Persistence Products through User’s
+                5.2 permit others to access Persistence Products through User’s
                 wallet or a blockchain address User controls or otherwise engage
                 in transactions using Persistence Products for any person other
                 than the wallet owner;

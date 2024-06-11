@@ -329,9 +329,15 @@ const Footer = () => {
             </Link>
           ))}
         </HStack>
-        <Box display={{ base: "none", md: "block" }}>
+        <Box display={{ base: "block", md: "block" }}>
           <Divider mt={"28px"} borderColor={"#ECECEC33"} />
-          <HStack justify={"space-between"} align={"center"} mt={4}>
+          <Flex
+            flexDir={{ base: "column", md: "row" }}
+            justify={"space-between"}
+            align={"center"}
+            mt={4}
+            gap={4}
+          >
             <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
@@ -346,6 +352,16 @@ const Footer = () => {
                   Terms of Use
                 </Button>
               </Link>
+              <Link href={"/termsandconditions"}>
+                <Button
+                  variant={"link"}
+                  color={"#ffffff"}
+                  fontSize={14}
+                  fontWeight={400}
+                >
+                  Terms and Conditions
+                </Button>
+              </Link>
               <Link href={"/privacy"}>
                 <Button
                   variant={"link"}
@@ -357,7 +373,7 @@ const Footer = () => {
                 </Button>
               </Link>
             </HStack>
-          </HStack>
+          </Flex>
         </Box>
       </Container>
     </Box>

@@ -18,7 +18,7 @@ const Privacy = () => {
             </Text>
           </Box>
           <Text fontSize={"18px"} mb={4} fontWeight={500}>
-            Last Updated Date: 26 October 2023
+            Last Updated Date: 11th June 2024
           </Text>
           <Box className="data">
             <Text className={"subHeading"}>
@@ -26,9 +26,9 @@ const Privacy = () => {
             </Text>
             <Box>
               <Text className={"contentClass"} mb={4}>
-                1.1 This is the Privacy Policy for Persistence Enterprise
-                Solutions Pte. Ltd. (collectively referred to herein as “
-                <b>PESPL</b>”, “<b>us</b>”, “<b>we</b>” or “<b>our</b>”).
+                1.1 This is the Privacy Policy for Persistence Sub One Ltd.
+                (collectively referred to herein as “<b>PRS1</b>”, “<b>us</b>”,
+                “<b>we</b>” or “<b>our</b>”).
               </Text>
               <Text className={"contentClass"} mb={4}>
                 1.2 This Privacy Policy describes how we may collect, use,
