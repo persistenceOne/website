@@ -229,7 +229,7 @@ const menuItems = [
         description: "All your media and press needs",
         icon: "download",
         iconType: "stroke",
-        link: "https://persistence.notion.site/Persistence-Media-Kit-50e8f0eacab1466ebe7899d3773a48a3",
+        link: "https://persistence.notion.site/Persistence-Brand-Press-Kit-85150f1ae50a48cf9edb46577261ed29",
         isExternal: true,
         comingSoon: false
       }
