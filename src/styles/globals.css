@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body {
-  background: #000000;
+body,html {
+  background: #F1FCFA;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -131,4 +131,107 @@ stroke: #ececec;
 
 .ml-auto{
   margin-left: auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/** Slider slides **/
+
+.btc-assets .slick-slide {
+  height:500px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btc-assets .slick-slide>div img{
+  transition: all .4s ease-in-out;
+  border-radius: 40px;
+  padding: 20px;
+  background: #fff;
+}
+
+.btc-assets  .slick-track .slick-active.slick-center{
+  position: relative;
+  z-index: 2;
+}
+
+.btc-assets  .slick-track .slick-active.slick-center img{
+  transition: all .5s ease-in-out;
+  transform: scale(3);
+}
+
+.btc-assets .slick-dots{
+  bottom: -40px !important;
+}
+
+.btc-assets .slick-dots li button{
+  background: #999999 !important;
+  color: #999999 !important;
+  border-radius: 100%;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.btc-assets div:has(+div.slick-current), .btc-assets div.slick-current + div{
+  position: relative;
+  z-index: 1;
+}
+
+/**To get the the previous slide**/
+.btc-assets div:has(+div.slick-current) img{
+  transform: scale(2, 2.6);
+}
+
+/**To get the the first slide in active list**/
+.btc-assets div:has(+div +div.slick-current) img{
+  transform: scale(1, 1.8);
+}
+
+/**To get the the next slide**/
+.btc-assets div.slick-current + div img{
+  transform: scale(2,2.6);
+}
+
+/**To get the the last slide in active list**/
+.btc-assets div.slick-current + div + div img{
+  transform: scale(1, 1.8);
+}
+
+.btc-assets .slick-dots li.slick-active button{
+  background: #EE972C !important;
+  color: #EE972C !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before{
+  color: transparent !important;
+}
+
+.slick-prev, .slick-next{
+  display: none !important;
 }

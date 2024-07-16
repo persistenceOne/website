@@ -301,7 +301,7 @@ const XPRTInDefiSection = () => {
         >
           XPRT in Multi-Chain DeFi
         </Heading>
-        {/* <Slider
+        {/* <CrossChainSlider
           {...{
             rows: 2,
             // dots: true,
@@ -317,7 +317,7 @@ const XPRTInDefiSection = () => {
             <XPRTDefiCard key={index} {...card} />
           ))}
         </SimpleGrid>
-        {/* </Slider> */}
+        {/* </CrossChainSlider> */}
       </Container>
       <Box
         bg={"#252424"}
