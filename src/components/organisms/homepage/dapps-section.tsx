@@ -5,7 +5,7 @@ import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
 
-const getData = (pstakeInfo: any, dexterInfo: any) => {
+const getData = (dexterInfo: any) => {
   const dApps: DappCardInterface[] = [
     {
       dAppName: "Persistence DEX",
@@ -20,6 +20,10 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         {
           label: "Total Volume",
           value: `$${numberFormat(Number(dexterInfo.total_volume), 3)}`
+        },
+        {
+          label: "Total Users",
+          value: `$${numberFormat(Number(dexterInfo.allTimeUsers), 3)}`
         }
       ],
       supportingAssets: [
@@ -48,57 +52,18 @@ const getData = (pstakeInfo: any, dexterInfo: any) => {
         hover: "primary.redHover",
         color: "white"
       }
-    },
-    {
-      dAppName: "pSTAKE Finance",
-      dAppLogo: "/images/pstake-logo.svg",
-      dAppDescription:
-        "pSTAKE on Cosmos LSTs are issued on the Persistence chain and can be used in DeFi on Persistence One and beyond.",
-      dAppStats: [
-        {
-          label: "Total Value Locked",
-          value: `$${numberFormat(Number(pstakeInfo.tvl), 3)}`
-        },
-        {
-          label: "All Time Users",
-          value: `${numberFormat(Number(pstakeInfo.allTimeUsers), 3)}+`
-        }
-      ],
-      supportingAssets: [
-        { asset: "stkXPRT", assetIcon: "/images/tokens/stkxprt.svg" },
-        { asset: "stkATOM", assetIcon: "/images/tokens/stkatom.svg" },
-        { asset: "stkOSMO", assetIcon: "/images/tokens/stkosmo.svg" },
-        { asset: "stkDYDX", assetIcon: "/images/tokens/stkdydx.svg" },
-        { asset: "stkSTARS, stkHUAHUA", assetIcon: "/images/tokens/more.svg" }
-        // { asset: "stkBNB", assetIcon: "/images/tokens/stkbnb.svg" },
-        // { asset: "stkDYDX", assetIcon: "/images/tokens/stkdydx.svg" },
-        // { asset: "stkSTARS", assetIcon: "/images/tokens/stkstars.svg" },
-        // { asset: "stkHUAHUA", assetIcon: "/images/tokens/stkhuahua.svg" }
-      ],
-      website: {
-        link: "https://pstake.finance",
-        linkText: "pstake.finance",
-        hover: "primary.redHover"
-      },
-      button: {
-        text: "Liquid Stake Now",
-        link: "https://app.pstake.finance",
-        background: "primary.red",
-        hover: "primary.redHover",
-        color: "white"
-      }
     }
   ];
   return dApps;
 };
 
 const DappsSection = () => {
-  const [pstakInfo, dexterInfo] = useAppStore(
-    (state) => [state.pstakInfo, state.dexterInfo],
+  const [ dexterInfo] = useAppStore(
+    (state) => [state.dexterInfo],
     shallow
   );
 
-  const dApps = getData(pstakInfo, dexterInfo);
+  const dApps = getData(dexterInfo);
 
   return (
     <Box pos={"relative"}>

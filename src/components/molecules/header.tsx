@@ -28,10 +28,9 @@ import Icon from "./Icon";
 import {
   fetchChainTVL,
   fetchDexterInfo,
-  fetchDexterPoolInfo,
+  fetchDexterPoolInfo, fetchDexterUsers,
   fetchOsmosisPoolInfo,
   fetchTokenPrices,
-  getBnbTVL,
   getCosmosTVL
 } from "@/pages/api";
 import { useAppStore } from "@/store/store";
@@ -518,24 +517,22 @@ const Header = () => {
 
   const [
     setTokenPrices,
-    setPstakeTvl,
     setDexterTVl,
     setDexterTotalVolume,
     setDexterPoolInfo,
     setOsmoPoolInfo,
     setPersistenceTvl,
-    pstakInfo,
+    setDexterUsers,
     dexterInfo
   ] = useAppStore(
     (state) => [
       state.setTokenPrices,
-      state.setPstakeTvl,
       state.setDexterTVl,
       state.setDexterTotalVolume,
       state.setDexterPoolInfo,
       state.setOsmoPoolInfo,
       state.setPersistenceTvl,
-      state.pstakInfo,
+      state.setDexterUsers,
       state.dexterInfo
     ],
     shallow
@@ -547,32 +544,13 @@ const Header = () => {
     //   setPersistenceTvl(chainTvl);
     // };
     // fetch();
-    setPersistenceTvl(dexterInfo.tvl + pstakInfo.tvl);
-  }, [dexterInfo.tvl, pstakInfo.tvl, setPersistenceTvl]);
+    setPersistenceTvl(dexterInfo.tvl);
+  }, [dexterInfo.tvl, setPersistenceTvl]);
 
   //fetching pstake info
   useEffect(() => {
     const fetch = async () => {
       const tokenPrices = await fetchTokenPrices();
-      const [
-        xprtTvlResponse,
-        cosmosTvlResponse,
-        osmoTvlResponse,
-        dydxTvlResponse
-      ] = await Promise.all([
-        getCosmosTVL("xprt"),
-        getCosmosTVL("cosmos"),
-        getCosmosTVL("osmo"),
-        getCosmosTVL("dydx")
-        // getBnbTVL()
-      ]);
-      const pstkeTvl =
-        Number(decimalize(xprtTvlResponse)) * tokenPrices.XPRT +
-        Number(decimalize(cosmosTvlResponse)) * tokenPrices.ATOM +
-        // bnbTvl * tokenPrices.BNB +
-        Number(decimalize(osmoTvlResponse)) * tokenPrices.OSMO +
-        Number(decimalizeRaw(dydxTvlResponse, 18)) * tokenPrices.DYDX;
-      setPstakeTvl(pstkeTvl);
       setTokenPrices(tokenPrices);
     };
     fetch();
@@ -581,13 +559,20 @@ const Header = () => {
   //fetching dexter info
   useEffect(() => {
     const fetch = async () => {
-      const response = await fetchDexterPoolInfo();
-      const resp = await fetchDexterInfo();
-      const osmoResponse = await fetchOsmosisPoolInfo();
-      setDexterTVl(resp.tvl);
-      setDexterTotalVolume(resp.volume);
-      setDexterPoolInfo(response);
-      setOsmoPoolInfo(osmoResponse);
+       fetchDexterPoolInfo().then(response=>{
+         setDexterPoolInfo(response);
+       });
+      fetchDexterInfo().then(resp=>{
+        setDexterTVl(resp.tvl);
+        setDexterTotalVolume(resp.volume);
+      });
+      fetchDexterUsers().then(userResponse=>{
+        setDexterUsers(userResponse?.monthlyTotalUsers)
+        console.log(userResponse, "userResponse")
+      });
+      fetchOsmosisPoolInfo().then(osmoResponse=>{
+        setOsmoPoolInfo(osmoResponse);
+      });
     };
     fetch();
   }, []);
