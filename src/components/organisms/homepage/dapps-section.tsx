@@ -1,14 +1,5 @@
 import DappCard, { DappCardInterface } from "@/components/atoms/dapp-card";
-import {
-  Container,
-  Box,
-  Stack,
-  Heading,
-  Text,
-  Flex,
-  CardBody,
-  Card
-} from "@chakra-ui/react";
+import { Container, Box, Stack } from "@chakra-ui/react";
 import React from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
