@@ -30,6 +30,8 @@ const FeatureCards = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const commonImagePath = "/images/home-page/why-persistence";
   return (
     <VStack gap={4} mt={16}>
       <Stack
@@ -39,32 +41,33 @@ const FeatureCards = () => {
         direction={{ base: "column", md: "row" }}
       >
         <FeatureCard
-          width="60%"
+          width="70%"
           height="380px"
           category="Vision"
           imgWidth={210}
           title="BTCFi will overtake ETH DeFi"
-          description="Learn about our vision and the belief in the Bitcoinization of crypto."
-          image="/images/home-page/story.svg"
+          description="Learn about our vision and belief in the Bitcoinization of modern-day finance."
+          image={`${commonImagePath}/bitcoin_hand.svg`}
           cta={{
             link: "/vision",
-            linkText: "Explore Our Vision",
+            linkText: "Learn More about Our Vision",
             isExternal: false
           }}
           type={isMobile ? "vertical" : "horizontal"}
         />
 
         <FeatureCard
-          width="40%"
+          width="30%"
           height="380px"
           category="Ecosystem"
-          title="Partners on our journey"
-          description="Explore the dApps, 15+ DeFi partners, 100 validators, and more that contribute to the ecosystem."
-          image="/images/home-page/ecosystem.svg"
+          title="Building since 2019"
+          description="Since 2019, Persistence One has been leveraging its
+          expertise in DeFi, IBC interoperability, and the Persistence Core-1 Chain's security to tackle the challenge of Bitcoin interoperability in BTCfi."
+          image={`${commonImagePath}/building.svg`}
           imgWidth={196}
           cta={{
-            link: MINTSCAN_ECOSYSTEM_LINK,
-            linkText: "Explore Ecosystem",
+            link: "",
+            linkText: "",
             isExternal: true
           }}
           type="vertical"
@@ -91,13 +94,13 @@ const FeatureCards = () => {
       >
         <FeatureCard
           category="Technology"
-          title={`Technically Superb. Superbly Powerful.`}
-          description="See how Persistence One offers a technically advanced, secure, and robust infrastructure for Bitcoin and Liquid Staked Tokens trading."
-          image="/images/home-page/tech.svg"
+          title={`Advanced Technology. Streamlined User Journey.`}
+          description="SUsing cutting-edge technology like Cross-chain Intents, Persistence One is set to revolutionize user experience in BTCfi and remove the barriers to BTC movement."
+          image={`${commonImagePath}/tech.svg`}
           imgWidth={280}
           cta={{
-            link: "/tech",
-            linkText: "Explore Tech",
+            link: "",
+            linkText: "",
             isExternal: false
           }}
           type="vertical-bottom"
@@ -105,23 +108,28 @@ const FeatureCards = () => {
           height="450px"
         />
 
-        <VStack align={"stretch"} gap={4} justify={"space-between"}>
+        <VStack
+          width={"60%"}
+          align={"stretch"}
+          gap={4}
+          justify={"space-between"}
+        >
           <FeatureCard
             category="People"
-            title={`Humility. Integrity. Patience. Persistence.`}
-            description="Understand our core values and learn how to become a Persister and contribute."
-            image="/images/home-page/people.svg"
+            title={`Humility. Integrity. Patience. Persistence. `}
+            description="Persistence is more than just a name. It is our way of being. Learn about our core values, the team, and how to become a Persister."
+            image={`${commonImagePath}/values.svg`}
             imgWidth={280}
             cta={{
               link: "/people",
-              linkText: "Explore People",
+              linkText: "Learn More about Our People",
               isExternal: false
             }}
           />
 
           <Flex
             justify={"space-between"}
-            bg={"#252424"}
+            bg={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
             borderRadius={40}
             p={4}
             pl={8}
@@ -132,7 +140,7 @@ const FeatureCards = () => {
               fontSize={{ base: "16px", md: "27px" }}
               fontWeight={700}
             >
-              Yields. TVL. Traction.
+              Join the Movement
             </Text>
             <Link
               href={"https://stats.persistence.one"}
@@ -144,7 +152,7 @@ const FeatureCards = () => {
                 rightIcon={<ArrowForwardIcon />}
                 variant={"secondary"}
               >
-                View Stats
+                Join the Community
               </Button>
             </Link>
           </Flex>
