@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import Slider from "react-slick";
+import Link from "next/link";
 
 const resourcesList: BlogCardInterface[] = [
   {
@@ -98,31 +99,12 @@ const BlogSection = () => {
   return (
     <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
       <Box>
-        <VStack align={"center"} mb={"60px"}>
-          <Heading
-            color="text.headingSemiBlack"
-            fontSize={{ base: "26px", md: "58px" }}
-          >
+        <HStack align={"center"} mb={"60px"} justifyContent={"space-between"}>
+          <Heading color="#434343" fontSize={{ base: "20px", md: "44px" }}>
             Latest on Persistence One
           </Heading>
-          <Text
-            // maxW={"75%"}
-            fontSize={{ base: "16px", md: "22px" }}
-            color={"text.blackMid"}
-          >
-            Explore the biggest news, blogs, interviews, and discussions around
-            Liquid Staking.
-          </Text>
-          {/* <Button
-            variant={"link"}
-            color={"primary.black"}
-            fontWeight={600}
-            fontSize={{ base: "16px", md: "20px" }}
-            rightIcon={<ArrowForwardIcon />}
-          >
-            Explore All
-          </Button> */}
-        </VStack>
+          <Link href={"/"}>Explore More</Link>
+        </HStack>
         <Slider
           {...{
             dots: false,

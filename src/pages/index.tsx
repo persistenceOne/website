@@ -1,4 +1,3 @@
-import BecomePersisterSection from "@/components/organisms/homepage/become-persister-section";
 import BlogSection from "@/components/organisms/homepage/blog-section";
 import DappsSection from "@/components/organisms/homepage/dapps-section";
 import HeroSection from "@/components/organisms/homepage/hero-section";
@@ -16,7 +15,6 @@ const HomePage = () => {
       <Spacer h={20} />
       <DappsSection />
       <BlogSection />
-      <BecomePersisterSection showEcosystemSection={false} />
     </Box>
   );
 };
