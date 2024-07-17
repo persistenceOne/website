@@ -24,26 +24,17 @@ import {
   AccordionPanel,
   Button
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ExternalLinkIcon,
-  ArrowForwardIcon
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Icon from "./Icon";
 import {
-  fetchChainTVL,
   fetchDexterInfo,
   fetchDexterPoolInfo,
   fetchDexterUsers,
   fetchOsmosisPoolInfo,
-  fetchTokenPrices,
-  getBnbTVL,
-  getCosmosTVL
+  fetchTokenPrices
 } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
-import { decimalize, decimalizeRaw } from "@/utils/helpers";
 import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 
 const menuItems = [
@@ -338,7 +329,7 @@ const getMenuList = (
           cursor={"pointer"}
           fontSize={"18px"}
           borderRadius={"6px"}
-          color={"#434343"}
+          color={"#FFFFFF"}
         >
           {item.name}
         </Text>
@@ -535,7 +526,7 @@ const Header = () => {
         transition={"all 0.3s"}
         py={"20px"}
         mx={"auto"}
-        bg={"#FFFFFF"}
+        bg={"#163338"}
         my={"32px"}
         borderRadius={"1000px"}
       >
@@ -549,7 +540,7 @@ const Header = () => {
           <Box>
             <Link href="/">
               <Image
-                src="/images/persistence-logo-dark.svg"
+                src="/images/persistence-logo.svg"
                 alt="Persistence Logo"
                 width={251}
                 height={32}

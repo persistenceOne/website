@@ -23,7 +23,7 @@ const BlogCard = ({
   return (
     <Link href={resourceLink} target="_blank" rel="noopenner noreferrer">
       <Box px={"10px"}>
-        <Card w="full" h="100%" borderRadius={20}>
+        <Card w="full" h="100%" borderRadius={20} my={1}>
           <Box
             bgImage={`url(${resourceImage})`}
             w={width}
