@@ -543,7 +543,7 @@ const Header = () => {
         py={"20px"}
         mx={"auto"}
         bg={"#FFFFFF"}
-        mt={"32px"}
+        my={"32px"}
         borderRadius={"1000px"}
       >
         <Flex

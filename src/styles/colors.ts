@@ -14,7 +14,7 @@ const colors = {
     headingSemiWhite: "#FCFCFC",
     headingSemiBlack: "#3D3D3D",
     statLabel: "#423F40",
-    whiteFull: "#fff",
+    whiteFull: "#ffffff",
     whiteHigh: "#ECECEC",
     whiteEmphasis: "#FEFEFE",
     whiteMid: "#F5F5F5",
