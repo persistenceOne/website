@@ -526,7 +526,8 @@ const Header = () => {
         transition={"all 0.3s"}
         py={"20px"}
         mx={"auto"}
-        bg={"#163338"}
+        bg={"transparent"}
+        className={"navbar-box"}
         my={"32px"}
         borderRadius={"1000px"}
       >

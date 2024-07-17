@@ -36,10 +36,7 @@ const HeroSection = () => {
   return (
     <Box
       className={"hero-content"}
-      backgroundImage={{
-        base: "",
-        md: "linear-gradient(90deg, #185B64 0%, #114147 35%)"
-      }}
+      backgroundImage={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
       // backgroundPosition="100% 0"
       backgroundRepeat="no-repeat"
       // backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "32% 100%" }}

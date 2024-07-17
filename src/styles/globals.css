@@ -61,9 +61,13 @@ stroke: #ececec;
   stroke: #000000;
 }
 /* navigation bar icon styling */
-/*.navbar-container.nav-bar {*/
-/*  background: #f5f5f5;*/
-/*}*/
+.navbar-container.nav-bar {
+  background: linear-gradient(90deg, #185B64 0%, #114147 35%);
+}
+
+.navbar-container.nav-bar .navbar-box{
+  margin-top: 0px !important;
+}
 
 .icon-nav-icon {
   width: 20px;
