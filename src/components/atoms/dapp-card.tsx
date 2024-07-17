@@ -4,19 +4,15 @@ import {
   Button,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
-  Divider,
   HStack,
   Heading,
   Text,
-  Stack,
   useMediaQuery
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import { TooltipWithTouch } from "./tooltip-with-touch";
 
 export interface DappCardInterface {
   dAppName: string;
@@ -53,117 +49,81 @@ const DappCard = ({
   website,
   button
 }: DappCardInterface) => {
-  const [isMobile] = useMediaQuery("(max-width: 500px)");
   return (
     <Card
-      px={{ base: "24px", md: "44px" }}
-      py={{ base: "26px", md: "38px" }}
+      px={{ base: "24px", md: "56px" }}
+      py={{ base: "26px", md: "60px" }}
       w={"full"}
+      bg={"#E9F1EE14"}
       borderRadius={"20px"}
     >
-      <CardHeader p={""}>
-        <Stack justify={"space-between"} direction={"row"}>
-          <Box>
-            <Image
-              src={dAppLogo}
-              alt=""
-              width={isMobile ? 28 : 56}
-              height={isMobile ? 28 : 56}
-            />
+      <CardBody p={"0"}>
+        <Box
+          display="flex"
+          justifyContent={"space-between"}
+          alignItems={"center"}
+        >
+          <Box flex={1}>
             <Heading
-              fontWeight={600}
-              fontSize={{ base: "16px", md: "24px" }}
-              mt={"16px"}
+              fontWeight={700}
+              color={"text.whiteFull"}
+              fontSize={{ base: "20px", md: "40px" }}
+              lineHeight={{ base: "36px", md: "50px" }}
+              mb={4}
             >
               {dAppName}
             </Heading>
+            <Text
+              fontSize={{ base: "12px", md: "16px" }}
+              color={"#FFFFFFCC"}
+              lineHeight={{ base: "22px", md: "24px" }}
+              pb={"16px"}
+            >
+              {dAppDescription}
+            </Text>
+            <HStack gap={12} mb={"70px"}>
+              {dAppStats.map((stat) => (
+                <Box key={stat.label}>
+                  <Text
+                    fontSize={{ base: "12px", md: "16px" }}
+                    color={"#FFFFFFCC"}
+                    lineHeight={{ base: "22px", md: "24px" }}
+                  >
+                    {stat.label}
+                  </Text>
+                  <Text
+                    fontWeight={700}
+                    color={"#FCFCFC"}
+                    fontSize={{ base: "18px", md: "24px" }}
+                  >
+                    {stat.value}
+                  </Text>
+                </Box>
+              ))}
+            </HStack>
+            <Link href={button.link} target="_blank" rel="noopener noreferrer">
+              <Button
+                bg={button.background}
+                color={button.color}
+                w={"182px"}
+                _hover={{
+                  bg: button.hover
+                }}
+              >
+                {button.text}
+              </Button>
+            </Link>
           </Box>
-          <Link href={website.link} target="_blank" rel="noopener noreferrer">
-            <Button
-              rightIcon={<ExternalLinkIcon />}
-              variant={"unstyled"}
-              alignSelf={"flex-start"}
-              fontWeight={400}
-              mt={-4}
-              fontSize={"18px"}
-              color={"#606060"}
-              _hover={{ color: website.hover }}
-            >
-              {website.linkText}
-            </Button>
-          </Link>
-        </Stack>
-        <Divider my={5} />
-      </CardHeader>
-      <CardBody p={"0"}>
-        <Text
-          fontSize={{ base: "16px", md: "18px" }}
-          color={"text.blackHigh"}
-          lineHeight={"30px"}
-          pb={"20px"}
-          h={{ base: "auto", md: 28 }}
-        >
-          {dAppDescription}
-        </Text>
-        <HStack gap={12} mb={"24px"}>
-          {dAppStats.map((stat) => (
-            <Box key={stat.label}>
-              <Text fontSize={"14px"} color={"#423F40B2"}>
-                {stat.label}
-              </Text>
-              <Text fontWeight={700} fontSize={{ base: "18px", md: "24px" }}>
-                {stat.value}
-              </Text>
-            </Box>
-          ))}
-        </HStack>
-        <Text fontSize={"14px"} color={"#423F40B2"} pb={"4px"}>
-          Supporting Assets
-        </Text>
-        <HStack gap={"16px"} wrap={"wrap"}>
-          {supportingAssets.map((asset) => (
-            <TooltipWithTouch
-              label={
-                <Text bg={"white"} color="primary.black">
-                  {asset.asset}
-                </Text>
-              }
-              bg={"#FFFFFF"}
-              px={4}
-              py={2}
-              boxShadow={
-                "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03);"
-              }
-              borderRadius={4}
-              mt={-2}
-              key={asset.asset}
-            >
-              <Image
-                src={asset.assetIcon}
-                alt={asset.asset}
-                width={isMobile ? 30 : 48}
-                height={isMobile ? 30 : 48}
-                style={{ cursor: "pointer" }}
-              />
-            </TooltipWithTouch>
-          ))}
-        </HStack>
+          <Box w={"515px"}>
+            <Image
+              src={"/images/home-page/dex.svg"}
+              alt={"Dex"}
+              width={515}
+              height={290}
+            />
+          </Box>
+        </Box>
       </CardBody>
-      <CardFooter px={"0"} pb={"0"} pt={{ base: "20px", md: "36px" }}>
-        <Link href={button.link} target="_blank" rel="noopener noreferrer">
-          <Button
-            bg={button.background}
-            color={button.color}
-            w={"240px"}
-            _hover={{
-              bg: button.hover
-            }}
-            rightIcon={<ArrowForwardIcon />}
-          >
-            {button.text}
-          </Button>
-        </Link>
-      </CardFooter>
     </Card>
   );
 };

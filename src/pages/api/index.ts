@@ -1,6 +1,4 @@
 import axios from "axios";
-import { sdkInstance } from "@/utils/helpers";
-import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
 
 const defillamaApi = "https://defillama-datasets.llama.fi/lite/protocols2";
 export const STK_XPRT_TVL_URL =
@@ -90,16 +88,6 @@ export const fetchTokenPrices = async () => {
     return data;
   } catch (e) {
     return data;
-  }
-};
-
-export const getBnbTVL = async () => {
-  try {
-    const tvl = await sdkInstance.getTvl();
-    return Number(StkBNBWebSDK.format(tvl, 2));
-  } catch (e) {
-    console.log(e);
-    return 0;
   }
 };
 
@@ -357,5 +345,36 @@ export const getBondedTokens = async () => {
     return total.toFixed(2);
   } catch (e) {
     return 0;
+  }
+};
+
+export const fetchDexterUsers = async () => {
+  try {
+    const date = new Date();
+    const currentDate = date.toISOString().split("T")[0];
+    const res = await fetch(
+      "/api/users?" +
+        new URLSearchParams({
+          startDate: "",
+          endDate: currentDate
+        })
+    );
+    const data = await res.json();
+    const monthlyTotalUsers = data.data.monthlyData.reduce(
+      (acc: any, item: any) => {
+        return acc + item.user_count;
+      },
+      0
+    );
+    const finalData = {
+      monthlyTotalUsers
+    };
+    console.log(finalData, "finalData");
+    return finalData;
+  } catch (e) {
+    console.log(e, "error in fetchDexterInfo");
+    return {
+      monthlyTotalUsers: 0
+    };
   }
 };

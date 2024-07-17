@@ -6,33 +6,57 @@ import {
   Container,
   Heading,
   Text,
-  Link
+  Link,
+  Card,
+  CardBody
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
 const GetXprtSection = () => {
   return (
-    <Box bg="#252424">
-      <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"65px"}>
+    <Card
+      px={{ base: "24px", md: "56px" }}
+      py={{ base: "26px", md: "60px" }}
+      w={"full"}
+      bg={"#E9F1EE14"}
+      borderRadius={"20px"}
+    >
+      <CardBody p={"0"}>
         <HStack bg="#" justify={"space-between"}>
-          <Box w={"700px"}>
+          <Box
+            flex={1}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Image
+              src={"/images/home-page/fuel.svg"}
+              alt="Persistence"
+              width={251}
+              height={285}
+            />
+          </Box>
+          <Box w={"643px"}>
             <Heading
-              color="text.headingSemiWhite"
-              fontSize={{ base: "26px", md: "44px" }}
-              lineHeight={{ base: "38px", md: "72px" }}
-              mb={4}
+              fontWeight={700}
+              color={"text.whiteFull"}
+              fontSize={{ base: "20px", md: "40px" }}
+              lineHeight={{ base: "36px", md: "50px" }}
+              mb={3}
             >
-              Fueling the <br /> Persistence One Ecosystem
+              Fueling on-chain activities on Persistence One
             </Heading>
             <Text
-              color="text.whiteHigh"
-              fontSize={{ base: "16px", md: "18px" }}
-              mb={{ base: "30px", md: "50px" }}
+              fontSize={{ base: "12px", md: "16px" }}
+              color={"#FFFFFFCC"}
+              lineHeight={{ base: "22px", md: "24px" }}
+              mb={{ base: "20px", md: "40px" }}
             >
-              XPRT empowers on-chain activities like chain security,
-              decentralized governance, Liquid Staking, and transaction fees on
-              Persistence One.
+              XPRT powers on-chain activities on Persistence One, including
+              decentralized governance, transaction fees, and future initiatives
+              like whitelisting intent solvers, protocol fee discounts, and
+              more.
             </Text>
             <HStack gap={4}>
               <Link
@@ -40,7 +64,7 @@ const GetXprtSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
+                <Button variant={"secondary"} w={"163px"}>
                   Stake XPRT
                 </Button>
               </Link>
@@ -51,6 +75,7 @@ const GetXprtSection = () => {
               >
                 <Button
                   color={"#ffffff"}
+                  w={"145px"}
                   _hover={{ borderColor: "#C73238CC", bg: "#C732381A" }}
                 >
                   Get XPRT
@@ -58,17 +83,9 @@ const GetXprtSection = () => {
               </Link>
             </HStack>
           </Box>
-          <Box display={{ base: "none", md: "block" }}>
-            <Image
-              src={"/images/home-page/fuelling-ecosystem.svg"}
-              alt="Persistence"
-              width={450}
-              height={450}
-            />
-          </Box>
         </HStack>
-      </Container>
-    </Box>
+      </CardBody>
+    </Card>
   );
 };
 
