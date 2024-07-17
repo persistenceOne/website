@@ -76,7 +76,8 @@ const GetXprtSection = () => {
                 <Button
                   color={"#ffffff"}
                   w={"145px"}
-                  _hover={{ borderColor: "#C73238CC", bg: "#C732381A" }}
+                  bg={"primary.redHover"}
+                  borderColor={"primary.red"}
                 >
                   Get XPRT
                 </Button>

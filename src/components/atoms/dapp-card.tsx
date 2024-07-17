@@ -105,6 +105,7 @@ const DappCard = ({
               <Button
                 bg={button.background}
                 color={button.color}
+                borderColor={button.background}
                 w={"182px"}
                 _hover={{
                   bg: button.hover

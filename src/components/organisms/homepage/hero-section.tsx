@@ -89,9 +89,9 @@ const HeroSection = () => {
               <Link href="/xprt" passHref>
                 <Button
                   w={{ base: "100%", md: "auto" }}
-                  bg={"#EE81674D"}
+                  bg={"primary.redHover"}
+                  borderColor={"primary.red"}
                   rightIcon={<ArrowForwardIcon />}
-                  borderColor={"#EE81674D"}
                   textColor={"#FFFFFF"}
                 >
                   Explore Ecosystem
