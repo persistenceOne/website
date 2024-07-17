@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+// @ts-ignore
 import { GraphQLClient, gql } from "graphql-request";
 import { NextApiRequest, NextApiResponse } from "next";
 
