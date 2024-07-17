@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body {
-  background: #000000;
+body, html {
+  background: #F1FCFA;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -132,3 +132,21 @@ stroke: #ececec;
 .ml-auto{
   margin-left: auto;
 }
+
+/* swiper slide custom styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* swiper slide custom styles end */
