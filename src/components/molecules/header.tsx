@@ -21,9 +21,9 @@ import {
   Accordion,
   AccordionItem,
   AccordionButton,
-  AccordionPanel
+  AccordionPanel, Button
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ExternalLinkIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import Icon from "./Icon";
 import {
   fetchChainTVL,
@@ -85,7 +85,7 @@ const menuItems = [
   },
   {
     id: 1,
-    name: "Network",
+    name: "XPRT",
     subItems: [
       {
         title: "XPRT",
@@ -139,60 +139,7 @@ const menuItems = [
   },
   {
     id: 2,
-    name: "Products",
-    subItems: [
-      {
-        title: "Persistence DEX",
-        description:
-          "Trade or provide liquidity with BTC, LSTs, Stablecoins and more",
-        icon: "trade",
-        iconType: "fill",
-        link: "https://app.persistence.one",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "pSTAKE Finance",
-        description: "Mint Cosmos LSTs on the Persistence Chain",
-        icon: "liquidstake",
-        iconType: "stroke",
-        link: "https://app.pstake.finance",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "XPRT Staking",
-        description:
-          "Stake XPRT to help secure the network and earn staking rewards",
-        icon: "secure",
-        iconType: "stroke",
-        link: "https://wallet.keplr.app/chains/persistence",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "pWallet",
-        description: "Manage and transfer XPRT tokens and staked delegations",
-        icon: "wallet",
-        iconType: "stroke",
-        link: "https://wallet.keplr.app/chains/persistence",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "pBridge",
-        description: "Transfer tokens between Ethereum and Persistence One",
-        icon: "bridge",
-        iconType: "stroke",
-        link: "https://bridge.persistence.one",
-        isExternal: true,
-        comingSoon: false
-      }
-    ]
-  },
-  {
-    id: 3,
-    name: "Community",
+    name: "Connect",
     subItems: [
       {
         title: "People",
@@ -233,15 +180,6 @@ const menuItems = [
         isExternal: true,
         comingSoon: false
       }
-      // {
-      //   title: "Social",
-      //   description: "",
-      //   icon: "ecosystem",
-      //   iconType: "fill",
-      //   link: "/ecosystem",
-      //   isExternal: false,
-      //   comingSoon: true
-      // }
     ]
   }
 ];
@@ -391,10 +329,9 @@ const getMenuList = (
       <PopoverTrigger>
         <Text
           cursor={"pointer"}
-          px={"12px"}
-          py={"8px"}
+          fontSize={"18px"}
           borderRadius={"6px"}
-          _hover={{ bg: "#C732381A", color: "#C73238" }}
+          color={"#434343"}
         >
           {item.name}
         </Text>
@@ -600,10 +537,14 @@ const Header = () => {
       bg={{ base: "#f5f5f5", md: "transparent" }}
     >
       <Container
-        maxW={"1440px"}
-        px={{ base: "20px", md: "60px" }}
+        maxW={"1320px"}
+        px={{ base: "20px", md: "40px" }}
         transition={"all 0.3s"}
         py={"20px"}
+        mx={"auto"}
+        bg={"#FFFFFF"}
+        mt={"32px"}
+        borderRadius={"1000px"}
       >
         <Flex
           as={"nav"}
@@ -624,7 +565,7 @@ const Header = () => {
           </Box>
           <Spacer />
           <Stack
-            gap="56px"
+            gap="32px"
             justify="center"
             align={"center"}
             direction={{ base: "column", md: "row" }}
@@ -632,7 +573,21 @@ const Header = () => {
             {getMenuList("top-start", "hover")}
           </Stack>
           <Spacer />
-          <Box />
+          <Link
+            href="https://app.persistence.one"
+            target="_black"
+            rel="noopenner noreferrer"
+            passHref
+            className={"inline-block"}
+          >
+            <Button
+              variant={"secondary"}
+              h={"51px"}
+              w={"151px"}
+            >
+              Enter App
+            </Button>
+          </Link>
         </Flex>
         <Flex
           as={"nav"}
