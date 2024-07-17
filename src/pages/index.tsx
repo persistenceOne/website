@@ -5,6 +5,7 @@ import Overview from "@/components/organisms/homepage/overview";
 import { Box, Spacer } from "@chakra-ui/react";
 import React from "react";
 import CrossChainSlider from "@/components/organisms/homepage/cross-chain-slider";
+import FunFactSlider from "@/components/organisms/homepage/fun-fact-slider";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Overview />
       <Spacer h={20} />
       <DappsSection />
+      <FunFactSlider />
       <BlogSection />
     </Box>
   );
