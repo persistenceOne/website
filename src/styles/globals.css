@@ -71,20 +71,20 @@ stroke: #ececec;
 }
 
 .icon-nav-icon.fill {
-  fill: #c73238;
+  fill: #EE8167;
 }
 
 .icon-nav-icon.stroke {
-  stroke: #c73238;
+  stroke: #EE8167;
   fill: transparent;
 }
 
 .nav-item .icon-box {
-  background: #c732381a;
+  background: #EE81674D;
 }
 
 .nav-item:hover .icon-box {
-  background: #c73238;
+  background: #EE8167;
 }
 
 .nav-item:hover .icon-nav-icon.fill {
