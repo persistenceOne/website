@@ -1,4 +1,3 @@
-import { FeatureCardInterface } from "@/components/atoms/feature-card";
 import FeatureCards from "@/components/molecules/feature-cards";
 import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
 import React from "react";
