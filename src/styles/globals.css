@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body, html {
-  background: #F1FCFA;
+  background: #27282D;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -62,7 +62,7 @@ stroke: #ececec;
 }
 /* navigation bar icon styling */
 .navbar-container.nav-bar {
-  background: linear-gradient(90deg, #185B64 0%, #114147 35%);
+  background: #27282D;
 }
 
 .navbar-container.nav-bar .navbar-box{

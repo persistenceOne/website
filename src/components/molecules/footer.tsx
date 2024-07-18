@@ -147,7 +147,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <Box as={"footer"} bg={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}>
+    <Box as={"footer"} bg={"#FFFFFF"}>
       <Container
         maxW={"1300px"}
         px={{ base: "12px", md: "30px" }}
@@ -159,12 +159,12 @@ const Footer = () => {
           py={{ base: "10px", md: "16px" }}
         >
           <Image
-            src={"images/persistence-logo.svg"}
+            src={"images/persistence-logo-dark.svg"}
             width={186}
             height={24}
             alt={"Persistence Logo"}
           />
-          <HStack gap={4} mt={4} display={{ base: "none", md: "flex" }}>
+          <HStack gap={4} display={{ base: "none", md: "flex" }}>
             {footerSocialLinks.map((link) => (
               <Link
                 href={link.link}
@@ -216,12 +216,12 @@ const Footer = () => {
             ))}
           </HStack>
         </HStack>
-        <Divider mt={"16px"} mb={"32px"} borderColor={"#FCFCFC33"} />
+        <Divider mt={"16px"} mb={"32px"} borderColor={"#00000033"} />
         <Flex
           display={{ base: "block", md: "flex" }}
           justifyContent={"start"}
           align={"flex-start"}
-          color={"#ffffff"}
+          color={"#918678"}
         >
           {/*<Stack*/}
           {/*  gap={16}*/}
@@ -237,7 +237,11 @@ const Footer = () => {
           >
             {footerLinks.map((link) => (
               <VStack key={link.title} align={"flex-start"} gap={4}>
-                <Heading variant={"footerHeading"} fontSize={"20px"}>
+                <Heading
+                  variant={"footerHeading"}
+                  fontSize={"20px"}
+                  color={"#918678"}
+                >
                   {link.title}
                 </Heading>
                 {link.links.map((item) => (
@@ -250,7 +254,7 @@ const Footer = () => {
                     <Button
                       variant={"link"}
                       key={item.title}
-                      color={"#ffffff"}
+                      color={"#918678"}
                       fontSize={{ base: "14px", md: "16px" }}
                       fontWeight={400}
                       opacity={0.69}
@@ -299,7 +303,7 @@ const Footer = () => {
           ))}
         </HStack>
         <Box display={{ base: "block", md: "block" }}>
-          <Divider mt={"28px"} borderColor={"#ECECEC33"} />
+          <Divider mt={"28px"} borderColor={"#00000033"} />
           <Flex
             flexDir={{ base: "column", md: "row" }}
             justify={"space-between"}
@@ -307,14 +311,14 @@ const Footer = () => {
             mt={4}
             gap={4}
           >
-            <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
+            <Text fontSize={14} fontWeight={400} color={"#918678"}>
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
               <Link href={"/termsofuse"}>
                 <Button
                   variant={"link"}
-                  color={"#ffffff"}
+                  color={"#918678"}
                   fontSize={14}
                   fontWeight={400}
                 >
@@ -324,7 +328,7 @@ const Footer = () => {
               <Link href={"/privacy"}>
                 <Button
                   variant={"link"}
-                  color={"#ffffff"}
+                  color={"#918678"}
                   fontSize={14}
                   fontWeight={400}
                 >

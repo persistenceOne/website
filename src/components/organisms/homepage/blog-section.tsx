@@ -99,11 +99,17 @@ const BlogSection = () => {
   return (
     <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
       <Box>
-        <HStack align={"center"} mb={"60px"} justifyContent={"space-between"}>
-          <Heading color="#434343" fontSize={{ base: "20px", md: "44px" }}>
+        <HStack
+          alignItems={"center"}
+          mb={"40px"}
+          justifyContent={"space-between"}
+        >
+          <Heading color="#FFFFFF" fontSize={{ base: "20px", md: "44px" }}>
             Latest on Persistence One
           </Heading>
-          <Link href={"/"}>Explore More</Link>
+          <Link href={"/"}>
+            <Text color={"#FFFFFF"}>Explore More</Text>
+          </Link>
         </HStack>
         <Slider
           {...{

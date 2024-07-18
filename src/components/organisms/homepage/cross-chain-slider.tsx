@@ -48,8 +48,9 @@ const CrossChainSlider = () => {
   return (
     <Container
       maxW={"1440px"}
+      bg={"#F7F7F7"}
       pt={{ base: "32px", md: "60px" }}
-      pb={{ base: "32px", md: "80px" }}
+      pb={{ base: "40px", md: "100px" }}
     >
       <Heading
         mb={"40px"}

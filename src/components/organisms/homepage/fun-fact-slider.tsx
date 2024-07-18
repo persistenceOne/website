@@ -62,7 +62,7 @@ const FunFactSlider = () => {
         <Text
           mx={"auto"}
           fontSize={{ base: "20", md: "44px" }}
-          color={"#081E21"}
+          color={"#FFFFFF"}
           fontWeight={700}
           mb={"40px"}
         >

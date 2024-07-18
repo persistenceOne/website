@@ -129,7 +129,7 @@ const FeatureCards = () => {
 
           <Flex
             justify={"space-between"}
-            bg={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
+            bg={"#27282D"}
             borderRadius={40}
             p={4}
             pl={8}

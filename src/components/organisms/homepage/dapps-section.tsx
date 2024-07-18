@@ -63,10 +63,7 @@ const DappsSection = () => {
 
   const dApps = getData(dexterInfo);
   return (
-    <Box
-      pos={"relative"}
-      bg={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
-    >
+    <Box pos={"relative"} bg={"#27282D"}>
       <Container
         maxW={"1300px"}
         py={{ base: "40px", md: "80px" }}
