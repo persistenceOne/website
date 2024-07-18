@@ -32,6 +32,8 @@ export interface FeatureCardInterface {
   height?: string;
   cardType?: "img" | "content";
   imgWidth: number;
+  aos?: string;
+  className?: string;
 }
 const FeatureCard = ({
   category,
@@ -43,7 +45,9 @@ const FeatureCard = ({
   width = "100%",
   height = "100%",
   cardType = "content",
-  imgWidth
+  imgWidth,
+  aos,
+  className
 }: FeatureCardInterface) => {
   const [isMobile] = useMediaQuery("(max-width: 500px)");
   return (
@@ -54,6 +58,8 @@ const FeatureCard = ({
       flex={"auto"}
       py={"25px"}
       px={"30px"}
+      data-aos={aos}
+      className={className}
     >
       <CardHeader
         fontSize={12}

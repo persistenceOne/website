@@ -58,7 +58,13 @@ const FunFactSlider = () => {
 
   return (
     <Box>
-      <Box maxW={"1272px"} mx={"auto"} py={"65px"}>
+      <Box
+        maxW={"1272px"}
+        mx={"auto"}
+        py={"65px"}
+        className="aos-init aos-animate py-10"
+        data-aos="fade-up"
+      >
         <Text
           mx={"auto"}
           fontSize={{ base: "20", md: "44px" }}

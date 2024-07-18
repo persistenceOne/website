@@ -51,6 +51,8 @@ const CrossChainSlider = () => {
       bg={"#F7F7F7"}
       pt={{ base: "32px", md: "60px" }}
       pb={{ base: "40px", md: "100px" }}
+      className="aos-init aos-animate py-10"
+      data-aos="fade-up"
     >
       <Heading
         mb={"40px"}

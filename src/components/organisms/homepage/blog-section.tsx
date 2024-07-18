@@ -97,7 +97,13 @@ const BlogSection = () => {
     sliderRef.slickPrev();
   };
   return (
-    <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
+    <Container
+      maxW={"1440px"}
+      px={{ base: "16px", md: "100px" }}
+      py={"60px"}
+      className="aos-init aos-animate py-10"
+      data-aos="fade-up"
+    >
       <Box>
         <HStack
           alignItems={"center"}

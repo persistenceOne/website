@@ -55,6 +55,7 @@
     "check-types": "tsc --noEmit --pretty"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^18.11.6",
     "@types/react": "18.0.23",
     "@types/react-slick": "^0.23.13",

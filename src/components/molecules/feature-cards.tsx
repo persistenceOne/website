@@ -44,6 +44,8 @@ const FeatureCards = () => {
           width="70%"
           height="380px"
           category="Vision"
+          aos={"fade-down-right"}
+          className={"aos-init aos-animate"}
           imgWidth={210}
           title="BTCFi will overtake ETH DeFi"
           description="Learn about our vision and belief in the Bitcoinization of modern-day finance."
@@ -59,6 +61,8 @@ const FeatureCards = () => {
         <FeatureCard
           width="30%"
           height="380px"
+          aos={"fade-down-left"}
+          className={"aos-init aos-animate"}
           category="Ecosystem"
           title="Building since 2019"
           description="Since 2019, Persistence One has been leveraging its
@@ -72,18 +76,18 @@ const FeatureCards = () => {
           }}
           type="vertical"
         />
-        <Box
-          pos={"absolute"}
-          top={"-20px"}
-          right={"-20px"}
-          background={"#252424"}
-          w={"220px"}
-          h={"210px"}
-          zIndex={-1}
-          borderRadius={"20px"}
-          opacity={isVisible ? 1 : 0}
-          transition="opacity 1s"
-        />
+        {/*<Box*/}
+        {/*  pos={"absolute"}*/}
+        {/*  top={"-20px"}*/}
+        {/*  right={"-20px"}*/}
+        {/*  background={"#252424"}*/}
+        {/*  w={"220px"}*/}
+        {/*  h={"210px"}*/}
+        {/*  zIndex={-1}*/}
+        {/*  borderRadius={"20px"}*/}
+        {/*  opacity={isVisible ? 1 : 0}*/}
+        {/*  transition="opacity 1s"*/}
+        {/*/>*/}
       </Stack>
 
       <Stack
@@ -94,6 +98,8 @@ const FeatureCards = () => {
       >
         <FeatureCard
           category="Technology"
+          className={"aos-init aos-animate"}
+          aos={"fade-up-right"}
           title={`Advanced Technology. Streamlined User Journey.`}
           description="SUsing cutting-edge technology like Cross-chain Intents, Persistence One is set to revolutionize user experience in BTCfi and remove the barriers to BTC movement."
           image={`${commonImagePath}/tech.svg`}
@@ -116,6 +122,8 @@ const FeatureCards = () => {
         >
           <FeatureCard
             category="People"
+            className={"aos-init aos-animate"}
+            aos={"fade-up-left"}
             title={`Humility. Integrity. Patience. Persistence. `}
             description="Persistence is more than just a name. It is our way of being. Learn about our core values, the team, and how to become a Persister."
             image={`${commonImagePath}/values.svg`}
@@ -134,6 +142,8 @@ const FeatureCards = () => {
             p={4}
             pl={8}
             align={"center"}
+            className="aos-init aos-animate py-10"
+            data-aos="fade-up"
           >
             <Text
               color={"#FCFCFC"}
