@@ -128,7 +128,7 @@ const footerLinks = [
     links: [
       {
         title: "People",
-        link: "/people",
+        link: "/values",
         isExternal: false
       },
       {

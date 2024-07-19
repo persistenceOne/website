@@ -129,7 +129,7 @@ const FeatureCards = () => {
             image={`${commonImagePath}/values.svg`}
             imgWidth={280}
             cta={{
-              link: "/people",
+              link: "/values",
               linkText: "Learn More about Our People",
               isExternal: false
             }}

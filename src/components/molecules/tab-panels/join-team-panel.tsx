@@ -97,7 +97,7 @@ const JoinTeamPanel = () => {
             >
               Persistence
             </Text>
-            <Link href={"/people"}>
+            <Link href={"/values"}>
               <Button
                 variant={"link"}
                 rightIcon={<ArrowForwardIcon />}

@@ -14,7 +14,7 @@ import React from "react";
 const persisterValues: PersisterValuesCardInterface[] = [
   {
     title: "Long Term",
-    description: "Playing long-term games with long-term people.",
+    description: "Playing long-term games with long-term values.",
     icon: "/icons/team-page/long-term.svg"
   },
   {

@@ -150,9 +150,9 @@ const menuItems = [
         title: "People",
         description:
           "Get to know our contributors, our values, and how to become a Persister",
-        icon: "people",
+        icon: "values",
         iconType: "fill",
-        link: "/people",
+        link: "/values",
         isExternal: false,
         comingSoon: false
       },
