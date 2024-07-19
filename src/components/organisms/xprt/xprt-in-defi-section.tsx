@@ -9,7 +9,8 @@ import {
   Grid,
   Box,
   Button,
-  useMediaQuery
+  useMediaQuery,
+  Flex
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
@@ -26,6 +27,7 @@ import {
   TELEGRAM_PERSISTENCE_COMMUNITY_LINK,
   TOKEN_CONTRACT_ADDRESS_LINK
 } from "@/utils/config";
+import Image from "next/image";
 
 const getData = (
   dexterInfo: DexterPoolsInfo,
@@ -288,16 +290,16 @@ const XPRTInDefiSection = () => {
     <>
       <Container
         className={"xprt-defi-cards"}
-        maxW={"1200px"}
-        px={{ base: "16px", md: "50px" }}
-        mb={{ base: "30px", md: "100px" }}
+        maxW={"1440px"}
+        px={{ base: "40px", md: "100px" }}
+        mb={{ base: "30px", md: "60px" }}
       >
         <Heading
-          variant={"main"}
-          fontSize={{ base: "26px", md: "58px" }}
-          color={"primary.blackHeading"}
           textAlign={"center"}
-          mb={10}
+          color={"#633C0D"}
+          fontSize={{ base: "26px", md: "48px" }}
+          lineHeight={{ base: "32px", md: "72px" }}
+          mb={{ base: "20px", md: "40px" }}
         >
           XPRT in Multi-Chain DeFi
         </Heading>
@@ -312,52 +314,59 @@ const XPRTInDefiSection = () => {
             slidesToScroll: 2
           }}
         > */}
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={2}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
           {xprtDefiCards.map((card, index) => (
             <XPRTDefiCard key={index} {...card} />
           ))}
         </SimpleGrid>
         {/* </Slider> */}
       </Container>
-      <Box
-        bg={"#252424"}
-        mt={12}
-        style={{
-          backgroundImage: "url('/images/story-page/story-community-bg.svg')",
-          backgroundPosition: "100% 100%",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "22%"
-        }}
-        backgroundPosition="bottom right"
-      >
+      <Box bg={"#E59636"} backgroundPosition="bottom right">
         <Container
           maxW={"1440px"}
           px={{ base: "20px", md: "100px" }}
-          py={"60px"}
+          py={"36px"}
         >
-          <Heading
-            fontSize={{ base: "22px", md: "32px" }}
-            textAlign={{ base: "center", md: "left" }}
-            color={"text.headingSemiWhite"}
-            pr={"12px"}
-            mb={"40px"}
-            fontWeight={700}
-            lineHeight={{ base: "1.5", md: "48px" }}
-          >
-            Find correct details about all the IBC Denoms <br /> or Token
-            Contract Addresses for XPRT on <br /> the respective chains.
-          </Heading>
-          <Box textAlign={{ base: "center", md: "left" }}>
-            <Link
-              href={TOKEN_CONTRACT_ADDRESS_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant={"secondary"} rightIcon={<ArrowForwardIcon />}>
-                Token contract addresses
-              </Button>
-            </Link>
-          </Box>
+          <Flex alignItems={"center"} justifyContent={"space-between"}>
+            <Box maxW={"500px"}>
+              <Heading
+                fontSize={{ base: "22px", md: "32px" }}
+                textAlign={{ base: "center", md: "left" }}
+                color={"text.headingSemiWhite"}
+                pr={"12px"}
+                mb={"42px"}
+                fontWeight={700}
+                lineHeight={{ base: "1.5", md: "48px" }}
+              >
+                Always verify XPRT token details for each chain
+              </Heading>
+              <Box textAlign={{ base: "center", md: "left" }}>
+                <Link
+                  href={TELEGRAM_PERSISTENCE_COMMUNITY_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    color={"#FFFFFF"}
+                    w={"246px"}
+                    h={"52px"}
+                    variant={"secondary"}
+                    bg="#1D1306"
+                    rightIcon={<ArrowForwardIcon />}
+                  >
+                    See Token Address
+                  </Button>
+                </Link>
+              </Box>
+            </Box>
+            <Image
+              src={"/images/xprt-page/xprt_quote.svg"}
+              alt={"team-work"}
+              width={401}
+              height={249}
+              // objectFit="cover"
+            />
+          </Flex>
         </Container>
       </Box>
     </>

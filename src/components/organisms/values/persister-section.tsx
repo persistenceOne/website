@@ -50,7 +50,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
 const PersisterSection = () => {
   return (
     <>
-      <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
+      <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }}>
         <Box py={{ base: "32px", md: "60px" }}>
           <Heading
             textAlign={"center"}

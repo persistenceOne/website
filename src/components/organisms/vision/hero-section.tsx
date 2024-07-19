@@ -4,16 +4,8 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
-      <Box
-      // backgroundImage={{
-      //   base: "",
-      //   md: "url('/images/vision/vision_hero.svg')"
-      // }}
-      // backgroundPosition="100% 100%"
-      // backgroundRepeat="no-repeat"
-      // backgroundSize={"42%"}
-      >
+    <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
+      <Box>
         <Spacer h={{ base: "80px", md: "140px" }} />
         <Flex
           justify={"space-between"}

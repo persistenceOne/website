@@ -38,24 +38,21 @@ const XPRTDefiCard = ({
   stats
 }: XPRTDefiCardInterface) => {
   return (
-    <Box px={"10px"}>
+    <Box>
       <Card
         w="full"
         height={{ base: "300px", md: "auto" }}
         display={"flex"}
         justify={"space-between"}
         flexDirection={{ base: "column", md: "column" }}
-        px={6}
-        m={2}
-        py={8}
-        borderRadius={8}
-        boxShadow={
-          "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03)"
-        }
+        p={6}
+        borderRadius={"22px"}
+        boxShadow={"lg"}
       >
         <Stack
           justify={"space-between"}
           direction={{ base: "column", md: "row" }}
+          mb={2}
         >
           <HStack>
             <HStack spacing="-2">
@@ -78,18 +75,28 @@ const XPRTDefiCard = ({
                 );
               })}
             </HStack>
-            <Text fontSize={{ base: "14px", md: "28px" }} fontWeight={700}>
+            <Text
+              fontSize={{ base: "14px", md: "16px" }}
+              color={"#633C0DCC"}
+              fontWeight={700}
+            >
               {tokens.map((token) => token.name).join("/")}
             </Text>
           </HStack>
           <Link href={cta.link} target="_blank" rel="noopener noreferrer">
             <Button
-              bg={cta.bg}
-              _hover={{ bg: cta.hover }}
-              w={{ base: "100%", md: "auto" }}
-              fontSize={{ base: "12px", md: "20px" }}
-              h={{ base: "36px", md: "48px" }}
-              color="white"
+              variant={"secondary"}
+              color={"#E59636"}
+              bg={"transparent"}
+              h={"34px"}
+              w={"138px"}
+              fontWeight={400}
+              // bg={cta.bg}
+              // _hover={{ bg: cta.hover }}
+              // w={{ base: "100%", md: "auto" }}
+              fontSize={{ base: "12px", md: "16px" }}
+              // h={{ base: "36px", md: "48px" }}
+              // color="white"
               rightIcon={<ArrowForwardIcon />}
             >
               {cta.label}
@@ -97,20 +104,24 @@ const XPRTDefiCard = ({
           </Link>
         </Stack>
         <Text
-          mt={4}
+          mb={"30px"}
           fontSize={{ base: "12px", md: "16px" }}
           h={{ base: "100px", md: "auto" }}
         >
           {description}
         </Text>
-        <HStack gap={{ base: 4, md: 8 }} mt={4}>
+        <HStack gap={{ base: 4, md: 8 }}>
           {stats.map((stat) => {
             return (
               <VStack key={stat.label} align={"stretch"} gap={0}>
-                <Text color={"#423F40"} fontSize={{ base: "12px", md: "16px" }}>
+                <Text color={"#633C0D"} fontSize={{ base: "12px", md: "16px" }}>
                   {stat.label}
                 </Text>
-                <Text fontSize={{ base: "12px", md: "24px" }} fontWeight={700}>
+                <Text
+                  fontSize={{ base: "12px", md: "24px" }}
+                  color="#633C0D"
+                  fontWeight={700}
+                >
                   {stat.label === "TVL"
                     ? `$${numberFormat(Number(stat.value), 3)}`
                     : `${stat.value}%`}

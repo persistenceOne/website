@@ -12,7 +12,6 @@ const XPRTPage = () => {
       <XPRTUsageSection />
       <Spacer h={20} />
       <XPRTInDefiSection />
-      <BlogSection />
     </Box>
   );
 };

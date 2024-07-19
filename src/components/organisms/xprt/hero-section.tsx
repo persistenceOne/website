@@ -48,26 +48,39 @@ const HeroSection = () => {
     fetch();
   }, []);
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
-      <Spacer h={20} />
+    <Container
+      maxW={"1440px"}
+      px={{ base: "20px", md: "80px" }}
+      pt={"109px"}
+      pb={"54px"}
+    >
+      <Spacer h={{ base: "80px", md: "140px" }} />
       <Flex
         justify={"space-between"}
         align={"flex-start"}
         pos={"relative"}
-        mb={{ base: "40px", md: "100px" }}
+        mb={{ base: "40px", md: "80px" }}
       >
         <VStack mt={"100px"} w={{ base: "100%", md: "50%" }} align={"stretch"}>
-          <Heading
-            fontSize={{ base: "42px", md: "42px", lg: "50px" }}
-            variant={"main"}
-            color={"primary.blackHeading"}
-          >
-            Powering BTC <br /> and LSTs Trading with XPRT
-          </Heading>
-          <Text textAlign="left" my={6} fontSize={{ base: "16px", md: "20px" }}>
-            XPRT is the multi-purpose native token of the <br /> Persistence DEX
-            and network.
-          </Text>
+          <Box maxW={"600px"} mb={"30px"}>
+            <Heading
+              fontSize={{ base: "42px", lg: "50px" }}
+              color={"#633C0D"}
+              mb={5}
+              textAlign={{ base: "left", md: "left" }}
+              lineHeight={{ base: "60px", md: "70px" }}
+            >
+              Powering BTC Interoperability, Governing Intents
+            </Heading>
+            <Text
+              textAlign="left"
+              color={"#633C0DCC"}
+              fontSize={{ base: "16px", md: "24px" }}
+            >
+              XPRT is the multi-purpose native token for the Persistence dApp
+              and network
+            </Text>
+          </Box>
           <Flex gap={4} direction={{ base: "column", md: "row" }}>
             <Link
               href={"https://wallet.keplr.app/chains/persistence"}
@@ -75,7 +88,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
             >
               <Button
-                variant={"secondary"}
+                variant={"primary"}
                 rightIcon={<ArrowForwardIcon />}
                 w={"100%"}
               >
@@ -87,25 +100,21 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button w={"100%"} _hover={{ color: "primary.redHover" }}>
+              <Button w={"100%"} variant={"secondary"}>
                 Get XPRT
               </Button>
             </Link>
           </Flex>
         </VStack>
         <Box
-          pos={"absolute"}
-          w={"40%"}
-          top={"0px"}
-          right={"0"}
-          display={{ base: "none", md: "block" }}
+        // bottom={0}
+        // display={{ base: "block", md: "none" }}
         >
           <Image
-            className={"ml-auto"}
-            src="/images/xprt-page/xprt-hero.svg"
+            src="/images/xprt-page/xprt_hero.svg"
             alt="Persistence Coin"
-            width={600}
-            height={400}
+            width={521}
+            height={490}
           />
         </Box>
       </Flex>
@@ -118,28 +127,28 @@ const HeroSection = () => {
             statLabel: "Market Cap"
           },
           {
-            statValue: `${inflationDate}`,
-            statLabel: "Next XPRT Inflation Halving"
+            statValue: `${stakedXPRT}%`,
+            statLabel: "Staked XPRT"
           },
           {
-            statValue: `${stakedXPRT}%`,
-            statLabel: "Staked XPRT (total supply)"
+            statValue: `>99.5%`,
+            statLabel: "Tokens unlocked"
           }
         ]}
       />
-      <Flex
-        display={{ base: "block", md: "none" }}
-        w={"100%"}
-        justify={"center"}
-      >
-        <Image
-          // className={"ml-auto"}
-          src="/images/xprt-page/xprt-hero.png"
-          alt="Persistence Coin"
-          width={350}
-          height={400}
-        />
-      </Flex>
+      {/*<Flex*/}
+      {/*  display={{ base: "block", md: "none" }}*/}
+      {/*  w={"100%"}*/}
+      {/*  justify={"center"}*/}
+      {/*>*/}
+      {/*  <Image*/}
+      {/*    // className={"ml-auto"}*/}
+      {/*    src="/images/xprt-page/xprt-hero.png"*/}
+      {/*    alt="Persistence Coin"*/}
+      {/*    width={350}*/}
+      {/*    height={400}*/}
+      {/*  />*/}
+      {/*</Flex>*/}
     </Container>
   );
 };
