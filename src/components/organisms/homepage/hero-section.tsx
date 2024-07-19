@@ -36,7 +36,6 @@ const HeroSection = () => {
   return (
     <Box
       className={"hero-content"}
-      bg={"#27282D"}
       pos={"relative"}
       // pl={"80px"}
       // backgroundImage={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
@@ -70,6 +69,8 @@ const HeroSection = () => {
         display={"flex"}
         zIndex={10}
         pt={"122px"}
+        maxW={"1440px"}
+        mx={"auto"}
       >
         <Box
           // mb={{ base: "20px", md: "60px" }}

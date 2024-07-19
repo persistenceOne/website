@@ -97,78 +97,76 @@ const BlogSection = () => {
     sliderRef.slickPrev();
   };
   return (
-    <Container
-      maxW={"1440px"}
-      px={{ base: "16px", md: "100px" }}
-      py={"60px"}
-      className="aos-init aos-animate py-10"
-      data-aos="fade-up"
-    >
-      <Box>
-        <HStack
-          alignItems={"center"}
-          mb={"40px"}
-          justifyContent={"space-between"}
-        >
-          <Heading color="#FFFFFF" fontSize={{ base: "20px", md: "44px" }}>
-            Latest on Persistence One
-          </Heading>
-          <Link href={"/"}>
-            <Text color={"#FFFFFF"}>Explore More</Text>
-          </Link>
-        </HStack>
-        <Slider
-          {...{
-            dots: false,
-            arrows: false,
-            infinite: true,
-            slidesToShow: isMobile ? 1 : 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            speed: 4000
-          }}
-          ref={(slider) => {
-            sliderRef = slider;
-          }}
-        >
-          {resourcesList.map((resource, index) => (
-            <BlogCard key={resource.id} {...resource} />
-          ))}
-        </Slider>
-      </Box>
-      <Flex mt={6} className={"upgrade-slider-arrow"} px={"25px"}>
-        <Flex
-          align={"center"}
-          justify={"center"}
-          cursor={"pointer"}
-          w={"24px"}
-          h={"24px"}
-          bg={"#423f40d9"}
-          borderRadius={"100%"}
-          onClick={previous}
-          mr={5}
-        >
-          <Box w={"12px"} h={"12px"} onClick={previous}>
-            <Icon icon="left_chevron" />
-          </Box>
+    <Box bg={"#FCF7F1"}>
+      <Container
+        maxW={"1440px"}
+        px={{ base: "16px", md: "100px" }}
+        py={"60px"}
+        className="aos-init aos-animate py-10"
+        data-aos="fade-up"
+      >
+        <Box>
+          <HStack alignItems={"center"} mb={"40px"} justifyContent={"center"}>
+            <Heading color="#350B00" fontSize={{ base: "20px", md: "44px" }}>
+              Latest on Persistence One
+            </Heading>
+            {/*<Link href={"/"}>*/}
+            {/*  <Text color={"#FFFFFF"}>Explore More</Text>*/}
+            {/*</Link>*/}
+          </HStack>
+          <Slider
+            {...{
+              dots: false,
+              arrows: false,
+              infinite: true,
+              slidesToShow: isMobile ? 1 : 3,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 5000,
+              speed: 4000
+            }}
+            ref={(slider) => {
+              sliderRef = slider;
+            }}
+          >
+            {resourcesList.map((resource, index) => (
+              <BlogCard key={resource.id} {...resource} />
+            ))}
+          </Slider>
+        </Box>
+        <Flex mt={6} className={"upgrade-slider-arrow"} px={"25px"}>
+          <Flex
+            align={"center"}
+            justify={"center"}
+            cursor={"pointer"}
+            w={"24px"}
+            h={"24px"}
+            bg={"#423f40d9"}
+            borderRadius={"100%"}
+            onClick={previous}
+            mr={5}
+          >
+            <Box w={"12px"} h={"12px"} onClick={previous}>
+              <Icon icon="left_chevron" />
+            </Box>
+          </Flex>
+          <Flex
+            align={"center"}
+            justify={"center"}
+            w={"24px"}
+            h={"24px"}
+            cursor={"pointer"}
+            onClick={next}
+            borderRadius={"100%"}
+            bg={"#423f40d9"}
+          >
+            <Box w={"12px"} h={"12px"} onClick={previous}>
+              <Icon icon="right_chevron" />
+            </Box>
+          </Flex>
         </Flex>
-        <Flex
-          align={"center"}
-          justify={"center"}
-          w={"24px"}
-          h={"24px"}
-          cursor={"pointer"}
-          onClick={next}
-          borderRadius={"100%"}
-          bg={"#423f40d9"}
-        >
-          <Box w={"12px"} h={"12px"} onClick={previous}>
-            <Icon icon="right_chevron" />
-          </Box>
-        </Flex>
-      </Flex>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

@@ -42,8 +42,8 @@ export default extendTheme({
       //   display: "none",
       // },
       body: {
-        color: "#fff",
-        background: "#1D1306",
+        color: "#000",
+        background: "#FCF7F1",
         maxWidth: "100%",
         overflowX: "hidden"
       }

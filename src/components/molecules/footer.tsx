@@ -147,7 +147,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <Box as={"footer"} bg={"#FFFFFF"}>
+    <Box as={"footer"} bg={"#1B1003"}>
       <Container
         maxW={"1300px"}
         px={{ base: "12px", md: "30px" }}
@@ -159,7 +159,7 @@ const Footer = () => {
           py={{ base: "10px", md: "16px" }}
         >
           <Image
-            src={"images/persistence-logo-dark.svg"}
+            src={"images/persistence-logo.svg"}
             width={186}
             height={24}
             alt={"Persistence Logo"}
@@ -216,12 +216,13 @@ const Footer = () => {
             ))}
           </HStack>
         </HStack>
-        <Divider mt={"16px"} mb={"32px"} borderColor={"#00000033"} />
+        <Divider mt={"16px"} mb={"32px"} borderColor={"#FCFCFC33"} />
         <Flex
           display={{ base: "block", md: "flex" }}
           justifyContent={"start"}
           align={"flex-start"}
           color={"#918678"}
+          mb={"60px"}
         >
           {/*<Stack*/}
           {/*  gap={16}*/}
@@ -303,7 +304,7 @@ const Footer = () => {
           ))}
         </HStack>
         <Box display={{ base: "block", md: "block" }}>
-          <Divider mt={"28px"} borderColor={"#00000033"} />
+          {/*<Divider mt={"28px"} borderColor={"#00000033"} />*/}
           <Flex
             flexDir={{ base: "column", md: "row" }}
             justify={"space-between"}
@@ -311,14 +312,14 @@ const Footer = () => {
             mt={4}
             gap={4}
           >
-            <Text fontSize={14} fontWeight={400} color={"#918678"}>
+            <Text fontSize={14} fontWeight={400} color={"#FCFCFCE5"}>
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
               <Link href={"/termsofuse"}>
                 <Button
                   variant={"link"}
-                  color={"#918678"}
+                  color={"#FCFCFCE5"}
                   fontSize={14}
                   fontWeight={400}
                 >
@@ -328,7 +329,7 @@ const Footer = () => {
               <Link href={"/privacy"}>
                 <Button
                   variant={"link"}
-                  color={"#918678"}
+                  color={"#FCFCFCE5"}
                   fontSize={14}
                   fontWeight={400}
                 >

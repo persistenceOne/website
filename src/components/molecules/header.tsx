@@ -41,6 +41,8 @@ import {
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
+import { useRouter } from "next/router";
+import { pathify } from "next/dist/server/lib/squoosh/emscripten-utils";
 
 const menuItems = [
   {
@@ -325,16 +327,18 @@ const getMenuListMobile = (onClose: () => void) => {
 };
 const getMenuList = (
   placement: PlacementWithLogical | undefined,
-  trigger: "click" | "hover" | undefined
+  trigger: "click" | "hover" | undefined,
+  path: any
 ) => {
   return menuItems.map((item: any) => (
     <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
       <PopoverTrigger>
         <Text
           cursor={"pointer"}
+          className={"nav-item-title"}
           fontSize={"18px"}
           borderRadius={"6px"}
-          color={"#FFFFFF"}
+          color={path === "/" ? "#FFFFFF" : "#000000"}
         >
           {item.name}
         </Text>
@@ -439,6 +443,8 @@ const getMenuList = (
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+
   useEffect(() => {
     let body: any = document.getElementsByTagName("body")[0];
     body.classList = "";
@@ -523,7 +529,7 @@ const Header = () => {
       id={"is-sticky"}
       className={"navbar-container"}
       transition={"all 0.3s"}
-      bg={{ base: "#f5f5f5", md: "transparent" }}
+      bg={{ base: "#1B1003", md: "transparent" }}
     >
       <Container
         maxW={"1440px"}
@@ -543,16 +549,13 @@ const Header = () => {
           display={{ base: "none", md: "flex" }}
           className={"navigation-bar"}
         >
-          <Box>
-            <Link href="/">
-              <Image
-                src="/images/persistence-logo.svg"
-                alt="Persistence Logo"
-                width={251}
-                height={32}
-              />
-            </Link>
-          </Box>
+          <Link href="/">
+            {router.pathname !== "/" ? (
+              <Box className={"logo-box logo-dark cursor-pointer"}></Box>
+            ) : (
+              <Box className={"logo-box logo-light"}></Box>
+            )}
+          </Link>
           <Spacer />
           <Stack
             gap="32px"
@@ -560,7 +563,7 @@ const Header = () => {
             align={"center"}
             direction={{ base: "column", md: "row" }}
           >
-            {getMenuList("top-start", "hover")}
+            {getMenuList("top-start", "hover", router.pathname)}
           </Stack>
           <Spacer />
           <Link

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body, html {
-  background: #1D1306;
+  background: #FCF7F1;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -62,9 +62,32 @@ stroke: #ececec;
 }
 /* navigation bar icon styling */
 .navbar-container.nav-bar {
-  background: #27282D;
+  background: #FCF7F1;
 }
 
+.navbar-container .logo-box{
+  width: 236px;
+  height: 31px;
+  background-size: 236px;
+  background-repeat: no-repeat;
+}
+
+.navbar-container .logo-box.logo-light {
+  background-image: url('/images/persistence-logo.svg');
+}
+
+.navbar-container.nav-bar .logo-box.logo-light {
+  background-image: url('/images/persistence-logo-dark.svg');
+}
+
+
+.navbar-container .logo-box.logo-dark{
+  background-image: url('/images/persistence-logo-dark.svg');
+}
+
+.navbar-container.nav-bar .nav-item-title{
+color: #000000;
+}
 .navbar-container.nav-bar .navbar-box{
   margin-top: 0px !important;
 }
