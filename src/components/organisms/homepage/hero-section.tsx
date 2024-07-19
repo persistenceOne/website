@@ -151,27 +151,43 @@ const HeroSection = () => {
                 className={"inline-block"}
               >
                 <Button
-                  variant={"secondary"}
-                  rightIcon={<ArrowForwardIcon />}
+                  w={{ base: "100%", md: "193px" }}
                   h={"46px"}
-                  px={"36px"}
-                  w={{ base: "100%", md: "auto" }}
+                  variant={"primary"}
+                  rightIcon={<ArrowForwardIcon />}
                 >
                   Learn More
                 </Button>
+                {/*<Button*/}
+                {/*  variant={"secondary"}*/}
+                {/*  rightIcon={<ArrowForwardIcon />}*/}
+                {/*  h={"46px"}*/}
+                {/*  px={"36px"}*/}
+                {/*  w={{ base: "100%", md: "auto" }}*/}
+                {/*>*/}
+                {/*  Learn More*/}
+                {/*</Button>*/}
               </Link>
               <Link href="/xprt" passHref>
                 <Button
-                  w={{ base: "100%", md: "auto" }}
-                  bg={"primary.redHover"}
+                  w={{ base: "100%", md: "235px" }}
                   h={"46px"}
-                  px={"36px"}
-                  borderColor={"primary.red"}
+                  variant={"secondary"}
                   rightIcon={<ArrowForwardIcon />}
-                  textColor={"#FFFFFF"}
                 >
                   Partner With Us
                 </Button>
+                {/*<Button*/}
+                {/*  w={{ base: "100%", md: "auto" }}*/}
+                {/*  bg={"primary.redHover"}*/}
+                {/*  h={"46px"}*/}
+                {/*  px={"36px"}*/}
+                {/*  borderColor={"primary.red"}*/}
+                {/*  rightIcon={<ArrowForwardIcon />}*/}
+                {/*  textColor={"#FFFFFF"}*/}
+                {/*>*/}
+                {/*  Partner With Us*/}
+                {/*</Button>*/}
               </Link>
             </Stack>
           </Box>

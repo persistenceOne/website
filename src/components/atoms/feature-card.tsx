@@ -58,8 +58,6 @@ const FeatureCard = ({
       flex={"auto"}
       py={"25px"}
       px={"30px"}
-      data-aos={aos}
-      className={className}
     >
       <CardHeader
         fontSize={12}

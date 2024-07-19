@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body, html {
-  background: #27282D;
+  background: #1D1306;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -241,3 +241,16 @@ stroke: #ececec;
   position: absolute;
   /*top: -48px;*/
 }
+
+/*.swiper-slide-active{*/
+/*z-index: 10;*/
+/*  transform: scale(1.1, 1.2);*/
+/*}*/
+
+/*.swiper-slide-active .slider-card{*/
+/*  background:#E59636;*/
+/*  border: 1.1px solid #8C5512;*/
+/*}*/
+/*.swiper-slide-active .slider-card .slide-title{*/
+
+/*}*/

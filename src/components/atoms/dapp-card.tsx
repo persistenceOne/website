@@ -54,7 +54,7 @@ const DappCard = ({
       px={{ base: "24px", md: "56px" }}
       py={{ base: "26px", md: "60px" }}
       w={"full"}
-      bg={"#E9F1EE14"}
+      bg={"#FFF8EE"}
       borderRadius={"20px"}
     >
       <CardBody p={"0"}>
@@ -66,7 +66,7 @@ const DappCard = ({
           <Box flex={1}>
             <Heading
               fontWeight={700}
-              color={"text.whiteFull"}
+              color={"#350B00"}
               fontSize={{ base: "20px", md: "40px" }}
               lineHeight={{ base: "36px", md: "50px" }}
               mb={4}
@@ -75,7 +75,7 @@ const DappCard = ({
             </Heading>
             <Text
               fontSize={{ base: "12px", md: "16px" }}
-              color={"#FFFFFFCC"}
+              color={"#350B00CC"}
               lineHeight={{ base: "22px", md: "24px" }}
               pb={"16px"}
             >
@@ -86,14 +86,14 @@ const DappCard = ({
                 <Box key={stat.label}>
                   <Text
                     fontSize={{ base: "12px", md: "16px" }}
-                    color={"#FFFFFFCC"}
+                    color={"#350B00"}
                     lineHeight={{ base: "22px", md: "24px" }}
                   >
                     {stat.label}
                   </Text>
                   <Text
                     fontWeight={700}
-                    color={"#FCFCFC"}
+                    color={"#E59636"}
                     fontSize={{ base: "18px", md: "24px" }}
                   >
                     {stat.value}
@@ -102,15 +102,7 @@ const DappCard = ({
               ))}
             </HStack>
             <Link href={button.link} target="_blank" rel="noopener noreferrer">
-              <Button
-                bg={button.background}
-                color={button.color}
-                borderColor={"transparent"}
-                w={"182px"}
-                _hover={{
-                  bg: button.hover
-                }}
-              >
+              <Button w={"182px"} variant={"primary"}>
                 {button.text}
               </Button>
             </Link>

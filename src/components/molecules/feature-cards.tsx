@@ -137,13 +137,11 @@ const FeatureCards = () => {
 
           <Flex
             justify={"space-between"}
-            bg={"#27282D"}
+            bg={"#E59636"}
             borderRadius={40}
             p={4}
             pl={8}
             align={"center"}
-            className="aos-init aos-animate py-10"
-            data-aos="fade-up"
           >
             <Text
               color={"#FCFCFC"}
@@ -162,7 +160,7 @@ const FeatureCards = () => {
                 rightIcon={<ArrowForwardIcon />}
                 variant={"secondary"}
               >
-                Join the Community
+                Be Part of the Movement
               </Button>
             </Link>
           </Flex>

@@ -46,7 +46,7 @@ const list = [
 ];
 const CrossChainSlider = () => {
   return (
-    <Box bg={"#F7F7F7"} pos={"relative"} zIndex={10} mt={"80pz"}>
+    <Box bg={"#FCF7F1"} pos={"relative"} zIndex={10} mt={"80pz"}>
       <Container
         maxW={"1440px"}
         pt={{ base: "32px", md: "80px" }}
@@ -65,9 +65,10 @@ const CrossChainSlider = () => {
           ₿itcoin Transfers Cross-chain
         </Heading>
         <Swiper
-          slidesPerView={4.4}
+          slidesPerView={5.2}
           spaceBetween={18}
           speed={2000}
+          centeredSlides={true}
           loop={true}
           autoplay={{
             delay: 2000,
@@ -108,6 +109,7 @@ const CrossChainSlider = () => {
                 boxShadow={"md"}
                 display={"flex"}
                 flexDir={"column"}
+                className={"slider-card"}
               >
                 <Text
                   px={6}
@@ -118,6 +120,7 @@ const CrossChainSlider = () => {
                   fontSize={{ base: "22px" }}
                   lineHeight={{ base: "20px", md: "33px" }}
                   fontWeight={600}
+                  className={"slide-title"}
                 >
                   {resource.title}
                 </Text>

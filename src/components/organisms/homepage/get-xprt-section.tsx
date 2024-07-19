@@ -19,7 +19,7 @@ const GetXprtSection = () => {
       px={{ base: "24px", md: "56px" }}
       py={{ base: "26px", md: "60px" }}
       w={"full"}
-      bg={"#E9F1EE14"}
+      bg={"#FFF8EE"}
       className="aos-init aos-animate py-10"
       data-aos="fade-up"
       borderRadius={"20px"}
@@ -42,7 +42,7 @@ const GetXprtSection = () => {
           <Box w={"643px"}>
             <Heading
               fontWeight={700}
-              color={"text.whiteFull"}
+              color={"#350B00"}
               fontSize={{ base: "20px", md: "40px" }}
               lineHeight={{ base: "36px", md: "50px" }}
               mb={3}
@@ -51,7 +51,7 @@ const GetXprtSection = () => {
             </Heading>
             <Text
               fontSize={{ base: "12px", md: "16px" }}
-              color={"#FFFFFFCC"}
+              color={"#350B00CC"}
               lineHeight={{ base: "22px", md: "24px" }}
               mb={{ base: "20px", md: "40px" }}
             >
@@ -66,7 +66,7 @@ const GetXprtSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant={"secondary"} w={"163px"}>
+                <Button variant={"primary"} w={"163px"}>
                   Stake XPRT
                 </Button>
               </Link>
@@ -75,12 +75,7 @@ const GetXprtSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button
-                  color={"#ffffff"}
-                  w={"145px"}
-                  bg={"primary.redHover"}
-                  borderColor={"primary.red"}
-                >
+                <Button w={"145px"} variant={"secondary"}>
                   Get XPRT
                 </Button>
               </Link>

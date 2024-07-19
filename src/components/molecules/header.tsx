@@ -24,7 +24,12 @@ import {
   AccordionPanel,
   Button
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import {
+  HamburgerIcon,
+  CloseIcon,
+  ExternalLinkIcon,
+  ArrowForwardIcon
+} from "@chakra-ui/icons";
 import Icon from "./Icon";
 import {
   fetchDexterInfo,
@@ -565,7 +570,12 @@ const Header = () => {
             passHref
             className={"inline-block"}
           >
-            <Button variant={"secondary"} h={"46px"} w={"187px"}>
+            <Button
+              h={"46px"}
+              w={"187px"}
+              variant={"primary"}
+              rightIcon={<ArrowForwardIcon />}
+            >
               Enter App
             </Button>
           </Link>

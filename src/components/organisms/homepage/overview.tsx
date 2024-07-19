@@ -11,7 +11,7 @@ const Overview = () => {
         pb={{ base: "40px", md: "80px" }}
         pt={{ base: "30px", md: "60px" }}
       >
-        <Box>
+        <Box className="aos-init aos-animate" data-aos="fade-up">
           <Heading
             mb={"50px"}
             color={"#081E21"}

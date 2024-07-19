@@ -2,10 +2,9 @@ import { defineStyle } from "@chakra-ui/styled-system";
 
 const variants = {
   primary: {
-    color: "primary.black",
-    background: "transparent",
-    borderRadius: "full",
-    border: "1px solid",
+    background: "#E59636",
+    color: "#FFF8EE",
+    borderRadius: "88px",
     transition: "none",
     _focus: {
       boxShadow: "none"
@@ -16,19 +15,21 @@ const variants = {
       color: "rgba(255,255,255,0.4)"
     },
     _hover: {
-      background: "primary.ctaHover",
+      background: "#E59636",
       _disabled: {
         background: "primary.ctaDisabled"
       }
     },
     _active: {
-      background: "primary.ctaPressed"
+      background: "#E59636"
     }
   },
   secondary: {
-    color: "primary.white",
-    borderRadius: "full",
-    background: "primary.red",
+    color: "#2D2925",
+    borderRadius: "88px",
+    background: "#E596364D",
+    border: "1px solid",
+    borderColor: "#E59636",
     _focus: {
       boxShadow: "none"
     },
@@ -38,29 +39,14 @@ const variants = {
       color: "rgba(255,255,255,0.4)"
     },
     _hover: {
-      background: "primary.redHover",
-      borderColor: "stroke.dexBlue",
+      background: "#E596364D",
+      borderColor: "#E59636",
       _disabled: {
         background: "primary.ctaDisabled"
       }
     },
     _active: {
       background: "primary.dexBlue"
-    },
-    _before: {
-      content: "''",
-      position: "absolute",
-      zIndex: -1,
-      inset: 0,
-      padding: "2px",
-      borderRadius: "full",
-      background:
-        "linear-gradient(284.42deg, #00AFFA -49.92%, #32A2BA 54.24%, #24FFCA 169.83%)",
-      WebkitMask:
-        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-      mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-      WebkitMaskComposite: "xor",
-      maskComposite: "exclude"
     }
   }
 };
