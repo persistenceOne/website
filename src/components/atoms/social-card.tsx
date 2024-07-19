@@ -28,7 +28,7 @@ const SocialCard = ({
         boxShadow={
           "0px 12px 16px -4px rgba(27, 27, 27, 0.08), 0px 4px 6px -2px rgba(27, 27, 27, 0.03)"
         }
-        _hover={{ borderColor: "#C73238" }}
+        _hover={{ borderColor: "#E59636" }}
         direction={{ base: "column", md: "row" }}
       >
         <Image

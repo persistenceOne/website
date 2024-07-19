@@ -29,24 +29,34 @@ const BecomePersisterSection = ({
       <Container maxW={"1300px"} px={{ base: "16px", md: "30px" }} py={"60px"}>
         <Box>
           <Heading
-            color="text.bloackHeading"
-            fontSize={{ base: "26px", md: "58px" }}
-            mb={"8px"}
             textAlign={"center"}
+            color={"#633C0D"}
+            fontSize={{ base: "26px", md: "48px" }}
+            lineHeight={{ base: "32px", md: "72px" }}
+            mb={"8px"}
           >
             Become A Persister
           </Heading>
-          <Tabs align="center" colorScheme="black" size="md" pb={8}>
+          <Tabs
+            align="center"
+            maxW={"980px"}
+            mx={"auto"}
+            colorScheme="black"
+            size="md"
+            pb={8}
+          >
             <TabList border={"none"}>
               <Tab
                 px={{ base: "16px", md: 8 }}
                 py={{ base: "14px", md: "18px" }}
-                fontSize={{ base: "14px", md: "20px" }}
-                color={"text.blackFull"}
+                fontSize={{ base: "14px", md: "24px" }}
+                color={"#633C0DCC"}
                 fontWeight={500}
-                borderBottom={"2px solid rgb(226, 232, 240)"}
+                borderBottom={"2px solid #0000001A"}
                 _selected={{
-                  borderColor: "primary.red",
+                  color: "#633C0D",
+                  fontWeight: "600",
+                  borderColor: "#E59636",
                   borderBottomWidth: "5px",
                   pb: "15px"
                 }}
@@ -56,32 +66,19 @@ const BecomePersisterSection = ({
               <Tab
                 px={{ base: "16px", md: 8 }}
                 py={{ base: "14px", md: "18px" }}
-                fontSize={{ base: "14px", md: "20px" }}
-                color={"text.blackFull"}
+                fontSize={{ base: "14px", md: "24px" }}
+                color={"#633C0DCC"}
                 fontWeight={500}
-                borderBottom={"2px solid rgb(226, 232, 240)"}
+                borderBottom={"2px solid #0000001A"}
                 _selected={{
-                  borderColor: "primary.red",
+                  color: "#633C0D",
+                  fontWeight: "600",
+                  borderColor: "#E59636",
                   borderBottomWidth: "5px",
                   pb: "15px"
                 }}
               >
                 Join the Team
-              </Tab>
-              <Tab
-                px={{ base: "16px", md: 8 }}
-                py={{ base: "14px", md: "18px" }}
-                fontSize={{ base: "14px", md: "20px" }}
-                color={"text.blackFull"}
-                fontWeight={500}
-                borderBottom={"2px solid rgb(226, 232, 240)"}
-                _selected={{
-                  borderColor: "primary.red",
-                  borderBottomWidth: "5px",
-                  pb: "15px"
-                }}
-              >
-                Network
               </Tab>
             </TabList>
             <TabPanels>
@@ -90,9 +87,6 @@ const BecomePersisterSection = ({
               </TabPanel>
               <TabPanel h={{ base: "auto", md: "500px" }}>
                 <JoinTeamPanel />
-              </TabPanel>
-              <TabPanel h={{ base: "auto", md: "500px" }}>
-                <NetworkPanel />
               </TabPanel>
             </TabPanels>
           </Tabs>

@@ -1,70 +1,64 @@
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
-  Container,
-  Spacer,
-  Flex,
-  VStack,
-  Heading,
-  HStack,
   Box,
-  Text
+  Flex,
+  Heading,
+  Spacer,
+  Text,
+  Container,
+  Image
 } from "@chakra-ui/react";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 const HeroSection = () => {
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
-      <Spacer h={20} />
-      <Flex justify={"space-between"} align={"flex-start"} pos={"relative"}>
-        <VStack
-          mt={{ base: "80px", md: "100px" }}
-          align={"flex-start"}
-          pb={{ base: "40px", md: "120px" }}
+    <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
+      <Box>
+        <Spacer h={{ base: "100px", md: "162px" }} />
+        <Flex
+          justify={"space-between"}
+          gap={"30px"}
+          mb={{ base: "0px", md: "90px" }}
         >
-          <Heading
-            variant={"main"}
-            color={"text.blackHeading"}
-            fontSize={{ base: "42px", md: "42px", lg: "67px" }}
-            lineHeight={{ base: "50px", md: "50px", lg: "90px" }}
+          <Flex
+            maxW={"673px"}
+            flex={1}
+            flexDir={"column"}
+            justifyContent={"flex-end"}
           >
-            Humility. <br /> Integrity. <br /> Patience.
-            <br /> Persistence.
-          </Heading>
-          <Text
-            textAlign="left"
-            color={"text.blackLow"}
-            fontSize={{ base: "16px", md: "18px" }}
-          >
-            Learn more about the people behind Persistence One, <br /> what it
-            means to be a Persister, and how to become one.
-          </Text>
-          <Box
-            // bottom={0}
-            display={{ base: "block", md: "none" }}
-          >
+            <Heading
+              variant={"main"}
+              color={"#633C0D"}
+              mb={5}
+              textAlign={{ base: "left", md: "left" }}
+              fontSize={{ base: "42px", md: "66px" }}
+              lineHeight={{ base: "60px", md: "90px" }}
+            >
+              Bitcoiners at heart
+            </Heading>
+
+            <Text
+              color={"#633C0DCC"}
+              fontSize={{ base: "16px", md: "24px" }}
+              lineHeight={{ base: "24px", md: "36px" }}
+              textAlign={{ base: "left", md: "left" }}
+              mb={{ base: 4, md: 0 }}
+            >
+              Our core values: Humility, Integrity, Patience, Persistence are
+              deeply aligned with those of Bitcoin itself.
+            </Text>
+          </Flex>
+          <Box flex={1}>
             <Image
-              src="/images/team/people-hero.svg"
-              alt="People"
-              width={540}
-              height={400}
+              src="/images/values/values_hero.svg"
+              alt="Persistence Coin"
+              width={332}
+              height={540}
+              mx={"auto"}
             />
           </Box>
-        </VStack>
-        <Box
-          pos={"absolute"}
-          right={"0"}
-          // bottom={0}
-          display={{ base: "none", md: "block" }}
-        >
-          <Image
-            src="/images/team/people-hero.svg"
-            alt="Persistence Coin"
-            width={540}
-            height={400}
-          />
-        </Box>
-      </Flex>
+        </Flex>
+      </Box>
     </Container>
   );
 };

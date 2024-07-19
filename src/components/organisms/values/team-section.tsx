@@ -24,25 +24,6 @@ const teamMembers: TeamMemberCardInterface[] = [
       }
     ]
   },
-  // {
-  //   image: "/images/team/mikhil-pandey.png",
-  //   name: "Mikhil Pandey",
-  //   role: "Chief Strategy Officer",
-  //   socialLinks: [
-  //     {
-  //       name: "Twitter",
-  //       link: "https://twitter.com/PandeyMikhil",
-  //       icon: "x",
-  //       color: "#000000"
-  //     },
-  //     {
-  //       name: "Linkedin",
-  //       link: "https://www.linkedin.com/in/mikhilpandey/",
-  //       icon: "linkedin",
-  //       color: "#0077B5"
-  //     }
-  //   ]
-  // },
   {
     image: "/images/team/jeroen-develter.png",
     name: "Jeroen Develter",
@@ -100,84 +81,6 @@ const teamMembers: TeamMemberCardInterface[] = [
       }
     ]
   },
-
-  // {
-  //   image: "/images/team/rajesh-iyer.png",
-  //   name: "Rajesh Iyer",
-  //   role: "Product",
-  //   socialLinks: [
-  //     {
-  //       name: "Twitter",
-  //       link: "https://twitter.com/LNarayanIyer_",
-  //       icon: "x",
-  //       color: "#000000"
-  //     },
-  //     {
-  //       name: "Linkedin",
-  //       link: "https://www.linkedin.com/in/rajeshiyer17/",
-  //       icon: "linkedin",
-  //       color: "#0077B5"
-  //     }
-  //   ]
-  // },
-
-  // {
-  //   image: "/images/team/bart-van-der-voort.png",
-  //   name: "Bart Van Der Voort",
-  //   role: "Head of Strategy",
-  //   socialLinks: [
-  //     {
-  //       name: "Twitter",
-  //       link: "https://twitter.com/unimonkey21",
-  //       icon: "x",
-  //       color: "#000000"
-  //     },
-  //     {
-  //       name: "Linkedin",
-  //       link: "https://www.linkedin.com/in/bartvandervoort/",
-  //       icon: "linkedin",
-  //       color: "#0077B5"
-  //     }
-  //   ]
-  // },
-  {
-    image: "/images/team/puneet-mahajan.png",
-    name: "Puneet Mahajan",
-    role: "Engineering",
-    socialLinks: [
-      {
-        name: "Twitter",
-        link: "https://twitter.com/puneet_m_",
-        icon: "x",
-        color: "#000000"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/puneet-mahajan-/",
-        icon: "linkedin",
-        color: "#0077B5"
-      }
-    ]
-  },
-  // {
-  //   image: "/images/team/marc-puig-torres.png",
-  //   name: "Marc Puig Torres",
-  //   role: "Engineering",
-  //   socialLinks: [
-  //     {
-  //       name: "Twitter",
-  //       link: "https://twitter.com/krusspy",
-  //       icon: "x",
-  //       color: "#000000"
-  //     },
-  //     {
-  //       name: "Linkedin",
-  //       link: "https://www.linkedin.com/in/marcpt/",
-  //       icon: "linkedin",
-  //       color: "#0077B5"
-  //     }
-  //   ]
-  // },
   {
     image: "/images/team/pranjal-paliwal.png",
     name: "Pranjal Paliwal",
@@ -197,37 +100,17 @@ const teamMembers: TeamMemberCardInterface[] = [
       }
     ]
   }
-
-  // {
-  //   image: "/images/team/aditya-vandkar.png",
-  //   name: "Aditya Vandkar",
-  //   role: "Growth",
-  //   socialLinks: [
-  //     {
-  //       name: "Twitter",
-  //       link: "https://twitter.com/VandkarAditya",
-  //       icon: "x",
-  //       color: "#000000"
-  //     },
-  //     {
-  //       name: "Linkedin",
-  //       link: "https://www.linkedin.com/in/aditya-vandkar-9a9675177/",
-  //       icon: "linkedin",
-  //       color: "#0077B5"
-  //     }
-  //   ]
-  // }
 ];
 
 const TeamSection = () => {
   return (
     <Container maxW={"1440px"} px={{ base: "20px", md: "50px" }}>
       <Heading
-        variant={"main"}
         textAlign={"center"}
-        fontSize={{ base: "26px", md: "58px" }}
-        mb={{ base: "32px", md: "60px" }}
-        color={"text.headingSemiBlack"}
+        color={"#633C0D"}
+        fontSize={{ base: "26px", md: "48px" }}
+        lineHeight={{ base: "32px", md: "72px" }}
+        mb={{ base: "20px", md: "60px" }}
       >
         Meet Fellow Persisters
       </Heading>
@@ -251,7 +134,7 @@ const TeamSection = () => {
             justifyContent: "center"
           }}
           borderRadius={"100%"}
-          bg={"#252424"}
+          bg={"#633C0D"}
           ml={"20px"}
         >
           <Box>

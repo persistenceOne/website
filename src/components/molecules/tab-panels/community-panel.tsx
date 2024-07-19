@@ -34,7 +34,7 @@ const socialCardContents = [
     image: "/icons/github.svg"
   },
   {
-    title: "Forum",
+    title: "Community Forum",
     description: "Join discussions",
     link: "https://forum.persistence.one/",
     image: "/icons/forum.svg"
@@ -46,11 +46,13 @@ const CommunityPanel = () => {
       <Text
         mb={"30px"}
         mt={"24px"}
-        color={"text.blackHigh"}
+        color={"#633C0DCC"}
         fontSize={{ base: "16px", md: "20px" }}
+        maxW={"755px"}
+        mx={"auto"}
       >
-        Learn more about Persistence One, chat with fellow Persisters, and have
-        your voice be heard for the future of the Liquid Staking economy.
+        Learn more about Persistence One, chat with fellow Persisters, and let
+        your voice be heard for the future of bitcoin interoperability
       </Text>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
         {socialCardContents.map((card, index) => (
