@@ -78,14 +78,14 @@ const FeatureCard = ({
           >
             <Box>
               <Heading
-                fontSize={"22px"}
+                fontSize={"27px"}
                 pb={"4px"}
-                lineHeight={"33px"}
-                color={"text.blackHigh"}
+                lineHeight={"40px"}
+                color={"#633C0D"}
               >
                 {title}
               </Heading>
-              <Text fontSize={14} pb={"24px"} color={"text.blackHigh"}>
+              <Text fontSize={14} pb={"24px"} color={"#633C0DCC"}>
                 {description}
               </Text>
               {cta.linkText !== "" ? (
@@ -97,11 +97,8 @@ const FeatureCard = ({
                   <Button
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}
-                    color={"#423F40"}
+                    color={"#E59636"}
                     fontSize={16}
-                    _hover={{
-                      color: "primary.red"
-                    }}
                   >
                     {cta.linkText}
                   </Button>
@@ -113,7 +110,9 @@ const FeatureCard = ({
             <Image
               src={image}
               alt={title}
-              width={category === "Story" ? 212 : 270}
+              width={
+                category === "Story" ? 212 : category === "Vision" ? 330 : 280
+              }
               height={240}
             />
           </Stack>
@@ -126,8 +125,8 @@ const FeatureCard = ({
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 296 : 296}
-                  height={category === "Ecosystem" ? 154 : 154}
+                  width={category === "Ecosystem" ? 312 : 312}
+                  height={category === "Ecosystem" ? 161 : 161}
                 />
               </Box>
               <Heading
@@ -135,11 +134,11 @@ const FeatureCard = ({
                 lineHeight={"33px"}
                 maxW={"80%"}
                 pb={"4px"}
-                color={"text.blackHigh"}
+                color={"#633C0D"}
               >
                 {title}
               </Heading>
-              <Text fontSize={14} color={"text.blackHigh"}>
+              <Text fontSize={14} color={"#633C0DCC"}>
                 {description}
               </Text>
               {cta.linkText !== "" ? (
@@ -147,11 +146,8 @@ const FeatureCard = ({
                   <Button
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}
-                    color={"#423F40"}
+                    color={"#E59636"}
                     fontSize={16}
-                    _hover={{
-                      color: "primary.red"
-                    }}
                   >
                     {cta.linkText}
                   </Button>
@@ -175,11 +171,11 @@ const FeatureCard = ({
                 lineHeight={"33px"}
                 maxW={"80%"}
                 pb={"4px"}
-                color={"text.blackHigh"}
+                color={"#633C0D"}
               >
                 {title}
               </Heading>
-              <Text fontSize={14} color={"text.blackHigh"}>
+              <Text fontSize={14} color={"#633C0DCC"}>
                 {description}
               </Text>
               {cta.linkText !== "" ? (
@@ -203,7 +199,7 @@ const FeatureCard = ({
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 126 : 326}
+                  width={category === "Ecosystem" ? 126 : 205}
                   height={126}
                 />
               </Box>

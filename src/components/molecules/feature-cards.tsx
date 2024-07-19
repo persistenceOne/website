@@ -148,7 +148,7 @@ const FeatureCards = () => {
               fontSize={{ base: "16px", md: "27px" }}
               fontWeight={700}
             >
-              Join the Movement
+              Be Part of the Movement
             </Text>
             <Link
               href={"https://stats.persistence.one"}
@@ -156,11 +156,13 @@ const FeatureCards = () => {
               rel="noopener noreferrer"
             >
               <Button
+                bg={"#FFFFFF"}
+                borderColor={"#8C5512"}
                 px={{ base: "16px", md: "24px" }}
                 rightIcon={<ArrowForwardIcon />}
                 variant={"secondary"}
               >
-                Be Part of the Movement
+                Join the Community
               </Button>
             </Link>
           </Flex>

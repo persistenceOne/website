@@ -14,10 +14,10 @@ const Overview = () => {
         <Box className="aos-init aos-animate" data-aos="fade-up">
           <Heading
             mb={"50px"}
-            color={"#081E21"}
-            textAlign={"left"}
-            lineHeight={{ base: "40px", md: "66px" }}
-            fontSize={{ base: "26px", md: "44px" }}
+            textAlign={"center"}
+            color={"#633C0D"}
+            fontSize={{ base: "26px", md: "48px" }}
+            lineHeight={{ base: "32px", md: "72px" }}
           >
             Why Persistence One?
           </Heading>

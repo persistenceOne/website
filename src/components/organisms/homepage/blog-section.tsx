@@ -134,37 +134,6 @@ const BlogSection = () => {
             ))}
           </Slider>
         </Box>
-        <Flex mt={6} className={"upgrade-slider-arrow"} px={"25px"}>
-          <Flex
-            align={"center"}
-            justify={"center"}
-            cursor={"pointer"}
-            w={"24px"}
-            h={"24px"}
-            bg={"#423f40d9"}
-            borderRadius={"100%"}
-            onClick={previous}
-            mr={5}
-          >
-            <Box w={"12px"} h={"12px"} onClick={previous}>
-              <Icon icon="left_chevron" />
-            </Box>
-          </Flex>
-          <Flex
-            align={"center"}
-            justify={"center"}
-            w={"24px"}
-            h={"24px"}
-            cursor={"pointer"}
-            onClick={next}
-            borderRadius={"100%"}
-            bg={"#423f40d9"}
-          >
-            <Box w={"12px"} h={"12px"} onClick={previous}>
-              <Icon icon="right_chevron" />
-            </Box>
-          </Flex>
-        </Flex>
       </Container>
     </Box>
   );

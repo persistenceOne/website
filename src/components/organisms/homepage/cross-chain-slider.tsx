@@ -57,10 +57,10 @@ const CrossChainSlider = () => {
         <Heading
           mb={"40px"}
           fontWeight={700}
-          color={"#081E21"}
-          textAlign={"left"}
-          px={{ base: "20px", md: "80px" }}
-          fontSize={{ base: "26px", md: "44px" }}
+          textAlign={"center"}
+          color={"#633C0D"}
+          fontSize={{ base: "26px", md: "48px" }}
+          lineHeight={{ base: "32px", md: "72px" }}
         >
           ₿itcoin Transfers Cross-chain
         </Heading>
@@ -116,7 +116,7 @@ const CrossChainSlider = () => {
                   pt={6}
                   pb={"18px"}
                   h={"114px"}
-                  color={"#434343"}
+                  color={"#633C0D"}
                   fontSize={{ base: "22px" }}
                   lineHeight={{ base: "20px", md: "33px" }}
                   fontWeight={600}
