@@ -1,8 +1,8 @@
 const colors = {
   primary: {
     white: "#FFFFFF",
-    red: "#EE8167",
-    redHover: "#EE81674D",
+    red: "#E59636",
+    redHover: "#E596364D",
     black: "#252424",
     lightGray: "#F2F4F8",
     gray: "#D9D9D9",

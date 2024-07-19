@@ -235,3 +235,9 @@ stroke: #ececec;
 .slick-prev, .slick-next{
   display: none !important;
 }
+
+/** Home page hero bg animation**/
+.bg-video{
+  position: absolute;
+  /*top: -48px;*/
+}

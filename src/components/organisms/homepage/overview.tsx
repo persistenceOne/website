@@ -4,7 +4,7 @@ import React from "react";
 
 const Overview = () => {
   return (
-    <Box bg={"#FCF7F1"}>
+    <Box bg={"#FCF7F1"} pos="relative">
       <Container
         maxW={"1300px"}
         px={{ base: "20px", md: "30px" }}

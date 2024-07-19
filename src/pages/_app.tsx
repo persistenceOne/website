@@ -102,7 +102,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <Box pos={"fixed"} width="100%" zIndex="sticky">
           <Header />
         </Box>
-        <Component {...pageProps} />
+        <Box maxWidth="1440px" mx={"auto"}>
+          <Component {...pageProps} />
+        </Box>
         <Footer />
       </ChakraProvider>
     </>

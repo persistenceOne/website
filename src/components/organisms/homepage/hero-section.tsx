@@ -37,36 +37,110 @@ const HeroSection = () => {
     <Box
       className={"hero-content"}
       bg={"#27282D"}
+      pos={"relative"}
+      // pl={"80px"}
       // backgroundImage={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
       // backgroundPosition="100% 0"
       // backgroundRepeat="no-repeat"
       // backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "32% 100%" }}
     >
-      <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
-        <Spacer h={"244px"} />
-        <Flex justify={"space-between"} mb={{ base: "20px", md: "60px" }}>
-          <Box>
+      <Box
+        minH={{
+          base: "100%", // 0-48em
+          md: "400", // 48em-80em,
+          lg: "550px", // 48em-80em,
+          xl: "700px", // 80em+ 772
+          "2xl": "700px"
+        }}
+        maxH={{
+          base: "100%", // 0-48em
+          md: "440", // 48em-80em,
+          lg: "572px", // 48em-80em,
+          xl: "720px", // 80em+ 772
+          "2xl": "800px"
+        }}
+        height={{
+          base: "100%", // 0-48em
+          md: "70vh", // 48em-80em,
+          lg: "70vh", // 48em-80em,
+          xl: "100vh", // 80em+
+          "2xl": "100vh"
+        }}
+        pos={"relative"}
+        display={"flex"}
+        zIndex={10}
+        pt={"122px"}
+      >
+        <Box
+          // mb={{ base: "20px", md: "60px" }}
+          pt={{ base: "40px", md: "50px", xl: "122px" }}
+          pl={"80px"}
+          display="flex"
+        >
+          {/*<Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>*/}
+          {/*</Container>*/}
+          <Box
+            pos={"absolute"}
+            top={"0"}
+            left={"0"}
+            right={"0"}
+            height={"100%"}
+            // mt={"48px"}
+          >
+            {/*<Box*/}
+            {/*  as='video'*/}
+            {/*  controls*/}
+            {/*  autoplay*/}
+            {/*  src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'*/}
+            {/*  poster='https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'*/}
+            {/*  alt='Big Buck Bunny'*/}
+            {/*  objectFit='contain'*/}
+            {/*  sx={{*/}
+            {/*    aspectRatio: '16/9'*/}
+            {/*  }}*/}
+            {/*/>*/}
+            <video
+              autoPlay={true}
+              muted={true}
+              playsInline={true}
+              src="/images/hero.mp4"
+              className="bg-video"
+            />
+            {/*<Image*/}
+            {/*  src={"/images/home-page/hp_hero.svg"}*/}
+            {/*  width={315}*/}
+            {/*  height={24}*/}
+            {/*  alt={"Persistence Logo"}*/}
+            {/*/>*/}
+            {/*</Box>*/}
+          </Box>
+          <Box
+            zIndex={10}
+            position={"relative"}
+            display={"flex"}
+            justifyContent={{ base: "center", md: "center" }}
+            flexDir={"column"}
+          >
             <Heading
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
               maxW={"728px"}
-              fontSize={{ base: "42px", md: "60px" }}
-              lineHeight={{ base: "50px", md: "72px" }}
+              fontSize={{ base: "24px", lg: "60px" }}
+              lineHeight={{ base: "38px", lg: "72px" }}
               mb={"12px"}
             >
               Bitcoin Interoperability. Powered by Intents.
             </Heading>
             <Text
               textAlign={"left"}
-              w={{ base: "100%", md: "55%" }}
+              maxW={"690px"}
               mb={"29px"}
               color={"#FFFFFFCC"}
               fontSize={{ base: "16px", md: "26px" }}
               lineHeight={{ base: "28px", md: "39px" }}
             >
-              Fast, no-slippage cross-chain swaps for Bitcoin L2 assets. Secured
-              by Bitcoin.
+              Fast and no-slippage swaps across Bitcoin L2s. Secured by Bitcoin.
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link
@@ -79,35 +153,30 @@ const HeroSection = () => {
                 <Button
                   variant={"secondary"}
                   rightIcon={<ArrowForwardIcon />}
+                  h={"46px"}
+                  px={"36px"}
                   w={{ base: "100%", md: "auto" }}
                 >
-                  Trade Now
+                  Learn More
                 </Button>
               </Link>
               <Link href="/xprt" passHref>
                 <Button
                   w={{ base: "100%", md: "auto" }}
                   bg={"primary.redHover"}
+                  h={"46px"}
+                  px={"36px"}
                   borderColor={"primary.red"}
                   rightIcon={<ArrowForwardIcon />}
                   textColor={"#FFFFFF"}
                 >
-                  Explore Ecosystem
+                  Partner With Us
                 </Button>
               </Link>
             </Stack>
           </Box>
-          <Box mt={"48px"} mr={"80px"}>
-            <Image
-              src={"/images/home-page/hp_hero.svg"}
-              width={315}
-              height={24}
-              alt={"Persistence Logo"}
-            />
-          </Box>
-        </Flex>
-        <Spacer h={"110px"} />
-      </Container>
+        </Box>
+      </Box>
     </Box>
   );
 };

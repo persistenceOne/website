@@ -521,8 +521,8 @@ const Header = () => {
       bg={{ base: "#f5f5f5", md: "transparent" }}
     >
       <Container
-        maxW={"1320px"}
-        px={{ base: "20px", md: "40px" }}
+        maxW={"1440px"}
+        px={{ base: "20px", md: "80px" }}
         transition={"all 0.3s"}
         py={"20px"}
         mx={"auto"}
@@ -565,7 +565,7 @@ const Header = () => {
             passHref
             className={"inline-block"}
           >
-            <Button variant={"secondary"} h={"51px"} w={"151px"}>
+            <Button variant={"secondary"} h={"46px"} w={"187px"}>
               Enter App
             </Button>
           </Link>

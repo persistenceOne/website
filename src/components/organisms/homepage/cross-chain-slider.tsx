@@ -46,100 +46,101 @@ const list = [
 ];
 const CrossChainSlider = () => {
   return (
-    <Container
-      maxW={"1440px"}
-      bg={"#F7F7F7"}
-      pt={{ base: "32px", md: "60px" }}
-      pb={{ base: "40px", md: "100px" }}
-      className="aos-init aos-animate py-10"
-      data-aos="fade-up"
-    >
-      <Heading
-        mb={"40px"}
-        fontWeight={700}
-        color={"#081E21"}
-        textAlign={"left"}
-        px={{ base: "20px", md: "80px" }}
-        fontSize={{ base: "26px", md: "44px" }}
+    <Box bg={"#F7F7F7"} pos={"relative"} zIndex={10} mt={"80pz"}>
+      <Container
+        maxW={"1440px"}
+        pt={{ base: "32px", md: "80px" }}
+        pb={{ base: "40px", md: "100px" }}
+        className="aos-init aos-animate py-10"
+        data-aos="fade-up"
       >
-        ₿itcoin Transfers Cross-chain
-      </Heading>
-      <Swiper
-        slidesPerView={4.4}
-        spaceBetween={18}
-        speed={2000}
-        loop={true}
-        autoplay={{
-          delay: 2000,
-          duration: 3000,
-          disableOnInteraction: true,
-          pauseOnMouseEnter: true,
-          waitForTransition: true,
-          reverseDirection: false
-        }}
-        breakpoints={{
-          340: {
-            width: 340,
-            slidesPerView: 1
-          },
-          640: {
-            width: 640,
-            slidesPerView: 2
-          },
-          1220: {
-            width: 1220,
-            slidesPerView: 3.4
-          },
-          1440: {
-            width: 1440,
-            slidesPerView: 4.4
-          }
-        }}
-        navigation={true}
-        modules={[Autoplay, Navigation]}
-      >
-        {list.map((resource, index) => (
-          <SwiperSlide key={index}>
-            <Box
-              bg="#fff"
-              borderRadius={"24px"}
-              h={"450px"}
-              my={2}
-              boxShadow={"md"}
-              display={"flex"}
-              flexDir={"column"}
-            >
-              <Text
-                px={6}
-                pt={6}
-                pb={"18px"}
-                h={"114px"}
-                color={"#434343"}
-                fontSize={{ base: "22px" }}
-                lineHeight={{ base: "20px", md: "33px" }}
-                fontWeight={600}
-              >
-                {resource.title}
-              </Text>
+        <Heading
+          mb={"40px"}
+          fontWeight={700}
+          color={"#081E21"}
+          textAlign={"left"}
+          px={{ base: "20px", md: "80px" }}
+          fontSize={{ base: "26px", md: "44px" }}
+        >
+          ₿itcoin Transfers Cross-chain
+        </Heading>
+        <Swiper
+          slidesPerView={4.4}
+          spaceBetween={18}
+          speed={2000}
+          loop={true}
+          autoplay={{
+            delay: 2000,
+            duration: 3000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            waitForTransition: true,
+            reverseDirection: false
+          }}
+          breakpoints={{
+            340: {
+              width: 340,
+              slidesPerView: 1
+            },
+            640: {
+              width: 640,
+              slidesPerView: 2
+            },
+            1220: {
+              width: 1220,
+              slidesPerView: 3.4
+            },
+            1440: {
+              width: 1440,
+              slidesPerView: 4.4
+            }
+          }}
+          navigation={true}
+          modules={[Autoplay, Navigation]}
+        >
+          {list.map((resource, index) => (
+            <SwiperSlide key={index}>
               <Box
-                flex={1}
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                flexDir="column"
+                bg="#fff"
+                borderRadius={"24px"}
+                h={"450px"}
+                my={2}
+                boxShadow={"md"}
+                display={"flex"}
+                flexDir={"column"}
               >
-                <Image
-                  src={resource.imageUrl}
-                  width={100}
-                  height={5}
-                  alt={"Image"}
-                />
+                <Text
+                  px={6}
+                  pt={6}
+                  pb={"18px"}
+                  h={"114px"}
+                  color={"#434343"}
+                  fontSize={{ base: "22px" }}
+                  lineHeight={{ base: "20px", md: "33px" }}
+                  fontWeight={600}
+                >
+                  {resource.title}
+                </Text>
+                <Box
+                  flex={1}
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  flexDir="column"
+                >
+                  <Image
+                    src={resource.imageUrl}
+                    width={100}
+                    height={5}
+                    alt={"Image"}
+                  />
+                </Box>
               </Box>
-            </Box>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Container>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
+    </Box>
   );
 };
 

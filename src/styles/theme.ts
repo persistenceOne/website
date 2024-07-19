@@ -4,6 +4,15 @@ import Heading from "./heading";
 import Button from "./button";
 // import "@fontsource/poppins";
 
+const breakpoints = {
+  base: "0px",
+  sm: "320px",
+  md: "768px",
+  lg: "960px",
+  xl: "1280px",
+  "2xl": "1440px"
+};
+
 export default extendTheme({
   styles: {
     global: {
@@ -49,5 +58,6 @@ export default extendTheme({
     Heading,
     Button
   },
+  breakpoints,
   colors
 });
