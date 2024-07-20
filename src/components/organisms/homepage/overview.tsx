@@ -13,7 +13,7 @@ const Overview = () => {
       >
         <Box className="aos-init aos-animate" data-aos="fade-up">
           <Heading
-            mb={"50px"}
+            mb={"20px"}
             textAlign={"center"}
             color={"#633C0D"}
             fontSize={{ base: "26px", xl: "48px" }}

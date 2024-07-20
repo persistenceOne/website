@@ -313,14 +313,14 @@ const Footer = () => {
             mt={4}
             gap={4}
           >
-            <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
+            <Text fontSize={14} fontWeight={400} color={"#ECECEC"}>
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
               <Link href={"/termsofuse"}>
                 <Button
                   variant={"link"}
-                  color={"#ffffff"}
+                  color={"#ECECEC"}
                   fontSize={14}
                   fontWeight={400}
                 >
@@ -330,7 +330,7 @@ const Footer = () => {
               <Link href={"/privacy"}>
                 <Button
                   variant={"link"}
-                  color={"#ffffff"}
+                  color={"#ECECEC"}
                   fontSize={14}
                   fontWeight={400}
                 >

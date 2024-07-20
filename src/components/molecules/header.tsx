@@ -76,6 +76,15 @@ const menuItems = [
         link: "https://blog.persistence.one/",
         isExternal: true,
         comingSoon: false
+      },
+      {
+        title: "Docs",
+        description: "Explore our developer docs, on-chain modules, and guides",
+        icon: "doc1",
+        iconType: "stroke",
+        link: "https://docs.persistence.one",
+        isExternal: true,
+        comingSoon: false
       }
       // {
       //   title: "Roadmap",
@@ -99,15 +108,6 @@ const menuItems = [
         iconType: "fill",
         link: "/xprt",
         isExternal: false,
-        comingSoon: false
-      },
-      {
-        title: "Documentation",
-        description: "Explore our developer docs, on-chain modules, and guides",
-        icon: "doc1",
-        iconType: "stroke",
-        link: "https://docs.persistence.one",
-        isExternal: true,
         comingSoon: false
       },
       {

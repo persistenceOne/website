@@ -56,10 +56,9 @@ const HeroSection = () => {
     >
       <Spacer h={{ base: "40px", xl: "140px" }} />
       <Flex
-        justify={"space-between"}
         align={"flex-start"}
         pos={"relative"}
-        mb={{ base: "40px", md: "80px" }}
+        mb={{ base: "40px", md: "60px" }}
       >
         <VStack mt={"100px"} w={{ base: "100%", md: "50%" }} align={"stretch"}>
           <Box maxW={{ base: "400px", xl: "600px" }} mb={"30px"}>

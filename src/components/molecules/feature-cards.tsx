@@ -33,7 +33,7 @@ const FeatureCards = () => {
 
   const commonImagePath = "/images/home-page/why-persistence";
   return (
-    <VStack gap={4} mt={16}>
+    <VStack gap={4}>
       <Stack
         gap={4}
         pos={"relative"}
