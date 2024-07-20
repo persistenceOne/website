@@ -1,24 +1,9 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Heading,
-  Spacer,
-  Text,
-  VStack,
-  Container,
-  Stack
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Stack } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
-import HomePageStats from "@/components/molecules/page-stats";
-import { fetchChainTVL } from "@/pages/api";
 import Link from "next/link";
-import { numberFormat } from "@/utils/helpers";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
-import Image from "next/image";
 
 const HeroSection = () => {
   const [tvl, ibcVolume, transactionCost, transactions, dexterInfo] =

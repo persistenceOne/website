@@ -98,17 +98,17 @@ const footerLinks = [
       },
       {
         title: "XPRT Staking",
-        link: "/tech",
+        link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true
       },
       {
         title: "pWallet",
-        link: "",
+        link: "https://wallet.persistence.one/",
         isExternal: true
       },
       {
         title: "Explorers",
-        link: "https://docs.persistence.one",
+        link: "https://mintscan.io/persistence",
         isExternal: true
       }
     ]
@@ -116,11 +116,6 @@ const footerLinks = [
   {
     title: "Connect",
     links: [
-      {
-        title: "People",
-        link: "/people",
-        isExternal: false
-      },
       {
         title: "Careers",
         link: "https://careers.persistence.one/",
@@ -139,9 +134,9 @@ const Footer = () => {
   return (
     <Box as={"footer"} bg={"#1B1003"}>
       <Container
-        maxW={"1300px"}
-        px={{ base: "12px", md: "30px" }}
-        py={{ base: "30px", md: "60px" }}
+        maxW={"1440px"}
+        px={{ base: "30px", md: "80px" }}
+        py={{ base: "30px", md: "40px" }}
       >
         <Flex
           display={{ base: "block", md: "flex" }}
@@ -231,16 +226,11 @@ const Footer = () => {
               ))}
             </HStack>
           </VStack>
-          {/*<Stack*/}
-          {/*  gap={16}*/}
-          {/*  align={"flex-start"}*/}
-          {/*  direction={{ base: "column", md: "row" }}*/}
-          {/*>*/}
           <SimpleGrid
             flex={1}
             columns={2}
-            gap={4}
-            justifyContent={"space-between"}
+            gap={"130px"}
+            justifyContent={"end"}
             display={{ base: "grid", md: "flex" }}
           >
             {footerLinks.map((link) => (

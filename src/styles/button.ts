@@ -48,6 +48,16 @@ const variants = {
     _active: {
       background: "primary.dexBlue"
     }
+  },
+  ternary: {
+    color: "#2D2925",
+    borderRadius: "88px",
+    background: "#E596364D",
+    border: "1px solid",
+    borderColor: "#E59636",
+    _focus: {
+      boxShadow: "none"
+    }
   }
 };
 

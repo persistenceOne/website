@@ -533,7 +533,7 @@ const Header = () => {
     >
       <Container
         maxW={"1440px"}
-        px={{ base: "20px", md: "80px" }}
+        px={{ base: "30px", md: "80px" }}
         transition={"all 0.3s"}
         py={"20px"}
         mx={"auto"}

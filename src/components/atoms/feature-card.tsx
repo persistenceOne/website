@@ -125,8 +125,8 @@ const FeatureCard = ({
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 312 : 312}
-                  height={category === "Ecosystem" ? 161 : 161}
+                  width={category === "Experience" ? 312 : 312}
+                  height={category === "Experience" ? 161 : 161}
                 />
               </Box>
               <Heading
@@ -199,7 +199,7 @@ const FeatureCard = ({
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 126 : 205}
+                  width={category === "Experience" ? 126 : 205}
                   height={126}
                 />
               </Box>

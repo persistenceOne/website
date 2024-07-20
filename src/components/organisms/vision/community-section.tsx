@@ -37,7 +37,7 @@ const CommunitySection = () => {
                   color={"#FFFFFF"}
                   w={"246px"}
                   h={"52px"}
-                  variant={"secondary"}
+                  variant={"ternary"}
                   bg="#1D1306"
                   rightIcon={<ArrowForwardIcon />}
                 >

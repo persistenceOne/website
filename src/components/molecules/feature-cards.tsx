@@ -63,7 +63,7 @@ const FeatureCards = () => {
           height="380px"
           aos={"fade-down-left"}
           className={"aos-init aos-animate"}
-          category="Ecosystem"
+          category="Experience"
           title="Building since 2019"
           description="Since 2019, Persistence One has been leveraging its
           expertise in DeFi, IBC interoperability, and the Persistence Core-1 Chain's security to tackle the challenge of Bitcoin interoperability in BTCfi."
@@ -121,7 +121,7 @@ const FeatureCards = () => {
           justify={"space-between"}
         >
           <FeatureCard
-            category="People"
+            category="Values"
             className={"aos-init aos-animate"}
             aos={"fade-up-left"}
             title={`Humility. Integrity. Patience. Persistence. `}
@@ -152,7 +152,7 @@ const FeatureCards = () => {
               Be Part of the Movement
             </Text>
             <Link
-              href={"https://stats.persistence.one"}
+              href={"https://discord.com/invite/vyvp3scWnH"}
               target="_blank"
               rel="noopener noreferrer"
             >

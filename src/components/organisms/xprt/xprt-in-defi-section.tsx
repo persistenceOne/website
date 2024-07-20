@@ -342,7 +342,9 @@ const XPRTInDefiSection = () => {
               </Heading>
               <Box textAlign={{ base: "center", md: "left" }}>
                 <Link
-                  href={TELEGRAM_PERSISTENCE_COMMUNITY_LINK}
+                  href={
+                    "https://docs.persistence.one/participate/xprt/token-contract-metadata"
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -350,7 +352,7 @@ const XPRTInDefiSection = () => {
                     color={"#FFFFFF"}
                     w={{ base: "160px", xl: "246px" }}
                     h={{ base: "40px", xl: "52px" }}
-                    variant={"secondary"}
+                    variant={"ternary"}
                     fontSize={{ base: "10px", xl: "18px" }}
                     bg="#1D1306"
                     rightIcon={<ArrowForwardIcon />}

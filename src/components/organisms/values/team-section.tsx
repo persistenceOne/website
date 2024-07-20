@@ -106,7 +106,7 @@ const TeamSection = () => {
   return (
     <Container
       maxW={"1440px"}
-      px={{ base: "20px", md: "50px" }}
+      px={{ base: "30px", md: "80px" }}
       className="aos-init aos-animate py-10"
       data-aos="fade-up"
     >

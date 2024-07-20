@@ -59,7 +59,7 @@ const VisionSection = () => {
           {list.map((item, index) => (
             <Flex
               bg={"#fff"}
-              w={{ base: "250px", xl: "401px" }}
+              w={{ base: "250px", xl: "398px" }}
               borderRadius={"22px"}
               direction={"column"}
               key={index}
