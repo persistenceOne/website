@@ -36,6 +36,7 @@ const HeroSection = () => {
   return (
     <Box
       className={"hero-content"}
+      bg={"#1d1208"}
       pos={"relative"}
       // pl={"80px"}
       // backgroundImage={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
@@ -102,8 +103,9 @@ const HeroSection = () => {
             {/*/>*/}
             <video
               autoPlay={true}
+              preload="auto"
               muted={true}
-              playsInline={true}
+              loop={true}
               src="/images/hero.mp4"
               className="bg-video"
             />
@@ -119,7 +121,11 @@ const HeroSection = () => {
             zIndex={10}
             position={"relative"}
             display={"flex"}
-            justifyContent={{ base: "center", md: "center" }}
+            justifyContent={{
+              base: "center",
+              md: "center",
+              "2xl": "flex-start"
+            }}
             flexDir={"column"}
           >
             <Heading
@@ -127,8 +133,8 @@ const HeroSection = () => {
               color={"text.whiteFull"}
               textAlign={"left"}
               maxW={"728px"}
-              fontSize={{ base: "24px", lg: "60px" }}
-              lineHeight={{ base: "38px", lg: "72px" }}
+              fontSize={{ base: "24px", lg: "52px" }}
+              lineHeight={{ base: "38px", lg: "70px" }}
               mb={"12px"}
             >
               Bitcoin Interoperability. Powered by Intents.
@@ -174,6 +180,7 @@ const HeroSection = () => {
                   w={{ base: "100%", md: "235px" }}
                   h={"46px"}
                   variant={"secondary"}
+                  color={"#FFFFFF"}
                   rightIcon={<ArrowForwardIcon />}
                 >
                   Partner With Us

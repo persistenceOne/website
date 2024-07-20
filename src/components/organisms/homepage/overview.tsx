@@ -8,8 +8,8 @@ const Overview = () => {
       <Container
         maxW={"1300px"}
         px={{ base: "20px", md: "30px" }}
-        pb={{ base: "40px", md: "80px" }}
-        pt={{ base: "30px", md: "60px" }}
+        pb={{ base: "40px", md: "100px" }}
+        pt={{ base: "30px", md: "50px" }}
       >
         <Box className="aos-init aos-animate" data-aos="fade-up">
           <Heading

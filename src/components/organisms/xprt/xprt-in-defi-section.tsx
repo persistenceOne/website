@@ -289,10 +289,11 @@ const XPRTInDefiSection = () => {
   return (
     <>
       <Container
-        className={"xprt-defi-cards"}
         maxW={"1440px"}
         px={{ base: "40px", md: "100px" }}
         mb={{ base: "30px", md: "60px" }}
+        className="xprt-defi-cards aos-init aos-animate"
+        data-aos="fade-up"
       >
         <Heading
           textAlign={"center"}

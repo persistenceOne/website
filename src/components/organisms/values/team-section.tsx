@@ -104,7 +104,12 @@ const teamMembers: TeamMemberCardInterface[] = [
 
 const TeamSection = () => {
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "50px" }}>
+    <Container
+      maxW={"1440px"}
+      px={{ base: "20px", md: "50px" }}
+      className="aos-init aos-animate py-10"
+      data-aos="fade-up"
+    >
       <Heading
         textAlign={"center"}
         color={"#633C0D"}

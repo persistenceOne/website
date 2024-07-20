@@ -48,7 +48,7 @@ const HeroSection = () => {
               deeply aligned with those of Bitcoin itself.
             </Text>
           </Flex>
-          <Box flex={1}>
+          <Box>
             <Image
               src="/images/values/values_hero.svg"
               alt="Persistence Coin"

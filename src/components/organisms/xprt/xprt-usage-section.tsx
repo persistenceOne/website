@@ -71,7 +71,11 @@ const XPRTUsageSection = () => {
       pt={{ base: "50px", md: "100px" }}
       pb={"40px"}
     >
-      <VStack align={"center"}>
+      <VStack
+        align={"center"}
+        className="aos-init aos-animate"
+        data-aos="fade-up"
+      >
         <Heading
           textAlign={"center"}
           color={"#633C0D"}
@@ -79,7 +83,7 @@ const XPRTUsageSection = () => {
           lineHeight={{ base: "32px", md: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
-          Our Persistent Vision
+          XPRT Utility
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
           {/*<Box display={"flex"} gap={"18px"} mt={4}>*/}

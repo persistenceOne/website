@@ -12,7 +12,6 @@ const HomePage = () => {
       <HeroSection />
       <CrossChainSlider />
       <Overview />
-      <Spacer h={20} />
       <DappsSection />
       <BlogSection />
     </Box>

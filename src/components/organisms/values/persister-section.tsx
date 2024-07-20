@@ -51,7 +51,11 @@ const PersisterSection = () => {
   return (
     <>
       <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }}>
-        <Box py={{ base: "32px", md: "60px" }}>
+        <Box
+          py={{ base: "32px", md: "60px" }}
+          className="aos-init aos-animate py-10"
+          data-aos="fade-up"
+        >
           <Heading
             textAlign={"center"}
             color={"#633C0D"}

@@ -9,7 +9,11 @@ const CommunitySection = () => {
   return (
     <Box bg={"#E59636"} backgroundPosition="bottom right">
       <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"30px"}>
-        <Flex alignItems={"center"}>
+        <Flex
+          alignItems={"center"}
+          className="aos-init aos-animate py-10"
+          data-aos="fade-up"
+        >
           <Box flex={1}>
             <Heading
               fontSize={{ base: "22px", md: "32px" }}
