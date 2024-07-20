@@ -169,54 +169,6 @@ const FeatureCards = () => {
           </Flex>
         </VStack>
       </Stack>
-
-      {/* <Stack
-        gap={4}
-        pos={"relative"}
-        align={"stretch"}
-        direction={{ base: "column", md: "row" }}
-      >
-        <FeatureCard
-          width="70%"
-          height="380px"
-          category="Roadmap"
-          title="Building in Cosmos since 2019."
-          description="From being one of the first Cosmos app chains to enable IBC, CosmWasm, and Liquid Staking Module (LSM) to deploying pSTAKE Finance and Dexter and bringing Restaking to Cosmos, Persistence One’s development pushes the boundaries of the Proof-of-Stake landscape."
-          image="/images/home-page/roadmap.svg"
-          imgWidth={366}
-          cta={{
-            link: "/story",
-            linkText: ""
-          }}
-        />
-        <Box
-          pos={"absolute"}
-          bottom={"-20px"}
-          left={"-20px"}
-          background={"#C73339"}
-          w={"220px"}
-          h={"210px"}
-          zIndex={-1}
-          borderRadius={"20px"}
-          opacity={isVisible ? 1 : 0}
-          transition="opacity 1s"
-        /> */}
-      {/* <FeatureCard
-          width="30%"
-          height="380px"
-          category=""
-          title=""
-          description=""
-          imgWidth={319}
-          image="/images/liquidity.svg"
-          cta={{
-            link: "/xprt",
-            linkText: ""
-          }}
-          type="vertical"
-          cardType={"img"}
-        /> */}
-      {/* </Stack> */}
     </VStack>
   );
 };
