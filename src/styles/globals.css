@@ -98,20 +98,20 @@ color: #000000;
 }
 
 .icon-nav-icon.fill {
-  fill: #EE8167;
+  fill: #E59636;
 }
 
 .icon-nav-icon.stroke {
-  stroke: #EE8167;
+  stroke: #E59636;
   fill: transparent;
 }
 
 .nav-item .icon-box {
-  background: #EE81674D;
+  background: #E596364D;
 }
 
 .nav-item:hover .icon-box {
-  background: #EE8167;
+  background: #E59636;
 }
 
 .nav-item:hover .icon-nav-icon.fill {

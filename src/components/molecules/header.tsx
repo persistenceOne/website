@@ -80,21 +80,12 @@ const menuItems = [
       {
         title: "Docs",
         description: "Explore our developer docs, on-chain modules, and guides",
-        icon: "doc1",
+        icon: "docs",
         iconType: "stroke",
         link: "https://docs.persistence.one",
         isExternal: true,
         comingSoon: false
       }
-      // {
-      //   title: "Roadmap",
-      //   description: "",
-      //   icon: "road",
-      //   iconType: "stroke",
-      //   link: "/roadmap",
-      //   isExternal: false,
-      //   comingSoon: true
-      // }
     ]
   },
   {
