@@ -102,16 +102,6 @@ const menuItems = [
         comingSoon: false
       },
       {
-        title: "Tech",
-        description:
-          "Discover how we sit at the cutting-edge of decentralized tech",
-        icon: "code",
-        iconType: "stroke",
-        link: "/tech",
-        isExternal: false,
-        comingSoon: false
-      },
-      {
         title: "Documentation",
         description: "Explore our developer docs, on-chain modules, and guides",
         icon: "doc1",
@@ -147,7 +137,7 @@ const menuItems = [
     name: "Connect",
     subItems: [
       {
-        title: "People",
+        title: "About",
         description:
           "Get to know our contributors, our values, and how to become a Persister",
         icon: "values",
