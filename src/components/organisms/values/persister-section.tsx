@@ -59,8 +59,8 @@ const PersisterSection = () => {
           <Heading
             textAlign={"center"}
             color={"#633C0D"}
-            fontSize={{ base: "26px", md: "48px" }}
-            lineHeight={{ base: "32px", md: "72px" }}
+            fontSize={{ base: "26px", xl: "48px" }}
+            lineHeight={{ base: "32px", xl: "72px" }}
             mb={{ base: "20px", md: "100px" }}
           >
             What makes a Persister?

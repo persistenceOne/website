@@ -79,8 +79,8 @@ const XPRTUsageSection = () => {
         <Heading
           textAlign={"center"}
           color={"#633C0D"}
-          fontSize={{ base: "26px", md: "48px" }}
-          lineHeight={{ base: "32px", md: "72px" }}
+          fontSize={{ base: "26px", xl: "48px" }}
+          lineHeight={{ base: "32px", xl: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
           XPRT Utility
@@ -102,14 +102,19 @@ const XPRTUsageSection = () => {
                 <Heading
                   variant={"secondary"}
                   color={"#633C0D"}
-                  fontSize={"32px"}
-                  lineHeight={"48px"}
+                  fontSize={{ base: "22px", xl: "32px" }}
+                  lineHeight={{ base: "38px", xl: "48px" }}
                   fontWeight={700}
                   mb={2}
                 >
                   {card.title}
                 </Heading>
-                <Text color={"#633C0D"} fontSize={20} fontWeight={400}>
+                <Text
+                  color={"#633C0D"}
+                  fontSize={{ base: "12px", xl: "20px" }}
+                  lineHeight={{ base: "22px", xl: "30px" }}
+                  fontWeight={400}
+                >
                   {card.description}
                 </Text>
               </Box>
@@ -117,8 +122,8 @@ const XPRTUsageSection = () => {
                 <Image
                   src={card.image}
                   alt=""
-                  width={"631px"}
-                  height={"380px"}
+                  width={{ base: "631px", xl: "631px" }}
+                  height={{ base: "180px", xl: "380px" }}
                 />
               </Box>
             </Box>

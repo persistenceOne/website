@@ -8,10 +8,10 @@ import {
   Stack,
   ListItem,
   UnorderedList,
-  Text
+  Text,
+  Image
 } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
 
 const list = [
   {
@@ -45,17 +45,21 @@ const VisionSection = () => {
         <Heading
           textAlign={"center"}
           color={"#633C0D"}
-          fontSize={{ base: "26px", md: "48px" }}
-          lineHeight={{ base: "32px", md: "72px" }}
+          fontSize={{ base: "26px", xl: "48px" }}
+          lineHeight={{ base: "32px", xl: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
           Our Persistent Vision
         </Heading>
-        <Wrap spacing={"18px"} direction="row" justify={"center"}>
+        <Wrap
+          spacing={{ base: "12px", xl: "18px" }}
+          direction="row"
+          justify={"center"}
+        >
           {list.map((item, index) => (
             <Flex
               bg={"#fff"}
-              w={{ base: "300px", md: "401px" }}
+              w={{ base: "250px", xl: "401px" }}
               borderRadius={"22px"}
               direction={"column"}
               key={index}
@@ -64,17 +68,17 @@ const VisionSection = () => {
               <Box display={"flex"} flexDir={"column"}>
                 <Text
                   color={"text.blackLow"}
-                  p={{ base: "16px", md: "32px" }}
-                  fontSize={{ base: "14px", md: "21px" }}
-                  lineHeight={{ base: "24px", md: "31px" }}
+                  p={{ base: "16px", xl: "32px" }}
+                  fontSize={{ base: "14px", xl: "21px" }}
+                  lineHeight={{ base: "24px", xl: "31px" }}
                 >
                   {item.content}
                 </Text>
                 <Image
                   src={item.imgUrl}
                   alt={item.title}
-                  width={401}
-                  height={340}
+                  width={{ base: 250, xl: 401 }}
+                  height={{ base: 190, xl: 340 }}
                   // objectFit="cover"
                 />
               </Box>

@@ -16,13 +16,13 @@ const CommunitySection = () => {
         >
           <Box flex={1}>
             <Heading
-              fontSize={{ base: "22px", md: "32px" }}
+              fontSize={{ base: "22px", xl: "32px" }}
               textAlign={{ base: "center", md: "left" }}
+              lineHeight={{ base: "1.5", xl: "48px" }}
               color={"text.headingSemiWhite"}
               pr={"12px"}
               mb={"42px"}
               fontWeight={700}
-              lineHeight={{ base: "1.5", md: "48px" }}
             >
               We&apos;re excited to find partners who share our vision for a
               vibrant Bitcoin ecosystem.

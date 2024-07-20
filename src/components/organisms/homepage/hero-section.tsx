@@ -132,20 +132,20 @@ const HeroSection = () => {
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
-              maxW={"728px"}
-              fontSize={{ base: "24px", lg: "52px" }}
-              lineHeight={{ base: "38px", lg: "70px" }}
+              maxW={{ base: "400px", xl: "728px" }}
+              fontSize={{ base: "28px", xl: "52px" }}
+              lineHeight={{ base: "44px", xl: "70px" }}
               mb={"12px"}
             >
               Bitcoin Interoperability. Powered by Intents.
             </Heading>
             <Text
               textAlign={"left"}
-              maxW={"690px"}
+              maxW={{ base: "400px", xl: "690px" }}
               mb={"29px"}
               color={"#FFFFFFCC"}
-              fontSize={{ base: "16px", md: "26px" }}
-              lineHeight={{ base: "28px", md: "39px" }}
+              fontSize={{ base: "16px", xl: "26px" }}
+              lineHeight={{ base: "28px", xl: "39px" }}
             >
               Fast and no-slippage swaps across Bitcoin L2s. Secured by Bitcoin.
             </Text>

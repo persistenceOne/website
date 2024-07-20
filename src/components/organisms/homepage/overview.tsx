@@ -16,8 +16,8 @@ const Overview = () => {
             mb={"50px"}
             textAlign={"center"}
             color={"#633C0D"}
-            fontSize={{ base: "26px", md: "48px" }}
-            lineHeight={{ base: "32px", md: "72px" }}
+            fontSize={{ base: "26px", xl: "48px" }}
+            lineHeight={{ base: "32px", xl: "72px" }}
           >
             Why Persistence One?
           </Heading>

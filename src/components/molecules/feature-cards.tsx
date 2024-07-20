@@ -145,7 +145,8 @@ const FeatureCards = () => {
           >
             <Text
               color={"#FCFCFC"}
-              fontSize={{ base: "16px", md: "27px" }}
+              fontSize={{ base: "20px", xl: "27px" }}
+              lineHeight={{ base: "30px", xl: "40px" }}
               fontWeight={700}
             >
               Be Part of the Movement

@@ -27,7 +27,7 @@ const GetXprtSection = () => {
       <CardBody p={"0"}>
         <HStack bg="#" justify={"space-between"}>
           <Box
-            flex={1}
+            w={{ base: "250px", xl: "300px" }}
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -35,24 +35,24 @@ const GetXprtSection = () => {
             <Image
               src={"/images/home-page/fuel.svg"}
               alt="Persistence"
-              width={251}
+              width={300}
               height={285}
             />
           </Box>
-          <Box w={"643px"}>
+          <Box maxW={{ base: "500px", xl: "643px" }}>
             <Heading
               fontWeight={700}
               color={"#350B00"}
-              fontSize={{ base: "20px", md: "40px" }}
-              lineHeight={{ base: "36px", md: "50px" }}
+              fontSize={{ base: "20px", xl: "40px" }}
+              lineHeight={{ base: "36px", xl: "50px" }}
               mb={3}
             >
               Fueling on-chain activities on Persistence One
             </Heading>
             <Text
-              fontSize={{ base: "12px", md: "16px" }}
+              fontSize={{ base: "12px", xl: "16px" }}
               color={"#350B00CC"}
-              lineHeight={{ base: "22px", md: "24px" }}
+              lineHeight={{ base: "22px", xl: "24px" }}
               mb={{ base: "20px", md: "40px" }}
             >
               XPRT powers on-chain activities on Persistence One, including

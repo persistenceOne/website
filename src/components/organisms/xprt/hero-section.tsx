@@ -7,11 +7,11 @@ import {
   Heading,
   Spacer,
   Text,
-  VStack
+  VStack,
+  Image
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React, { useEffect } from "react";
-import Image from "next/image";
 import PageStats from "@/components/molecules/page-stats";
 import Link from "next/link";
 
@@ -54,7 +54,7 @@ const HeroSection = () => {
       pt={"109px"}
       pb={"54px"}
     >
-      <Spacer h={{ base: "80px", md: "140px" }} />
+      <Spacer h={{ base: "40px", xl: "140px" }} />
       <Flex
         justify={"space-between"}
         align={"flex-start"}
@@ -62,20 +62,20 @@ const HeroSection = () => {
         mb={{ base: "40px", md: "80px" }}
       >
         <VStack mt={"100px"} w={{ base: "100%", md: "50%" }} align={"stretch"}>
-          <Box maxW={"600px"} mb={"30px"}>
+          <Box maxW={{ base: "400px", xl: "600px" }} mb={"30px"}>
             <Heading
-              fontSize={{ base: "42px", lg: "50px" }}
+              fontSize={{ base: "36px", xl: "50px" }}
+              lineHeight={{ base: "50px", xl: "70px" }}
               color={"#633C0D"}
               mb={5}
               textAlign={{ base: "left", md: "left" }}
-              lineHeight={{ base: "60px", md: "70px" }}
             >
               Powering BTC Interoperability, Governing Intents
             </Heading>
             <Text
               textAlign="left"
               color={"#633C0DCC"}
-              fontSize={{ base: "16px", md: "24px" }}
+              fontSize={{ base: "14px", md: "24px" }}
             >
               XPRT is the multi-purpose native token for the Persistence dApp
               and network
@@ -113,8 +113,8 @@ const HeroSection = () => {
           <Image
             src="/images/xprt-page/xprt_hero.svg"
             alt="Persistence Coin"
-            width={521}
-            height={490}
+            width={{ base: 330, xl: 521 }}
+            height={{ base: 300, xl: 490 }}
           />
         </Box>
       </Flex>
@@ -136,19 +136,6 @@ const HeroSection = () => {
           }
         ]}
       />
-      {/*<Flex*/}
-      {/*  display={{ base: "block", md: "none" }}*/}
-      {/*  w={"100%"}*/}
-      {/*  justify={"center"}*/}
-      {/*>*/}
-      {/*  <Image*/}
-      {/*    // className={"ml-auto"}*/}
-      {/*    src="/images/xprt-page/xprt-hero.png"*/}
-      {/*    alt="Persistence Coin"*/}
-      {/*    width={350}*/}
-      {/*    height={400}*/}
-      {/*  />*/}
-      {/*</Flex>*/}
     </Container>
   );
 };

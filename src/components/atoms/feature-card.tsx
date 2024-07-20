@@ -78,9 +78,9 @@ const FeatureCard = ({
           >
             <Box>
               <Heading
-                fontSize={"27px"}
+                fontSize={{ base: "20px", xl: "27px" }}
+                lineHeight={{ base: "30px", xl: "40px" }}
                 pb={"4px"}
-                lineHeight={"40px"}
                 color={"#633C0D"}
               >
                 {title}
@@ -130,8 +130,8 @@ const FeatureCard = ({
                 />
               </Box>
               <Heading
-                fontSize={"22px"}
-                lineHeight={"33px"}
+                fontSize={{ base: "16px", xl: "22px" }}
+                lineHeight={{ base: "24px", xl: "33px" }}
                 maxW={"80%"}
                 pb={"4px"}
                 color={"#633C0D"}
@@ -167,8 +167,8 @@ const FeatureCard = ({
           {cardType !== "img" ? (
             <VStack align={"flex-start"} gap={4} mt={4}>
               <Heading
-                fontSize={"22px"}
-                lineHeight={"33px"}
+                fontSize={{ base: "16px", xl: "22px" }}
+                lineHeight={{ base: "24px", xl: "33px" }}
                 maxW={"80%"}
                 pb={"4px"}
                 color={"#633C0D"}

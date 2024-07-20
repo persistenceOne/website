@@ -10,12 +10,12 @@ import {
   Box,
   Button,
   useMediaQuery,
-  Flex
+  Flex,
+  Image
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
-import Slider from "react-slick";
 import {
   DexterPoolsInfo,
   OsmosisPoolsInfo,
@@ -27,7 +27,6 @@ import {
   TELEGRAM_PERSISTENCE_COMMUNITY_LINK,
   TOKEN_CONTRACT_ADDRESS_LINK
 } from "@/utils/config";
-import Image from "next/image";
 
 const getData = (
   dexterInfo: DexterPoolsInfo,
@@ -298,8 +297,8 @@ const XPRTInDefiSection = () => {
         <Heading
           textAlign={"center"}
           color={"#633C0D"}
-          fontSize={{ base: "26px", md: "48px" }}
-          lineHeight={{ base: "32px", md: "72px" }}
+          fontSize={{ base: "26px", xl: "48px" }}
+          lineHeight={{ base: "32px", xl: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
           XPRT in Multi-Chain DeFi
@@ -331,13 +330,13 @@ const XPRTInDefiSection = () => {
           <Flex alignItems={"center"} justifyContent={"space-between"}>
             <Box maxW={"500px"}>
               <Heading
-                fontSize={{ base: "22px", md: "32px" }}
+                fontSize={{ base: "22px", xl: "32px" }}
                 textAlign={{ base: "center", md: "left" }}
                 color={"text.headingSemiWhite"}
                 pr={"12px"}
                 mb={"42px"}
                 fontWeight={700}
-                lineHeight={{ base: "1.5", md: "48px" }}
+                lineHeight={{ base: "1.5", xl: "48px" }}
               >
                 Always verify XPRT token details for each chain
               </Heading>
@@ -349,9 +348,10 @@ const XPRTInDefiSection = () => {
                 >
                   <Button
                     color={"#FFFFFF"}
-                    w={"246px"}
-                    h={"52px"}
+                    w={{ base: "160px", xl: "246px" }}
+                    h={{ base: "40px", xl: "52px" }}
                     variant={"secondary"}
+                    fontSize={{ base: "10px", xl: "18px" }}
                     bg="#1D1306"
                     rightIcon={<ArrowForwardIcon />}
                   >
@@ -363,8 +363,8 @@ const XPRTInDefiSection = () => {
             <Image
               src={"/images/xprt-page/xprt_quote.svg"}
               alt={"team-work"}
-              width={401}
-              height={249}
+              width={{ base: "300px", xl: "401px" }}
+              height={{ base: "200px", xl: "249px" }}
               // objectFit="cover"
             />
           </Flex>

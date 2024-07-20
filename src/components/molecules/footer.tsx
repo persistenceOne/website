@@ -244,8 +244,15 @@ const Footer = () => {
             display={{ base: "grid", md: "flex" }}
           >
             {footerLinks.map((link) => (
-              <VStack key={link.title} align={"flex-start"} gap={4}>
-                <Heading color={"#918678"} fontSize={"20px"}>
+              <VStack
+                key={link.title}
+                align={"flex-start"}
+                gap={{ base: 2, xl: 4 }}
+              >
+                <Heading
+                  color={"#918678"}
+                  fontSize={{ base: "16px", xl: "20px" }}
+                >
                   {link.title}
                 </Heading>
                 {link.links.map((item) => (
@@ -259,7 +266,8 @@ const Footer = () => {
                       variant={"link"}
                       key={item.title}
                       color={"#918678"}
-                      fontSize={{ base: "14px", md: "16px" }}
+                      padding={0}
+                      fontSize={{ base: "12px", xl: "16px" }}
                       fontWeight={400}
                       opacity={0.69}
                       rightIcon={

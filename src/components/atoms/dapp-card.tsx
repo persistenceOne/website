@@ -67,16 +67,16 @@ const DappCard = ({
             <Heading
               fontWeight={700}
               color={"#350B00"}
-              fontSize={{ base: "20px", md: "40px" }}
-              lineHeight={{ base: "36px", md: "50px" }}
+              fontSize={{ base: "20px", xl: "40px" }}
+              lineHeight={{ base: "36px", xl: "50px" }}
               mb={4}
             >
               {dAppName}
             </Heading>
             <Text
-              fontSize={{ base: "12px", md: "16px" }}
+              fontSize={{ base: "12px", xl: "16px" }}
+              lineHeight={{ base: "22px", xl: "24px" }}
               color={"#350B00CC"}
-              lineHeight={{ base: "22px", md: "24px" }}
               pb={"16px"}
             >
               {dAppDescription}
@@ -85,16 +85,16 @@ const DappCard = ({
               {dAppStats.map((stat) => (
                 <Box key={stat.label}>
                   <Text
-                    fontSize={{ base: "12px", md: "16px" }}
+                    fontSize={{ base: "12px", xl: "16px" }}
+                    lineHeight={{ base: "22px", xl: "24px" }}
                     color={"#350B00"}
-                    lineHeight={{ base: "22px", md: "24px" }}
                   >
                     {stat.label}
                   </Text>
                   <Text
                     fontWeight={700}
                     color={"#E59636"}
-                    fontSize={{ base: "18px", md: "24px" }}
+                    fontSize={{ base: "18px", xl: "24px" }}
                   >
                     {stat.value}
                   </Text>
@@ -107,7 +107,7 @@ const DappCard = ({
               </Button>
             </Link>
           </Box>
-          <Box w={"515px"}>
+          <Box w={{ base: "300px", xl: "515px" }}>
             <Image
               src={"/images/home-page/dex.svg"}
               alt={"Dex"}

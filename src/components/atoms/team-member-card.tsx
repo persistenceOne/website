@@ -39,7 +39,7 @@ const TeamMemberCard = ({
           style={{ borderRadius: "50%" }}
         />
       </Box>
-      <Heading fontSize={22} mt={4} color={"#080014"}>
+      <Heading fontSize={{ base: 18, xl: 22 }} mt={4} color={"#080014"}>
         {name}
       </Heading>
       <Text fontSize={14} color={"#080014CC"}>

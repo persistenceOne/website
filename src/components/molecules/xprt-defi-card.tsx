@@ -104,8 +104,8 @@ const XPRTDefiCard = ({
           </Link>
         </Stack>
         <Text
-          mb={"30px"}
-          fontSize={{ base: "12px", md: "16px" }}
+          mb={{ base: "16px", xl: "30px" }}
+          fontSize={{ base: "12px", xl: "16px" }}
           h={{ base: "100px", md: "auto" }}
         >
           {description}
@@ -114,11 +114,11 @@ const XPRTDefiCard = ({
           {stats.map((stat) => {
             return (
               <VStack key={stat.label} align={"stretch"} gap={0}>
-                <Text color={"#633C0D"} fontSize={{ base: "12px", md: "16px" }}>
+                <Text color={"#633C0D"} fontSize={{ base: "12px", xl: "16px" }}>
                   {stat.label}
                 </Text>
                 <Text
-                  fontSize={{ base: "12px", md: "24px" }}
+                  fontSize={{ base: "12px", xl: "24px" }}
                   color="#633C0D"
                   fontWeight={700}
                 >

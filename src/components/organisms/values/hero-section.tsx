@@ -21,7 +21,7 @@ const HeroSection = () => {
           mb={{ base: "0px", md: "90px" }}
         >
           <Flex
-            maxW={"673px"}
+            maxW={{ base: "500px", xl: "673px" }}
             flex={1}
             flexDir={"column"}
             justifyContent={"flex-end"}
@@ -31,16 +31,16 @@ const HeroSection = () => {
               color={"#633C0D"}
               mb={5}
               textAlign={{ base: "left", md: "left" }}
-              fontSize={{ base: "42px", md: "66px" }}
-              lineHeight={{ base: "60px", md: "90px" }}
+              fontSize={{ base: "42px", xl: "66px" }}
+              lineHeight={{ base: "60px", xl: "90px" }}
             >
               Bitcoiners at heart
             </Heading>
 
             <Text
               color={"#633C0DCC"}
-              fontSize={{ base: "16px", md: "24px" }}
-              lineHeight={{ base: "24px", md: "36px" }}
+              fontSize={{ base: "16px", xl: "24px" }}
+              lineHeight={{ base: "24px", xl: "36px" }}
               textAlign={{ base: "left", md: "left" }}
               mb={{ base: 4, md: 0 }}
             >
@@ -52,8 +52,8 @@ const HeroSection = () => {
             <Image
               src="/images/values/values_hero.svg"
               alt="Persistence Coin"
-              width={332}
-              height={540}
+              width={{ base: 200, xl: 332 }}
+              height={{ base: 350, xl: 540 }}
               mx={"auto"}
             />
           </Box>
