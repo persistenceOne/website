@@ -19,70 +19,30 @@ import Link from "next/link";
 const resourcesList: BlogCardInterface[] = [
   {
     id: 0,
-    resourceImage: "/images/resources/resource-0.jpeg",
+    resourceImage:
+      "https://blog.persistence.one/wp-content/uploads/2024/07/Image-2-1160x653.png",
     resourceType: "Blog",
     resourceCTA: "Read",
     resourceLink:
-      "https://blog.persistence.one/2024/06/04/introducing-xprt-to-the-base-ecosystem-going-multi-chain-and-building-liquidity/"
+      "https://blog.persistence.one/2024/07/17/bridge-without-bridging-why-btcfi-needs-an-interoperability-solution/"
   },
   {
     id: 1,
-    resourceImage: "/images/resources/resource-1.jpeg",
+    resourceImage:
+      "https://blog.persistence.one/wp-content/uploads/2024/07/image2-1-1160x653.jpg",
     resourceType: "Blog",
     resourceCTA: "Read",
     resourceLink:
-      "https://blog.persistence.one/2024/05/22/introducing-wbtc-to-persistence-one-building-wbtc-liquidity-on-dexter/"
+      "https://blog.persistence.one/2024/07/10/bitcoin-l2s-and-their-own-btc-variants/"
   },
   {
     id: 2,
-    resourceImage: "/images/resources/resource-2.jpg",
+    resourceImage:
+      "https://blog.persistence.one/wp-content/uploads/2024/07/image4-1160x653.jpg",
     resourceType: "Blog",
     resourceCTA: "Read",
     resourceLink:
-      "https://blog.persistence.one/2024/04/16/introducing-stkxprt-the-star-of-persistence-one/"
-  },
-  {
-    id: 3,
-    resourceImage: "/images/resources/resource-5.jpeg",
-    resourceType: "Video",
-    resourceCTA: "Watch",
-    resourceLink: "https://youtu.be/TZAoCA79UpE?si=8DEkx1ePsSeqpyrI"
-  },
-  {
-    id: 4,
-    resourceImage: "/images/resources/resource-3.jpeg",
-    resourceType: "Blog",
-    resourceCTA: "Read",
-    resourceLink:
-      "https://blog.persistence.one/2024/05/25/how-to-bridge-wbtc-to-persistence-core-1-and-deposit-liquidity-on-dexter/"
-  },
-  {
-    id: 5,
-    resourceImage: "/images/resources/resource-3.jpeg",
-    resourceType: "Video",
-    resourceCTA: "Watch",
-    resourceLink: "https://youtu.be/fcvhZme2iik?si=AGYuAXKLhBw6eTpr"
-  },
-  {
-    id: 6,
-    resourceImage: "/images/resources/resource-6.jpeg",
-    resourceType: "Video",
-    resourceCTA: "Watch",
-    resourceLink: "https://youtu.be/nGofnPQQNoM?si=Rjs2CyzcS4SxHjFO"
-  },
-  {
-    id: 7,
-    resourceImage: "/images/resources/resource-7-xprt-base.jpeg",
-    resourceType: "Video",
-    resourceCTA: "Watch",
-    resourceLink: "https://www.youtube.com/watch?v=zkoGFkiTpek"
-  },
-  {
-    id: 8,
-    resourceImage: "/images/resources/resource-8-aerodrome.jpeg",
-    resourceType: "Video",
-    resourceCTA: "Watch",
-    resourceLink: "https://www.youtube.com/watch?v=Rx5RxljGRbk"
+      "https://blog.persistence.one/2024/07/05/a-letter-to-persisters-the-new-journey-ahead/"
   }
 ];
 
@@ -114,25 +74,11 @@ const BlogSection = () => {
             {/*  <Text color={"#FFFFFF"}>Explore More</Text>*/}
             {/*</Link>*/}
           </HStack>
-          <Slider
-            {...{
-              dots: false,
-              arrows: false,
-              infinite: true,
-              slidesToShow: isMobile ? 1 : 3,
-              slidesToScroll: 1,
-              autoplay: true,
-              autoplaySpeed: 5000,
-              speed: 4000
-            }}
-            ref={(slider) => {
-              sliderRef = slider;
-            }}
-          >
+          <Box display="flex">
             {resourcesList.map((resource, index) => (
               <BlogCard key={resource.id} {...resource} />
             ))}
-          </Slider>
+          </Box>
         </Box>
       </Container>
     </Box>
