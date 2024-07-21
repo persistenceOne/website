@@ -39,8 +39,9 @@ const HeroSection = () => {
               textAlign={{ base: "left", md: "left" }}
               mb={{ base: 4, xl: 0 }}
             >
-              To make Bitcoin DeFi scaleable, we need to overcome the hurdles of
-              fragmentation. Thats where interoperability comes in.
+              To make Bitcoin DeFi scalable, we must overcome fragmentation.
+              That&apos;s where interoperability comes in. This is what
+              Persistence One is building.
             </Text>
           </Flex>
           <Box
@@ -50,8 +51,8 @@ const HeroSection = () => {
             <Image
               src="/images/vision/vision_hero.svg"
               alt="Persistence Coin"
-              width={{ base: 400, xl: 500 }}
-              height={{ base: 300, xl: 400 }}
+              width={{ base: 400, xl: 600 }}
+              height={{ base: 300, xl: 500 }}
             />
           </Box>
         </Flex>

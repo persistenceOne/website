@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 import Image from "next/image";
+import TallyForm from "@/components/molecules/tally-form";
 
 const CommunitySection = () => {
   return (
@@ -28,22 +29,7 @@ const CommunitySection = () => {
               vibrant Bitcoin ecosystem.
             </Heading>
             <Box textAlign={{ base: "center", md: "left" }}>
-              <Link
-                href={TELEGRAM_PERSISTENCE_COMMUNITY_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  color={"#FFFFFF"}
-                  w={"246px"}
-                  h={"52px"}
-                  variant={"ternary"}
-                  bg="#1D1306"
-                  rightIcon={<ArrowForwardIcon />}
-                >
-                  Connect With Us
-                </Button>
-              </Link>
+              <TallyForm page={"vision"} />
             </Box>
           </Box>
           <Image

@@ -69,15 +69,16 @@ const HeroSection = () => {
               mb={5}
               textAlign={{ base: "left", md: "left" }}
             >
-              Powering BTC Interoperability, Governing Intents
+              Powering BTC Interoperability, Governing Intents.
             </Heading>
             <Text
               textAlign="left"
               color={"#633C0DCC"}
               fontSize={{ base: "14px", md: "24px" }}
             >
-              XPRT is the multi-purpose native token for the Persistence dApp
-              and network
+              XPRT governance has the final say on major protocol parameter
+              changes, integrations, chain upgrades, community pool spend,
+              incentives, and more.
             </Text>
           </Box>
           <Flex gap={4} direction={{ base: "column", md: "row" }}>

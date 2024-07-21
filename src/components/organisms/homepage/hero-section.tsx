@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
+import TallyForm from "@/components/molecules/tally-form";
 
 const HeroSection = () => {
   const [tvl, ibcVolume, transactionCost, transactions, dexterInfo] =
@@ -126,13 +127,14 @@ const HeroSection = () => {
             </Heading>
             <Text
               textAlign={"left"}
-              maxW={{ base: "400px", xl: "690px" }}
+              maxW={{ base: "400px", xl: "650px" }}
               mb={"29px"}
               color={"#FFFFFFCC"}
               fontSize={{ base: "16px", xl: "26px" }}
               lineHeight={{ base: "28px", xl: "39px" }}
             >
-              Fast and no-slippage swaps across Bitcoin L2s. Secured by Bitcoin.
+              Fast, zero slippage cross-chain swaps across Bitcoin L2s. Secured
+              by Bitcoin.
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link
@@ -150,38 +152,8 @@ const HeroSection = () => {
                 >
                   Learn More
                 </Button>
-                {/*<Button*/}
-                {/*  variant={"secondary"}*/}
-                {/*  rightIcon={<ArrowForwardIcon />}*/}
-                {/*  h={"46px"}*/}
-                {/*  px={"36px"}*/}
-                {/*  w={{ base: "100%", md: "auto" }}*/}
-                {/*>*/}
-                {/*  Learn More*/}
-                {/*</Button>*/}
               </Link>
-              <Link href="/xprt" passHref>
-                <Button
-                  w={{ base: "100%", md: "235px" }}
-                  h={"46px"}
-                  variant={"secondary"}
-                  color={"#FFFFFF"}
-                  rightIcon={<ArrowForwardIcon />}
-                >
-                  Partner With Us
-                </Button>
-                {/*<Button*/}
-                {/*  w={{ base: "100%", md: "auto" }}*/}
-                {/*  bg={"primary.redHover"}*/}
-                {/*  h={"46px"}*/}
-                {/*  px={"36px"}*/}
-                {/*  borderColor={"primary.red"}*/}
-                {/*  rightIcon={<ArrowForwardIcon />}*/}
-                {/*  textColor={"#FFFFFF"}*/}
-                {/*>*/}
-                {/*  Partner With Us*/}
-                {/*</Button>*/}
-              </Link>
+              <TallyForm page={"home"} />
             </Stack>
           </Box>
         </Box>

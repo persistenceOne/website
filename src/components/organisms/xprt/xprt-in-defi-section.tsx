@@ -338,7 +338,7 @@ const XPRTInDefiSection = () => {
                 fontWeight={700}
                 lineHeight={{ base: "1.5", xl: "48px" }}
               >
-                Always verify XPRT token details for each chain
+                Ensure to verify XPRT token details for every chain.
               </Heading>
               <Box textAlign={{ base: "center", md: "left" }}>
                 <Link
@@ -357,7 +357,7 @@ const XPRTInDefiSection = () => {
                     bg="#1D1306"
                     rightIcon={<ArrowForwardIcon />}
                   >
-                    See Token Address
+                    Check Token details
                   </Button>
                 </Link>
               </Box>

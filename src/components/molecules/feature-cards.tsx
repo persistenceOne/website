@@ -65,8 +65,7 @@ const FeatureCards = () => {
           className={"aos-init aos-animate"}
           category="Experience"
           title="Building since 2019"
-          description="Since 2019, Persistence One has been leveraging its
-          expertise in DeFi, IBC interoperability, and the Persistence Core-1 Chain's security to tackle the challenge of Bitcoin interoperability in BTCfi."
+          description="Since 2019, Persistence One has built expertise in DeFi, IBC interoperability, and the Persistence Core-1 chain's security. Now, it's time to enter the BTCfi space and tackle Bitcoin interoperability challenges."
           image={`${commonImagePath}/building.svg`}
           imgWidth={196}
           cta={{
@@ -101,7 +100,7 @@ const FeatureCards = () => {
           className={"aos-init aos-animate"}
           aos={"fade-up-right"}
           title={`Advanced Technology. Streamlined User Journey.`}
-          description="SUsing cutting-edge technology like Cross-chain Intents, Persistence One is set to revolutionize user experience in BTCfi and remove the barriers to BTC movement."
+          description="Using cutting-edge technology like Cross-chain Intents, Persistence One is set to revolutionize user experience in BTCfi and remove the barriers to BTC movement."
           image={`${commonImagePath}/tech.svg`}
           imgWidth={280}
           cta={{
@@ -149,7 +148,7 @@ const FeatureCards = () => {
               lineHeight={{ base: "30px", xl: "40px" }}
               fontWeight={700}
             >
-              Be Part of the Movement
+              Be a part of the Movement.
             </Text>
             <Link
               href={"https://discord.com/invite/vyvp3scWnH"}
@@ -157,8 +156,6 @@ const FeatureCards = () => {
               rel="noopener noreferrer"
             >
               <Button
-                bg={"#FFFFFF"}
-                borderColor={"#8C5512"}
                 px={{ base: "16px", md: "24px" }}
                 rightIcon={<ArrowForwardIcon />}
                 variant={"secondary"}
