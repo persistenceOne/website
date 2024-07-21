@@ -546,7 +546,6 @@ const Header = () => {
           >
             {getMenuList("top-start", "hover", router.pathname)}
           </Stack>
-          <Spacer />
           {/*<Link*/}
           {/*  href="https://app.persistence.one"*/}
           {/*  target="_black"*/}

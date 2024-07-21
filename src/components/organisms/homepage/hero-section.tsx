@@ -138,7 +138,7 @@ const HeroSection = () => {
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link
-                href="https://app.persistence.one"
+                href="https://docs.persistence.one/"
                 target="_black"
                 rel="noopenner noreferrer"
                 passHref

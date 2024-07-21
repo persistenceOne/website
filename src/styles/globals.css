@@ -147,6 +147,14 @@ color: #000000;
   height: auto;
 }
 
+.icon-footer-github-icon {
+  fill: #9C9C9C;
+}
+
+.icon-footer-github-icon:hover{
+  fill: #918678;
+}
+
 .terms-sections  .subHeading{
   margin-bottom: 16px;
   font-size: 18px;

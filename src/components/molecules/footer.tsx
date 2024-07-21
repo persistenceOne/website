@@ -186,10 +186,10 @@ const Footer = () => {
                     <Box
                       w={"24px"}
                       h={"24px"}
-                      _hover={{ bg: "white" }}
+                      _hover={{ bg: "#918678" }}
                       borderRadius={"100%"}
                       className={"icon-box"}
-                      bg={"#918678"}
+                      bg={"#9C9C9C"}
                       style={{
                         display: "flex",
                         justifyContent: "center",
@@ -206,7 +206,7 @@ const Footer = () => {
                     <Box
                       w={"24px"}
                       h={"24px"}
-                      _hover={{ bg: "white" }}
+                      // _hover={{ bg: "white" }}
                       borderRadius={"100%"}
                       className={"icon-box"}
                       style={{
@@ -218,7 +218,7 @@ const Footer = () => {
                       <Icon
                         icon={link.icon}
                         color="white"
-                        viewClass={` ${link.iconType}`}
+                        viewClass={`footer-github-icon ${link.iconType}`}
                       />
                     </Box>
                   )}
