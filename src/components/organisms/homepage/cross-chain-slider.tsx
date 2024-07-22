@@ -10,6 +10,7 @@ import "swiper/css/autoplay";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import LottieAnimation from "@/components/molecules/test-lottie";
 
 const list = [
   {
@@ -111,33 +112,7 @@ const CrossChainSlider = () => {
                 flexDir={"column"}
                 className={"slider-card"}
               >
-                <Text
-                  px={6}
-                  pt={6}
-                  pb={"18px"}
-                  h={"114px"}
-                  color={"#633C0D"}
-                  fontSize={{ base: "22px" }}
-                  lineHeight={{ base: "20px", md: "33px" }}
-                  fontWeight={600}
-                  className={"slide-title"}
-                >
-                  {resource.title}
-                </Text>
-                <Box
-                  flex={1}
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  flexDir="column"
-                >
-                  <Image
-                    src={resource.imageUrl}
-                    width={100}
-                    height={5}
-                    alt={"Image"}
-                  />
-                </Box>
+                <LottieAnimation />
               </Box>
             </SwiperSlide>
           ))}

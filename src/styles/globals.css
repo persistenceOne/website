@@ -287,3 +287,15 @@ color: #000000;
 /*.swiper-slide-active .slider-card .slide-title{*/
 
 /*}*/
+
+
+.lottie-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Initial background color */
+  transition: background-color 0.3s ease;
+}
+
+.lottie-container.hovered {
+  background-color: red; /* Background color on hover */
+}
