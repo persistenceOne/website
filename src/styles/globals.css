@@ -60,15 +60,17 @@ stroke: #ececec;
 .blog-slider-arrow .icon {
   stroke: #000000;
 }
-/* navigation bar icon styling */
+
+.navbar-container.home{
+  background: #FCF7F1;
+}
+
+  /* navigation bar icon styling */
 .navbar-container.nav-bar {
   background: #FCF7F1;
 }
 
 .navbar-container .logo-box{
-  width: 236px;
-  height: 31px;
-  background-size: 236px;
   background-repeat: no-repeat;
 }
 

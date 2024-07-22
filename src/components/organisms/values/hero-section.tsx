@@ -19,6 +19,7 @@ const HeroSection = () => {
           justify={"space-between"}
           gap={"30px"}
           mb={{ base: "0px", md: "90px" }}
+          flexDirection={{ base: "column", md: "row" }}
         >
           <Flex
             // maxW={{ base: "500px", xl: "673px" }}

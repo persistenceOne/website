@@ -170,7 +170,7 @@ const menuItems = [
   }
 ];
 
-const getMenuListMobile = (onClose: () => void) => {
+const getMenuListMobile = (onClose: () => void, path: string) => {
   return (
     <Accordion h="100vh" mt={8}>
       {menuItems.map((item: any) => (
@@ -184,7 +184,13 @@ const getMenuListMobile = (onClose: () => void) => {
                   py={"8px"}
                   borderRadius={"6px"}
                   bg={isExpanded ? "#C732381A" : "transparent"}
-                  color={isExpanded ? "#C73238" : "black"}
+                  color={
+                    isExpanded
+                      ? "#C73238"
+                      : path === "/"
+                      ? "#000000"
+                      : "#000000"
+                  }
                   _hover={{ bg: "#C732381A", color: "#C73238" }}
                 >
                   {item.name}
@@ -508,9 +514,12 @@ const Header = () => {
   return (
     <Box
       id={"is-sticky"}
-      className={"navbar-container"}
+      className={`navbar-container ${isOpen ? "home" : ""}`}
       transition={"all 0.3s"}
-      bg={{ base: "#1B1003", md: "transparent" }}
+      bg={{
+        base: router.pathname === "/" ? "transparent" : "#FCF7F1",
+        md: "transparent"
+      }}
     >
       <Container
         maxW={"1440px"}
@@ -520,7 +529,7 @@ const Header = () => {
         mx={"auto"}
         bg={"transparent"}
         className={"navbar-box"}
-        my={"32px"}
+        my={{ base: "0", md: "32px" }}
         borderRadius={"1000px"}
       >
         <Flex
@@ -532,9 +541,19 @@ const Header = () => {
         >
           <Link href="/">
             {router.pathname !== "/" ? (
-              <Box className={"logo-box logo-dark cursor-pointer"}></Box>
+              <Box
+                width={"236px"}
+                height={"31px"}
+                backgroundSize={"236px"}
+                className={"logo-box logo-dark cursor-pointer"}
+              ></Box>
             ) : (
-              <Box className={"logo-box logo-light"}></Box>
+              <Box
+                width={"236px"}
+                height={"31px"}
+                backgroundSize={"236px"}
+                className={"logo-box logo-light"}
+              ></Box>
             )}
           </Link>
           <Spacer />
@@ -572,16 +591,27 @@ const Header = () => {
         >
           <Box>
             <Link href="/">
-              <Image
-                src="/images/persistence-logo-dark.svg"
-                alt="Persistence Logo"
-                width={180}
-                height={32}
-              />
+              {router.pathname !== "/" || isOpen ? (
+                <Box
+                  width={"160px"}
+                  height={"31px"}
+                  backgroundSize={"160px"}
+                  className={"logo-box logo-dark cursor-pointer"}
+                ></Box>
+              ) : (
+                <Box
+                  width={"160px"}
+                  backgroundSize={"160px"}
+                  height={"31px"}
+                  className={"logo-box logo-light"}
+                ></Box>
+              )}
             </Link>
           </Box>
           <IconButton
             size={"md"}
+            width={"40px"}
+            height={"40px"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
             display={{ md: "none" }}
@@ -589,7 +619,7 @@ const Header = () => {
             onClick={isOpen ? onClose : onOpen}
           />
         </Flex>
-        {isOpen ? getMenuListMobile(onClose) : null}
+        {isOpen ? getMenuListMobile(onClose, router.pathname) : null}
       </Container>
     </Box>
   );

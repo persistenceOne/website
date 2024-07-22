@@ -13,12 +13,12 @@ const HeroSection = () => {
   return (
     <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
       <Box>
-        <Spacer h={{ base: "80px", md: "140px" }} />
+        <Spacer h={{ base: "120px", md: "140px" }} />
         <Flex
           justify={"space-between"}
           gap={"30px"}
           mb={{ base: "0px", md: "90px" }}
-          // w={{ base: "auto", md: "55%" }}
+          flexDir={{ base: "column", md: "row" }}
         >
           <Flex flex={1} flexDir={"column"} justifyContent={"flex-end"}>
             <Heading

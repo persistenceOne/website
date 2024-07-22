@@ -327,7 +327,11 @@ const XPRTInDefiSection = () => {
           px={{ base: "20px", md: "100px" }}
           py={"36px"}
         >
-          <Flex alignItems={"center"} justifyContent={"space-between"}>
+          <Flex
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            flexDirection={{ base: "column", md: "row" }}
+          >
             <Box maxW={"500px"}>
               <Heading
                 fontSize={{ base: "22px", xl: "32px" }}

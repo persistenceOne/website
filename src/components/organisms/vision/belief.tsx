@@ -43,7 +43,7 @@ const Belief = () => {
         variant={"main"}
         fontSize={{ base: "26px", xl: "48px" }}
         lineHeight={{ base: "32px", xl: "72px" }}
-        mb={{ base: "20px", md: "100px" }}
+        mb={{ base: "40px", md: "100px" }}
         color="#633C0D"
         textAlign={"center"}
       >

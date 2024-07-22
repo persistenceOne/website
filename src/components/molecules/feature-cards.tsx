@@ -75,24 +75,12 @@ const FeatureCards = () => {
           }}
           type="vertical"
         />
-        {/*<Box*/}
-        {/*  pos={"absolute"}*/}
-        {/*  top={"-20px"}*/}
-        {/*  right={"-20px"}*/}
-        {/*  background={"#252424"}*/}
-        {/*  w={"220px"}*/}
-        {/*  h={"210px"}*/}
-        {/*  zIndex={-1}*/}
-        {/*  borderRadius={"20px"}*/}
-        {/*  opacity={isVisible ? 1 : 0}*/}
-        {/*  transition="opacity 1s"*/}
-        {/*/>*/}
       </Stack>
 
       <Stack
-        align={"stretch"}
         gap={4}
         pos={"relative"}
+        align={"stretch"}
         direction={{ base: "column", md: "row" }}
       >
         <FeatureCard
@@ -114,7 +102,7 @@ const FeatureCards = () => {
         />
 
         <VStack
-          width={"60%"}
+          width={{ base: "100%", md: "60%" }}
           align={"stretch"}
           gap={4}
           justify={"space-between"}
@@ -135,14 +123,16 @@ const FeatureCards = () => {
           />
 
           <Flex
-            justify={"space-between"}
+            justify={{ base: "center", md: "space-between" }}
             bg={"#E59636"}
             borderRadius={40}
             p={4}
             pl={8}
+            flexDir={{ base: "column", md: "row" }}
             align={"center"}
           >
             <Text
+              textAlign={{ base: "center", md: "left" }}
               color={"#FCFCFC"}
               fontSize={{ base: "20px", xl: "27px" }}
               lineHeight={{ base: "30px", xl: "40px" }}

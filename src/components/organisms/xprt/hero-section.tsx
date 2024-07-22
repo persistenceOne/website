@@ -59,6 +59,7 @@ const HeroSection = () => {
         align={"flex-start"}
         pos={"relative"}
         mb={{ base: "40px", md: "60px" }}
+        flexDirection={{ base: "column", md: "row" }}
       >
         <VStack mt={"100px"} w={{ base: "100%", md: "50%" }} align={"stretch"}>
           <Box maxW={{ base: "400px", xl: "600px" }} mb={"30px"}>

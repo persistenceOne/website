@@ -62,7 +62,9 @@ const HeroSection = () => {
         <Box
           // mb={{ base: "20px", md: "60px" }}
           pt={{ base: "40px", md: "50px", xl: "122px" }}
-          pl={"80px"}
+          pl={{ base: "20px", md: "80px" }}
+          pr={{ base: "20px", md: "0px" }}
+          pb={{ base: "40px", md: "0px" }}
           display="flex"
         >
           {/*<Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>*/}

@@ -81,7 +81,7 @@ const DappCard = ({
             >
               {dAppDescription}
             </Text>
-            <HStack gap={12} mb={"70px"}>
+            <HStack gap={{ base: 4, md: 12 }} mb={"70px"} wrap={"wrap"}>
               {dAppStats.map((stat) => (
                 <Box key={stat.label}>
                   <Text
@@ -107,7 +107,10 @@ const DappCard = ({
               </Button>
             </Link>
           </Box>
-          <Box w={{ base: "300px", xl: "515px" }}>
+          <Box
+            w={{ base: "300px", xl: "515px" }}
+            display={{ base: "none", md: "block" }}
+          >
             <Image
               src={"/images/home-page/dex.svg"}
               alt={"Dex"}

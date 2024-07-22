@@ -28,9 +28,9 @@ const GetXprtSection = () => {
         <HStack bg="#" justify={"space-between"}>
           <Box
             w={{ base: "250px", xl: "300px" }}
-            display="flex"
             alignItems="center"
             justifyContent="center"
+            display={{ base: "none", md: "flex" }}
           >
             <Image
               src={"/images/home-page/fuel.svg"}
@@ -60,13 +60,14 @@ const GetXprtSection = () => {
               like whitelisting intent solvers, protocol fee discounts, and
               more.
             </Text>
-            <HStack gap={4}>
+            <HStack gap={4} flexDir={{ base: "column", md: "row" }}>
               <Link
                 href={"https://wallet.keplr.app/chains/persistence"}
                 target="_blank"
                 rel="noopener noreferrer"
+                w={{ base: "100%", md: "auto" }}
               >
-                <Button variant={"primary"} w={"163px"}>
+                <Button variant={"primary"} w={{ base: "100%", md: "163px" }}>
                   Stake XPRT
                 </Button>
               </Link>
@@ -74,8 +75,9 @@ const GetXprtSection = () => {
                 href={"https://www.coingecko.com/en/coins/persistence"}
                 target="_blank"
                 rel="noopener noreferrer"
+                w={{ base: "100%", md: "auto" }}
               >
-                <Button w={"145px"} variant={"secondary"}>
+                <Button w={{ base: "100%", md: "145px" }} variant={"secondary"}>
                   Get XPRT
                 </Button>
               </Link>

@@ -14,6 +14,7 @@ const CommunitySection = () => {
           alignItems={"center"}
           className="aos-init aos-animate py-10"
           data-aos="fade-up"
+          flexDirection={{ base: "column", md: "row" }}
         >
           <Box flex={1}>
             <Heading

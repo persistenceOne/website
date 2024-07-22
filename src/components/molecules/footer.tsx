@@ -229,7 +229,7 @@ const Footer = () => {
           <SimpleGrid
             flex={1}
             columns={2}
-            gap={"130px"}
+            gap={{ base: "30px", md: "130px" }}
             justifyContent={"end"}
             display={{ base: "grid", md: "flex" }}
           >
@@ -277,7 +277,7 @@ const Footer = () => {
         </Flex>
         <HStack
           gap={4}
-          mt={4}
+          mt={6}
           display={{ base: "flex", md: "none" }}
           justify={"center"}
         >
@@ -313,7 +313,12 @@ const Footer = () => {
             mt={4}
             gap={4}
           >
-            <Text fontSize={14} fontWeight={400} color={"#ECECEC"}>
+            <Text
+              fontSize={14}
+              fontWeight={400}
+              color={"#ECECEC"}
+              textAlign={{ base: "center", md: "left" }}
+            >
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
