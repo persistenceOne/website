@@ -140,7 +140,7 @@ const HeroSection = () => {
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link
-                href="https://docs.persistence.one/"
+                href="https://blog.persistence.one/2024/07/17/bridge-without-bridging-why-btcfi-needs-an-interoperability-solution/"
                 target="_black"
                 rel="noopenner noreferrer"
                 passHref

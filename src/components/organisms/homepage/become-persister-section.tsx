@@ -27,6 +27,7 @@ const BecomePersisterSection = ({
   return (
     <>
       <Container
+        id={"becomePersister"}
         maxW={"1300px"}
         px={{ base: "16px", md: "30px" }}
         py={"60px"}

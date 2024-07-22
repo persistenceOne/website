@@ -141,8 +141,8 @@ const FeatureCards = () => {
               Be a part of the Movement.
             </Text>
             <Link
-              href={"https://discord.com/invite/vyvp3scWnH"}
-              target="_blank"
+              href={"/values#becomePersister"}
+              target="_self"
               rel="noopener noreferrer"
             >
               <Button
