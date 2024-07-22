@@ -81,7 +81,7 @@ const DappCard = ({
             >
               {dAppDescription}
             </Text>
-            <HStack gap={{ base: 4, md: 12 }} mb={"70px"} wrap={"wrap"}>
+            <HStack gap={{ base: 4, md: 12 }} mb={"40px"} wrap={"wrap"}>
               {dAppStats.map((stat) => (
                 <Box key={stat.label}>
                   <Text

@@ -186,7 +186,7 @@ const Footer = () => {
                     <Box
                       w={"24px"}
                       h={"24px"}
-                      _hover={{ bg: "#918678" }}
+                      _hover={{ bg: "#E59636" }}
                       borderRadius={"100%"}
                       className={"icon-box"}
                       bg={"#9C9C9C"}

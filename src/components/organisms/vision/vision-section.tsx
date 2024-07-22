@@ -64,6 +64,15 @@ const VisionSection = () => {
               direction={"column"}
               key={index}
               boxShadow={"lg"}
+              transform={"scale(1)"}
+              transitionDuration={"0.5s"}
+              transitionTimingFunction={"all ease-in"}
+              _hover={{
+                transform: "scale(1.1)",
+                zIndex: 10,
+                transitionDuration: "0.5s",
+                transitionTimingFunction: "all ease-in"
+              }}
             >
               <Box display={"flex"} flexDir={"column"}>
                 <Text

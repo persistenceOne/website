@@ -30,6 +30,7 @@ const GetXprtSection = () => {
             w={{ base: "250px", xl: "300px" }}
             alignItems="center"
             justifyContent="center"
+            mx={"auto"}
             display={{ base: "none", md: "flex" }}
           >
             <Image
