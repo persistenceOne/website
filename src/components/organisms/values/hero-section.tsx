@@ -21,12 +21,7 @@ const HeroSection = () => {
           mb={{ base: "0px", md: "90px" }}
           flexDirection={{ base: "column", md: "row" }}
         >
-          <Flex
-            // maxW={{ base: "500px", xl: "673px" }}
-            flex={1}
-            flexDir={"column"}
-            justifyContent={"flex-end"}
-          >
+          <Flex flex={1} flexDir={"column"} justifyContent={"flex-end"}>
             <Heading
               variant={"main"}
               color={"#633C0D"}
