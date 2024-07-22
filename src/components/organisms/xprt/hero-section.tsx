@@ -54,14 +54,14 @@ const HeroSection = () => {
       pt={"109px"}
       pb={"54px"}
     >
-      <Spacer h={{ base: "40px", xl: "140px" }} />
+      <Spacer h={{ base: "40px", xl: "80px" }} />
       <Flex
         align={"flex-start"}
         pos={"relative"}
         mb={{ base: "40px", md: "60px" }}
         flexDirection={{ base: "column", md: "row" }}
       >
-        <VStack mt={"100px"} w={{ base: "100%", md: "50%" }} align={"stretch"}>
+        <VStack mt={"100px"} w={{ base: "100%", md: "45%" }} align={"stretch"}>
           <Box maxW={{ base: "400px", xl: "600px" }} mb={"30px"}>
             <Heading
               fontSize={{ base: "36px", xl: "50px" }}
@@ -108,12 +108,14 @@ const HeroSection = () => {
           </Flex>
         </VStack>
         <Box
-        // bottom={0}
-        // display={{ base: "block", md: "none" }}
+          // bottom={0}
+          // display={{ base: "block", md: "none" }}
+          flexGrow={1}
         >
           <Image
             src="/images/xprt-page/xprt_hero.svg"
             alt="Persistence Coin"
+            mx={"auto"}
             width={{ base: 330, xl: 521 }}
             height={{ base: 300, xl: 490 }}
           />
