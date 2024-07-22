@@ -350,27 +350,17 @@ export const getBondedTokens = async () => {
 
 export const fetchDexterUsers = async () => {
   try {
-    const date = new Date();
-    const currentDate = date.toISOString().split("T")[0];
     const res = await fetch(
-      "/api/users?" +
-        new URLSearchParams({
-          startDate: "",
-          endDate: currentDate
-        })
+      "https://api.core-1.dexter.zone/api/rest/overview_info"
     );
+    let totalTraders = 0;
     const data = await res.json();
-    const monthlyTotalUsers = data.data.monthlyData.reduce(
-      (acc: any, item: any) => {
-        return acc + item.user_count;
-      },
-      0
-    );
-    const finalData = {
-      monthlyTotalUsers
-    };
-    console.log(finalData, "finalData");
-    return finalData;
+    if (data && data.overview_total_info) {
+      totalTraders =
+        data.overview_total_info[0].total_traders +
+        data.overview_total_info[0].total_lp_providers;
+    }
+    return totalTraders;
   } catch (e) {
     console.log(e, "error in fetchDexterInfo");
     return {

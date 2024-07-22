@@ -501,8 +501,7 @@ const Header = () => {
         setDexterTotalVolume(resp.volume);
       });
       fetchDexterUsers().then((userResponse) => {
-        setDexterUsers(userResponse?.monthlyTotalUsers);
-        console.log(userResponse, "userResponse");
+        setDexterUsers(userResponse);
       });
       fetchOsmosisPoolInfo().then((osmoResponse) => {
         setOsmoPoolInfo(osmoResponse);
