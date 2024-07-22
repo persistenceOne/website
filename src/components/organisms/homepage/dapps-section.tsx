@@ -24,7 +24,7 @@ const getData = (dexterInfo: any) => {
         },
         {
           label: "Total Users",
-          value: `$${numberFormat(Number(dexterInfo.allTimeUsers), 3)}`
+          value: `${numberFormat(Number(dexterInfo.allTimeUsers), 3)}`
         }
       ],
       supportingAssets: [

@@ -16,39 +16,27 @@ import React from "react";
 const openPositionsList = [
   {
     id: 0,
+    jobRole: "Growth Marketer",
+    jobLocation: "Remote",
+    link: "https://careers.persistence.one/jobs/696QHAnIpO59/growth-marketer-remote"
+  },
+  {
+    id: 1,
+    jobRole: "DevSecOps Engineer ",
+    jobLocation: "Remote",
+    link: "https://careers.persistence.one/jobs/wFBf6o0LKUhK/devsecops-engineer-remote"
+  },
+  {
+    id: 2,
     jobRole: "Frontend Engineer",
     jobLocation: "Remote",
     link: "https://careers.persistence.one/jobs/gHvya2A-f2oa/front-end-engineer-remote"
   },
   {
-    id: 1,
-    jobRole: "Video Editor",
-    jobLocation: "Remote",
-    link: "https://careers.persistence.one/jobs/f2S3LPfQ_734/video-editor-remote"
-  },
-  {
-    id: 2,
-    jobRole: "Golang Engineer",
-    jobLocation: "Remote",
-    link: "https://careers.persistence.one/jobs/YJ7cvfyUm4eW/golang-engineer-remote"
-  },
-  {
     id: 3,
-    jobRole: "Marketing Associate",
-    jobLocation: "Remote",
-    link: "https://careers.persistence.one/jobs/W6OH4p6zAMPm/marketing-associate-remote"
-  },
-  {
-    id: 4,
     jobRole: "Senior Rust Engineer",
     jobLocation: "Remote",
     link: "https://careers.persistence.one/jobs/Um1WiGrfyzOk/senior-rust-engineer-remote"
-  },
-  {
-    id: 5,
-    jobRole: "Social Media Specialist",
-    jobLocation: "Remote",
-    link: "https://careers.persistence.one/jobs/14_H7W1gmRcg/social-media-specialist-remote"
   }
 ];
 
@@ -66,34 +54,34 @@ const JoinTeamPanel = () => {
         <br /> Liquid Staking yield with Persistence Labs.
       </Text>
       <Box gap={4} display={{ base: "block", md: "flex" }}>
-        <Card borderRadius={"20px"} p={8} mb={{ base: "10px", md: "0" }}>
+        <Card borderRadius={"20px"} p={6} mb={{ base: "10px", md: "0" }}>
           <VStack align={"flex-start"}>
             <Text fontSize={12}>Mission</Text>
             <Text
               fontWeight={700}
-              fontSize={{ base: "20px", md: "42px" }}
-              color={"text.blackHigh"}
+              color={"#423F40"}
+              fontSize={{ base: "20px", md: "30px" }}
             >
               Humility
             </Text>
             <Text
               fontWeight={700}
-              fontSize={{ base: "20px", md: "42px" }}
-              color={"text.blackHigh"}
+              fontSize={{ base: "20px", md: "30px" }}
+              color={"#423F40"}
             >
               Integrity
             </Text>
             <Text
               fontWeight={700}
-              fontSize={{ base: "20px", md: "42px" }}
-              color={"text.blackHigh"}
+              fontSize={{ base: "20px", md: "30px" }}
+              color={"#423F40"}
             >
               Patience
             </Text>
             <Text
               fontWeight={700}
-              fontSize={{ base: "20px", md: "42px" }}
-              color={"text.blackHigh"}
+              fontSize={{ base: "20px", md: "30px" }}
+              color={"#423F40"}
             >
               Persistence
             </Text>
@@ -105,7 +93,7 @@ const JoinTeamPanel = () => {
                 fontSize={14}
                 _hover={{ color: "primary.red" }}
               >
-                Learn more about working with us
+                Learn About The Persistent Vision
               </Button>
             </Link>
           </VStack>
@@ -115,6 +103,7 @@ const JoinTeamPanel = () => {
             justify={"space-between"}
             pb={{ base: "16px", md: "30px" }}
             direction={{ base: "column", md: "row" }}
+            alignItems={"center"}
           >
             <VStack align={"flex-start"} gap={0} mb={{ base: "10px", md: "0" }}>
               <Text fontWeight={600} fontSize={20} color="#3D3D3D">
@@ -130,9 +119,11 @@ const JoinTeamPanel = () => {
               rel="noopener noreferrer"
             >
               <Button
-                variant={"primary"}
+                variant={"ternary"}
+                borderColor={"#423F40CC"}
                 color={"text.headingBlack"}
                 fontSize={14}
+                bg={"transparent"}
                 w={{ base: "100%", md: "auto" }}
                 px={12}
               >
@@ -151,7 +142,7 @@ const JoinTeamPanel = () => {
                   align={"center"}
                   justify={"space-between"}
                   border={"1px solid transparent"}
-                  bg="#F5F5F5"
+                  bg="#FCF7F1"
                   py={4}
                   px={6}
                   borderRadius={20}
