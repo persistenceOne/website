@@ -101,7 +101,13 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button w={"100%"} variant={"secondary"}>
+              <Button
+                w={"100%"}
+                bg={"#1D1306"}
+                value={"ternary"}
+                _hover={{ bg: "#1D1306" }}
+                color="#FFFFFF"
+              >
                 Get XPRT
               </Button>
             </Link>

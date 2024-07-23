@@ -146,7 +146,7 @@ const JoinTeamPanel = () => {
                   py={4}
                   px={6}
                   borderRadius={20}
-                  // _hover={{ border: "1px solid #C73238" }}
+                  _hover={{ border: "1px solid #E59636" }}
                 >
                   <VStack align={"flex-start"} gap={0}>
                     <Text fontWeight={600} fontSize={14} color={"#3D3D3D"}>

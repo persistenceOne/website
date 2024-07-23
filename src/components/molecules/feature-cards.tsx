@@ -148,7 +148,10 @@ const FeatureCards = () => {
               <Button
                 px={{ base: "16px", md: "24px" }}
                 rightIcon={<ArrowForwardIcon />}
-                variant={"secondary"}
+                bg={"#1D1306"}
+                value={"ternary"}
+                _hover={{ bg: "#1D1306" }}
+                color="#FFFFFF"
               >
                 Join the Community
               </Button>
