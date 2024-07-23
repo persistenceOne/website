@@ -65,27 +65,27 @@ const CrossChainSlider = () => {
           ₿itcoin Transfers Cross-chain
         </Heading>
         <Swiper
-          slidesPerView={5.2}
+          // slidesPerView={5.2}
           spaceBetween={18}
           speed={1000}
           centeredSlides={true}
           loop={true}
-          autoplay={{
-            delay: 3000,
-            duration: 3000,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: true,
-            waitForTransition: true,
-            reverseDirection: false
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   duration: 3000,
+          //   disableOnInteraction: true,
+          //   pauseOnMouseEnter: true,
+          //   waitForTransition: true,
+          //   reverseDirection: false
+          // }}
           breakpoints={{
-            340: {
-              width: 340,
+            420: {
               slidesPerView: 1
+              // spaceBetween: 20
             },
-            640: {
-              width: 640,
-              slidesPerView: 2
+            540: {
+              slidesPerView: 2.2
+              // spaceBetween: 20
             },
             1220: {
               width: 1220,
@@ -102,7 +102,7 @@ const CrossChainSlider = () => {
           {list.map((resource, index) => (
             <SwiperSlide key={index}>
               <Box
-                bg="#fff"
+                // bg="#fff"
                 borderRadius={"24px"}
                 h={"450px"}
                 my={2}
@@ -142,6 +142,7 @@ const CrossChainSlider = () => {
                   overflow={"hidden"}
                   bg={"#FFFFFF"}
                   pt={"140px"}
+                  pb={"70px"}
                   // _hover={{
                   //   bg: "#E59636"
                   // }}
