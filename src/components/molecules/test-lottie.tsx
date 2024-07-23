@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../../public/images/lotties/error.json"; // Adjust this path
+import animationData from "../../../public/images/lotties/btc.json"; // Adjust this path
 
 const LottieAnimation = () => {
   const [isHovered, setIsHovered] = useState(false);

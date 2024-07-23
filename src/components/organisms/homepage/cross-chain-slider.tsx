@@ -16,33 +16,33 @@ const list = [
   {
     title: "Swap BTC for BTC",
     content: `< show swaps between 1 BTC variant to another> - via animation`,
-    imageUrl: "/images/home-page/slides/slide1.svg"
+    imageUrl: <LottieAnimation />
   },
   {
     title: "Bridge without bridging",
     content: "Cross-chain transfers between BTC L2s, EVM, etc",
-    imageUrl: "/images/home-page/slides/slide2.svg"
+    imageUrl: <LottieAnimation />
   },
   {
     title: "Low Slippage, High Speed",
     content: "< show fast movement via animation>",
-    imageUrl: "/images/home-page/slides/slide3.svg"
+    imageUrl: <LottieAnimation />
   },
   {
     title: "Secured by Bitcoin",
     content: "Shared BTC security via Babylon",
-    imageUrl: "/images/home-page/slides/slide4.svg"
+    imageUrl: <LottieAnimation />
   },
   {
     title: "Scalable Liquidity, No limitations",
     content: "Powered by Cross-chain Intents",
-    imageUrl: "/images/home-page/slides/slide5.svg"
+    imageUrl: <LottieAnimation />
   },
   {
     title: "Trading for BTC and LSTs on the DEX",
     content:
       "Efficient trading and LPing for BTC ecosystem assets, LSTs, and Stablecoins.",
-    imageUrl: "/images/home-page/slides/slide6.svg"
+    imageUrl: <LottieAnimation />
   }
 ];
 const CrossChainSlider = () => {
@@ -71,14 +71,14 @@ const CrossChainSlider = () => {
           speed={2000}
           centeredSlides={true}
           loop={true}
-          autoplay={{
-            delay: 2000,
-            duration: 3000,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: true,
-            waitForTransition: true,
-            reverseDirection: false
-          }}
+          // autoplay={{
+          //   delay: 2000,
+          //   duration: 3000,
+          //   disableOnInteraction: true,
+          //   pauseOnMouseEnter: true,
+          //   waitForTransition: true,
+          //   reverseDirection: false
+          // }}
           breakpoints={{
             340: {
               width: 340,
