@@ -276,51 +276,55 @@ color: #000000;
   /*top: -48px;*/
 }
 
-/*.swiper{*/
-/*  padding: 30px 0 !important;*/
-/*}*/
+.swiper{
+  padding: 30px 0 !important;
+}
 
-/*.swiper-slide .slider-card{*/
-/*  transform: scale(1);*/
-/*  transition-duration: 0.5s;*/
-/*  transition-timing-function: ease-in-out;*/
-/*}*/
+.swiper-slide .slider-card{
+  transform: scale(1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
 
-/*.swiper-slide-active{*/
-/*  z-index: 10;*/
-/*}*/
+.swiper-slide-active{
+  z-index: 10;
+}
 
-/*.swiper-backface-hidden .swiper-slide{*/
-/*  margin: 0 !important;*/
-/*  transform: scale(0.96) !important;*/
-/*  transition-duration: 0.5s;*/
-/*  transition-timing-function: ease-in-out;*/
-/*}*/
+.swiper-backface-hidden .swiper-slide{
+  margin: 0 !important;
+  transform: scale(0.96) !important;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
 
-/*.swiper-slide.swiper-slide-prev{*/
-/*  margin-right: 20px !important;*/
-/*}*/
-/*.swiper-slide.swiper-slide-next{*/
-/*  margin-left: 20px !important;*/
-/*}*/
+.swiper-slide.swiper-slide-prev{
+  margin-right: 20px !important;
+}
+.swiper-slide.swiper-slide-next{
+  margin-left: 20px !important;
+}
 
-/*.swiper-slide.swiper-slide-active{*/
-/*  transform: scale(1.1) !important;*/
-/*  transition-duration: 0.5s;*/
-/*  transition-timing-function: ease-in-out;*/
-/*}*/
+.swiper-slide.swiper-slide-active{
+  transform: scale(1.1) !important;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+}
 
-/*.swiper-slide-active .slider-card{*/
-/*  !*transform: scale(1.2, 1.1);*!*/
-/*  z-index: 10;*/
-/*  transition-duration: 0.5s;*/
-/*  transition-timing-function: ease-in-out;*/
-/*}*/
+.swiper-slide-active .slider-card{
+  /*transform: scale(1.2, 1.1);*/
+  z-index: 10;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+}
 
-/*.swiper-slide-active .slider-card{*/
-/*  background:#E59636;*/
-/*  border: 1.1px solid #8C5512;*/
-/*}*/
-/*.swiper-slide-active .slider-card .slide-title{*/
+.swiper-slide-active .slider-card .video-container{
+  background:#E59636;
+  border: 1.1px solid #8C5512;
+}
+.swiper-slide-active .slider-card .slide-title{
+  color: #FEFDFB !important;
+}
 
-/*}*/
+.swiper-slide-active .slider-card .slide-title{
+
+}

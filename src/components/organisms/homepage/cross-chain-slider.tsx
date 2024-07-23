@@ -15,33 +15,33 @@ const list = [
   {
     title: "Swap BTC for BTC",
     content: `< show swaps between 1 BTC variant to another> - via animation`,
-    imageUrl: "/images/home-page/slides/slide1.svg"
+    imageUrl: "/images/anim/slide1.mov"
   },
   {
     title: "Bridge without bridging",
     content: "Cross-chain transfers between BTC L2s, EVM, etc",
-    imageUrl: "/images/home-page/slides/slide2.svg"
+    imageUrl: "/images/anim/slide2.mov"
   },
   {
     title: "Low Slippage, High Speed",
     content: "< show fast movement via animation>",
-    imageUrl: "/images/home-page/slides/slide3.svg"
+    imageUrl: "/images/anim/slide3.mov"
   },
   {
     title: "Secured by Bitcoin",
     content: "Shared BTC security via Babylon",
-    imageUrl: "/images/home-page/slides/slide4.svg"
+    imageUrl: "/images/anim/slide4.mov"
   },
   {
     title: "Scalable Liquidity, No limitations",
     content: "Powered by Cross-chain Intents",
-    imageUrl: "/images/home-page/slides/slide5.svg"
+    imageUrl: "/images/anim/slide5.mov"
   },
   {
     title: "Trading for BTC and LSTs on the DEX",
     content:
       "Efficient trading and LPing for BTC ecosystem assets, LSTs, and Stablecoins.",
-    imageUrl: "/images/home-page/slides/slide6.svg"
+    imageUrl: "/images/anim/slide6.mov"
   }
 ];
 const CrossChainSlider = () => {
@@ -67,11 +67,11 @@ const CrossChainSlider = () => {
         <Swiper
           slidesPerView={5.2}
           spaceBetween={18}
-          speed={2000}
+          speed={1000}
           centeredSlides={true}
           loop={true}
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             duration: 3000,
             disableOnInteraction: true,
             pauseOnMouseEnter: true,
@@ -110,6 +110,7 @@ const CrossChainSlider = () => {
                 display={"flex"}
                 flexDir={"column"}
                 className={"slider-card"}
+                position={"relative"}
               >
                 <Text
                   px={6}
@@ -121,21 +122,42 @@ const CrossChainSlider = () => {
                   lineHeight={{ base: "20px", md: "33px" }}
                   fontWeight={600}
                   className={"slide-title"}
+                  position={"absolute"}
+                  top={"20px"}
+                  zIndex={10}
                 >
                   {resource.title}
                 </Text>
                 <Box
+                  className={"video-container"}
                   flex={1}
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
                   flexDir="column"
+                  position={"absolute"}
+                  top={0}
+                  bottom={0}
+                  borderRadius={"24px"}
+                  overflow={"hidden"}
+                  bg={"#FFFFFF"}
+                  pt={"140px"}
+                  // _hover={{
+                  //   bg: "#E59636"
+                  // }}
                 >
-                  <Image
+                  {/*<Image*/}
+                  {/*  src={resource.imageUrl}*/}
+                  {/*  width={100}*/}
+                  {/*  height={5}*/}
+                  {/*  alt={"Image"}*/}
+                  {/*/>*/}
+                  <video
+                    autoPlay={true}
+                    preload="auto"
+                    muted={true}
+                    loop={true}
                     src={resource.imageUrl}
-                    width={100}
-                    height={5}
-                    alt={"Image"}
                   />
                 </Box>
               </Box>

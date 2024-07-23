@@ -78,7 +78,13 @@ const GetXprtSection = () => {
                 rel="noopener noreferrer"
                 w={{ base: "100%", md: "auto" }}
               >
-                <Button w={{ base: "100%", md: "145px" }} variant={"secondary"}>
+                <Button
+                  w={{ base: "100%", md: "145px" }}
+                  bg={"#1D1306"}
+                  value={"ternary"}
+                  _hover={{ bg: "#1D1306" }}
+                  color="#FFFFFF"
+                >
                   Get XPRT
                 </Button>
               </Link>
