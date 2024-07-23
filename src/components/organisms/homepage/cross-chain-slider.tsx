@@ -73,8 +73,8 @@ const CrossChainSlider = () => {
           autoplay={{
             delay: 1000,
             duration: 1000,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: true,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
             waitForTransition: true,
             reverseDirection: false
           }}
@@ -151,6 +151,7 @@ const CrossChainSlider = () => {
                   {/*/>*/}
                   <video
                     autoPlay={true}
+                    controls={false}
                     preload="auto"
                     muted={true}
                     loop={true}
