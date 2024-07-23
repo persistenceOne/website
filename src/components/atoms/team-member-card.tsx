@@ -66,7 +66,7 @@ const TeamMemberCard = ({
                 justifyContent: "center"
               }}
             >
-              <Icon icon={item.icon} />
+              <Icon icon={item.icon} viewClass={"team-social"} />
             </Box>
           </Link>
         ))}

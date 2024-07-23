@@ -67,7 +67,7 @@ const CrossChainSlider = () => {
         <Swiper
           // slidesPerView={5.2}
           spaceBetween={18}
-          speed={1500}
+          speed={1000}
           centeredSlides={true}
           loop={true}
           autoplay={{
