@@ -114,7 +114,7 @@ const CrossChainSlider = () => {
               >
                 <Text
                   px={6}
-                  pt={6}
+                  pt={2}
                   pb={"18px"}
                   h={"114px"}
                   color={"#633C0D"}
