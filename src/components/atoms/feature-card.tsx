@@ -59,7 +59,7 @@ const FeatureCard = ({
       py={"25px"}
       px={"30px"}
     >
-      <CardHeader fontSize={12} p={"0"} fontWeight={"300"} color={"#918678"}>
+      <CardHeader fontSize={14} p={"0"} fontWeight={"300"} color={"#918678"}>
         {category}
       </CardHeader>
       {type === "horizontal" ? (

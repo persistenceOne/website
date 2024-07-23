@@ -86,6 +86,7 @@ const VisionSection = () => {
                 <Image
                   src={item.imgUrl}
                   alt={item.title}
+                  px={{ base: "20px", md: "40px" }}
                   width={{ base: 250, xl: 401 }}
                   height={{ base: 190, xl: 340 }}
                   // objectFit="cover"

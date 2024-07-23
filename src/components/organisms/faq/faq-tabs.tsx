@@ -64,7 +64,7 @@ const FaqTabs = () => {
           bg="white"
           borderRadius={8}
           alignSelf={"center"}
-          w={["70vw", "40vw"]}
+          w={{ base: "100%", md: "370px" }}
           mr={2}
           boxShadow={"md"}
           mt={"40px"}
