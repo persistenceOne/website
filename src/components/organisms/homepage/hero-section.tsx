@@ -95,7 +95,7 @@ const HeroSection = () => {
               preload="auto"
               muted={true}
               loop={true}
-              src="/images/hero.mp4"
+              src="/images/home-page/hero.mp4"
               className="bg-video"
             />
             {/*<Image*/}
