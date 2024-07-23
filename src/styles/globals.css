@@ -322,15 +322,22 @@ color: #000000;
 
 @media (max-width: 540px) {
   .swiper-slide.swiper-slide-active{
-    transform: scale(1) !important;
+    transform: scale(0.96) !important;
     margin: auto !important;
   }
   .swiper-slide-active .slider-card{
     box-shadow: none;
-
   }
+  /*.swiper-slide.swiper-slide-prev{*/
+  /*  margin-right: 0px !important;*/
+  /*}*/
+  /*.swiper-slide.swiper-slide-next{*/
+  /*  margin-left: 0px !important;*/
+  /*}*/
+
   .swiper-slide-active .slider-card .video-container{
     margin: 0 14px;
+    background-size: inherit !important;
   }
 }
 

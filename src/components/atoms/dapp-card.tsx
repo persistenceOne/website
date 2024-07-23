@@ -102,7 +102,7 @@ const DappCard = ({
               ))}
             </HStack>
             <Link href={button.link} target="_blank" rel="noopener noreferrer">
-              <Button w={"182px"} variant={"primary"}>
+              <Button w={{ base: "100%", md: "182px" }} variant={"primary"}>
                 {button.text}
               </Button>
             </Link>

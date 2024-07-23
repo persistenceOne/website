@@ -79,14 +79,9 @@ const CrossChainSlider = () => {
             reverseDirection: false
           }}
           breakpoints={{
-            420: {
-              slidesPerView: 1
-              // spaceBetween: 20
-            },
-            540: {
-              slidesPerView: 2.2
-              // spaceBetween: 20
-            },
+            320: { slidesPerView: 1, spaceBetween: 10 },
+            480: { slidesPerView: 1.5, spaceBetween: 15 },
+            // 768: { slidesPerView: 3, spaceBetween: 50 },
             1220: {
               width: 1220,
               slidesPerView: 3.4
@@ -118,8 +113,8 @@ const CrossChainSlider = () => {
                   pb={"18px"}
                   h={"114px"}
                   color={"#633C0D"}
-                  fontSize={{ base: "22px" }}
-                  lineHeight={{ base: "20px", md: "33px" }}
+                  fontSize={{ base: "16px", md: "22px" }}
+                  lineHeight={{ base: "30px", md: "33px" }}
                   fontWeight={600}
                   className={"slide-title"}
                   position={"absolute"}
