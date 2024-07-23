@@ -127,6 +127,26 @@ const footerLinks = [
         isExternal: true
       }
     ]
+  },
+  {
+    title: "Community",
+    links: [
+      {
+        title: "X (Twitter)",
+        link: "https://twitter.com/PersistenceOne",
+        isExternal: true
+      },
+      {
+        title: "Discord",
+        link: "https://discord.com/invite/vyvp3scWnH",
+        isExternal: true
+      },
+      {
+        title: "Telegram",
+        link: "https://t.me/persistenceone",
+        isExternal: true
+      }
+    ]
   }
 ];
 

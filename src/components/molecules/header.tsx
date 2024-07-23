@@ -93,31 +93,41 @@ const menuItems = [
     name: "XPRT",
     subItems: [
       {
-        title: "XPRT",
+        title: "About",
         description: "Learn about the native token fueling the ecosystem",
-        icon: "xprt-nav",
+        icon: "about",
         iconType: "fill",
         link: "/xprt",
         isExternal: false,
         comingSoon: false
       },
       {
-        title: "Stats",
+        title: "Staking",
         description:
           "Interact with on-chain data like TVL, volume, yields, and more",
-        icon: "stats1",
+        icon: "staking",
         iconType: "stroke",
-        link: "https://stats.persistence.one",
+        link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true,
         comingSoon: false
       },
       {
-        title: "Ecosystem",
+        title: "Wallet",
         description:
           "Explore the dApps, validators, and partners contributing to the ecosystem",
-        icon: "ecosystem",
-        iconType: "fill",
-        link: MINTSCAN_ECOSYSTEM_LINK,
+        icon: "wallet",
+        iconType: "stroke",
+        link: "https://wallet.persistence.one/",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Explorer",
+        description:
+          "Explore the dApps, validators, and partners contributing to the ecosystem",
+        icon: "explorer",
+        iconType: "stroke",
+        link: "https://www.mintscan.io/persistence",
         isExternal: true,
         comingSoon: false
       }
@@ -167,6 +177,40 @@ const menuItems = [
         comingSoon: false
       }
     ]
+  },
+  {
+    id: 3,
+    name: "Community",
+    subItems: [
+      {
+        title: "X (Twitter)",
+        description: "Learn about our persistent vision.",
+        icon: "header-twitter",
+        iconType: "fill",
+        link: "https://twitter.com/PersistenceOne",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Discord",
+        description: "Frequently Asked Questions",
+        icon: "header-discord",
+        iconType: "fill",
+        link: "https://discord.com/invite/vyvp3scWnH",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Telegram",
+        description:
+          "Read about the latest partnerships and major product and tech updates",
+        icon: "header-telegram",
+        iconType: "fill",
+        link: "https://t.me/persistenceone",
+        isExternal: true,
+        comingSoon: false
+      }
+    ]
   }
 ];
 
@@ -211,7 +255,6 @@ const getMenuListMobile = (onClose: () => void, path: string) => {
                         className={"nav-item coming-soon"}
                         gap={4}
                         fontWeight={500}
-                        _hover={{ fontWeight: 700 }}
                       >
                         <Box
                           w={"40px"}
@@ -260,7 +303,6 @@ const getMenuListMobile = (onClose: () => void, path: string) => {
                           className={"nav-item"}
                           gap={4}
                           fontWeight={500}
-                          _hover={{ fontWeight: 700 }}
                           onClick={onClose}
                         >
                           <Box>
@@ -330,10 +372,10 @@ const getMenuList = (
           {item.name}
         </Text>
       </PopoverTrigger>
-      <PopoverContent borderRadius={6}>
+      <PopoverContent borderRadius={6} width={"280px"}>
         <PopoverArrow />
-        <PopoverBody p={4}>
-          <VStack align={"start"} gap={4}>
+        <PopoverBody px={5}>
+          <VStack align={"start"} gap={0}>
             {item.subItems.map((subItem: any) =>
               subItem.comingSoon ? (
                 <HStack
@@ -342,7 +384,6 @@ const getMenuList = (
                   className={"nav-item coming-soon"}
                   gap={4}
                   fontWeight={500}
-                  _hover={{ fontWeight: 700 }}
                 >
                   <Box
                     w={"40px"}
@@ -367,9 +408,9 @@ const getMenuList = (
                         (Coming Soon)
                       </Text>
                     </Text>
-                    <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
-                      {subItem.description}
-                    </Text>
+                    {/*<Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>*/}
+                    {/*  {subItem.description}*/}
+                    {/*</Text>*/}
                   </VStack>
                 </HStack>
               ) : (
@@ -381,11 +422,10 @@ const getMenuList = (
                   <HStack
                     cursor={"pointer"}
                     className={"nav-item"}
-                    gap={4}
+                    py={"15px"}
                     fontWeight={500}
-                    _hover={{ fontWeight: 700 }}
                   >
-                    <Box>
+                    <Box mr={2}>
                       <Box
                         w={"40px"}
                         h={"40px"}
@@ -413,9 +453,9 @@ const getMenuList = (
                         </Text>
                         {subItem.isExternal ? <ExternalLinkIcon /> : null}
                       </Box>
-                      <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
-                        {subItem.description}
-                      </Text>
+                      {/*<Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>*/}
+                      {/*  {subItem.description}*/}
+                      {/*</Text>*/}
                     </VStack>
                   </HStack>
                 </Link>
