@@ -340,6 +340,8 @@ color: #000000;
 }
 .swiper-slide-active .slider-card .slide-title{
   color: #FEFDFB !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
 }
 
 .swiper-slide-active .slider-card .slide-title{
