@@ -12,10 +12,10 @@ import {
   Text,
   Stack,
   VStack,
+  Link,
   useMediaQuery
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import Link from "next/link";
 import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 import Image from "next/image";
 
@@ -137,15 +137,18 @@ const FeatureCards = () => {
               fontSize={{ base: "20px", xl: "27px" }}
               lineHeight={{ base: "30px", xl: "40px" }}
               fontWeight={700}
+              mb={{ base: "20px", md: "0" }}
             >
               Be a part of the Movement.
             </Text>
             <Link
+              width={{ base: "100%", md: "auto" }}
               href={"/values#becomePersister"}
               target="_self"
               rel="noopener noreferrer"
             >
               <Button
+                width={{ base: "100%", md: "auto" }}
                 px={{ base: "16px", md: "24px" }}
                 rightIcon={<ArrowForwardIcon />}
                 bg={"#1D1306"}
