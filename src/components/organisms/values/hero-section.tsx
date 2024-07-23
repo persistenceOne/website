@@ -19,7 +19,7 @@ const HeroSection = () => {
           justify={"space-between"}
           gap={"30px"}
           mb={{ base: "0px", md: "90px" }}
-          flexDirection={{ base: "column", md: "row" }}
+          flexDirection={{ base: "column-reverse", md: "row" }}
         >
           <Flex flex={1} flexDir={"column"} justifyContent={"flex-end"}>
             <Heading

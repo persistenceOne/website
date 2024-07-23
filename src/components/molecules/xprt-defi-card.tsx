@@ -41,7 +41,7 @@ const XPRTDefiCard = ({
     <Box>
       <Card
         w="full"
-        height={{ base: "300px", md: "auto" }}
+        height={{ base: "auto", md: "auto" }}
         display={"flex"}
         justify={"space-between"}
         flexDirection={{ base: "column", md: "column" }}
@@ -52,7 +52,7 @@ const XPRTDefiCard = ({
         <Stack
           justify={"space-between"}
           direction={{ base: "column", md: "row" }}
-          mb={2}
+          mb={{ base: 3, md: 2 }}
         >
           <HStack>
             <HStack spacing="-2">
@@ -106,7 +106,7 @@ const XPRTDefiCard = ({
         <Text
           mb={{ base: "16px", xl: "30px" }}
           fontSize={{ base: "12px", xl: "16px" }}
-          h={{ base: "100px", md: "auto" }}
+          h={{ base: "auto", md: "auto" }}
         >
           {description}
         </Text>
@@ -114,11 +114,11 @@ const XPRTDefiCard = ({
           {stats.map((stat) => {
             return (
               <VStack key={stat.label} align={"stretch"} gap={0}>
-                <Text color={"#633C0D"} fontSize={{ base: "12px", xl: "16px" }}>
+                <Text color={"#633C0D"} fontSize={{ base: "14px", xl: "16px" }}>
                   {stat.label}
                 </Text>
                 <Text
-                  fontSize={{ base: "12px", xl: "24px" }}
+                  fontSize={{ base: "20px", xl: "24px" }}
                   color="#633C0D"
                   fontWeight={700}
                 >
