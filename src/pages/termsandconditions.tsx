@@ -5,7 +5,12 @@ import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <Container maxW={"1440px"} px={"70px"} transition={"all 0.3s"} py={"100px"}>
+    <Container
+      maxW={"1440px"}
+      px={{ base: "30px", md: "70px" }}
+      transition={"all 0.3s"}
+      py={"100px"}
+    >
       <Box className="container">
         <Box className="content">
           <Box>

@@ -64,7 +64,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
           <meta
-            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
+            content="Bitcoin Interoperability. Powered by Intents. Secured by Bitcoin."
             name="description"
           />
           <meta
@@ -80,7 +80,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <meta property="og:image" content="/ogimage.jpeg" />
           <meta
             property="og:description"
-            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
+            content="Bitcoin Interoperability. Powered by Intents. Secured by Bitcoin."
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://persistence.one" />
@@ -92,7 +92,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             property="twitter:title"
           />
           <meta
-            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
+            content="Bitcoin Interoperability. Powered by Intents. Secured by Bitcoin."
             property="twitter:description"
           />
           <link rel="canonical" href="https://persistence.one/" />

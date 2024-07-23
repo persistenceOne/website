@@ -14,18 +14,20 @@ import React from "react";
 const persisterValues: PersisterValuesCardInterface[] = [
   {
     title: "Freedom",
-    description: "We believe in the freedom that Bitcoin represents.",
+    description:
+      "We believe in the freedom that Bitcoin represents, ensuring transparency, security, and accessibility for all, fostering a more inclusive financial ecosystem.",
     icon: "/icons/team-page/long-term.svg"
   },
   {
     title: "Opportunity",
     description:
-      "We believe in the opportunities Bitcoin brings to modern-day finance.",
+      "We believe in the opportunities Bitcoin brings to modern-day finance, paving the way for innovation, investment, security, and global economic participation.",
     icon: "/icons/team-page/compounding.svg"
   },
   {
     title: "Money",
-    description: "We believe that Bitcoin is the hardest form of money",
+    description:
+      "We believe Bitcoin can become the hardest form of money and must move seamlessly across the multi-chain landscape.",
     icon: "/icons/team-page/true-to-roots.svg"
   }
 ];

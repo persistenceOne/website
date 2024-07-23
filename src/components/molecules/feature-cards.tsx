@@ -67,7 +67,7 @@ const FeatureCards = () => {
           title="Building since 2019"
           description="Since 2019, Persistence One has built expertise in DeFi, IBC interoperability, and the Persistence Core-1 chain's security. Now, it's time to enter the BTCfi space and tackle Bitcoin interoperability challenges."
           image={`${commonImagePath}/building.svg`}
-          imgWidth={196}
+          imgWidth={115}
           cta={{
             link: "",
             linkText: "",

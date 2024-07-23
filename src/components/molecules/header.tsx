@@ -138,7 +138,7 @@ const menuItems = [
     name: "Connect",
     subItems: [
       {
-        title: "About",
+        title: "Persisters",
         description:
           "Get to know our contributors, our values, and how to become a Persister",
         icon: "values",
@@ -154,16 +154,6 @@ const menuItems = [
         icon: "career",
         iconType: "stroke",
         link: "https://careers.persistence.one/",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "Community Forum",
-        description:
-          "Participate in community discussions or share your ideas to grow Persistence One",
-        icon: "community",
-        iconType: "stroke",
-        link: "https://forum.persistence.one/",
         isExternal: true,
         comingSoon: false
       },
@@ -206,6 +196,15 @@ const menuItems = [
         icon: "header-telegram",
         iconType: "fill",
         link: "https://t.me/persistenceone",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Community Forum",
+        description: "",
+        icon: "community",
+        iconType: "stroke",
+        link: "https://forum.persistence.one/",
         isExternal: true,
         comingSoon: false
       }

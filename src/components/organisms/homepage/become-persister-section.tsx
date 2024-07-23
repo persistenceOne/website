@@ -42,7 +42,7 @@ const BecomePersisterSection = ({
             lineHeight={{ base: "32px", xl: "72px" }}
             mb={"8px"}
           >
-            Become A Persister
+            Become a Persister
           </Heading>
           <Tabs
             align="center"

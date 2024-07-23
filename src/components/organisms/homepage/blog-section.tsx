@@ -74,7 +74,12 @@ const BlogSection = () => {
             {/*  <Text color={"#FFFFFF"}>Explore More</Text>*/}
             {/*</Link>*/}
           </HStack>
-          <Box display="flex" flexDirection={{ base: "column", md: "row" }}>
+          <Box
+            display="flex"
+            flexDirection={{ base: "column", lg: "row" }}
+            flexWrap={"wrap"}
+            gap={"16px"}
+          >
             {resourcesList.map((resource, index) => (
               <BlogCard key={resource.id} {...resource} />
             ))}

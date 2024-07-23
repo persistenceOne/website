@@ -40,7 +40,7 @@ const xprtUsageCards = [
     }
   },
   {
-    title: "DEX traction",
+    title: "Additional Utility",
     description:
       "XPRT stakers and holders will gain more utility as part of the BTC Interoperability Product, such as trading fee discounts, whitelisting intent solvers, and treasury management.",
     image: "/images/xprt-page/utility3.svg",

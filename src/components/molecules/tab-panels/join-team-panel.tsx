@@ -49,14 +49,13 @@ const JoinTeamPanel = () => {
         color={"text.blackHigh"}
         fontSize={{ base: "16px", md: "20px" }}
       >
-        Explore opportunities to contribute to Persistence One’s mission of
-        maximizing
-        <br /> Liquid Staking yield with Persistence Labs.
+        Explore opportunities to contribute to Persistence One’s mission to
+        become the gateway for BTC ecosystem swaps.
       </Text>
       <Box gap={4} display={{ base: "block", md: "flex" }}>
         <Card borderRadius={"20px"} p={6} mb={{ base: "10px", md: "0" }}>
           <VStack align={"flex-start"}>
-            <Text fontSize={12}>Mission</Text>
+            <Text fontSize={12}>Vision</Text>
             <Text
               fontWeight={700}
               color={"#423F40"}

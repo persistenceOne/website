@@ -145,6 +145,11 @@ const footerLinks = [
         title: "Telegram",
         link: "https://t.me/persistenceone",
         isExternal: true
+      },
+      {
+        title: "Community Forum",
+        link: "https://forum.persistence.one/",
+        isExternal: true
       }
     ]
   }

@@ -180,7 +180,7 @@ const getData = (
         },
         {
           label: "APR",
-          value: "0"
+          value: "~596"
         }
       ]
     },
