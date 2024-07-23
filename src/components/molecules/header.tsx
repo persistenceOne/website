@@ -227,15 +227,15 @@ const getMenuListMobile = (onClose: () => void, path: string) => {
                   px={"12px"}
                   py={"8px"}
                   borderRadius={"6px"}
-                  bg={isExpanded ? "#C732381A" : "transparent"}
+                  bg={isExpanded ? "#E596364D" : "transparent"}
                   color={
                     isExpanded
-                      ? "#C73238"
+                      ? "#E59636"
                       : path === "/"
                       ? "#000000"
                       : "#000000"
                   }
-                  _hover={{ bg: "#C732381A", color: "#C73238" }}
+                  _hover={{ bg: "#E596364D", color: "#E59636" }}
                 >
                   {item.name}
                 </Text>
@@ -333,13 +333,6 @@ const getMenuListMobile = (onClose: () => void, path: string) => {
                               </Text>
                               {subItem.isExternal ? <ExternalLinkIcon /> : null}
                             </Box>
-                            <Text
-                              fontSize={14}
-                              color={"#3D3D3D"}
-                              fontWeight={400}
-                            >
-                              {subItem.description}
-                            </Text>
                           </VStack>
                         </HStack>
                       </Link>

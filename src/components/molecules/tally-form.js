@@ -52,7 +52,7 @@ const TallyForm = (page) => {
       )}
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxWidth={"550px"}>
           <ModalHeader textAlign="center">
             Partner with Persistence
             <Text fontWeight={"500"} fontSize={"14px"} color={"#423f40cc"}>
