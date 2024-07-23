@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
   Box,
@@ -22,7 +21,8 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  Button
+  Button,
+  Link
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -184,7 +184,7 @@ const menuItems = [
     subItems: [
       {
         title: "X (Twitter)",
-        description: "Learn about our persistent vision.",
+        description: "",
         icon: "header-twitter",
         iconType: "fill",
         link: "https://twitter.com/PersistenceOne",
@@ -193,7 +193,7 @@ const menuItems = [
       },
       {
         title: "Discord",
-        description: "Frequently Asked Questions",
+        description: "",
         icon: "header-discord",
         iconType: "fill",
         link: "https://discord.com/invite/vyvp3scWnH",
@@ -202,8 +202,7 @@ const menuItems = [
       },
       {
         title: "Telegram",
-        description:
-          "Read about the latest partnerships and major product and tech updates",
+        description: "",
         icon: "header-telegram",
         iconType: "fill",
         link: "https://t.me/persistenceone",
@@ -230,12 +229,12 @@ const getMenuListMobile = (onClose: () => void, path: string) => {
                   bg={isExpanded ? "#E596364D" : "transparent"}
                   color={
                     isExpanded
-                      ? "#E59636"
+                      ? "#633C0D"
                       : path === "/"
-                      ? "#000000"
-                      : "#000000"
+                      ? "#633C0D"
+                      : "#633C0D"
                   }
-                  _hover={{ bg: "#E596364D", color: "#E59636" }}
+                  _hover={{ bg: "#E596364D" }}
                 >
                   {item.name}
                 </Text>
@@ -295,7 +294,11 @@ const getMenuListMobile = (onClose: () => void, path: string) => {
                     ) : (
                       <Link
                         href={subItem.link}
+                        width={"100%"}
                         key={subItem.title}
+                        _hover={{
+                          textDecoration: "none"
+                        }}
                         target={subItem.isExternal ? "_blank" : "_self"}
                       >
                         <HStack
@@ -326,12 +329,19 @@ const getMenuListMobile = (onClose: () => void, path: string) => {
                           <VStack align={"start"} gap={0}>
                             <Box
                               style={{ display: "flex", alignItems: "center" }}
-                              color={"primary.red"}
+                              color={"#633C0D"}
                             >
                               <Text cursor={"pointer"} fontSize={16} pr={"5px"}>
                                 {subItem.title}
                               </Text>
-                              {subItem.isExternal ? <ExternalLinkIcon /> : null}
+                              {subItem.isExternal ? (
+                                <ExternalLinkIcon />
+                              ) : (
+                                <Icon
+                                  viewClass="chevron"
+                                  icon="chevroncolorchange"
+                                />
+                              )}
                             </Box>
                           </VStack>
                         </HStack>
@@ -365,9 +375,9 @@ const getMenuList = (
           {item.name}
         </Text>
       </PopoverTrigger>
-      <PopoverContent borderRadius={6} width={"280px"}>
+      <PopoverContent borderRadius={6}>
         <PopoverArrow />
-        <PopoverBody px={5}>
+        <PopoverBody px={"14px"} py={"16px"}>
           <VStack align={"start"} gap={0}>
             {item.subItems.map((subItem: any) =>
               subItem.comingSoon ? (
@@ -395,28 +405,34 @@ const getMenuList = (
                     />
                   </Box>
                   <VStack align={"start"} gap={0}>
-                    <Text cursor={"pointer"} fontSize={16} color={"#878787"}>
+                    <Text cursor={"pointer"} fontSize={16} color={"#633C0D"}>
                       {subItem.title}{" "}
                       <Text as={"span"} fontWeight={300} fontSize={12}>
                         (Coming Soon)
                       </Text>
                     </Text>
-                    {/*<Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>*/}
-                    {/*  {subItem.description}*/}
-                    {/*</Text>*/}
+                    <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
+                      {subItem.description}
+                    </Text>
                   </VStack>
                 </HStack>
               ) : (
                 <Link
                   href={subItem.link}
                   key={subItem.title}
+                  width={"100%"}
+                  textDecoration={"none"}
+                  _hover={{
+                    textDecoration: "none"
+                  }}
                   target={subItem.isExternal ? "_blank" : "_self"}
                 >
                   <HStack
                     cursor={"pointer"}
                     className={"nav-item"}
-                    py={"15px"}
+                    p={"10px"}
                     fontWeight={500}
+                    _hover={{ bg: "#E596361A", borderRadius: "6px" }}
                   >
                     <Box mr={2}>
                       <Box
@@ -439,16 +455,20 @@ const getMenuList = (
                     <VStack align={"start"} gap={0}>
                       <Box
                         style={{ display: "flex", alignItems: "center" }}
-                        color={"primary.red"}
+                        color={"#633C0D"}
                       >
                         <Text cursor={"pointer"} fontSize={16} pr={"5px"}>
                           {subItem.title}
                         </Text>
-                        {subItem.isExternal ? <ExternalLinkIcon /> : null}
+                        {subItem.isExternal ? (
+                          <ExternalLinkIcon />
+                        ) : (
+                          <Icon viewClass="chevron" icon="chevroncolorchange" />
+                        )}
                       </Box>
-                      {/*<Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>*/}
-                      {/*  {subItem.description}*/}
-                      {/*</Text>*/}
+                      <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
+                        {subItem.description}
+                      </Text>
                     </VStack>
                   </HStack>
                 </Link>
@@ -646,7 +666,9 @@ const Header = () => {
             height={"40px"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            justifyContent={"center"}
+            alignItems={"center"}
+            display={{ base: "flex", md: "none" }}
             border={"0px"}
             onClick={isOpen ? onClose : onOpen}
           />

@@ -125,6 +125,16 @@ color: #000000;
   fill: transparent;
 }
 
+.nav-item .icon-chevron{
+  width: 10px;
+  fill: #633C0D;
+  margin-left: 4px;
+}
+
+.nav-item:hover .icon-chevron{
+
+}
+
 .nav-item.coming-soon {
   pointer-events: none;
 }
@@ -293,7 +303,7 @@ color: #000000;
 .swiper-backface-hidden .swiper-slide{
   margin: 0 !important;
   transform: scale(0.96) !important;
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
   transition-timing-function: ease-in-out;
 }
 
