@@ -70,14 +70,14 @@ const CrossChainSlider = () => {
           speed={1000}
           centeredSlides={true}
           loop={true}
-          // autoplay={{
-          //   delay: 3000,
-          //   duration: 3000,
-          //   disableOnInteraction: true,
-          //   pauseOnMouseEnter: true,
-          //   waitForTransition: true,
-          //   reverseDirection: false
-          // }}
+          autoplay={{
+            delay: 3000,
+            duration: 3000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            waitForTransition: true,
+            reverseDirection: false
+          }}
           breakpoints={{
             420: {
               slidesPerView: 1
