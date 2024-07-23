@@ -364,3 +364,10 @@ color: #000000;
 .swiper-slide-active .slider-card .slide-title{
 
 }
+
+.tally-form{
+}
+
+.tally-form .tally-required-indicator{
+  display: none;
+}

@@ -99,7 +99,7 @@ const CrossChainSlider = () => {
               <Box
                 // bg="#fff"
                 borderRadius={"24px"}
-                h={"450px"}
+                h={{ base: "350px", md: "450px" }}
                 my={2}
                 boxShadow={"md"}
                 display={"flex"}
@@ -119,6 +119,7 @@ const CrossChainSlider = () => {
                   className={"slide-title"}
                   position={"absolute"}
                   top={"20px"}
+                  left={{ base: "30px", md: "auto" }}
                   zIndex={10}
                 >
                   {resource.title}

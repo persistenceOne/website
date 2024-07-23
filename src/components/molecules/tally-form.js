@@ -52,7 +52,7 @@ const TallyForm = (page) => {
       )}
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent maxWidth={"550px"}>
+        <ModalContent maxWidth={"500px"} bg={"#FCF7F1"}>
           <ModalHeader textAlign="center">
             Partner with Persistence
             <Text fontWeight={"500"} fontSize={"14px"} color={"#423f40cc"}>
@@ -61,7 +61,7 @@ const TallyForm = (page) => {
             </Text>
           </ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
+          <ModalBody className="tally-form">
             <iframe
               data-tally-src="https://tally.so/embed/mBB5pK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               loading="lazy"
