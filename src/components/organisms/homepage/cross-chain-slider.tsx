@@ -15,33 +15,33 @@ const list = [
   {
     title: "Swap BTC for BTC",
     content: `< show swaps between 1 BTC variant to another> - via animation`,
-    imageUrl: "/images/anim/slide1.mov"
+    imageUrl: "/images/anim/slide1.mp4"
   },
   {
     title: "Bridge without bridging",
     content: "Cross-chain transfers between BTC L2s, EVM, etc",
-    imageUrl: "/images/anim/slide2.mov"
+    imageUrl: "/images/anim/slide2.mp4"
   },
   {
     title: "Low Slippage, High Speed",
     content: "< show fast movement via animation>",
-    imageUrl: "/images/anim/slide3.mov"
+    imageUrl: "/images/anim/slide3.mp4"
   },
   {
     title: "Secured by Bitcoin",
     content: "Shared BTC security via Babylon",
-    imageUrl: "/images/anim/slide4.mov"
+    imageUrl: "/images/anim/slide4.mp4"
   },
   {
     title: "Scalable Liquidity, No limitations",
     content: "Powered by Cross-chain Intents",
-    imageUrl: "/images/anim/slide5.mov"
+    imageUrl: "/images/anim/slide5.mp4"
   },
   {
     title: "Trading for BTC and LSTs on the DEX",
     content:
       "Efficient trading and LPing for BTC ecosystem assets, LSTs, and Stablecoins.",
-    imageUrl: "/images/anim/slide6.mov"
+    imageUrl: "/images/anim/slide6.mp4"
   }
 ];
 const CrossChainSlider = () => {

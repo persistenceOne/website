@@ -315,7 +315,7 @@ color: #000000;
 }
 
 .swiper-slide.swiper-slide-active{
-  transform: scale(1.1) !important;
+  /*transform: scale(1.1) !important;*/
   transition-duration: 0.7s;
   transition-timing-function: ease-in-out;
 }
@@ -349,16 +349,16 @@ color: #000000;
 }
 
 .swiper-slide-active .slider-card .video-container{
-  background-image: url("/images/home-page/anim-bg.svg");
-  border: 1.1px solid #8C5512;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /*background-image: url("/images/home-page/anim-bg.svg");*/
+  /*border: 1.1px solid #8C5512;*/
+  /*background-size: cover;*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
 }
 .swiper-slide-active .slider-card .slide-title{
-  color: #FEFDFB !important;
-  font-size: 26px !important;
-  font-weight: 700 !important;
+  /*color: #FEFDFB !important;*/
+  /*font-size: 26px !important;*/
+  /*font-weight: 700 !important;*/
 }
 
 .swiper-slide-active .slider-card .slide-title{
