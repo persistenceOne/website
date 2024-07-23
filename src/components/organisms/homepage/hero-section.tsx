@@ -70,6 +70,7 @@ const HeroSection = () => {
           {/*<Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>*/}
           {/*</Container>*/}
           <Box
+            display={{ base: "none", md: "block" }}
             pos={"absolute"}
             top={"0"}
             left={"0"}
