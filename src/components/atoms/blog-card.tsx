@@ -62,7 +62,7 @@ const BlogCard = ({
             {/* <Image src={resourceImage} alt="" layout="fill" objectFit="cover" /> */}
             <CardFooter my={-4}>
               <Button
-                _hover={{ color: "#C73238" }}
+                _hover={{ color: "#E59636" }}
                 variant={"unstyled"}
                 rightIcon={<ExternalLinkIcon />}
               >
