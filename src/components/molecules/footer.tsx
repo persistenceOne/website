@@ -107,8 +107,8 @@ const footerLinks = [
         isExternal: true
       },
       {
-        title: "Explorers",
-        link: "https://mintscan.io/persistence",
+        title: "Governance",
+        link: "https://www.mintscan.io/persistence/proposals",
         isExternal: true
       }
     ]
@@ -282,6 +282,7 @@ const Footer = () => {
                       key={item.title}
                       color={"#918678"}
                       padding={0}
+                      justifyContent={"start"}
                       fontSize={{ base: "12px", xl: "16px" }}
                       fontWeight={400}
                       opacity={0.69}

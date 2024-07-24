@@ -2,7 +2,7 @@ export const aboutPersistence = [
   {
     title: "What is Persistence One?",
     content:
-      "Persistence One is building a Bitcoin interoperability solution for Bitcoin Layer 2 and related assets. Powered by Intents and secured by the Bitcoin network, the solution ensures seamless movement of BTC with fast, zero-slippage, cross-chain swaps."
+      "Persistence One aims to become the gateway for Bitcoin Interoperability, powered by Intents, secured by Bitcoin. The solution ensures seamless movement of BTC with fast, zero slippage, cross-chain swaps."
   },
   {
     title: "What is the vision of Persistence One?",
