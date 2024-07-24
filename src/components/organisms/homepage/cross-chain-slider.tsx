@@ -152,6 +152,7 @@ const CrossChainSlider = () => {
                   <video
                     autoPlay={true}
                     controls={false}
+                    playsInline={true}
                     preload="auto"
                     muted={true}
                     loop={true}
