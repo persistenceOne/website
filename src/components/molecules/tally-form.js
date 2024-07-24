@@ -14,7 +14,7 @@ import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
-const TallyForm = (page) => {
+const TallyForm = ({ page }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [loaded, setLoaded] = useState(true);
@@ -23,6 +23,7 @@ const TallyForm = (page) => {
     setLoaded(false);
   }, []);
 
+  console.log(page, "pagepage");
   // @ts-ignore
   return (
     <>
