@@ -87,7 +87,7 @@ const FaqTabs = () => {
               style={{ width: "100%" }}
             >
               <Button
-                bg="#418FCD"
+                variant={"primary"}
                 w="full"
                 border={"none"}
                 color="white"

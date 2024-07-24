@@ -44,6 +44,16 @@ const TallyForm = (page) => {
           h={"52px"}
           variant={"ternary"}
           bg="#1D1306"
+          transitionDuration={"0.5s"}
+          transitionTimingFunction={"ease"}
+          transitionProperty={"all"}
+          border={"1px solid #1D1306"}
+          _hover={{
+            bg: "#FFFFFF",
+            color: "#1D1306",
+            borderColor: "#1D1306",
+            transition: "0.5s"
+          }}
           rightIcon={<ArrowForwardIcon />}
           onClick={onOpen}
         >

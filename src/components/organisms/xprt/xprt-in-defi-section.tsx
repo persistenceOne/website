@@ -359,6 +359,16 @@ const XPRTInDefiSection = () => {
                     variant={"ternary"}
                     fontSize={{ base: "10px", xl: "18px" }}
                     bg="#1D1306"
+                    transitionDuration={"0.5s"}
+                    transitionTimingFunction={"ease"}
+                    transitionProperty={"all"}
+                    border={"1px solid #1D1306"}
+                    _hover={{
+                      bg: "#FFFFFF",
+                      color: "#1D1306",
+                      borderColor: "#1D1306",
+                      transition: "0.5s"
+                    }}
                     rightIcon={<ArrowForwardIcon />}
                   >
                     Check Token details

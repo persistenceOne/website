@@ -109,7 +109,16 @@ const HeroSection = () => {
                 w={"100%"}
                 bg={"#1D1306"}
                 value={"ternary"}
-                _hover={{ bg: "#1D1306" }}
+                transitionDuration={"0.5s"}
+                transitionTimingFunction={"ease"}
+                transitionProperty={"all"}
+                border={"1px solid #1D1306"}
+                _hover={{
+                  bg: "#FFFFFF",
+                  color: "#1D1306",
+                  borderColor: "#1D1306",
+                  transition: "0.5s"
+                }}
                 color="#FFFFFF"
               >
                 Get XPRT

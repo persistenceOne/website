@@ -368,6 +368,8 @@ const getMenuList = (
           className={"nav-item-title"}
           fontSize={"18px"}
           borderRadius={"6px"}
+          fontWeight={500}
+          _hover={{ color: "#E59636" }}
           color={path === "/" ? "#FFFFFF" : "#000000"}
         >
           {item.name}

@@ -5,7 +5,7 @@ const variants = {
     background: "#E59636",
     color: "#FFF8EE",
     borderRadius: "88px",
-    transition: "none",
+    transition: "0.3s",
     _focus: {
       boxShadow: "none"
     },
@@ -15,7 +15,8 @@ const variants = {
       color: "rgba(255,255,255,0.4)"
     },
     _hover: {
-      background: "#E59636",
+      background: "#EAAB5E",
+      transition: "0.3s",
       _disabled: {
         background: "primary.ctaDisabled"
       }
