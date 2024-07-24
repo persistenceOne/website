@@ -1,6 +1,4 @@
 import axios from "axios";
-import { sdkInstance } from "@/utils/helpers";
-import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
 
 const defillamaApi = "https://defillama-datasets.llama.fi/lite/protocols2";
 export const STK_XPRT_TVL_URL =
@@ -90,16 +88,6 @@ export const fetchTokenPrices = async () => {
     return data;
   } catch (e) {
     return data;
-  }
-};
-
-export const getBnbTVL = async () => {
-  try {
-    const tvl = await sdkInstance.getTvl();
-    return Number(StkBNBWebSDK.format(tvl, 2));
-  } catch (e) {
-    console.log(e);
-    return 0;
   }
 };
 
@@ -357,5 +345,26 @@ export const getBondedTokens = async () => {
     return total.toFixed(2);
   } catch (e) {
     return 0;
+  }
+};
+
+export const fetchDexterUsers = async () => {
+  try {
+    const res = await fetch(
+      "https://api.core-1.dexter.zone/api/rest/overview_info"
+    );
+    let totalTraders = 0;
+    const data = await res.json();
+    if (data && data.overview_total_info) {
+      totalTraders =
+        data.overview_total_info[0].total_traders +
+        data.overview_total_info[0].total_lp_providers;
+    }
+    return totalTraders;
+  } catch (e) {
+    console.log(e, "error in fetchDexterInfo");
+    return {
+      monthlyTotalUsers: 0
+    };
   }
 };

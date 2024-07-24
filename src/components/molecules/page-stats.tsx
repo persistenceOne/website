@@ -22,8 +22,8 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
             mb={{ base: "16px", md: "0px" }}
           >
             <Text
-              color={"text.blackTitle"}
-              fontSize={{ base: "22px", md: "44px" }}
+              color={"#350B00"}
+              fontSize={{ base: "22px", xl: "44px" }}
               fontWeight={700}
             >
               {stat.statLabel == "Average Transaction Cost" ? (
@@ -41,8 +41,8 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
               {stat.statValue}
             </Text>
             <Text
-              color="text.blackHigh"
-              fontSize={{ base: "16px", md: "18px" }}
+              color="#633C0D"
+              fontSize={{ base: "16px", xl: "18px" }}
               fontWeight={400}
             >
               {stat.statLabel}
@@ -51,10 +51,9 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
           {index !== stats.length - 1 ? (
             <Divider
               display={{ base: "none", md: "block" }}
-              borderColor={"#423F4066"}
+              borderColor={"#434343"}
               orientation="vertical"
-              h="80px"
-              opacity={0.4}
+              h="70px"
               mx={8}
               borderWidth={1}
             />

@@ -27,7 +27,7 @@ const TeamMemberCard = ({
       flexBasis={{
         base: "calc(100% / 2 )",
         md: "calc(100% / 3 )",
-        lg: "calc(100% / 5 )"
+        lg: "calc(100% / 4 )"
       }}
     >
       <Box style={{ width: "200px", height: "200px", position: "relative" }}>
@@ -39,10 +39,12 @@ const TeamMemberCard = ({
           style={{ borderRadius: "50%" }}
         />
       </Box>
-      <Heading fontSize={22} mt={4}>
+      <Heading fontSize={{ base: 18, xl: 22 }} mt={4} color={"#080014"}>
         {name}
       </Heading>
-      <Text fontSize={14}>{role}</Text>
+      <Text fontSize={14} color={"#080014CC"}>
+        {role}
+      </Text>
       <HStack>
         {socialLinks.map((item) => (
           <Link
@@ -64,7 +66,7 @@ const TeamMemberCard = ({
                 justifyContent: "center"
               }}
             >
-              <Icon icon={item.icon} />
+              <Icon icon={item.icon} viewClass={"team-social"} />
             </Box>
           </Link>
         ))}

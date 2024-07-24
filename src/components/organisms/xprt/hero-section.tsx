@@ -7,11 +7,11 @@ import {
   Heading,
   Spacer,
   Text,
-  VStack
+  VStack,
+  Image
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React, { useEffect } from "react";
-import Image from "next/image";
 import PageStats from "@/components/molecules/page-stats";
 import Link from "next/link";
 
@@ -48,26 +48,44 @@ const HeroSection = () => {
     fetch();
   }, []);
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "60px" }}>
-      <Spacer h={20} />
+    <Container
+      maxW={"1440px"}
+      px={{ base: "20px", md: "80px" }}
+      pt={"109px"}
+      pb={"54px"}
+    >
+      <Spacer h={{ base: "40px", xl: "80px" }} />
       <Flex
-        justify={"space-between"}
         align={"flex-start"}
         pos={"relative"}
-        mb={{ base: "40px", md: "100px" }}
+        mb={{ base: "40px", md: "60px" }}
+        flexDirection={{ base: "column-reverse", md: "row" }}
       >
-        <VStack mt={"100px"} w={{ base: "100%", md: "50%" }} align={"stretch"}>
-          <Heading
-            fontSize={{ base: "42px", md: "42px", lg: "50px" }}
-            variant={"main"}
-            color={"primary.blackHeading"}
-          >
-            Powering BTC <br /> and LSTs Trading with XPRT
-          </Heading>
-          <Text textAlign="left" my={6} fontSize={{ base: "16px", md: "20px" }}>
-            XPRT is the multi-purpose native token of the <br /> Persistence DEX
-            and network.
-          </Text>
+        <VStack
+          mt={{ base: "40px", md: "100px" }}
+          w={{ base: "100%", md: "45%" }}
+          align={"stretch"}
+        >
+          <Box maxW={{ base: "400px", xl: "600px" }} mb={"30px"}>
+            <Heading
+              fontSize={{ base: "36px", xl: "50px" }}
+              lineHeight={{ base: "50px", xl: "70px" }}
+              color={"#633C0D"}
+              mb={5}
+              textAlign={{ base: "left", md: "left" }}
+            >
+              Powering BTC Interoperability, Governing Intents.
+            </Heading>
+            <Text
+              textAlign="left"
+              color={"#633C0DCC"}
+              fontSize={{ base: "14px", md: "24px" }}
+            >
+              XPRT governance has the final say on major protocol parameter
+              changes, integrations, chain upgrades, community pool spend,
+              incentives, and more.
+            </Text>
+          </Box>
           <Flex gap={4} direction={{ base: "column", md: "row" }}>
             <Link
               href={"https://wallet.keplr.app/chains/persistence"}
@@ -75,7 +93,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
             >
               <Button
-                variant={"secondary"}
+                variant={"primary"}
                 rightIcon={<ArrowForwardIcon />}
                 w={"100%"}
               >
@@ -87,25 +105,39 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button w={"100%"} _hover={{ color: "primary.redHover" }}>
+              <Button
+                w={"100%"}
+                bg={"#1D1306"}
+                value={"ternary"}
+                transitionDuration={"0.5s"}
+                transitionTimingFunction={"ease"}
+                transitionProperty={"all"}
+                border={"1px solid #1D1306"}
+                _hover={{
+                  bg: "#FFFFFF",
+                  color: "#1D1306",
+                  borderColor: "#1D1306",
+                  transition: "0.5s"
+                }}
+                color="#FFFFFF"
+              >
                 Get XPRT
               </Button>
             </Link>
           </Flex>
         </VStack>
         <Box
-          pos={"absolute"}
-          w={"40%"}
-          top={"0px"}
-          right={"0"}
-          display={{ base: "none", md: "block" }}
+          // bottom={0}
+          // display={{ base: "block", md: "none" }}
+          flexGrow={1}
+          width={{ base: "100%", md: "auto" }}
         >
           <Image
-            className={"ml-auto"}
-            src="/images/xprt-page/xprt-hero.svg"
+            src="/images/xprt-page/xprt_hero.svg"
             alt="Persistence Coin"
-            width={600}
-            height={400}
+            mx={"auto"}
+            width={{ base: 300, md: 330, xl: 521 }}
+            height={{ base: 270, md: 300, xl: 490 }}
           />
         </Box>
       </Flex>
@@ -118,28 +150,15 @@ const HeroSection = () => {
             statLabel: "Market Cap"
           },
           {
-            statValue: `${inflationDate}`,
-            statLabel: "Next XPRT Inflation Halving"
+            statValue: `${stakedXPRT}%`,
+            statLabel: "Staked XPRT"
           },
           {
-            statValue: `${stakedXPRT}%`,
-            statLabel: "Staked XPRT (total supply)"
+            statValue: `>99.5%`,
+            statLabel: "Tokens unlocked"
           }
         ]}
       />
-      <Flex
-        display={{ base: "block", md: "none" }}
-        w={"100%"}
-        justify={"center"}
-      >
-        <Image
-          // className={"ml-auto"}
-          src="/images/xprt-page/xprt-hero.png"
-          alt="Persistence Coin"
-          width={350}
-          height={400}
-        />
-      </Flex>
     </Container>
   );
 };

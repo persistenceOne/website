@@ -58,7 +58,7 @@ const footerSocialLinks = [
     link: "https://www.mintscan.io/persistence/",
     icon: "mintscan",
     iconType: "stroke",
-    color: "#9C9C9C"
+    color: "#918678"
   }
 ];
 
@@ -80,41 +80,21 @@ const footerLinks = [
         title: "Blog",
         link: "https://blog.persistence.one/",
         isExternal: true
+      },
+      {
+        title: "Docs",
+        link: "https://docs.persistence.one/",
+        isExternal: true
       }
     ]
   },
   {
-    title: "Network",
+    title: "XPRT",
     links: [
       {
-        title: "XPRT",
+        title: "About",
         link: "/xprt",
         isExternal: false
-      },
-      {
-        title: "Tech",
-        link: "/tech",
-        isExternal: false
-      },
-      {
-        title: "Documentation",
-        link: "https://docs.persistence.one",
-        isExternal: true
-      }
-    ]
-  },
-  {
-    title: "Products",
-    links: [
-      {
-        title: "Persistence DEX",
-        link: "https://app.persistence.one",
-        isExternal: true
-      },
-      {
-        title: "pSTAKE Finance",
-        link: "https://pstake.finance",
-        isExternal: true
       },
       {
         title: "XPRT Staking",
@@ -123,12 +103,27 @@ const footerLinks = [
       },
       {
         title: "pWallet",
-        link: "https://wallet.persistence.one",
+        link: "https://wallet.persistence.one/",
         isExternal: true
       },
       {
-        title: "pBridge",
-        link: "https://bridge.persistence.one",
+        title: "Explorers",
+        link: "https://mintscan.io/persistence",
+        isExternal: true
+      }
+    ]
+  },
+  {
+    title: "Connect",
+    links: [
+      {
+        title: "Careers",
+        link: "https://careers.persistence.one/",
+        isExternal: true
+      },
+      {
+        title: "Forum",
+        link: "https://forum.persistence.one",
         isExternal: true
       }
     ]
@@ -137,18 +132,23 @@ const footerLinks = [
     title: "Community",
     links: [
       {
-        title: "People",
-        link: "/people",
-        isExternal: false
+        title: "X (Twitter)",
+        link: "https://twitter.com/PersistenceOne",
+        isExternal: true
       },
       {
-        title: "Careers",
-        link: "https://careers.persistence.one/",
+        title: "Discord",
+        link: "https://discord.com/invite/vyvp3scWnH",
+        isExternal: true
+      },
+      {
+        title: "Telegram",
+        link: "https://t.me/persistenceone",
         isExternal: true
       },
       {
         title: "Community Forum",
-        link: "https://forum.persistence.one",
+        link: "https://forum.persistence.one/",
         isExternal: true
       }
     ]
@@ -157,14 +157,14 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <Box as={"footer"} bg={"#252424"}>
+    <Box as={"footer"} bg={"#1B1003"}>
       <Container
-        maxW={"1300px"}
-        px={{ base: "12px", md: "30px" }}
-        py={{ base: "30px", md: "60px" }}
+        maxW={"1440px"}
+        px={{ base: "30px", md: "80px" }}
+        py={{ base: "30px", md: "40px" }}
       >
         <Flex
-          display={{ base: "block", md: "flex" }}
+          display={{ base: "block", lg: "flex" }}
           justify={"space-between"}
           align={"flex-start"}
           color={"#ffffff"}
@@ -180,9 +180,6 @@ const Footer = () => {
               height={24}
               alt={"Persistence Logo"}
             />
-            <Text fontWeight={400} fontSize={12}>
-              Managed By Persistence Labs
-            </Text>
             <Link
               href={
                 "https://persistence.notion.site/Persistence-Media-Kit-50e8f0eacab1466ebe7899d3773a48a3"
@@ -214,7 +211,7 @@ const Footer = () => {
                     <Box
                       w={"24px"}
                       h={"24px"}
-                      _hover={{ bg: "white" }}
+                      _hover={{ bg: "#E59636" }}
                       borderRadius={"100%"}
                       className={"icon-box"}
                       bg={"#9C9C9C"}
@@ -234,7 +231,7 @@ const Footer = () => {
                     <Box
                       w={"24px"}
                       h={"24px"}
-                      _hover={{ bg: "white" }}
+                      // _hover={{ bg: "white" }}
                       borderRadius={"100%"}
                       className={"icon-box"}
                       style={{
@@ -246,7 +243,7 @@ const Footer = () => {
                       <Icon
                         icon={link.icon}
                         color="white"
-                        viewClass={` ${link.iconType}`}
+                        viewClass={`footer-github-icon ${link.iconType}`}
                       />
                     </Box>
                   )}
@@ -254,21 +251,23 @@ const Footer = () => {
               ))}
             </HStack>
           </VStack>
-          {/*<Stack*/}
-          {/*  gap={16}*/}
-          {/*  align={"flex-start"}*/}
-          {/*  direction={{ base: "column", md: "row" }}*/}
-          {/*>*/}
           <SimpleGrid
             flex={1}
             columns={2}
-            gap={4}
-            justifyContent={"space-between"}
+            gap={{ base: "30px", md: "70px", "2xl": "130px" }}
+            justifyContent={"end"}
             display={{ base: "grid", md: "flex" }}
           >
             {footerLinks.map((link) => (
-              <VStack key={link.title} align={"flex-start"} gap={4}>
-                <Heading variant={"footerHeading"} fontSize={"20px"}>
+              <VStack
+                key={link.title}
+                align={"flex-start"}
+                gap={{ base: 2, xl: 4 }}
+              >
+                <Heading
+                  color={"#918678"}
+                  fontSize={{ base: "16px", xl: "20px" }}
+                >
                   {link.title}
                 </Heading>
                 {link.links.map((item) => (
@@ -281,8 +280,9 @@ const Footer = () => {
                     <Button
                       variant={"link"}
                       key={item.title}
-                      color={"#ffffff"}
-                      fontSize={{ base: "14px", md: "16px" }}
+                      color={"#918678"}
+                      padding={0}
+                      fontSize={{ base: "12px", xl: "16px" }}
                       fontWeight={400}
                       opacity={0.69}
                       rightIcon={
@@ -302,7 +302,7 @@ const Footer = () => {
         </Flex>
         <HStack
           gap={4}
-          mt={4}
+          mt={6}
           display={{ base: "flex", md: "none" }}
           justify={"center"}
         >
@@ -313,7 +313,7 @@ const Footer = () => {
                 h={"24px"}
                 borderRadius={"100%"}
                 className={"icon-box"}
-                bg={"#9C9C9C"}
+                bg={"#918678"}
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -338,34 +338,29 @@ const Footer = () => {
             mt={4}
             gap={4}
           >
-            <Text fontSize={14} fontWeight={400} color={"#ffffff"}>
+            <Text
+              fontSize={14}
+              fontWeight={400}
+              color={"#ECECEC"}
+              textAlign={{ base: "center", md: "left" }}
+            >
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
               <Link href={"/termsofuse"}>
                 <Button
                   variant={"link"}
-                  color={"#ffffff"}
+                  color={"#ECECEC"}
                   fontSize={14}
                   fontWeight={400}
                 >
                   Terms of Use
                 </Button>
               </Link>
-              <Link href={"/termsandconditions"}>
-                <Button
-                  variant={"link"}
-                  color={"#ffffff"}
-                  fontSize={14}
-                  fontWeight={400}
-                >
-                  Terms and Conditions
-                </Button>
-              </Link>
               <Link href={"/privacy"}>
                 <Button
                   variant={"link"}
-                  color={"#ffffff"}
+                  color={"#ECECEC"}
                   fontSize={14}
                   fontWeight={400}
                 >

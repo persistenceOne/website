@@ -1,8 +1,8 @@
 const colors = {
   primary: {
     white: "#FFFFFF",
-    red: "#C73238",
-    redHover: "#BB2F35",
+    red: "#E59636",
+    redHover: "#E596364D",
     black: "#252424",
     lightGray: "#F2F4F8",
     gray: "#D9D9D9",
@@ -14,7 +14,7 @@ const colors = {
     headingSemiWhite: "#FCFCFC",
     headingSemiBlack: "#3D3D3D",
     statLabel: "#423F40",
-    whiteFull: "#fff",
+    whiteFull: "#ffffff",
     whiteHigh: "#ECECEC",
     whiteEmphasis: "#FEFEFE",
     whiteMid: "#F5F5F5",

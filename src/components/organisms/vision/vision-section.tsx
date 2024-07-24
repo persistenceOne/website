@@ -8,85 +8,90 @@ import {
   Stack,
   ListItem,
   UnorderedList,
-  Text
+  Text,
+  Image
 } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
 
 const list = [
   {
-    imgUrl: "/images/story-page/story-pos.svg",
+    imgUrl: "/images/vision/vision1.svg",
     title: "BTCFi will overtake ETH DeFi",
     content:
-      "Bitcoinization will rule the DeFi sector. Persistence One will lead the charge for BTCfi and all BTC assets will be traded on Persistence One. "
+      "Building for Bitcoin is an opportunity akin to being in the right place at the right time, with the right values."
   },
   {
-    imgUrl: "/images/story-page/story-roads.svg",
+    imgUrl: "/images/vision/vision2.svg",
     title: "Chain security will always be needed in abundance",
     content:
-      "BTC Shared Security will become the most reliable source of safeguarding PoS chains without overpaying for it with the native token inflation."
+      "For the first time in our lives, we may witness hyperinflation, making BTC more relevant than ever"
   },
   {
-    imgUrl: "/images/story-page/story-native-pos.svg",
+    imgUrl: "/images/vision/vision3.svg",
     title: "Native PoS tokens will exist as liquid staked",
     content:
-      "Liquid Staked Tokens (LSTs) will become the default capital-efficient medium of exchange and utility in DeFi."
+      "DeFi on Bitcoin today is reminiscent of the early days of DeFi on Ethereum—full of potential and opportunity."
   }
 ];
 const VisionSection = () => {
   return (
-    <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
-      <Box pt={{ base: "32px", md: "60px" }} pb={{ base: "32px", md: "100px" }}>
+    <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }}>
+      <Box
+        pt={{ base: "32px", md: "60px" }}
+        pb={{ base: "32px", md: "100px" }}
+        className="aos-init aos-animate py-10"
+        data-aos="fade-up"
+      >
         <Heading
           textAlign={"center"}
-          color={"text.blackHeading"}
-          fontSize={{ base: "26px", md: "58px" }}
-          mb={{ base: "32px", md: "60px" }}
+          color={"#633C0D"}
+          fontSize={{ base: "26px", xl: "48px" }}
+          lineHeight={{ base: "32px", xl: "72px" }}
+          mb={{ base: "20px", md: "40px" }}
         >
           Our Persistent Vision
         </Heading>
-        <Wrap spacing={"22px"} direction="row" justify={"center"}>
+        <Wrap
+          spacing={{ base: "12px", xl: "18px" }}
+          direction="row"
+          justify={"center"}
+        >
           {list.map((item, index) => (
             <Flex
-              p={{ base: "16px", md: "30px" }}
               bg={"#fff"}
-              w={{ base: "300px", md: "400px" }}
-              borderRadius={"20px"}
+              w={{ base: "100%", md: "250px", xl: "398px" }}
+              borderRadius={"22px"}
               direction={"column"}
               key={index}
               boxShadow={"lg"}
+              transform={"scale(1)"}
+              transitionDuration={"0.5s"}
+              transitionTimingFunction={"all ease-in"}
+              _hover={{
+                transform: "scale(1.1)",
+                zIndex: 10,
+                transitionDuration: "0.5s",
+                transitionTimingFunction: "all ease-in"
+              }}
             >
-              <Box
-                mb={4}
-                w={{ base: "100%", md: "60%" }}
-                h={"220px"}
-                mx={"auto"}
-                pos={"relative"}
-              >
+              <Box display={"flex"} flexDir={"column"}>
+                <Text
+                  color={"text.blackLow"}
+                  p={{ base: "16px", xl: "32px" }}
+                  fontSize={{ base: "14px", xl: "21px" }}
+                  lineHeight={{ base: "24px", xl: "31px" }}
+                >
+                  {item.content}
+                </Text>
                 <Image
                   src={item.imgUrl}
                   alt={item.title}
-                  layout="fill"
+                  px={{ base: "20px", md: "40px" }}
+                  width={{ base: 250, xl: 401 }}
+                  height={{ base: 190, xl: 340 }}
                   // objectFit="cover"
                 />
               </Box>
-              <Heading
-                variant={"secondary"}
-                color={"text.blackEmphasis"}
-                fontSize={{ base: "20px", md: "24px" }}
-                fontWeight={600}
-                lineHeight={"40px"}
-                mb={4}
-              >
-                {item.title}
-              </Heading>
-              <Text
-                color={"text.blackLow"}
-                lineHeight={"27px"}
-                fontSize={{ base: "14px", md: "16px" }}
-              >
-                {item.content}
-              </Text>
             </Flex>
           ))}
         </Wrap>

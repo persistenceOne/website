@@ -31,13 +31,10 @@ export type DexterPoolsInfo = {
 };
 
 export interface InitialDataSliceState {
-  pstakInfo: {
-    tvl: number;
-    allTimeUsers: number;
-  };
   dexterInfo: {
     total_volume: number;
     tvl: number;
+    allTimeUsers: number;
   };
   tvl: number;
   ibcVolume: number;
@@ -61,8 +58,7 @@ export interface InitialDataSliceState {
 }
 
 export interface InitialDataSliceActions {
-  setPstakeTvl: (value: any) => void;
-  setPstakeUsers: (value: any) => void;
+  setDexterUsers: (value: any) => void;
   setDexterTVl: (value: any) => void;
   setDexterTotalVolume: (value: any) => void;
   setTokenPrices: (value: any) => void;
@@ -75,13 +71,10 @@ export interface InitialDataSliceActions {
 }
 
 const initialState: InitialDataSliceState = {
-  pstakInfo: {
-    tvl: 0,
-    allTimeUsers: 5000
-  },
   dexterInfo: {
     total_volume: 0,
-    tvl: 0
+    tvl: 0,
+    allTimeUsers: 0
   },
   tvl: 0,
   ibcVolume: 11084000,
@@ -140,25 +133,18 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
   set
 ) => ({
   ...initialState,
-  setPstakeTvl: (value) =>
-    set((state) => ({
-      pstakInfo: {
-        ...state.pstakInfo,
-        tvl: value
-      }
-    })),
-  setPstakeUsers: (value) =>
-    set((state) => ({
-      pstakInfo: {
-        ...state.pstakInfo,
-        allTimeUsers: value
-      }
-    })),
   setDexterTVl: (value) =>
     set((state) => ({
       dexterInfo: {
         ...state.dexterInfo,
         tvl: value
+      }
+    })),
+  setDexterUsers: (value) =>
+    set((state) => ({
+      dexterInfo: {
+        ...state.dexterInfo,
+        allTimeUsers: value
       }
     })),
   setDexterTotalVolume: (value) =>

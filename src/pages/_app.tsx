@@ -13,6 +13,8 @@ import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { ANALYTICS } from "@/utils/config";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -25,6 +27,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1500
+    });
+  }, []);
 
   return (
     <>
@@ -56,7 +64,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
           <meta
-            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
+            content="Bitcoin Interoperability. Powered by Intents. Secured by Bitcoin."
             name="description"
           />
           <meta
@@ -64,32 +72,47 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="persistence, liquid staking, bitcoin, babylon, pstake, $pstake, cosmos, xprt, xprt token"
           />
           <link rel="manifest" href="/manifest.json" />
+          <link rel="canonical" href="https://persistence.one/" />
 
+          {/*Open Graph Tags*/}
           <meta
-            content="Persistence One | Securely Trade BTC and LSTs"
             property="og:title"
+            content="Persistence One | Securely Trade BTC and LSTs"
           />
-          <meta property="og:image" content="/ogimage.jpeg" />
+          <meta property="og:site_name" content="Persistence" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="990" />
+          <meta property="og:image:height" content="600" />
+          <meta property="og:image:alt" content="Persistence" />
           <meta
-            property="og:description"
-            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
+            property="og:image"
+            content="https://persistence.one/ogimage.jpeg"
           />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://persistence.one" />
-
-          <meta property="og:site_name" content="Persistence" />
-
+          <meta property="og:url" content="persistence.one" />
+          <meta
+            property="og:description"
+            content="Bitcoin Interoperability. Powered by Intents. Secured by Bitcoin."
+          />
+          {/*Twitter Tags*/}
           <meta
             content="Persistence One | Securely Trade BTC and LSTs"
-            property="twitter:title"
+            name="twitter:title"
+          />
+          <meta name="twitter:image:type" content="image/jpeg" />
+          <meta name="twitter:image:width" content="990" />
+          <meta name="twitter:image:height" content="600" />
+          <meta name="twitter:image:alt" content="Persistence" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="persistence.one" />
+          <meta
+            content="Bitcoin Interoperability. Powered by Intents. Secured by Bitcoin."
+            name="twitter:description"
           />
           <meta
-            content="Trade BTC and liquid staked token on Persistence One. Secured by Bitcoin via Babylon."
-            property="twitter:description"
+            name="twitter:image"
+            content="https://persistence.one/ogimage.jpeg"
           />
-          <link rel="canonical" href="https://persistence.one/" />
-          {/*Twitter Tags*/}
-          <meta content="/ogimage.jpeg" property="twitter:image" />
         </Head>
         <Box pos={"fixed"} width="100%" zIndex="sticky">
           <Header />

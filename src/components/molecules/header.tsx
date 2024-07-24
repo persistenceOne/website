@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
   Box,
@@ -21,23 +20,29 @@ import {
   Accordion,
   AccordionItem,
   AccordionButton,
-  AccordionPanel
+  AccordionPanel,
+  Button,
+  Link
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import {
+  HamburgerIcon,
+  CloseIcon,
+  ExternalLinkIcon,
+  ArrowForwardIcon
+} from "@chakra-ui/icons";
 import Icon from "./Icon";
 import {
-  fetchChainTVL,
   fetchDexterInfo,
   fetchDexterPoolInfo,
+  fetchDexterUsers,
   fetchOsmosisPoolInfo,
-  fetchTokenPrices,
-  getBnbTVL,
-  getCosmosTVL
+  fetchTokenPrices
 } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
-import { decimalize, decimalizeRaw } from "@/utils/helpers";
 import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
+import { useRouter } from "next/router";
+import { pathify } from "next/dist/server/lib/squoosh/emscripten-utils";
 
 const menuItems = [
   {
@@ -71,67 +76,57 @@ const menuItems = [
         link: "https://blog.persistence.one/",
         isExternal: true,
         comingSoon: false
+      },
+      {
+        title: "Docs",
+        description: "Explore our developer docs, on-chain modules, and guides",
+        icon: "docs",
+        iconType: "stroke",
+        link: "https://docs.persistence.one",
+        isExternal: true,
+        comingSoon: false
       }
-      // {
-      //   title: "Roadmap",
-      //   description: "",
-      //   icon: "road",
-      //   iconType: "stroke",
-      //   link: "/roadmap",
-      //   isExternal: false,
-      //   comingSoon: true
-      // }
     ]
   },
   {
     id: 1,
-    name: "Network",
+    name: "XPRT",
     subItems: [
       {
-        title: "XPRT",
+        title: "About",
         description: "Learn about the native token fueling the ecosystem",
-        icon: "xprt-nav",
+        icon: "about",
         iconType: "fill",
         link: "/xprt",
         isExternal: false,
         comingSoon: false
       },
       {
-        title: "Tech",
-        description:
-          "Discover how we sit at the cutting-edge of decentralized tech",
-        icon: "code",
-        iconType: "stroke",
-        link: "/tech",
-        isExternal: false,
-        comingSoon: false
-      },
-      {
-        title: "Documentation",
-        description: "Explore our developer docs, on-chain modules, and guides",
-        icon: "doc1",
-        iconType: "stroke",
-        link: "https://docs.persistence.one",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "Stats",
+        title: "Staking",
         description:
           "Interact with on-chain data like TVL, volume, yields, and more",
-        icon: "stats1",
+        icon: "staking",
         iconType: "stroke",
-        link: "https://stats.persistence.one",
+        link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true,
         comingSoon: false
       },
       {
-        title: "Ecosystem",
+        title: "Wallet",
         description:
           "Explore the dApps, validators, and partners contributing to the ecosystem",
-        icon: "ecosystem",
-        iconType: "fill",
-        link: MINTSCAN_ECOSYSTEM_LINK,
+        icon: "wallet",
+        iconType: "stroke",
+        link: "https://wallet.persistence.one/",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Governance",
+        description: "Participate in community discussions or share your ideas",
+        icon: "persistence",
+        iconType: "stroke",
+        link: "https://www.mintscan.io/persistence/proposals",
         isExternal: true,
         comingSoon: false
       }
@@ -139,68 +134,15 @@ const menuItems = [
   },
   {
     id: 2,
-    name: "Products",
+    name: "Connect",
     subItems: [
       {
-        title: "Persistence DEX",
-        description:
-          "Trade or provide liquidity with BTC, LSTs, Stablecoins and more",
-        icon: "trade",
-        iconType: "fill",
-        link: "https://app.persistence.one",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "pSTAKE Finance",
-        description: "Mint Cosmos LSTs on the Persistence Chain",
-        icon: "liquidstake",
-        iconType: "stroke",
-        link: "https://app.pstake.finance",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "XPRT Staking",
-        description:
-          "Stake XPRT to help secure the network and earn staking rewards",
-        icon: "secure",
-        iconType: "stroke",
-        link: "https://wallet.keplr.app/chains/persistence",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "pWallet",
-        description: "Manage and transfer XPRT tokens and staked delegations",
-        icon: "wallet",
-        iconType: "stroke",
-        link: "https://wallet.keplr.app/chains/persistence",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
-        title: "pBridge",
-        description: "Transfer tokens between Ethereum and Persistence One",
-        icon: "bridge",
-        iconType: "stroke",
-        link: "https://bridge.persistence.one",
-        isExternal: true,
-        comingSoon: false
-      }
-    ]
-  },
-  {
-    id: 3,
-    name: "Community",
-    subItems: [
-      {
-        title: "People",
+        title: "Persisters",
         description:
           "Get to know our contributors, our values, and how to become a Persister",
-        icon: "people",
+        icon: "values",
         iconType: "fill",
-        link: "/people",
+        link: "/values",
         isExternal: false,
         comingSoon: false
       },
@@ -215,16 +157,6 @@ const menuItems = [
         comingSoon: false
       },
       {
-        title: "Community Forum",
-        description:
-          "Participate in community discussions or share your ideas to grow Persistence One",
-        icon: "community",
-        iconType: "stroke",
-        link: "https://forum.persistence.one/",
-        isExternal: true,
-        comingSoon: false
-      },
-      {
         title: "Download Media Kit",
         description: "All your media and press needs",
         icon: "download",
@@ -233,20 +165,53 @@ const menuItems = [
         isExternal: true,
         comingSoon: false
       }
-      // {
-      //   title: "Social",
-      //   description: "",
-      //   icon: "ecosystem",
-      //   iconType: "fill",
-      //   link: "/ecosystem",
-      //   isExternal: false,
-      //   comingSoon: true
-      // }
+    ]
+  },
+  {
+    id: 3,
+    name: "Community",
+    subItems: [
+      {
+        title: "X (Twitter)",
+        description: "",
+        icon: "header-twitter",
+        iconType: "fill",
+        link: "https://twitter.com/PersistenceOne",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Discord",
+        description: "",
+        icon: "header-discord",
+        iconType: "fill",
+        link: "https://discord.com/invite/vyvp3scWnH",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Telegram",
+        description: "",
+        icon: "header-telegram",
+        iconType: "fill",
+        link: "https://t.me/persistenceone",
+        isExternal: true,
+        comingSoon: false
+      },
+      {
+        title: "Community Forum",
+        description: "",
+        icon: "community",
+        iconType: "stroke",
+        link: "https://forum.persistence.one/",
+        isExternal: true,
+        comingSoon: false
+      }
     ]
   }
 ];
 
-const getMenuListMobile = (onClose: () => void) => {
+const getMenuListMobile = (onClose: () => void, path: string) => {
   return (
     <Accordion h="100vh" mt={8}>
       {menuItems.map((item: any) => (
@@ -259,9 +224,15 @@ const getMenuListMobile = (onClose: () => void) => {
                   px={"12px"}
                   py={"8px"}
                   borderRadius={"6px"}
-                  bg={isExpanded ? "#C732381A" : "transparent"}
-                  color={isExpanded ? "#C73238" : "black"}
-                  _hover={{ bg: "#C732381A", color: "#C73238" }}
+                  bg={isExpanded ? "#E596364D" : "transparent"}
+                  color={
+                    isExpanded
+                      ? "#633C0D"
+                      : path === "/"
+                      ? "#633C0D"
+                      : "#633C0D"
+                  }
+                  _hover={{ bg: "#E596364D" }}
                 >
                   {item.name}
                 </Text>
@@ -281,7 +252,6 @@ const getMenuListMobile = (onClose: () => void) => {
                         className={"nav-item coming-soon"}
                         gap={4}
                         fontWeight={500}
-                        _hover={{ fontWeight: 700 }}
                       >
                         <Box
                           w={"40px"}
@@ -322,7 +292,11 @@ const getMenuListMobile = (onClose: () => void) => {
                     ) : (
                       <Link
                         href={subItem.link}
+                        width={"100%"}
                         key={subItem.title}
+                        _hover={{
+                          textDecoration: "none"
+                        }}
                         target={subItem.isExternal ? "_blank" : "_self"}
                       >
                         <HStack
@@ -330,7 +304,6 @@ const getMenuListMobile = (onClose: () => void) => {
                           className={"nav-item"}
                           gap={4}
                           fontWeight={500}
-                          _hover={{ fontWeight: 700 }}
                           onClick={onClose}
                         >
                           <Box>
@@ -354,20 +327,20 @@ const getMenuListMobile = (onClose: () => void) => {
                           <VStack align={"start"} gap={0}>
                             <Box
                               style={{ display: "flex", alignItems: "center" }}
-                              color={"primary.red"}
+                              color={"#633C0D"}
                             >
                               <Text cursor={"pointer"} fontSize={16} pr={"5px"}>
                                 {subItem.title}
                               </Text>
-                              {subItem.isExternal ? <ExternalLinkIcon /> : null}
+                              {subItem.isExternal ? (
+                                <ExternalLinkIcon />
+                              ) : (
+                                <Icon
+                                  viewClass="chevron"
+                                  icon="chevroncolorchange"
+                                />
+                              )}
                             </Box>
-                            <Text
-                              fontSize={14}
-                              color={"#3D3D3D"}
-                              fontWeight={400}
-                            >
-                              {subItem.description}
-                            </Text>
                           </VStack>
                         </HStack>
                       </Link>
@@ -384,25 +357,28 @@ const getMenuListMobile = (onClose: () => void) => {
 };
 const getMenuList = (
   placement: PlacementWithLogical | undefined,
-  trigger: "click" | "hover" | undefined
+  trigger: "click" | "hover" | undefined,
+  path: any
 ) => {
   return menuItems.map((item: any) => (
     <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
       <PopoverTrigger>
         <Text
           cursor={"pointer"}
-          px={"12px"}
-          py={"8px"}
+          className={"nav-item-title"}
+          fontSize={"18px"}
           borderRadius={"6px"}
-          _hover={{ bg: "#C732381A", color: "#C73238" }}
+          fontWeight={500}
+          _hover={{ color: "#E59636" }}
+          color={path === "/" ? "#FFFFFF" : "#000000"}
         >
           {item.name}
         </Text>
       </PopoverTrigger>
       <PopoverContent borderRadius={6}>
         <PopoverArrow />
-        <PopoverBody p={4}>
-          <VStack align={"start"} gap={4}>
+        <PopoverBody px={"14px"} py={"16px"}>
+          <VStack align={"start"} gap={0}>
             {item.subItems.map((subItem: any) =>
               subItem.comingSoon ? (
                 <HStack
@@ -411,7 +387,6 @@ const getMenuList = (
                   className={"nav-item coming-soon"}
                   gap={4}
                   fontWeight={500}
-                  _hover={{ fontWeight: 700 }}
                 >
                   <Box
                     w={"40px"}
@@ -430,7 +405,7 @@ const getMenuList = (
                     />
                   </Box>
                   <VStack align={"start"} gap={0}>
-                    <Text cursor={"pointer"} fontSize={16} color={"#878787"}>
+                    <Text cursor={"pointer"} fontSize={16} color={"#633C0D"}>
                       {subItem.title}{" "}
                       <Text as={"span"} fontWeight={300} fontSize={12}>
                         (Coming Soon)
@@ -445,16 +420,21 @@ const getMenuList = (
                 <Link
                   href={subItem.link}
                   key={subItem.title}
+                  width={"100%"}
+                  textDecoration={"none"}
+                  _hover={{
+                    textDecoration: "none"
+                  }}
                   target={subItem.isExternal ? "_blank" : "_self"}
                 >
                   <HStack
                     cursor={"pointer"}
                     className={"nav-item"}
-                    gap={4}
+                    p={"10px"}
                     fontWeight={500}
-                    _hover={{ fontWeight: 700 }}
+                    _hover={{ bg: "#E596361A", borderRadius: "6px" }}
                   >
-                    <Box>
+                    <Box mr={2}>
                       <Box
                         w={"40px"}
                         h={"40px"}
@@ -475,12 +455,16 @@ const getMenuList = (
                     <VStack align={"start"} gap={0}>
                       <Box
                         style={{ display: "flex", alignItems: "center" }}
-                        color={"primary.red"}
+                        color={"#633C0D"}
                       >
                         <Text cursor={"pointer"} fontSize={16} pr={"5px"}>
                           {subItem.title}
                         </Text>
-                        {subItem.isExternal ? <ExternalLinkIcon /> : null}
+                        {subItem.isExternal ? (
+                          <ExternalLinkIcon />
+                        ) : (
+                          <Icon viewClass="chevron" icon="chevroncolorchange" />
+                        )}
                       </Box>
                       <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
                         {subItem.description}
@@ -499,6 +483,8 @@ const getMenuList = (
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+
   useEffect(() => {
     let body: any = document.getElementsByTagName("body")[0];
     body.classList = "";
@@ -518,24 +504,22 @@ const Header = () => {
 
   const [
     setTokenPrices,
-    setPstakeTvl,
     setDexterTVl,
     setDexterTotalVolume,
     setDexterPoolInfo,
     setOsmoPoolInfo,
     setPersistenceTvl,
-    pstakInfo,
+    setDexterUsers,
     dexterInfo
   ] = useAppStore(
     (state) => [
       state.setTokenPrices,
-      state.setPstakeTvl,
       state.setDexterTVl,
       state.setDexterTotalVolume,
       state.setDexterPoolInfo,
       state.setOsmoPoolInfo,
       state.setPersistenceTvl,
-      state.pstakInfo,
+      state.setDexterUsers,
       state.dexterInfo
     ],
     shallow
@@ -547,32 +531,13 @@ const Header = () => {
     //   setPersistenceTvl(chainTvl);
     // };
     // fetch();
-    setPersistenceTvl(dexterInfo.tvl + pstakInfo.tvl);
-  }, [dexterInfo.tvl, pstakInfo.tvl, setPersistenceTvl]);
+    setPersistenceTvl(dexterInfo.tvl);
+  }, [dexterInfo.tvl, setPersistenceTvl]);
 
   //fetching pstake info
   useEffect(() => {
     const fetch = async () => {
       const tokenPrices = await fetchTokenPrices();
-      const [
-        xprtTvlResponse,
-        cosmosTvlResponse,
-        osmoTvlResponse,
-        dydxTvlResponse
-      ] = await Promise.all([
-        getCosmosTVL("xprt"),
-        getCosmosTVL("cosmos"),
-        getCosmosTVL("osmo"),
-        getCosmosTVL("dydx")
-        // getBnbTVL()
-      ]);
-      const pstkeTvl =
-        Number(decimalize(xprtTvlResponse)) * tokenPrices.XPRT +
-        Number(decimalize(cosmosTvlResponse)) * tokenPrices.ATOM +
-        // bnbTvl * tokenPrices.BNB +
-        Number(decimalize(osmoTvlResponse)) * tokenPrices.OSMO +
-        Number(decimalizeRaw(dydxTvlResponse, 18)) * tokenPrices.DYDX;
-      setPstakeTvl(pstkeTvl);
       setTokenPrices(tokenPrices);
     };
     fetch();
@@ -581,13 +546,19 @@ const Header = () => {
   //fetching dexter info
   useEffect(() => {
     const fetch = async () => {
-      const response = await fetchDexterPoolInfo();
-      const resp = await fetchDexterInfo();
-      const osmoResponse = await fetchOsmosisPoolInfo();
-      setDexterTVl(resp.tvl);
-      setDexterTotalVolume(resp.volume);
-      setDexterPoolInfo(response);
-      setOsmoPoolInfo(osmoResponse);
+      fetchDexterPoolInfo().then((response) => {
+        setDexterPoolInfo(response);
+      });
+      fetchDexterInfo().then((resp) => {
+        setDexterTVl(resp.tvl);
+        setDexterTotalVolume(resp.volume);
+      });
+      fetchDexterUsers().then((userResponse) => {
+        setDexterUsers(userResponse);
+      });
+      fetchOsmosisPoolInfo().then((osmoResponse) => {
+        setOsmoPoolInfo(osmoResponse);
+      });
     };
     fetch();
   }, []);
@@ -595,15 +566,23 @@ const Header = () => {
   return (
     <Box
       id={"is-sticky"}
-      className={"navbar-container"}
+      className={`navbar-container ${isOpen ? "home" : ""}`}
       transition={"all 0.3s"}
-      bg={{ base: "#f5f5f5", md: "transparent" }}
+      bg={{
+        base: router.pathname === "/" ? "transparent" : "#FCF7F1",
+        md: "transparent"
+      }}
     >
       <Container
         maxW={"1440px"}
-        px={{ base: "20px", md: "60px" }}
+        px={{ base: "30px", md: "80px" }}
         transition={"all 0.3s"}
         py={"20px"}
+        mx={"auto"}
+        bg={"transparent"}
+        className={"navbar-box"}
+        my={{ base: "0", md: "32px" }}
+        borderRadius={"1000px"}
       >
         <Flex
           as={"nav"}
@@ -612,27 +591,48 @@ const Header = () => {
           display={{ base: "none", md: "flex" }}
           className={"navigation-bar"}
         >
-          <Box>
-            <Link href="/">
-              <Image
-                src="/images/persistence-logo-dark.svg"
-                alt="Persistence Logo"
-                width={251}
-                height={32}
-              />
-            </Link>
-          </Box>
+          <Link href="/">
+            {router.pathname !== "/" ? (
+              <Box
+                width={"236px"}
+                height={"31px"}
+                backgroundSize={"236px"}
+                className={"logo-box logo-dark cursor-pointer"}
+              ></Box>
+            ) : (
+              <Box
+                width={"236px"}
+                height={"31px"}
+                backgroundSize={"236px"}
+                className={"logo-box logo-light"}
+              ></Box>
+            )}
+          </Link>
           <Spacer />
           <Stack
-            gap="56px"
+            gap="32px"
             justify="center"
             align={"center"}
             direction={{ base: "column", md: "row" }}
           >
-            {getMenuList("top-start", "hover")}
+            {getMenuList("top-start", "hover", router.pathname)}
           </Stack>
-          <Spacer />
-          <Box />
+          {/*<Link*/}
+          {/*  href="https://app.persistence.one"*/}
+          {/*  target="_black"*/}
+          {/*  rel="noopenner noreferrer"*/}
+          {/*  passHref*/}
+          {/*  className={"inline-block"}*/}
+          {/*>*/}
+          {/*  <Button*/}
+          {/*    h={"46px"}*/}
+          {/*    w={"187px"}*/}
+          {/*    variant={"primary"}*/}
+          {/*    rightIcon={<ArrowForwardIcon />}*/}
+          {/*  >*/}
+          {/*    Enter App*/}
+          {/*  </Button>*/}
+          {/*</Link>*/}
         </Flex>
         <Flex
           as={"nav"}
@@ -643,24 +643,37 @@ const Header = () => {
         >
           <Box>
             <Link href="/">
-              <Image
-                src="/images/persistence-logo-dark.svg"
-                alt="Persistence Logo"
-                width={180}
-                height={32}
-              />
+              {router.pathname !== "/" || isOpen ? (
+                <Box
+                  width={"160px"}
+                  height={"31px"}
+                  backgroundSize={"160px"}
+                  className={"logo-box logo-dark cursor-pointer"}
+                ></Box>
+              ) : (
+                <Box
+                  width={"160px"}
+                  backgroundSize={"160px"}
+                  height={"31px"}
+                  className={"logo-box logo-light"}
+                ></Box>
+              )}
             </Link>
           </Box>
           <IconButton
             size={"md"}
+            width={"40px"}
+            height={"40px"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            justifyContent={"center"}
+            alignItems={"center"}
+            display={{ base: "flex", md: "none" }}
             border={"0px"}
             onClick={isOpen ? onClose : onOpen}
           />
         </Flex>
-        {isOpen ? getMenuListMobile(onClose) : null}
+        {isOpen ? getMenuListMobile(onClose, router.pathname) : null}
       </Container>
     </Box>
   );

@@ -32,6 +32,8 @@ export interface FeatureCardInterface {
   height?: string;
   cardType?: "img" | "content";
   imgWidth: number;
+  aos?: string;
+  className?: string;
 }
 const FeatureCard = ({
   category,
@@ -43,7 +45,9 @@ const FeatureCard = ({
   width = "100%",
   height = "100%",
   cardType = "content",
-  imgWidth
+  imgWidth,
+  aos,
+  className
 }: FeatureCardInterface) => {
   const [isMobile] = useMediaQuery("(max-width: 500px)");
   return (
@@ -55,12 +59,7 @@ const FeatureCard = ({
       py={"25px"}
       px={"30px"}
     >
-      <CardHeader
-        fontSize={12}
-        p={"0"}
-        fontWeight={"300"}
-        color={"text.blackFull"}
-      >
+      <CardHeader fontSize={14} p={"0"} fontWeight={"300"} color={"#918678"}>
         {category}
       </CardHeader>
       {type === "horizontal" ? (
@@ -70,18 +69,18 @@ const FeatureCard = ({
             align={
               category === "Story" ? "center" : isMobile ? "center" : "end"
             }
-            direction={{ base: "column", md: "row" }}
+            direction={{ base: "column-reverse", md: "row" }}
           >
             <Box>
               <Heading
-                fontSize={"22px"}
+                fontSize={{ base: "20px", xl: "27px" }}
+                lineHeight={{ base: "30px", xl: "40px" }}
                 pb={"4px"}
-                lineHeight={"33px"}
-                color={"text.blackHigh"}
+                color={"#633C0D"}
               >
                 {title}
               </Heading>
-              <Text fontSize={14} pb={"24px"} color={"text.blackHigh"}>
+              <Text fontSize={14} pb={"24px"} color={"#633C0DCC"}>
                 {description}
               </Text>
               {cta.linkText !== "" ? (
@@ -93,11 +92,8 @@ const FeatureCard = ({
                   <Button
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}
-                    color={"#423F40"}
+                    color={"#E59636"}
                     fontSize={16}
-                    _hover={{
-                      color: "primary.red"
-                    }}
                   >
                     {cta.linkText}
                   </Button>
@@ -109,7 +105,9 @@ const FeatureCard = ({
             <Image
               src={image}
               alt={title}
-              width={category === "Story" ? 212 : 270}
+              width={
+                category === "Story" ? 212 : category === "Vision" ? 330 : 280
+              }
               height={240}
             />
           </Stack>
@@ -122,20 +120,20 @@ const FeatureCard = ({
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 296 : 296}
-                  height={category === "Ecosystem" ? 154 : 154}
+                  width={category === "Experience" ? 312 : 312}
+                  height={category === "Experience" ? 161 : 161}
                 />
               </Box>
               <Heading
-                fontSize={"22px"}
-                lineHeight={"33px"}
+                fontSize={{ base: "16px", xl: "22px" }}
+                lineHeight={{ base: "24px", xl: "33px" }}
                 maxW={"80%"}
                 pb={"4px"}
-                color={"text.blackHigh"}
+                color={"#633C0D"}
               >
                 {title}
               </Heading>
-              <Text fontSize={14} color={"text.blackHigh"}>
+              <Text fontSize={14} color={"#633C0DCC"}>
                 {description}
               </Text>
               {cta.linkText !== "" ? (
@@ -143,11 +141,8 @@ const FeatureCard = ({
                   <Button
                     variant={"link"}
                     rightIcon={<ArrowForwardIcon />}
-                    color={"#423F40"}
+                    color={"#E59636"}
                     fontSize={16}
-                    _hover={{
-                      color: "primary.red"
-                    }}
                   >
                     {cta.linkText}
                   </Button>
@@ -165,41 +160,48 @@ const FeatureCard = ({
       ) : (
         <CardBody p={"0"} display={category === "" ? "flex" : "block"}>
           {cardType !== "img" ? (
-            <VStack align={"flex-start"} gap={4} mt={4}>
-              <Heading
-                fontSize={"22px"}
-                lineHeight={"33px"}
-                maxW={"80%"}
-                pb={"4px"}
-                color={"text.blackHigh"}
-              >
-                {title}
-              </Heading>
-              <Text fontSize={14} color={"text.blackHigh"}>
-                {description}
-              </Text>
-              {cta.linkText !== "" ? (
-                <Link href={cta.link}>
-                  <Button
-                    variant={"link"}
-                    rightIcon={<ArrowForwardIcon />}
-                    color={"#423F40"}
-                    fontSize={16}
-                    _hover={{
-                      color: "primary.red"
-                    }}
-                  >
-                    {cta.linkText}
-                  </Button>
-                </Link>
-              ) : (
-                ""
-              )}
+            <VStack
+              align={"flex-start"}
+              gap={4}
+              mt={4}
+              flexDirection={{ base: "column-reverse", md: "column" }}
+            >
+              <Box>
+                <Heading
+                  fontSize={{ base: "16px", xl: "22px" }}
+                  lineHeight={{ base: "24px", xl: "33px" }}
+                  maxW={"80%"}
+                  pb={"4px"}
+                  color={"#633C0D"}
+                >
+                  {title}
+                </Heading>
+                <Text fontSize={14} color={"#633C0DCC"}>
+                  {description}
+                </Text>
+                {cta.linkText !== "" ? (
+                  <Link href={cta.link}>
+                    <Button
+                      variant={"link"}
+                      rightIcon={<ArrowForwardIcon />}
+                      color={"#423F40"}
+                      fontSize={16}
+                      _hover={{
+                        color: "primary.red"
+                      }}
+                    >
+                      {cta.linkText}
+                    </Button>
+                  </Link>
+                ) : (
+                  ""
+                )}
+              </Box>
               <Box alignSelf={"center"}>
                 <Image
                   src={image}
                   alt={title}
-                  width={category === "Ecosystem" ? 126 : 326}
+                  width={category === "Experience" ? 126 : 205}
                   height={126}
                 />
               </Box>

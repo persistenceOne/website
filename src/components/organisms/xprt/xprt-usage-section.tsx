@@ -11,16 +11,17 @@ import {
   Stack,
   Text,
   UnorderedList,
-  VStack
+  VStack,
+  SimpleGrid
 } from "@chakra-ui/react";
 import React from "react";
 
 const xprtUsageCards = [
   {
-    title: "Transaction Fees",
+    title: "Decentralized Governance",
     description:
-      "XPRT is used as transaction fees for the ~5000+ daily on-chain transactions related to XPRT staking, IBC transfers, LSTfi activity on Persistence One, and more.",
-    image: "/images/xprt-page/xprt-transaction.svg",
+      "XPRT governance has the final say on major protocol parameter changes, integrations, chain upgrades, community pool spend, incentives. ",
+    image: "/images/xprt-page/utility1.svg",
     cta: {
       text: "Learn More",
       link: "https://www.mintscan.io/persistence/tx",
@@ -28,10 +29,10 @@ const xprtUsageCards = [
     }
   },
   {
-    title: "Decentralized Governance",
+    title: "Transaction Fees",
     description:
-      "XPRT governance has the final say on chain upgrades, launching new pools/incentives for the DEX, parameter changes, Community pool spends, and more.",
-    image: "/images/xprt-page/xprt-governance.svg",
+      "XPRT is used as transaction fees for ~5000+ daily on-chain transactions related to trading or LPing on DEX, XPRT staking or liquid staking, IBC transfers, and more.",
+    image: "/images/xprt-page/utility2.svg",
     cta: {
       text: "Participate",
       link: "https://www.mintscan.io/persistence/proposals",
@@ -39,10 +40,10 @@ const xprtUsageCards = [
     }
   },
   {
-    title: "Chain Security",
+    title: "Additional Utility",
     description:
-      "XPRT is used to secure the Persistence One blockchain with a PoS mechanism. Network participants like validators, BTC stakers (via Babylon’s Trustless BTC staking), and XPRT stakers receive staking rewards for securing the chain. ",
-    image: "/images/xprt-page/xprt-security.svg",
+      "XPRT stakers and holders will gain more utility as part of the BTC Interoperability Product, such as trading fee discounts, whitelisting intent solvers, and treasury management.",
+    image: "/images/xprt-page/utility3.svg",
     cta: {
       text: "Start Staking",
       link: "https://wallet.keplr.app/chains/persistence?tab=staking",
@@ -50,10 +51,10 @@ const xprtUsageCards = [
     }
   },
   {
-    title: "DEX Traction",
+    title: "Chain Security",
     description:
-      "XPRT is an enabler for traction on the Persistence DEX. It’s the base trading asset and incentivization token.",
-    image: "/images/xprt-page/xprt-traction.svg",
+      "XPRT is used to secure the Persistence One blockchain via Proof of Stake. Network participants like validators, BTC stakers (via Babylon’s trustless staking), and XPRT stakers receive staking rewards for securing the chain.",
+    image: "/images/xprt-page/utility4.svg",
     cta: {
       text: "Explore",
       link: "https://app.persistence.one/pools",
@@ -65,112 +66,69 @@ const xprtUsageCards = [
 const XPRTUsageSection = () => {
   return (
     <Container
-      maxW={"1400px"}
-      px={{ base: "16px", md: "30px" }}
-      mt={{ base: "50px", md: "100px" }}
+      maxW={"1440px"}
+      px={{ base: "16px", md: "80px" }}
+      pt={{ base: "50px", md: "100px" }}
+      pb={"40px"}
     >
-      <VStack align={"center"}>
+      <VStack
+        align={"center"}
+        className="aos-init aos-animate"
+        data-aos="fade-up"
+      >
         <Heading
-          variant={"main"}
-          fontSize={{ base: "26px", md: "58px" }}
-          lineHeight={{ base: "38px", md: "72px" }}
-          color={"primary.blackHeading"}
-          mb={{ base: "22px", md: "50px" }}
+          textAlign={"center"}
+          color={"#633C0D"}
+          fontSize={{ base: "26px", xl: "48px" }}
+          lineHeight={{ base: "32px", xl: "72px" }}
+          mb={{ base: "20px", md: "40px" }}
         >
-          What is XPRT used for?
+          XPRT Utility
         </Heading>
-        <Stack
-          spacing={4}
-          direction={{ base: "column", md: "row" }}
-          justify={"space-between"}
-          mt={4}
-        >
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
+          {/*<Box display={"flex"} gap={"18px"} mt={4}>*/}
           {xprtUsageCards.map((card, index) => (
-            <Flex
-              p={"32px"}
+            <Box
               bg={"#fff"}
-              w={{ base: "100%", md: "25%" }}
+              // w={{ base: "100%", md: "50%" }}
+              maxW={"631px"}
               borderRadius={"20px"}
-              direction={"column"}
+              // direction={"column"}
               key={card.title}
               pos={"relative"}
               boxShadow={"md"}
             >
-              <Flex
-                mb={12}
-                // w={"50%"}
-                justify={"center"}
-              >
-                <Box h={{ base: "240px", md: "240px" }}>
-                  <Image
-                    src={card.image}
-                    alt=""
-                    // width={"100%"}
-                    // height={"100%"}
-                  />
-                </Box>
-              </Flex>
-              <Heading
-                variant={"secondary"}
-                color={"#423F401"}
-                fontSize={16}
-                lineHeight={"24px"}
-                fontWeight={700}
-              >
-                {card.title}
-              </Heading>
-              <Text mt={4} mb={12} fontSize={14} fontWeight={400}>
-                {card.description}
-              </Text>
-              <Link
-                href={card.cta.link}
-                target={card.cta.isExternal ? "_blank" : ""}
-                rel={card.cta.isExternal ? "noopener noreferrer" : ""}
-              >
-                <Button
-                  variant={"link"}
-                  rightIcon={<ArrowForwardIcon />}
-                  color={"#423F40"}
-                  fontSize={16}
-                  pos={"absolute"}
-                  bottom={0}
-                  mb={8}
-                  _hover={{
-                    color: "primary.red"
-                  }}
+              <Box p={"40px"}>
+                <Heading
+                  variant={"secondary"}
+                  color={"#633C0D"}
+                  fontSize={{ base: "22px", xl: "32px" }}
+                  lineHeight={{ base: "38px", xl: "48px" }}
+                  fontWeight={700}
+                  mb={2}
                 >
-                  {card.cta.text}
-                </Button>
-              </Link>
-              {index === xprtUsageCards.length - 1 && (
-                <Box
-                  pos={"absolute"}
-                  top={"-20px"}
-                  right={"-20px"}
-                  background={"#C73339"}
-                  w={"220px"}
-                  h={"210px"}
-                  zIndex={-1}
-                  borderRadius={"20px"}
-                  display={{ base: "none", md: "block" }}
+                  {card.title}
+                </Heading>
+                <Text
+                  color={"#633C0D"}
+                  fontSize={{ base: "12px", xl: "20px" }}
+                  lineHeight={{ base: "22px", xl: "30px" }}
+                  fontWeight={400}
+                >
+                  {card.description}
+                </Text>
+              </Box>
+              <Box>
+                <Image
+                  src={card.image}
+                  alt=""
+                  width={{ base: "631px", xl: "631px" }}
+                  height={{ base: "180px", xl: "380px" }}
                 />
-              )}
-              {index === 0 && (
-                <Box
-                  pos={"absolute"}
-                  bottom={"-20px"}
-                  left={"-20px"}
-                  background={"#C73339"}
-                  w={"220px"}
-                  h={"210px"}
-                  zIndex={-1}
-                  borderRadius={"20px"}
-                  display={{ base: "none", md: "block" }}
-                />
-              )}
-            </Flex>
+              </Box>
+            </Box>
           ))}
-        </Stack>
+        </SimpleGrid>
       </VStack>
     </Container>
   );

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body {
-  background: #000000;
+body, html {
+  background: #FCF7F1;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -60,9 +60,38 @@ stroke: #ececec;
 .blog-slider-arrow .icon {
   stroke: #000000;
 }
-/* navigation bar icon styling */
+
+.navbar-container.home{
+  background: #FCF7F1;
+}
+
+  /* navigation bar icon styling */
 .navbar-container.nav-bar {
-  background: #f5f5f5;
+  background: #FCF7F1;
+}
+
+.navbar-container .logo-box{
+  background-repeat: no-repeat;
+}
+
+.navbar-container .logo-box.logo-light {
+  background-image: url('/images/persistence-logo.svg');
+}
+
+.navbar-container.nav-bar .logo-box.logo-light {
+  background-image: url('/images/persistence-logo-dark.svg');
+}
+
+
+.navbar-container .logo-box.logo-dark{
+  background-image: url('/images/persistence-logo-dark.svg');
+}
+
+.navbar-container.nav-bar .nav-item-title{
+color: #000000;
+}
+.navbar-container.nav-bar .navbar-box{
+  margin-top: 0px !important;
 }
 
 .icon-nav-icon {
@@ -71,20 +100,20 @@ stroke: #ececec;
 }
 
 .icon-nav-icon.fill {
-  fill: #c73238;
+  fill: #E59636;
 }
 
 .icon-nav-icon.stroke {
-  stroke: #c73238;
+  stroke: #E59636;
   fill: transparent;
 }
 
 .nav-item .icon-box {
-  background: #c732381a;
+  background: #E596364D;
 }
 
 .nav-item:hover .icon-box {
-  background: #c73238;
+  background: #E59636;
 }
 
 .nav-item:hover .icon-nav-icon.fill {
@@ -94,6 +123,16 @@ stroke: #ececec;
 .nav-item:hover .icon-nav-icon.stroke {
   stroke: #fffefe;
   fill: transparent;
+}
+
+.nav-item .icon-chevron{
+  width: 10px;
+  fill: #633C0D;
+  margin-left: 4px;
+}
+
+.nav-item:hover .icon-chevron{
+
 }
 
 .nav-item.coming-soon {
@@ -120,6 +159,15 @@ stroke: #ececec;
   height: auto;
 }
 
+.icon-footer-github-icon {
+  fill: #9C9C9C;
+}
+
+.icon-footer-github-icon:hover{
+  fill: #E59636;
+
+}
+
 .terms-sections  .subHeading{
   margin-bottom: 16px;
   font-size: 18px;
@@ -131,4 +179,193 @@ stroke: #ececec;
 
 .ml-auto{
   margin-left: auto;
+}
+
+/* swiper slide custom styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* swiper slide custom styles end */
+
+
+
+.btc-assets .slick-slide {
+  height:500px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 30px 0;
+}
+
+.btc-assets .slick-slide>div img{
+  transition: all .4s ease-in-out;
+  padding: 0px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.btc-assets  .slick-track .slick-active.slick-center{
+  position: relative;
+  z-index: 2;
+}
+
+.btc-assets  .slick-track .slick-active.slick-center img{
+  transition: all .5s ease-in-out;
+  transform: scale(2.7);
+}
+
+.btc-assets .slick-dots{
+  bottom: -40px !important;
+}
+
+.btc-assets .slick-dots li button{
+  background: #999999 !important;
+  color: #999999 !important;
+  border-radius: 100%;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.btc-assets div:has(+div.slick-current), .btc-assets div.slick-current + div{
+  position: relative;
+  z-index: 1;
+}
+
+/**To get the the previous slide**/
+.btc-assets div:has(+div.slick-current) img{
+  transform: scale(2, 2.3);
+}
+
+/**To get the the first slide in active list**/
+.btc-assets div:has(+div +div.slick-current) img{
+  transform: scale(1, 1.6);
+}
+
+/**To get the the next slide**/
+.btc-assets div.slick-current + div img{
+  transform: scale(2,2.3);
+}
+
+/**To get the the last slide in active list**/
+.btc-assets div.slick-current + div + div img{
+  transform: scale(1, 1.6);
+}
+
+.btc-assets .slick-dots li.slick-active button{
+  background: #EE972C !important;
+  color: #EE972C !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before{
+  color: transparent !important;
+}
+
+.slick-prev, .slick-next{
+  display: none !important;
+}
+
+/** Home page hero bg animation**/
+.bg-video{
+  position: absolute;
+  /*top: -48px;*/
+}
+
+.swiper{
+  padding: 30px 0 !important;
+}
+
+.swiper-slide .slider-card{
+  transform: scale(1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.swiper-slide-active{
+  z-index: 10;
+}
+
+.swiper-backface-hidden .swiper-slide{
+  /*margin: 0 !important;*/
+  /*transform: scale(0.96) !important;*/
+  /*transition-duration: 0.7s;*/
+  /*transition-timing-function: ease-in-out;*/
+}
+
+/*.swiper-slide.swiper-slide-prev{*/
+/*  margin-right: 20px !important;*/
+/*}*/
+/*.swiper-slide.swiper-slide-next{*/
+/*  margin-left: 20px !important;*/
+/*}*/
+
+.swiper-slide.swiper-slide-active{
+  /*!*transform: scale(1.1) !important;*!*/
+  /*transition-duration: 0.7s;*/
+  /*transition-timing-function: ease-in-out;*/
+}
+
+@media (max-width: 540px) {
+  .swiper-slide.swiper-slide-active{
+    transform: scale(0.96) !important;
+    margin: auto !important;
+  }
+  .swiper-slide-active .slider-card{
+    box-shadow: none;
+  }
+  /*.swiper-slide.swiper-slide-prev{*/
+  /*  margin-right: 0px !important;*/
+  /*}*/
+  /*.swiper-slide.swiper-slide-next{*/
+  /*  margin-left: 0px !important;*/
+  /*}*/
+
+  .swiper-slide-active .slider-card .video-container{
+    margin: 0 14px;
+    background-size: inherit !important;
+  }
+}
+
+.swiper-slide-active .slider-card{
+  /*transform: scale(1.2, 1.1);*/
+  /*z-index: 10;*/
+  /*transition-duration: 0.7s;*/
+  /*transition-timing-function: ease-in-out;*/
+}
+
+.swiper-slide-active .slider-card .video-container{
+  /*background-image: url("/images/home-page/anim-bg.svg");*/
+  /*border: 1.1px solid #8C5512;*/
+  /*background-size: cover;*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+}
+.swiper-slide-active .slider-card .slide-title{
+  /*color: #FEFDFB !important;*/
+  /*font-size: 26px !important;*/
+  /*font-weight: 700 !important;*/
+}
+
+.swiper-slide-active .slider-card .slide-title{
+
+}
+
+.icon-team-social{
+  width: 12px;
+  height: 12px;
 }
