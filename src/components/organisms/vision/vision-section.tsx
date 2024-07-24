@@ -68,7 +68,7 @@ const VisionSection = () => {
               transitionDuration={"0.5s"}
               transitionTimingFunction={"all ease-in"}
               _hover={{
-                transform: "scale(1.1)",
+                transform: "scale(1.05)",
                 zIndex: 10,
                 transitionDuration: "0.5s",
                 transitionTimingFunction: "all ease-in"
@@ -88,6 +88,7 @@ const VisionSection = () => {
                   alt={item.title}
                   px={{ base: "20px", md: "40px" }}
                   width={{ base: 250, xl: 401 }}
+                  mx={{ base: "auto", md: "0" }}
                   height={{ base: 190, xl: 340 }}
                   // objectFit="cover"
                 />

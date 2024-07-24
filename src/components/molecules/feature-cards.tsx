@@ -127,7 +127,7 @@ const FeatureCards = () => {
             bg={"#E59636"}
             borderRadius={40}
             p={4}
-            pl={8}
+            pl={{ base: 4, md: 8 }}
             flexDir={{ base: "column", md: "row" }}
             align={"center"}
           >
