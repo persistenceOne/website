@@ -164,7 +164,7 @@ const Footer = () => {
         py={{ base: "30px", md: "40px" }}
       >
         <Flex
-          display={{ base: "block", md: "flex" }}
+          display={{ base: "block", lg: "flex" }}
           justify={"space-between"}
           align={"flex-start"}
           color={"#ffffff"}
@@ -254,7 +254,7 @@ const Footer = () => {
           <SimpleGrid
             flex={1}
             columns={2}
-            gap={{ base: "30px", md: "130px" }}
+            gap={{ base: "30px", md: "70px", "2xl": "130px" }}
             justifyContent={"end"}
             display={{ base: "grid", md: "flex" }}
           >

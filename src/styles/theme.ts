@@ -46,6 +46,9 @@ export default extendTheme({
         background: "#FCF7F1",
         maxWidth: "100%",
         overflowX: "hidden"
+      },
+      html: {
+        background: "#FCF7F1"
       }
     }
   },
