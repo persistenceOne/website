@@ -122,12 +122,11 @@ const menuItems = [
         comingSoon: false
       },
       {
-        title: "Explorer",
-        description:
-          "Explore the dApps, validators, and partners contributing to the ecosystem",
-        icon: "explorer",
+        title: "Governance",
+        description: "Participate in community discussions or share your ideas",
+        icon: "persistence",
         iconType: "stroke",
-        link: "https://www.mintscan.io/persistence",
+        link: "https://www.mintscan.io/persistence/proposals",
         isExternal: true,
         comingSoon: false
       }
