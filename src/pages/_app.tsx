@@ -57,7 +57,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ChakraProvider theme={theme}>
         <Head>
           <meta charSet="utf-8" />
-          <title>Persistence One | Securely Trade BTC and LSTs</title>
+          <title>
+            Persistence One | Bitcoin Interoperability. Powered by Intents.
+            Secured by Bitcoin.
+          </title>
           <link rel="shortcut icon" href="/favicon.png" />
           <meta
             name="viewport"

@@ -117,7 +117,7 @@ const footerLinks = [
     title: "Connect",
     links: [
       {
-        title: "Careers",
+        title: "Persisters",
         link: "https://careers.persistence.one/",
         isExternal: true
       },
@@ -182,7 +182,7 @@ const Footer = () => {
             />
             <Link
               href={
-                "https://persistence.notion.site/Persistence-Media-Kit-50e8f0eacab1466ebe7899d3773a48a3"
+                "https://persistence.notion.site/Persistence-Brand-Press-Kit-85150f1ae50a48cf9edb46577261ed29"
               }
               target={"_blank"}
             >
