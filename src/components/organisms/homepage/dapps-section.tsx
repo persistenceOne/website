@@ -12,7 +12,7 @@ const getData = (dexterInfo: any) => {
       dAppName: "Persistence DEX",
       dAppLogo: "/images/persistence-dex-logo.svg",
       dAppDescription:
-        "Governed by $XPRT, Persistence DEX is a trading and liquidity venue for XPRT, BTC and its’ related assets, LSTs and Stablecoins",
+        "Governed by $XPRT, Persistence DEX is a trading and liquidity venue for XPRT, BTC and its’ related assets, LSTs and Stablecoins.",
       dAppStats: [
         {
           label: "Total Value Locked",

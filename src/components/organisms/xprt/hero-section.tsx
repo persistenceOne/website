@@ -54,24 +54,28 @@ const HeroSection = () => {
       pt={"109px"}
       pb={"54px"}
     >
-      <Spacer h={{ base: "40px", xl: "80px" }} />
+      <Spacer h={{ base: "40px", xl: "40px" }} />
       <Flex
         align={"flex-start"}
         pos={"relative"}
-        mb={{ base: "40px", md: "60px" }}
+        mb={{ base: "40px", md: "40px" }}
         flexDirection={{ base: "column-reverse", md: "row" }}
       >
         <VStack
           mt={{ base: "40px", md: "100px" }}
-          w={{ base: "100%", md: "45%" }}
+          w={{ base: "100%", md: "65%" }}
           align={"stretch"}
         >
-          <Box maxW={{ base: "400px", xl: "600px" }} mb={"30px"}>
+          <Box
+            maxW={{ base: "400px", xl: "650px" }}
+            mb={{ base: "20px", "2xl": "30px" }}
+          >
             <Heading
-              fontSize={{ base: "36px", xl: "50px" }}
-              lineHeight={{ base: "50px", xl: "70px" }}
+              maxW={{ base: "400px", xl: "600px" }}
+              fontSize={{ base: "36px", xl: "44px" }}
+              lineHeight={{ base: "50px", xl: "64px" }}
               color={"#633C0D"}
-              mb={5}
+              mb={{ base: 3, "2xl": 5 }}
               textAlign={{ base: "left", md: "left" }}
             >
               Powering BTC Interoperability, Governing Intents.

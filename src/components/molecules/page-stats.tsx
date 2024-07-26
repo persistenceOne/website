@@ -23,7 +23,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
           >
             <Text
               color={"#350B00"}
-              fontSize={{ base: "22px", xl: "44px" }}
+              fontSize={{ base: "22px", xl: "40px" }}
               fontWeight={700}
             >
               {stat.statLabel == "Average Transaction Cost" ? (
@@ -42,7 +42,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
             </Text>
             <Text
               color="#633C0D"
-              fontSize={{ base: "16px", xl: "18px" }}
+              fontSize={{ base: "14px", xl: "16px" }}
               fontWeight={400}
             >
               {stat.statLabel}

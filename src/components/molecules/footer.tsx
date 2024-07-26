@@ -119,7 +119,7 @@ const footerLinks = [
       {
         title: "Persisters",
         link: "https://careers.persistence.one/",
-        isExternal: true
+        isExternal: false
       },
       {
         title: "Forum",

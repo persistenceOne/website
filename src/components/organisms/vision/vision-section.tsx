@@ -24,7 +24,7 @@ const list = [
     imgUrl: "/images/vision/vision2.svg",
     title: "Chain security will always be needed in abundance",
     content:
-      "For the first time in our lives, we may witness hyperinflation, making BTC more relevant than ever"
+      "For the first time in our lives, we may witness hyperinflation, making BTC more relevant than ever."
   },
   {
     imgUrl: "/images/vision/vision3.svg",

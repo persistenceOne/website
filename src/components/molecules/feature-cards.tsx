@@ -47,7 +47,7 @@ const FeatureCards = () => {
           aos={"fade-down-right"}
           className={"aos-init aos-animate"}
           imgWidth={210}
-          title="BTCFi will overtake ETH DeFi"
+          title="BTCFi will overtake ETH DeFi."
           description="Learn about our vision and belief in the Bitcoinization of modern-day finance."
           image={`${commonImagePath}/bitcoin_hand.svg`}
           cta={{
@@ -64,7 +64,7 @@ const FeatureCards = () => {
           aos={"fade-down-left"}
           className={"aos-init aos-animate"}
           category="Experience"
-          title="Building since 2019"
+          title="Building since 2019."
           description="Since 2019, Persistence One has built expertise in DeFi, IBC interoperability, and the Persistence Core-1 chain's security. Now, it's time to enter the BTCfi space and tackle Bitcoin interoperability challenges."
           image={`${commonImagePath}/building.svg`}
           imgWidth={115}

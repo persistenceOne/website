@@ -68,7 +68,7 @@ const XPRTUsageSection = () => {
     <Container
       maxW={"1440px"}
       px={{ base: "16px", md: "80px" }}
-      pt={{ base: "50px", md: "100px" }}
+      pt={{ base: "50px", md: "80px" }}
       pb={"40px"}
     >
       <VStack

@@ -52,7 +52,7 @@ const CommunityPanel = () => {
         mx={"auto"}
       >
         Learn more about Persistence One, chat with fellow Persisters, and let
-        your voice be heard for the future of bitcoin interoperability
+        your voice be heard for the future of bitcoin interoperability.
       </Text>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
         {socialCardContents.map((card, index) => (
