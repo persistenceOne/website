@@ -53,7 +53,7 @@ const PageStats = ({ stats }: { stats: PageStat[] }) => {
               display={{ base: "none", md: "block" }}
               borderColor={"#434343"}
               orientation="vertical"
-              h="70px"
+              h="65px"
               mx={8}
               borderWidth={1}
             />
