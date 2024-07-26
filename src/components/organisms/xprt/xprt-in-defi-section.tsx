@@ -51,7 +51,7 @@ const getData = (
         hover: "buttons.ctaBlueHover"
       },
       description:
-        "Provide liquidity to the WBTC/XPRT pool to earn trading fees and external incentives",
+        "Provide liquidity to the WBTC/XPRT pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",
@@ -81,7 +81,7 @@ const getData = (
         hover: "buttons.ctaBlueHover"
       },
       description:
-        "Provide liquidity to the stkXPRT/XPRT pool to earn trading fees and external incentives",
+        "Provide liquidity to the stkXPRT/XPRT pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",
@@ -111,7 +111,7 @@ const getData = (
         hover: "buttons.ctaBlueHover"
       },
       description:
-        "Provide liquidity to the ATOM/XPRT pool to earn trading fees and external incentives",
+        "Provide liquidity to the ATOM/XPRT pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",
@@ -172,7 +172,7 @@ const getData = (
         hover: "buttons.ctaDarkBlueHover"
       },
       description:
-        "Provide liquidity to the XPRT/USDC supercharged pool to earn trading fees and external incentives",
+        "Provide liquidity to the XPRT/USDC supercharged pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",
@@ -202,7 +202,7 @@ const getData = (
         hover: "buttons.ctaPurpleHover"
       },
       description:
-        "Provide liquidity to the XPRT/OSMO Supercharged pool to earn trading fees and external incentives. ",
+        "Provide liquidity to the XPRT/OSMO Supercharged pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",
@@ -232,7 +232,7 @@ const getData = (
         hover: "buttons.ctaBlueHover"
       },
       description:
-        "Provide liquidity to the USDT/XPRT pool to earn trading fees and external incentives",
+        "Provide liquidity to the USDT/XPRT pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",
@@ -262,7 +262,7 @@ const getData = (
         hover: "buttons.ctaBlueHover"
       },
       description:
-        "Provide liquidity to the PSTAKE/XPRT pool to earn trading fees and external incentives",
+        "Provide liquidity to the PSTAKE/XPRT pool to earn trading fees and external incentives.",
       stats: [
         {
           label: "TVL",

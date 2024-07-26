@@ -26,7 +26,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
   {
     title: "True to Roots",
     description:
-      "Staying humble when things are great, persistent when things are bad",
+      "Staying humble when things are great, persistent when things are bad.",
     icon: "/icons/team-page/true-to-roots.svg"
   },
   {
@@ -37,7 +37,7 @@ const persisterValues: PersisterValuesCardInterface[] = [
   },
   {
     title: "Team",
-    description: "Win or Lose Together. Improve Together",
+    description: "Win or Lose Together. Improve Together.",
     icon: "/icons/team-page/team.svg"
   },
   {

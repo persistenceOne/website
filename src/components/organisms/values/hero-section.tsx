@@ -30,7 +30,7 @@ const HeroSection = () => {
               fontSize={{ base: "34px", xl: "66px" }}
               lineHeight={{ base: "48px", xl: "90px" }}
             >
-              Bitcoiners at heart
+              Bitcoiners at heart.
             </Heading>
 
             <Text
