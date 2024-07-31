@@ -130,7 +130,7 @@ const HeroSection = () => {
             </Heading>
             <Text
               textAlign={"left"}
-              maxW={{ base: "400px", xl: "650px" }}
+              maxW={{ base: "400px", xl: "580px" }}
               mb={"29px"}
               color={"#FFFFFFCC"}
               fontSize={{ base: "16px", xl: "26px" }}
