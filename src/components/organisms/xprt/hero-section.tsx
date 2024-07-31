@@ -71,7 +71,7 @@ const HeroSection = () => {
             mb={{ base: "20px", "2xl": "20px" }}
           >
             <Heading
-              maxW={{ base: "400px", xl: "600px" }}
+              maxW={{ base: "400px", xl: "650px" }}
               fontSize={{ base: "36px", xl: "44px" }}
               lineHeight={{ base: "50px", xl: "64px" }}
               color={"#633C0D"}
