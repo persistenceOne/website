@@ -126,7 +126,7 @@ const HeroSection = () => {
               lineHeight={{ base: "44px", xl: "70px" }}
               mb={"12px"}
             >
-              Bitcoin Interoperability. Powered by Intents.
+              Bitcoin Cross-Chain Swaps
             </Heading>
             <Text
               textAlign={"left"}
@@ -136,8 +136,8 @@ const HeroSection = () => {
               fontSize={{ base: "16px", xl: "26px" }}
               lineHeight={{ base: "28px", xl: "39px" }}
             >
-              Fast, zero slippage cross-chain swaps across Bitcoin L2s. Secured
-              by Bitcoin.
+              Fast, zero slippage cross-chain swaps across Bitcoin L2s. Powered
+              by Intents. Secured by Bitcoin.
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link

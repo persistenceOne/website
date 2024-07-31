@@ -62,7 +62,7 @@ const CrossChainSlider = () => {
           fontSize={{ base: "26px", xl: "48px" }}
           lineHeight={{ base: "32px", xl: "72px" }}
         >
-          ₿itcoin Transfers Cross-chain
+          ₿itcoin Interoperability
         </Heading>
         <Swiper
           // slidesPerView={5.2}

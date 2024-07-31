@@ -78,7 +78,7 @@ const HeroSection = () => {
               mb={{ base: 3, "2xl": 4 }}
               textAlign={{ base: "left", md: "left" }}
             >
-              Powering BTC Interoperability, Governing Intents.
+              Powering BTC Cross-Chain Swaps, Governing Intents.
             </Heading>
             <Text
               textAlign="left"
