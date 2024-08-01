@@ -55,14 +55,14 @@ const CrossChainSlider = () => {
         data-aos="fade-up"
       >
         <Heading
-          mb={"40px"}
+          mb={"0px"}
           fontWeight={700}
           textAlign={"center"}
           color={"#633C0D"}
           fontSize={{ base: "26px", xl: "48px" }}
           lineHeight={{ base: "32px", xl: "72px" }}
         >
-          ₿itcoin Transfers Cross-chain
+          ₿itcoin Interoperability
         </Heading>
         <Swiper
           // slidesPerView={5.2}

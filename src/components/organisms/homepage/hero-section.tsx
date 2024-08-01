@@ -121,23 +121,32 @@ const HeroSection = () => {
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
-              maxW={{ base: "400px", xl: "728px" }}
-              fontSize={{ base: "28px", xl: "52px" }}
-              lineHeight={{ base: "44px", xl: "70px" }}
+              maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
+              fontSize={{ base: "28px", md: "34px", xl: "52px" }}
+              lineHeight={{ base: "44px", md: "50px", xl: "70px" }}
               mb={"12px"}
             >
-              Bitcoin Interoperability. Powered by Intents.
+              <Text
+                as="span"
+                color={"#E59636"}
+                fontSize={{ base: "28px", lg: "72px" }}
+                lineHeight={{ base: "44px", lg: "86px" }}
+              >
+                Bitcoin
+              </Text>
+              <br />
+              Cross-Chain Swaps
             </Heading>
             <Text
               textAlign={"left"}
-              maxW={{ base: "400px", xl: "650px" }}
+              maxW={{ base: "400px", xl: "580px" }}
               mb={"29px"}
               color={"#FFFFFFCC"}
               fontSize={{ base: "16px", xl: "26px" }}
               lineHeight={{ base: "28px", xl: "39px" }}
             >
-              Fast, zero slippage cross-chain swaps across Bitcoin L2s. Secured
-              by Bitcoin.
+              Fast, zero slippage swaps across Bitcoin L2s. Powered by Intents.
+              Secured by Bitcoin.
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link
