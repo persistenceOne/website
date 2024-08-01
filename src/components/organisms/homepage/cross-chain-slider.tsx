@@ -55,7 +55,7 @@ const CrossChainSlider = () => {
         data-aos="fade-up"
       >
         <Heading
-          mb={"40px"}
+          mb={"0px"}
           fontWeight={700}
           textAlign={"center"}
           color={"#633C0D"}
