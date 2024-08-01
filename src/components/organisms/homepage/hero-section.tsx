@@ -121,12 +121,21 @@ const HeroSection = () => {
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
-              maxW={{ base: "400px", lg: "600px", "2xl": "728px" }}
+              maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
               fontSize={{ base: "28px", md: "34px", xl: "52px" }}
               lineHeight={{ base: "44px", md: "50px", xl: "70px" }}
               mb={"12px"}
             >
-              Bitcoin Cross-Chain Swaps
+              <Text
+                as="span"
+                color={"#E59636"}
+                fontSize={{ base: "28px", lg: "72px" }}
+                lineHeight={{ base: "44px", lg: "86px" }}
+              >
+                Bitcoin
+              </Text>
+              <br />
+              Cross-Chain Swaps
             </Heading>
             <Text
               textAlign={"left"}
