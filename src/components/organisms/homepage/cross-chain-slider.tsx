@@ -1,6 +1,12 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import Slide1 from "../../../../public/images/lotties/swap.json";
+import Slide2 from "../../../../public/images/lotties/bridge.json";
+import Slide3 from "../../../../public/images/lotties/fast.json";
+import Slide4 from "../../../../public/images/lotties/secured.json";
+import Slide5 from "../../../../public/images/lotties/scalable.json";
+import Slide6 from "../../../../public/images/lotties/trade.json";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,33 +22,33 @@ const list = [
   {
     title: "Swap BTC for BTC",
     content: `< show swaps between 1 BTC variant to another> - via animation`,
-    imageUrl: <LottieAnimation />
+    imageUrl: <LottieAnimation lottie={Slide1} />
   },
   {
     title: "Bridge without bridging",
     content: "Cross-chain transfers between BTC L2s, EVM, etc",
-    imageUrl: <LottieAnimation />
+    imageUrl: <LottieAnimation lottie={Slide2} />
   },
   {
     title: "Low Slippage, High Speed",
     content: "< show fast movement via animation>",
-    imageUrl: <LottieAnimation />
+    imageUrl: <LottieAnimation lottie={Slide3} />
   },
   {
     title: "Secured by Bitcoin",
     content: "Shared BTC security via Babylon",
-    imageUrl: <LottieAnimation />
+    imageUrl: <LottieAnimation lottie={Slide4} />
   },
   {
     title: "Scalable Liquidity, No limitations",
     content: "Powered by Cross-chain Intents",
-    imageUrl: <LottieAnimation />
+    imageUrl: <LottieAnimation lottie={Slide5} />
   },
   {
     title: "Trading for BTC and LSTs on the DEX",
     content:
       "Efficient trading and LPing for BTC ecosystem assets, LSTs, and Stablecoins.",
-    imageUrl: <LottieAnimation />
+    imageUrl: <LottieAnimation lottie={Slide6} />
   }
 ];
 const CrossChainSlider = () => {
@@ -71,14 +77,14 @@ const CrossChainSlider = () => {
           speed={2000}
           centeredSlides={true}
           loop={true}
-          // autoplay={{
-          //   delay: 2000,
-          //   duration: 3000,
-          //   disableOnInteraction: true,
-          //   pauseOnMouseEnter: true,
-          //   waitForTransition: true,
-          //   reverseDirection: false
-          // }}
+          autoplay={{
+            delay: 2000,
+            duration: 3000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            waitForTransition: true,
+            reverseDirection: false
+          }}
           breakpoints={{
             340: {
               width: 340,
@@ -112,7 +118,7 @@ const CrossChainSlider = () => {
                 flexDir={"column"}
                 className={"slider-card"}
               >
-                <LottieAnimation />
+                {resource.imageUrl}
               </Box>
             </SwiperSlide>
           ))}
