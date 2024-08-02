@@ -18,7 +18,7 @@ const socialCardContents = [
   {
     title: "Discord",
     description: "Join our community",
-    link: "https://discord.com/invite/vyvp3scWnH",
+    link: "https://discord.persistence.one/",
     image: "/icons/discord.svg"
   },
   {
