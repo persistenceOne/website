@@ -73,7 +73,9 @@ const GetXprtSection = () => {
                 </Button>
               </Link>
               <Link
-                href={"https://www.coingecko.com/en/coins/persistence"}
+                href={
+                  "https://go.skip.build/?src_chain=1&dest_chain=core-1&dest_asset=uxprt"
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 w={{ base: "100%", md: "auto" }}

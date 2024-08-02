@@ -301,23 +301,23 @@ color: #000000;
 }
 
 .swiper-backface-hidden .swiper-slide{
-  /*margin: 0 !important;*/
-  /*transform: scale(0.96) !important;*/
-  /*transition-duration: 0.7s;*/
-  /*transition-timing-function: ease-in-out;*/
+  margin: 0 !important;
+  transform: scale(0.96) !important;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
 }
 
-/*.swiper-slide.swiper-slide-prev{*/
-/*  margin-right: 20px !important;*/
-/*}*/
-/*.swiper-slide.swiper-slide-next{*/
-/*  margin-left: 20px !important;*/
-/*}*/
+.swiper-slide.swiper-slide-prev{
+  margin-right: 20px !important;
+}
+.swiper-slide.swiper-slide-next{
+  margin-left: 20px !important;
+}
 
 .swiper-slide.swiper-slide-active{
-  /*!*transform: scale(1.1) !important;*!*/
-  /*transition-duration: 0.7s;*/
-  /*transition-timing-function: ease-in-out;*/
+  transform: scale(1.1) !important;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
 }
 
 @media (max-width: 540px) {
@@ -343,22 +343,22 @@ color: #000000;
 
 .swiper-slide-active .slider-card{
   /*transform: scale(1.2, 1.1);*/
-  /*z-index: 10;*/
-  /*transition-duration: 0.7s;*/
-  /*transition-timing-function: ease-in-out;*/
+  z-index: 10;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
 }
 
 .swiper-slide-active .slider-card .video-container{
-  /*background-image: url("/images/home-page/anim-bg.svg");*/
-  /*border: 1.1px solid #8C5512;*/
-  /*background-size: cover;*/
-  /*background-position: center;*/
-  /*background-repeat: no-repeat;*/
+  background-image: url("/images/home-page/anim-bg.svg");
+  border: 1.1px solid #8C5512;
+  background-size: 105%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .swiper-slide-active .slider-card .slide-title{
-  /*color: #FEFDFB !important;*/
-  /*font-size: 26px !important;*/
-  /*font-weight: 700 !important;*/
+  color: #FEFDFB !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
 }
 
 .swiper-slide-active .slider-card .slide-title{
@@ -368,4 +368,15 @@ color: #000000;
 .icon-team-social{
   width: 12px;
   height: 12px;
+}
+
+.lottie-container {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent; /* Initial background color */
+  transition: background-color 0.3s ease;
+}
+
+.lottie-container.hovered {
+  background-color: transparent; /* Background color on hover */
 }

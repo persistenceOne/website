@@ -1,12 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Slide1 from "../../../../public/images/lotties/swap.json";
-import Slide2 from "../../../../public/images/lotties/bridge.json";
-import Slide3 from "../../../../public/images/lotties/fast.json";
-import Slide4 from "../../../../public/images/lotties/secured.json";
-import Slide5 from "../../../../public/images/lotties/scalable.json";
-import Slide6 from "../../../../public/images/lotties/trade.json";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -15,39 +10,38 @@ import "swiper/css/autoplay";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
-import LottieAnimation from "@/components/molecules/lottie-container";
 
 const list = [
   {
     title: "Swap BTC for BTC",
     content: `< show swaps between 1 BTC variant to another> - via animation`,
-    imageUrl: <LottieAnimation lottie={Slide1} />
+    imageUrl: "/images/anim/slide1.mp4"
   },
   {
     title: "Bridge without bridging",
     content: "Cross-chain transfers between BTC L2s, EVM, etc",
-    imageUrl: <LottieAnimation lottie={Slide2} />
+    imageUrl: "/images/anim/slide2.mp4"
   },
   {
     title: "Low Slippage, High Speed",
     content: "< show fast movement via animation>",
-    imageUrl: <LottieAnimation lottie={Slide3} />
+    imageUrl: "/images/anim/slide3.mp4"
   },
   {
     title: "Secured by Bitcoin",
     content: "Shared BTC security via Babylon",
-    imageUrl: <LottieAnimation lottie={Slide4} />
+    imageUrl: "/images/anim/slide4.mp4"
   },
   {
     title: "Scalable Liquidity, No limitations",
     content: "Powered by Cross-chain Intents",
-    imageUrl: <LottieAnimation lottie={Slide5} />
+    imageUrl: "/images/anim/slide5.mp4"
   },
   {
     title: "Trading for BTC and LSTs on the DEX",
     content:
       "Efficient trading and LPing for BTC ecosystem assets, LSTs, and Stablecoins.",
-    imageUrl: <LottieAnimation lottie={Slide6} />
+    imageUrl: "/images/anim/slide6.mp4"
   }
 ];
 const CrossChainSlider = () => {
@@ -61,28 +55,29 @@ const CrossChainSlider = () => {
         data-aos="fade-up"
       >
         <Heading
-          mb={"40px"}
+          mb={"0px"}
           fontWeight={700}
           textAlign={"center"}
           color={"#633C0D"}
           fontSize={{ base: "26px", xl: "48px" }}
           lineHeight={{ base: "32px", xl: "72px" }}
         >
-          ₿itcoin Transfers Cross-chain
+          ₿itcoin Interoperability
         </Heading>
         <Swiper
+          // slidesPerView={5.2}
           spaceBetween={18}
           speed={1000}
           centeredSlides={true}
           loop={true}
-          // autoplay={{
-          //   delay: 1000,
-          //   duration: 1000,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: false,
-          //   waitForTransition: true,
-          //   reverseDirection: false
-          // }}
+          autoplay={{
+            delay: 1000,
+            duration: 1000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            waitForTransition: true,
+            reverseDirection: false
+          }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 1.5, spaceBetween: 15 },
@@ -132,7 +127,6 @@ const CrossChainSlider = () => {
                 <Box
                   className={"video-container"}
                   flex={1}
-                  w={"100%"}
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
@@ -145,8 +139,25 @@ const CrossChainSlider = () => {
                   bg={"#FFFFFF"}
                   pt={"140px"}
                   pb={"70px"}
+                  // _hover={{
+                  //   bg: "#E59636"
+                  // }}
                 >
-                  {resource.imageUrl}
+                  {/*<Image*/}
+                  {/*  src={resource.imageUrl}*/}
+                  {/*  width={100}*/}
+                  {/*  height={5}*/}
+                  {/*  alt={"Image"}*/}
+                  {/*/>*/}
+                  <video
+                    autoPlay={true}
+                    controls={false}
+                    playsInline={true}
+                    preload="auto"
+                    muted={true}
+                    loop={true}
+                    src={resource.imageUrl}
+                  />
                 </Box>
               </Box>
             </SwiperSlide>
