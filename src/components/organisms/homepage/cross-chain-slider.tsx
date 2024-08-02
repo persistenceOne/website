@@ -104,7 +104,7 @@ const CrossChainSlider = () => {
               <Box
                 // bg="#fff"
                 borderRadius={"24px"}
-                h={{ base: "350px", md: "450px" }}
+                h={{ base: "400px", md: "450px" }}
                 my={2}
                 boxShadow={"md"}
                 display={"flex"}

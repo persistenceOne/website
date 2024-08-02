@@ -6,6 +6,7 @@ import Slide3 from "../../../public/images/lotties/fast.json";
 import Slide4 from "../../../public/images/lotties/secured.json";
 import Slide5 from "../../../public/images/lotties/scalable.json";
 import Slide6 from "../../../public/images/lotties/trade.json";
+import { Box } from "@chakra-ui/react";
 
 interface Props {
   lottie: any;
@@ -43,8 +44,12 @@ const LottieAnimation = ({ lottie }: Props) => {
   };
 
   return (
-    <div
-      className={`lottie-container ${isHovered ? "hovered" : ""}`}
+    <Box
+      overflow={{ base: "visible", md: "hidden" }}
+      position="relative"
+      className={`lottie-container ${
+        isHovered ? "hovered" : ""
+      } overflow-auto md:overflow-hidden`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -53,7 +58,7 @@ const LottieAnimation = ({ lottie }: Props) => {
         height={281} // Adjust height and width as per your animation
         width={281}
       />
-    </div>
+    </Box>
   );
 };
 
