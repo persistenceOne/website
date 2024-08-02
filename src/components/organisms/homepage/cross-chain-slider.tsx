@@ -86,7 +86,7 @@ const CrossChainSlider = () => {
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 1.5, spaceBetween: 15 },
-            // 768: { slidesPerView: 3, spaceBetween: 50 },
+            768: { slidesPerView: 2.5, spaceBetween: 15 },
             1220: {
               width: 1220,
               slidesPerView: 3.4
