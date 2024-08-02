@@ -185,7 +185,7 @@ const menuItems = [
         description: "",
         icon: "header-discord",
         iconType: "fill",
-        link: "https://discord.com/invite/vyvp3scWnH",
+        link: "https://discord.persistence.one/",
         isExternal: true,
         comingSoon: false
       },

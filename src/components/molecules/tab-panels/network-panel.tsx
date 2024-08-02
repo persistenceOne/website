@@ -38,7 +38,7 @@ const NetworkPanel = () => {
             </Box>
             <Box justifySelf={"flex-end"}>
               <Link
-                href={"https://discord.com/invite/vyvp3scWnH"}
+                href={"https://discord.persistence.one/"}
                 target="_blank"
                 rel="noopener noreferrer"
               >

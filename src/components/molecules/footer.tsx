@@ -27,7 +27,7 @@ const footerSocialLinks = [
   },
   {
     name: "Discord",
-    link: "https://discord.com/invite/vyvp3scWnH",
+    link: "https://discord.persistence.one/",
     icon: "discord",
     iconType: "stroke",
     color: "#767EF0"
@@ -138,7 +138,7 @@ const footerLinks = [
       },
       {
         title: "Discord",
-        link: "https://discord.com/invite/vyvp3scWnH",
+        link: "https://discord.persistence.one/",
         isExternal: true
       },
       {
