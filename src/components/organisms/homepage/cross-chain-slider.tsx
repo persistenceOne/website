@@ -16,41 +16,42 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import LottieAnimation from "@/components/molecules/lottie-container";
+import { useTranslation } from "next-export-i18n";
 
-const list = [
-  {
-    title: "Swap BTC for BTC",
-    content: `< show swaps between 1 BTC variant to another> - via animation`,
-    imageUrl: <LottieAnimation lottie={Slide1} />
-  },
-  {
-    title: "Bridge without bridging",
-    content: "Cross-chain transfers between BTC L2s, EVM, etc",
-    imageUrl: <LottieAnimation lottie={Slide2} />
-  },
-  {
-    title: "Low Slippage, High Speed",
-    content: "< show fast movement via animation>",
-    imageUrl: <LottieAnimation lottie={Slide3} />
-  },
-  {
-    title: "Secured by Bitcoin",
-    content: "Shared BTC security via Babylon",
-    imageUrl: <LottieAnimation lottie={Slide4} />
-  },
-  {
-    title: "Scalable Liquidity, No limitations",
-    content: "Powered by Cross-chain Intents",
-    imageUrl: <LottieAnimation lottie={Slide5} />
-  },
-  {
-    title: "Trading for BTC and LSTs on the DEX",
-    content:
-      "Efficient trading and LPing for BTC ecosystem assets, LSTs, and Stablecoins.",
-    imageUrl: <LottieAnimation lottie={Slide6} />
-  }
-];
 const CrossChainSlider = () => {
+  const { t } = useTranslation();
+  const list = [
+    {
+      title: t("HOME_SECTION2_SLIDE1"),
+      content: ``,
+      imageUrl: <LottieAnimation lottie={Slide1} />
+    },
+    {
+      title: t("HOME_SECTION2_SLIDE2"),
+      content: ``,
+      imageUrl: <LottieAnimation lottie={Slide2} />
+    },
+    {
+      title: t("HOME_SECTION2_SLIDE3"),
+      content: ``,
+      imageUrl: <LottieAnimation lottie={Slide3} />
+    },
+    {
+      title: t("HOME_SECTION2_SLIDE4"),
+      content: ``,
+      imageUrl: <LottieAnimation lottie={Slide4} />
+    },
+    {
+      title: t("HOME_SECTION2_SLIDE5"),
+      content: ``,
+      imageUrl: <LottieAnimation lottie={Slide5} />
+    },
+    {
+      title: t("HOME_SECTION2_SLIDE6"),
+      content: ``,
+      imageUrl: <LottieAnimation lottie={Slide6} />
+    }
+  ];
   return (
     <Box bg={"#FCF7F1"} pos={"relative"} zIndex={10} mt={"80pz"}>
       <Container
@@ -68,7 +69,7 @@ const CrossChainSlider = () => {
           fontSize={{ base: "26px", xl: "48px" }}
           lineHeight={{ base: "32px", xl: "72px" }}
         >
-          ₿itcoin Transfers Cross-chain
+          {t("HOME_SECTION2_TITLE")}
         </Heading>
         <Swiper
           spaceBetween={18}

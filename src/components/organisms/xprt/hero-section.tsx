@@ -19,8 +19,10 @@ import { getBondedTokens, getMarketCap } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
+import { useTranslation } from "next-export-i18n";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const [
     setPersistenceMarketCap,
     marketCap,
@@ -78,16 +80,14 @@ const HeroSection = () => {
               mb={{ base: 3, "2xl": 4 }}
               textAlign={{ base: "left", md: "left" }}
             >
-              Powering BTC Cross-Chain Swaps, Governing Intents.
+              {t("XPRT_HERO_TITLE")}
             </Heading>
             <Text
               textAlign="left"
               color={"#633C0DCC"}
               fontSize={{ base: "14px", md: "24px" }}
             >
-              XPRT governance has the final say on major protocol parameter
-              changes, integrations, chain upgrades, community pool spend,
-              incentives, and more.
+              {t("XPRT_HERO_SUB_TITLE")}
             </Text>
           </Box>
           <Flex gap={4} direction={{ base: "column", md: "row" }}>
@@ -101,7 +101,7 @@ const HeroSection = () => {
                 rightIcon={<ArrowForwardIcon />}
                 w={"100%"}
               >
-                Stake XPRT
+                {t("STAKE_XPRT")}
               </Button>
             </Link>
             <Link
@@ -127,7 +127,7 @@ const HeroSection = () => {
                 }}
                 color="#FFFFFF"
               >
-                Get XPRT
+                {t("GET_XPRT")}
               </Button>
             </Link>
           </Flex>
@@ -153,15 +153,15 @@ const HeroSection = () => {
             statValue: `$${
               Number(marketCap) > 0 ? numberFormat(marketCap, 2) : 0
             }`,
-            statLabel: "Market Cap"
+            statLabel: t("MARKET_CAP")
           },
           {
             statValue: `${stakedXPRT}%`,
-            statLabel: "Staked XPRT"
+            statLabel: t("STAKED_XPRT")
           },
           {
             statValue: `>99.5%`,
-            statLabel: "Tokens unlocked"
+            statLabel: t("TOKENS_UNLOCKED")
           }
         ]}
       />

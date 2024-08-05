@@ -18,8 +18,10 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 import Image from "next/image";
+import { useTranslation } from "next-export-i18n";
 
 const FeatureCards = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile] = useMediaQuery("(max-width: 500px)");
 
@@ -43,16 +45,16 @@ const FeatureCards = () => {
         <FeatureCard
           width="70%"
           height="380px"
-          category="Vision"
+          category={t("VISION")}
           aos={"fade-down-right"}
           className={"aos-init aos-animate"}
           imgWidth={210}
-          title="BTCFi will overtake ETH DeFi."
-          description="Learn about our vision and belief in the Bitcoinization of modern-day finance."
+          title={t("HOME_SECTION3_CARD1_TITLE")}
+          description={t("HOME_SECTION3_CARD1_CONTENT")}
           image={`${commonImagePath}/bitcoin_hand.svg`}
           cta={{
             link: "/vision",
-            linkText: "Learn More about Our Vision",
+            linkText: t("HOME_SECTION3_CARD1_LINK"),
             isExternal: false
           }}
           type={isMobile ? "vertical" : "horizontal"}
@@ -63,9 +65,9 @@ const FeatureCards = () => {
           height="380px"
           aos={"fade-down-left"}
           className={"aos-init aos-animate"}
-          category="Experience"
-          title="Building since 2019."
-          description="Since 2019, Persistence One has built expertise in DeFi, IBC interoperability, and the Persistence Core-1 chain's security. Now, it's time to enter the BTCfi space and tackle Bitcoin interoperability challenges."
+          category={t("EXPERIENCE")}
+          title={t("HOME_SECTION3_CARD2_TITLE")}
+          description={t("HOME_SECTION3_CARD2_CONTENT")}
           image={`${commonImagePath}/building.svg`}
           imgWidth={115}
           cta={{
@@ -84,11 +86,11 @@ const FeatureCards = () => {
         direction={{ base: "column", md: "row" }}
       >
         <FeatureCard
-          category="Technology"
+          category={t("TECHNOLOGY")}
           className={"aos-init aos-animate"}
           aos={"fade-up-right"}
-          title={`Advanced Technology. Streamlined User Journey.`}
-          description="Using cutting-edge technology like Cross-chain Intents, Persistence One is set to revolutionize user experience in BTCfi and remove the barriers to BTC movement."
+          title={t("HOME_SECTION3_CARD3_TITLE")}
+          description={t("HOME_SECTION3_CARD3_CONTENT")}
           image={`${commonImagePath}/tech.svg`}
           imgWidth={280}
           cta={{
@@ -108,16 +110,16 @@ const FeatureCards = () => {
           justify={"space-between"}
         >
           <FeatureCard
-            category="Values"
+            category={t("VALUES")}
             className={"aos-init aos-animate"}
             aos={"fade-up-left"}
-            title={`Humility. Integrity. Patience. Persistence. `}
-            description="Persistence is more than just a name. It is our way of being. Learn about our core values, the team, and how to become a Persister."
+            title={t("HOME_SECTION3_CARD4_TITLE")}
+            description={t("HOME_SECTION3_CARD4_CONTENT")}
             image={`${commonImagePath}/values.svg`}
             imgWidth={280}
             cta={{
               link: "/values",
-              linkText: "Learn More about Our Values",
+              linkText: t("HOME_SECTION3_CARD4_LINK"),
               isExternal: false
             }}
           />
@@ -139,7 +141,7 @@ const FeatureCards = () => {
               fontWeight={700}
               mb={{ base: "20px", md: "0" }}
             >
-              Be a part of the Movement.
+              {t("JOIN_COMMUNITY_NOTE")}
             </Text>
             <Link
               width={{ base: "100%", md: "auto" }}
@@ -165,7 +167,7 @@ const FeatureCards = () => {
                 }}
                 color="#FFFFFF"
               >
-                Join the Community
+                {t("JOIN_COMMUNITY")}
               </Button>
             </Link>
           </Flex>

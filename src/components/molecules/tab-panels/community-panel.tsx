@@ -1,6 +1,7 @@
 import SocialCard from "@/components/atoms/social-card";
 import { Box, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const socialCardContents = [
   {
@@ -41,6 +42,7 @@ const socialCardContents = [
   }
 ];
 const CommunityPanel = () => {
+  const { t } = useTranslation();
   return (
     <Box as="section" maxW={"930px"} mx={"auto"}>
       <Text
@@ -51,8 +53,7 @@ const CommunityPanel = () => {
         maxW={"755px"}
         mx={"auto"}
       >
-        Learn more about Persistence One, chat with fellow Persisters, and let
-        your voice be heard for the future of bitcoin interoperability.
+        {t("VALUES_SECTION3_COMMUNITY_CONTENT")}
       </Text>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
         {socialCardContents.map((card, index) => (

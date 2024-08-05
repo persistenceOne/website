@@ -10,44 +10,43 @@ import {
   SimpleGrid
 } from "@chakra-ui/react";
 import React from "react";
-
-const persisterValues: PersisterValuesCardInterface[] = [
-  {
-    title: "Long Term",
-    description: "Playing long-term games with long-term people.",
-    icon: "/icons/team-page/long-term.svg"
-  },
-  {
-    title: "Compounding",
-    description:
-      "Whether it's yield, partnerships or efforts, We compound daily.",
-    icon: "/icons/team-page/compounding.svg"
-  },
-  {
-    title: "True to Roots",
-    description:
-      "Staying humble when things are great, persistent when things are bad.",
-    icon: "/icons/team-page/true-to-roots.svg"
-  },
-  {
-    title: "Impactful Results",
-    description:
-      "Prioritizing outcomes that move the needle and drive meaningful progress.",
-    icon: "/icons/team-page/results.svg"
-  },
-  {
-    title: "Team",
-    description: "Win or Lose Together. Improve Together.",
-    icon: "/icons/team-page/team.svg"
-  },
-  {
-    title: "Fulfiling Life",
-    description: "Mental, physical, and emotional health always come first.",
-    icon: "/icons/team-page/health.svg"
-  }
-];
+import { useTranslation } from "next-export-i18n";
 
 const PersisterSection = () => {
+  const { t } = useTranslation();
+  const persisterValues: PersisterValuesCardInterface[] = [
+    {
+      title: t("VALUES_SECTION2_CARD1_TITLE"),
+      description: t("VALUES_SECTION2_CARD1_CONTENT"),
+      icon: "/icons/team-page/long-term.svg"
+    },
+    {
+      title: t("VALUES_SECTION2_CARD2_TITLE"),
+      description: t("VALUES_SECTION2_CARD2_CONTENT"),
+      icon: "/icons/team-page/compounding.svg"
+    },
+    {
+      title: t("VALUES_SECTION2_CARD3_TITLE"),
+      description: t("VALUES_SECTION2_CARD3_CONTENT"),
+      icon: "/icons/team-page/true-to-roots.svg"
+    },
+    {
+      title: t("VALUES_SECTION2_CARD4_TITLE"),
+      description: t("VALUES_SECTION2_CARD4_CONTENT"),
+      icon: "/icons/team-page/results.svg"
+    },
+    {
+      title: t("VALUES_SECTION2_CARD5_TITLE"),
+      description: t("VALUES_SECTION2_CARD5_CONTENT"),
+      icon: "/icons/team-page/team.svg"
+    },
+    {
+      title: t("VALUES_SECTION2_CARD6_TITLE"),
+      description: t("VALUES_SECTION2_CARD6_CONTENT"),
+      icon: "/icons/team-page/health.svg"
+    }
+  ];
+
   return (
     <>
       <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }}>
@@ -63,7 +62,7 @@ const PersisterSection = () => {
             lineHeight={{ base: "32px", xl: "72px" }}
             mb={{ base: "40px", md: "100px" }}
           >
-            What makes a Persister?
+            {t("VALUES_SECTION2_TITLE")}
           </Heading>
           <SimpleGrid
             columns={{ base: 1, md: 2, lg: 3 }}

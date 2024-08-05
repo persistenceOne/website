@@ -12,8 +12,10 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const GetXprtSection = () => {
+  const { t } = useTranslation();
   return (
     <Card
       px={{ base: "24px", md: "56px" }}
@@ -48,7 +50,7 @@ const GetXprtSection = () => {
               lineHeight={{ base: "36px", xl: "50px" }}
               mb={3}
             >
-              Fueling on-chain activities on Persistence One
+              {t("HOME_FUEL_SECTION_TITLE")}
             </Heading>
             <Text
               fontSize={{ base: "12px", xl: "16px" }}
@@ -56,10 +58,7 @@ const GetXprtSection = () => {
               lineHeight={{ base: "22px", xl: "24px" }}
               mb={{ base: "20px", md: "40px" }}
             >
-              XPRT powers on-chain activities on Persistence One, including
-              decentralized governance, transaction fees, and future initiatives
-              like whitelisting intent solvers, protocol fee discounts, and
-              more.
+              {t("HOME_FUEL_SECTION_CONTENT")}
             </Text>
             <HStack gap={4} flexDir={{ base: "column", md: "row" }}>
               <Link
@@ -69,7 +68,7 @@ const GetXprtSection = () => {
                 w={{ base: "100%", md: "auto" }}
               >
                 <Button variant={"primary"} w={{ base: "100%", md: "163px" }}>
-                  Stake XPRT
+                  {t("STAKE_XPRT")}
                 </Button>
               </Link>
               <Link
@@ -96,7 +95,7 @@ const GetXprtSection = () => {
                   }}
                   color="#FFFFFF"
                 >
-                  Get XPRT
+                  {t("GET_XPRT")}
                 </Button>
               </Link>
             </HStack>

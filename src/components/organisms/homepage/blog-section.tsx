@@ -15,6 +15,7 @@ import {
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
+import { useTranslation } from "next-export-i18n";
 
 const resourcesList: BlogCardInterface[] = [
   {
@@ -22,7 +23,7 @@ const resourcesList: BlogCardInterface[] = [
     resourceImage:
       "https://blog.persistence.one/wp-content/uploads/2024/07/Image-2-1160x653.png",
     resourceType: "Blog",
-    resourceCTA: "Read",
+    resourceCTA: "READ",
     resourceLink:
       "https://blog.persistence.one/2024/07/17/bridge-without-bridging-why-btcfi-needs-an-interoperability-solution/"
   },
@@ -31,7 +32,7 @@ const resourcesList: BlogCardInterface[] = [
     resourceImage:
       "https://blog.persistence.one/wp-content/uploads/2024/07/image2-1-1160x653.jpg",
     resourceType: "Blog",
-    resourceCTA: "Read",
+    resourceCTA: "READ",
     resourceLink:
       "https://blog.persistence.one/2024/07/10/bitcoin-l2s-and-their-own-btc-variants/"
   },
@@ -40,13 +41,14 @@ const resourcesList: BlogCardInterface[] = [
     resourceImage:
       "https://blog.persistence.one/wp-content/uploads/2024/07/image4-1160x653.jpg",
     resourceType: "Blog",
-    resourceCTA: "Read",
+    resourceCTA: "READ",
     resourceLink:
       "https://blog.persistence.one/2024/07/05/a-letter-to-persisters-the-new-journey-ahead/"
   }
 ];
 
 const BlogSection = () => {
+  const { t } = useTranslation();
   const [isMobile] = useMediaQuery("(max-width: 500px)");
   const [isLandScape] = useMediaQuery("(max-width: 990px)");
   let sliderRef: any = useRef(null);
@@ -69,10 +71,8 @@ const BlogSection = () => {
           <HStack alignItems={"center"} mb={"40px"} justifyContent={"center"}>
             <Heading color="#350B00" fontSize={{ base: "20px", xl: "44px" }}>
               Latest on Persistence One
+              {t("LATEST_ON_PERSISTENCE")}
             </Heading>
-            {/*<Link href={"/"}>*/}
-            {/*  <Text color={"#FFFFFF"}>Explore More</Text>*/}
-            {/*</Link>*/}
           </HStack>
           <Box
             display="flex"

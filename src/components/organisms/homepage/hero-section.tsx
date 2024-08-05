@@ -5,8 +5,10 @@ import Link from "next/link";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import TallyForm from "@/components/molecules/tally-form";
+import { useTranslation } from "next-export-i18n";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const [tvl, ibcVolume, transactionCost, transactions, dexterInfo] =
     useAppStore(
       (state) => [
@@ -132,10 +134,10 @@ const HeroSection = () => {
                 fontSize={{ base: "28px", lg: "72px" }}
                 lineHeight={{ base: "44px", lg: "86px" }}
               >
-                Bitcoin
+                {t("HOME_PAGE_HERO_TITLE1")}
               </Text>
               <br />
-              Cross-Chain Swaps
+              {t("HOME_PAGE_HERO_TITLE2")}
             </Heading>
             <Text
               textAlign={"left"}
@@ -145,8 +147,7 @@ const HeroSection = () => {
               fontSize={{ base: "16px", xl: "26px" }}
               lineHeight={{ base: "28px", xl: "39px" }}
             >
-              Fast, zero slippage swaps across Bitcoin L2s. Powered by Intents.
-              Secured by Bitcoin.
+              {t("HOME_PAGE_HERO_SUB_TITLE")}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} gap={4}>
               <Link
@@ -162,7 +163,7 @@ const HeroSection = () => {
                   variant={"primary"}
                   rightIcon={<ArrowForwardIcon />}
                 >
-                  Learn More
+                  {t("LEARN_MORE")}
                 </Button>
               </Link>
               <TallyForm page={"home"} />

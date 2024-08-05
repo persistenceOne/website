@@ -5,8 +5,10 @@ import Link from "next/link";
 import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 import Image from "next/image";
 import TallyForm from "@/components/molecules/tally-form";
+import { useTranslation } from "next-export-i18n";
 
 const CommunitySection = () => {
+  const { t } = useTranslation();
   return (
     <Box bg={"#E59636"} backgroundPosition="bottom right">
       <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"30px"}>
@@ -26,8 +28,7 @@ const CommunitySection = () => {
               mb={"42px"}
               fontWeight={700}
             >
-              We&apos;re excited to find partners who share our vision for a
-              vibrant Bitcoin ecosystem.
+              {t("VISION_SECTION4_TITLE")}
             </Heading>
             <Box textAlign={{ base: "center", md: "left" }}>
               <TallyForm page={"vision"} />

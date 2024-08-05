@@ -42,6 +42,7 @@ import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { useRouter } from "next/router";
 import { useTranslation, LinkWithLocale } from "next-export-i18n";
+import LangDropdown from "@/components/molecules/lang-dropdown";
 
 const getMenuListMobile = (
   menuItems: any,
@@ -126,7 +127,7 @@ const getMenuListMobile = (
                         </VStack>
                       </HStack>
                     ) : (
-                      <Link
+                      <LinkWithLocale
                         href={subItem.link}
                         width={"100%"}
                         key={subItem.title}
@@ -179,7 +180,7 @@ const getMenuListMobile = (
                             </Box>
                           </VStack>
                         </HStack>
-                      </Link>
+                      </LinkWithLocale>
                     )
                   )}
                 </VStack>
@@ -188,6 +189,7 @@ const getMenuListMobile = (
           )}
         </AccordionItem>
       ))}
+      <LangDropdown type={"mobile"} />
     </Accordion>
   );
 };
@@ -255,7 +257,7 @@ const getMenuList = (
                   </VStack>
                 </HStack>
               ) : (
-                <Link
+                <LinkWithLocale
                   href={subItem.link}
                   key={subItem.title}
                   width={"100%"}
@@ -309,7 +311,7 @@ const getMenuList = (
                       </Text>
                     </VStack>
                   </HStack>
-                </Link>
+                </LinkWithLocale>
               )
             )}
           </VStack>
@@ -423,7 +425,7 @@ const Header = () => {
           comingSoon: false
         },
         {
-          title: "CAREERS",
+          title: t("CAREERS"),
           description: t("NAV_BAR_CAREERS_TEXT"),
           icon: "career",
           iconType: "stroke",
@@ -625,7 +627,7 @@ const Header = () => {
           display={{ base: "none", md: "flex" }}
           className={"navigation-bar"}
         >
-          <Link href="/">
+          <LinkWithLocale href="/">
             {router.pathname !== "/" ? (
               <Box
                 width={"236px"}
@@ -641,7 +643,7 @@ const Header = () => {
                 className={"logo-box logo-light"}
               ></Box>
             )}
-          </Link>
+          </LinkWithLocale>
           <Spacer />
           <Stack
             gap="32px"
@@ -650,6 +652,7 @@ const Header = () => {
             direction={{ base: "column", md: "row" }}
           >
             {getMenuList(menuItems, "top-start", "hover", router.pathname)}
+            <LangDropdown type={""} />
           </Stack>
           {/*<Link*/}
           {/*  href="https://app.persistence.one"*/}
@@ -676,7 +679,7 @@ const Header = () => {
           display={{ base: "flex", md: "none" }}
         >
           <Box>
-            <Link href="/">
+            <LinkWithLocale href="/">
               {router.pathname !== "/" || isOpen ? (
                 <Box
                   width={"160px"}
@@ -692,7 +695,7 @@ const Header = () => {
                   className={"logo-box logo-light"}
                 ></Box>
               )}
-            </Link>
+            </LinkWithLocale>
           </Box>
           <IconButton
             size={"md"}

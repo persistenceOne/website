@@ -5,25 +5,25 @@ import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
 import GetXprtSection from "@/components/organisms/homepage/get-xprt-section";
+import { useTranslation } from "next-export-i18n";
 
-const getData = (dexterInfo: any) => {
+const getData = (dexterInfo: any, t: any) => {
   const dApps: DappCardInterface[] = [
     {
-      dAppName: "Persistence DEX",
+      dAppName: t("PERSISTENCE_DEX"),
       dAppLogo: "/images/persistence-dex-logo.svg",
-      dAppDescription:
-        "Governed by $XPRT, Persistence DEX is a trading and liquidity venue for XPRT, BTC and its’ related assets, LSTs and Stablecoins.",
+      dAppDescription: t("HOME_DEX_CONTENT"),
       dAppStats: [
         {
-          label: "Total Value Locked",
+          label: t("TVL"),
           value: `$${numberFormat(Number(dexterInfo.tvl), 3)}`
         },
         {
-          label: "Total Volume",
+          label: t("TOTAL_VOLUME"),
           value: `$${numberFormat(Number(dexterInfo.total_volume), 3)}`
         },
         {
-          label: "Total Users",
+          label: t("TOTAL_USERS"),
           value: `${numberFormat(Number(dexterInfo.allTimeUsers), 3)}`
         }
       ],
@@ -47,7 +47,7 @@ const getData = (dexterInfo: any) => {
         hover: "primary.redHover"
       },
       button: {
-        text: "Enter the App",
+        text: t("ENTER_THE_APP"),
         link: "https://app.persistence.one",
         background: "primary.red",
         hover: "primary.redHover",
@@ -60,8 +60,8 @@ const getData = (dexterInfo: any) => {
 
 const DappsSection = () => {
   const [dexterInfo] = useAppStore((state) => [state.dexterInfo], shallow);
-
-  const dApps = getData(dexterInfo);
+  const { t } = useTranslation();
+  const dApps = getData(dexterInfo, t);
   return (
     <Box pos={"relative"} bg={"#1D1306"}>
       <Container

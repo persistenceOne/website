@@ -1,8 +1,10 @@
 import FeatureCards from "@/components/molecules/feature-cards";
 import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const Overview = () => {
+  const { t } = useTranslation();
   return (
     <Box bg={"#FCF7F1"} pos="relative">
       <Container
@@ -19,7 +21,7 @@ const Overview = () => {
             fontSize={{ base: "26px", xl: "48px" }}
             lineHeight={{ base: "32px", xl: "72px" }}
           >
-            Why Persistence One?
+            {t("HOME_SECTION3_TITLE")}
           </Heading>
           <FeatureCards />
         </Box>

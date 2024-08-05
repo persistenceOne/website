@@ -18,12 +18,14 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const BecomePersisterSection = ({
   showEcosystemSection = true
 }: {
   showEcosystemSection?: boolean;
 }) => {
+  const { t } = useTranslation();
   return (
     <>
       <Container
@@ -42,7 +44,7 @@ const BecomePersisterSection = ({
             lineHeight={{ base: "32px", xl: "72px" }}
             mb={"8px"}
           >
-            Become a Persister
+            {t("VALUES_SECTION3_TITLE")}
           </Heading>
           <Tabs
             align="center"
@@ -68,7 +70,7 @@ const BecomePersisterSection = ({
                   pb: "15px"
                 }}
               >
-                Community
+                {t("COMMUNITY")}
               </Tab>
               <Tab
                 px={{ base: "16px", md: 8 }}
@@ -85,7 +87,7 @@ const BecomePersisterSection = ({
                   pb: "15px"
                 }}
               >
-                Join the Team
+                {t("JOIN_THE_TEAM")}
               </Tab>
             </TabList>
             <TabPanels>

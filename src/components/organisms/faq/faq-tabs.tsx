@@ -1,11 +1,6 @@
 import {
   Heading,
   Text,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanel,
-  TabPanels,
   Container,
   Box,
   Button,
@@ -21,6 +16,7 @@ import {
   liquidStaking
 } from "@/components/organisms/faq/faqList";
 import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
+import { useTranslation } from "next-export-i18n";
 
 const tabList = [
   {
@@ -38,6 +34,7 @@ const tabList = [
 ];
 
 const FaqTabs = () => {
+  const { t } = useTranslation();
   const [isMobile] = useMediaQuery("(max-width: 468px)");
   return (
     <Container
@@ -54,9 +51,9 @@ const FaqTabs = () => {
           lineHeight={{ base: "32px", md: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
-          Question? We have answers.
+          {t("FAQS_TITLE")}
         </Heading>
-        <AccordionList list={aboutPersistence} />
+        <AccordionList list={aboutPersistence(t)} />
         <Box
           p={{ base: 4, md: 4 }}
           px={{ base: 4, md: 4 }}
@@ -75,10 +72,10 @@ const FaqTabs = () => {
               fontWeight={700}
               fontSize={{ base: 12, md: 16 }}
             >
-              Got More Questions?
+              {t("FAQ_SECTION2_TITLE")}
             </Text>
             <Text color="#423F40B2" fontSize={{ base: "10px", md: "14px" }}>
-              Drop us a message on Telegram!
+              {t("FAQ_SECTION2_CONTENT")}
             </Text>
             <Link
               href={TELEGRAM_PERSISTENCE_COMMUNITY_LINK}

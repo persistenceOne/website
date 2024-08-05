@@ -16,6 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Icon from "./Icon";
+import { useTranslation, LinkWithLocale } from "next-export-i18n";
 
 const footerSocialLinks = [
   {
@@ -64,10 +65,10 @@ const footerSocialLinks = [
 
 const footerLinks = [
   {
-    title: "Learn",
+    title: "LEARN",
     links: [
       {
-        title: "Vision",
+        title: "VISION",
         link: "/vision",
         isExternal: false
       },
@@ -77,12 +78,12 @@ const footerLinks = [
         isExternal: false
       },
       {
-        title: "Blog",
+        title: "BLOG",
         link: "https://blog.persistence.one/",
         isExternal: true
       },
       {
-        title: "Docs",
+        title: "DOCS",
         link: "https://docs.persistence.one/",
         isExternal: true
       }
@@ -92,12 +93,12 @@ const footerLinks = [
     title: "XPRT",
     links: [
       {
-        title: "About",
+        title: "ABOUT",
         link: "/xprt",
         isExternal: false
       },
       {
-        title: "XPRT Staking",
+        title: "XPRT_STAKING",
         link: "https://wallet.keplr.app/chains/persistence",
         isExternal: true
       },
@@ -107,14 +108,14 @@ const footerLinks = [
         isExternal: true
       },
       {
-        title: "Governance",
+        title: "GOVERNANCE",
         link: "https://www.mintscan.io/persistence/proposals",
         isExternal: true
       }
     ]
   },
   {
-    title: "Connect",
+    title: "CONNECT",
     links: [
       {
         title: "Persisters",
@@ -129,7 +130,7 @@ const footerLinks = [
     ]
   },
   {
-    title: "Community",
+    title: "COMMUNITY",
     links: [
       {
         title: "X (Twitter)",
@@ -156,6 +157,7 @@ const footerLinks = [
 ];
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Box as={"footer"} bg={"#1B1003"}>
       <Container
@@ -180,7 +182,7 @@ const Footer = () => {
               height={24}
               alt={"Persistence Logo"}
             />
-            <Link
+            <LinkWithLocale
               href={
                 "https://persistence.notion.site/Persistence-Brand-Press-Kit-85150f1ae50a48cf9edb46577261ed29"
               }
@@ -196,12 +198,12 @@ const Footer = () => {
                   color: "primary.red"
                 }}
               >
-                Download Media Kit
+                {t("DOWNLOAD_MEDIA_KIT")}
               </Button>
-            </Link>
+            </LinkWithLocale>
             <HStack gap={4} mt={4} display={{ base: "none", md: "flex" }}>
               {footerSocialLinks.map((link) => (
-                <Link
+                <LinkWithLocale
                   href={link.link}
                   key={link.name}
                   target="_blank"
@@ -247,7 +249,7 @@ const Footer = () => {
                       />
                     </Box>
                   )}
-                </Link>
+                </LinkWithLocale>
               ))}
             </HStack>
           </VStack>
@@ -268,10 +270,10 @@ const Footer = () => {
                   color={"#918678"}
                   fontSize={{ base: "16px", xl: "20px" }}
                 >
-                  {link.title}
+                  {t(link.title)}
                 </Heading>
                 {link.links.map((item) => (
-                  <Link
+                  <LinkWithLocale
                     href={item.link}
                     key={item.title}
                     target={item.isExternal ? "_blank" : "_self"}
@@ -293,9 +295,9 @@ const Footer = () => {
                         color: "primary.red"
                       }}
                     >
-                      {item.title}
+                      {t(item.title)}
                     </Button>
-                  </Link>
+                  </LinkWithLocale>
                 ))}
               </VStack>
             ))}
@@ -308,7 +310,7 @@ const Footer = () => {
           justify={"center"}
         >
           {footerSocialLinks.map((link) => (
-            <Link href={link.link} key={link.name}>
+            <LinkWithLocale href={link.link} key={link.name}>
               <Box
                 w={"24px"}
                 h={"24px"}
@@ -327,7 +329,7 @@ const Footer = () => {
                   viewClass={`footer-icon ${link.iconType}`}
                 />
               </Box>
-            </Link>
+            </LinkWithLocale>
           ))}
         </HStack>
         <Box display={{ base: "block", md: "block" }}>
@@ -348,26 +350,26 @@ const Footer = () => {
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
-              <Link href={"/termsofuse"}>
+              <LinkWithLocale href={"/termsofuse"}>
                 <Button
                   variant={"link"}
                   color={"#ECECEC"}
                   fontSize={14}
                   fontWeight={400}
                 >
-                  Terms of Use
+                  {t("TERMS_OF_USE")}
                 </Button>
-              </Link>
-              <Link href={"/privacy"}>
+              </LinkWithLocale>
+              <LinkWithLocale href={"/privacy"}>
                 <Button
                   variant={"link"}
                   color={"#ECECEC"}
                   fontSize={14}
                   fontWeight={400}
                 >
-                  Privacy Policy
+                  {t("PRIVACY_POLICY")}
                 </Button>
-              </Link>
+              </LinkWithLocale>
             </HStack>
           </Flex>
         </Box>

@@ -1,7 +1,4 @@
-import Dropdown from "rc-dropdown";
-import "rc-dropdown/assets/index.css";
 import React, { PureComponent } from "react";
-import Icon from "../Icon";
 import { useRouter } from "next/router";
 import { useTranslation, LanguageSwitcher } from "next-export-i18n";
 import Image from "next/image";
@@ -18,7 +15,6 @@ import {
   Text,
   VStack
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 interface Props {
   isTablet: boolean;
@@ -42,7 +38,7 @@ const langList: LanguageItemProps[] = [
     code: "cn",
     name: "CHINESE"
   },
-  process.env.NEXT_PUBLIC_DEPLOYMENT !== "production" && {
+  {
     imgUrl: "/images/lang/kr.png",
     code: "ko",
     name: "한국어"
@@ -73,9 +69,8 @@ export const learnDropDownContent = (learnList: any[]) => {
   );
 };
 
-const LangDropdown = ({ isTablet, path }: Props) => {
+const LangDropdown = ({ type }: any) => {
   const defaultItem = langList.find((item) => item.code === "en");
-
   const router = useRouter();
   const params = useSearchParams();
   const search = params.get("lang");
@@ -86,34 +81,33 @@ const LangDropdown = ({ isTablet, path }: Props) => {
   console.log(activeLang, search, "activeLang", router.pathname);
 
   return (
-    <Popover placement={"bottom"} trigger={"hover"}>
+    <Popover placement={"top-start"} trigger={"hover"}>
       <PopoverTrigger>
-        <Image
-          src={activeLang!.imgUrl}
-          alt={"dd"}
-          width={22}
-          height={16}
-          className={"mr-[6px]"}
-        />
-        <Text
-          cursor={"pointer"}
-          className={"nav-item-title"}
-          fontSize={"18px"}
-          borderRadius={"6px"}
-          fontWeight={500}
-          _hover={{ color: "#E59636" }}
-          color={path === "/" ? "#FFFFFF" : "#000000"}
+        <Box
+          display="flex"
+          alignItems="center"
+          px={type === "mobile" ? "7" : "0"}
+          py={type === "mobile" ? "4" : "0"}
         >
-          {activeLang?.code}
-        </Text>
-        <Icon
-          viewClass={` ${
-            path === "/"
-              ? "fill-[#fff] "
-              : "fill-[#181818]  [.is-sticky_&]:fill-[#fff]"
-          } dropDownIcon !w-[13px] ml-[6px]  group-hover:fill-[#C73238] rotate-90`}
-          icon="chevroncolorchange"
-        />
+          <Image src={activeLang!.imgUrl} alt={"test"} width={22} height={16} />
+          <Text
+            cursor={"pointer"}
+            ml={"14px"}
+            fontSize={"18px"}
+            textTransform={"uppercase"}
+            borderRadius={"6px"}
+            _hover={{ color: "#E59636" }}
+            color={
+              type === "mobile"
+                ? "#633C0D"
+                : router.pathname === "/"
+                ? "#FFFFFF"
+                : "#000000"
+            }
+          >
+            {activeLang?.code}
+          </Text>
+        </Box>
       </PopoverTrigger>
       <PopoverContent borderRadius={6}>
         <PopoverArrow />
@@ -135,41 +129,36 @@ const LangDropdown = ({ isTablet, path }: Props) => {
                     fontWeight={500}
                     _hover={{ bg: "#E596361A", borderRadius: "6px" }}
                   >
-                    <Box mr={2}>
-                      <Box
-                        w={"40px"}
-                        h={"40px"}
-                        borderRadius={"100%"}
-                        className={"icon-box"}
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center"
-                        }}
-                      >
-                        <Icon
-                          icon={subItem.icon}
-                          viewClass={`nav-icon ${subItem.iconType}`}
-                        />
-                      </Box>
-                    </Box>
                     <VStack align={"start"} gap={0}>
                       <Box
                         style={{ display: "flex", alignItems: "center" }}
                         color={"#633C0D"}
                       >
-                        <Text cursor={"pointer"} fontSize={16} pr={"5px"}>
-                          {subItem.title}
+                        <Image
+                          src={subItem!.imgUrl}
+                          alt={"dd"}
+                          width={22}
+                          height={16}
+                          className={"mr-[6px]"}
+                        />
+                        <Text
+                          cursor={"pointer"}
+                          ml={"14px"}
+                          fontSize={16}
+                          pr={"5px"}
+                        >
+                          {subItem.name}
                         </Text>
-                        {subItem.isExternal ? (
-                          <ExternalLinkIcon />
-                        ) : (
-                          <Icon viewClass="chevron" icon="chevroncolorchange" />
-                        )}
+                        <Text
+                          cursor={"pointer"}
+                          as="span"
+                          fontSize={16}
+                          textTransform={"uppercase"}
+                          pr={"5px"}
+                        >
+                          ({subItem.code})
+                        </Text>
                       </Box>
-                      <Text fontSize={14} color={"#3D3D3D"} fontWeight={400}>
-                        {subItem.description}
-                      </Text>
                     </VStack>
                   </HStack>
                 </Box>

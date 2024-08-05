@@ -9,8 +9,10 @@ import {
 } from "@chakra-ui/react";
 // import Image from "next/image";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
       <Box>
@@ -30,7 +32,7 @@ const HeroSection = () => {
               fontSize={{ base: "34px", xl: "66px" }}
               lineHeight={{ base: "48px", xl: "90px" }}
             >
-              Bitcoiners at heart.
+              {t("VALUES_HERO_TITLE")}
             </Heading>
 
             <Text
@@ -40,8 +42,7 @@ const HeroSection = () => {
               textAlign={{ base: "left", md: "left" }}
               mb={{ base: 4, md: 0 }}
             >
-              Our core values: Humility, Integrity, Patience, Persistence are
-              deeply aligned with those of Bitcoin itself.
+              {t("VALUES_HERO_SUB_TITLE")}
             </Text>
           </Flex>
           <Box width={{ base: "auto", xl: "600px" }}>
