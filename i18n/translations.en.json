@@ -1,0 +1,29 @@
+{
+  "i18n": {
+    "LEARN": "Learn",
+    "VISION": "Vision",
+    "NAV_BAR_VISION_TEXT": "Learn about our persistent vision.",
+    "FAQs": "FAQs",
+    "NAV_BAR_FAQS_TEXT": "Frequently Asked Questions",
+    "BLOG":"Blog",
+    "NAV_BAR_BLOG_TEXT": "Read about the latest partnerships and major product and tech updates",
+    "DOCS":"Docs",
+    "NAV_BAR_DOCS_TEXT": "Explore our developer docs, on-chain modules, and guides",
+    "ABOUT": "About",
+    "NAV_BAR_ABOUT_TEXT": "Learn about the native token fueling the ecosystem",
+    "STAKING": "Staking",
+    "NAV_BAR_STAKING_TEXT": "Interact with on-chain data like TVL, volume, yields, and more",
+    "WALLET": "Wallet",
+    "NAV_BAR_WALLET_TEXT": "Explore the dApps, validators, and partners contributing to the ecosystem",
+    "GOVERNANCE": "Governance",
+    "NAV_BAR_GOVERNANCE_TEXT": "Participate in community discussions or share your ideas",
+    "CONNECT": "Connect",
+    "PERSISTERS": "Persisters",
+    "NAV_BAR_PERSISTERS_TEXT": "Get to know our contributors, our values, and how to become a Persister",
+    "CAREERS": "Careers",
+    "NAV_BAR_CAREERS_TEXT": "Explore opportunities to contribute to the ecosystem with Persistence Labs",
+    "DOWNLOAD_MEDIA_KIT": "Download Media Kit",
+    "NAV_BAR_DOWNLOAD_MEDIA_KIT_TEXT": "All your media and press needs",
+    "COMMUNITY": "Community"
+  }
+}
