@@ -351,11 +351,12 @@ color: #000000;
 }
 
 .swiper-slide-active .slider-card .video-container{
-  background-image: url("/images/home-page/anim-bg.svg");
+  background: #E59636;
   border: 1.1px solid #8C5512;
-  background-size: 105%;
-  background-position: center;
-  background-repeat: no-repeat;
+  /*background-size: 105%;*/
+  /*background-image: url("/images/home-page/anim-bg.svg");*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
 }
 .swiper-slide-active .slider-card .slide-title{
   color: #FEFDFB !important;
