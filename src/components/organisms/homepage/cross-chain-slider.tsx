@@ -76,8 +76,8 @@ const CrossChainSlider = () => {
           centeredSlides={true}
           loop={true}
           autoplay={{
-            delay: 1000,
-            duration: 1000,
+            delay: 1500,
+            duration: 1500,
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
             waitForTransition: true,
