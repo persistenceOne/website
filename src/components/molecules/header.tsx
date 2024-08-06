@@ -60,6 +60,8 @@ const getMenuListMobile = (
                   cursor={"pointer"}
                   px={"12px"}
                   py={"8px"}
+                  fontSize={"18px"}
+                  fontWeight={500}
                   borderRadius={"6px"}
                   bg={isExpanded ? "#E596364D" : "transparent"}
                   color={
@@ -621,22 +623,6 @@ const Header = () => {
             {getMenuList(menuItems, "top-start", "hover", router.pathname)}
             <LangDropdown type={""} />
           </Stack>
-          {/*<Link*/}
-          {/*  href="https://app.persistence.one"*/}
-          {/*  target="_black"*/}
-          {/*  rel="noopenner noreferrer"*/}
-          {/*  passHref*/}
-          {/*  className={"inline-block"}*/}
-          {/*>*/}
-          {/*  <Button*/}
-          {/*    h={"46px"}*/}
-          {/*    w={"187px"}*/}
-          {/*    variant={"primary"}*/}
-          {/*    rightIcon={<ArrowForwardIcon />}*/}
-          {/*  >*/}
-          {/*    Enter App*/}
-          {/*  </Button>*/}
-          {/*</Link>*/}
         </Flex>
         <Flex
           as={"nav"}

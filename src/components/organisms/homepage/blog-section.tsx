@@ -70,7 +70,6 @@ const BlogSection = () => {
         <Box>
           <HStack alignItems={"center"} mb={"40px"} justifyContent={"center"}>
             <Heading color="#350B00" fontSize={{ base: "20px", xl: "44px" }}>
-              Latest on Persistence One
               {t("LATEST_ON_PERSISTENCE")}
             </Heading>
           </HStack>

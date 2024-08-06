@@ -94,8 +94,9 @@ const LangDropdown = ({ type }: any) => {
           <Text
             ml={"14px"}
             fontSize={"18px"}
+            className={"nav-item-title"}
             textTransform={"uppercase"}
-            borderRadius={"6px"}
+            fontWeight={500}
             _hover={{ color: "#E59636" }}
             color={
               type === "mobile"
