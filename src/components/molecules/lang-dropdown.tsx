@@ -41,7 +41,7 @@ const langList: LanguageItemProps[] = [
   {
     imgUrl: "/images/lang/kr.png",
     code: "ko",
-    name: "한국어"
+    name: "KOREAN"
   }
 ];
 
@@ -84,6 +84,7 @@ const LangDropdown = ({ type }: any) => {
     <Popover placement={"top-start"} trigger={"hover"}>
       <PopoverTrigger>
         <Box
+          cursor={"pointer"}
           display="flex"
           alignItems="center"
           px={type === "mobile" ? "7" : "0"}
@@ -91,7 +92,6 @@ const LangDropdown = ({ type }: any) => {
         >
           <Image src={activeLang!.imgUrl} alt={"test"} width={22} height={16} />
           <Text
-            cursor={"pointer"}
             ml={"14px"}
             fontSize={"18px"}
             textTransform={"uppercase"}
@@ -109,7 +109,7 @@ const LangDropdown = ({ type }: any) => {
           </Text>
         </Box>
       </PopoverTrigger>
-      <PopoverContent borderRadius={6}>
+      <PopoverContent borderRadius={6} w={"200px"}>
         <PopoverArrow />
         <PopoverBody px={"14px"} py={"16px"}>
           <VStack align={"start"} gap={0}>

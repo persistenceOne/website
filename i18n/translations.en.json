@@ -5,8 +5,9 @@
     "LEARN_MORE": "Learn More",
     "PARTNER_WITH_US": "Partner With Us",
     "JOIN_COMMUNITY": "Join the Community",
+    "JOIN_THE_TEAM": "Join the Team",
     "JOIN_COMMUNITY_NOTE": "Be a part of the Movement.",
-    "CONTACT_WITH_US": "Connect With Us",
+    "CONNECT_WITH_US": "Connect With Us",
     "PRIVACY_POLICY":"Privacy Policy",
     "TERMS_OF_USE": "Terms of Use",
     "PARTNER_WITH_PERSISTENCE": "Partner with Persistence",
@@ -14,7 +15,7 @@
     "CONTACT_FORM_SUBTEXT": "We're looking for partners who want to collaborate in creating a powerful ecosystem on Bitcoin.",
     "VISION": "Vision",
     "TECHNOLOGY": "Technology",
-    "Values": "Values",
+    "VALUES": "Values",
     "EXPERIENCE": "Experience",
     "TVL": "Total Value Locked",
     "TOTAL_VOLUME": "Total Volume",
@@ -158,7 +159,15 @@
     "FAQ9": "How can I bridge XPRT to Base or other ecosystems?",
     "FAQ10": "How can I participate in Governance?",
     "FAQ_SECTION2_TITLE": "Got More Questions?",
-    "FAQ_SECTION2_CONTENT": "Drop us a message on Telegram!"
+    "FAQ_SECTION2_CONTENT": "Drop us a message on Telegram!",
+    "FOLLOW_PERSISTENCE": "Follow Persistence One",
+    "JOIN_CHAT": "Join chat",
+    "JOIN_OUR_COMMUNITY": "Join our community",
+    "LEARN_MORE_ABOUT_PERSISTENCE": "Learn about Persistence One",
+    "CONTRIBUTE": "Contribute",
+    "JOIN_DISCUSSIONS": "Join Discussions"
+
+
 
   }
 }

@@ -485,39 +485,6 @@ const Header = () => {
           comingSoon: false
         }
       ]
-    },
-    {
-      id: 2,
-      name: t("CONNECT"),
-      subItems: [
-        {
-          title: t("PERSISTERS"),
-          description: t("NAV_BAR_PERSISTERS_TEXT"),
-          icon: "values",
-          iconType: "fill",
-          link: "/values",
-          isExternal: false,
-          comingSoon: false
-        },
-        {
-          title: "CAREERS",
-          description: t("NAV_BAR_CAREERS_TEXT"),
-          icon: "career",
-          iconType: "stroke",
-          link: "https://careers.persistence.one/",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: t("DOWNLOAD_MEDIA_KIT"),
-          description: t("NAV_BAR_DOWNLOAD_MEDIA_KIT_TEXT"),
-          icon: "download",
-          iconType: "stroke",
-          link: "https://persistence.notion.site/Persistence-Brand-Press-Kit-85150f1ae50a48cf9edb46577261ed29",
-          isExternal: true,
-          comingSoon: false
-        }
-      ]
     }
   ];
 
