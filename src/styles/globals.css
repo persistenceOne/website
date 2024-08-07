@@ -101,8 +101,15 @@ color: #000000;
   color: #ffffff;
 }
 
-.navbar-container.nav-bar .language-button, .navbar-container .language-button.mobile{
-  color: #000000 !important;
+.navbar-container .language-button.active,
+.navbar-container .language-button.mobile.active,
+.navbar-container.nav-bar .language-button.active{
+  color: #E59636;
+}
+
+.navbar-container.nav-bar .language-button,
+.navbar-container .language-button.mobile{
+  color: #000000;
 }
 
 .navbar-container .language-button:hover{
@@ -122,17 +129,36 @@ color: #000000;
   margin-right: 4px;
 }
 
-.navbar-container.nav-bar .language-button .icon-language,
-.navbar-container .language-button.mobile .icon-language,
-.navbar-container.nav-bar .language-button .icon-language-button-arrow,
-.navbar-container .language-button.mobile .icon-language-button-arrow{
-  fill: #000000 !important;
+.navbar-container .language-button.active .icon-language,
+.navbar-container.nav-bar .language-button.active .icon-language,
+.navbar-container .language-button.mobile.active .icon-language{
+  fill: #E59636;
 }
 
+.navbar-container.nav-bar .language-button .icon-language,
+.navbar-container .language-button.mobile .icon-language{
+  fill: #000000 ;
+}
+
+.navbar-container .language-button.mobile.active .icon-language-button-arrow,
+.navbar-container.nav-bar .language-button.active .icon-language-button-arrow,
+.navbar-container .language-button.active .icon-language-button-arrow{
+  stroke:#E59636;
+  fill:transparent;
+}
+
+.navbar-container.nav-bar .language-button .icon-language-button-arrow,
+.navbar-container .language-button.mobile .icon-language-button-arrow{
+  stroke: #000000 ;
+  fill:transparent;
+}
+
+
 .navbar-container .language-button .icon-language-button-arrow {
-  width: 10px;
-  height: 8px;
-  fill: #ffffff;
+  width: 12px;
+  height: 12px;
+  stroke: #ffffff;
+  fill:transparent;
   margin-left:6px;
   transform: rotate(180deg);
   transition: all 0.2s ease-in-out;

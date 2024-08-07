@@ -86,7 +86,7 @@ const LangDropdown = ({ type }: any) => {
   console.log(isEditing, "isEditing");
   return (
     <Popover
-      placement={"top-start"}
+      placement={type === "mobile" ? "top-start" : "bottom-end"}
       trigger={"hover"}
       onOpen={() => {
         setIsEditing(true);
@@ -100,30 +100,38 @@ const LangDropdown = ({ type }: any) => {
           cursor={"pointer"}
           className={`language-button ${
             router.pathname !== "/" || type === "mobile" ? "mobile" : ""
-          }`}
+          } ${isEditing ? "active" : ""}`}
           display="flex"
           alignItems="center"
           px={type === "mobile" ? "7" : "0"}
           py={type === "mobile" ? "4" : "0"}
-          w={"161px"}
-          h={"40px"}
-          bg={
+          // w={"161px"}
+          // h={"40px"}
+          // bg={
+          //   isEditing
+          //     ? type === "mobile"
+          //       ? "#E596364D"
+          //       : "#E596364D"
+          //     : "transparent"
+          // }
+          color={
             isEditing
               ? type === "mobile"
                 ? "#E596364D"
                 : "#E596364D"
-              : "transparent"
+              : "#ffffff"
           }
           borderRadius={"58px"}
-          justifyContent={"center"}
+          justifyContent={type === "mobile" ? "start" : "center"}
           textAlign={"center"}
         >
           <Icon icon={"language"} viewClass={`language`} />
           <Text
             ml={"4px"}
             fontSize={"16px"}
+            textTransform={"uppercase"}
             // className={"nav-item-title"}
-            fontWeight={600}
+            fontWeight={500}
             // color={
             //   type === "mobile"
             //     ? "#FFFFFF"
@@ -132,14 +140,14 @@ const LangDropdown = ({ type }: any) => {
             //     : "#000000"
             // }
           >
-            {activeLang?.name}
+            {activeLang?.code}
           </Text>
           <Icon icon={"arrow-filled"} viewClass={`language-button-arrow `} />
         </Box>
       </PopoverTrigger>
       <PopoverContent
         borderRadius={6}
-        w={"161px"}
+        w={"131px"}
         border={"0px"}
         overflow={"hidden"}
       >
