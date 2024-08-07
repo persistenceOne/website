@@ -98,7 +98,9 @@ const LangDropdown = ({ type }: any) => {
       <PopoverTrigger>
         <Box
           cursor={"pointer"}
-          className={`language-button ${type === "mobile" ? "mobile" : ""}`}
+          className={`language-button ${
+            router.pathname !== "/" || type === "mobile" ? "mobile" : ""
+          }`}
           display="flex"
           alignItems="center"
           px={type === "mobile" ? "7" : "0"}
