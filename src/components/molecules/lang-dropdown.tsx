@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation, LanguageSwitcher } from "next-export-i18n";
 import Image from "next/image";
@@ -13,6 +13,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   Text,
+  useBoolean,
   VStack
 } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
@@ -32,7 +33,7 @@ const langList: LanguageItemProps[] = [
   {
     imgUrl: "/images/lang/en.png",
     code: "en",
-    name: "ENGLISH"
+    name: "English"
   },
   {
     imgUrl: "/images/lang/cn.png",
@@ -61,7 +62,7 @@ export const learnDropDownContent = (learnList: any[]) => {
                         font-medium leading-normal md:text-xsm md:ml-2"
             >
               {item.name}
-              <span className={"uppercase ml-1"}>({item.code})</span>
+              <span className={"ml-1"}>({item.code})</span>
             </span>
           </div>
         </LanguageSwitcher>
@@ -73,6 +74,7 @@ export const learnDropDownContent = (learnList: any[]) => {
 const LangDropdown = ({ type }: any) => {
   const defaultItem = langList.find((item) => item.code === "en");
   const router = useRouter();
+  const [isEditing, setIsEditing] = useState(false);
   const params = useSearchParams();
   const search = params.get("lang");
   const { t } = useTranslation();
@@ -81,43 +83,52 @@ const LangDropdown = ({ type }: any) => {
   const activeLang = selectedLang === undefined ? defaultItem : selectedLang;
   console.log(activeLang, search, "activeLang", router.pathname);
 
+  console.log(isEditing, "isEditing");
   return (
-    <Popover placement={"top-start"} trigger={"hover"}>
+    <Popover
+      placement={"top-start"}
+      trigger={"hover"}
+      onOpen={() => {
+        setIsEditing(true);
+      }}
+      onClose={() => {
+        setIsEditing(false);
+      }}
+    >
       <PopoverTrigger>
         <Box
           cursor={"pointer"}
-          className={"language-button"}
+          className={`language-button ${type === "mobile" ? "mobile" : ""}`}
           display="flex"
           alignItems="center"
           px={type === "mobile" ? "7" : "0"}
           py={type === "mobile" ? "4" : "0"}
           w={"161px"}
           h={"40px"}
-          bg={type === "mobile" ? "#E59636" : "#E596364D"}
+          bg={
+            isEditing
+              ? type === "mobile"
+                ? "#E596364D"
+                : "#E596364D"
+              : "transparent"
+          }
           borderRadius={"58px"}
           justifyContent={"center"}
           textAlign={"center"}
         >
-          <Image
-            src={"/images/language.svg"}
-            alt={"test"}
-            width={16}
-            height={16}
-          />
+          <Icon icon={"language"} viewClass={`language`} />
           <Text
             ml={"4px"}
             fontSize={"16px"}
             // className={"nav-item-title"}
-            textTransform={"uppercase"}
             fontWeight={600}
-            // _hover={{ color: "#E59636" }}
-            color={
-              type === "mobile"
-                ? "#FFFFFF"
-                : router.pathname === "/"
-                ? "#FFFFFF"
-                : "#000000"
-            }
+            // color={
+            //   type === "mobile"
+            //     ? "#FFFFFF"
+            //     : router.pathname === "/"
+            //     ? "#FFFFFF"
+            //     : "#000000"
+            // }
           >
             {activeLang?.name}
           </Text>

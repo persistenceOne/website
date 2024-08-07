@@ -92,8 +92,22 @@ color: #000000;
 }
 
 .navbar-container.nav-bar .language-button{
-  background: #E59636;
+  /*background: #E59636;*/
   color: #ffffff;
+}
+
+.navbar-container .language-button{
+  transition: all 0.2s ease-in-out;
+  color: #ffffff;
+}
+
+.navbar-container.nav-bar .language-button, .navbar-container .language-button.mobile{
+  color: #000000 !important;
+}
+
+.navbar-container .language-button:hover{
+  /*background: #E596364D;*/
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar-container .language-button:hover .icon-language-button-arrow{
@@ -101,9 +115,24 @@ color: #000000;
   transition: all 0.2s ease-in-out;
 }
 
+.navbar-container .language-button .icon-language{
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+  margin-right: 4px;
+}
+
+.navbar-container.nav-bar .language-button .icon-language,
+.navbar-container .language-button.mobile .icon-language,
+.navbar-container.nav-bar .language-button .icon-language-button-arrow,
+.navbar-container .language-button.mobile .icon-language-button-arrow{
+  fill: #000000 !important;
+}
+
 .navbar-container .language-button .icon-language-button-arrow {
   width: 10px;
   height: 8px;
+  fill: #ffffff;
   margin-left:6px;
   transform: rotate(180deg);
   transition: all 0.2s ease-in-out;
