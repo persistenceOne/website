@@ -24,8 +24,9 @@ const DefiTable = ({ defiCardsData }: Props) => {
   const columns = React.useMemo<ColumnDef<PoolData>[]>(
     () => [
       {
-        header: "Pool Name",
+        header: "Pool",
         enableSorting: false,
+        accessorKey: "pool",
         accessorFn: (row) => row.token1,
         cell: ({ row }) => {
           return (
@@ -69,12 +70,13 @@ const DefiTable = ({ defiCardsData }: Props) => {
       {
         header: "TVL",
         enableSorting: true,
+        accessorKey: "tvl",
         sortingFn: "alphanumericCaseSensitive",
         accessorFn: (row) => row.tvl,
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              ${numberFormat(Number(row.original.tvl), 3)}
+              ${numberFormat(Number(row.original.tvl), 2)}
             </Text>
           );
         }
@@ -82,12 +84,13 @@ const DefiTable = ({ defiCardsData }: Props) => {
       {
         header: "APR",
         enableSorting: true,
+        accessorKey: "apr",
         sortingFn: "alphanumericCaseSensitive",
         accessorFn: (row) => row.apr,
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              {row.original.apr}%
+              {Number(row.original.apr).toFixed(2)}%
             </Text>
           );
         }

@@ -20,6 +20,7 @@ import {
 import React, { useMemo } from "react";
 import { Box } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
+import { SortingTableState } from "@tanstack/table-core/src/features/RowSorting";
 
 interface Props {
   data: any;
@@ -29,7 +30,12 @@ interface Props {
 }
 
 const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
-  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [sorting, setSorting] = React.useState<SortingState>([
+    {
+      id: "tvl", // Must be equal to the accessorKey of the coulmn you want sorted by default
+      desc: true
+    }
+  ]);
   const [rowsCount, setRowsCount] = React.useState<number>(5);
 
   const table = useReactTable({
@@ -38,11 +44,11 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
     state: {
       sorting
     },
+    sortDescFirst: true,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
-    enableSortingRemoval: false,
     debugTable: false
   });
 
