@@ -15,6 +15,7 @@ import {
   Text,
   VStack
 } from "@chakra-ui/react";
+import Icon from "@/components/molecules/Icon";
 
 interface Props {
   isTablet: boolean;
@@ -36,12 +37,12 @@ const langList: LanguageItemProps[] = [
   {
     imgUrl: "/images/lang/cn.png",
     code: "cn",
-    name: "CHINESE"
+    name: "中国人 "
   },
   {
     imgUrl: "/images/lang/kr.png",
     code: "ko",
-    name: "KOREAN"
+    name: "한국인"
   }
 ];
 
@@ -85,34 +86,51 @@ const LangDropdown = ({ type }: any) => {
       <PopoverTrigger>
         <Box
           cursor={"pointer"}
+          className={"language-button"}
           display="flex"
           alignItems="center"
           px={type === "mobile" ? "7" : "0"}
           py={type === "mobile" ? "4" : "0"}
+          w={"161px"}
+          h={"40px"}
+          bg={(type = "mobile" ? "#E59636" : "#E596364D")}
+          borderRadius={"58px"}
+          justifyContent={"center"}
+          textAlign={"center"}
         >
-          <Image src={activeLang!.imgUrl} alt={"test"} width={22} height={16} />
+          <Image
+            src={"/images/language.svg"}
+            alt={"test"}
+            width={16}
+            height={16}
+          />
           <Text
-            ml={"14px"}
-            fontSize={"18px"}
-            className={"nav-item-title"}
+            ml={"4px"}
+            fontSize={"16px"}
+            // className={"nav-item-title"}
             textTransform={"uppercase"}
-            fontWeight={500}
-            _hover={{ color: "#E59636" }}
+            fontWeight={600}
+            // _hover={{ color: "#E59636" }}
             color={
               type === "mobile"
-                ? "#633C0D"
+                ? "#FFFFFF"
                 : router.pathname === "/"
                 ? "#FFFFFF"
                 : "#000000"
             }
           >
-            {activeLang?.code}
+            {activeLang?.name}
           </Text>
+          <Icon icon={"arrow-filled"} viewClass={`language-button-arrow `} />
         </Box>
       </PopoverTrigger>
-      <PopoverContent borderRadius={6} w={"200px"}>
-        <PopoverArrow />
-        <PopoverBody px={"14px"} py={"16px"}>
+      <PopoverContent
+        borderRadius={6}
+        w={"161px"}
+        border={"0px"}
+        overflow={"hidden"}
+      >
+        <PopoverBody p={"0"}>
           <VStack align={"start"} gap={0}>
             {langList.map((subItem: any) => (
               <LanguageSwitcher key={subItem.title} lang={subItem.code}>
@@ -122,11 +140,15 @@ const LangDropdown = ({ type }: any) => {
                   _hover={{
                     textDecoration: "none"
                   }}
+                  bg={
+                    activeLang?.code === subItem.code ? "#E596364D" : "#FFFEFE"
+                  }
                 >
                   <HStack
                     cursor={"pointer"}
                     className={"nav-item"}
-                    p={"10px"}
+                    py={"10px"}
+                    px={"20px"}
                     fontWeight={500}
                     _hover={{ bg: "#E596361A", borderRadius: "6px" }}
                   >
@@ -135,13 +157,6 @@ const LangDropdown = ({ type }: any) => {
                         style={{ display: "flex", alignItems: "center" }}
                         color={"#633C0D"}
                       >
-                        <Image
-                          src={subItem!.imgUrl}
-                          alt={"dd"}
-                          width={22}
-                          height={16}
-                          className={"mr-[6px]"}
-                        />
                         <Text
                           cursor={"pointer"}
                           ml={"14px"}
@@ -149,15 +164,6 @@ const LangDropdown = ({ type }: any) => {
                           pr={"5px"}
                         >
                           {subItem.name}
-                        </Text>
-                        <Text
-                          cursor={"pointer"}
-                          as="span"
-                          fontSize={16}
-                          textTransform={"uppercase"}
-                          pr={"5px"}
-                        >
-                          ({subItem.code})
                         </Text>
                       </Box>
                     </VStack>

@@ -90,6 +90,25 @@ stroke: #ececec;
 .navbar-container.nav-bar .nav-item-title{
 color: #000000;
 }
+
+.navbar-container.nav-bar .language-button{
+  background: #E59636;
+  color: #ffffff;
+}
+
+.navbar-container .language-button:hover .icon-language-button-arrow{
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-container .language-button .icon-language-button-arrow {
+  width: 10px;
+  height: 8px;
+  margin-left:6px;
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+
 .navbar-container.nav-bar .navbar-box{
   margin-top: 0px !important;
 }
