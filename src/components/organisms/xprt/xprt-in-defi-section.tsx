@@ -11,268 +11,95 @@ import {
   Button,
   useMediaQuery,
   Flex,
-  Image
+  Image,
+  Text
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import {
   DexterPoolsInfo,
-  OsmosisPoolsInfo,
-  PoolInfo
+  OsmosisPoolsInfo
 } from "@/store/slices/initial-data-slice";
 import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import {
-  TELEGRAM_PERSISTENCE_COMMUNITY_LINK,
-  TOKEN_CONTRACT_ADDRESS_LINK
-} from "@/utils/config";
+
+import DefiTable, { PoolData } from "@/components/organisms/xprt/table";
 
 const getData = (
   dexterInfo: DexterPoolsInfo,
   osmoPoolsInfo: OsmosisPoolsInfo
 ) => {
-  const defiCards: XPRTDefiCardInterface[] = [
+  const defiCards: PoolData[] = [
     {
-      tokens: [
-        {
-          name: "WBTC",
-          image: "/images/tokens/wbtc.svg"
-        },
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        }
-      ],
-      cta: {
-        label: "Persistence",
-        link: "https://app.persistence.one/pools/persistence197pewl43m55d970yrdhfj9hu9fxez443p37cn8ltfjwrh908ytdqhemas8",
-        bg: "buttons.ctaBlue",
-        hover: "buttons.ctaBlueHover"
-      },
-      description:
-        "Provide liquidity to the WBTC/XPRT pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: dexterInfo[13].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: dexterInfo[13].apy.toString()
-        }
-      ]
+      token1: "WBTC",
+      token1Img: "/images/tokens/wbtc.svg",
+      token2: "XPRT",
+      token2Img: "/images/tokens/xprt.svg",
+      tvl: dexterInfo[13].tvl.toString(),
+      apr: dexterInfo[13].apy.toString(),
+      link: "https://app.persistence.one/pools/persistence197pewl43m55d970yrdhfj9hu9fxez443p37cn8ltfjwrh908ytdqhemas8",
+      linkLable: "Persistence"
     },
     {
-      tokens: [
-        {
-          name: "stkXPRT",
-          image: "/images/tokens/stkxprt.svg"
-        },
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        }
-      ],
-      cta: {
-        label: "Persistence",
-        link: "https://app.persistence.one/pools/persistence1v2efcqkp2qtev06t0ksjnx6trxdd0f7fxg2zdrtzr8cr9wdpjkyq8r0cyc",
-        bg: "buttons.ctaBlue",
-        hover: "buttons.ctaBlueHover"
-      },
-      description:
-        "Provide liquidity to the stkXPRT/XPRT pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: dexterInfo[12].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: dexterInfo[12].apy.toString()
-        }
-      ]
+      token1: "stkXPRT",
+      token1Img: "/images/tokens/stkxprt.svg",
+      token2: "XPRT",
+      token2Img: "/images/tokens/xprt.svg",
+      tvl: dexterInfo[12].tvl.toString(),
+      apr: dexterInfo[12].apy.toString(),
+      link: "https://app.persistence.one/pools/persistence1v2efcqkp2qtev06t0ksjnx6trxdd0f7fxg2zdrtzr8cr9wdpjkyq8r0cyc",
+      linkLable: "Persistence"
     },
     {
-      tokens: [
-        {
-          name: "ATOM",
-          image: "/images/tokens/atom.svg"
-        },
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        }
-      ],
-      cta: {
-        label: "Persistence",
-        link: "https://app.persistence.one/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
-        bg: "buttons.ctaBlue",
-        hover: "buttons.ctaBlueHover"
-      },
-      description:
-        "Provide liquidity to the ATOM/XPRT pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: dexterInfo[2].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: dexterInfo[2].apy.toString()
-        }
-      ]
+      token1: "ATOM",
+      token1Img: "/images/tokens/atom.svg",
+      token2: "XPRT",
+      token2Img: "/images/tokens/xprt.svg",
+      tvl: dexterInfo[2].tvl.toString(),
+      apr: dexterInfo[2].apy.toString(),
+      link: "https://app.persistence.one/pools/persistence14ph4e660eyqz0j36zlkaey4zgzexm5twkmjlqaequxr2cjm9eprqsnnszg",
+      linkLable: "Persistence"
     },
     {
-      tokens: [
-        {
-          name: "WBTC",
-          image: "/images/tokens/wbtc.svg"
-        },
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        }
-      ],
-      cta: {
-        label: "Osmosis",
-        link: "https://app.osmosis.zone/pool/1773",
-        bg: "buttons.ctaPink",
-        hover: "buttons.ctaPurpleHover"
-      },
-      description:
-        "Provide liquidity to the WBTC/XPRT Supercharged pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: osmoPoolsInfo[1773].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: osmoPoolsInfo[1773].apy.toString()
-        }
-      ]
-    },
-
-    {
-      tokens: [
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        },
-        {
-          name: "USDC",
-          image: "/images/tokens/usdc.svg"
-        }
-      ],
-      cta: {
-        label: "Aerodrome",
-        link: "https://aerodrome.finance/pools?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200",
-        bg: "buttons.ctaDarkBlue",
-        hover: "buttons.ctaDarkBlueHover"
-      },
-      description:
-        "Provide liquidity to the XPRT/USDC supercharged pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: "46527"
-        },
-        {
-          label: "APR",
-          value: "~596"
-        }
-      ]
+      token1: "WBTC",
+      token1Img: "/images/tokens/atom.svg",
+      token2: "XPRT",
+      token2Img: "/images/tokens/xprt.svg",
+      tvl: osmoPoolsInfo[1773].tvl.toString(),
+      apr: osmoPoolsInfo[1773].apy.toString(),
+      link: "https://app.osmosis.zone/pool/1773",
+      linkLable: "Osmosis"
     },
     {
-      tokens: [
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        },
-        {
-          name: "OSMO",
-          image: "/images/tokens/osmo.svg"
-        }
-      ],
-      cta: {
-        label: "Osmosis",
-        link: "https://app.osmosis.zone/pool/1101",
-        bg: "buttons.ctaPink",
-        hover: "buttons.ctaPurpleHover"
-      },
-      description:
-        "Provide liquidity to the XPRT/OSMO Supercharged pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: osmoPoolsInfo[1101].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: osmoPoolsInfo[1101].apy.toString()
-        }
-      ]
+      token1: "XPRT",
+      token1Img: "/images/tokens/xprt.svg",
+      token2: "OSMO",
+      token2Img: "/images/tokens/osmo.svg",
+      tvl: osmoPoolsInfo[1101].tvl.toString(),
+      apr: osmoPoolsInfo[1101].apy.toString(),
+      link: "https://app.osmosis.zone/pool/1101",
+      linkLable: "Osmosis"
     },
     {
-      tokens: [
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        },
-        {
-          name: "USDT",
-          image: "/images/tokens/usdt.svg"
-        }
-      ],
-      cta: {
-        label: "Persistence",
-        link: "https://app.persistence.one/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
-        bg: "buttons.ctaBlue",
-        hover: "buttons.ctaBlueHover"
-      },
-      description:
-        "Provide liquidity to the USDT/XPRT pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: dexterInfo[5].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: dexterInfo[5].apy.toString()
-        }
-      ]
+      token1: "XPRT",
+      token1Img: "/images/tokens/xprt.svg",
+      token2: "USDT",
+      token2Img: "/images/tokens/usdt.svg",
+      tvl: dexterInfo[5].tvl.toString(),
+      apr: dexterInfo[5].apy.toString(),
+      link: "https://app.persistence.one/pools/persistence1e0cwfmla7exa578xddl87paxexw9ymwrzysfjms8c2mstxjkldlqz67jnl",
+      linkLable: "Persistence"
     },
     {
-      tokens: [
-        {
-          name: "XPRT",
-          image: "/images/tokens/xprt.svg"
-        },
-        {
-          name: "PSTAKE",
-          image: "/images/tokens/pstake.svg"
-        }
-      ],
-      cta: {
-        label: "Persistence",
-        link: "https://app.persistence.one/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
-        bg: "buttons.ctaBlue",
-        hover: "buttons.ctaBlueHover"
-      },
-      description:
-        "Provide liquidity to the PSTAKE/XPRT pool to earn trading fees and external incentives.",
-      stats: [
-        {
-          label: "TVL",
-          value: dexterInfo[3].tvl.toString()
-        },
-        {
-          label: "APR",
-          value: dexterInfo[3].apy.toString()
-        }
-      ]
+      token1: "XPRT",
+      token1Img: "/images/tokens/xprt.svg",
+      token2: "PSTAKE",
+      token2Img: "/images/tokens/pstake.svg",
+      tvl: dexterInfo[3].tvl.toString(),
+      apr: dexterInfo[3].apy.toString(),
+      link: "https://app.persistence.one/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
+      linkLable: "Persistence"
     }
   ];
   return defiCards;
@@ -283,8 +110,8 @@ const XPRTInDefiSection = () => {
     (state) => [state.dexterPoolsInfo, state.osmoPoolsInfo],
     shallow
   );
-  const [isMobile] = useMediaQuery("(max-width: 468px)");
-  const xprtDefiCards = getData(dexterPoolsInfo, osmoPoolsInfo);
+  const [isTablet] = useMediaQuery("(max-width: 760px)");
+  const defiCardsData = getData(dexterPoolsInfo, osmoPoolsInfo);
   return (
     <>
       <Container
@@ -299,27 +126,31 @@ const XPRTInDefiSection = () => {
           color={"#633C0D"}
           fontSize={{ base: "26px", xl: "48px" }}
           lineHeight={{ base: "32px", xl: "72px" }}
-          mb={{ base: "20px", md: "40px" }}
+          mb={"4px"}
         >
           XPRT in Multi-Chain DeFi
         </Heading>
-        {/* <Slider
-          {...{
-            rows: 2,
-            // dots: true,
-            arrows: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }}
-        > */}
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
-          {xprtDefiCards.map((card, index) => (
-            <XPRTDefiCard key={index} {...card} />
-          ))}
-        </SimpleGrid>
-        {/* </Slider> */}
+        <Text
+          maxW={"700px"}
+          mx={"auto"}
+          color={"#633C0D"}
+          textAlign={"center"}
+          fontSize={{ base: "16px", md: "20px" }}
+          lineHeight={{ base: "24px", md: "30px" }}
+          mb={{ base: "20px", md: "40px" }}
+        >
+          Explore DeFi and liquidity provisioning (LP) opportunities with XPRT
+          and get ready to put your assets to work.
+        </Text>
+        {isTablet ? (
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
+            {defiCardsData.map((card, index) => (
+              <XPRTDefiCard key={index} {...card} />
+            ))}
+          </SimpleGrid>
+        ) : (
+          <DefiTable defiCardsData={defiCardsData} />
+        )}
       </Container>
       <Box bg={"#E59636"} backgroundPosition="bottom right">
         <Container
