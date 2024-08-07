@@ -1,14 +1,3 @@
-import {
-  TableCaption,
-  TableContainer,
-  Thead,
-  Table,
-  Th,
-  Tr,
-  Td,
-  Tbody,
-  Tfoot
-} from "@chakra-ui/table";
 import { ColumnDef } from "@tanstack/table-core";
 import React from "react";
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
