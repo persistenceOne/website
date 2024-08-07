@@ -54,8 +54,8 @@ const DefiTable = ({ defiCardsData }: Props) => {
               </Box>
               <Box>
                 <Text
-                  fontWeight={700}
-                  fontSize={"24px"}
+                  fontWeight={600}
+                  fontSize={"20px"}
                   lineHeight={"32px"}
                   color={"#633C0D"}
                 >
