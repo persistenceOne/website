@@ -90,6 +90,7 @@ const DefiTable = ({ defiCardsData }: Props) => {
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
+              {row.original.linkLable === "Aerodrome" ? "~" : ""}
               {Number(row.original.apr).toFixed(2)}%
             </Text>
           );
