@@ -153,7 +153,21 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
                             )
                           }[header.column.getIsSorted() as string] ?? (
                             // empty box to avoid box moving
-                            <div className={"w-[16px] invisible"}></div>
+                            <Box
+                              className={"sort-icons"}
+                              display={"flex"}
+                              flexDirection={"column"}
+                              ml="4px"
+                            >
+                              <Icon
+                                icon={"sort-up"}
+                                viewClass={`sort-up fill-[#A6A6A6] !w-[12px] !h-[10px] -mb-[2px]`}
+                              />
+                              <Icon
+                                icon={"sort-down"}
+                                viewClass={`sort-down fill-[#2b2b2b] !w-[12px] !h-[10px]`}
+                              />
+                            </Box>
                           )}
                         </Box>
                       )}

@@ -11,7 +11,7 @@ export type PoolData = {
   token1Img: string;
   token2: string;
   token2Img: string;
-  tvl: string;
+  tvl: string | number;
   apr: string;
   link: string;
   linkLable: string;
@@ -68,6 +68,8 @@ const DefiTable = ({ defiCardsData }: Props) => {
       },
       {
         header: "TVL",
+        enableSorting: true,
+        sortingFn: "alphanumericCaseSensitive",
         accessorFn: (row) => row.tvl,
         cell: ({ row }) => {
           return (
@@ -79,6 +81,8 @@ const DefiTable = ({ defiCardsData }: Props) => {
       },
       {
         header: "APR",
+        enableSorting: true,
+        sortingFn: "alphanumericCaseSensitive",
         accessorFn: (row) => row.apr,
         cell: ({ row }) => {
           return (
@@ -120,6 +124,7 @@ const DefiTable = ({ defiCardsData }: Props) => {
     []
   );
 
+  console.log(defiCardsData, "");
   return <CustomTable data={defiCardsData} columns={columns} />;
 };
 

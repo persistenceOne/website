@@ -403,6 +403,10 @@ color: #000000;
   border-bottom-right-radius: 12px;
 }
 
+.table-container thead tr th:first-child .sort-icons, .table-container thead tr th:last-child .sort-icons{
+  display: none;
+}
+
 .table-container tbody tr td{
   border: 0px !important
 }
@@ -413,3 +417,4 @@ color: #000000;
 .icon-sort-up.active, .icon-sort-down.active {
   fill: #633C0D;
 }
+
