@@ -93,7 +93,7 @@ const LangDropdown = ({ type }: any) => {
           py={type === "mobile" ? "4" : "0"}
           w={"161px"}
           h={"40px"}
-          bg={(type = "mobile" ? "#E59636" : "#E596364D")}
+          bg={type === "mobile" ? "#E59636" : "#E596364D"}
           borderRadius={"58px"}
           justifyContent={"center"}
           textAlign={"center"}
