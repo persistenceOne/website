@@ -67,7 +67,9 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
       <TableContainer
         bg={"#FFFFFF"}
         borderRadius={"12px"}
-        p={"24px"}
+        py={"24px"}
+        pl={"32px"}
+        pr={"24px"}
         className={"table-container"}
       >
         <Table
