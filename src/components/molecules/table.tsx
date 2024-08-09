@@ -18,7 +18,7 @@ import {
   Tfoot
 } from "@chakra-ui/table";
 import React, { useMemo } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
 import { SortingTableState } from "@tanstack/table-core/src/features/RowSorting";
 
@@ -63,15 +63,15 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
   }, [table]);
 
   return (
-    <Box className={`${parentClass}`}>
-      <TableContainer
-        bg={"#FFFFFF"}
-        borderRadius={"12px"}
-        py={"24px"}
-        pl={"32px"}
-        pr={"24px"}
-        className={"table-container"}
-      >
+    <Box
+      className={`${parentClass}`}
+      bg={"#FFFFFF"}
+      borderRadius={"12px"}
+      py={"24px"}
+      pl={"32px"}
+      pr={"24px"}
+    >
+      <TableContainer className={"table-container"}>
         <Table
           className={"w-full custom-table"}
           // variant="striped"
@@ -225,6 +225,21 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
           </Tbody>
         </Table>
       </TableContainer>
+      <Text
+        mx={"auto"}
+        color={"#633C0D"}
+        textAlign={"left"}
+        fontSize={"12px"}
+        lineHeight={""}
+        px={"12px"}
+      >
+        <b>Disclaimer: </b>APR figures can fluctuate, may not be accurate and/or
+        are subject to several variables and should not be relied on to make any
+        decisions, financial or otherwise. You are to do your own diligence and
+        seek your own independent advice. You accept the data reproduced here
+        and agree you are solely responsible for any consequence in connection
+        thereto.
+      </Text>
     </Box>
   );
 };
