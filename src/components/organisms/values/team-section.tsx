@@ -3,6 +3,7 @@ import TeamMemberCard, {
 } from "@/components/atoms/team-member-card";
 import { Flex, Heading, Container, Box, Text } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const teamMembers: TeamMemberCardInterface[] = [
   {
@@ -103,6 +104,7 @@ const teamMembers: TeamMemberCardInterface[] = [
 ];
 
 const TeamSection = () => {
+  const { t } = useTranslation();
   return (
     <Container
       maxW={"1440px"}
@@ -117,7 +119,7 @@ const TeamSection = () => {
         lineHeight={{ base: "32px", xl: "72px" }}
         mb={{ base: "20px", md: "60px" }}
       >
-        Meet Fellow Persisters
+        {t("MEET_THE_PERSISTERS")}
       </Heading>
       <Flex justify={"center"} flexWrap={"wrap"} rowGap={10} w={"100%"}>
         {teamMembers.map((member) => (

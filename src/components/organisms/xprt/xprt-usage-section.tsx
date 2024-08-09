@@ -15,55 +15,52 @@ import {
   SimpleGrid
 } from "@chakra-ui/react";
 import React from "react";
-
-const xprtUsageCards = [
-  {
-    title: "Decentralized Governance",
-    description:
-      "XPRT governance has the final say on major protocol parameter changes, integrations, chain upgrades, community pool spend, incentives. ",
-    image: "/images/xprt-page/utility1.svg",
-    cta: {
-      text: "Learn More",
-      link: "https://www.mintscan.io/persistence/tx",
-      isExternal: true
-    }
-  },
-  {
-    title: "Transaction Fees",
-    description:
-      "XPRT is used as transaction fees for ~5000+ daily on-chain transactions related to trading or LPing on DEX, XPRT staking or liquid staking, IBC transfers, and more.",
-    image: "/images/xprt-page/utility2.svg",
-    cta: {
-      text: "Participate",
-      link: "https://www.mintscan.io/persistence/proposals",
-      isExternal: true
-    }
-  },
-  {
-    title: "Additional Utility",
-    description:
-      "XPRT stakers and holders will gain more utility as part of the BTC Interoperability Product, such as trading fee discounts, whitelisting intent solvers, and treasury management.",
-    image: "/images/xprt-page/utility3.svg",
-    cta: {
-      text: "Start Staking",
-      link: "https://wallet.keplr.app/chains/persistence?tab=staking",
-      isExternal: true
-    }
-  },
-  {
-    title: "Chain Security",
-    description:
-      "XPRT is used to secure the Persistence One blockchain via Proof of Stake. Network participants like validators, BTC stakers (via Babylon’s trustless staking), and XPRT stakers receive staking rewards for securing the chain.",
-    image: "/images/xprt-page/utility4.svg",
-    cta: {
-      text: "Explore",
-      link: "https://app.persistence.one/pools",
-      isExternal: true
-    }
-  }
-];
+import { useTranslation } from "next-export-i18n";
 
 const XPRTUsageSection = () => {
+  const { t } = useTranslation();
+  const xprtUsageCards = [
+    {
+      title: t("XPRT_SECTION2_CARD1_TITLE"),
+      description: t("XPRT_SECTION2_CARD1_CONTENT"),
+      image: "/images/xprt-page/utility1.svg",
+      cta: {
+        text: "Learn More",
+        link: "https://www.mintscan.io/persistence/tx",
+        isExternal: true
+      }
+    },
+    {
+      title: t("XPRT_SECTION2_CARD2_TITLE"),
+      description: t("XPRT_SECTION2_CARD2_TITLE"),
+      image: "/images/xprt-page/utility2.svg",
+      cta: {
+        text: "Participate",
+        link: "https://www.mintscan.io/persistence/proposals",
+        isExternal: true
+      }
+    },
+    {
+      title: t("XPRT_SECTION2_CARD3_TITLE"),
+      description: t("XPRT_SECTION2_CARD3_CONTENT"),
+      image: "/images/xprt-page/utility3.svg",
+      cta: {
+        text: "Start Staking",
+        link: "https://wallet.keplr.app/chains/persistence?tab=staking",
+        isExternal: true
+      }
+    },
+    {
+      title: t("XPRT_SECTION2_CARD4_TITLE"),
+      description: t("XPRT_SECTION2_CARD4_CONTENT"),
+      image: "/images/xprt-page/utility4.svg",
+      cta: {
+        text: "Explore",
+        link: "https://app.persistence.one/pools",
+        isExternal: true
+      }
+    }
+  ];
   return (
     <Container
       maxW={"1440px"}
@@ -83,7 +80,7 @@ const XPRTUsageSection = () => {
           lineHeight={{ base: "32px", xl: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
-          XPRT Utility
+          {t("XPRT_SECTION2_TITLE")}
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
           {/*<Box display={"flex"} gap={"18px"} mt={4}>*/}

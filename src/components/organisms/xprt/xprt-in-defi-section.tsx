@@ -27,10 +27,12 @@ import {
   TELEGRAM_PERSISTENCE_COMMUNITY_LINK,
   TOKEN_CONTRACT_ADDRESS_LINK
 } from "@/utils/config";
+import { useTranslation } from "next-export-i18n";
 
 const getData = (
   dexterInfo: DexterPoolsInfo,
-  osmoPoolsInfo: OsmosisPoolsInfo
+  osmoPoolsInfo: OsmosisPoolsInfo,
+  t: any
 ) => {
   const defiCards: XPRTDefiCardInterface[] = [
     {
@@ -50,8 +52,7 @@ const getData = (
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
-      description:
-        "Provide liquidity to the WBTC/XPRT pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD1_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -80,8 +81,7 @@ const getData = (
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
-      description:
-        "Provide liquidity to the stkXPRT/XPRT pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD2_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -110,8 +110,7 @@ const getData = (
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
-      description:
-        "Provide liquidity to the ATOM/XPRT pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD3_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -140,8 +139,7 @@ const getData = (
         bg: "buttons.ctaPink",
         hover: "buttons.ctaPurpleHover"
       },
-      description:
-        "Provide liquidity to the WBTC/XPRT Supercharged pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD4_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -171,8 +169,7 @@ const getData = (
         bg: "buttons.ctaDarkBlue",
         hover: "buttons.ctaDarkBlueHover"
       },
-      description:
-        "Provide liquidity to the XPRT/USDC supercharged pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD5_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -201,8 +198,7 @@ const getData = (
         bg: "buttons.ctaPink",
         hover: "buttons.ctaPurpleHover"
       },
-      description:
-        "Provide liquidity to the XPRT/OSMO Supercharged pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD6_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -231,8 +227,7 @@ const getData = (
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
-      description:
-        "Provide liquidity to the USDT/XPRT pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD7_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -261,8 +256,7 @@ const getData = (
         bg: "buttons.ctaBlue",
         hover: "buttons.ctaBlueHover"
       },
-      description:
-        "Provide liquidity to the PSTAKE/XPRT pool to earn trading fees and external incentives.",
+      description: t("XPRT_SECTION3_CARD8_TEXT"),
       stats: [
         {
           label: "TVL",
@@ -279,12 +273,13 @@ const getData = (
 };
 
 const XPRTInDefiSection = () => {
+  const { t } = useTranslation();
   const [dexterPoolsInfo, osmoPoolsInfo] = useAppStore(
     (state) => [state.dexterPoolsInfo, state.osmoPoolsInfo],
     shallow
   );
   const [isMobile] = useMediaQuery("(max-width: 468px)");
-  const xprtDefiCards = getData(dexterPoolsInfo, osmoPoolsInfo);
+  const xprtDefiCards = getData(dexterPoolsInfo, osmoPoolsInfo, t);
   return (
     <>
       <Container
@@ -301,7 +296,7 @@ const XPRTInDefiSection = () => {
           lineHeight={{ base: "32px", xl: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
-          XPRT in Multi-Chain DeFi
+          {t("XPRT_SECTION3_TITLE")}
         </Heading>
         {/* <Slider
           {...{
@@ -342,7 +337,7 @@ const XPRTInDefiSection = () => {
                 fontWeight={700}
                 lineHeight={{ base: "1.5", xl: "48px" }}
               >
-                Ensure to verify XPRT token details for every chain.
+                {t("XPRT_SECTION4_TITLE")}
               </Heading>
               <Box textAlign={{ base: "center", md: "left" }}>
                 <Link
@@ -371,7 +366,7 @@ const XPRTInDefiSection = () => {
                     }}
                     rightIcon={<ArrowForwardIcon />}
                   >
-                    Check Token details
+                    {t("CHECK_TOKEN_DETAILS")}
                   </Button>
                 </Link>
               </Box>
