@@ -76,14 +76,13 @@ const DefiTable = ({ defiCardsData }: Props) => {
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              {row.original.linkLable === "Aerodrome" ? "~" : ""}$
               {numberFormat(Number(row.original.tvl), 2)}
             </Text>
           );
         }
       },
       {
-        header: "APR",
+        header: "APR*",
         enableSorting: true,
         accessorKey: "apr",
         sortingFn: "alphanumericCaseSensitive",
@@ -91,7 +90,6 @@ const DefiTable = ({ defiCardsData }: Props) => {
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              {row.original.linkLable === "Aerodrome" ? "~" : ""}
               {Number(row.original.apr).toFixed(2)}%
             </Text>
           );

@@ -411,6 +411,17 @@ color: #000000;
   border: 0px !important
 }
 
+.table-container thead tr th:nth-child(2), .table-container thead tr th:nth-child(3){
+text-align: right;
+}
+
+.table-container thead tr th:nth-child(2) div, .table-container thead tr th:nth-child(3) div{
+  justify-content: end;
+}
+
+.table-container tbody tr td:nth-child(2), .table-container tbody tr td:nth-child(3) {
+  text-align: right;
+}
 .table-container thead tr th {
   border-color: #633C0D80;
 }
