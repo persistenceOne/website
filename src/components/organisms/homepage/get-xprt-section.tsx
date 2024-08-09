@@ -73,7 +73,7 @@ const GetXprtSection = () => {
               </Link>
               <Link
                 href={
-                  "https://go.skip.build/?src_chain=1&dest_chain=core-1&dest_asset=uxprt"
+                  "https://swapfast.app/?destinationAsset=uxprt&destinationChainId=core-1&sourceAsset=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&sourceChainId=1"
                 }
                 target="_blank"
                 rel="noopener noreferrer"

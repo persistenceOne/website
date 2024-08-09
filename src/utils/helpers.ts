@@ -30,7 +30,25 @@ export const numberFormat = (number: any, decPlaces: number) => {
     }
   }
 
+  console.log(number, "numberformat");
   return number;
+};
+
+export const addDecimal = (value: string) => {
+  const formattedString = numberFormat(Number(value), 2).toString();
+  try {
+    const abbrevList = ["K", "M", "M", "T"];
+    const abbrev = abbrevList.find((a) => {
+      formattedString.toLowerCase().includes(a.toLowerCase());
+      return a;
+    });
+    const stringIndex = formattedString.indexOf(abbrev!);
+    const valueWithoutAbbrev = formattedString.substring(0, stringIndex);
+    const valueWithFixedDecimal = Number(valueWithoutAbbrev).toFixed(2);
+    return valueWithFixedDecimal.concat(abbrev!);
+  } catch (e) {
+    return formattedString;
+  }
 };
 
 export const decimalize = (valueString: any, decimals = 6) => {

@@ -119,8 +119,9 @@ const XPRTUsageSection = () => {
                 <Image
                   src={card.image}
                   alt=""
+                  pb={"30px"}
                   width={{ base: "631px", xl: "631px" }}
-                  height={{ base: "180px", xl: "380px" }}
+                  height={{ base: "180px", xl: "330px" }}
                 />
               </Box>
             </Box>

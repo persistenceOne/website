@@ -454,3 +454,41 @@ color: #000000;
 .lottie-container.hovered {
   background-color: transparent; /* Background color on hover */
 }
+
+.icon-sort-up, .icon-sort-down {
+  fill: #A6A6A6;
+  width: 6px;
+  height: 6px;
+}
+
+.table-container table{
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+.table-container tbody tr:nth-child(even) {
+  background-color: #FCF7F1;
+}
+.table-container tbody tr:nth-child(even) td:first-child{
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.table-container tbody tr:nth-child(even) td:last-child{
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.table-container thead tr th:first-child .sort-icons, .table-container thead tr th:last-child .sort-icons{
+  display: none;
+}
+
+.table-container tbody tr td{
+  border: 0px !important
+}
+
+.table-container thead tr th {
+  border-color: #633C0D80;
+}
+.icon-sort-up.active, .icon-sort-down.active {
+  fill: #633C0D;
+}
+
