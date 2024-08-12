@@ -67,7 +67,8 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
       className={`${parentClass}`}
       bg={"#FFFFFF"}
       borderRadius={"12px"}
-      py={"24px"}
+      pt={"0px"}
+      pb={"24px"}
       pl={"32px"}
       pr={"24px"}
       maxWidth={"1240px"}
