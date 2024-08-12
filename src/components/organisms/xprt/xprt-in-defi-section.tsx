@@ -1,12 +1,8 @@
-import XPRTDefiCard, {
-  XPRTDefiCardInterface
-} from "@/components/molecules/xprt-defi-card";
+import XPRTDefiCard from "@/components/molecules/xprt-defi-card";
 import {
   Container,
-  VStack,
   Heading,
   SimpleGrid,
-  Grid,
   Box,
   Button,
   useMediaQuery,
