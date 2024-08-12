@@ -76,7 +76,7 @@ const DefiTable = ({ defiCardsData }: Props) => {
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              {numberFormat(Number(row.original.tvl), 2)}
+              ${numberFormat(Number(row.original.tvl), 2)}
             </Text>
           );
         }
