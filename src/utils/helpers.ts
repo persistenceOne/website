@@ -1,5 +1,3 @@
-import { Decimal } from "@cosmjs/math";
-
 export const numberFormat = (number: any, decPlaces: number) => {
   // 2 decimal places => 100, 3 => 1000, etc
   decPlaces = Math.pow(10, decPlaces);
@@ -48,23 +46,4 @@ export const addDecimal = (value: string) => {
   } catch (e) {
     return formattedString;
   }
-};
-
-export const decimalize = (valueString: any, decimals = 6) => {
-  console.log(valueString, "valueString");
-  let truncate;
-  if (typeof valueString === "string") {
-    truncate = Number(valueString);
-  } else {
-    truncate = valueString;
-  }
-  console.log(valueString, "valueString");
-  return Decimal.fromAtomics(
-    Math.trunc(truncate).toString(),
-    decimals
-  ).toString();
-};
-
-export const decimalizeRaw = (valueString: any, decimals = 6) => {
-  return Decimal.fromAtomics(valueString, decimals).toString();
 };
