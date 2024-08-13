@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import {
   Box,
   Flex,
@@ -24,25 +23,16 @@ import {
   Button,
   Link
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ExternalLinkIcon,
-  ArrowForwardIcon
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Icon from "./Icon";
 import {
   fetchDexterInfo,
-  fetchDexterPoolInfo,
   fetchDexterUsers,
-  fetchOsmosisPoolInfo,
   fetchTokenPrices
 } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
-import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 import { useRouter } from "next/router";
-import { pathify } from "next/dist/server/lib/squoosh/emscripten-utils";
 
 const menuItems = [
   {
@@ -506,8 +496,6 @@ const Header = () => {
     setTokenPrices,
     setDexterTVl,
     setDexterTotalVolume,
-    setDexterPoolInfo,
-    setOsmoPoolInfo,
     setPersistenceTvl,
     setDexterUsers,
     dexterInfo
@@ -516,8 +504,6 @@ const Header = () => {
       state.setTokenPrices,
       state.setDexterTVl,
       state.setDexterTotalVolume,
-      state.setDexterPoolInfo,
-      state.setOsmoPoolInfo,
       state.setPersistenceTvl,
       state.setDexterUsers,
       state.dexterInfo
@@ -526,11 +512,6 @@ const Header = () => {
   );
 
   useEffect(() => {
-    // const fetch = async () => {
-    //   const chainTvl = await fetchChainTVL();
-    //   setPersistenceTvl(chainTvl);
-    // };
-    // fetch();
     setPersistenceTvl(dexterInfo.tvl);
   }, [dexterInfo.tvl, setPersistenceTvl]);
 
@@ -546,18 +527,12 @@ const Header = () => {
   //fetching dexter info
   useEffect(() => {
     const fetch = async () => {
-      fetchDexterPoolInfo().then((response) => {
-        setDexterPoolInfo(response);
-      });
       fetchDexterInfo().then((resp) => {
         setDexterTVl(resp.tvl);
         setDexterTotalVolume(resp.volume);
       });
       fetchDexterUsers().then((userResponse) => {
         setDexterUsers(userResponse);
-      });
-      fetchOsmosisPoolInfo().then((osmoResponse) => {
-        setOsmoPoolInfo(osmoResponse);
       });
     };
     fetch();

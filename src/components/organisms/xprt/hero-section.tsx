@@ -3,7 +3,6 @@ import {
   Button,
   Container,
   Flex,
-  HStack,
   Heading,
   Spacer,
   Text,
@@ -15,7 +14,12 @@ import React, { useEffect } from "react";
 import PageStats from "@/components/molecules/page-stats";
 import Link from "next/link";
 
-import { getBondedTokens, getMarketCap } from "@/pages/api";
+import {
+  fetchDexterPoolInfo,
+  fetchOsmosisPoolInfo,
+  getBondedTokens,
+  getMarketCap
+} from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
@@ -26,17 +30,33 @@ const HeroSection = () => {
     marketCap,
     stakedXPRT,
     inflationDate,
-    setStakedXprt
+    setStakedXprt,
+    setDexterPoolInfo,
+    setOsmoPoolInfo
   ] = useAppStore(
     (state) => [
       state.setPersistenceMarketCap,
       state.marketCap,
       state.stakedXPRT,
       state.inflationDate,
-      state.setStakedXprt
+      state.setStakedXprt,
+      state.setDexterPoolInfo,
+      state.setOsmoPoolInfo
     ],
     shallow
   );
+
+  useEffect(() => {
+    const fetch = async () => {
+      fetchDexterPoolInfo().then((response) => {
+        setDexterPoolInfo(response);
+      });
+      fetchOsmosisPoolInfo().then((osmoResponse) => {
+        setOsmoPoolInfo(osmoResponse);
+      });
+    };
+    fetch();
+  }, []);
 
   useEffect(() => {
     const fetch = async () => {
@@ -47,6 +67,7 @@ const HeroSection = () => {
     };
     fetch();
   }, []);
+
   return (
     <Container
       maxW={"1440px"}
