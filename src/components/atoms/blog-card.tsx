@@ -6,6 +6,7 @@ import {
   Image,
   CardFooter,
   Box,
+  Img,
   Link
 } from "@chakra-ui/react";
 import React from "react";
@@ -39,17 +40,9 @@ const BlogCard = ({
       >
         <Box>
           <Card w="full" h="100%" borderRadius={20} my={1}>
-            {/*<Box*/}
-            {/*  bgImage={`url(${resourceImage})`}*/}
-            {/*  w={width}*/}
-            {/*  h="200px"*/}
-            {/*  bgPosition="center"*/}
-            {/*  borderTopLeftRadius={20}*/}
-            {/*  borderTopRightRadius={20}*/}
-            {/*  bgSize="cover"*/}
-            {/*/>*/}
             <Box>
-              <Image
+              <Img
+                loading={"lazy"}
                 src={resourceImage}
                 width={width}
                 borderTopLeftRadius={20}

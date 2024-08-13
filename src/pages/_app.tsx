@@ -117,9 +117,9 @@ const App = ({ Component, pageProps }: AppProps) => {
             content="https://persistence.one/ogimage.jpeg"
           />
         </Head>
-        {/*<Box pos={"fixed"} width="100%" zIndex="sticky">*/}
-        {/*  <Header />*/}
-        {/*</Box>*/}
+        <Box pos={"fixed"} width="100%" zIndex="sticky">
+          <Header />
+        </Box>
         <Component {...pageProps} />
         <Footer />
       </ChakraProvider>
