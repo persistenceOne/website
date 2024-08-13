@@ -3,7 +3,7 @@ import {
   Button,
   Card,
   CardBody,
-  Image,
+  Img,
   CardFooter,
   Box,
   Link
@@ -49,7 +49,8 @@ const BlogCard = ({
             {/*  bgSize="cover"*/}
             {/*/>*/}
             <Box>
-              <Image
+              <Img
+                loading={"lazy"}
                 src={resourceImage}
                 width={width}
                 borderTopLeftRadius={20}
