@@ -592,22 +592,6 @@ const Header = () => {
           >
             {getMenuList("top-start", "hover", router.pathname)}
           </Stack>
-          {/*<Link*/}
-          {/*  href="https://app.persistence.one"*/}
-          {/*  target="_black"*/}
-          {/*  rel="noopenner noreferrer"*/}
-          {/*  passHref*/}
-          {/*  className={"inline-block"}*/}
-          {/*>*/}
-          {/*  <Button*/}
-          {/*    h={"46px"}*/}
-          {/*    w={"187px"}*/}
-          {/*    variant={"primary"}*/}
-          {/*    rightIcon={<ArrowForwardIcon />}*/}
-          {/*  >*/}
-          {/*    Enter App*/}
-          {/*  </Button>*/}
-          {/*</Link>*/}
         </Flex>
         <Flex
           as={"nav"}
