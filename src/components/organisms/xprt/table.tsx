@@ -4,7 +4,7 @@ import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import CustomTable from "@/components/molecules/table";
-import { numberFormat } from "@/utils/helpers";
+import { addDecimal, numberFormat } from "@/utils/helpers";
 
 export type PoolData = {
   token1: string;
@@ -56,7 +56,7 @@ const DefiTable = ({ defiCardsData }: Props) => {
               <Box>
                 <Text
                   fontWeight={600}
-                  fontSize={"20px"}
+                  fontSize={"24px"}
                   lineHeight={"32px"}
                   color={"#633C0D"}
                 >
@@ -76,7 +76,7 @@ const DefiTable = ({ defiCardsData }: Props) => {
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              {numberFormat(Number(row.original.tvl), 2)}
+              ${addDecimal(row.original.tvl.toString())}
             </Text>
           );
         }

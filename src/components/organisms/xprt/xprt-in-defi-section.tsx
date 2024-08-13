@@ -1,12 +1,8 @@
-import XPRTDefiCard, {
-  XPRTDefiCardInterface
-} from "@/components/molecules/xprt-defi-card";
+import XPRTDefiCard from "@/components/molecules/xprt-defi-card";
 import {
   Container,
-  VStack,
   Heading,
   SimpleGrid,
-  Grid,
   Box,
   Button,
   useMediaQuery,
@@ -125,8 +121,8 @@ const XPRTInDefiSection = () => {
   return (
     <>
       <Container
-        maxW={"1440px"}
-        px={{ base: "40px", md: "100px" }}
+        maxWidth={"1320px"}
+        px={{ base: "40px", md: "40px" }}
         mb={{ base: "30px", md: "60px" }}
         className="xprt-defi-cards aos-init aos-animate"
         data-aos="fade-up"
@@ -153,11 +149,29 @@ const XPRTInDefiSection = () => {
           and get ready to put your assets to work.
         </Text>
         {isTablet ? (
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
-            {defiCardsData.map((card, index) => (
-              <XPRTDefiCard key={index} {...card} />
-            ))}
-          </SimpleGrid>
+          <>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
+              {defiCardsData.map((card, index) => (
+                <XPRTDefiCard key={index} {...card} />
+              ))}
+            </SimpleGrid>
+            <Text
+              mx={"auto"}
+              color={"#633C0D"}
+              textAlign={"left"}
+              fontSize={"12px"}
+              lineHeight={""}
+              px={"12px"}
+              mt={"20px"}
+            >
+              <b>*Disclaimer: </b>APR figures can fluctuate, may not be accurate
+              and/or are subject to several variables and should not be relied
+              on to make any decisions, financial or otherwise. You are to do
+              your own diligence and seek your own independent advice. You
+              accept the data reproduced here and agree you are solely
+              responsible for any consequence in connection thereto.
+            </Text>
+          </>
         ) : (
           <DefiTable defiCardsData={defiCardsData} />
         )}

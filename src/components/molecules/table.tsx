@@ -67,13 +67,17 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
       className={`${parentClass}`}
       bg={"#FFFFFF"}
       borderRadius={"12px"}
-      py={"24px"}
+      pt={"0px"}
+      pb={"24px"}
       pl={"32px"}
       pr={"24px"}
+      maxWidth={"1240px"}
+      mx={"auto"}
     >
       <TableContainer className={"table-container"}>
         <Table
-          className={"w-full custom-table"}
+          w={"1184px"}
+          className={"custom-table"}
           // variant="striped"
           // colorScheme="primary"
         >
@@ -85,7 +89,8 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
                     <Th
                       key={header.id}
                       colSpan={header.colSpan}
-                      p={"12px"}
+                      py={"12px"}
+                      px={"0"}
                       fontSize={"20px"}
                       fontWeight={"600"}
                       lineHeight={"30px"}
@@ -106,7 +111,7 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
                           justifyContent={
                             headerGroup.headers.length === index + 1
                               ? "center"
-                              : "start"
+                              : "end"
                           }
                           cursor={
                             header.column.getCanSort() ? "pointer" : "default"
@@ -204,8 +209,9 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
                       return (
                         <Td
                           key={cell.id}
-                          p={"15px"}
+                          py={"15px"}
                           mb={"8px"}
+                          px={"0"}
                           textAlign={
                             row.getVisibleCells().length === index + 1
                               ? "center"
