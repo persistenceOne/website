@@ -91,15 +91,15 @@ const HeroSection = () => {
               color={"text.whiteFull"}
               textAlign={"left"}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
-              fontSize={{ base: "38px", lg: "52px" }}
-              lineHeight={{ base: "50px", lg: "70px" }}
+              fontSize={{ md: "26px", base: "30px", lg: "52px" }}
+              lineHeight={{ md: "44px", base: "50px", lg: "70px" }}
               mb={{ base: "20px", lg: "12px" }}
             >
               <Text
                 as="span"
                 color={"#E59636"}
-                fontSize={{ base: "38px", lg: "72px" }}
-                lineHeight={{ base: "50px", lg: "86px" }}
+                fontSize={{ md: "26px", base: "38px", lg: "72px" }}
+                lineHeight={{ md: "40px", base: "50px", lg: "86px" }}
               >
                 Bitcoin
               </Text>
