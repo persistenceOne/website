@@ -20,16 +20,7 @@ const HeroSection = () => {
     );
 
   return (
-    <Box
-      className={"hero-content"}
-      bg={"#1d1208"}
-      pos={"relative"}
-      // pl={"80px"}
-      // backgroundImage={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
-      // backgroundPosition="100% 0"
-      // backgroundRepeat="no-repeat"
-      // backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "32% 100%" }}
-    >
+    <Box className={"hero-content"} bg={"#1d1208"} pos={"relative"}>
       <Box
         minH={{
           base: "100%", // 0-48em
