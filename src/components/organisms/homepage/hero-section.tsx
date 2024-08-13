@@ -1,4 +1,11 @@
-import { Box, Button, Heading, Text, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Text,
+  Stack,
+  useMediaQuery
+} from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
@@ -7,29 +14,10 @@ import { shallow } from "zustand/shallow";
 import TallyForm from "@/components/molecules/tally-form";
 
 const HeroSection = () => {
-  const [tvl, ibcVolume, transactionCost, transactions, dexterInfo] =
-    useAppStore(
-      (state) => [
-        state.tvl,
-        state.ibcVolume,
-        state.transactionCost,
-        state.transactions,
-        state.dexterInfo
-      ],
-      shallow
-    );
+  const [isTablet] = useMediaQuery("(min-width: 768px)");
 
   return (
-    <Box
-      className={"hero-content"}
-      bg={"#1d1208"}
-      pos={"relative"}
-      // pl={"80px"}
-      // backgroundImage={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
-      // backgroundPosition="100% 0"
-      // backgroundRepeat="no-repeat"
-      // backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "32% 100%" }}
-    >
+    <Box className={"hero-content"} bg={"#1d1208"} pos={"relative"}>
       <Box
         minH={{
           base: "100%", // 0-48em
@@ -67,45 +55,26 @@ const HeroSection = () => {
           pb={{ base: "40px", md: "0px" }}
           display="flex"
         >
-          {/*<Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>*/}
-          {/*</Container>*/}
-          <Box
-            display={{ base: "none", md: "block" }}
-            pos={"absolute"}
-            top={"0"}
-            left={"0"}
-            right={"0"}
-            height={"100%"}
-            // mt={"48px"}
-          >
-            {/*<Box*/}
-            {/*  as='video'*/}
-            {/*  controls*/}
-            {/*  autoplay*/}
-            {/*  src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'*/}
-            {/*  poster='https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'*/}
-            {/*  alt='Big Buck Bunny'*/}
-            {/*  objectFit='contain'*/}
-            {/*  sx={{*/}
-            {/*    aspectRatio: '16/9'*/}
-            {/*  }}*/}
-            {/*/>*/}
-            <video
-              autoPlay={true}
-              preload="auto"
-              muted={true}
-              loop={true}
-              src="/images/home-page/hero.mp4"
-              className="bg-video"
-            />
-            {/*<Image*/}
-            {/*  src={"/images/home-page/hp_hero.svg"}*/}
-            {/*  width={315}*/}
-            {/*  height={24}*/}
-            {/*  alt={"Persistence Logo"}*/}
-            {/*/>*/}
-            {/*</Box>*/}
-          </Box>
+          {isTablet ? (
+            <Box
+              display={{ base: "none", md: "block" }}
+              pos={"absolute"}
+              top={"0"}
+              left={"0"}
+              right={"0"}
+              height={"100%"}
+              // mt={"48px"}
+            >
+              <video
+                autoPlay={true}
+                preload="auto"
+                muted={true}
+                loop={true}
+                src="/images/home-page/hero.mp4"
+                className="bg-video"
+              />
+            </Box>
+          ) : null}
           <Box
             zIndex={10}
             position={"relative"}

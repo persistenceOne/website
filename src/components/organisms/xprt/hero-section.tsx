@@ -26,17 +26,33 @@ const HeroSection = () => {
     marketCap,
     stakedXPRT,
     inflationDate,
-    setStakedXprt
+    setStakedXprt,
+    setDexterPoolInfo,
+    setOsmoPoolInfo
   ] = useAppStore(
     (state) => [
       state.setPersistenceMarketCap,
       state.marketCap,
       state.stakedXPRT,
       state.inflationDate,
-      state.setStakedXprt
+      state.setStakedXprt,
+      state.setDexterPoolInfo,
+      state.setOsmoPoolInfo
     ],
     shallow
   );
+
+  useEffect(() => {
+    const fetch = async () => {
+      fetchDexterPoolInfo().then((response) => {
+        setDexterPoolInfo(response);
+      });
+      fetchOsmosisPoolInfo().then((osmoResponse) => {
+        setOsmoPoolInfo(osmoResponse);
+      });
+    };
+    fetch();
+  }, []);
 
   useEffect(() => {
     const fetch = async () => {

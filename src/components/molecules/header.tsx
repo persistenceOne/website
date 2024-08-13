@@ -33,16 +33,12 @@ import {
 import Icon from "./Icon";
 import {
   fetchDexterInfo,
-  fetchDexterPoolInfo,
   fetchDexterUsers,
-  fetchOsmosisPoolInfo,
   fetchTokenPrices
 } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
-import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 import { useRouter } from "next/router";
-import { pathify } from "next/dist/server/lib/squoosh/emscripten-utils";
 
 const menuItems = [
   {
@@ -506,8 +502,6 @@ const Header = () => {
     setTokenPrices,
     setDexterTVl,
     setDexterTotalVolume,
-    setDexterPoolInfo,
-    setOsmoPoolInfo,
     setPersistenceTvl,
     setDexterUsers,
     dexterInfo
@@ -516,8 +510,6 @@ const Header = () => {
       state.setTokenPrices,
       state.setDexterTVl,
       state.setDexterTotalVolume,
-      state.setDexterPoolInfo,
-      state.setOsmoPoolInfo,
       state.setPersistenceTvl,
       state.setDexterUsers,
       state.dexterInfo
@@ -526,11 +518,6 @@ const Header = () => {
   );
 
   useEffect(() => {
-    // const fetch = async () => {
-    //   const chainTvl = await fetchChainTVL();
-    //   setPersistenceTvl(chainTvl);
-    // };
-    // fetch();
     setPersistenceTvl(dexterInfo.tvl);
   }, [dexterInfo.tvl, setPersistenceTvl]);
 
@@ -546,18 +533,12 @@ const Header = () => {
   //fetching dexter info
   useEffect(() => {
     const fetch = async () => {
-      fetchDexterPoolInfo().then((response) => {
-        setDexterPoolInfo(response);
-      });
       fetchDexterInfo().then((resp) => {
         setDexterTVl(resp.tvl);
         setDexterTotalVolume(resp.volume);
       });
       fetchDexterUsers().then((userResponse) => {
         setDexterUsers(userResponse);
-      });
-      fetchOsmosisPoolInfo().then((osmoResponse) => {
-        setOsmoPoolInfo(osmoResponse);
       });
     };
     fetch();
@@ -617,22 +598,6 @@ const Header = () => {
           >
             {getMenuList("top-start", "hover", router.pathname)}
           </Stack>
-          {/*<Link*/}
-          {/*  href="https://app.persistence.one"*/}
-          {/*  target="_black"*/}
-          {/*  rel="noopenner noreferrer"*/}
-          {/*  passHref*/}
-          {/*  className={"inline-block"}*/}
-          {/*>*/}
-          {/*  <Button*/}
-          {/*    h={"46px"}*/}
-          {/*    w={"187px"}*/}
-          {/*    variant={"primary"}*/}
-          {/*    rightIcon={<ArrowForwardIcon />}*/}
-          {/*  >*/}
-          {/*    Enter App*/}
-          {/*  </Button>*/}
-          {/*</Link>*/}
         </Flex>
         <Flex
           as={"nav"}
