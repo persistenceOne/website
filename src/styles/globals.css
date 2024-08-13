@@ -442,9 +442,9 @@ color: #000000;
 
 
 .table-container tbody tr td:last-child, .table-container thead tr th:last-child{
-  text-align: center;
+  text-align: right;
   width:410px;
-  padding-left: 80px;
+  padding-right: 80px;
 }
 
 
