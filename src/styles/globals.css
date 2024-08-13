@@ -3,7 +3,6 @@ body, html {
   font-family: "Poppins", sans-serif !important;
 }
 
-/* over riding story page slider dots*/
 
 .history-slider .slick-dots {
   bottom: -35px;
