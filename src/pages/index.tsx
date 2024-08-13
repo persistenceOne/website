@@ -10,8 +10,8 @@ const HomePage = () => {
     <Box>
       <HeroSection />
       <Overview />
-      <DappsSection />
-      <BlogSection />
+      {/*<DappsSection />*/}
+      {/*<BlogSection />*/}
     </Box>
   );
 };
