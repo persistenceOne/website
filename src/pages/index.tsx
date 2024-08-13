@@ -4,13 +4,11 @@ import HeroSection from "@/components/organisms/homepage/hero-section";
 import Overview from "@/components/organisms/homepage/overview";
 import { Box, Spacer } from "@chakra-ui/react";
 import React from "react";
-import CrossChainSlider from "@/components/organisms/homepage/cross-chain-slider";
 
 const HomePage = () => {
   return (
     <Box>
       <HeroSection />
-      <CrossChainSlider />
       <Overview />
       <DappsSection />
       <BlogSection />
