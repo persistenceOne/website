@@ -61,7 +61,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             Persistence One | Bitcoin Interoperability. Powered by Intents.
             Secured by Bitcoin.
           </title>
-          <link rel="shortcut icon" href="/favicon.png" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -89,7 +89,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <meta property="og:image:alt" content="Persistence" />
           <meta
             property="og:image"
-            content="https://persistence.one/ogimage.jpeg"
+            content="https://persistence.one/ogimage.png"
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="persistence.one" />
@@ -114,7 +114,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
           <meta
             name="twitter:image"
-            content="https://persistence.one/ogimage.jpeg"
+            content="https://persistence.one/ogimage.png"
           />
         </Head>
         <Box pos={"fixed"} width="100%" zIndex="sticky">
