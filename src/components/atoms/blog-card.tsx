@@ -55,7 +55,7 @@ const BlogCard = ({
                 width={width}
                 borderTopLeftRadius={20}
                 borderTopRightRadius={20}
-                maxHeight={"240px"}
+                height={"225px"}
                 alt={"Persistence Logo"}
               />
             </Box>
