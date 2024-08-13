@@ -34,7 +34,7 @@ const HeroSection = () => {
           "2xl": "800px"
         }}
         height={{
-          base: "100%", // 0-48em
+          base: "80vh", // 0-48em
           md: "70vh", // 48em-80em,
           lg: "70vh", // 48em-80em,
           xl: "100vh", // 80em+
