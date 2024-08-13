@@ -15,7 +15,12 @@ import React, { useEffect } from "react";
 import PageStats from "@/components/molecules/page-stats";
 import Link from "next/link";
 
-import { getBondedTokens, getMarketCap } from "@/pages/api";
+import {
+  fetchDexterPoolInfo,
+  fetchOsmosisPoolInfo,
+  getBondedTokens,
+  getMarketCap
+} from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
