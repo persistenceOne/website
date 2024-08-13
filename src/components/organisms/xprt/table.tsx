@@ -4,7 +4,7 @@ import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import CustomTable from "@/components/molecules/table";
-import { addDecimal, numberFormat } from "@/utils/helpers";
+import { addDecimal } from "@/utils/helpers";
 
 export type PoolData = {
   token1: string;
