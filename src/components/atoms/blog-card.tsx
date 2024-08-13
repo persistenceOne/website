@@ -45,6 +45,7 @@ const BlogCard = ({
                 loading={"lazy"}
                 src={resourceImage}
                 width={width}
+                height={"auto"}
                 borderTopLeftRadius={20}
                 borderTopRightRadius={20}
                 maxHeight={"240px"}
