@@ -52,7 +52,7 @@ const HeroSection = () => {
           pt={{ base: "40px", md: "50px", xl: "122px" }}
           pl={{ base: "20px", md: "80px" }}
           pr={{ base: "20px", md: "0px" }}
-          pb={{ base: "40px", md: "0px" }}
+          pb={{ base: "80px", md: "0px" }}
           display="flex"
         >
           {isTablet ? (
@@ -91,15 +91,15 @@ const HeroSection = () => {
               color={"text.whiteFull"}
               textAlign={"left"}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
-              fontSize={{ base: "28px", md: "34px", xl: "52px" }}
-              lineHeight={{ base: "44px", md: "50px", xl: "70px" }}
-              mb={"12px"}
+              fontSize={{ base: "38px", lg: "52px" }}
+              lineHeight={{ base: "50px", lg: "70px" }}
+              mb={{ base: "20px", lg: "12px" }}
             >
               <Text
                 as="span"
                 color={"#E59636"}
-                fontSize={{ base: "28px", lg: "72px" }}
-                lineHeight={{ base: "44px", lg: "86px" }}
+                fontSize={{ base: "38px", lg: "72px" }}
+                lineHeight={{ base: "50px", lg: "86px" }}
               >
                 Bitcoin
               </Text>
@@ -109,7 +109,7 @@ const HeroSection = () => {
             <Text
               textAlign={"left"}
               maxW={{ base: "400px", xl: "580px" }}
-              mb={"29px"}
+              mb={{ base: "32px", lg: "29px" }}
               color={"#FFFFFFCC"}
               fontSize={{ base: "16px", xl: "26px" }}
               lineHeight={{ base: "28px", xl: "39px" }}
@@ -117,7 +117,10 @@ const HeroSection = () => {
               Fast, zero slippage swaps across Bitcoin L2s. Powered by Intents.
               Secured by Bitcoin.
             </Text>
-            <Stack direction={{ base: "column", md: "row" }} gap={4}>
+            <Stack
+              direction={{ base: "column", md: "row" }}
+              gap={{ base: 6, lg: 4 }}
+            >
               <Link
                 href="https://blog.persistence.one/2024/07/17/bridge-without-bridging-why-btcfi-needs-an-interoperability-solution/"
                 target="_black"
