@@ -461,14 +461,14 @@ color: #000000;
 .banner-container .icon-arrow{
   width: 10px;
   height: 10px;
-  fill: #000;
+  fill: #fff;
   margin-left: 6px;
 }
 
 .banner-container .icon-close{
   width: 10px;
   height: 10px;
-  fill: #000;
+  fill: #fff;
   position: absolute;
   top: 13px;
   right: 20px
