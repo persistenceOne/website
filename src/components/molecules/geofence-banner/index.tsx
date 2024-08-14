@@ -33,10 +33,8 @@ const GeofenceNotice = () => {
           <Link
             fontWeight={600}
             display={"flex"}
+            textDecoration={"underline"}
             alignItems={"center"}
-            _hover={{
-              textDecoration: "auto"
-            }}
             href={
               "https://blog.persistence.one/2024/08/14/introducing-our-updated-logo-fresh-look-bitcoin-alignment-communitys-choice/"
             }
