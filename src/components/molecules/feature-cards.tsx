@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
-import FeatureCard, {
-  FeatureCardInterface
-} from "@/components/atoms/feature-card";
+import FeatureCard from "@/components/atoms/feature-card";
 import {
-  Box,
   Button,
   Flex,
-  Grid,
-  GridItem,
-  HStack,
   Text,
   Stack,
   VStack,
@@ -16,8 +10,6 @@ import {
   useMediaQuery
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
-import Image from "next/image";
 
 const FeatureCards = () => {
   const [isVisible, setIsVisible] = useState(false);

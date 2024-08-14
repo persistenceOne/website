@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 body, html {
   background: #FCF7F1;
   font-family: "Poppins", sans-serif !important;
 }
 
-/* over riding story page slider dots*/
 
 .history-slider .slick-dots {
   bottom: -35px;
@@ -460,3 +457,19 @@ color: #000000;
   fill: #633C0D;
 }
 
+
+.banner-container .icon-arrow{
+  width: 10px;
+  height: 10px;
+  fill: #000;
+  margin-left: 6px;
+}
+
+.banner-container .icon-close{
+  width: 10px;
+  height: 10px;
+  fill: #000;
+  position: absolute;
+  top: 13px;
+  right: 20px
+}

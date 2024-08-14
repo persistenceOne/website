@@ -3,17 +3,10 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: false,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-    return config;
-  },
   images: {
     domains: ["raw.githubusercontent.com"],
     unoptimized: true
   },
-  // compiler: {
-  //   removeConsole: { exclude: ["error"] }
-  // },
   async redirects() {
     return [
       {

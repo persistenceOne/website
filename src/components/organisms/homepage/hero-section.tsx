@@ -1,4 +1,11 @@
-import { Box, Button, Heading, Text, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Text,
+  Stack,
+  useMediaQuery
+} from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
@@ -7,29 +14,10 @@ import { shallow } from "zustand/shallow";
 import TallyForm from "@/components/molecules/tally-form";
 
 const HeroSection = () => {
-  const [tvl, ibcVolume, transactionCost, transactions, dexterInfo] =
-    useAppStore(
-      (state) => [
-        state.tvl,
-        state.ibcVolume,
-        state.transactionCost,
-        state.transactions,
-        state.dexterInfo
-      ],
-      shallow
-    );
+  const [isTablet] = useMediaQuery("(min-width: 768px)");
 
   return (
-    <Box
-      className={"hero-content"}
-      bg={"#1d1208"}
-      pos={"relative"}
-      // pl={"80px"}
-      // backgroundImage={"linear-gradient(90deg, #185B64 0%, #114147 35%)"}
-      // backgroundPosition="100% 0"
-      // backgroundRepeat="no-repeat"
-      // backgroundSize={{ base: "45% 90%", md: "45% 90%", lg: "32% 100%" }}
-    >
+    <Box className={"hero-content"} bg={"#1d1208"} pos={"relative"}>
       <Box
         minH={{
           base: "100%", // 0-48em
@@ -46,7 +34,7 @@ const HeroSection = () => {
           "2xl": "800px"
         }}
         height={{
-          base: "100%", // 0-48em
+          base: "80vh", // 0-48em
           md: "70vh", // 48em-80em,
           lg: "70vh", // 48em-80em,
           xl: "100vh", // 80em+
@@ -64,48 +52,29 @@ const HeroSection = () => {
           pt={{ base: "40px", md: "50px", xl: "122px" }}
           pl={{ base: "20px", md: "80px" }}
           pr={{ base: "20px", md: "0px" }}
-          pb={{ base: "40px", md: "0px" }}
+          pb={{ base: "80px", md: "0px" }}
           display="flex"
         >
-          {/*<Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>*/}
-          {/*</Container>*/}
-          <Box
-            display={{ base: "none", md: "block" }}
-            pos={"absolute"}
-            top={"0"}
-            left={"0"}
-            right={"0"}
-            height={"100%"}
-            // mt={"48px"}
-          >
-            {/*<Box*/}
-            {/*  as='video'*/}
-            {/*  controls*/}
-            {/*  autoplay*/}
-            {/*  src='https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4'*/}
-            {/*  poster='https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'*/}
-            {/*  alt='Big Buck Bunny'*/}
-            {/*  objectFit='contain'*/}
-            {/*  sx={{*/}
-            {/*    aspectRatio: '16/9'*/}
-            {/*  }}*/}
-            {/*/>*/}
-            <video
-              autoPlay={true}
-              preload="auto"
-              muted={true}
-              loop={true}
-              src="/images/home-page/hero.mp4"
-              className="bg-video"
-            />
-            {/*<Image*/}
-            {/*  src={"/images/home-page/hp_hero.svg"}*/}
-            {/*  width={315}*/}
-            {/*  height={24}*/}
-            {/*  alt={"Persistence Logo"}*/}
-            {/*/>*/}
-            {/*</Box>*/}
-          </Box>
+          {isTablet ? (
+            <Box
+              display={{ base: "none", md: "block" }}
+              pos={"absolute"}
+              top={"0"}
+              left={"0"}
+              right={"0"}
+              height={"100%"}
+              // mt={"48px"}
+            >
+              <video
+                autoPlay={true}
+                preload="auto"
+                muted={true}
+                loop={true}
+                src="/images/home-page/hero.mp4"
+                className="bg-video"
+              />
+            </Box>
+          ) : null}
           <Box
             zIndex={10}
             position={"relative"}
@@ -122,15 +91,15 @@ const HeroSection = () => {
               color={"text.whiteFull"}
               textAlign={"left"}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
-              fontSize={{ base: "28px", md: "34px", xl: "52px" }}
-              lineHeight={{ base: "44px", md: "50px", xl: "70px" }}
-              mb={"12px"}
+              fontSize={{ md: "26px", base: "30px", lg: "52px" }}
+              lineHeight={{ md: "44px", base: "50px", lg: "70px" }}
+              mb={{ base: "20px", lg: "12px" }}
             >
               <Text
                 as="span"
                 color={"#E59636"}
-                fontSize={{ base: "28px", lg: "72px" }}
-                lineHeight={{ base: "44px", lg: "86px" }}
+                fontSize={{ md: "26px", base: "38px", lg: "72px" }}
+                lineHeight={{ md: "40px", base: "50px", lg: "86px" }}
               >
                 Bitcoin
               </Text>
@@ -140,7 +109,7 @@ const HeroSection = () => {
             <Text
               textAlign={"left"}
               maxW={{ base: "400px", xl: "580px" }}
-              mb={"29px"}
+              mb={{ base: "32px", lg: "29px" }}
               color={"#FFFFFFCC"}
               fontSize={{ base: "16px", xl: "26px" }}
               lineHeight={{ base: "28px", xl: "39px" }}
@@ -148,7 +117,10 @@ const HeroSection = () => {
               Fast, zero slippage swaps across Bitcoin L2s. Powered by Intents.
               Secured by Bitcoin.
             </Text>
-            <Stack direction={{ base: "column", md: "row" }} gap={4}>
+            <Stack
+              direction={{ base: "column", md: "row" }}
+              gap={{ base: 6, lg: 4 }}
+            >
               <Link
                 href="https://blog.persistence.one/2024/07/17/bridge-without-bridging-why-btcfi-needs-an-interoperability-solution/"
                 target="_black"

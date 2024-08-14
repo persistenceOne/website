@@ -10,7 +10,7 @@ const getData = (dexterInfo: any) => {
   const dApps: DappCardInterface[] = [
     {
       dAppName: "Persistence DEX",
-      dAppLogo: "/images/persistence-dex-logo.svg",
+      dAppLogo: "/images/persistence-symbol.svg",
       dAppDescription:
         "Governed by $XPRT, Persistence DEX is a trading and liquidity venue for XPRT, BTC and its’ related assets, LSTs and Stablecoins.",
       dAppStats: [
