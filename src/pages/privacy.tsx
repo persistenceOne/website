@@ -13,7 +13,8 @@ const Privacy = () => {
       maxW={"1440px"}
       px={{ base: "30px", md: "70px" }}
       transition={"all 0.3s"}
-      py={"100px"}
+      pt={"200px"}
+      pb={"100px"}
     >
       <Box className="container">
         <Box className="content">
