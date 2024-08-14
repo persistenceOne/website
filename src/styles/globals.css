@@ -458,6 +458,13 @@ color: #000000;
 }
 
 
+.banner-container .icon-arrow{
+  width: 10px;
+  height: 10px;
+  fill: #000;
+  margin-left: 6px;
+}
+
 .banner-container .icon-close{
   width: 10px;
   height: 10px;

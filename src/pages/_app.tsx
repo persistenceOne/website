@@ -119,7 +119,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
         </Head>
         <Box pos={"fixed"} width="100%" zIndex="sticky">
-          {/*<GeofenceNotice />*/}
+          <GeofenceNotice />
           <Header />
         </Box>
         <Component {...pageProps} />

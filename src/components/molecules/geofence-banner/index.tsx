@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
-import { Box, Text, Image } from "@chakra-ui/react";
+import { Box, Text, Link, Image } from "@chakra-ui/react";
 
 const GeofenceNotice = () => {
   const [banner, setBanner] = useState(true);
@@ -25,29 +25,30 @@ const GeofenceNotice = () => {
           fontSize={"14px"}
           fontWeight={500}
         >
-          <Image
-            src={"/images/tokens/atom.svg"}
-            alt={"stkAtom"}
-            width={"16px"}
-            height={"16px"}
-            mr={2}
-          />
-          <span>stkDYDX is NOW LIVE. Liquid Stake your DYDX with&nbsp;</span>
-          &nbsp;validators&nbsp;
-          <a
-            className="link underline"
-            href={"https://app.pstake.finance/cosmos"}
+          <span>
+            As we enter this new chapter, we invite you to celebrate our
+            refreshed identity: Fresh Look. Bitcoin Alignment. Community&apos;s
+            Choice.&nbsp;
+          </span>
+          <Link
+            fontWeight={600}
+            display={"flex"}
+            alignItems={"center"}
+            _hover={{
+              textDecoration: "auto"
+            }}
+            href={
+              "https://blog.persistence.one/2024/08/14/introducing-our-updated-logo-fresh-look-bitcoin-alignment-communitys-choice/"
+            }
             target="_blank"
             rel="noopener noreferrer"
           >
-            now.
-          </a>
+            Learn more
+            <Icon viewClass="arrow" icon="right-arrow-bold" />
+          </Link>
         </Text>
         <Box onClick={closeBanner}>
-          <Icon
-            viewClass="close w-[10px] h-[10px] fill-[#fff] absolute top-[13px] right-[20px] cursor-pointer"
-            icon="close"
-          />
+          <Icon viewClass="close" icon="close" />
         </Box>
       </Box>
     </Box>
