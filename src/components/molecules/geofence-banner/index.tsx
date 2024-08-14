@@ -22,6 +22,7 @@ const GeofenceNotice = () => {
         <Text
           display={"flex"}
           alignItems={"center"}
+          color={"#fff"}
           fontSize={"14px"}
           fontWeight={500}
         >
