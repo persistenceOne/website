@@ -457,3 +457,12 @@ color: #000000;
   fill: #633C0D;
 }
 
+
+.banner-container .icon-close{
+  width: 10px;
+  height: 10px;
+  fill: #000;
+  position: absolute;
+  top: 13px;
+  right: 20px
+}

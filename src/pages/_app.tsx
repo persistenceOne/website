@@ -15,6 +15,7 @@ import Script from "next/script";
 import { ANALYTICS } from "@/utils/config";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GeofenceNotice from "@/components/molecules/geofence-banner";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -118,6 +119,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
         </Head>
         <Box pos={"fixed"} width="100%" zIndex="sticky">
+          {/*<GeofenceNotice />*/}
           <Header />
         </Box>
         <Component {...pageProps} />
