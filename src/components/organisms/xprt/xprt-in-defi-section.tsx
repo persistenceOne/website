@@ -72,8 +72,8 @@ const getData = (
       token1Img: "/images/tokens/xprt.svg",
       token2: "USDC",
       token2Img: "/images/tokens/usdc.svg",
-      tvl: "54022",
-      apr: "341.01",
+      tvl: "535022",
+      apr: "2437",
       link: "https://aerodrome.finance/pools?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200",
       linkLable: "Aerodrome"
     },
@@ -106,6 +106,16 @@ const getData = (
       apr: dexterInfo[3].apy.toString(),
       link: "https://app.persistence.one/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
       linkLable: "Persistence"
+    },
+    {
+      token1: "XPRT",
+      token1Img: "/images/tokens/xprt.svg",
+      token2: "USDC",
+      token2Img: "/images/tokens/usdc.svg",
+      tvl: "3362",
+      apr: "1909",
+      link: "https://velodrome.finance/pools?token0=0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200&factory=0xCc0bDDB707055e04e497aB22a59c2aF4391cd12F",
+      linkLable: "Velodrome"
     }
   ];
   return defiCards;
