@@ -32,7 +32,7 @@ const XPRTUsageSection = () => {
     },
     {
       title: t("XPRT_SECTION2_CARD2_TITLE"),
-      description: t("XPRT_SECTION2_CARD2_TITLE"),
+      description: t("XPRT_SECTION2_CARD2_CONTENT"),
       image: "/images/xprt-page/utility2.svg",
       cta: {
         text: "Participate",
