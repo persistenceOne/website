@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
 import { Box, Text, Link, Image } from "@chakra-ui/react";
+import { useTranslation } from "next-export-i18n";
 
 const GeofenceNotice = () => {
+  const { t } = useTranslation();
   const [banner, setBanner] = useState(true);
   const closeBanner = () => {
     setBanner(false);
@@ -26,11 +28,7 @@ const GeofenceNotice = () => {
           fontSize={"14px"}
           fontWeight={500}
         >
-          <span>
-            As we enter this new chapter, we invite you to celebrate our
-            refreshed identity: Fresh Look. Bitcoin Alignment. Community&apos;s
-            Choice.&nbsp;
-          </span>
+          <span>{t("APP_BANNER")}&nbsp;</span>
           <Link
             fontWeight={600}
             display={"flex"}
@@ -42,7 +40,7 @@ const GeofenceNotice = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn more
+            {t("LEARN_MORE")}
             <Icon viewClass="arrow" icon="right-arrow-bold" />
           </Link>
         </Text>
