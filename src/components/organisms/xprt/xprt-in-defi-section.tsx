@@ -124,22 +124,15 @@ const getData = (
 };
 
 const XPRTInDefiSection = () => {
-  // const [defiCardsData, setDefiCardsData] = useState<PoolData[]>([]);
   const { t } = useTranslation();
   const [dexterPoolsInfo, osmoPoolsInfo] = useAppStore(
     (state) => [state.dexterPoolsInfo, state.osmoPoolsInfo],
     shallow
   );
 
-  // console.log(defiCardsData, "defiCardsData");
   const [isTablet] = useMediaQuery("(max-width: 760px)");
-  // useEffect(() => {
-  //   const response = getData(dexterPoolsInfo, osmoPoolsInfo, t);
-  //   setDefiCardsData(response);
-  // }, [dexterPoolsInfo, osmoPoolsInfo]);
 
   const defiCardsData = getData(dexterPoolsInfo, osmoPoolsInfo, t);
-  // setDefiCardsData(response);
 
   return (
     <>
