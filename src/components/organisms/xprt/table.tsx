@@ -21,7 +21,6 @@ interface Props {
   defiCardsData: PoolData[];
 }
 const DefiTable = ({ defiCardsData }: Props) => {
-  console.log(defiCardsData, "defiCardsData");
   const columns = React.useMemo<ColumnDef<PoolData>[]>(
     () => [
       {
@@ -57,7 +56,7 @@ const DefiTable = ({ defiCardsData }: Props) => {
               <Box>
                 <Text
                   fontWeight={600}
-                  fontSize={"20px"}
+                  fontSize={"24px"}
                   lineHeight={"32px"}
                   color={"#633C0D"}
                 >
@@ -77,14 +76,13 @@ const DefiTable = ({ defiCardsData }: Props) => {
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              {row.original.linkLable === "Aerodrome" ? "~" : ""}$
-              {addDecimal(row.original.tvl.toString())}
+              ${addDecimal(row.original.tvl.toString())}
             </Text>
           );
         }
       },
       {
-        header: "APR",
+        header: "APR*",
         enableSorting: true,
         accessorKey: "apr",
         sortingFn: "alphanumericCaseSensitive",
@@ -92,7 +90,6 @@ const DefiTable = ({ defiCardsData }: Props) => {
         cell: ({ row }) => {
           return (
             <Text fontSize={"20px"} color={"#1F1E1C"} fontWeight={500}>
-              {row.original.linkLable === "Aerodrome" ? "~" : ""}
               {Number(row.original.apr).toFixed(2)}%
             </Text>
           );

@@ -33,9 +33,7 @@ import {
 import Icon from "./Icon";
 import {
   fetchDexterInfo,
-  fetchDexterPoolInfo,
   fetchDexterUsers,
-  fetchOsmosisPoolInfo,
   fetchTokenPrices
 } from "@/pages/api";
 import { useAppStore } from "@/store/store";
@@ -60,8 +58,6 @@ const getMenuListMobile = (
                   cursor={"pointer"}
                   px={"12px"}
                   py={"8px"}
-                  fontSize={"18px"}
-                  fontWeight={500}
                   borderRadius={"6px"}
                   bg={isExpanded ? "#E596364D" : "transparent"}
                   color={
@@ -511,8 +507,6 @@ const Header = () => {
     setTokenPrices,
     setDexterTVl,
     setDexterTotalVolume,
-    setDexterPoolInfo,
-    setOsmoPoolInfo,
     setPersistenceTvl,
     setDexterUsers,
     dexterInfo
@@ -521,8 +515,6 @@ const Header = () => {
       state.setTokenPrices,
       state.setDexterTVl,
       state.setDexterTotalVolume,
-      state.setDexterPoolInfo,
-      state.setOsmoPoolInfo,
       state.setPersistenceTvl,
       state.setDexterUsers,
       state.dexterInfo
@@ -531,11 +523,6 @@ const Header = () => {
   );
 
   useEffect(() => {
-    // const fetch = async () => {
-    //   const chainTvl = await fetchChainTVL();
-    //   setPersistenceTvl(chainTvl);
-    // };
-    // fetch();
     setPersistenceTvl(dexterInfo.tvl);
   }, [dexterInfo.tvl, setPersistenceTvl]);
 
@@ -551,18 +538,12 @@ const Header = () => {
   //fetching dexter info
   useEffect(() => {
     const fetch = async () => {
-      fetchDexterPoolInfo().then((response) => {
-        setDexterPoolInfo(response);
-      });
       fetchDexterInfo().then((resp) => {
         setDexterTVl(resp.tvl);
         setDexterTotalVolume(resp.volume);
       });
       fetchDexterUsers().then((userResponse) => {
         setDexterUsers(userResponse);
-      });
-      fetchOsmosisPoolInfo().then((osmoResponse) => {
-        setOsmoPoolInfo(osmoResponse);
       });
     };
     fetch();

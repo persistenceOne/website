@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import FeatureCard, {
-  FeatureCardInterface
-} from "@/components/atoms/feature-card";
+import FeatureCard from "@/components/atoms/feature-card";
 import {
-  Box,
   Button,
   Flex,
   Grid,

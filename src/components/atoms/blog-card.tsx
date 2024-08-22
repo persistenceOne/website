@@ -3,7 +3,7 @@ import {
   Button,
   Card,
   CardBody,
-  Image,
+  Img,
   CardFooter,
   Box,
   Link
@@ -51,12 +51,13 @@ const BlogCard = ({
             {/*  bgSize="cover"*/}
             {/*/>*/}
             <Box>
-              <Image
+              <Img
+                loading={"lazy"}
                 src={resourceImage}
                 width={width}
                 borderTopLeftRadius={20}
                 borderTopRightRadius={20}
-                maxHeight={"240px"}
+                height={"225px"}
                 alt={"Persistence Logo"}
               />
             </Box>

@@ -18,9 +18,10 @@ import {
   Tfoot
 } from "@chakra-ui/table";
 import React, { useMemo } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
 import { SortingTableState } from "@tanstack/table-core/src/features/RowSorting";
+import { useTranslation } from "next-export-i18n";
 
 interface Props {
   data: any;
@@ -37,7 +38,7 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
     }
   ]);
   const [rowsCount, setRowsCount] = React.useState<number>(5);
-
+  const { t } = useTranslation();
   const table = useReactTable({
     data,
     columns,
@@ -63,15 +64,21 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
   }, [table]);
 
   return (
-    <Box className={`${parentClass}`}>
-      <TableContainer
-        bg={"#FFFFFF"}
-        borderRadius={"12px"}
-        p={"24px"}
-        className={"table-container"}
-      >
+    <Box
+      className={`${parentClass}`}
+      bg={"#FFFFFF"}
+      borderRadius={"12px"}
+      pt={"0px"}
+      pb={"24px"}
+      pl={"32px"}
+      pr={"24px"}
+      maxWidth={"1240px"}
+      mx={"auto"}
+    >
+      <TableContainer className={"table-container"}>
         <Table
-          className={"w-full custom-table"}
+          w={"1184px"}
+          className={"custom-table"}
           // variant="striped"
           // colorScheme="primary"
         >
@@ -83,7 +90,8 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
                     <Th
                       key={header.id}
                       colSpan={header.colSpan}
-                      p={"12px"}
+                      py={"12px"}
+                      px={"0"}
                       fontSize={"20px"}
                       fontWeight={"600"}
                       lineHeight={"30px"}
@@ -104,7 +112,7 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
                           justifyContent={
                             headerGroup.headers.length === index + 1
                               ? "center"
-                              : "start"
+                              : "end"
                           }
                           cursor={
                             header.column.getCanSort() ? "pointer" : "default"
@@ -202,8 +210,9 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
                       return (
                         <Td
                           key={cell.id}
-                          p={"15px"}
+                          py={"15px"}
                           mb={"8px"}
+                          px={"0"}
                           textAlign={
                             row.getVisibleCells().length === index + 1
                               ? "center"
@@ -223,6 +232,16 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
           </Tbody>
         </Table>
       </TableContainer>
+      <Text
+        mx={"auto"}
+        color={"#633C0D"}
+        textAlign={"left"}
+        fontSize={"12px"}
+        lineHeight={""}
+        px={"12px"}
+      >
+        <b>*{t("DISCLAIMER")}: </b> {t("APR_DISCLAIMER_NOTE")}
+      </Text>
     </Box>
   );
 };

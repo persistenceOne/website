@@ -21,29 +21,29 @@ const resourcesList: BlogCardInterface[] = [
   {
     id: 0,
     resourceImage:
-      "https://blog.persistence.one/wp-content/uploads/2024/07/Image-2-1160x653.png",
+      "https://blog.persistence.one/wp-content/uploads/2024/08/image1-1-1160x653.jpg",
     resourceType: "Blog",
     resourceCTA: "READ",
     resourceLink:
-      "https://blog.persistence.one/2024/07/17/bridge-without-bridging-why-btcfi-needs-an-interoperability-solution/"
+      "https://blog.persistence.one/2024/08/14/introducing-our-updated-logo-fresh-look-bitcoin-alignment-communitys-choice/"
   },
   {
     id: 1,
     resourceImage:
-      "https://blog.persistence.one/wp-content/uploads/2024/07/image2-1-1160x653.jpg",
+      "https://blog.persistence.one/wp-content/uploads/2024/07/Major-Problems-for-BTCfi-42-42-min-1160x652.jpg",
     resourceType: "Blog",
     resourceCTA: "READ",
     resourceLink:
-      "https://blog.persistence.one/2024/07/10/bitcoin-l2s-and-their-own-btc-variants/"
+      "https://blog.persistence.one/2024/08/12/major-problems-for-btcfi-and-how-interoperability-can-solve-it/"
   },
   {
     id: 2,
     resourceImage:
-      "https://blog.persistence.one/wp-content/uploads/2024/07/image4-1160x653.jpg",
+      "https://blog.persistence.one/wp-content/uploads/2024/07/btc-L2s-VS-side-chain-33-32-31-min-1160x652.jpg",
     resourceType: "Blog",
     resourceCTA: "READ",
     resourceLink:
-      "https://blog.persistence.one/2024/07/05/a-letter-to-persisters-the-new-journey-ahead/"
+      "https://blog.persistence.one/2024/07/31/bitcoin-l2s-vs-side-chains-same-same-or-different/"
   }
 ];
 

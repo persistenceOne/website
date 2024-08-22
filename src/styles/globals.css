@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 body, html {
   background: #FCF7F1;
   font-family: "Poppins", sans-serif !important;
 }
 
-/* over riding story page slider dots*/
 
 .history-slider .slick-dots {
   bottom: -35px;
@@ -465,12 +462,18 @@ color: #000000;
   border-collapse: separate;
   border-spacing: 0 12px;
 }
+
+.table-container tbody tr:nth-child(even) td {
+  background-color: #FCF7F1;
+}
+
 .table-container tbody tr:nth-child(even) {
   background-color: #FCF7F1;
 }
 .table-container tbody tr:nth-child(even) td:first-child{
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+  background-color: #FCF7F1;
 }
 .table-container tbody tr:nth-child(even) td:last-child{
   border-top-right-radius: 12px;
@@ -482,13 +485,65 @@ color: #000000;
 }
 
 .table-container tbody tr td{
-  border: 0px !important
+  border: 0px !important;
+  display: inline-block;
+  /*height: 82px;*/
+  margin: 0;
 }
+
+.table-container thead tr th:first-child .sort-icons, .table-container thead tr th:last-child .sort-icons{
+  display: none;
+}
+
+.table-container tbody tr td:first-child, .table-container thead tr th:first-child{
+  width: 350px;
+  padding-left: 20px;
+}
+
+.table-container tbody tr td:nth-child(2), .table-container thead tr th:nth-child(2){
+  text-align: right;
+  width: 170px;
+}
+
+
+.table-container tbody tr td:nth-child(3), .table-container thead tr th:nth-child(3){
+  text-align: right;
+  width: 254px;
+}
+
+
+.table-container tbody tr td:last-child, .table-container thead tr th:last-child{
+  text-align: right;
+  width:410px;
+  padding-right: 80px;
+}
+
+
+/*.table-container thead tr th:nth-child(2) div, .table-container thead tr th:nth-child(3) div{*/
+/*  justify-content: end;*/
+/*}*/
 
 .table-container thead tr th {
   border-color: #633C0D80;
+  display: inline-block;
 }
 .icon-sort-up.active, .icon-sort-down.active {
   fill: #633C0D;
 }
 
+
+.banner-container .icon-arrow{
+  width: 10px;
+  height: 10px;
+  fill: #fff;
+  margin-left: 6px;
+}
+
+.banner-container .icon-close{
+  width: 10px;
+  height: 10px;
+  fill: #fff;
+  position: absolute;
+  top: 13px;
+  right: 20px
+}

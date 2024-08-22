@@ -1,12 +1,8 @@
-import XPRTDefiCard, {
-  XPRTDefiCardInterface
-} from "@/components/molecules/xprt-defi-card";
+import XPRTDefiCard from "@/components/molecules/xprt-defi-card";
 import {
   Container,
-  VStack,
   Heading,
   SimpleGrid,
-  Grid,
   Box,
   Button,
   useMediaQuery,
@@ -78,8 +74,8 @@ const getData = (
       token1Img: "/images/tokens/xprt.svg",
       token2: "USDC",
       token2Img: "/images/tokens/usdc.svg",
-      tvl: "53858",
-      apr: "618.77",
+      tvl: "41129",
+      apr: "396",
       link: "https://aerodrome.finance/pools?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200",
       linkLable: "Aerodrome"
     },
@@ -112,6 +108,16 @@ const getData = (
       apr: dexterInfo[3].apy.toString(),
       link: "https://app.persistence.one/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
       linkLable: "Persistence"
+    },
+    {
+      token1: "XPRT",
+      token1Img: "/images/tokens/xprt.svg",
+      token2: "USDC",
+      token2Img: "/images/tokens/usdc.svg",
+      tvl: "3644",
+      apr: "1165",
+      link: "https://velodrome.finance/pools?token0=0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200&factory=0xCc0bDDB707055e04e497aB22a59c2aF4391cd12F",
+      linkLable: "Velodrome"
     }
   ];
   return defiCards;
@@ -138,8 +144,8 @@ const XPRTInDefiSection = () => {
   return (
     <>
       <Container
-        maxW={"1440px"}
-        px={{ base: "40px", md: "100px" }}
+        maxWidth={"1320px"}
+        px={{ base: "40px", md: "40px" }}
         mb={{ base: "30px", md: "60px" }}
         className="xprt-defi-cards aos-init aos-animate"
         data-aos="fade-up"
@@ -165,11 +171,24 @@ const XPRTInDefiSection = () => {
           {t("XPRT_SECTION3_SUB_TITLE")}
         </Text>
         {isTablet ? (
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
-            {defiCardsData.map((card, index) => (
-              <XPRTDefiCard key={index} {...card} />
-            ))}
-          </SimpleGrid>
+          <>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
+              {defiCardsData.map((card, index) => (
+                <XPRTDefiCard key={index} {...card} />
+              ))}
+            </SimpleGrid>
+            <Text
+              mx={"auto"}
+              color={"#633C0D"}
+              textAlign={"left"}
+              fontSize={"12px"}
+              lineHeight={""}
+              px={"12px"}
+              mt={"20px"}
+            >
+              <b>*{t("DISCLAIMER")}: </b> {t("APR_DISCLAIMER_NOTE")}
+            </Text>
+          </>
         ) : (
           <DefiTable defiCardsData={defiCardsData} />
         )}

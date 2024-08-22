@@ -166,6 +166,8 @@
     "JOIN_OUR_COMMUNITY": "加入我们的社区",
     "LEARN_MORE_ABOUT_PERSISTENCE": "学习关于 Persistence One",
     "CONTRIBUTE": "贡献",
-    "JOIN_DISCUSSIONS": "加入讨论"
+    "JOIN_DISCUSSIONS": "加入讨论",
+    "DISCLAIMER": "免责声明",
+    "APR_DISCLAIMER_NOTE": "年利率数据可能会波动，可能不准确和/或受多个变量的影响，不应依赖其做出任何财务或其他决策。"
   }
 }
