@@ -9,6 +9,7 @@ import {
   Link
 } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 export interface BlogCardInterface {
   id: number;
@@ -26,6 +27,7 @@ const BlogCard = ({
   resourceLink,
   width = "full"
 }: BlogCardInterface) => {
+  const { t } = useTranslation();
   return (
     <Box flex={"1"}>
       <Link
@@ -67,7 +69,7 @@ const BlogCard = ({
                 variant={"unstyled"}
                 rightIcon={<ExternalLinkIcon />}
               >
-                {resourceCTA}
+                {t(resourceCTA)}
               </Button>
             </CardFooter>
           </Card>

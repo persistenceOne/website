@@ -10,7 +10,7 @@ import {
   Image,
   Text
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import {
@@ -21,10 +21,12 @@ import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 import DefiTable, { PoolData } from "@/components/organisms/xprt/table";
+import { useTranslation } from "next-export-i18n";
 
 const getData = (
   dexterInfo: DexterPoolsInfo,
-  osmoPoolsInfo: OsmosisPoolsInfo
+  osmoPoolsInfo: OsmosisPoolsInfo,
+  t: any
 ) => {
   const defiCards: PoolData[] = [
     {
@@ -122,12 +124,16 @@ const getData = (
 };
 
 const XPRTInDefiSection = () => {
+  const { t } = useTranslation();
   const [dexterPoolsInfo, osmoPoolsInfo] = useAppStore(
     (state) => [state.dexterPoolsInfo, state.osmoPoolsInfo],
     shallow
   );
+
   const [isTablet] = useMediaQuery("(max-width: 760px)");
-  const defiCardsData = getData(dexterPoolsInfo, osmoPoolsInfo);
+
+  const defiCardsData = getData(dexterPoolsInfo, osmoPoolsInfo, t);
+
   return (
     <>
       <Container
@@ -144,7 +150,7 @@ const XPRTInDefiSection = () => {
           lineHeight={{ base: "32px", xl: "72px" }}
           mb={"4px"}
         >
-          XPRT in Multi-Chain DeFi
+          {t("XPRT_SECTION3_TITLE")}
         </Heading>
         <Text
           maxW={"700px"}
@@ -155,8 +161,7 @@ const XPRTInDefiSection = () => {
           lineHeight={{ base: "24px", md: "30px" }}
           mb={{ base: "20px", md: "40px" }}
         >
-          Explore DeFi and liquidity provisioning (LP) opportunities with XPRT
-          and get ready to put your assets to work.
+          {t("XPRT_SECTION3_SUB_TITLE")}
         </Text>
         {isTablet ? (
           <>
@@ -174,12 +179,7 @@ const XPRTInDefiSection = () => {
               px={"12px"}
               mt={"20px"}
             >
-              <b>*Disclaimer: </b>APR figures can fluctuate, may not be accurate
-              and/or are subject to several variables and should not be relied
-              on to make any decisions, financial or otherwise. You are to do
-              your own diligence and seek your own independent advice. You
-              accept the data reproduced here and agree you are solely
-              responsible for any consequence in connection thereto.
+              <b>*{t("DISCLAIMER")}: </b> {t("APR_DISCLAIMER_NOTE")}
             </Text>
           </>
         ) : (
@@ -207,7 +207,7 @@ const XPRTInDefiSection = () => {
                 fontWeight={700}
                 lineHeight={{ base: "1.5", xl: "48px" }}
               >
-                Ensure to verify XPRT token details for every chain.
+                {t("XPRT_SECTION4_TITLE")}
               </Heading>
               <Box textAlign={{ base: "center", md: "left" }}>
                 <Link
@@ -236,7 +236,7 @@ const XPRTInDefiSection = () => {
                     }}
                     rightIcon={<ArrowForwardIcon />}
                   >
-                    Check Token details
+                    {t("CHECK_TOKEN_DETAILS")}
                   </Button>
                 </Link>
               </Box>

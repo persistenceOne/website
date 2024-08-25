@@ -10,29 +10,27 @@ import {
   SimpleGrid
 } from "@chakra-ui/react";
 import React from "react";
-
-const persisterValues: PersisterValuesCardInterface[] = [
-  {
-    title: "Freedom",
-    description:
-      "We believe in the freedom that Bitcoin represents, ensuring transparency, security, and accessibility for all, fostering a more inclusive financial ecosystem.",
-    icon: "/icons/team-page/long-term.svg"
-  },
-  {
-    title: "Opportunity",
-    description:
-      "We believe in the opportunities Bitcoin brings to modern-day finance, paving the way for innovation, investment, security, and global economic participation.",
-    icon: "/icons/team-page/compounding.svg"
-  },
-  {
-    title: "Money",
-    description:
-      "We believe Bitcoin can become the hardest form of money and must move seamlessly across the multi-chain landscape.",
-    icon: "/icons/team-page/true-to-roots.svg"
-  }
-];
+import { useTranslation } from "next-export-i18n";
 
 const Belief = () => {
+  const { t } = useTranslation();
+  const persisterValues: PersisterValuesCardInterface[] = [
+    {
+      title: t("VISION_SECTION3_CARD1_TITLE"),
+      description: t("VISION_SECTION3_CARD1_CONTENT"),
+      icon: "/icons/team-page/long-term.svg"
+    },
+    {
+      title: t("VISION_SECTION3_CARD2_TITLE"),
+      description: t("VISION_SECTION3_CARD2_CONTENT"),
+      icon: "/icons/team-page/compounding.svg"
+    },
+    {
+      title: t("VISION_SECTION3_CARD3_TITLE"),
+      description: t("VISION_SECTION3_CARD3_CONTENT"),
+      icon: "/icons/team-page/true-to-roots.svg"
+    }
+  ];
   return (
     <Container
       maxW={"1440px"}
@@ -49,7 +47,7 @@ const Belief = () => {
         color="#633C0D"
         textAlign={"center"}
       >
-        ₿ullish Belief in Bitcoin
+        {t("VISION_SECTION3_TITLE")}
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} rowGap={20}>
         {persisterValues.map((value) => (

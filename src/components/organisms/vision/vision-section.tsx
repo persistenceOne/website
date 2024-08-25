@@ -12,28 +12,27 @@ import {
   Image
 } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
-const list = [
-  {
-    imgUrl: "/images/vision/vision1.svg",
-    title: "BTCFi will overtake ETH DeFi",
-    content:
-      "Building for Bitcoin is an opportunity akin to being in the right place at the right time, with the right values."
-  },
-  {
-    imgUrl: "/images/vision/vision2.svg",
-    title: "Chain security will always be needed in abundance",
-    content:
-      "For the first time in our lives, we may witness hyperinflation, making BTC more relevant than ever."
-  },
-  {
-    imgUrl: "/images/vision/vision3.svg",
-    title: "Native PoS tokens will exist as liquid staked",
-    content:
-      "DeFi on Bitcoin today is reminiscent of the early days of DeFi on Ethereum—full of potential and opportunity."
-  }
-];
 const VisionSection = () => {
+  const { t } = useTranslation();
+  const list = [
+    {
+      imgUrl: "/images/vision/vision1.svg",
+      title: t("VISION_SECTION2_CARD1_TITLE"),
+      content: t("VISION_SECTION2_CARD1_CONTENT")
+    },
+    {
+      imgUrl: "/images/vision/vision2.svg",
+      title: t("VISION_SECTION2_CARD2_TITLE"),
+      content: t("VISION_SECTION2_CARD2_CONTENT")
+    },
+    {
+      imgUrl: "/images/vision/vision3.svg",
+      title: t("VISION_SECTION2_CARD3_TITLE"),
+      content: t("VISION_SECTION2_CARD3_CONTENT")
+    }
+  ];
   return (
     <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }}>
       <Box
@@ -49,7 +48,7 @@ const VisionSection = () => {
           lineHeight={{ base: "32px", xl: "72px" }}
           mb={{ base: "20px", md: "40px" }}
         >
-          Our Persistent Vision
+          {t("VISION_SECTION2_TITLE")}
         </Heading>
         <Wrap
           spacing={{ base: "12px", xl: "18px" }}

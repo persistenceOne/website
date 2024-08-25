@@ -21,6 +21,7 @@ import React, { useMemo } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
 import { SortingTableState } from "@tanstack/table-core/src/features/RowSorting";
+import { useTranslation } from "next-export-i18n";
 
 interface Props {
   data: any;
@@ -37,7 +38,7 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
     }
   ]);
   const [rowsCount, setRowsCount] = React.useState<number>(5);
-
+  const { t } = useTranslation();
   const table = useReactTable({
     data,
     columns,
@@ -239,12 +240,7 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
         lineHeight={""}
         px={"12px"}
       >
-        <b>*Disclaimer: </b>APR figures can fluctuate, may not be accurate
-        and/or are subject to several variables and should not be relied on to
-        make any decisions, financial or otherwise. You are to do your own
-        diligence and seek your own independent advice. You accept the data
-        reproduced here and agree you are solely responsible for any consequence
-        in connection thereto.
+        <b>*{t("DISCLAIMER")}: </b> {t("APR_DISCLAIMER_NOTE")}
       </Text>
     </Box>
   );

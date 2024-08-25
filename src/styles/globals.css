@@ -87,6 +87,80 @@ stroke: #ececec;
 .navbar-container.nav-bar .nav-item-title{
 color: #000000;
 }
+
+.navbar-container.nav-bar .language-button{
+  /*background: #E59636;*/
+  /*color: #ffffff;*/
+}
+
+.navbar-container .language-button{
+  transition: all 0.2s ease-in-out;
+  color: #ffffff;
+}
+
+.navbar-container .language-button.active,
+.navbar-container .language-button.mobile.active,
+.navbar-container.nav-bar .language-button.active{
+  color: #E59636;
+}
+
+.navbar-container.nav-bar .language-button,
+.navbar-container .language-button.mobile{
+  color: #000000;
+}
+
+.navbar-container .language-button:hover{
+  /*background: #E596364D;*/
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-container .language-button:hover .icon-language-button-arrow{
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-container .language-button .icon-language{
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+  margin-right: 4px;
+}
+
+.navbar-container .language-button.active .icon-language,
+.navbar-container.nav-bar .language-button.active .icon-language,
+.navbar-container .language-button.mobile.active .icon-language{
+  fill: #E59636;
+}
+
+.navbar-container.nav-bar .language-button .icon-language,
+.navbar-container .language-button.mobile .icon-language{
+  fill: #000000 ;
+}
+
+.navbar-container .language-button.mobile.active .icon-language-button-arrow,
+.navbar-container.nav-bar .language-button.active .icon-language-button-arrow,
+.navbar-container .language-button.active .icon-language-button-arrow{
+  stroke:#E59636;
+  fill:transparent;
+}
+
+.navbar-container.nav-bar .language-button .icon-language-button-arrow,
+.navbar-container .language-button.mobile .icon-language-button-arrow{
+  stroke: #000000 ;
+  fill:transparent;
+}
+
+
+.navbar-container .language-button .icon-language-button-arrow {
+  width: 12px;
+  height: 12px;
+  stroke: #ffffff;
+  fill:transparent;
+  margin-left:6px;
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+
 .navbar-container.nav-bar .navbar-box{
   margin-top: 0px !important;
 }

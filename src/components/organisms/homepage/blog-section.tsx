@@ -15,6 +15,7 @@ import {
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
+import { useTranslation } from "next-export-i18n";
 
 const resourcesList: BlogCardInterface[] = [
   {
@@ -22,7 +23,7 @@ const resourcesList: BlogCardInterface[] = [
     resourceImage:
       "https://blog.persistence.one/wp-content/uploads/2024/08/image1-1-1160x653.jpg",
     resourceType: "Blog",
-    resourceCTA: "Read",
+    resourceCTA: "READ",
     resourceLink:
       "https://blog.persistence.one/2024/08/14/introducing-our-updated-logo-fresh-look-bitcoin-alignment-communitys-choice/"
   },
@@ -31,7 +32,7 @@ const resourcesList: BlogCardInterface[] = [
     resourceImage:
       "https://blog.persistence.one/wp-content/uploads/2024/07/Major-Problems-for-BTCfi-42-42-min-1160x652.jpg",
     resourceType: "Blog",
-    resourceCTA: "Read",
+    resourceCTA: "READ",
     resourceLink:
       "https://blog.persistence.one/2024/08/12/major-problems-for-btcfi-and-how-interoperability-can-solve-it/"
   },
@@ -40,13 +41,14 @@ const resourcesList: BlogCardInterface[] = [
     resourceImage:
       "https://blog.persistence.one/wp-content/uploads/2024/07/btc-L2s-VS-side-chain-33-32-31-min-1160x652.jpg",
     resourceType: "Blog",
-    resourceCTA: "Read",
+    resourceCTA: "READ",
     resourceLink:
       "https://blog.persistence.one/2024/07/31/bitcoin-l2s-vs-side-chains-same-same-or-different/"
   }
 ];
 
 const BlogSection = () => {
+  const { t } = useTranslation();
   const [isMobile] = useMediaQuery("(max-width: 500px)");
   const [isLandScape] = useMediaQuery("(max-width: 990px)");
   let sliderRef: any = useRef(null);
@@ -68,11 +70,8 @@ const BlogSection = () => {
         <Box>
           <HStack alignItems={"center"} mb={"40px"} justifyContent={"center"}>
             <Heading color="#350B00" fontSize={{ base: "20px", xl: "44px" }}>
-              Latest on Persistence One
+              {t("LATEST_ON_PERSISTENCE")}
             </Heading>
-            {/*<Link href={"/"}>*/}
-            {/*  <Text color={"#FFFFFF"}>Explore More</Text>*/}
-            {/*</Link>*/}
           </HStack>
           <Box
             display="flex"

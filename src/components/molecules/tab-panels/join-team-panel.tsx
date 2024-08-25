@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const openPositionsList = [
   {
@@ -41,6 +42,7 @@ const openPositionsList = [
 ];
 
 const JoinTeamPanel = () => {
+  const { t } = useTranslation();
   return (
     <Box as="section" maxW={"1100px"}>
       <Text
@@ -49,40 +51,39 @@ const JoinTeamPanel = () => {
         color={"text.blackHigh"}
         fontSize={{ base: "16px", md: "20px" }}
       >
-        Explore opportunities to contribute to Persistence One’s mission to
-        become the gateway for BTC ecosystem swaps.
+        {t("VALUES_SECTION3_JOIN_TEAM_CONTENT")}
       </Text>
       <Box gap={4} display={{ base: "block", md: "flex" }}>
         <Card borderRadius={"20px"} p={6} mb={{ base: "10px", md: "0" }}>
           <VStack align={"flex-start"}>
-            <Text fontSize={12}>Vision</Text>
+            <Text fontSize={12}> {t("VISION")}</Text>
             <Text
               fontWeight={700}
               color={"#423F40"}
               fontSize={{ base: "20px", md: "30px" }}
             >
-              Humility
+              {t("HUMILITY")}
             </Text>
             <Text
               fontWeight={700}
               fontSize={{ base: "20px", md: "30px" }}
               color={"#423F40"}
             >
-              Integrity
+              {t("INTEGRITY")}
             </Text>
             <Text
               fontWeight={700}
               fontSize={{ base: "20px", md: "30px" }}
               color={"#423F40"}
             >
-              Patience
+              {t("PATIENCE")}
             </Text>
             <Text
               fontWeight={700}
               fontSize={{ base: "20px", md: "30px" }}
               color={"#423F40"}
             >
-              Persistence
+              {t("PERSISTENCE")}
             </Text>
             <Link href={"/values"}>
               <Button
@@ -92,7 +93,7 @@ const JoinTeamPanel = () => {
                 fontSize={14}
                 _hover={{ color: "primary.red" }}
               >
-                Learn About The Persistent Vision
+                {t("VALUES_SECTION3_VISION_TEXT")}
               </Button>
             </Link>
           </VStack>
@@ -106,7 +107,7 @@ const JoinTeamPanel = () => {
           >
             <VStack align={"flex-start"} gap={0} mb={{ base: "10px", md: "0" }}>
               <Text fontWeight={600} fontSize={20} color="#3D3D3D">
-                Open Positions
+                {t("OPEN_POSITIONS")}
               </Text>
               {/* <Text fontSize={14} color={"#3D3D3D"} opacity={0.7}>
                 Ready to join? Reach out to us!
@@ -126,7 +127,7 @@ const JoinTeamPanel = () => {
                 w={{ base: "100%", md: "auto" }}
                 px={12}
               >
-                View All
+                {t("VIEW_ALL")}
               </Button>
             </Link>
           </Stack>

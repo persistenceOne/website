@@ -8,8 +8,10 @@ import {
   Container
 } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <Container maxW={"1440px"} px={{ base: "20px", md: "80px" }}>
       <Box>
@@ -29,7 +31,7 @@ const HeroSection = () => {
               fontSize={{ base: "27px", xl: "66px" }}
               lineHeight={{ base: "40px", xl: "79px" }}
             >
-              Building for Bitcoin with Persistence.
+              {t("VISION_HERO_TITLE")}
             </Heading>
 
             <Text
@@ -39,9 +41,7 @@ const HeroSection = () => {
               textAlign={{ base: "left", md: "left" }}
               mb={{ base: 4, xl: 0 }}
             >
-              To make Bitcoin DeFi scalable, we must overcome fragmentation.
-              That&apos;s where interoperability comes in. This is what
-              Persistence One is building.
+              {t("VISION_HERO_SUB_TITLE")}
             </Text>
           </Flex>
           <Box

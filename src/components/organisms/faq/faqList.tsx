@@ -1,49 +1,35 @@
-export const aboutPersistence = [
+export const aboutPersistence = (t: any) => [
   {
-    title: "What is Persistence One?",
-    content:
-      "Persistence One aims to become the gateway for Bitcoin Interoperability, powered by Intents, secured by Bitcoin. The solution ensures seamless movement of BTC with fast, zero slippage, cross-chain swaps."
-  },
-  {
-    title: "What is the vision of Persistence One?",
-    content: (
-      <>
-        To make Bitcoin DeFi scalable, we must overcome fragmentation.
-        That&apos;s where interoperability comes in. Persistence One’s vision is
-        to become the gateway for Bitcoin ecosystem swaps and a cornerstone hub
-        for all BTC variants.
-      </>
-    )
+    title: t("FAQ1"),
+    content: t("FAQ1_ANS")
   },
 
   {
-    title:
-      "How is Persistence One's interoperability solution different from bridging?",
-    content:
-      "Persistence One's interoperability solution enables direct cross-chain swaps without traditional bridges, reducing complexity and security risks by eliminating the need for building liquidity pools. Powered by intents, it offers a seamless and efficient way to transfer BTC variants between chains.\n"
+    title: t("FAQ2_ANS"),
+    content: t("FAQ2_ANS")
   },
   {
-    title: "How does cross-chain interoperability help BTCfi?\n",
-    content:
-      "Interoperability enhances BTCfi by enabling cross-chain swaps of Bitcoin variants across Bitcoin L2s and sidechains. It supports BTCfi adoption, connects the Bitcoin ecosystem, makes DeFi more accessible, improves user experience, and ensures efficient and secure asset transfers.\n"
+    title: t("FAQ3"),
+    content: t("FAQ3_ANS")
   },
   {
-    title: 'What are "intents" in cross-chain swaps?',
-    content:
-      '"Intents" in cross-chain swaps refer to pre-specified transaction conditions that enable users to define their desired outcomes. These intents are matched and executed across different chains, facilitating efficient and secure swaps without the need for traditional bridges or liquidity pools.'
+    title: t("FAQ4"),
+    content: t("FAQ4_ANS")
   },
   {
-    title: "What is Persistence DEX?",
-    content:
-      "Persistence DEX, earlier known as Dexter, is a decentralized exchange for trading BTC and Liquid Staked Tokens (LSTs)."
+    title: t("FAQ5"),
+    content: t("FAQ5_ANS")
   },
   {
-    title: "How will Bitcoin secure the Persistence chain?",
-    content:
-      "Persistence One will utilise Bitcoin's economic security by collaborating with Babylon Chain. Bitcoin's shared economic security will be the most reliable way to safeguard PoS chains without inflating the native token."
+    title: t("FAQ6"),
+    content: t("FAQ6_ANS")
   },
   {
-    title: "Where can you acquire XPRT?",
+    title: t("FAQ7"),
+    content: t("FAQ7_ANS")
+  },
+  {
+    title: t("FAQ8"),
     content: (
       <div>
         XPRT is listed on Centralised Exchanges such as{" "}
@@ -109,7 +95,7 @@ export const aboutPersistence = [
     )
   },
   {
-    title: "How can I bridge XPRT to Base or other ecosystems?",
+    title: t("FAQ9"),
     content: (
       <>
         You can use{" "}
@@ -133,7 +119,7 @@ export const aboutPersistence = [
     )
   },
   {
-    title: "How can I participate in Governance?",
+    title: t("FAQ10"),
     content: (
       <>
         XPRT stakers can submit new proposals, vote on proposals, suggest

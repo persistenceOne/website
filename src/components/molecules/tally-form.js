@@ -13,8 +13,10 @@ import {
 import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { useTranslation } from "next-export-i18n";
 
 const TallyForm = ({ page }) => {
+  const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [loaded, setLoaded] = useState(true);
@@ -36,7 +38,7 @@ const TallyForm = ({ page }) => {
           rightIcon={<ArrowForwardIcon />}
           onClick={onOpen}
         >
-          Partner With Us
+          {t("PARTNER_WITH_US")}
         </Button>
       ) : (
         <Button
@@ -58,17 +60,16 @@ const TallyForm = ({ page }) => {
           rightIcon={<ArrowForwardIcon />}
           onClick={onOpen}
         >
-          Connect With Us
+          {t("CONNECT_WITH_US")}
         </Button>
       )}
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent maxWidth={"500px"} bg={"#FCF7F1"}>
           <ModalHeader textAlign="center">
-            Partner with Persistence
+            {t("PARTNER_WITH_PERSISTENCE")}
             <Text fontWeight={"500"} fontSize={"14px"} color={"#423f40cc"}>
-              We&apos;re looking for partners who want to collaborate in
-              creating a powerful ecosystem on Bitcoin.
+              {t("CONTACT_FORM_SUBTEXT")}
             </Text>
           </ModalHeader>
           <ModalCloseButton />
