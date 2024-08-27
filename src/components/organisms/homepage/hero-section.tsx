@@ -130,7 +130,7 @@ const HeroSection = () => {
                 className={"inline-block"}
               >
                 <Button
-                  w={{ base: "100%", md: "193px" }}
+                  minW={{ base: "100%", md: "193px" }}
                   h={"46px"}
                   variant={"primary"}
                   rightIcon={<ArrowForwardIcon />}

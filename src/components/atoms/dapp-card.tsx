@@ -102,13 +102,13 @@ const DappCard = ({
               ))}
             </HStack>
             <Link href={button.link} target="_blank" rel="noopener noreferrer">
-              <Button w={{ base: "100%", md: "182px" }} variant={"primary"}>
+              <Button minW={{ base: "100%", md: "182px" }} variant={"primary"}>
                 {button.text}
               </Button>
             </Link>
           </Box>
           <Box
-            w={{ base: "300px", xl: "515px" }}
+            minW={{ base: "300px", xl: "515px" }}
             display={{ base: "none", md: "block" }}
           >
             <Image

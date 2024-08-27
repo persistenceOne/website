@@ -31,7 +31,7 @@ const TallyForm = ({ page }) => {
     <>
       {page === "home" ? (
         <Button
-          w={{ base: "100%", md: "235px" }}
+          minW={{ base: "100%", md: "235px" }}
           h={"46px"}
           variant={"secondary"}
           color={"#FFFFFF"}
@@ -43,7 +43,7 @@ const TallyForm = ({ page }) => {
       ) : (
         <Button
           color={"#FFFFFF"}
-          w={{ base: "100%", md: "246px" }}
+          minW={{ base: "100%", md: "246px" }}
           h={"52px"}
           variant={"ternary"}
           bg="#1D1306"

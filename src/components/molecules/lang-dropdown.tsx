@@ -6,14 +6,11 @@ import { useParams, useSearchParams } from "next/navigation";
 import {
   Box,
   HStack,
-  Link,
   Popover,
-  PopoverArrow,
   PopoverBody,
   PopoverContent,
   PopoverTrigger,
   Text,
-  useBoolean,
   VStack
 } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
@@ -44,6 +41,21 @@ const langList: LanguageItemProps[] = [
     imgUrl: "/images/lang/kr.png",
     code: "ko",
     name: "한국인"
+  },
+  {
+    imgUrl: "/images/lang/fr.png",
+    code: "fr",
+    name: "Français"
+  },
+  {
+    imgUrl: "/images/lang/es.png",
+    code: "es",
+    name: "Española"
+  },
+  {
+    imgUrl: "/images/lang/pt.png",
+    code: "pt",
+    name: "Portuguesa"
   }
 ];
 
@@ -147,8 +159,9 @@ const LangDropdown = ({ type }: any) => {
       </PopoverTrigger>
       <PopoverContent
         borderRadius={6}
-        w={"131px"}
+        minW={"131px"}
         border={"0px"}
+        w={"max-content"}
         overflow={"hidden"}
       >
         <PopoverBody p={"0"}>
