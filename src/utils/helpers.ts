@@ -34,15 +34,19 @@ export const numberFormat = (number: any, decPlaces: number) => {
 export const addDecimal = (value: string) => {
   const formattedString = numberFormat(Number(value), 2).toString();
   try {
-    const abbrevList = ["K", "M", "M", "T"];
-    const abbrev = abbrevList.find((a) => {
-      formattedString.toLowerCase().includes(a.toLowerCase());
-      return a;
-    });
-    const stringIndex = formattedString.indexOf(abbrev!);
-    const valueWithoutAbbrev = formattedString.substring(0, stringIndex);
-    const valueWithFixedDecimal = Number(valueWithoutAbbrev).toFixed(2);
-    return valueWithFixedDecimal.concat(abbrev!);
+    if (Number(value) > 1000) {
+      const abbrevList = ["K", "M", "M", "T"];
+      const abbrev = abbrevList.find((a) => {
+        formattedString.toLowerCase().includes(a.toLowerCase());
+        return a;
+      });
+      const stringIndex = formattedString.indexOf(abbrev!);
+      const valueWithoutAbbrev = formattedString.substring(0, stringIndex);
+
+      const valueWithFixedDecimal = Number(valueWithoutAbbrev).toFixed(2);
+      return valueWithFixedDecimal.concat(abbrev!);
+    }
+    return Number(value).toFixed(2);
   } catch (e) {
     return formattedString;
   }
