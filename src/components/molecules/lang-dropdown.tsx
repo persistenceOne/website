@@ -56,6 +56,26 @@ const langList: LanguageItemProps[] = [
     imgUrl: "/images/lang/pt.png",
     code: "pt",
     name: "Portuguesa"
+  },
+  {
+    imgUrl: "/images/lang/ru.png",
+    code: "ru",
+    name: "русский"
+  },
+  {
+    imgUrl: "/images/lang/vi.png",
+    code: "vi",
+    name: "Tiếng Việt"
+  },
+  {
+    imgUrl: "/images/lang/nl.png",
+    code: "nl",
+    name: "Nederlands"
+  },
+  {
+    imgUrl: "/images/lang/ja.png",
+    code: "ja",
+    name: "日本語"
   }
 ];
 
