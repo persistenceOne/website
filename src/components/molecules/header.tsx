@@ -22,7 +22,8 @@ import {
   AccordionButton,
   AccordionPanel,
   Button,
-  Link
+  Link,
+  useMediaQuery
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -323,7 +324,7 @@ const Header = () => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
   const menuItems = [
     {
       id: 0,
@@ -570,80 +571,83 @@ const Header = () => {
         my={{ base: "0", md: "32px" }}
         borderRadius={"1000px"}
       >
-        <Flex
-          as={"nav"}
-          justify={"between"}
-          align={"center"}
-          display={{ base: "none", md: "flex" }}
-          className={"navigation-bar"}
-        >
-          <LinkWithLocale href="/">
-            {router.pathname !== "/" ? (
-              <Box
-                width={"236px"}
-                height={"31px"}
-                backgroundSize={"236px"}
-                className={"logo-box logo-dark cursor-pointer"}
-              ></Box>
-            ) : (
-              <Box
-                width={"236px"}
-                height={"31px"}
-                backgroundSize={"236px"}
-                className={"logo-box logo-light"}
-              ></Box>
-            )}
-          </LinkWithLocale>
-          <Spacer />
-          <Stack
-            gap="32px"
-            justify="center"
+        {isMobile ? (
+          <Flex
+            as={"nav"}
+            justify={"space-between"}
             align={"center"}
-            direction={{ base: "column", md: "row" }}
+            className={"navigation-bar"}
+            display={{ base: "flex", md: "none" }}
           >
-            {getMenuList(menuItems, "top-start", "hover", router.pathname)}
-            <LangDropdown type={""} />
-          </Stack>
-        </Flex>
-        <Flex
-          as={"nav"}
-          justify={"space-between"}
-          align={"center"}
-          className={"navigation-bar"}
-          display={{ base: "flex", md: "none" }}
-        >
-          <Box>
+            <Box>
+              <LinkWithLocale href="/">
+                {router.pathname !== "/" || isOpen ? (
+                  <Box
+                    width={"160px"}
+                    height={"31px"}
+                    backgroundSize={"160px"}
+                    className={"logo-box logo-dark cursor-pointer"}
+                  ></Box>
+                ) : (
+                  <Box
+                    width={"160px"}
+                    backgroundSize={"160px"}
+                    height={"31px"}
+                    className={"logo-box logo-light"}
+                  ></Box>
+                )}
+              </LinkWithLocale>
+            </Box>
+            <IconButton
+              size={"md"}
+              width={"40px"}
+              height={"40px"}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={"Open Menu"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              display={{ base: "flex", md: "none" }}
+              border={"0px"}
+              onClick={isOpen ? onClose : onOpen}
+            />
+          </Flex>
+        ) : (
+          <Flex
+            as={"nav"}
+            justify={"between"}
+            align={"center"}
+            display={{ base: "none", md: "flex" }}
+            className={"navigation-bar"}
+          >
             <LinkWithLocale href="/">
-              {router.pathname !== "/" || isOpen ? (
+              {router.pathname !== "/" ? (
                 <Box
-                  width={"160px"}
+                  width={"236px"}
                   height={"31px"}
-                  backgroundSize={"160px"}
+                  backgroundSize={"236px"}
                   className={"logo-box logo-dark cursor-pointer"}
                 ></Box>
               ) : (
                 <Box
-                  width={"160px"}
-                  backgroundSize={"160px"}
+                  width={"236px"}
                   height={"31px"}
+                  backgroundSize={"236px"}
                   className={"logo-box logo-light"}
                 ></Box>
               )}
             </LinkWithLocale>
-          </Box>
-          <IconButton
-            size={"md"}
-            width={"40px"}
-            height={"40px"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            display={{ base: "flex", md: "none" }}
-            border={"0px"}
-            onClick={isOpen ? onClose : onOpen}
-          />
-        </Flex>
+            <Spacer />
+            <Stack
+              gap="32px"
+              justify="center"
+              align={"center"}
+              direction={{ base: "column", md: "row" }}
+            >
+              {getMenuList(menuItems, "top-start", "hover", router.pathname)}
+              <LangDropdown type={""} />
+            </Stack>
+          </Flex>
+        )}
         {isOpen ? getMenuListMobile(menuItems, onClose, router.pathname) : null}
       </Container>
     </Box>
