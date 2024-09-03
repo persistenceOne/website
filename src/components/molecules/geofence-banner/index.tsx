@@ -13,7 +13,7 @@ const GeofenceNotice = () => {
   return (
     <Box
       display={!banner ? "none" : "block"}
-      bg={"#E59636"}
+      bg={"#e59735cc"}
       pr={12}
       py={2.5}
       pl={4}
@@ -23,6 +23,7 @@ const GeofenceNotice = () => {
       <Box display={"flex"} justifyContent={"center"}>
         <Text
           display={"flex"}
+          flexDir={{ base: "column", md: "row" }}
           alignItems={"center"}
           color={"#fff"}
           fontSize={"14px"}

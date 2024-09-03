@@ -45,7 +45,7 @@ const HeroSection = () => {
         pos={"relative"}
         display={"flex"}
         zIndex={10}
-        pt={"122px"}
+        pt={{ base: "200px", md: "122px" }}
         maxW={"1440px"}
         mx={"auto"}
       >
@@ -94,7 +94,7 @@ const HeroSection = () => {
               textAlign={"left"}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
               fontSize={{ md: "26px", base: "30px", lg: "52px" }}
-              lineHeight={{ md: "44px", base: "50px", lg: "70px" }}
+              lineHeight={{ md: "44px", base: "42px", lg: "70px" }}
               mb={{ base: "20px", lg: "12px" }}
             >
               <Text

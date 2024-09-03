@@ -256,6 +256,7 @@ const getMenuList = (
                 </HStack>
               ) : (
                 <LinkWithLocale
+                  aria-label={subItem.title}
                   href={subItem.link}
                   key={subItem.title}
                   width={"100%"}
@@ -577,7 +578,7 @@ const Header = () => {
           display={{ base: "none", md: "flex" }}
           className={"navigation-bar"}
         >
-          <LinkWithLocale href="/">
+          <LinkWithLocale href="/" aria-label="Logo">
             {router.pathname !== "/" ? (
               <Box
                 width={"236px"}
