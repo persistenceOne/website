@@ -23,7 +23,8 @@ const GeofenceNotice = () => {
       <Box display={"flex"} justifyContent={"center"}>
         <Text
           display={"flex"}
-          alignItems={"center"}
+          flexDirection={{ base: "column", md: "row" }}
+          alignItems={{ base: "start", md: "center" }}
           color={"#fff"}
           fontSize={"14px"}
           fontWeight={500}
