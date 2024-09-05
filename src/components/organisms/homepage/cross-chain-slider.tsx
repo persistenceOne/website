@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Slide1 from "../../../../public/images/lotties/swap.json";
 import Slide2 from "../../../../public/images/lotties/bridge.json";
@@ -13,45 +12,84 @@ import "swiper/css/autoplay";
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import Image from "next/image";
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  Text,
+  useMediaQuery,
+  Image
+} from "@chakra-ui/react";
 import LottieAnimation from "@/components/molecules/lottie-container";
 import { useTranslation } from "next-export-i18n";
 
 const CrossChainSlider = () => {
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
   const { t } = useTranslation();
   const list = [
     {
       title: t("HOME_SECTION2_SLIDE1"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: isMobile ? (
+        <LottieAnimation lottie={Slide1} />
+      ) : (
+        <LottieAnimation lottie={Slide1} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide2} />
+      imageUrl: isMobile ? (
+        <LottieAnimation lottie={Slide1} />
+      ) : (
+        <LottieAnimation lottie={Slide2} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide3} />
+      imageUrl: isMobile ? (
+        <LottieAnimation lottie={Slide1} />
+      ) : (
+        <LottieAnimation lottie={Slide3} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide4} />
+      imageUrl: isMobile ? (
+        <LottieAnimation lottie={Slide1} />
+      ) : (
+        <LottieAnimation lottie={Slide4} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide5} />
+      imageUrl: isMobile ? (
+        <LottieAnimation lottie={Slide1} />
+      ) : (
+        <LottieAnimation lottie={Slide5} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide6} />
+      imageUrl: isMobile ? (
+        // <Image
+        //   loading={"lazy"}
+        //   src={"/images/home-page/static-slider/trade.svg"}
+        //   alt={"trade"}
+        //   width={"100%"}
+        //   height={"auto"}
+        // />
+        <LottieAnimation lottie={Slide1} />
+      ) : (
+        <LottieAnimation lottie={Slide6} />
+      )
     }
   ];
+
   return (
     <Box bg={"#FCF7F1"} pos={"relative"} zIndex={10} mt={"80pz"}>
       <Container

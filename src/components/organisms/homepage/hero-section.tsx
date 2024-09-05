@@ -36,7 +36,7 @@ const HeroSection = () => {
           "2xl": "800px"
         }}
         height={{
-          base: "90vh", // 0-48em
+          base: "100vh", // 0-48em
           md: "70vh", // 48em-80em,
           lg: "70vh", // 48em-80em,
           xl: "100vh", // 80em+
@@ -95,7 +95,7 @@ const HeroSection = () => {
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
               fontSize={{ md: "26px", base: "30px", lg: "52px" }}
               lineHeight={{ md: "44px", base: "50px", lg: "70px" }}
-              mb={{ base: "20px", lg: "12px" }}
+              mb={{ base: "30px", lg: "12px" }}
             >
               <Text
                 as="span"
@@ -111,7 +111,7 @@ const HeroSection = () => {
             <Text
               textAlign={"left"}
               maxW={{ base: "400px", xl: "580px" }}
-              mb={{ base: "32px", lg: "29px" }}
+              mb={{ base: "42px", lg: "29px" }}
               color={"#FFFFFFCC"}
               fontSize={{ base: "16px", xl: "26px" }}
               lineHeight={{ base: "28px", xl: "39px" }}

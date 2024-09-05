@@ -25,7 +25,6 @@ const TallyForm = ({ page }) => {
     setLoaded(false);
   }, []);
 
-  console.log(page, "pagepage");
   // @ts-ignore
   return (
     <>
