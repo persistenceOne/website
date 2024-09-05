@@ -6,7 +6,6 @@ interface Props {
   lottie: any;
 }
 const LottieAnimation = ({ lottie }: Props) => {
-  const [isMobile] = useMediaQuery("(max-width: 500px)");
   const [isHovered, setIsHovered] = useState(false);
   const defaultOptions = {
     loop: true,
@@ -17,11 +16,7 @@ const LottieAnimation = ({ lottie }: Props) => {
     }
   };
 
-  return isMobile ? (
-    <Box>
-      <Image src={lottie} alt={lottie} width={"281"} height={"281"} />
-    </Box>
-  ) : (
+  return (
     <Box
       overflow={{ base: "visible", md: "hidden" }}
       position="relative"

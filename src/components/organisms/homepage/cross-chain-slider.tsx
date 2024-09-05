@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Slide1 from "../../../../public/images/lotties/swap.json";
 import Slide2 from "../../../../public/images/lotties/bridge.json";
@@ -32,13 +31,7 @@ const CrossChainSlider = () => {
       title: t("HOME_SECTION2_SLIDE1"),
       content: ``,
       imageUrl: isMobile ? (
-        <Image
-          loading={"lazy"}
-          src={"/images/home-page/static-slider/swap.svg"}
-          alt={"swap"}
-          width={"100%"}
-          height={"auto"}
-        />
+        <LottieAnimation lottie={Slide1} />
       ) : (
         <LottieAnimation lottie={Slide1} />
       )
@@ -47,13 +40,7 @@ const CrossChainSlider = () => {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
       imageUrl: isMobile ? (
-        <Image
-          loading={"lazy"}
-          src={"/images/home-page/static-slider/bridge.svg"}
-          alt={"bridge"}
-          width={"100%"}
-          height={"auto"}
-        />
+        <LottieAnimation lottie={Slide1} />
       ) : (
         <LottieAnimation lottie={Slide2} />
       )
@@ -62,13 +49,7 @@ const CrossChainSlider = () => {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
       imageUrl: isMobile ? (
-        <Image
-          loading={"lazy"}
-          src={"/images/home-page/static-slider/speed.svg"}
-          alt={"speed"}
-          width={"100%"}
-          height={"auto"}
-        />
+        <LottieAnimation lottie={Slide1} />
       ) : (
         <LottieAnimation lottie={Slide3} />
       )
@@ -77,13 +58,7 @@ const CrossChainSlider = () => {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
       imageUrl: isMobile ? (
-        <Image
-          loading={"lazy"}
-          src={"/images/home-page/static-slider/secured.svg"}
-          alt={"secure"}
-          width={"100%"}
-          height={"auto"}
-        />
+        <LottieAnimation lottie={Slide1} />
       ) : (
         <LottieAnimation lottie={Slide4} />
       )
@@ -92,13 +67,7 @@ const CrossChainSlider = () => {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
       imageUrl: isMobile ? (
-        <Image
-          loading={"lazy"}
-          src={"/images/home-page/static-slider/scalable.svg"}
-          alt={"scalable"}
-          width={"100%"}
-          height={"auto"}
-        />
+        <LottieAnimation lottie={Slide1} />
       ) : (
         <LottieAnimation lottie={Slide5} />
       )
@@ -107,13 +76,14 @@ const CrossChainSlider = () => {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
       imageUrl: isMobile ? (
-        <Image
-          loading={"lazy"}
-          src={"/images/home-page/static-slider/trade.svg"}
-          alt={"trade"}
-          width={"100%"}
-          height={"auto"}
-        />
+        // <Image
+        //   loading={"lazy"}
+        //   src={"/images/home-page/static-slider/trade.svg"}
+        //   alt={"trade"}
+        //   width={"100%"}
+        //   height={"auto"}
+        // />
+        <LottieAnimation lottie={Slide1} />
       ) : (
         <LottieAnimation lottie={Slide6} />
       )
@@ -144,14 +114,14 @@ const CrossChainSlider = () => {
           speed={1500}
           centeredSlides={true}
           loop={true}
-          // autoplay={{
-          //   delay: 1500,
-          //   duration: 1500,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: false,
-          //   waitForTransition: true,
-          //   reverseDirection: false
-          // }}
+          autoplay={{
+            delay: 1500,
+            duration: 1500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            waitForTransition: true,
+            reverseDirection: false
+          }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 1.5, spaceBetween: 15 },
