@@ -86,26 +86,27 @@ const HeroSection = () => {
             }}
             flexDir={"column"}
           >
-            <Heading
+            <Text
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
+              fontWeight={700}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
-              fontSize={{ md: "26px", base: "30px", lg: "52px" }}
-              lineHeight={{ md: "44px", base: "50px", lg: "70px" }}
+              fontSize={{ base: "28px", md: "26px", lg: "52px" }}
+              lineHeight={{ base: "40px", md: "44px", lg: "70px" }}
               mb={{ base: "30px", lg: "12px" }}
             >
               <Text
                 as="span"
                 color={"#E59636"}
-                fontSize={{ md: "26px", base: "38px", lg: "72px" }}
-                lineHeight={{ md: "40px", base: "50px", lg: "86px" }}
+                fontSize={{ base: "36px", md: "26px", lg: "72px" }}
+                lineHeight={{ base: "48px", md: "40px", lg: "86px" }}
               >
                 {t("HOME_PAGE_HERO_TITLE1")}
               </Text>
               <br />
               {t("HOME_PAGE_HERO_TITLE2")}
-            </Heading>
+            </Text>
             <Text
               textAlign={"left"}
               maxW={{ base: "400px", xl: "580px" }}
