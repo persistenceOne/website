@@ -47,30 +47,6 @@ const langList: LanguageItemProps[] = [
   }
 ];
 
-export const learnDropDownContent = (learnList: any[]) => {
-  return (
-    <div className={"!bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2"}>
-      {learnList.map((item, index) => (
-        <LanguageSwitcher lang={item.code} key={index}>
-          <div
-            className="px-6 md:px-3 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap group"
-          >
-            <Image src={item.imgUrl} alt={"dd"} width={24} height={24} />
-            <span
-              className="ml-4 text-light-high text-base md:text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
-            >
-              {item.name}
-              <span className={"ml-1"}>({item.code})</span>
-            </span>
-          </div>
-        </LanguageSwitcher>
-      ))}
-    </div>
-  );
-};
-
 const LangDropdown = ({ type }: any) => {
   const defaultItem = langList.find((item) => item.code === "en");
   const router = useRouter();
@@ -81,9 +57,7 @@ const LangDropdown = ({ type }: any) => {
   const selectedLang = langList.find((item) => item.code === search);
 
   const activeLang = selectedLang === undefined ? defaultItem : selectedLang;
-  console.log(activeLang, search, "activeLang", router.pathname);
 
-  console.log(isEditing, "isEditing");
   return (
     <Popover
       placement={type === "mobile" ? "top-start" : "bottom-end"}
@@ -154,7 +128,7 @@ const LangDropdown = ({ type }: any) => {
         <PopoverBody p={"0"}>
           <VStack align={"start"} gap={0}>
             {langList.map((subItem: any) => (
-              <LanguageSwitcher key={subItem.title} lang={subItem.code}>
+              <LanguageSwitcher key={subItem.code} lang={subItem.code}>
                 <Box
                   width={"100%"}
                   textDecoration={"none"}

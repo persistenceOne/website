@@ -11,8 +11,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
-import Script from "next/script";
-import { ANALYTICS } from "@/utils/config";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GeofenceNotice from "@/components/molecules/geofence-banner";
@@ -37,24 +35,6 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
-      />
-      {/* eslint-disable-next-line @next/next/inline-script-id */}
-      <Script
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `
-        }}
-      />
       <ChakraProvider theme={theme}>
         <Head>
           <meta charSet="utf-8" />
