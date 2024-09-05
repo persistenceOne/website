@@ -13,8 +13,6 @@ import {
   Flex
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
-import Slider from "react-slick";
-import Link from "next/link";
 import { useTranslation } from "next-export-i18n";
 
 const resourcesList: BlogCardInterface[] = [
