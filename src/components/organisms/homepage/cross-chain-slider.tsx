@@ -1,6 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Slide1 from "../../../../public/images/lotties/swap.json";
+import Slide2 from "../../../../public/images/lotties/bridge.json";
+import Slide3 from "../../../../public/images/lotties/fast.json";
+import Slide4 from "../../../../public/images/lotties/secured.json";
+import Slide5 from "../../../../public/images/lotties/scalable.json";
+import Slide6 from "../../../../public/images/lotties/trade.json";
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -29,27 +34,27 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: <LottieAnimation lottie={Slide2} />
     },
     {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: <LottieAnimation lottie={Slide3} />
     },
     {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: <LottieAnimation lottie={Slide4} />
     },
     {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: <LottieAnimation lottie={Slide5} />
     },
     {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: <LottieAnimation lottie={Slide6} />
     }
   ];
 

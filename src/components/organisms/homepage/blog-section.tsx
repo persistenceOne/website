@@ -1,16 +1,10 @@
 import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
-import Icon from "@/components/molecules/Icon";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Button,
   HStack,
   Heading,
-  Text,
-  VStack,
   Container,
-  useMediaQuery,
-  Flex
+  useMediaQuery
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useTranslation } from "next-export-i18n";

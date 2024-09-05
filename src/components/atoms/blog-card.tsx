@@ -1,13 +1,5 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import {
-  Button,
-  Card,
-  CardBody,
-  Img,
-  CardFooter,
-  Box,
-  Link
-} from "@chakra-ui/react";
+import { Button, Card, Img, CardFooter, Box, Link } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 
