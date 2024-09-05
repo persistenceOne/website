@@ -18,12 +18,12 @@ export default function Document() {
         <Main />
         <NextScript />
         <Script
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
         />
         {/* eslint-disable-next-line @next/next/inline-script-id */}
         <Script
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
