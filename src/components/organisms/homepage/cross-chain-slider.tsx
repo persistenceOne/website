@@ -29,32 +29,92 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE1"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/swap.svg"}
+          alt={"trade"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide1} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide2} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/bridge.svg"}
+          alt={"trade"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide2} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide3} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/speed.svg"}
+          alt={"trade"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide3} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide4} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/secured.svg"}
+          alt={"trade"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide4} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide5} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/scalable.svg"}
+          alt={"trade"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide5} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide6} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/trade.svg"}
+          alt={"trade"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide6} />
+      )
     }
   ];
 
