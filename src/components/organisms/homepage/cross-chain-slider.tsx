@@ -33,6 +33,7 @@ const CrossChainSlider = () => {
       content: ``,
       imageUrl: isMobile ? (
         <Image
+          loading={"lazy"}
           src={"/images/home-page/static-slider/swap.svg"}
           alt={"swap"}
           width={"100%"}
@@ -47,6 +48,7 @@ const CrossChainSlider = () => {
       content: ``,
       imageUrl: isMobile ? (
         <Image
+          loading={"lazy"}
           src={"/images/home-page/static-slider/bridge.svg"}
           alt={"bridge"}
           width={"100%"}
@@ -61,6 +63,7 @@ const CrossChainSlider = () => {
       content: ``,
       imageUrl: isMobile ? (
         <Image
+          loading={"lazy"}
           src={"/images/home-page/static-slider/speed.svg"}
           alt={"speed"}
           width={"100%"}
@@ -75,6 +78,7 @@ const CrossChainSlider = () => {
       content: ``,
       imageUrl: isMobile ? (
         <Image
+          loading={"lazy"}
           src={"/images/home-page/static-slider/secured.svg"}
           alt={"secure"}
           width={"100%"}
@@ -89,6 +93,7 @@ const CrossChainSlider = () => {
       content: ``,
       imageUrl: isMobile ? (
         <Image
+          loading={"lazy"}
           src={"/images/home-page/static-slider/scalable.svg"}
           alt={"scalable"}
           width={"100%"}
@@ -103,6 +108,7 @@ const CrossChainSlider = () => {
       content: ``,
       imageUrl: isMobile ? (
         <Image
+          loading={"lazy"}
           src={"/images/home-page/static-slider/trade.svg"}
           alt={"trade"}
           width={"100%"}
