@@ -1,12 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Slide1 from "../../../../public/images/lotties/swap.json";
-import Slide2 from "../../../../public/images/lotties/bridge.json";
-import Slide3 from "../../../../public/images/lotties/fast.json";
-import Slide4 from "../../../../public/images/lotties/secured.json";
-import Slide5 from "../../../../public/images/lotties/scalable.json";
-import Slide6 from "../../../../public/images/lotties/trade.json";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -30,63 +24,32 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE1"),
       content: ``,
-      imageUrl: isMobile ? (
-        <LottieAnimation lottie={Slide1} />
-      ) : (
-        <LottieAnimation lottie={Slide1} />
-      )
+      imageUrl: <LottieAnimation lottie={Slide1} />
     },
     {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
-      imageUrl: isMobile ? (
-        <LottieAnimation lottie={Slide1} />
-      ) : (
-        <LottieAnimation lottie={Slide2} />
-      )
+      imageUrl: <LottieAnimation lottie={Slide1} />
     },
     {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
-      imageUrl: isMobile ? (
-        <LottieAnimation lottie={Slide1} />
-      ) : (
-        <LottieAnimation lottie={Slide3} />
-      )
+      imageUrl: <LottieAnimation lottie={Slide1} />
     },
     {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
-      imageUrl: isMobile ? (
-        <LottieAnimation lottie={Slide1} />
-      ) : (
-        <LottieAnimation lottie={Slide4} />
-      )
+      imageUrl: <LottieAnimation lottie={Slide1} />
     },
     {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
-      imageUrl: isMobile ? (
-        <LottieAnimation lottie={Slide1} />
-      ) : (
-        <LottieAnimation lottie={Slide5} />
-      )
+      imageUrl: <LottieAnimation lottie={Slide1} />
     },
     {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
-      imageUrl: isMobile ? (
-        // <Image
-        //   loading={"lazy"}
-        //   src={"/images/home-page/static-slider/trade.svg"}
-        //   alt={"trade"}
-        //   width={"100%"}
-        //   height={"auto"}
-        // />
-        <LottieAnimation lottie={Slide1} />
-      ) : (
-        <LottieAnimation lottie={Slide6} />
-      )
+      imageUrl: <LottieAnimation lottie={Slide1} />
     }
   ];
 
