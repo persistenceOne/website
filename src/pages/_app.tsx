@@ -13,7 +13,6 @@ import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import GeofenceNotice from "@/components/molecules/geofence-banner";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -99,7 +98,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
         </Head>
         <Box pos={"fixed"} width="100%" zIndex="sticky">
-          <GeofenceNotice />
+          {/*<GeofenceNotice />*/}
           <Header />
         </Box>
         <Component {...pageProps} />
