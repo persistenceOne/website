@@ -55,26 +55,6 @@ const HeroSection = () => {
           pb={{ base: "80px", md: "0px" }}
           display="flex"
         >
-          {isTablet ? (
-            <Box
-              display={{ base: "none", md: "block" }}
-              pos={"absolute"}
-              top={"0"}
-              left={"0"}
-              right={"0"}
-              height={"100%"}
-              // mt={"48px"}
-            >
-              <video
-                autoPlay={true}
-                preload="auto"
-                muted={true}
-                loop={true}
-                src="/images/home-page/hero.mp4"
-                className="bg-video"
-              />
-            </Box>
-          ) : null}
           <Box
             zIndex={10}
             position={"relative"}
@@ -140,6 +120,26 @@ const HeroSection = () => {
               <TallyForm page={"home"} />
             </Stack>
           </Box>
+          {isTablet ? (
+            <Box
+              display={{ base: "none", md: "block" }}
+              pos={"absolute"}
+              top={"0"}
+              left={"0"}
+              right={"0"}
+              height={"100%"}
+              // mt={"48px"}
+            >
+              <video
+                autoPlay={true}
+                preload="auto"
+                muted={true}
+                loop={true}
+                src="/images/home-page/hero.mp4"
+                className="bg-video"
+              />
+            </Box>
+          ) : null}
         </Box>
       </Box>
     </Box>

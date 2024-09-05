@@ -7,24 +7,16 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  ModalFooter,
   Text
 } from "@chakra-ui/react";
 import Script from "next/script";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { useTranslation } from "next-export-i18n";
 
 const TallyForm = ({ page }) => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [loaded, setLoaded] = useState(true);
-
-  useEffect(() => {
-    setLoaded(false);
-  }, []);
-
   // @ts-ignore
   return (
     <>
@@ -62,31 +54,33 @@ const TallyForm = ({ page }) => {
           {t("CONNECT_WITH_US")}
         </Button>
       )}
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent maxWidth={"500px"} bg={"#FCF7F1"}>
-          <ModalHeader textAlign="center">
-            {t("PARTNER_WITH_PERSISTENCE")}
-            <Text fontWeight={"500"} fontSize={"14px"} color={"#423f40cc"}>
-              {t("CONTACT_FORM_SUBTEXT")}
-            </Text>
-          </ModalHeader>
-          <ModalCloseButton />
-          <ModalBody className="tally-form">
-            <iframe
-              data-tally-src="https://tally.so/embed/mBB5pK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              loading="lazy"
-              width="100%"
-              title="Newsletter subscribers"
-            ></iframe>
-            <Script
-              // @ts-ignore
-              src={"https://tally.so/widgets/embed.js"}
-              onReady={() => Tally.loadEmbeds()}
-            />
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+      {isOpen ? (
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent maxWidth={"500px"} bg={"#FCF7F1"}>
+            <ModalHeader textAlign="center">
+              {t("PARTNER_WITH_PERSISTENCE")}
+              <Text fontWeight={"500"} fontSize={"14px"} color={"#423f40cc"}>
+                {t("CONTACT_FORM_SUBTEXT")}
+              </Text>
+            </ModalHeader>
+            <ModalCloseButton />
+            <ModalBody className="tally-form">
+              <iframe
+                data-tally-src="https://tally.so/embed/mBB5pK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                title="Newsletter subscribers"
+              ></iframe>
+              <Script
+                // @ts-ignore
+                src={"https://tally.so/widgets/embed.js"}
+                onReady={() => Tally.loadEmbeds()}
+              />
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      ) : null}
     </>
   );
 };
