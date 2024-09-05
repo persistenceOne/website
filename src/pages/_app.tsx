@@ -7,8 +7,6 @@ import theme from "@/styles/theme";
 import { Box } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Header from "@/components/molecules/header";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
 import AOS from "aos";

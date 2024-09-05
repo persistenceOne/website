@@ -9,8 +9,6 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
-import { useAppStore } from "@/store/store";
-import { shallow } from "zustand/shallow";
 import TallyForm from "@/components/molecules/tally-form";
 import { useTranslation } from "next-export-i18n";
 
