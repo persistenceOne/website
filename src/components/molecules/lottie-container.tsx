@@ -1,39 +1,13 @@
 import React, { useState } from "react";
 import Lottie from "react-lottie";
-import Slide1 from "../../../public/images/lotties/swap.json";
-import Slide2 from "../../../public/images/lotties/bridge.json";
-import Slide3 from "../../../public/images/lotties/fast.json";
-import Slide4 from "../../../public/images/lotties/secured.json";
-import Slide5 from "../../../public/images/lotties/scalable.json";
-import Slide6 from "../../../public/images/lotties/trade.json";
-import { Box } from "@chakra-ui/react";
+import { Box, Image, useMediaQuery } from "@chakra-ui/react";
 
 interface Props {
   lottie: any;
 }
 const LottieAnimation = ({ lottie }: Props) => {
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
   const [isHovered, setIsHovered] = useState(false);
-
-  const List = [
-    {
-      lottie: Slide1
-    },
-    {
-      lottie: Slide2
-    },
-    {
-      lottie: Slide3
-    },
-    {
-      lottie: Slide4
-    },
-    {
-      lottie: Slide5
-    },
-    {
-      lottie: Slide6
-    }
-  ];
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -43,7 +17,11 @@ const LottieAnimation = ({ lottie }: Props) => {
     }
   };
 
-  return (
+  return isMobile ? (
+    <Box>
+      <Image src={lottie} alt={lottie} width={"281"} height={"281"} />
+    </Box>
+  ) : (
     <Box
       overflow={{ base: "visible", md: "hidden" }}
       position="relative"

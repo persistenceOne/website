@@ -13,45 +13,107 @@ import "swiper/css/autoplay";
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import Image from "next/image";
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  Text,
+  useMediaQuery,
+  Image
+} from "@chakra-ui/react";
 import LottieAnimation from "@/components/molecules/lottie-container";
 import { useTranslation } from "next-export-i18n";
 
 const CrossChainSlider = () => {
+  const [isMobile] = useMediaQuery("(max-width: 500px)");
   const { t } = useTranslation();
   const list = [
     {
       title: t("HOME_SECTION2_SLIDE1"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: isMobile ? (
+        <Image
+          src={"/images/home-page/static-slider/swap.svg"}
+          alt={"swap"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide1} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide2} />
+      imageUrl: isMobile ? (
+        <Image
+          src={"/images/home-page/static-slider/bridge.svg"}
+          alt={"bridge"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide2} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide3} />
+      imageUrl: isMobile ? (
+        <Image
+          src={"/images/home-page/static-slider/speed.svg"}
+          alt={"speed"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide3} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide4} />
+      imageUrl: isMobile ? (
+        <Image
+          src={"/images/home-page/static-slider/secured.svg"}
+          alt={"secure"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide4} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide5} />
+      imageUrl: isMobile ? (
+        <Image
+          src={"/images/home-page/static-slider/scalable.svg"}
+          alt={"scalable"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide5} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide6} />
+      imageUrl: isMobile ? (
+        <Image
+          src={"/images/home-page/static-slider/trade.svg"}
+          alt={"trade"}
+          width={"100%"}
+          height={"auto"}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide6} />
+      )
     }
   ];
+
   return (
     <Box bg={"#FCF7F1"} pos={"relative"} zIndex={10} mt={"80pz"}>
       <Container
@@ -76,14 +138,14 @@ const CrossChainSlider = () => {
           speed={1500}
           centeredSlides={true}
           loop={true}
-          autoplay={{
-            delay: 1500,
-            duration: 1500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            waitForTransition: true,
-            reverseDirection: false
-          }}
+          // autoplay={{
+          //   delay: 1500,
+          //   duration: 1500,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: false,
+          //   waitForTransition: true,
+          //   reverseDirection: false
+          // }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 1.5, spaceBetween: 15 },
