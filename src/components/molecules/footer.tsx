@@ -9,11 +9,9 @@ import {
   Text,
   VStack,
   Container,
-  Stack,
   SimpleGrid
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import Icon from "./Icon";
 import { useTranslation, LinkWithLocale } from "next-export-i18n";

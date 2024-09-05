@@ -1,11 +1,5 @@
 import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
-import {
-  Box,
-  HStack,
-  Heading,
-  Container,
-  useMediaQuery
-} from "@chakra-ui/react";
+import { Box, HStack, Heading, Container } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useTranslation } from "next-export-i18n";
 
@@ -41,15 +35,6 @@ const resourcesList: BlogCardInterface[] = [
 
 const BlogSection = () => {
   const { t } = useTranslation();
-  const [isMobile] = useMediaQuery("(max-width: 500px)");
-  const [isLandScape] = useMediaQuery("(max-width: 990px)");
-  let sliderRef: any = useRef(null);
-  const next = () => {
-    sliderRef.slickNext();
-  };
-  const previous = () => {
-    sliderRef.slickPrev();
-  };
   return (
     <Box bg={"#FCF7F1"}>
       <Container

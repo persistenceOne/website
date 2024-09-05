@@ -9,7 +9,6 @@ const StoryPage = () => {
   return (
     <Box>
       <HeroSection />
-      {/*<QuoteSection />*/}
       <VisionSection />
       <Belief />
       <CommunitySection />

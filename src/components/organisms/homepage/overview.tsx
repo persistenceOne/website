@@ -1,5 +1,5 @@
 import FeatureCards from "@/components/molecules/feature-cards";
-import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Heading } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 

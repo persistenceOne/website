@@ -33,15 +33,6 @@ const BlogCard = ({
       >
         <Box>
           <Card w="full" h="100%" borderRadius={20} my={1}>
-            {/*<Box*/}
-            {/*  bgImage={`url(${resourceImage})`}*/}
-            {/*  w={width}*/}
-            {/*  h="200px"*/}
-            {/*  bgPosition="center"*/}
-            {/*  borderTopLeftRadius={20}*/}
-            {/*  borderTopRightRadius={20}*/}
-            {/*  bgSize="cover"*/}
-            {/*/>*/}
             <Box>
               <Img
                 loading={"lazy"}
@@ -53,7 +44,6 @@ const BlogCard = ({
                 alt={"Persistence Logo"}
               />
             </Box>
-
             {/* <Image src={resourceImage} alt="" layout="fill" objectFit="cover" /> */}
             <CardFooter my={-4}>
               <Button
