@@ -8,7 +8,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Box pos={"fixed"} width="100%" zIndex="sticky">
         <GeofenceNotice />
-        {/*<Header />*/}
       </Box>
       {children}
       <Footer />
