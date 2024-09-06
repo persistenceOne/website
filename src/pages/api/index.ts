@@ -307,19 +307,6 @@ export const getMarketCap = async () => {
   }
 };
 
-export const getBlockNumber = async () => {
-  try {
-    const res = await axios.get(LATEST_BLOCK_HEIGHT_URL);
-    if (res && res.data) {
-      console.log(res, "res-block-height");
-      return res!.data!.block!.header.height;
-    }
-    return 0;
-  } catch (e) {
-    return 0;
-  }
-};
-
 export const getBondedTokens = async () => {
   try {
     const responses = await axios.all([
