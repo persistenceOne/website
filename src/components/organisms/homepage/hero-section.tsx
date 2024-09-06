@@ -4,13 +4,19 @@ import {
   Heading,
   Text,
   Stack,
-  useMediaQuery
+  useMediaQuery,
+  Spinner
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
-import TallyForm from "@/components/molecules/tally-form";
 import { useTranslation } from "next-export-i18n";
+import dynamic from "next/dynamic";
+
+const TallyForm = dynamic(() => import("@/components/molecules/tally-form"), {
+  ssr: false,
+  loading: () => <Spinner />
+});
 
 const HeroSection = () => {
   const { t } = useTranslation();
