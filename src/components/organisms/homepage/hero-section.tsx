@@ -14,8 +14,7 @@ import { useTranslation } from "next-export-i18n";
 import dynamic from "next/dynamic";
 
 const TallyForm = dynamic(() => import("@/components/molecules/tally-form"), {
-  ssr: false,
-  loading: () => <Spinner />
+  ssr: false
 });
 
 const HeroSection = () => {
