@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, useMediaQuery } from "@chakra-ui/react";
 import GeofenceNotice from "@/components/molecules/geofence-banner";
+import Footer from "@/components/molecules/footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,7 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {/*<Header />*/}
       </Box>
       {children}
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 };
