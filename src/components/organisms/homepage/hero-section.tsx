@@ -82,9 +82,8 @@ const HeroSection = () => {
                 lineHeight={{ base: "48px", md: "40px", lg: "86px" }}
               >
                 {t("HOME_PAGE_HERO_TITLE1")}
+                {t("HOME_PAGE_HERO_TITLE2")}
               </Text>
-              <br />
-              {t("HOME_PAGE_HERO_TITLE2")}
             </Text>
             <Text
               textAlign={"left"}
@@ -119,26 +118,6 @@ const HeroSection = () => {
               {/*<TallyForm page={"home"} />*/}
             </Stack>
           </Box>
-          {isTablet ? (
-            <Box
-              display={{ base: "none", md: "block" }}
-              pos={"absolute"}
-              top={"0"}
-              left={"0"}
-              right={"0"}
-              height={"100%"}
-              // mt={"48px"}
-            >
-              <video
-                autoPlay={true}
-                preload="auto"
-                muted={true}
-                loop={true}
-                src="/images/home-page/hero.mp4"
-                className="bg-video"
-              />
-            </Box>
-          ) : null}
         </Box>
       </Box>
     </Box>
