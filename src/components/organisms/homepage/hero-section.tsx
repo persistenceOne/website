@@ -9,6 +9,7 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
+import TallyForm from "@/components/molecules/tally-form";
 import { useTranslation } from "next-export-i18n";
 
 const HeroSection = () => {
@@ -82,8 +83,9 @@ const HeroSection = () => {
                 lineHeight={{ base: "48px", md: "40px", lg: "86px" }}
               >
                 {t("HOME_PAGE_HERO_TITLE1")}
-                {t("HOME_PAGE_HERO_TITLE2")}
               </Text>
+              <br />
+              {t("HOME_PAGE_HERO_TITLE2")}
             </Text>
             <Text
               textAlign={"left"}
@@ -115,9 +117,29 @@ const HeroSection = () => {
                   {t("LEARN_MORE")}
                 </Button>
               </Link>
-              {/*<TallyForm page={"home"} />*/}
+              <TallyForm page={"home"} />
             </Stack>
           </Box>
+          {isTablet ? (
+            <Box
+              display={{ base: "none", md: "block" }}
+              pos={"absolute"}
+              top={"0"}
+              left={"0"}
+              right={"0"}
+              height={"100%"}
+              // mt={"48px"}
+            >
+              <video
+                autoPlay={true}
+                preload="auto"
+                muted={true}
+                loop={true}
+                src="/images/home-page/hero.mp4"
+                className="bg-video"
+              />
+            </Box>
+          ) : null}
         </Box>
       </Box>
     </Box>
