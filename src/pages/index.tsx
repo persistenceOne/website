@@ -10,25 +10,25 @@ const CrossChainSlider = dynamic(
   () => import("@/components/organisms/homepage/cross-chain-slider")
 );
 
-const Overview = dynamic(
-  () => import("@/components/organisms/homepage/overview")
-);
-const DappsSection = dynamic(
-  () => import("@/components/organisms/homepage/dapps-section")
-);
-
-const BlogSection = dynamic(
-  () => import("@/components/organisms/homepage/blog-section")
-);
+// const Overview = dynamic(
+//   () => import("@/components/organisms/homepage/overview")
+// );
+// const DappsSection = dynamic(
+//   () => import("@/components/organisms/homepage/dapps-section")
+// );
+//
+// const BlogSection = dynamic(
+//   () => import("@/components/organisms/homepage/blog-section")
+// );
 
 const HomePage = () => {
   return (
     <Box>
       <HeroSection />
       <CrossChainSlider />
-      <Overview />
-      <DappsSection />
-      <BlogSection />
+      {/*<Overview />*/}
+      {/*<DappsSection />*/}
+      {/*<BlogSection />*/}
     </Box>
   );
 };
