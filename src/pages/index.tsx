@@ -7,9 +7,9 @@ const HeroSection = dynamic(
   () => import("@/components/organisms/homepage/hero-section")
 );
 
-// const CrossChainSlider = dynamic(
-//   () => import("@/components/organisms/homepage/cross-chain-slider")
-// );
+const CrossChainSlider = dynamic(
+  () => import("@/components/organisms/homepage/cross-chain-slider")
+);
 //
 // const Overview = dynamic(
 //   () => import("@/components/organisms/homepage/overview")
@@ -27,7 +27,7 @@ const HomePage = () => {
     <Layout>
       <Box>
         <HeroSection />
-        {/*<CrossChainSlider />*/}
+        <CrossChainSlider />
         {/*<Overview />*/}
         {/*<DappsSection />*/}
         {/*<BlogSection />*/}
