@@ -7,6 +7,7 @@ const GeofenceNotice = dynamic(
   () => import("@/components/molecules/geofence-banner"),
   { ssr: true }
 );
+
 const Header = dynamic(() => import("@/components/molecules/header"), {
   ssr: true
 });
