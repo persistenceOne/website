@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Box, Spinner, useMediaQuery } from "@chakra-ui/react";
-import GeofenceNotice from "@/components/molecules/geofence-banner";
-import Footer from "@/components/molecules/footer";
 import dynamic from "next/dynamic";
+
 const Header = dynamic(() => import("@/components/molecules/header"), {
   ssr: false,
   loading: () => <Spinner />
 });
+const Footer = dynamic(() => import("@/components/molecules/footer"), {
+  ssr: false,
+  loading: () => <Spinner />
+});
+const GeofenceNotice = dynamic(
+  () => import("@/components/molecules/geofence-banner"),
+  {
+    ssr: false,
+    loading: () => <Spinner />
+  }
+);
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
