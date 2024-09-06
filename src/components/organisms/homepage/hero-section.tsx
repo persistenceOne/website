@@ -9,7 +9,6 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
-import TallyForm from "@/components/molecules/tally-form";
 import { useTranslation } from "next-export-i18n";
 
 const HeroSection = () => {
@@ -117,7 +116,7 @@ const HeroSection = () => {
                   {t("LEARN_MORE")}
                 </Button>
               </Link>
-              <TallyForm page={"home"} />
+              {/*<TallyForm page={"home"} />*/}
             </Stack>
           </Box>
           {isTablet ? (
