@@ -5,14 +5,14 @@ import dynamic from "next/dynamic";
 // const HeroSection = dynamic(
 //   () => import("@/components/organisms/homepage/hero-section")
 // );
-
-const CrossChainSlider = dynamic(
-  () => import("@/components/organisms/homepage/cross-chain-slider")
-);
-
-// const Overview = dynamic(
-//   () => import("@/components/organisms/homepage/overview")
+//
+// const CrossChainSlider = dynamic(
+//   () => import("@/components/organisms/homepage/cross-chain-slider")
 // );
+
+const Overview = dynamic(
+  () => import("@/components/organisms/homepage/overview")
+);
 // const DappsSection = dynamic(
 //   () => import("@/components/organisms/homepage/dapps-section")
 // );
@@ -25,8 +25,8 @@ const HomePage = () => {
   return (
     <Box>
       {/*<HeroSection />*/}
-      <CrossChainSlider />
-      {/*<Overview />*/}
+      {/*<CrossChainSlider />*/}
+      <Overview />
       {/*<DappsSection />*/}
       {/*<BlogSection />*/}
     </Box>
