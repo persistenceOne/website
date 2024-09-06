@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import {
   Box,
   Flex,
@@ -25,12 +24,7 @@ import {
   Link,
   useMediaQuery
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ExternalLinkIcon,
-  ArrowForwardIcon
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Icon from "./Icon";
 import {
   fetchDexterInfo,
@@ -55,9 +49,11 @@ const getMenuListMobile = (
           {({ isExpanded }) => (
             <>
               <AccordionButton w="fit-content" _hover={{ bg: "transparent" }}>
-                <Text
+                <Button
+                  variant={"custom"}
                   cursor={"pointer"}
                   px={"12px"}
+                  fontWeight={400}
                   py={"8px"}
                   borderRadius={"6px"}
                   bg={isExpanded ? "#E596364D" : "transparent"}
@@ -71,7 +67,7 @@ const getMenuListMobile = (
                   _hover={{ bg: "#E596364D" }}
                 >
                   {item.name}
-                </Text>
+                </Button>
                 {/* {isExpanded ? (
               <MinusIcon fontSize='12px' />
             ) : (
@@ -202,7 +198,8 @@ const getMenuList = (
   return menuItems.map((item: any) => (
     <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
       <PopoverTrigger>
-        <Text
+        <Button
+          variant={"custom"}
           cursor={"pointer"}
           className={"nav-item-title"}
           fontSize={"18px"}
@@ -212,7 +209,7 @@ const getMenuList = (
           color={path === "/" ? "#FFFFFF" : "#000000"}
         >
           {item.name}
-        </Text>
+        </Button>
       </PopoverTrigger>
       <PopoverContent borderRadius={6}>
         <PopoverArrow />
@@ -325,7 +322,7 @@ const Header = () => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-  const [isMobile] = useMediaQuery("(max-width: 500px)");
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
   const menuItems = [
     {
       id: 0,

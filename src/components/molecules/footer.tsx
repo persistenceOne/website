@@ -274,6 +274,7 @@ const Footer = () => {
                   <LinkWithLocale
                     href={item.link}
                     key={item.title}
+                    fontSize={{ base: "12px", xl: "16px" }}
                     target={item.isExternal ? "_blank" : "_self"}
                     rel={item.isExternal ? "noopener noreferrer" : ""}
                   >
@@ -308,7 +309,11 @@ const Footer = () => {
           justify={"center"}
         >
           {footerSocialLinks.map((link) => (
-            <LinkWithLocale href={link.link} key={link.name}>
+            <LinkWithLocale
+              href={link.link}
+              key={link.name}
+              aria-label={link.name}
+            >
               <Box
                 w={"24px"}
                 h={"24px"}
@@ -348,7 +353,7 @@ const Footer = () => {
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
-              <LinkWithLocale href={"/termsofuse"}>
+              <LinkWithLocale href={"/termsofuse"} fontSize={14}>
                 <Button
                   variant={"link"}
                   color={"#ECECEC"}
@@ -358,7 +363,7 @@ const Footer = () => {
                   {t("TERMS_OF_USE")}
                 </Button>
               </LinkWithLocale>
-              <LinkWithLocale href={"/privacy"}>
+              <LinkWithLocale href={"/privacy"} fontSize={14}>
                 <Button
                   variant={"link"}
                   color={"#ECECEC"}
