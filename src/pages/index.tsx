@@ -2,17 +2,17 @@ import { Box } from "@chakra-ui/react";
 import React from "react";
 import dynamic from "next/dynamic";
 
-// const HeroSection = dynamic(
-//   () => import("@/components/organisms/homepage/hero-section")
-// );
-//
+const HeroSection = dynamic(
+  () => import("@/components/organisms/homepage/hero-section")
+);
+
 // const CrossChainSlider = dynamic(
 //   () => import("@/components/organisms/homepage/cross-chain-slider")
 // );
-
-const Overview = dynamic(
-  () => import("@/components/organisms/homepage/overview")
-);
+//
+// const Overview = dynamic(
+//   () => import("@/components/organisms/homepage/overview")
+// );
 // const DappsSection = dynamic(
 //   () => import("@/components/organisms/homepage/dapps-section")
 // );
@@ -24,9 +24,9 @@ const Overview = dynamic(
 const HomePage = () => {
   return (
     <Box>
-      {/*<HeroSection />*/}
+      <HeroSection />
       {/*<CrossChainSlider />*/}
-      <Overview />
+      {/*<Overview />*/}
       {/*<DappsSection />*/}
       {/*<BlogSection />*/}
     </Box>
