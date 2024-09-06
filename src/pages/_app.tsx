@@ -3,14 +3,11 @@ import Head from "next/head";
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@/styles/theme";
-import { Box } from "@chakra-ui/react";
 import { AppProps } from "next/app";
-import Header from "@/components/molecules/header";
 import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import GeofenceNotice from "@/components/molecules/geofence-banner";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();

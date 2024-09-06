@@ -1,6 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
-import { ANALYTICS } from "@/utils/config";
 import React from "react";
 
 export default function Document() {
@@ -17,24 +15,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
-        />
-        {/* eslint-disable-next-line @next/next/inline-script-id */}
-        <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `
-          }}
-        />
       </body>
     </Html>
   );
