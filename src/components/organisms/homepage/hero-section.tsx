@@ -70,16 +70,16 @@ const HeroSection = () => {
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
-              fontWeight={{ base: 500, md: 700 }}
+              fontWeight={{ base: 600, md: 700 }}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
-              fontSize={{ base: "34px", md: "26px", lg: "52px" }}
+              fontSize={{ base: "30px", md: "26px", lg: "52px" }}
               lineHeight={{ base: "34px", md: "44px", lg: "70px" }}
               mb={{ base: "30px", lg: "12px" }}
             >
               <Text
                 as="span"
                 color={"#E59636"}
-                fontSize={{ base: "34px", md: "26px", lg: "72px" }}
+                fontSize={{ base: "30px", md: "26px", lg: "72px" }}
                 lineHeight={{ base: "34px", md: "40px", lg: "86px" }}
               >
                 {t("HOME_PAGE_HERO_TITLE1")}
