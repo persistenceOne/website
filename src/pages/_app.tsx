@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import Footer from "@/components/molecules/footer";
 import theme from "@/styles/theme";
 import { Box } from "@chakra-ui/react";
 import { AppProps } from "next/app";
@@ -101,7 +100,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <Header />
         </Box>
         <Component {...pageProps} />
-        <Footer />
+        {/*<Footer />*/}
       </ChakraProvider>
     </>
   );
