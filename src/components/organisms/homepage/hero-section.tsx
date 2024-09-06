@@ -70,7 +70,7 @@ const HeroSection = () => {
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
-              fontWeight={700}
+              fontWeight={{ base: 500, md: 700 }}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
               fontSize={{ base: "28px", md: "26px", lg: "52px" }}
               lineHeight={{ base: "40px", md: "44px", lg: "70px" }}
