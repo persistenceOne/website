@@ -2,9 +2,9 @@ import { Box } from "@chakra-ui/react";
 import React from "react";
 import dynamic from "next/dynamic";
 
-const HeroSection = dynamic(
-  () => import("@/components/organisms/homepage/hero-section")
-);
+// const HeroSection = dynamic(
+//   () => import("@/components/organisms/homepage/hero-section")
+// );
 
 const CrossChainSlider = dynamic(
   () => import("@/components/organisms/homepage/cross-chain-slider")
@@ -24,7 +24,7 @@ const CrossChainSlider = dynamic(
 const HomePage = () => {
   return (
     <Box>
-      <HeroSection />
+      {/*<HeroSection />*/}
       <CrossChainSlider />
       {/*<Overview />*/}
       {/*<DappsSection />*/}
