@@ -4,22 +4,37 @@ import dynamic from "next/dynamic";
 import Layout from "@/components/layout";
 
 const HeroSection = dynamic(
-  () => import("@/components/organisms/homepage/hero-section")
+  () => import("@/components/organisms/homepage/hero-section"),
+  {
+    ssr: true
+  }
 );
 
 const CrossChainSlider = dynamic(
-  () => import("@/components/organisms/homepage/cross-chain-slider")
+  () => import("@/components/organisms/homepage/cross-chain-slider"),
+  {
+    ssr: true
+  }
 );
 
 const Overview = dynamic(
-  () => import("@/components/organisms/homepage/overview")
+  () => import("@/components/organisms/homepage/overview"),
+  {
+    ssr: true
+  }
 );
 const DappsSection = dynamic(
-  () => import("@/components/organisms/homepage/dapps-section")
+  () => import("@/components/organisms/homepage/dapps-section"),
+  {
+    ssr: true
+  }
 );
 
 const BlogSection = dynamic(
-  () => import("@/components/organisms/homepage/blog-section")
+  () => import("@/components/organisms/homepage/blog-section"),
+  {
+    ssr: true
+  }
 );
 
 const HomePage = () => {
