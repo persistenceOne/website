@@ -37,8 +37,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         </title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta
+          content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
         />
         <meta
           content="Bitcoin Interoperability. Powered by Intents. Secured by Bitcoin."
