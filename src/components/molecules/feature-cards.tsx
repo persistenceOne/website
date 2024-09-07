@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FeatureCard from "@/components/atoms/feature-card";
 import {
   Button,
   Flex,
-  Grid,
-  GridItem,
-  HStack,
   Text,
   Stack,
   VStack,
@@ -13,23 +10,11 @@ import {
   useMediaQuery
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
-import Image from "next/image";
 import { useTranslation } from "next-export-i18n";
 
 const FeatureCards = () => {
   const { t } = useTranslation();
-  const [isVisible, setIsVisible] = useState(false);
   const [isMobile] = useMediaQuery("(max-width: 500px)");
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   const commonImagePath = "/images/home-page/why-persistence";
   return (
     <VStack gap={4}>

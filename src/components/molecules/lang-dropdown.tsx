@@ -1,27 +1,18 @@
-import React, { PureComponent, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation, LanguageSwitcher } from "next-export-i18n";
-import Image from "next/image";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import {
   Box,
   HStack,
-  Link,
   Popover,
-  PopoverArrow,
   PopoverBody,
   PopoverContent,
   PopoverTrigger,
   Text,
-  useBoolean,
   VStack
 } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
-
-interface Props {
-  isTablet: boolean;
-  path: string;
-}
 
 interface LanguageItemProps {
   imgUrl: string;
@@ -53,7 +44,6 @@ const LangDropdown = ({ type }: any) => {
   const [isEditing, setIsEditing] = useState(false);
   const params = useSearchParams();
   const search = params.get("lang");
-  const { t } = useTranslation();
   const selectedLang = langList.find((item) => item.code === search);
 
   const activeLang = selectedLang === undefined ? defaultItem : selectedLang;
@@ -79,15 +69,6 @@ const LangDropdown = ({ type }: any) => {
           alignItems="center"
           px={type === "mobile" ? "7" : "0"}
           py={type === "mobile" ? "4" : "0"}
-          // w={"161px"}
-          // h={"40px"}
-          // bg={
-          //   isEditing
-          //     ? type === "mobile"
-          //       ? "#E596364D"
-          //       : "#E596364D"
-          //     : "transparent"
-          // }
           color={
             isEditing
               ? type === "mobile"
@@ -104,15 +85,7 @@ const LangDropdown = ({ type }: any) => {
             ml={"4px"}
             fontSize={"16px"}
             textTransform={"uppercase"}
-            // className={"nav-item-title"}
             fontWeight={500}
-            // color={
-            //   type === "mobile"
-            //     ? "#FFFFFF"
-            //     : router.pathname === "/"
-            //     ? "#FFFFFF"
-            //     : "#000000"
-            // }
           >
             {activeLang?.code}
           </Text>

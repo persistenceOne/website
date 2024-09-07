@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 // import required modules
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Box, Container, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 import LottieAnimation from "@/components/molecules/lottie-container";
 import { useTranslation } from "next-export-i18n";
@@ -136,14 +136,14 @@ const CrossChainSlider = () => {
           speed={1500}
           centeredSlides={true}
           loop={true}
-          // autoplay={{
-          //   delay: 1500,
-          //   duration: 1500,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: false,
-          //   waitForTransition: true,
-          //   reverseDirection: false
-          // }}
+          autoplay={{
+            delay: 1500,
+            duration: 1500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            waitForTransition: true,
+            reverseDirection: false
+          }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 1.5, spaceBetween: 15 },
@@ -163,7 +163,6 @@ const CrossChainSlider = () => {
           {list.map((resource, index) => (
             <SwiperSlide key={index}>
               <Box
-                // bg="#fff"
                 borderRadius={"24px"}
                 h={{ base: "400px", md: "450px" }}
                 my={2}

@@ -3,11 +3,7 @@ import {
   Wrap,
   Flex,
   Heading,
-  VStack,
   Container,
-  Stack,
-  ListItem,
-  UnorderedList,
   Text,
   Image
 } from "@chakra-ui/react";
