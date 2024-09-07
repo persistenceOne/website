@@ -11,16 +11,10 @@ import "swiper/css/autoplay";
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import {
-  Box,
-  Container,
-  Heading,
-  Text,
-  useMediaQuery,
-  Image
-} from "@chakra-ui/react";
+import { Box, Container, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 import LottieAnimation from "@/components/molecules/lottie-container";
 import { useTranslation } from "next-export-i18n";
+import Image from "next/image";
 
 const CrossChainSlider = () => {
   const [isMobile] = useMediaQuery("(max-width: 500px)");
@@ -34,8 +28,8 @@ const CrossChainSlider = () => {
           loading={"lazy"}
           src={"/images/home-page/static-slider/swap.svg"}
           alt={"trade"}
-          width={"100%"}
-          height={"auto"}
+          width={281}
+          height={281}
         />
       ) : (
         <LottieAnimation lottie={Slide1} />
@@ -49,8 +43,8 @@ const CrossChainSlider = () => {
           loading={"lazy"}
           src={"/images/home-page/static-slider/bridge.svg"}
           alt={"trade"}
-          width={"100%"}
-          height={"auto"}
+          width={281}
+          height={281}
         />
       ) : (
         <LottieAnimation lottie={Slide2} />
@@ -64,8 +58,8 @@ const CrossChainSlider = () => {
           loading={"lazy"}
           src={"/images/home-page/static-slider/speed.svg"}
           alt={"trade"}
-          width={"100%"}
-          height={"auto"}
+          width={281}
+          height={281}
         />
       ) : (
         <LottieAnimation lottie={Slide3} />
@@ -79,8 +73,8 @@ const CrossChainSlider = () => {
           loading={"lazy"}
           src={"/images/home-page/static-slider/secured.svg"}
           alt={"trade"}
-          width={"100%"}
-          height={"auto"}
+          width={281}
+          height={281}
         />
       ) : (
         <LottieAnimation lottie={Slide4} />
@@ -94,8 +88,8 @@ const CrossChainSlider = () => {
           loading={"lazy"}
           src={"/images/home-page/static-slider/scalable.svg"}
           alt={"trade"}
-          width={"100%"}
-          height={"auto"}
+          width={281}
+          height={281}
         />
       ) : (
         <LottieAnimation lottie={Slide5} />
@@ -109,8 +103,8 @@ const CrossChainSlider = () => {
           loading={"lazy"}
           src={"/images/home-page/static-slider/trade.svg"}
           alt={"trade"}
-          width={"100%"}
-          height={"auto"}
+          width={281}
+          height={281}
         />
       ) : (
         <LottieAnimation lottie={Slide6} />
@@ -142,14 +136,14 @@ const CrossChainSlider = () => {
           speed={1500}
           centeredSlides={true}
           loop={true}
-          autoplay={{
-            delay: 1500,
-            duration: 1500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            waitForTransition: true,
-            reverseDirection: false
-          }}
+          // autoplay={{
+          //   delay: 1500,
+          //   duration: 1500,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: false,
+          //   waitForTransition: true,
+          //   reverseDirection: false
+          // }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 1.5, spaceBetween: 15 },
@@ -180,7 +174,7 @@ const CrossChainSlider = () => {
                 position={"relative"}
               >
                 <Text
-                  px={6}
+                  px={{ base: 3, md: 6 }}
                   pt={2}
                   pb={"18px"}
                   h={"114px"}
