@@ -70,6 +70,7 @@ const HeroSection = () => {
     };
     fetch();
   }, []);
+
   return (
     <Container
       maxW={"1440px"}

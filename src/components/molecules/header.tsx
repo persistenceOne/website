@@ -21,16 +21,11 @@ import {
   AccordionButton,
   AccordionPanel,
   Button,
-  Link,
   useMediaQuery
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Icon from "./Icon";
-import {
-  fetchDexterInfo,
-  fetchDexterUsers,
-  fetchTokenPrices
-} from "@/pages/api";
+import { fetchTokenPrices } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { useRouter } from "next/router";
@@ -68,11 +63,6 @@ const getMenuListMobile = (
                 >
                   {item.name}
                 </Button>
-                {/* {isExpanded ? (
-              <MinusIcon fontSize='12px' />
-            ) : (
-              <AddIcon fontSize='12px' />
-            )} */}
               </AccordionButton>
               <AccordionPanel pb={4}>
                 <VStack align={"start"} gap={4}>
@@ -502,48 +492,16 @@ const Header = () => {
     }
   };
 
-  const [
-    setTokenPrices,
-    setDexterTVl,
-    setDexterTotalVolume,
-    setPersistenceTvl,
-    setDexterUsers,
-    dexterInfo
-  ] = useAppStore(
-    (state) => [
-      state.setTokenPrices,
-      state.setDexterTVl,
-      state.setDexterTotalVolume,
-      state.setPersistenceTvl,
-      state.setDexterUsers,
-      state.dexterInfo
-    ],
+  const [setTokenPrices] = useAppStore(
+    (state) => [state.setTokenPrices],
     shallow
   );
-
-  useEffect(() => {
-    setPersistenceTvl(dexterInfo.tvl);
-  }, [dexterInfo.tvl, setPersistenceTvl]);
 
   //fetching pstake info
   useEffect(() => {
     const fetch = async () => {
       const tokenPrices = await fetchTokenPrices();
       setTokenPrices(tokenPrices);
-    };
-    fetch();
-  }, []);
-
-  //fetching dexter info
-  useEffect(() => {
-    const fetch = async () => {
-      fetchDexterInfo().then((resp) => {
-        setDexterTVl(resp.tvl);
-        setDexterTotalVolume(resp.volume);
-      });
-      fetchDexterUsers().then((userResponse) => {
-        setDexterUsers(userResponse);
-      });
     };
     fetch();
   }, []);

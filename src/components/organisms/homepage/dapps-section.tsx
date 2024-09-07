@@ -1,11 +1,12 @@
 import DappCard, { DappCardInterface } from "@/components/atoms/dapp-card";
 import { Container, Box, Stack } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
 import GetXprtSection from "@/components/organisms/homepage/get-xprt-section";
 import { useTranslation } from "next-export-i18n";
+import { fetchDexterInfo, fetchDexterUsers } from "@/pages/api";
 
 const getData = (dexterInfo: any, t: any) => {
   const dApps: DappCardInterface[] = [
@@ -59,9 +60,41 @@ const getData = (dexterInfo: any, t: any) => {
 };
 
 const DappsSection = () => {
-  const [dexterInfo] = useAppStore((state) => [state.dexterInfo], shallow);
+  const [
+    setDexterTVl,
+    setDexterTotalVolume,
+    setPersistenceTvl,
+    setDexterUsers,
+    dexterInfo
+  ] = useAppStore(
+    (state) => [
+      state.setDexterTVl,
+      state.setDexterTotalVolume,
+      state.setPersistenceTvl,
+      state.setDexterUsers,
+      state.dexterInfo
+    ],
+    shallow
+  );
+
+  //fetching dexter info
+  useEffect(() => {
+    const fetch = async () => {
+      fetchDexterInfo().then((resp) => {
+        setDexterTVl(resp.tvl);
+        setPersistenceTvl(resp.tvl);
+        setDexterTotalVolume(resp.volume);
+      });
+      fetchDexterUsers().then((userResponse) => {
+        setDexterUsers(userResponse);
+      });
+    };
+    fetch();
+  }, []);
+
   const { t } = useTranslation();
   const dApps = getData(dexterInfo, t);
+
   return (
     <Box pos={"relative"} bg={"#1D1306"}>
       <Container
