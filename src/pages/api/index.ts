@@ -1,15 +1,5 @@
 import axios from "axios";
 
-const defillamaApi = "https://defillama-datasets.llama.fi/lite/protocols2";
-export const STK_XPRT_TVL_URL =
-  "https://api.persistence.one/pstake/stkxprt/xprt_tvu";
-export const STK_ATOM_TVL_URL =
-  "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
-export const STK_OSMO_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkosmo/osmo_tvu";
-export const STK_DYDX_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkdydx/dydx_tvu";
-export const XPRT_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/1101";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const OSMO_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=15";
@@ -20,53 +10,6 @@ export const OSMOSIS_XPRT_WBTC_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=1773";
 export const MarketCap_API =
   "https://api.coingecko.com/api/v3/coins/persistence";
-export const LATEST_BLOCK_HEIGHT_URL =
-  "https://rest.core.persistence.one/cosmos/base/tendermint/v1beta1/blocks/latest";
-
-export const fetchChainTVL = async () => {
-  try {
-    const response = await axios.get(defillamaApi);
-    if (response && response.data && response.data.protocols) {
-      const protocol = response.data.protocols.find(
-        (item: any) => item.category === "Dexes" && item.name === "Dexter"
-      );
-      const liquidStake = response.data.protocols.find(
-        (item: any) =>
-          item.category === "Liquid Staking" && item.name === "pSTAKE Finance"
-      );
-      if (protocol) {
-        return (
-          Number(protocol.chainTvls.Persistence.tvl) +
-          Number(liquidStake.chainTvls.Persistence.tvl)
-        ).toFixed();
-      }
-    }
-    return 0;
-  } catch (e) {
-    console.log(e);
-    return 0;
-  }
-};
-
-export const getCosmosTVL = async (prefix: string) => {
-  try {
-    const res = await axios.get(
-      prefix === "cosmos"
-        ? STK_ATOM_TVL_URL
-        : prefix === "osmo"
-        ? STK_OSMO_TVL_API
-        : prefix === "xprt"
-        ? STK_XPRT_TVL_URL
-        : STK_DYDX_TVL_API
-    );
-    if (res && res.data) {
-      return res!.data!.amount!.amount;
-    }
-    return 0;
-  } catch (e) {
-    return 0;
-  }
-};
 
 export const fetchTokenPrices = async () => {
   let data = {
@@ -192,7 +135,6 @@ export const fetchDexterPoolInfo = async () => {
       })
     });
     const responseJson = await res.json();
-    console.log(responseJson, "responseJson-pools");
     if (responseJson && responseJson.data) {
       responseJson.data.pool_weekly_aggregate_with_apr.forEach((item: any) => {
         const poolAggregate = item;
