@@ -527,7 +527,7 @@ const Header = () => {
         my={{ base: "0", md: "32px" }}
         borderRadius={"1000px"}
       >
-        {isLandscape ? (
+        {!isLandscape ? (
           <Flex
             as={"nav"}
             justify={"space-between"}
