@@ -35,41 +35,26 @@ export const fetchTokenPrices = async () => {
 
 export const fetchDexterInfo = async () => {
   try {
-    const res = await fetch(DEXTER_POOL_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        query: `{
-          pool_weekly_aggregate_with_apr {
-            pool_id
-            current_liquidity_usd
-          }
-          swap_volume_lifetime_aggregate {
-            total_swap_volume
-          }
-          }`
-      })
-    });
-
-    const responseJson = await res.json();
+    const response = await fetch(`/api/dex-info`);
+    const responseJson = await response.json();
+    console.log(responseJson, "responseJson123123");
     let total_liquidity;
     let volume_usd = 0;
-    if (responseJson && responseJson.data) {
-      total_liquidity = responseJson.data.pool_weekly_aggregate_with_apr.reduce(
-        (acc: any, pool: any) => {
-          const { current_liquidity_usd } = pool;
+    if (responseJson && responseJson.data && responseJson.data.data) {
+      total_liquidity =
+        responseJson.data.data.pool_weekly_aggregate_with_apr.reduce(
+          (acc: any, pool: any) => {
+            const { current_liquidity_usd } = pool;
 
-          acc.current_liquidity_usd += current_liquidity_usd;
-          return acc;
-        },
-        { current_liquidity_usd: 0 }
-      );
+            acc.current_liquidity_usd += current_liquidity_usd;
+            return acc;
+          },
+          { current_liquidity_usd: 0 }
+        );
       volume_usd =
-        responseJson.data.swap_volume_lifetime_aggregate[0].total_swap_volume;
+        responseJson.data.data.swap_volume_lifetime_aggregate[0]
+          .total_swap_volume;
     }
-
     return {
       tvl: total_liquidity.current_liquidity_usd || 0,
       volume: volume_usd
@@ -278,21 +263,20 @@ export const getBondedTokens = async () => {
 
 export const fetchDexterUsers = async () => {
   try {
-    const res = await fetch(
-      "https://api.core-1.dexter.zone/api/rest/overview_info"
-    );
+    const response = await fetch(`/api/dex-users`);
+    const data = await response.json();
+    console.log(data, data.data, "fetchDexterUsers");
     let totalTraders = 0;
-    const data = await res.json();
-    if (data && data.overview_total_info) {
+    if (data && data.data && data.data.overview_total_info) {
       totalTraders =
-        data.overview_total_info[0].total_traders +
-        data.overview_total_info[0].total_lp_providers;
+        data.data.overview_total_info[0].total_traders +
+        data.data.overview_total_info[0].total_lp_providers;
     }
     return totalTraders;
   } catch (e) {
     console.log(e, "error in fetchDexterInfo");
     return {
-      monthlyTotalUsers: 0
+      allTimeUsers: 0
     };
   }
 };
