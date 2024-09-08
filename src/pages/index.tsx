@@ -4,10 +4,7 @@ import Layout from "@/components/layout";
 import HeroSection from "@/components/organisms/homepage/hero-section";
 import Overview from "@/components/organisms/homepage/overview";
 import BlogSection from "@/components/organisms/homepage/blog-section";
-
-const CrossChainSlider = dynamic(
-  () => import("@/components/organisms/homepage/cross-chain-slider")
-);
+import CrossChainSlider from "@/components/organisms/homepage/cross-chain-slider";
 
 const DappsSection = dynamic(
   () => import("@/components/organisms/homepage/dapps-section")
