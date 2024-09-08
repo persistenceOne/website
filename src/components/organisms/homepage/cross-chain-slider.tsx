@@ -118,8 +118,7 @@ const CrossChainSlider = () => {
         maxW={"1440px"}
         pt={{ base: "32px", md: "80px" }}
         pb={{ base: "30px", md: "50px" }}
-        className="aos-init aos-animate py-10"
-        data-aos="fade-up"
+        className="py-10"
       >
         <Heading
           mb={"40px"}
