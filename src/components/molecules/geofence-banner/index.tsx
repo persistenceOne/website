@@ -21,7 +21,7 @@ const GeofenceNotice = () => {
       position="relative"
       className={"banner-container"}
     >
-      <Box display={"flex"} justifyContent={"center"}>
+      <Box display={"inline-flex"} justifyContent={"center"}>
         <Text
           display={"inline-flex"}
           flexDirection={{ base: "column", md: "row" }}
