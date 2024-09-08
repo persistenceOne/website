@@ -5,7 +5,7 @@ import {
   CardBody,
   HStack,
   Heading,
-  Text,
+  Text
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
@@ -18,10 +18,6 @@ export interface DappCardInterface {
   dAppStats: {
     label: string;
     value: string;
-  }[];
-  supportingAssets: {
-    asset: string;
-    assetIcon: string;
   }[];
   website: {
     link: string;

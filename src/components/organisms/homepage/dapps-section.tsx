@@ -12,7 +12,7 @@ const getData = (dexterInfo: any, t: any) => {
   const dApps: DappCardInterface[] = [
     {
       dAppName: t("PERSISTENCE_DEX"),
-      dAppLogo: "/images/persistence-symbol.svg",
+      dAppLogo: "/images/persistence-symbol.png",
       dAppDescription: t("HOME_DEX_CONTENT"),
       dAppStats: [
         {
@@ -27,20 +27,6 @@ const getData = (dexterInfo: any, t: any) => {
           label: t("TOTAL_USERS"),
           value: `${numberFormat(Number(dexterInfo.allTimeUsers), 3)}`
         }
-      ],
-      supportingAssets: [
-        { asset: "WBTC", assetIcon: "/images/tokens/wbtc.svg" },
-        { asset: "stkXPRT", assetIcon: "/images/tokens/stkxprt.svg" },
-        { asset: "XPRT", assetIcon: "/images/tokens/xprt.svg" },
-        { asset: "USDC", assetIcon: "/images/tokens/usdc.svg" },
-        { asset: "USDT", assetIcon: "/images/tokens/usdt.svg" },
-        { asset: "stkATOM", assetIcon: "/images/tokens/stkatom.svg" },
-        { asset: "ATOM", assetIcon: "/images/tokens/atom.svg" },
-        {
-          asset: "SHD, STARS, HUAHUA, DYDX, stkDYDX, stkSTARS, stkHUAHUA",
-          assetIcon: "/images/tokens/more.svg"
-        }
-        // { asset: "SHD", assetIcon: "/images/shd.svg" },
       ],
       website: {
         link: "https://app.persistence.one",
