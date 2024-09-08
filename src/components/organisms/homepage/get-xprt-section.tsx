@@ -34,7 +34,7 @@ const GetXprtSection = () => {
             display={{ base: "none", md: "flex" }}
           >
             <Image
-              src={"/images/home-page/fuel.png"}
+              src={"/images/home-page/fuel.svg"}
               alt="Persistence"
               width={300}
               height={285}

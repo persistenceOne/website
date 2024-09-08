@@ -33,7 +33,7 @@ const FeatureCards = () => {
           imgWidth={210}
           title={t("HOME_SECTION3_CARD1_TITLE")}
           description={t("HOME_SECTION3_CARD1_CONTENT")}
-          image={`${commonImagePath}/bitcoin_hand.png`}
+          image={`${commonImagePath}/bitcoin_hand.svg`}
           cta={{
             link: "/vision",
             linkText: t("HOME_SECTION3_CARD1_LINK"),
@@ -50,7 +50,7 @@ const FeatureCards = () => {
           category={t("EXPERIENCE")}
           title={t("HOME_SECTION3_CARD2_TITLE")}
           description={t("HOME_SECTION3_CARD2_CONTENT")}
-          image={`${commonImagePath}/building.png`}
+          image={`${commonImagePath}/building.svg`}
           imgWidth={115}
           cta={{
             link: "",
@@ -73,7 +73,7 @@ const FeatureCards = () => {
           aos={"fade-up-right"}
           title={t("HOME_SECTION3_CARD3_TITLE")}
           description={t("HOME_SECTION3_CARD3_CONTENT")}
-          image={`${commonImagePath}/tech.png`}
+          image={`${commonImagePath}/tech.svg`}
           imgWidth={280}
           cta={{
             link: "",
@@ -97,7 +97,7 @@ const FeatureCards = () => {
             aos={"fade-up-left"}
             title={t("HOME_SECTION3_CARD4_TITLE")}
             description={t("HOME_SECTION3_CARD4_CONTENT")}
-            image={`${commonImagePath}/values.png`}
+            image={`${commonImagePath}/values.svg`}
             imgWidth={280}
             cta={{
               link: "/values",

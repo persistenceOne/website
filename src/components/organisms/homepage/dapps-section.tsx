@@ -12,7 +12,7 @@ const getData = (dexterInfo: any, t: any) => {
   const dApps: DappCardInterface[] = [
     {
       dAppName: t("PERSISTENCE_DEX"),
-      dAppLogo: "/images/persistence-symbol.png",
+      dAppLogo: "/images/persistence-symbol.svg",
       dAppDescription: t("HOME_DEX_CONTENT"),
       dAppStats: [
         {
