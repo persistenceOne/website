@@ -116,7 +116,7 @@ const CrossChainSlider = () => {
     <Box bg={"#FCF7F1"} pos={"relative"} zIndex={10} mt={"80pz"}>
       <Container
         maxW={"1440px"}
-        pt={{ base: "32px", md: "80px" }}
+        pt={{ base: "60px", md: "80px" }}
         pb={{ base: "30px", md: "50px" }}
         className="py-10"
       >

@@ -27,7 +27,7 @@ const HeroSection = () => {
           "2xl": "800px"
         }}
         height={{
-          base: "90vh", // 0-48em
+          base: "95vh", // 0-48em
           md: "70vh", // 48em-80em,
           lg: "70vh", // 48em-80em,
           xl: "100vh", // 80em+
@@ -65,8 +65,8 @@ const HeroSection = () => {
               textAlign={"left"}
               fontWeight={{ base: 600, md: 700 }}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
-              fontSize={{ base: "30px", md: "26px", lg: "52px" }}
-              lineHeight={{ base: "34px", md: "44px", lg: "70px" }}
+              fontSize={{ base: "32px", md: "26px", lg: "52px" }}
+              lineHeight={{ base: "36px", md: "44px", lg: "70px" }}
               mb={{ base: "30px", lg: "12px" }}
             >
               <Text
