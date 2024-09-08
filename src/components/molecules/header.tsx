@@ -312,7 +312,7 @@ const Header = () => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-  const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const [isLandscape] = useMediaQuery("(min-width: 768px)");
   const menuItems = [
     {
       id: 0,
@@ -527,7 +527,7 @@ const Header = () => {
         my={{ base: "0", md: "32px" }}
         borderRadius={"1000px"}
       >
-        {isMobile ? (
+        {isLandscape ? (
           <Flex
             as={"nav"}
             justify={"space-between"}
