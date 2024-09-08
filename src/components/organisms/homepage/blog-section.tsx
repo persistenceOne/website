@@ -1,7 +1,15 @@
 import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
-import { Box, HStack, Heading, Container } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Heading,
+  Container,
+  useMediaQuery
+} from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "next-export-i18n";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const resourcesList: BlogCardInterface[] = [
   {
@@ -32,6 +40,7 @@ const resourcesList: BlogCardInterface[] = [
 
 const BlogSection = () => {
   const { t } = useTranslation();
+  const [isTablet] = useMediaQuery("(min-width: 768px)");
   return (
     <Box bg={"#FCF7F1"}>
       <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
@@ -41,16 +50,49 @@ const BlogSection = () => {
               {t("LATEST_ON_PERSISTENCE")}
             </Heading>
           </HStack>
-          <Box
-            display="flex"
-            flexDirection={{ base: "column", lg: "row" }}
-            flexWrap={"wrap"}
-            gap={"16px"}
-          >
-            {resourcesList.map((resource, index) => (
-              <BlogCard key={resource.id} {...resource} />
-            ))}
-          </Box>
+          {isTablet ? (
+            <Box
+              display="flex"
+              flexDirection={{ base: "column", lg: "row" }}
+              flexWrap={"wrap"}
+              gap={"16px"}
+            >
+              {resourcesList.map((resource, index) => (
+                <BlogCard key={resource.id} {...resource} />
+              ))}
+            </Box>
+          ) : (
+            <Carousel
+              ssr
+              deviceType={"mobile"}
+              partialVisbile={false}
+              responsive={{
+                desktop: {
+                  breakpoint: { max: 3000, min: 1280 },
+                  items: 3,
+                  partialVisibilityGutter: 10
+                },
+                tablet: {
+                  breakpoint: { max: 1280, min: 768 },
+                  items: 2,
+                  partialVisibilityGutter: 10
+                },
+                mobile: {
+                  breakpoint: { max: 768, min: 0 },
+                  items: 1,
+                  partialVisibilityGutter: 10
+                }
+              }}
+              autoPlay={true}
+              autoPlaySpeed={2000}
+              infinite={true}
+              arrows={false}
+            >
+              {resourcesList.map((resource, index) => (
+                <BlogCard key={resource.id} {...resource} />
+              ))}
+            </Carousel>
+          )}
         </Box>
       </Container>
     </Box>
