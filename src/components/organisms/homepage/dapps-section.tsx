@@ -72,8 +72,6 @@ const DappsSection = () => {
         <Stack
           spacing={8}
           mb={"40px"}
-          className="aos-init aos-animate py-10"
-          data-aos="fade-up"
           direction={{ base: "column", md: "row" }}
         >
           {dApps.map((dApp) => (

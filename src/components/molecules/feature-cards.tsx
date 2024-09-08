@@ -43,8 +43,6 @@ const FeatureCards = () => {
           width="70%"
           height="380px"
           category={t("VISION")}
-          aos={"fade-down-right"}
-          className={"aos-init aos-animate"}
           imgWidth={210}
           title={t("HOME_SECTION3_CARD1_TITLE")}
           description={t("HOME_SECTION3_CARD1_CONTENT")}
@@ -60,8 +58,6 @@ const FeatureCards = () => {
         <FeatureCard
           width="30%"
           height="380px"
-          aos={"fade-down-left"}
-          className={"aos-init aos-animate"}
           category={t("EXPERIENCE")}
           title={t("HOME_SECTION3_CARD2_TITLE")}
           description={t("HOME_SECTION3_CARD2_CONTENT")}
@@ -84,8 +80,6 @@ const FeatureCards = () => {
       >
         <FeatureCard
           category={t("TECHNOLOGY")}
-          className={"aos-init aos-animate"}
-          aos={"fade-up-right"}
           title={t("HOME_SECTION3_CARD3_TITLE")}
           description={t("HOME_SECTION3_CARD3_CONTENT")}
           image={`${commonImagePath}/tech.svg`}
@@ -108,8 +102,6 @@ const FeatureCards = () => {
         >
           <FeatureCard
             category={t("VALUES")}
-            className={"aos-init aos-animate"}
-            aos={"fade-up-left"}
             title={t("HOME_SECTION3_CARD4_TITLE")}
             description={t("HOME_SECTION3_CARD4_CONTENT")}
             image={`${commonImagePath}/values.svg`}
