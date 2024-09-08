@@ -536,7 +536,7 @@ const Header = () => {
             display={{ base: "flex", md: "none" }}
           >
             <Box>
-              <LinkWithLocale href="/">
+              <LinkWithLocale href="/" aria-label="Logo">
                 {router.pathname !== "/" || isOpen ? (
                   <Box
                     width={"160px"}
