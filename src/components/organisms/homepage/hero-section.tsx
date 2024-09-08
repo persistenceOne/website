@@ -82,11 +82,11 @@ const HeroSection = () => {
             </Text>
             <Text
               textAlign={"left"}
-              maxW={{ base: "400px", xl: "580px" }}
+              maxW={{ base: "400px", lg: "580px" }}
               mb={{ base: "42px", lg: "29px" }}
               color={"#FFFFFFCC"}
-              fontSize={{ base: "16px", xl: "26px" }}
-              lineHeight={{ base: "28px", xl: "39px" }}
+              fontSize={{ base: "16px", md: "24px", xl: "26px" }}
+              lineHeight={{ base: "28px", md: "38px", xl: "39px" }}
             >
               {t("HOME_PAGE_HERO_SUB_TITLE")}
             </Text>
