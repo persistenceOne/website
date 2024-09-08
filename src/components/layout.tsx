@@ -5,12 +5,10 @@ import Footer from "@/components/molecules/footer";
 import Header from "@/components/molecules/header";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const [isLandScape] = useMediaQuery("(min-width: 500px)");
-
   return (
     <>
       <Box pos={"fixed"} width="100%" zIndex="sticky">
-        {isLandScape ? <GeofenceNotice /> : null}
+        <GeofenceNotice />
         <Header />
       </Box>
       {children}
