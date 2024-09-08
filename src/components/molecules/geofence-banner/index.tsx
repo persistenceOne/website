@@ -19,11 +19,12 @@ const GeofenceNotice = () => {
       py={2.5}
       pl={4}
       position="relative"
+      textAlign={{ base: "left", "2xl": "center" }}
       className={"banner-container"}
     >
-      <Box display={"inline-flex"} justifyContent={"center"}>
+      <Box display={"flex"} justifyContent={"center"}>
         <Text
-          display={"inline-flex"}
+          display={"flex"}
           flexDirection={{ base: "column", md: "row" }}
           alignItems={{ base: "start", md: "center" }}
           color={"#fff"}
