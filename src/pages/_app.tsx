@@ -6,8 +6,6 @@ import theme from "@/styles/theme";
 import { AppProps } from "next/app";
 import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -20,12 +18,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1500
-    });
-  }, []);
 
   return (
     <>

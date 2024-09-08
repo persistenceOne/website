@@ -13,7 +13,7 @@ const Overview = () => {
         pb={{ base: "40px", md: "100px" }}
         pt={{ base: "30px", md: "50px" }}
       >
-        <Box className="aos-init aos-animate" data-aos="fade-up">
+        <Box>
           <Heading
             mb={"20px"}
             textAlign={"center"}

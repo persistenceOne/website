@@ -7,7 +7,6 @@
     "@chakra-ui/react": "^2.8.2",
     "@tanstack/react-table": "^8.20.1",
     "@types/react-lottie": "^1.2.10",
-    "aos": "^2.3.4",
     "dayjs": "^1.11.11",
     "eslint-config-prettier": "^8.6.0",
     "graphql-request": "^7.1.0",
@@ -33,7 +32,6 @@
     "check-types": "tsc --noEmit --pretty"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.7",
     "@types/node": "^18.11.6",
     "@types/react": "18.0.23",
     "autoprefixer": "^10.4.13",

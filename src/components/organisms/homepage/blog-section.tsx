@@ -43,13 +43,7 @@ const BlogSection = () => {
   const [isTablet] = useMediaQuery("(min-width: 768px)");
   return (
     <Box bg={"#FCF7F1"}>
-      <Container
-        maxW={"1440px"}
-        px={{ base: "16px", md: "100px" }}
-        py={"60px"}
-        className="aos-init aos-animate py-10"
-        data-aos="fade-up"
-      >
+      <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
         <Box>
           <HStack alignItems={"center"} mb={"40px"} justifyContent={"center"}>
             <Heading color="#350B00" fontSize={{ base: "20px", xl: "44px" }}>

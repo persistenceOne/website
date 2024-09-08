@@ -140,8 +140,7 @@ const XPRTInDefiSection = () => {
         maxWidth={"1320px"}
         px={{ base: "40px", md: "40px" }}
         mb={{ base: "30px", md: "60px" }}
-        className="xprt-defi-cards aos-init aos-animate"
-        data-aos="fade-up"
+        className="xprt-defi-cards"
       >
         <Heading
           textAlign={"center"}

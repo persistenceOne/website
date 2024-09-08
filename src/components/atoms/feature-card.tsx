@@ -44,9 +44,7 @@ const FeatureCard = ({
   width = "100%",
   height = "100%",
   cardType = "content",
-  imgWidth,
-  aos,
-  className
+  imgWidth
 }: FeatureCardInterface) => {
   const [isMobile] = useMediaQuery("(max-width: 500px)");
   return (

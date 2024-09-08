@@ -25,13 +25,7 @@ const Belief = () => {
     }
   ];
   return (
-    <Container
-      maxW={"1440px"}
-      px={{ base: "40px", md: "100px" }}
-      pb={"80px"}
-      className="aos-init aos-animate py-10"
-      data-aos="fade-up"
-    >
+    <Container maxW={"1440px"} px={{ base: "40px", md: "100px" }} pb={"80px"}>
       <Heading
         variant={"main"}
         fontSize={{ base: "26px", xl: "48px" }}

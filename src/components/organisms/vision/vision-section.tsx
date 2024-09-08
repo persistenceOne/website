@@ -34,8 +34,7 @@ const VisionSection = () => {
       <Box
         pt={{ base: "32px", md: "60px" }}
         pb={{ base: "32px", md: "100px" }}
-        className="aos-init aos-animate py-10"
-        data-aos="fade-up"
+        className="py-10"
       >
         <Heading
           textAlign={"center"}

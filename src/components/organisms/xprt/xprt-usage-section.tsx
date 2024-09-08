@@ -61,11 +61,7 @@ const XPRTUsageSection = () => {
       pt={{ base: "50px", md: "80px" }}
       pb={"40px"}
     >
-      <VStack
-        align={"center"}
-        className="aos-init aos-animate"
-        data-aos="fade-up"
-      >
+      <VStack align={"center"}>
         <Heading
           textAlign={"center"}
           color={"#633C0D"}

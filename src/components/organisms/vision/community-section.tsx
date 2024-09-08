@@ -11,8 +11,6 @@ const CommunitySection = () => {
       <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"30px"}>
         <Flex
           alignItems={"center"}
-          className="aos-init aos-animate py-10"
-          data-aos="fade-up"
           flexDirection={{ base: "column", md: "row" }}
         >
           <Box flex={1}>
