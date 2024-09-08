@@ -40,7 +40,6 @@ const HeroSection = () => {
         mx={"auto"}
       >
         <Box
-          // mb={{ base: "20px", md: "60px" }}
           pt={{ base: "40px", md: "50px", xl: "122px" }}
           pl={{ base: "20px", md: "80px" }}
           pr={{ base: "20px", md: "0px" }}
@@ -57,13 +56,12 @@ const HeroSection = () => {
               "2xl": "flex-start"
             }}
             flexDir={"column"}
+            maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
           >
             <Text
-              variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
               fontWeight={{ base: 600, md: 700 }}
-              maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
               fontSize={{ base: "32px", md: "26px", lg: "52px" }}
               lineHeight={{ base: "36px", md: "44px", lg: "70px" }}
               mb={{ base: "30px", lg: "12px" }}
