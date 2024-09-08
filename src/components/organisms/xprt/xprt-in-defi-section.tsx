@@ -74,8 +74,8 @@ const getData = (
       token1Img: "/images/tokens/xprt.svg",
       token2: "USDC",
       token2Img: "/images/tokens/usdc.svg",
-      tvl: "16980",
-      apr: "1099",
+      tvl: "10874",
+      apr: "2137",
       link: "https://aerodrome.finance/pools?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200",
       linkLable: "Aerodrome"
     },
@@ -114,8 +114,8 @@ const getData = (
       token1Img: "/images/tokens/xprt.svg",
       token2: "USDC",
       token2Img: "/images/tokens/usdc.svg",
-      tvl: "326",
-      apr: "942",
+      tvl: "285",
+      apr: "2741",
       link: "https://velodrome.finance/pools?token0=0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200&factory=0xCc0bDDB707055e04e497aB22a59c2aF4391cd12F",
       linkLable: "Velodrome"
     }
