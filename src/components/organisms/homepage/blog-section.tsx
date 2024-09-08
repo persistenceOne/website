@@ -1,19 +1,12 @@
 import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
-import {
-  Box,
-  HStack,
-  Heading,
-  Container,
-  useMediaQuery
-} from "@chakra-ui/react";
-import React, { useRef } from "react";
+import { Box, HStack, Heading, Container } from "@chakra-ui/react";
+import React from "react";
 import { useTranslation } from "next-export-i18n";
 
 const resourcesList: BlogCardInterface[] = [
   {
     id: 0,
-    resourceImage:
-      "https://blog.persistence.one/wp-content/uploads/2024/08/image1-1-1160x653.jpg",
+    resourceImage: "/images/home-page/blog/blog1.webp",
     resourceType: "Blog",
     resourceCTA: "READ",
     resourceLink:
@@ -21,8 +14,7 @@ const resourcesList: BlogCardInterface[] = [
   },
   {
     id: 1,
-    resourceImage:
-      "https://blog.persistence.one/wp-content/uploads/2024/07/Major-Problems-for-BTCfi-42-42-min-1160x652.jpg",
+    resourceImage: "/images/home-page/blog/blog2.webp",
     resourceType: "Blog",
     resourceCTA: "READ",
     resourceLink:
@@ -30,8 +22,7 @@ const resourcesList: BlogCardInterface[] = [
   },
   {
     id: 2,
-    resourceImage:
-      "https://blog.persistence.one/wp-content/uploads/2024/07/btc-L2s-VS-side-chain-33-32-31-min-1160x652.jpg",
+    resourceImage: "/images/home-page/blog/blog3.webp",
     resourceType: "Blog",
     resourceCTA: "READ",
     resourceLink:

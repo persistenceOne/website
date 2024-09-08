@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Text,
-  Stack,
-  useMediaQuery
-} from "@chakra-ui/react";
+import { Box, Button, Text, Stack, useMediaQuery } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
@@ -27,14 +20,14 @@ const HeroSection = () => {
           "2xl": "700px"
         }}
         maxH={{
-          base: "100%", // 0-48em
-          md: "440", // 48em-80em,
+          base: "900px", // 0-48em
+          md: "640px", // 48em-80em,
           lg: "572px", // 48em-80em,
           xl: "720px", // 80em+ 772
           "2xl": "800px"
         }}
         height={{
-          base: "100vh", // 0-48em
+          base: "95vh", // 0-48em
           md: "70vh", // 48em-80em,
           lg: "70vh", // 48em-80em,
           xl: "100vh", // 80em+
@@ -55,26 +48,6 @@ const HeroSection = () => {
           pb={{ base: "80px", md: "0px" }}
           display="flex"
         >
-          {isTablet ? (
-            <Box
-              display={{ base: "none", md: "block" }}
-              pos={"absolute"}
-              top={"0"}
-              left={"0"}
-              right={"0"}
-              height={"100%"}
-              // mt={"48px"}
-            >
-              <video
-                autoPlay={true}
-                preload="auto"
-                muted={true}
-                loop={true}
-                src="/images/home-page/hero.mp4"
-                className="bg-video"
-              />
-            </Box>
-          ) : null}
           <Box
             zIndex={10}
             position={"relative"}
@@ -90,17 +63,17 @@ const HeroSection = () => {
               variant={"main"}
               color={"text.whiteFull"}
               textAlign={"left"}
-              fontWeight={700}
+              fontWeight={{ base: 600, md: 700 }}
               maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
-              fontSize={{ base: "28px", md: "26px", lg: "52px" }}
-              lineHeight={{ base: "40px", md: "44px", lg: "70px" }}
+              fontSize={{ base: "32px", md: "26px", lg: "52px" }}
+              lineHeight={{ base: "36px", md: "44px", lg: "70px" }}
               mb={{ base: "30px", lg: "12px" }}
             >
               <Text
                 as="span"
                 color={"#E59636"}
-                fontSize={{ base: "36px", md: "26px", lg: "72px" }}
-                lineHeight={{ base: "48px", md: "40px", lg: "86px" }}
+                fontSize={{ base: "30px", md: "26px", lg: "72px" }}
+                lineHeight={{ base: "34px", md: "40px", lg: "86px" }}
               >
                 {t("HOME_PAGE_HERO_TITLE1")}
               </Text>
@@ -109,11 +82,11 @@ const HeroSection = () => {
             </Text>
             <Text
               textAlign={"left"}
-              maxW={{ base: "400px", xl: "580px" }}
+              maxW={{ base: "400px", lg: "580px" }}
               mb={{ base: "42px", lg: "29px" }}
               color={"#FFFFFFCC"}
-              fontSize={{ base: "16px", xl: "26px" }}
-              lineHeight={{ base: "28px", xl: "39px" }}
+              fontSize={{ base: "16px", md: "24px", xl: "26px" }}
+              lineHeight={{ base: "28px", md: "38px", xl: "39px" }}
             >
               {t("HOME_PAGE_HERO_SUB_TITLE")}
             </Text>
@@ -140,6 +113,26 @@ const HeroSection = () => {
               <TallyForm page={"home"} />
             </Stack>
           </Box>
+          {isTablet ? (
+            <Box
+              display={{ base: "none", md: "block" }}
+              pos={"absolute"}
+              top={"0"}
+              left={"0"}
+              right={"0"}
+              height={"100%"}
+              // mt={"48px"}
+            >
+              <video
+                autoPlay={true}
+                preload="auto"
+                muted={true}
+                loop={true}
+                src="/images/home-page/hero.mp4"
+                className="bg-video"
+              />
+            </Box>
+          ) : null}
         </Box>
       </Box>
     </Box>

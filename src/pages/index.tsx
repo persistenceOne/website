@@ -1,35 +1,27 @@
-import { Box } from "@chakra-ui/react";
 import React from "react";
 import dynamic from "next/dynamic";
-
-const HeroSection = dynamic(
-  () => import("@/components/organisms/homepage/hero-section")
-);
+import Layout from "@/components/layout";
+import HeroSection from "@/components/organisms/homepage/hero-section";
+import Overview from "@/components/organisms/homepage/overview";
+import BlogSection from "@/components/organisms/homepage/blog-section";
 
 const CrossChainSlider = dynamic(
   () => import("@/components/organisms/homepage/cross-chain-slider")
 );
 
-const Overview = dynamic(
-  () => import("@/components/organisms/homepage/overview")
-);
 const DappsSection = dynamic(
   () => import("@/components/organisms/homepage/dapps-section")
 );
 
-const BlogSection = dynamic(
-  () => import("@/components/organisms/homepage/blog-section")
-);
-
 const HomePage = () => {
   return (
-    <Box>
+    <Layout>
       <HeroSection />
       <CrossChainSlider />
       <Overview />
       <DappsSection />
       <BlogSection />
-    </Box>
+    </Layout>
   );
 };
 

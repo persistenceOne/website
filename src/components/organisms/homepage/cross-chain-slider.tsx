@@ -8,19 +8,11 @@ import Slide5 from "../../../../public/images/lotties/scalable.json";
 import Slide6 from "../../../../public/images/lotties/trade.json";
 import "swiper/css";
 import "swiper/css/autoplay";
-
-// import required modules
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import {
-  Box,
-  Container,
-  Heading,
-  Text,
-  useMediaQuery,
-  Image
-} from "@chakra-ui/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Box, Container, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 import LottieAnimation from "@/components/molecules/lottie-container";
 import { useTranslation } from "next-export-i18n";
+import Image from "next/image";
 
 const CrossChainSlider = () => {
   const [isMobile] = useMediaQuery("(max-width: 500px)");
@@ -29,32 +21,92 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE1"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide1} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/swap.webp"}
+          alt={"trade"}
+          width={281}
+          height={281}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide1} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide2} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/bridge.webp"}
+          alt={"trade"}
+          width={281}
+          height={281}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide2} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide3} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/speed.webp"}
+          alt={"trade"}
+          width={281}
+          height={281}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide3} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide4} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/secured.webp"}
+          alt={"trade"}
+          width={281}
+          height={281}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide4} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide5} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/scalable.webp"}
+          alt={"trade"}
+          width={281}
+          height={281}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide5} />
+      )
     },
     {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
-      imageUrl: <LottieAnimation lottie={Slide6} />
+      imageUrl: isMobile ? (
+        <Image
+          loading={"lazy"}
+          src={"/images/home-page/static-slider/trade.webp"}
+          alt={"trade"}
+          width={281}
+          height={281}
+        />
+      ) : (
+        <LottieAnimation lottie={Slide6} />
+      )
     }
   ];
 
@@ -62,7 +114,7 @@ const CrossChainSlider = () => {
     <Box bg={"#FCF7F1"} pos={"relative"} zIndex={10} mt={"80pz"}>
       <Container
         maxW={"1440px"}
-        pt={{ base: "32px", md: "80px" }}
+        pt={{ base: "60px", md: "80px" }}
         pb={{ base: "30px", md: "50px" }}
       >
         <Heading
@@ -107,7 +159,6 @@ const CrossChainSlider = () => {
           {list.map((resource, index) => (
             <SwiperSlide key={index}>
               <Box
-                // bg="#fff"
                 borderRadius={"24px"}
                 h={{ base: "400px", md: "450px" }}
                 my={2}
@@ -118,7 +169,7 @@ const CrossChainSlider = () => {
                 position={"relative"}
               >
                 <Text
-                  px={6}
+                  px={{ base: 3, md: 6 }}
                   pt={2}
                   pb={"18px"}
                   h={"114px"}

@@ -59,6 +59,10 @@ const variants = {
     _focus: {
       boxShadow: "none"
     }
+  },
+  custom: {
+    padding: "0",
+    height: "auto"
   }
 };
 

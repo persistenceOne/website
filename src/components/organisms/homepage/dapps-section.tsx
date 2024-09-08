@@ -1,11 +1,12 @@
 import DappCard, { DappCardInterface } from "@/components/atoms/dapp-card";
 import { Container, Box, Stack } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { numberFormat } from "@/utils/helpers";
 import GetXprtSection from "@/components/organisms/homepage/get-xprt-section";
 import { useTranslation } from "next-export-i18n";
+import { fetchDexterInfo, fetchDexterUsers } from "@/pages/api";
 
 const getData = (dexterInfo: any, t: any) => {
   const dApps: DappCardInterface[] = [
@@ -27,20 +28,6 @@ const getData = (dexterInfo: any, t: any) => {
           value: `${numberFormat(Number(dexterInfo.allTimeUsers), 3)}`
         }
       ],
-      supportingAssets: [
-        { asset: "WBTC", assetIcon: "/images/tokens/wbtc.svg" },
-        { asset: "stkXPRT", assetIcon: "/images/tokens/stkxprt.svg" },
-        { asset: "XPRT", assetIcon: "/images/tokens/xprt.svg" },
-        { asset: "USDC", assetIcon: "/images/tokens/usdc.svg" },
-        { asset: "USDT", assetIcon: "/images/tokens/usdt.svg" },
-        { asset: "stkATOM", assetIcon: "/images/tokens/stkatom.svg" },
-        { asset: "ATOM", assetIcon: "/images/tokens/atom.svg" },
-        {
-          asset: "SHD, STARS, HUAHUA, DYDX, stkDYDX, stkSTARS, stkHUAHUA",
-          assetIcon: "/images/tokens/more.svg"
-        }
-        // { asset: "SHD", assetIcon: "/images/shd.svg" },
-      ],
       website: {
         link: "https://app.persistence.one",
         linkText: "app.persistence.one",
@@ -59,7 +46,37 @@ const getData = (dexterInfo: any, t: any) => {
 };
 
 const DappsSection = () => {
-  const [dexterInfo] = useAppStore((state) => [state.dexterInfo], shallow);
+  const [
+    setDexterTVl,
+    setDexterTotalVolume,
+    setPersistenceTvl,
+    setDexterUsers,
+    dexterInfo
+  ] = useAppStore(
+    (state) => [
+      state.setDexterTVl,
+      state.setDexterTotalVolume,
+      state.setPersistenceTvl,
+      state.setDexterUsers,
+      state.dexterInfo
+    ],
+    shallow
+  );
+
+  //fetching dexter info
+  useEffect(() => {
+    const fetch = async () => {
+      fetchDexterInfo().then((resp) => {
+        setDexterTVl(resp.tvl);
+        setPersistenceTvl(resp.tvl);
+        setDexterTotalVolume(resp.volume);
+      });
+      fetchDexterUsers().then((userResponse) => {
+        setDexterUsers(userResponse);
+      });
+    };
+    fetch();
+  }, []);
   const { t } = useTranslation();
   const dApps = getData(dexterInfo, t);
   return (

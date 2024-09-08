@@ -1,16 +1,9 @@
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Button,
   Container,
-  Flex,
   Heading,
   Image,
-  Link,
-  ListItem,
-  Stack,
   Text,
-  UnorderedList,
   VStack,
   SimpleGrid
 } from "@chakra-ui/react";

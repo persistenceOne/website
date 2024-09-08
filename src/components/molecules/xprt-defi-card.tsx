@@ -15,24 +15,6 @@ import Link from "next/link";
 import React from "react";
 import { PoolData } from "@/components/organisms/xprt/table";
 
-export interface XPRTDefiCardInterface {
-  tokens: {
-    name: string;
-    image: string;
-  }[];
-  cta: {
-    label: string;
-    link: string;
-    bg: string;
-    hover: string;
-  };
-  description: string;
-  stats: {
-    label: string;
-    value: string;
-  }[];
-}
-
 const XPRTDefiCard = ({
   token1,
   token2Img,

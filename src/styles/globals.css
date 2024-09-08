@@ -37,35 +37,12 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/poppins-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/poppins-v21-latin-700.woff2") format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 body, html {
   background: #FCF7F1;
   font-family: "Poppins", sans-serif !important;
-}
-
-
-.history-slider .slick-dots {
-  bottom: -35px;
-}
-
-.history-slider .slick-slide{
-  padding: 12px;
-}
-
-.history-slider .slick-dots li button:before {
-  color: #000000;
-  background: #000000;
-  opacity: 1;
-  border-radius: 100%;
-}
-
-
-.history-slider .slick-dots li.slick-active button:before {
-  color: #c73238;
-  background: #c73238;
-  opacity: 1;
 }
 
 .xprt-defi-cards .slick-prev, .xprt-defi-cards .slick-next{
@@ -435,17 +412,6 @@ color: #000000;
   .swiper-slide-active .slider-card{
     box-shadow: none;
   }
-  /*.swiper-slide.swiper-slide-prev{*/
-  /*  margin-right: 0px !important;*/
-  /*}*/
-  /*.swiper-slide.swiper-slide-next{*/
-  /*  margin-left: 0px !important;*/
-  /*}*/
-
-  /*.swiper-slide-active .slider-card .video-container{*/
-  /*  margin: 0 14px;*/
-  /*  background-size: inherit !important;*/
-  /*}*/
 }
 
 @media (min-width: 540px) {

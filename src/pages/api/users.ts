@@ -34,12 +34,11 @@ export default async function handler(
     const currentDate = date.toISOString().split("T")[0];
     const start_date = startDate || START_DATE;
     const end_date = endDate || currentDate;
-    const { get_daily_user_count, get_monthly_user_count } =
-      await graphQLClient.request<{
-        get_daily_user_count: User[];
-        get_monthly_user_count: UserMonthly[];
-      }>(
-        gql`
+    const { get_monthly_user_count } = await graphQLClient.request<{
+      get_daily_user_count: User[];
+      get_monthly_user_count: UserMonthly[];
+    }>(
+      gql`
         query {
           get_daily_user_count(
             args: { start_date: "${start_date}", end_date: "${end_date}" }
@@ -56,7 +55,7 @@ export default async function handler(
           }
         }
       `
-      );
+    );
 
     // TODO: Move logic to client side to reduce response size
     const monthlyData = get_monthly_user_count.map((user: any) => {

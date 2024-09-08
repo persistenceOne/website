@@ -1,16 +1,5 @@
 import BlogCard, { BlogCardInterface } from "@/components/atoms/blog-card";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Button,
-  HStack,
-  Heading,
-  Text,
-  VStack,
-  Container,
-  Stack,
-  Flex
-} from "@chakra-ui/react";
+import { Box, Heading, VStack, Container, Flex } from "@chakra-ui/react";
 import React from "react";
 
 const resourcesList: BlogCardInterface[] = [
@@ -52,23 +41,8 @@ const BlogSection = () => {
           >
             Community Resources
           </Heading>
-
-          {/* <Button
-            variant={"link"}
-            color={"primary.black"}
-            fontWeight={600}
-            fontSize={{ base: "16px", md: "20px" }}
-            rightIcon={<ArrowForwardIcon />}
-          >
-            Explore All
-          </Button> */}
         </VStack>
-        <Flex
-          gap={6}
-          w={"full"}
-          direction={{ base: "column", md: "row" }}
-          // justify={""}
-        >
+        <Flex gap={6} w={"full"} direction={{ base: "column", md: "row" }}>
           {resourcesList.map((resource, index) => (
             <BlogCard
               key={resource.id}

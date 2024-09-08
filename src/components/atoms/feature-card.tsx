@@ -4,7 +4,6 @@ import {
   Button,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Stack,
   Heading,
@@ -54,7 +53,6 @@ const FeatureCard = ({
     <Card
       borderRadius={20}
       width={{ base: "100%", md: width }}
-      // height={height}
       flex={"auto"}
       py={"25px"}
       px={"30px"}

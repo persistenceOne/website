@@ -10,7 +10,7 @@ import {
   Image,
   Text
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import {

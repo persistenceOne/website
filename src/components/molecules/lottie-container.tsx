@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Lottie from "react-lottie";
-import { Box, Image, useMediaQuery } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 interface Props {
   lottie: any;
