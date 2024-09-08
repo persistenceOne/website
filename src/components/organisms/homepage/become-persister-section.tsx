@@ -1,6 +1,5 @@
 import CommunityPanel from "@/components/molecules/tab-panels/community-panel";
 import JoinTeamPanel from "@/components/molecules/tab-panels/join-team-panel";
-import NetworkPanel from "@/components/molecules/tab-panels/network-panel";
 import { MINTSCAN_ECOSYSTEM_LINK } from "@/utils/config";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {

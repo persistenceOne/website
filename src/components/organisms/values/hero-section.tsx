@@ -7,7 +7,6 @@ import {
   Container,
   Image
 } from "@chakra-ui/react";
-// import Image from "next/image";
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 

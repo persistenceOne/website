@@ -9,11 +9,9 @@ import {
   Text,
   VStack,
   Container,
-  Stack,
   SimpleGrid
 } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import Icon from "./Icon";
 import { useTranslation, LinkWithLocale } from "next-export-i18n";
@@ -183,6 +181,7 @@ const Footer = () => {
               alt={"Persistence Logo"}
             />
             <LinkWithLocale
+              aria-label="Download Media"
               href={
                 "https://persistence.notion.site/Persistence-Brand-Press-Kit-85150f1ae50a48cf9edb46577261ed29"
               }
@@ -208,6 +207,7 @@ const Footer = () => {
                   key={link.name}
                   target="_blank"
                   rel="noopenner noreferrer"
+                  aria-label={link.name}
                 >
                   {link.icon !== "github" ? (
                     <Box
@@ -278,6 +278,7 @@ const Footer = () => {
                     key={item.title}
                     target={item.isExternal ? "_blank" : "_self"}
                     rel={item.isExternal ? "noopener noreferrer" : ""}
+                    fontSize={{ base: "12px", xl: "16px" }}
                   >
                     <Button
                       variant={"link"}
@@ -310,7 +311,11 @@ const Footer = () => {
           justify={"center"}
         >
           {footerSocialLinks.map((link) => (
-            <LinkWithLocale href={link.link} key={link.name}>
+            <LinkWithLocale
+              href={link.link}
+              key={link.name}
+              aria-label={link.name}
+            >
               <Box
                 w={"24px"}
                 h={"24px"}
@@ -350,7 +355,7 @@ const Footer = () => {
               © Copyright 2024 Persistence Labs. All rights reserved.
             </Text>
             <HStack gap={8}>
-              <LinkWithLocale href={"/termsofuse"}>
+              <LinkWithLocale href={"/termsofuse"} fontSize={14}>
                 <Button
                   variant={"link"}
                   color={"#ECECEC"}
@@ -360,7 +365,7 @@ const Footer = () => {
                   {t("TERMS_OF_USE")}
                 </Button>
               </LinkWithLocale>
-              <LinkWithLocale href={"/privacy"}>
+              <LinkWithLocale href={"/privacy"} fontSize={14}>
                 <Button
                   variant={"link"}
                   color={"#ECECEC"}

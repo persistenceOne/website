@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import {
   Box,
   Flex,
@@ -21,22 +20,12 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  Button,
-  Link,
-  useMediaQuery
+  useMediaQuery,
+  Button
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ExternalLinkIcon,
-  ArrowForwardIcon
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Icon from "./Icon";
-import {
-  fetchDexterInfo,
-  fetchDexterUsers,
-  fetchTokenPrices
-} from "@/pages/api";
+import { fetchTokenPrices } from "@/pages/api";
 import { useAppStore } from "@/store/store";
 import { shallow } from "zustand/shallow";
 import { useRouter } from "next/router";
@@ -55,8 +44,10 @@ const getMenuListMobile = (
           {({ isExpanded }) => (
             <>
               <AccordionButton w="fit-content" _hover={{ bg: "transparent" }}>
-                <Text
+                <Button
+                  variant={"custom"}
                   cursor={"pointer"}
+                  fontWeight={400}
                   px={"12px"}
                   py={"8px"}
                   borderRadius={"6px"}
@@ -71,12 +62,7 @@ const getMenuListMobile = (
                   _hover={{ bg: "#E596364D" }}
                 >
                   {item.name}
-                </Text>
-                {/* {isExpanded ? (
-              <MinusIcon fontSize='12px' />
-            ) : (
-              <AddIcon fontSize='12px' />
-            )} */}
+                </Button>
               </AccordionButton>
               <AccordionPanel pb={4}>
                 <VStack align={"start"} gap={4}>
@@ -202,7 +188,8 @@ const getMenuList = (
   return menuItems.map((item: any) => (
     <Popover placement={placement} trigger={trigger} key={`hover-${item.id}`}>
       <PopoverTrigger>
-        <Text
+        <Button
+          variant={"custom"}
           cursor={"pointer"}
           className={"nav-item-title"}
           fontSize={"18px"}
@@ -212,7 +199,7 @@ const getMenuList = (
           color={path === "/" ? "#FFFFFF" : "#000000"}
         >
           {item.name}
-        </Text>
+        </Button>
       </PopoverTrigger>
       <PopoverContent borderRadius={6}>
         <PopoverArrow />
@@ -325,7 +312,7 @@ const Header = () => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
-  const [isMobile] = useMediaQuery("(max-width: 500px)");
+  const [isLandscape] = useMediaQuery("(min-width: 768px)");
   const menuItems = [
     {
       id: 0,
@@ -505,48 +492,16 @@ const Header = () => {
     }
   };
 
-  const [
-    setTokenPrices,
-    setDexterTVl,
-    setDexterTotalVolume,
-    setPersistenceTvl,
-    setDexterUsers,
-    dexterInfo
-  ] = useAppStore(
-    (state) => [
-      state.setTokenPrices,
-      state.setDexterTVl,
-      state.setDexterTotalVolume,
-      state.setPersistenceTvl,
-      state.setDexterUsers,
-      state.dexterInfo
-    ],
+  const [setTokenPrices] = useAppStore(
+    (state) => [state.setTokenPrices],
     shallow
   );
-
-  useEffect(() => {
-    setPersistenceTvl(dexterInfo.tvl);
-  }, [dexterInfo.tvl, setPersistenceTvl]);
 
   //fetching pstake info
   useEffect(() => {
     const fetch = async () => {
       const tokenPrices = await fetchTokenPrices();
       setTokenPrices(tokenPrices);
-    };
-    fetch();
-  }, []);
-
-  //fetching dexter info
-  useEffect(() => {
-    const fetch = async () => {
-      fetchDexterInfo().then((resp) => {
-        setDexterTVl(resp.tvl);
-        setDexterTotalVolume(resp.volume);
-      });
-      fetchDexterUsers().then((userResponse) => {
-        setDexterUsers(userResponse);
-      });
     };
     fetch();
   }, []);
@@ -563,7 +518,7 @@ const Header = () => {
     >
       <Container
         maxW={"1440px"}
-        px={{ base: "30px", md: "80px" }}
+        px={{ base: "24px", md: "80px" }}
         transition={"all 0.3s"}
         py={"20px"}
         mx={"auto"}
@@ -572,7 +527,7 @@ const Header = () => {
         my={{ base: "0", md: "32px" }}
         borderRadius={"1000px"}
       >
-        {isMobile ? (
+        {!isLandscape ? (
           <Flex
             as={"nav"}
             justify={"space-between"}
@@ -581,7 +536,7 @@ const Header = () => {
             display={{ base: "flex", md: "none" }}
           >
             <Box>
-              <LinkWithLocale href="/">
+              <LinkWithLocale href="/" aria-label="Logo">
                 {router.pathname !== "/" || isOpen ? (
                   <Box
                     width={"160px"}

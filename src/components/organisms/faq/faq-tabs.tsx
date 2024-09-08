@@ -10,28 +10,9 @@ import {
 import React from "react";
 import AccordionList from "@/components/organisms/faq/accordion-list";
 import Link from "next/link";
-import {
-  aboutPersistence,
-  aboutXprt,
-  liquidStaking
-} from "@/components/organisms/faq/faqList";
+import { aboutPersistence } from "@/components/organisms/faq/faqList";
 import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 import { useTranslation } from "next-export-i18n";
-
-const tabList = [
-  {
-    name: "About Persistence One",
-    faqs: aboutPersistence
-  },
-  {
-    name: "XPRT",
-    faqs: aboutXprt
-  },
-  {
-    name: "Liquid Staking",
-    faqs: liquidStaking
-  }
-];
 
 const FaqTabs = () => {
   const { t } = useTranslation();

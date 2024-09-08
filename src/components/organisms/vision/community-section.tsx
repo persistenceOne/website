@@ -1,8 +1,5 @@
-import { Box, Button, Heading, Container, Flex } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { Box, Heading, Container, Flex } from "@chakra-ui/react";
 import React from "react";
-import Link from "next/link";
-import { TELEGRAM_PERSISTENCE_COMMUNITY_LINK } from "@/utils/config";
 import Image from "next/image";
 import TallyForm from "@/components/molecules/tally-form";
 import { useTranslation } from "next-export-i18n";

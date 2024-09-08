@@ -7,20 +7,17 @@ import {
   getPaginationRowModel
 } from "@tanstack/react-table";
 import {
-  TableCaption,
   TableContainer,
   Thead,
   Table,
   Th,
   Tr,
   Td,
-  Tbody,
-  Tfoot
+  Tbody
 } from "@chakra-ui/table";
 import React, { useMemo } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import Icon from "@/components/molecules/Icon";
-import { SortingTableState } from "@tanstack/table-core/src/features/RowSorting";
 import { useTranslation } from "next-export-i18n";
 
 interface Props {
@@ -37,7 +34,6 @@ const CustomTable = ({ data, columns, onRowClick, parentClass }: Props) => {
       desc: true
     }
   ]);
-  const [rowsCount, setRowsCount] = React.useState<number>(5);
   const { t } = useTranslation();
   const table = useReactTable({
     data,

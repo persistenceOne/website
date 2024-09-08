@@ -1,14 +1,7 @@
 import PersisterValuesCard, {
   PersisterValuesCardInterface
 } from "@/components/atoms/persister-values-card";
-import {
-  Container,
-  VStack,
-  Heading,
-  Text,
-  Box,
-  SimpleGrid
-} from "@chakra-ui/react";
+import { Container, Heading, Box, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 

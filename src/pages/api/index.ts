@@ -1,15 +1,4 @@
 import axios from "axios";
-
-const defillamaApi = "https://defillama-datasets.llama.fi/lite/protocols2";
-export const STK_XPRT_TVL_URL =
-  "https://api.persistence.one/pstake/stkxprt/xprt_tvu";
-export const STK_ATOM_TVL_URL =
-  "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
-export const STK_OSMO_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkosmo/osmo_tvu";
-export const STK_DYDX_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkdydx/dydx_tvu";
-export const XPRT_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/1101";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const OSMO_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=15";
@@ -20,53 +9,6 @@ export const OSMOSIS_XPRT_WBTC_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=1773";
 export const MarketCap_API =
   "https://api.coingecko.com/api/v3/coins/persistence";
-export const LATEST_BLOCK_HEIGHT_URL =
-  "https://rest.core.persistence.one/cosmos/base/tendermint/v1beta1/blocks/latest";
-
-export const fetchChainTVL = async () => {
-  try {
-    const response = await axios.get(defillamaApi);
-    if (response && response.data && response.data.protocols) {
-      const protocol = response.data.protocols.find(
-        (item: any) => item.category === "Dexes" && item.name === "Dexter"
-      );
-      const liquidStake = response.data.protocols.find(
-        (item: any) =>
-          item.category === "Liquid Staking" && item.name === "pSTAKE Finance"
-      );
-      if (protocol) {
-        return (
-          Number(protocol.chainTvls.Persistence.tvl) +
-          Number(liquidStake.chainTvls.Persistence.tvl)
-        ).toFixed();
-      }
-    }
-    return 0;
-  } catch (e) {
-    console.log(e);
-    return 0;
-  }
-};
-
-export const getCosmosTVL = async (prefix: string) => {
-  try {
-    const res = await axios.get(
-      prefix === "cosmos"
-        ? STK_ATOM_TVL_URL
-        : prefix === "osmo"
-        ? STK_OSMO_TVL_API
-        : prefix === "xprt"
-        ? STK_XPRT_TVL_URL
-        : STK_DYDX_TVL_API
-    );
-    if (res && res.data) {
-      return res!.data!.amount!.amount;
-    }
-    return 0;
-  } catch (e) {
-    return 0;
-  }
-};
 
 export const fetchTokenPrices = async () => {
   let data = {
@@ -92,39 +34,25 @@ export const fetchTokenPrices = async () => {
 
 export const fetchDexterInfo = async () => {
   try {
-    const res = await fetch(DEXTER_POOL_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        query: `{
-          pool_weekly_aggregate_with_apr {
-            pool_id
-            current_liquidity_usd
-          }
-          swap_volume_lifetime_aggregate {
-            total_swap_volume
-          }
-          }`
-      })
-    });
-
-    const responseJson = await res.json();
+    const response = await fetch(`/api/dex-info`);
+    const responseJson = await response.json();
     let total_liquidity;
     let volume_usd = 0;
-    if (responseJson && responseJson.data) {
-      total_liquidity = responseJson.data.pool_weekly_aggregate_with_apr.reduce(
-        (acc: any, pool: any) => {
-          const { current_liquidity_usd } = pool;
 
-          acc.current_liquidity_usd += current_liquidity_usd;
-          return acc;
-        },
-        { current_liquidity_usd: 0 }
-      );
+    if (responseJson && responseJson.data && responseJson.data.data) {
+      total_liquidity =
+        responseJson.data.data.pool_weekly_aggregate_with_apr.reduce(
+          (acc: any, pool: any) => {
+            const { current_liquidity_usd } = pool;
+
+            acc.current_liquidity_usd += current_liquidity_usd;
+            return acc;
+          },
+          { current_liquidity_usd: 0 }
+        );
       volume_usd =
-        responseJson.data.swap_volume_lifetime_aggregate[0].total_swap_volume;
+        responseJson.data.data.swap_volume_lifetime_aggregate[0]
+          .total_swap_volume;
     }
 
     return {
@@ -307,19 +235,6 @@ export const getMarketCap = async () => {
   }
 };
 
-export const getBlockNumber = async () => {
-  try {
-    const res = await axios.get(LATEST_BLOCK_HEIGHT_URL);
-    if (res && res.data) {
-      console.log(res, "res-block-height");
-      return res!.data!.block!.header.height;
-    }
-    return 0;
-  } catch (e) {
-    return 0;
-  }
-};
-
 export const getBondedTokens = async () => {
   try {
     const responses = await axios.all([
@@ -349,21 +264,20 @@ export const getBondedTokens = async () => {
 
 export const fetchDexterUsers = async () => {
   try {
-    const res = await fetch(
-      "https://api.core-1.dexter.zone/api/rest/overview_info"
-    );
+    const response = await fetch(`/api/dex-users`);
+    const data = await response.json();
+    console.log(data, data.data, "fetchDexterUsers");
     let totalTraders = 0;
-    const data = await res.json();
-    if (data && data.overview_total_info) {
+    if (data && data.data && data.data.overview_total_info) {
       totalTraders =
-        data.overview_total_info[0].total_traders +
-        data.overview_total_info[0].total_lp_providers;
+        data.data.overview_total_info[0].total_traders +
+        data.data.overview_total_info[0].total_lp_providers;
     }
     return totalTraders;
   } catch (e) {
     console.log(e, "error in fetchDexterInfo");
     return {
-      monthlyTotalUsers: 0
+      allTimeUsers: 0
     };
   }
 };
