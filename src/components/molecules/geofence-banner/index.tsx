@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Icon from "../Icon";
-import { Box, Text, Link, Image } from "@chakra-ui/react";
+import { Box, Text, Link } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 
 const GeofenceNotice = () => {
   const { t } = useTranslation();
   const [banner, setBanner] = useState(true);
+
   const closeBanner = () => {
     setBanner(false);
   };

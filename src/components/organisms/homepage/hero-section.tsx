@@ -8,7 +8,6 @@ import { useTranslation } from "next-export-i18n";
 const HeroSection = () => {
   const { t } = useTranslation();
   const [isTablet] = useMediaQuery("(min-width: 768px)");
-
   return (
     <Box className={"hero-content"} bg={"#1d1208"} pos={"relative"}>
       <Box
@@ -121,7 +120,6 @@ const HeroSection = () => {
               left={"0"}
               right={"0"}
               height={"100%"}
-              // mt={"48px"}
             >
               <video
                 autoPlay={true}

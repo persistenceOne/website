@@ -10,10 +10,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
-        />
         {/* eslint-disable-next-line @next/next/inline-script-id */}
         <Script
           strategy="afterInteractive"
