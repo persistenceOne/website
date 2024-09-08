@@ -20,8 +20,8 @@ const HeroSection = () => {
           "2xl": "700px"
         }}
         maxH={{
-          base: "100%", // 0-48em
-          md: "440", // 48em-80em,
+          base: "900px", // 0-48em
+          md: "640px", // 48em-80em,
           lg: "572px", // 48em-80em,
           xl: "720px", // 80em+ 772
           "2xl": "800px"
