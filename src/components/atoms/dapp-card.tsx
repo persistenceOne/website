@@ -38,7 +38,6 @@ const DappCard = ({
   dAppLogo,
   dAppDescription,
   dAppStats,
-  supportingAssets,
   website,
   button
 }: DappCardInterface) => {
