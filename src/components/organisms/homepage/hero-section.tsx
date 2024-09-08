@@ -1,4 +1,11 @@
-import { Box, Button, Text, Stack, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Text,
+  Stack,
+  useMediaQuery,
+  Heading
+} from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 import Link from "next/link";
@@ -58,9 +65,11 @@ const HeroSection = () => {
             flexDir={"column"}
             maxW={{ base: "400px", lg: "600px", "2xl": "640px" }}
           >
-            <Text
+            <Heading
               color={"text.whiteFull"}
               textAlign={"left"}
+              display={"flex"}
+              flexDirection={"column"}
               fontWeight={{ base: 600, md: 700 }}
               fontSize={{ base: "32px", md: "26px", lg: "52px" }}
               lineHeight={{ base: "36px", md: "44px", lg: "70px" }}
@@ -69,14 +78,13 @@ const HeroSection = () => {
               <Text
                 as="span"
                 color={"#E59636"}
-                fontSize={{ base: "30px", md: "26px", lg: "72px" }}
-                lineHeight={{ base: "34px", md: "40px", lg: "86px" }}
+                fontSize={{ base: "34px", md: "26px", lg: "72px" }}
+                lineHeight={{ base: "38px", md: "40px", lg: "86px" }}
               >
                 {t("HOME_PAGE_HERO_TITLE1")}
               </Text>
-              <br />
-              {t("HOME_PAGE_HERO_TITLE2")}
-            </Text>
+              <Text as="span">{t("HOME_PAGE_HERO_TITLE2")}</Text>
+            </Heading>
             <Text
               textAlign={"left"}
               maxW={{ base: "400px", lg: "580px" }}
