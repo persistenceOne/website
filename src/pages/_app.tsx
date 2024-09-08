@@ -4,23 +4,10 @@ import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@/styles/theme";
 import { AppProps } from "next/app";
-import * as gtag from "../utils/gtag";
-import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter();
-  useEffect(() => {
-    const handleRouteChange = (url: any) => {
-      gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-
   useEffect(() => {
     AOS.init({
       duration: 1500
