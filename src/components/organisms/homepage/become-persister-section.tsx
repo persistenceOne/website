@@ -33,8 +33,6 @@ const BecomePersisterSection = ({
         maxW={"1300px"}
         px={{ base: "16px", md: "30px" }}
         py={"60px"}
-        className="aos-init aos-animate py-10"
-        data-aos="fade-up"
       >
         <Box>
           <Heading

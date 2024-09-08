@@ -106,12 +106,7 @@ const teamMembers: TeamMemberCardInterface[] = [
 const TeamSection = () => {
   const { t } = useTranslation();
   return (
-    <Container
-      maxW={"1440px"}
-      px={{ base: "30px", md: "80px" }}
-      className="aos-init aos-animate py-10"
-      data-aos="fade-up"
-    >
+    <Container maxW={"1440px"} px={{ base: "30px", md: "80px" }}>
       <Heading
         textAlign={"center"}
         color={"#633C0D"}

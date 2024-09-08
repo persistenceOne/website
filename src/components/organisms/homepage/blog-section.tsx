@@ -41,24 +41,9 @@ const resourcesList: BlogCardInterface[] = [
 
 const BlogSection = () => {
   const { t } = useTranslation();
-  const [isMobile] = useMediaQuery("(max-width: 500px)");
-  const [isLandScape] = useMediaQuery("(max-width: 990px)");
-  let sliderRef: any = useRef(null);
-  const next = () => {
-    sliderRef.slickNext();
-  };
-  const previous = () => {
-    sliderRef.slickPrev();
-  };
   return (
     <Box bg={"#FCF7F1"}>
-      <Container
-        maxW={"1440px"}
-        px={{ base: "16px", md: "100px" }}
-        py={"60px"}
-        className="aos-init aos-animate py-10"
-        data-aos="fade-up"
-      >
+      <Container maxW={"1440px"} px={{ base: "16px", md: "100px" }} py={"60px"}>
         <Box>
           <HStack alignItems={"center"} mb={"40px"} justifyContent={"center"}>
             <Heading color="#350B00" fontSize={{ base: "20px", xl: "44px" }}>

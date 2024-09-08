@@ -9,8 +9,6 @@ import { AppProps } from "next/app";
 import Header from "@/components/molecules/header";
 import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import GeofenceNotice from "@/components/molecules/geofence-banner";
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -24,12 +22,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1500
-    });
-  }, []);
 
   return (
     <>

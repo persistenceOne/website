@@ -22,8 +22,6 @@ const GetXprtSection = () => {
       py={{ base: "26px", md: "60px" }}
       w={"full"}
       bg={"#FFF8EE"}
-      className="aos-init aos-animate py-10"
-      data-aos="fade-up"
       borderRadius={"20px"}
     >
       <CardBody p={"0"}>
