@@ -86,6 +86,7 @@ const HeroSection = () => {
               <Text as="span">{t("HOME_PAGE_HERO_TITLE2")}</Text>
             </Heading>
             <Text
+              as={"span"}
               textAlign={"left"}
               mb={{ base: "42px", lg: "29px" }}
               color={"#FFFFFFCC"}
