@@ -1,5 +1,4 @@
 import {
-  Box,
   Card,
   Flex,
   Image,

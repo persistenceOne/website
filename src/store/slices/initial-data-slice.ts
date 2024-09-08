@@ -1,18 +1,5 @@
 import { StateCreator } from "zustand";
 
-export interface ValidatorInfo {
-  identity: string;
-  name: string;
-  weight: string;
-  delegationAmount: string;
-  targetDelegation: string;
-}
-
-export interface ValidatorsInfo {
-  osmo: ValidatorInfo[];
-  dydx: ValidatorInfo[];
-}
-
 type AvailablePools = 2 | 3 | 5 | 12 | 13;
 
 type OsmosisAvailablePools = 1101 | 1773;

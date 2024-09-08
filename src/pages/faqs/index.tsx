@@ -6,7 +6,6 @@ const FAQsPage = () => {
   return (
     <Layout>
       <FaqTabs />
-      {/*<CommunityNote />*/}
     </Layout>
   );
 };

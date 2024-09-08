@@ -3,11 +3,9 @@ import {
   Button,
   Card,
   CardBody,
-  CardHeader,
   HStack,
   Heading,
   Text,
-  useMediaQuery
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
