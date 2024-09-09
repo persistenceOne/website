@@ -13,15 +13,16 @@ import { Box, Container, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 import LottieAnimation from "@/components/molecules/lottie-container";
 import { useTranslation } from "next-export-i18n";
 import Image from "next/image";
+import Carousel from "react-multi-carousel";
 
 const CrossChainSlider = () => {
-  const [isMobile] = useMediaQuery("(max-width: 500px)");
+  const [isLandScape] = useMediaQuery("(min-width: 500px)");
   const { t } = useTranslation();
   const list = [
     {
       title: t("HOME_SECTION2_SLIDE1"),
       content: ``,
-      imageUrl: isMobile ? (
+      imageUrl: !isLandScape ? (
         <Image
           loading={"lazy"}
           src={"/images/home-page/static-slider/swap.webp"}
@@ -36,7 +37,7 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE2"),
       content: ``,
-      imageUrl: isMobile ? (
+      imageUrl: !isLandScape ? (
         <Image
           loading={"lazy"}
           src={"/images/home-page/static-slider/bridge.webp"}
@@ -51,7 +52,7 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE3"),
       content: ``,
-      imageUrl: isMobile ? (
+      imageUrl: !isLandScape ? (
         <Image
           loading={"lazy"}
           src={"/images/home-page/static-slider/speed.webp"}
@@ -66,7 +67,7 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE4"),
       content: ``,
-      imageUrl: isMobile ? (
+      imageUrl: !isLandScape ? (
         <Image
           loading={"lazy"}
           src={"/images/home-page/static-slider/secured.webp"}
@@ -81,7 +82,7 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE5"),
       content: ``,
-      imageUrl: isMobile ? (
+      imageUrl: !isLandScape ? (
         <Image
           loading={"lazy"}
           src={"/images/home-page/static-slider/scalable.webp"}
@@ -96,7 +97,7 @@ const CrossChainSlider = () => {
     {
       title: t("HOME_SECTION2_SLIDE6"),
       content: ``,
-      imageUrl: isMobile ? (
+      imageUrl: !isLandScape ? (
         <Image
           loading={"lazy"}
           src={"/images/home-page/static-slider/trade.webp"}
@@ -127,38 +128,37 @@ const CrossChainSlider = () => {
         >
           {t("HOME_SECTION2_TITLE")}
         </Heading>
-        <Swiper
-          spaceBetween={18}
-          speed={1500}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 1500,
-            duration: 1500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            waitForTransition: true,
-            reverseDirection: false
-          }}
-          breakpoints={{
-            320: { slidesPerView: 1, spaceBetween: 10 },
-            480: { slidesPerView: 1.5, spaceBetween: 15 },
-            768: { slidesPerView: 2.5, spaceBetween: 15 },
-            1220: {
-              width: 1220,
-              slidesPerView: 3.4
-            },
-            1440: {
-              width: 1440,
-              slidesPerView: 4.4
-            }
-          }}
-          navigation={true}
-          modules={[Autoplay, Navigation]}
-        >
-          {list.map((resource, index) => (
-            <SwiperSlide key={index}>
+        {!isLandScape ? (
+          <Carousel
+            ssr
+            className={"cross-chain-slider"}
+            deviceType={"mobile"}
+            partialVisbile={false}
+            responsive={{
+              desktop: {
+                breakpoint: { max: 3000, min: 1280 },
+                items: 3,
+                partialVisibilityGutter: 10
+              },
+              tablet: {
+                breakpoint: { max: 1280, min: 768 },
+                items: 2,
+                partialVisibilityGutter: 10
+              },
+              mobile: {
+                breakpoint: { max: 768, min: 0 },
+                items: 1,
+                partialVisibilityGutter: 10
+              }
+            }}
+            autoPlay={true}
+            autoPlaySpeed={2000}
+            infinite={true}
+            arrows={false}
+          >
+            {list.map((resource, index) => (
               <Box
+                key={index}
                 borderRadius={"24px"}
                 h={{ base: "400px", md: "450px" }}
                 my={2}
@@ -205,9 +205,91 @@ const CrossChainSlider = () => {
                   {resource.imageUrl}
                 </Box>
               </Box>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            ))}
+          </Carousel>
+        ) : (
+          <Swiper
+            spaceBetween={18}
+            speed={1500}
+            centeredSlides={true}
+            loop={true}
+            // autoplay={{
+            //   delay: 1500,
+            //   duration: 1500,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: false,
+            //   waitForTransition: true,
+            //   reverseDirection: false
+            // }}
+            breakpoints={{
+              320: { slidesPerView: 1, spaceBetween: 10 },
+              480: { slidesPerView: 1.5, spaceBetween: 15 },
+              768: { slidesPerView: 2.5, spaceBetween: 15 },
+              1220: {
+                width: 1220,
+                slidesPerView: 3.4
+              },
+              1440: {
+                width: 1440,
+                slidesPerView: 4.4
+              }
+            }}
+            navigation={true}
+            modules={[Autoplay, Navigation]}
+          >
+            {list.map((resource, index) => (
+              <SwiperSlide key={index}>
+                <Box
+                  borderRadius={"24px"}
+                  h={{ base: "400px", md: "450px" }}
+                  my={2}
+                  boxShadow={"md"}
+                  display={"flex"}
+                  flexDir={"column"}
+                  className={"slider-card"}
+                  position={"relative"}
+                >
+                  <Text
+                    px={{ base: 3, md: 6 }}
+                    pt={2}
+                    pb={"18px"}
+                    h={"114px"}
+                    color={"#633C0D"}
+                    fontSize={{ base: "16px", md: "22px" }}
+                    lineHeight={{ base: "30px", md: "33px" }}
+                    fontWeight={600}
+                    className={"slide-title"}
+                    position={"absolute"}
+                    top={"20px"}
+                    left={{ base: "30px", md: "auto" }}
+                    zIndex={10}
+                  >
+                    {resource.title}
+                  </Text>
+                  <Box
+                    className={"video-container"}
+                    flex={1}
+                    w={"100%"}
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    flexDir="column"
+                    position={"absolute"}
+                    top={0}
+                    bottom={0}
+                    borderRadius={"24px"}
+                    overflow={"hidden"}
+                    bg={"#FFFFFF"}
+                    pt={"140px"}
+                    pb={"70px"}
+                  >
+                    {resource.imageUrl}
+                  </Box>
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </Container>
     </Box>
   );

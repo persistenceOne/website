@@ -37,9 +37,6 @@ export default extendTheme({
       "::-webkit-scrollbar-thumb:hover": {
         background: "#555"
       },
-      // "*::-webkit-scrollbar": {
-      //   display: "none",
-      // },
       body: {
         color: "#000",
         background: "#FCF7F1",

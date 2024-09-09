@@ -429,6 +429,7 @@ color: #000000;
   transition-timing-function: ease-in-out;
 }
 
+.react-multi-carousel-item--active .slider-card .video-container,
 .swiper-slide-active .slider-card .video-container{
   background-image: url("/images/home-page/anim-bg.svg");
   border: 1.1px solid #8C5512;
@@ -436,9 +437,10 @@ color: #000000;
   background-position: center;
   background-repeat: no-repeat;
 }
+.react-multi-carousel-item--active .slider-card .slide-title,
 .swiper-slide-active .slider-card .slide-title{
   color: #FEFDFB !important;
-  font-size: 26px !important;
+  font-size: 22px !important;
   font-weight: 700 !important;
 }
 

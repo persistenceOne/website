@@ -32,6 +32,170 @@ import { useRouter } from "next/router";
 import { useTranslation, LinkWithLocale } from "next-export-i18n";
 import LangDropdown from "@/components/molecules/lang-dropdown";
 
+const getMenuItems = (t: any) => {
+  return [
+    {
+      id: 0,
+      name: t("LEARN"),
+      subItems: [
+        {
+          title: t("VISION"),
+          description: t("NAV_BAR_VISION_TEXT"),
+          icon: "book",
+          iconType: "stroke",
+          link: "/vision",
+          isExternal: false,
+          comingSoon: false
+        },
+        {
+          title: t("FAQS"),
+          description: t("NAV_BAR_FAQS_TEXT"),
+          icon: "faq",
+          iconType: "stroke",
+          link: "/faqs",
+          isExternal: false,
+          comingSoon: false
+        },
+        {
+          title: t("BLOG"),
+          description: t("NAV_BAR_BLOG_TEXT"),
+          icon: "blog",
+          iconType: "stroke",
+          link: "https://blog.persistence.one/",
+          isExternal: true,
+          comingSoon: false
+        },
+        {
+          title: t("DOCS"),
+          description: t("NAV_BAR_DOCS_TEXT"),
+          icon: "docs",
+          iconType: "stroke",
+          link: "https://docs.persistence.one",
+          isExternal: true,
+          comingSoon: false
+        }
+      ]
+    },
+    {
+      id: 1,
+      name: "XPRT",
+      subItems: [
+        {
+          title: t("ABOUT"),
+          description: t("NAV_BAR_DOCS_TEXT"),
+          icon: "about",
+          iconType: "fill",
+          link: "/xprt",
+          isExternal: false,
+          comingSoon: false
+        },
+        {
+          title: t("STAKING"),
+          description: t("NAV_BAR_STAKING_TEXT"),
+          icon: "staking",
+          iconType: "stroke",
+          link: "https://wallet.keplr.app/chains/persistence",
+          isExternal: true,
+          comingSoon: false
+        },
+        {
+          title: t("WALLET"),
+          description: t("NAV_BAR_WALLET_TEXT"),
+          icon: "wallet",
+          iconType: "stroke",
+          link: "https://wallet.persistence.one/",
+          isExternal: true,
+          comingSoon: false
+        },
+        {
+          title: t("GOVERNANCE"),
+          description: t("NAV_BAR_GOVERNANCE_TEXT"),
+          icon: "persistence",
+          iconType: "stroke",
+          link: "https://www.mintscan.io/persistence/proposals",
+          isExternal: true,
+          comingSoon: false
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: t("CONNECT"),
+      subItems: [
+        {
+          title: t("PERSISTERS"),
+          description: t("NAV_BAR_PERSISTERS_TEXT"),
+          icon: "values",
+          iconType: "fill",
+          link: "/values",
+          isExternal: false,
+          comingSoon: false
+        },
+        {
+          title: t("CAREERS"),
+          description: t("NAV_BAR_CAREERS_TEXT"),
+          icon: "career",
+          iconType: "stroke",
+          link: "https://careers.persistence.one/",
+          isExternal: true,
+          comingSoon: false
+        },
+        {
+          title: t("DOWNLOAD_MEDIA_KIT"),
+          description: t("NAV_BAR_DOWNLOAD_MEDIA_KIT_TEXT"),
+          icon: "download",
+          iconType: "stroke",
+          link: "https://persistence.notion.site/Persistence-Brand-Press-Kit-85150f1ae50a48cf9edb46577261ed29",
+          isExternal: true,
+          comingSoon: false
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: t("COMMUNITY"),
+      subItems: [
+        {
+          title: "X (Twitter)",
+          description: "",
+          icon: "header-twitter",
+          iconType: "fill",
+          link: "https://twitter.com/PersistenceOne",
+          isExternal: true,
+          comingSoon: false
+        },
+        {
+          title: "Discord",
+          description: "",
+          icon: "header-discord",
+          iconType: "fill",
+          link: "https://discord.persistence.one/",
+          isExternal: true,
+          comingSoon: false
+        },
+        {
+          title: "Telegram",
+          description: "",
+          icon: "header-telegram",
+          iconType: "fill",
+          link: "https://t.me/persistenceone",
+          isExternal: true,
+          comingSoon: false
+        },
+        {
+          title: "Community Forum",
+          description: "",
+          icon: "community",
+          iconType: "stroke",
+          link: "https://forum.persistence.one/",
+          isExternal: true,
+          comingSoon: false
+        }
+      ]
+    }
+  ];
+};
+
 const getMenuListMobile = (
   menuItems: any,
   onClose: () => void,
@@ -313,167 +477,6 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
   const [isLandscape] = useMediaQuery("(min-width: 768px)");
-  const menuItems = [
-    {
-      id: 0,
-      name: t("LEARN"),
-      subItems: [
-        {
-          title: t("VISION"),
-          description: t("NAV_BAR_VISION_TEXT"),
-          icon: "book",
-          iconType: "stroke",
-          link: "/vision",
-          isExternal: false,
-          comingSoon: false
-        },
-        {
-          title: t("FAQS"),
-          description: t("NAV_BAR_FAQS_TEXT"),
-          icon: "faq",
-          iconType: "stroke",
-          link: "/faqs",
-          isExternal: false,
-          comingSoon: false
-        },
-        {
-          title: t("BLOG"),
-          description: t("NAV_BAR_BLOG_TEXT"),
-          icon: "blog",
-          iconType: "stroke",
-          link: "https://blog.persistence.one/",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: t("DOCS"),
-          description: t("NAV_BAR_DOCS_TEXT"),
-          icon: "docs",
-          iconType: "stroke",
-          link: "https://docs.persistence.one",
-          isExternal: true,
-          comingSoon: false
-        }
-      ]
-    },
-    {
-      id: 1,
-      name: "XPRT",
-      subItems: [
-        {
-          title: t("ABOUT"),
-          description: t("NAV_BAR_DOCS_TEXT"),
-          icon: "about",
-          iconType: "fill",
-          link: "/xprt",
-          isExternal: false,
-          comingSoon: false
-        },
-        {
-          title: t("STAKING"),
-          description: t("NAV_BAR_STAKING_TEXT"),
-          icon: "staking",
-          iconType: "stroke",
-          link: "https://wallet.keplr.app/chains/persistence",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: t("WALLET"),
-          description: t("NAV_BAR_WALLET_TEXT"),
-          icon: "wallet",
-          iconType: "stroke",
-          link: "https://wallet.persistence.one/",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: t("GOVERNANCE"),
-          description: t("NAV_BAR_GOVERNANCE_TEXT"),
-          icon: "persistence",
-          iconType: "stroke",
-          link: "https://www.mintscan.io/persistence/proposals",
-          isExternal: true,
-          comingSoon: false
-        }
-      ]
-    },
-    {
-      id: 2,
-      name: t("CONNECT"),
-      subItems: [
-        {
-          title: t("PERSISTERS"),
-          description: t("NAV_BAR_PERSISTERS_TEXT"),
-          icon: "values",
-          iconType: "fill",
-          link: "/values",
-          isExternal: false,
-          comingSoon: false
-        },
-        {
-          title: t("CAREERS"),
-          description: t("NAV_BAR_CAREERS_TEXT"),
-          icon: "career",
-          iconType: "stroke",
-          link: "https://careers.persistence.one/",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: t("DOWNLOAD_MEDIA_KIT"),
-          description: t("NAV_BAR_DOWNLOAD_MEDIA_KIT_TEXT"),
-          icon: "download",
-          iconType: "stroke",
-          link: "https://persistence.notion.site/Persistence-Brand-Press-Kit-85150f1ae50a48cf9edb46577261ed29",
-          isExternal: true,
-          comingSoon: false
-        }
-      ]
-    },
-    {
-      id: 3,
-      name: t("COMMUNITY"),
-      subItems: [
-        {
-          title: "X (Twitter)",
-          description: "",
-          icon: "header-twitter",
-          iconType: "fill",
-          link: "https://twitter.com/PersistenceOne",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: "Discord",
-          description: "",
-          icon: "header-discord",
-          iconType: "fill",
-          link: "https://discord.persistence.one/",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: "Telegram",
-          description: "",
-          icon: "header-telegram",
-          iconType: "fill",
-          link: "https://t.me/persistenceone",
-          isExternal: true,
-          comingSoon: false
-        },
-        {
-          title: "Community Forum",
-          description: "",
-          icon: "community",
-          iconType: "stroke",
-          link: "https://forum.persistence.one/",
-          isExternal: true,
-          comingSoon: false
-        }
-      ]
-    }
-  ];
 
   useEffect(() => {
     let body: any = document.getElementsByTagName("body")[0];
@@ -599,12 +602,19 @@ const Header = () => {
               align={"center"}
               direction={{ base: "column", md: "row" }}
             >
-              {getMenuList(menuItems, "top-start", "hover", router.pathname)}
+              {getMenuList(
+                getMenuItems(t),
+                "top-start",
+                "hover",
+                router.pathname
+              )}
               <LangDropdown type={""} />
             </Stack>
           </Flex>
         )}
-        {isOpen ? getMenuListMobile(menuItems, onClose, router.pathname) : null}
+        {isOpen
+          ? getMenuListMobile(getMenuItems(t), onClose, router.pathname)
+          : null}
       </Container>
     </Box>
   );
