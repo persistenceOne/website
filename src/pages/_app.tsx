@@ -1,11 +1,12 @@
+import "../styles/globals.css";
 import React, { useEffect } from "react";
 import Head from "next/head";
-import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@/styles/theme";
 import { AppProps } from "next/app";
 import * as gtag from "../utils/gtag";
 import { useRouter } from "next/router";
+import Fonts from "@/styles/fonts";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -84,6 +85,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
       </Head>
       <ChakraProvider theme={theme}>
+        <Fonts/>
         <Component {...pageProps} />
       </ChakraProvider>
     </>

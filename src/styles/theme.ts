@@ -52,9 +52,8 @@ export default extendTheme({
     }
   },
   fonts: {
-    heading:
-      "'Poppins',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji",
-    body: "'Poppins',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"
+    heading: "'Poppins', sans-serif",
+    body: "'Poppins', sans-serif"
   },
   components: {
     Heading,
