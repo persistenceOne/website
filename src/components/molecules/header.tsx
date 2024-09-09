@@ -475,23 +475,6 @@ const Header = () => {
     }
   ];
 
-  useEffect(() => {
-    let body: any = document.getElementsByTagName("body")[0];
-    body.classList = "";
-    window.addEventListener("scroll", scrollNavigation, true);
-  }, []);
-
-  const scrollNavigation = () => {
-    const doc = document.documentElement;
-    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    let topbar = document.getElementById("is-sticky") as HTMLElement;
-    if (top > 50) {
-      topbar.classList.add("nav-bar");
-    } else {
-      topbar.classList.remove("nav-bar");
-    }
-  };
-
   const [setTokenPrices] = useAppStore(
     (state) => [state.setTokenPrices],
     shallow
