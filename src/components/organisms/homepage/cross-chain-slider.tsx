@@ -131,6 +131,7 @@ const CrossChainSlider = () => {
         {!isLandScape ? (
           <Carousel
             ssr
+            className={"cross-chain-slider"}
             deviceType={"mobile"}
             partialVisbile={false}
             responsive={{
@@ -151,7 +152,7 @@ const CrossChainSlider = () => {
               }
             }}
             autoPlay={true}
-            autoPlaySpeed={1500}
+            autoPlaySpeed={2000}
             infinite={true}
             arrows={false}
           >
@@ -212,14 +213,14 @@ const CrossChainSlider = () => {
             speed={1500}
             centeredSlides={true}
             loop={true}
-            autoplay={{
-              delay: 1500,
-              duration: 1500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
-              waitForTransition: true,
-              reverseDirection: false
-            }}
+            // autoplay={{
+            //   delay: 1500,
+            //   duration: 1500,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: false,
+            //   waitForTransition: true,
+            //   reverseDirection: false
+            // }}
             breakpoints={{
               320: { slidesPerView: 1, spaceBetween: 10 },
               480: { slidesPerView: 1.5, spaceBetween: 15 },
