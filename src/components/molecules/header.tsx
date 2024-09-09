@@ -483,6 +483,23 @@ const Header = () => {
     shallow
   );
 
+  useEffect(() => {
+    let body: any = document.getElementsByTagName("body")[0];
+    body.classList = "";
+    window.addEventListener("scroll", scrollNavigation, true);
+  }, []);
+
+  const scrollNavigation = () => {
+    const doc = document.documentElement;
+    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    let topbar = document.getElementById("is-sticky") as HTMLElement;
+    if (top > 50) {
+      topbar.classList.add("nav-bar");
+    } else {
+      topbar.classList.remove("nav-bar");
+    }
+  };
+
   //fetching pstake info
   useEffect(() => {
     const fetch = async () => {
@@ -498,8 +515,8 @@ const Header = () => {
       className={`navbar-container ${isOpen ? "home" : ""}`}
       transition={"all 0.3s"}
       bg={{
-        base: router.pathname === "/" ? "#1d1208" : "#FCF7F1",
-        md: "#1d1208"
+        base: router.pathname === "/" ? "transparent" : "#FCF7F1",
+        md: "transparent"
       }}
     >
       <Container
@@ -510,7 +527,7 @@ const Header = () => {
         mx={"auto"}
         bg={"transparent"}
         className={"navbar-box"}
-        // my={{ base: "0", md: "32px" }}
+        my={{ base: "0", md: "32px" }}
         borderRadius={"1000px"}
       >
         {!isLandscape ? (
