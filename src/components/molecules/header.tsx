@@ -498,8 +498,8 @@ const Header = () => {
       className={`navbar-container ${isOpen ? "home" : ""}`}
       transition={"all 0.3s"}
       bg={{
-        base: router.pathname === "/" ? "transparent" : "#FCF7F1",
-        md: "transparent"
+        base: router.pathname === "/" ? "#1d1208" : "#FCF7F1",
+        md: "#1d1208"
       }}
     >
       <Container
@@ -510,7 +510,7 @@ const Header = () => {
         mx={"auto"}
         bg={"transparent"}
         className={"navbar-box"}
-        my={{ base: "0", md: "32px" }}
+        // my={{ base: "0", md: "32px" }}
         borderRadius={"1000px"}
       >
         {!isLandscape ? (

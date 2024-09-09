@@ -7,7 +7,7 @@ import Header from "@/components/molecules/header";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Box pos={"fixed"} width="100%" zIndex="sticky">
+      <Box width="100%">
         <GeofenceNotice />
         <Header />
       </Box>

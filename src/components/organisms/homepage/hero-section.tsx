@@ -16,7 +16,7 @@ const HeroSection = () => {
   const { t } = useTranslation();
   const [isTablet] = useMediaQuery("(min-width: 768px)");
   return (
-    <Box className={"hero-content"} bg={"#1d1208"} pos={"relative"}>
+    <Box className={"hero-content"} bg={"#1d1208"} pos={"relative"} zIndex={0}>
       <Box
         minH={{
           base: "100%", // 0-48em
