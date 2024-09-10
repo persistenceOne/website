@@ -31,7 +31,7 @@ const GeofenceNotice = () => {
           fontSize={"14px"}
           fontWeight={500}
         >
-          {t("APP_BANNER")}&nbsp;
+          We invite you to celebrate our refreshed identity&nbsp;
           <Link
             fontWeight={600}
             display={"flex"}
