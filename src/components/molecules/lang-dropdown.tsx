@@ -35,6 +35,41 @@ const langList: LanguageItemProps[] = [
     imgUrl: "/images/lang/kr.png",
     code: "ko",
     name: "한국인"
+  },
+  {
+    imgUrl: "/images/lang/fr.png",
+    code: "fr",
+    name: "Français"
+  },
+  {
+    imgUrl: "/images/lang/es.png",
+    code: "es",
+    name: "Española"
+  },
+  {
+    imgUrl: "/images/lang/pt.png",
+    code: "pt",
+    name: "Portuguesa"
+  },
+  {
+    imgUrl: "/images/lang/ru.png",
+    code: "ru",
+    name: "русский"
+  },
+  {
+    imgUrl: "/images/lang/vi.png",
+    code: "vi",
+    name: "Tiếng Việt"
+  },
+  {
+    imgUrl: "/images/lang/nl.png",
+    code: "nl",
+    name: "Nederlands"
+  },
+  {
+    imgUrl: "/images/lang/ja.png",
+    code: "ja",
+    name: "日本語"
   }
 ];
 
@@ -94,8 +129,9 @@ const LangDropdown = ({ type }: any) => {
       </PopoverTrigger>
       <PopoverContent
         borderRadius={6}
-        w={"131px"}
+        minW={"131px"}
         border={"0px"}
+        w={"max-content"}
         overflow={"hidden"}
       >
         <PopoverBody p={"0"}>
