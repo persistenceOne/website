@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Icon from "../Icon";
-import { Box, Text, Link } from "@chakra-ui/react";
+import { Box, Text, Link, useMediaQuery } from "@chakra-ui/react";
 import { useTranslation } from "next-export-i18n";
 
 const GeofenceNotice = () => {
   const { t } = useTranslation();
   const [banner, setBanner] = useState(true);
+  const [isLandScape] = useMediaQuery("(min-width: 500px)");
 
   const closeBanner = () => {
     setBanner(false);
@@ -31,7 +32,10 @@ const GeofenceNotice = () => {
           fontSize={"14px"}
           fontWeight={500}
         >
-          We invite you to celebrate our refreshed identity&nbsp;
+          {isLandScape
+            ? t("APP_BANNER")
+            : "We invite you to celebrate our refreshed identity."}
+          &nbsp;
           <Link
             fontWeight={600}
             display={"flex"}
