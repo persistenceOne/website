@@ -20,7 +20,7 @@ interface LanguageItemProps {
   name: string;
 }
 
-const langList: LanguageItemProps[] = [
+const liveLangList: LanguageItemProps[] = [
   {
     imgUrl: "/images/lang/en.png",
     code: "en",
@@ -37,6 +37,14 @@ const langList: LanguageItemProps[] = [
     name: "한국인"
   },
   {
+    imgUrl: "/images/lang/ru.png",
+    code: "ru",
+    name: "русский"
+  }
+];
+
+const prevLangList: LanguageItemProps[] = [
+  {
     imgUrl: "/images/lang/fr.png",
     code: "fr",
     name: "Français"
@@ -50,11 +58,6 @@ const langList: LanguageItemProps[] = [
     imgUrl: "/images/lang/pt.png",
     code: "pt",
     name: "Portuguesa"
-  },
-  {
-    imgUrl: "/images/lang/ru.png",
-    code: "ru",
-    name: "русский"
   },
   {
     imgUrl: "/images/lang/vi.png",
@@ -74,6 +77,9 @@ const langList: LanguageItemProps[] = [
 ];
 
 const LangDropdown = ({ type }: any) => {
+  const env: string = process.env.NEXT_PUBLIC_ENVIRONMENT!;
+  const langList =
+    env === "production" ? liveLangList : [...liveLangList, ...prevLangList];
   const defaultItem = langList.find((item) => item.code === "en");
   const router = useRouter();
   const [isEditing, setIsEditing] = useState(false);

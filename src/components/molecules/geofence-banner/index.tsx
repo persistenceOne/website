@@ -15,7 +15,7 @@ const GeofenceNotice = () => {
   return (
     <Box
       display={!banner ? "none" : "block"}
-      bg={"#e59735cc"}
+      bg={"#d6923f"}
       pr={12}
       py={2.5}
       pl={4}
