@@ -169,6 +169,9 @@
     "JOIN_DISCUSSIONS": "Unirse a las discusiones",
     "DISCLAIMER": "Descargo de responsabilidad",
     "APR_DISCLAIMER_NOTE": "Las cifras de la APR pueden fluctuar, pueden no ser precisas y/o están sujetas a varias variables y no se debe confiar en ellas para tomar decisiones, ya sean financieras o de otro tipo. ",
-    "APP_BANNER": "Al entrar en este nuevo capítulo, lo invitamos a celebrar nuestra identidad renovada: Fresh Look. "
+    "APP_BANNER": "Al entrar en este nuevo capítulo, lo invitamos a celebrar nuestra identidad renovada: Fresh Look. ",
+
+    "COMMUNITY_FORUM": "Community Forum"
+
   }
 }
