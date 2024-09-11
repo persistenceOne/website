@@ -116,7 +116,7 @@ const footerLinks = [
     title: "CONNECT",
     links: [
       {
-        title: "Persisters",
+        title: "PERSISTERS",
         link: "https://careers.persistence.one/",
         isExternal: false
       },
@@ -146,7 +146,7 @@ const footerLinks = [
         isExternal: true
       },
       {
-        title: "Community Forum",
+        title: "COMMUNITY_FORUM",
         link: "https://forum.persistence.one/",
         isExternal: true
       }

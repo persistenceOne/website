@@ -218,7 +218,7 @@ const XPRTInDefiSection = () => {
                 >
                   <Button
                     color={"#FFFFFF"}
-                    w={{ base: "160px", xl: "246px" }}
+                    minW={{ base: "160px", xl: "246px" }}
                     h={{ base: "40px", xl: "52px" }}
                     variant={"ternary"}
                     fontSize={{ base: "10px", xl: "18px" }}
@@ -243,7 +243,7 @@ const XPRTInDefiSection = () => {
             <Image
               src={"/images/xprt-page/xprt_quote.svg"}
               alt={"team-work"}
-              width={{ base: "300px", xl: "401px" }}
+              w={{ base: "300px", xl: "401px" }}
               height={{ base: "200px", xl: "249px" }}
               // objectFit="cover"
             />
