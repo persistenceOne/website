@@ -146,7 +146,7 @@
         "FAQ1": "What is Persistence One?",
     "FAQ1_ANS": "Persistence One aims to become the gateway for Bitcoin Interoperability, powered by Intents, secured by Bitcoin. The solution ensures seamless movement of BTC with fast, zero slippage, cross-chain swaps.",
     "FAQ2": "What is the vision of Persistence One?",
-    "FAQ2_ANS": "To make Bitcoin DeFi scalable, we must overcome fragmentation. That's where interoperability comes in. Persistence One’s vision is to become the gateway for Bitcoin ecosystem swaps and a cornerstone hub or all BTC variants.",
+    "FAQ2_ANS": "To make Bitcoin DeFi scalable, we must overcome fragmentation. That's where interoperability comes in. Persistence One’s vision is to become the gateway for Bitcoin ecosystem swaps and a cornerstone hub for all BTC variants.",
     "FAQ3": "How is Persistence One's interoperability solution different from bridging",
     "FAQ3_ANS": "Persistence One's interoperability solution enables direct cross-chain swaps without traditional bridges, reducing complexity and security risks by eliminating the need for building liquidity pools. Powered by intents, it offers a seamless and efficient way to transfer BTC variants between chains.",
     "FAQ4": "How does cross-chain interoperability help BTCfi?",
