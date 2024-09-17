@@ -40,6 +40,11 @@ const liveLangList: LanguageItemProps[] = [
     imgUrl: "/images/lang/ru.png",
     code: "ru",
     name: "русский"
+  },
+  {
+    imgUrl: "/images/lang/es.png",
+    code: "es",
+    name: "Española"
   }
 ];
 
