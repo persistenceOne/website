@@ -8,6 +8,7 @@ const ru = require("./translations.ru.json");
 const vi = require("./translations.vi.json");
 const nl = require("./translations.nl.json");
 const ja = require("./translations.ja.json");
+const de = require("./translations.de.json");
 
 const i18n = {
   translations: {
@@ -20,7 +21,8 @@ const i18n = {
     ru: ru.i18n,
     vi: vi.i18n,
     nl: nl.i18n,
-    ja: ja.i18n
+    ja: ja.i18n,
+    de: de.i18n
   },
   defaultLang: "en",
   useBrowserDefault: true
