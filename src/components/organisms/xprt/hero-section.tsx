@@ -180,7 +180,7 @@ const HeroSection = () => {
             statLabel: t("STAKED_XPRT")
           },
           {
-            statValue: `>99.5%`,
+            statValue: `100%`,
             statLabel: t("TOKENS_UNLOCKED")
           }
         ]}
