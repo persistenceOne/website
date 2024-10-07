@@ -60,13 +60,13 @@ const getData = (
       linkLable: "Persistence"
     },
     {
-      token1: "WBTC",
-      token1Img: "/images/tokens/wbtc.svg",
-      token2: "XPRT",
-      token2Img: "/images/tokens/xprt.svg",
-      tvl: osmoPoolsInfo[1773].tvl.toString(),
-      apr: osmoPoolsInfo[1773].apy.toString(),
-      link: "https://app.osmosis.zone/pool/1773",
+      token1: "XPRT",
+      token1Img: "/images/tokens/xprt.svg",
+      token2: "BTC",
+      token2Img: "/images/tokens/btc.svg",
+      tvl: osmoPoolsInfo[2197].tvl.toString(),
+      apr: osmoPoolsInfo[2197].apy.toString(),
+      link: "https://app.osmosis.zone/pool/2197",
       linkLable: "Osmosis"
     },
     {
@@ -74,8 +74,8 @@ const getData = (
       token1Img: "/images/tokens/xprt.svg",
       token2: "USDC",
       token2Img: "/images/tokens/usdc.svg",
-      tvl: "11369",
-      apr: "2669",
+      tvl: "5018",
+      apr: "722",
       link: "https://aerodrome.finance/pools?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200",
       linkLable: "Aerodrome"
     },
