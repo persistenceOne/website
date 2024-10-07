@@ -4,9 +4,9 @@ export const OSMO_APR_URL =
   "https://public-osmosis-api.numia.xyz/pools_apr?pool=15";
 export const OSMO_TVL_URL = "https://api-osmosis.imperator.co/pools/v2/1101";
 export const OSMOSIS_XPRT_WBTC_TVL_URL =
-  "https://api-osmosis.imperator.co/pools/v2/1773";
+  "https://api-osmosis.imperator.co/pools/v2/2197";
 export const OSMOSIS_XPRT_WBTC_APR_URL =
-  "https://public-osmosis-api.numia.xyz/pools_apr?pool=1773";
+  "https://public-osmosis-api.numia.xyz/pools_apr?pool=2197";
 export const MarketCap_API =
   "https://api.coingecko.com/api/v3/coins/persistence";
 
@@ -54,7 +54,6 @@ export const fetchDexterInfo = async () => {
         responseJson.data.data.swap_volume_lifetime_aggregate[0]
           .total_swap_volume;
     }
-
     return {
       tvl: total_liquidity.current_liquidity_usd || 0,
       volume: volume_usd
@@ -167,7 +166,7 @@ export const fetchOsmosisPoolInfo = async () => {
       tvl: 0,
       apy: 0
     },
-    1773: {
+    2197: {
       tvl: 0,
       apy: 0
     }
@@ -202,19 +201,19 @@ export const fetchOsmosisPoolInfo = async () => {
 
     if (responseWbtcTwo && responseWbtcTwo.data) {
       if (responseWbtcTwo.data[0].total_apr) {
-        osmoInfo[1773].apy = Number(responseWbtcTwo.data[0].total_apr).toFixed(
+        osmoInfo[2197].apy = Number(responseWbtcTwo.data[0].total_apr).toFixed(
           2
         );
       }
     } else {
-      osmoInfo[1773].apy = 0;
+      osmoInfo[2197].apy = 0;
     }
     if (responseWbtcOne && responseWbtcOne.data) {
-      osmoInfo[1773].tvl = Math.round(
+      osmoInfo[2197].tvl = Math.round(
         responseWbtcOne.data[0].liquidity
       ).toFixed(2);
     } else {
-      osmoInfo[1773].tvl = 0;
+      osmoInfo[2197].tvl = 0;
     }
     return osmoInfo;
   } catch (e) {

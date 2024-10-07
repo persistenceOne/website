@@ -2,7 +2,7 @@ import { StateCreator } from "zustand";
 
 type AvailablePools = 2 | 3 | 5 | 12 | 13;
 
-type OsmosisAvailablePools = 1101 | 1773;
+type OsmosisAvailablePools = 1101 | 2197;
 
 export type PoolInfo = {
   tvl: number;
@@ -107,7 +107,7 @@ const initialState: InitialDataSliceState = {
       tvl: 0,
       apy: 0
     },
-    1773: {
+    2197: {
       tvl: 0,
       apy: 0
     }
