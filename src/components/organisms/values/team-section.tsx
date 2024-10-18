@@ -64,25 +64,6 @@ const teamMembers: TeamMemberCardInterface[] = [
     ]
   },
   {
-    image: "/images/team/sukriti-taneja.png",
-    name: "Sukriti Taneja",
-    role: "Marketing",
-    socialLinks: [
-      {
-        name: "Twitter",
-        link: "https://twitter.com/Sukriti2108",
-        icon: "x",
-        color: "#000000"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/sukriti-taneja-b624731a0/",
-        icon: "linkedin",
-        color: "#0077B5"
-      }
-    ]
-  },
-  {
     image: "/images/team/pranjal-paliwal.png",
     name: "Pranjal Paliwal",
     role: "Engineering",
@@ -147,7 +128,7 @@ const TeamSection = () => {
               fontWeight={600}
               lineHeight={"60px"}
             >
-              +17
+              +12
             </Text>
             <Text
               alignSelf={"center"}
