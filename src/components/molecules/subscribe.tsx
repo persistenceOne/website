@@ -35,34 +35,61 @@ const Subscribe = () => {
     e.preventDefault();
     try {
       setLoader(true);
-      const googleScriptURL =
-        "https://script.google.com/macros/s/AKfycbzoTlwN8lM32r3L-5uWGnzjgb4z6Ll_fCrwgNeCjdIlcF7M50TlYgaRLNWhtyq5_un3/exec";
-      const data = { email: email };
+      // const list_id = "c503401e-ab5f-43e3-9d94-b84a3c27468d";
+      // const data = {
+      //   list_ids: ["c503401e-ab5f-43e3-9d94-b84a3c27468d"],
+      //   contacts: [
+      //     {
+      //       email
+      //     }
+      //   ]
+      // };
+      //
+      // const apiKey = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
+      // const response = await fetch(
+      //   "https://api.sendgrid.com/v3/marketing/contacts",
+      //   {
+      //     method: "PUT",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       Authorization: `Bearer ${apiKey}` // Bearer token for authorization
+      //     },
+      //     body: JSON.stringify(data)
+      //   }
+      // );
 
-      const res = await fetch(googleScriptURL, {
-        // redirect: "follow",
-        method: "POST",
-        body: JSON.stringify(data),
-        // mode: "no-cors",
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8"
-        }
+      // if (!response.ok) {
+      //   throw new Error("Network response was not ok");
+      // }
+      //
+      // const responseData = await response.json();
+
+      const response = await axios.post("/api/send-email", {
+        email
       });
 
-      console.log("SUCCESSFULLY SUBMITTED", res);
+      // const googleScriptURL =
+      //   "https://script.google.com/macros/s/AKfycbxRazvOhSV8XMV_lcfczEQmjlD-dj7wKF0v7LfQN95b3fg6SvZObb-CucZdRcK1xlG-/exec";
+      // const data = { email: email };
+      //
+      // const res = await fetch(googleScriptURL, {
+      //   // redirect: "follow",
+      //   method: "POST",
+      //   body: JSON.stringify(data),
+      //   // mode: "no-cors",
+      //   headers: {
+      //     "Content-Type": "text/plain;charset=utf-8"
+      //   }
+      // });
+      //
+      // console.log("SUCCESSFULLY SUBMITTED", res);
 
-      if (!res.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const result = await res.json();
-
-      // const res = await axios.post(googleScriptURL, data);
-      console.log(result, "SUCCESSFULLY SUBMITTED", res);
+      console.log("SUCCESSFULLY SUBMITTED", response);
       setFormStatus(true);
+      setEmail("");
       setTimeout(() => {
         setFormStatus(false);
-      }, 1000);
+      }, 1500);
     } catch (e) {
       setLoader(false);
       console.log(e, "error");
@@ -75,12 +102,12 @@ const Subscribe = () => {
       style={{
         backgroundImage: "url('/images/subscribe-bg.svg')",
         backgroundPosition: "100% 100%",
-        backgroundRepeat: "no-repeat"
-        // backgroundSize: "15%"
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"
       }}
       // backgroundPosition="bottom right"
     >
-      <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"30px"}>
+      <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"40px"}>
         <Flex
           alignItems={"center"}
           flexDirection={{ base: "column", md: "row" }}
@@ -88,65 +115,103 @@ const Subscribe = () => {
           <Box flex={1}>
             <Heading
               fontSize={{ base: "22px", xl: "32px" }}
-              textAlign={{ base: "center", md: "left" }}
+              textAlign={{ base: "left", md: "left" }}
               lineHeight={{ base: "1.5", xl: "48px" }}
-              color={"text.headingSemiWhite"}
-              pr={"12px"}
+              color={"text.headingWhite"}
               fontWeight={700}
+              mb={4}
             >
-              Subscribe To Newsletter
+              {t("SUBSCRIBE_TITLE")}
             </Heading>
-            <Text color={"text.headingSemiWhite"}>
-              Learn more about Persistence One, what it means to be a Persister,
-              and how to become one.
+            <Text
+              mb={{ base: "20px", md: "40px" }}
+              fontSize={{ base: "16px", xl: "18px" }}
+              textAlign={{ base: "left", md: "left" }}
+              color={"#F6F7F9"}
+            >
+              {t("SUBSCRIBE_SUB_TITLE")}
             </Text>
-            <HStack spacing={"0"} position={"relative"}>
-              <Input
-                type={"text"}
-                flex={1}
-                variant={"primary"}
-                height={"52px"}
-                borderTopLeftRadius={"34px"}
-                borderBottomLeftRadius={"34px"}
-                placeholder="Email address"
-                autoFocus
-                onChange={onChange}
-                defaultValue={email}
-                // color={`${colorMode}.text.700`}
-                isDisabled={false}
-              />
-              <Button
-                position={"absolute"}
-                right={"-20px"}
-                height={"52px"}
-                // width={{ base: "100%", md: "auto" }}
-                px={{ base: "16px", md: "24px" }}
-                bg={"#1D1306"}
-                onClick={handleSubmit}
-                value={"ternary"}
-                transitionDuration={"0.5s"}
-                transitionTimingFunction={"ease"}
-                transitionProperty={"all"}
-                border={"1px solid #1D1306"}
-                _hover={{
-                  bg: "#FFFFFF",
-                  color: "#1D1306",
-                  borderColor: "#1D1306",
-                  transition: "0.5s"
-                }}
-                color="#FFFFFF"
+            {!formStatus ? (
+              <HStack
+                spacing={{ base: "10px", md: "0" }}
+                position={"relative"}
+                maxW={"500px"}
+                flexDirection={{ base: "column", md: "row" }}
               >
-                Sign Up
-              </Button>
-            </HStack>
+                <Input
+                  type={"text"}
+                  variant={"primary"}
+                  height={"52px"}
+                  border={"1px solid #633C0D"}
+                  borderRadius={"34px"}
+                  // borderTopLeftRadius={"34px"}
+                  // borderTopRightRadius={{ base: "34px", md: "0" }}
+                  // borderBottomLeftRadius={"34px"}
+                  // borderBottomRightRadius={{ base: "34px", md: "0" }}
+                  placeholder={t("ENTER_EMAIL")}
+                  autoFocus
+                  onChange={onChange}
+                  defaultValue={email}
+                  // color={`${colorMode}.text.700`}
+                  isDisabled={false}
+                />
+                <Button
+                  position={{ base: "relative", md: "absolute" }}
+                  right={{ base: "0", md: "-20px" }}
+                  height={"52px"}
+                  width={{ base: "100%", md: "136px" }}
+                  isDisabled={validationError}
+                  px={{ base: "16px", md: "24px" }}
+                  bg={"#1D1306"}
+                  onClick={handleSubmit}
+                  borderRadius={"36px"}
+                  value={"ternary"}
+                  transitionDuration={"0.5s"}
+                  transitionTimingFunction={"ease"}
+                  transitionProperty={"all"}
+                  border={"1px solid #1D1306"}
+                  _disabled={{
+                    _hover: {
+                      bg: "#1D1306",
+                      color: "#FFFFFF"
+                    },
+                    cursor: "not-allowed"
+                  }}
+                  _hover={{
+                    bg: "#1D1306",
+                    color: "#FFFFFF",
+                    borderColor: "#1D1306",
+                    transition: "0.5s"
+                  }}
+                  color="#FFFFFF"
+                >
+                  {t("SIGN_UP")}
+                </Button>
+              </HStack>
+            ) : (
+              <HStack
+                maxW={"500px"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                height={"52px"}
+                fontSize={"14px"}
+                fontWeight={500}
+                borderRadius={"34px"}
+                bg={"#FFFFFF"}
+              >
+                <Text> {t("SUCCESS_SIGNUP_NOTE")} </Text>
+              </HStack>
+            )}
           </Box>
-          <Image
-            src={"/icons/plane.svg"}
-            alt={"team-work"}
-            width={401}
-            height={249}
-            // objectFit="cover"
-          />
+          <Box display={{ base: "none", lg: "block" }}>
+            <Image
+              src={"/icons/plane.svg"}
+              alt={"team-work"}
+              width={305}
+              height={200}
+              // objectFit="cover"
+            />
+          </Box>
         </Flex>
       </Container>
     </Box>
