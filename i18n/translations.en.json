@@ -172,7 +172,13 @@
     "APR_DISCLAIMER_NOTE": "APR figures can fluctuate, may not be accurate and/or are subject to several variables and should not be relied on to make any decisions, financial or otherwise. You are to do your own diligence and seek your own independent advice. You accept the data reproduced here and agree you are solely responsible for any consequence in connection thereto.",
     "APP_BANNER": "As we enter this new chapter, we invite you to celebrate our refreshed identity: Fresh Look. Bitcoin Alignment. Community's Choice.",
 
-    "COMMUNITY_FORUM": "Community Forum"
+    "COMMUNITY_FORUM": "Community Forum",
+
+    "SIGN_UP" : "Sign Up",
+    "SUBSCRIBE_TITLE": "Subscribe To Newsletter",
+    "SUBSCRIBE_SUB_TITLE": "Receive the latest announcements and product updates.",
+    "ENTER_EMAIL": "Email address",
+    "SUCCESS_SIGNUP_NOTE": "You are successfully signed up!"
 
   }
 }

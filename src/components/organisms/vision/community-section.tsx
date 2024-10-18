@@ -7,7 +7,7 @@ import { useTranslation } from "next-export-i18n";
 const CommunitySection = () => {
   const { t } = useTranslation();
   return (
-    <Box bg={"#E59636"} backgroundPosition="bottom right">
+    <Box bg={"#E59636"} backgroundPosition="bottom right" mb={"60px"}>
       <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"30px"}>
         <Flex
           alignItems={"center"}

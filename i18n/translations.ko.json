@@ -171,7 +171,12 @@
     "APR_DISCLAIMER_NOTE": "APR 수치는 변동될 수 있으며, 정확하지 않거나 여러 변수에 따라 달라질 수 있으므로 재정적이든 그 외의 결정이든 이를 근거로 결정해서는 안 됩니다. 귀하는 스스로 주의를 기울여야 하며, 독립적인 조언을 구해야 합니다. 여기에 제공된 데이터를 수용하며, 이와 관련된 모든 결과에 대해 전적으로 귀하가 책임을 진다는 것에 동의합니다.",
     "APP_BANNER": "이 새로운 장에 들어서면서, 저희의 새로워진 정체성을 함께 축하해 주시길 바랍니다: 새로운 모습, 비트코인과의 조화, 커뮤니티의 선택.",
 
-    "COMMUNITY_FORUM": "Community Forum"
+    "COMMUNITY_FORUM": "Community Forum",
+    "SIGN_UP": "가입",
+    "SUBSCRIBE_TITLE": "뉴스레터 구독",
+    "SUBSCRIBE_SUB_TITLE": "최신 공지사항과 제품 업데이트를 받아보세요.",
+    "ENTER_EMAIL": "이메일 주소",
+    "SUCCESS_SIGNUP_NOTE": "성공적으로 가입되었습니다!"
   }
 }
 

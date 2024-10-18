@@ -170,6 +170,12 @@
     "DISCLAIMER": "Descargo de responsabilidad",
     "APR_DISCLAIMER_NOTE": "Las cifras de APR pueden fluctuar, no ser exactas y/o estar sujetas a muchas variables y no deben utilizarse para tomar decisiones, financieras o de otro tipo. Usted debe hacer su propia investigación y buscar asesoramiento por su cuenta. Usted acepta los datos aquí reproducidos y acepta que es el único responsable de cualquier consecuencia relacionada con ellos.",
     "APP_BANNER": "Al entrar en este nuevo capítulo, te invitamos a celebrar nuestra identidad renovada: Nueva Imagen. Alineación con Bitcoin. Elección de la Comunidad.",
-    "COMMUNITY_FORUM": "Foro Comunitario"
+    "COMMUNITY_FORUM": "Foro Comunitario",
+
+    "SIGN_UP": "Inscribirse",
+    "SUBSCRIBE_TITLE": "Suscríbete al boletín",
+    "SUBSCRIBE_SUB_TITLE": "Reciba los últimos anuncios y actualizaciones de productos.",
+    "ENTER_EMAIL": "Dirección de correo electrónico",
+    "SUCCESS_SIGNUP_NOTE": "¡Te has registrado correctamente!"
   }
 }

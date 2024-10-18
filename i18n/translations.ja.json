@@ -171,6 +171,11 @@
     "APR_DISCLAIMER_NOTE": "APR の数値は変動する可能性があり、正確でない場合やいくつかの変数の影響を受けるため、財務その他の意思決定を行う際に依存すべきではありません。",
     "APP_BANNER": "この新たな章に入るにあたって、私たちの新たなアイデンティティであるフレッシュルックをぜひ祝ってください。",
 
-    "COMMUNITY_FORUM": "Community Forum"
+    "COMMUNITY_FORUM": "Community Forum",
+    "SIGN_UP": "サインアップ",
+    "SUBSCRIBE_TITLE": "ニュースレターを購読する",
+    "SUBSCRIBE_SUB_TITLE": "最新のお知らせと製品のアップデートを受け取ります。",
+    "ENTER_EMAIL": "電子メールアドレス",
+    "SUCCESS_SIGNUP_NOTE": "正常にサインアップされました。"
   }
 }

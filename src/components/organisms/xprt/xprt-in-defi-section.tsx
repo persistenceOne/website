@@ -126,56 +126,7 @@ const XPRTInDefiSection = () => {
 
   return (
     <>
-      <Container
-        maxWidth={"1320px"}
-        px={{ base: "40px", md: "40px" }}
-        mb={{ base: "30px", md: "60px" }}
-        className="xprt-defi-cards"
-      >
-        <Heading
-          textAlign={"center"}
-          color={"#633C0D"}
-          fontSize={{ base: "26px", xl: "48px" }}
-          lineHeight={{ base: "32px", xl: "72px" }}
-          mb={"4px"}
-        >
-          {t("XPRT_SECTION3_TITLE")}
-        </Heading>
-        <Text
-          maxW={"700px"}
-          mx={"auto"}
-          color={"#633C0D"}
-          textAlign={"center"}
-          fontSize={{ base: "16px", md: "20px" }}
-          lineHeight={{ base: "24px", md: "30px" }}
-          mb={{ base: "20px", md: "40px" }}
-        >
-          {t("XPRT_SECTION3_SUB_TITLE")}
-        </Text>
-        {isTablet ? (
-          <>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
-              {defiCardsData.map((card, index) => (
-                <XPRTDefiCard key={index} {...card} />
-              ))}
-            </SimpleGrid>
-            <Text
-              mx={"auto"}
-              color={"#633C0D"}
-              textAlign={"left"}
-              fontSize={"12px"}
-              lineHeight={""}
-              px={"12px"}
-              mt={"20px"}
-            >
-              <b>*{t("DISCLAIMER")}: </b> {t("APR_DISCLAIMER_NOTE")}
-            </Text>
-          </>
-        ) : (
-          <DefiTable defiCardsData={defiCardsData} />
-        )}
-      </Container>
-      <Box bg={"#E59636"} backgroundPosition="bottom right">
+      <Box bg={"#E59636"} backgroundPosition="bottom right" mb={"50px"}>
         <Container
           maxW={"1440px"}
           px={{ base: "20px", md: "100px" }}
@@ -240,6 +191,55 @@ const XPRTInDefiSection = () => {
           </Flex>
         </Container>
       </Box>
+      <Container
+        maxWidth={"1320px"}
+        px={{ base: "40px", md: "40px" }}
+        mb={{ base: "30px", md: "60px" }}
+        className="xprt-defi-cards"
+      >
+        <Heading
+          textAlign={"center"}
+          color={"#633C0D"}
+          fontSize={{ base: "26px", xl: "48px" }}
+          lineHeight={{ base: "32px", xl: "72px" }}
+          mb={"4px"}
+        >
+          {t("XPRT_SECTION3_TITLE")}
+        </Heading>
+        <Text
+          maxW={"700px"}
+          mx={"auto"}
+          color={"#633C0D"}
+          textAlign={"center"}
+          fontSize={{ base: "16px", md: "20px" }}
+          lineHeight={{ base: "24px", md: "30px" }}
+          mb={{ base: "20px", md: "40px" }}
+        >
+          {t("XPRT_SECTION3_SUB_TITLE")}
+        </Text>
+        {isTablet ? (
+          <>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"18px"}>
+              {defiCardsData.map((card, index) => (
+                <XPRTDefiCard key={index} {...card} />
+              ))}
+            </SimpleGrid>
+            <Text
+              mx={"auto"}
+              color={"#633C0D"}
+              textAlign={"left"}
+              fontSize={"12px"}
+              lineHeight={""}
+              px={"12px"}
+              mt={"20px"}
+            >
+              <b>*{t("DISCLAIMER")}: </b> {t("APR_DISCLAIMER_NOTE")}
+            </Text>
+          </>
+        ) : (
+          <DefiTable defiCardsData={defiCardsData} />
+        )}
+      </Container>
     </>
   );
 };

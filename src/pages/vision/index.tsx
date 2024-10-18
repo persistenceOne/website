@@ -10,8 +10,8 @@ const StoryPage = () => {
     <Layout>
       <HeroSection />
       <VisionSection />
-      <Belief />
       <CommunitySection />
+      <Belief />
     </Layout>
   );
 };
