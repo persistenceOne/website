@@ -45,7 +45,6 @@ const Subscribe = () => {
       //   ]
       // };
       //
-      // const apiKey = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
       // const response = await fetch(
       //   "https://api.sendgrid.com/v3/marketing/contacts",
       //   {

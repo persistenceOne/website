@@ -17,7 +17,7 @@ export default async (req: any, res: any) => {
       ]
     };
 
-    const apiKey = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
+    const apiKey = process.env.SENDGRID_API_KEY;
     const response = await fetch(
       "https://api.sendgrid.com/v3/marketing/contacts",
       {
