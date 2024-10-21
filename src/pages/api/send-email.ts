@@ -5,7 +5,6 @@ export default async (req: any, res: any) => {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
-  console.log(email, "totototo", req);
   try {
     const list_id = "c503401e-ab5f-43e3-9d94-b84a3c27468d";
     const data = {

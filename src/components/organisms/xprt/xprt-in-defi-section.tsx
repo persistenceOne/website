@@ -74,8 +74,8 @@ const getData = (
       token1Img: "/images/tokens/xprt.svg",
       token2: "USDC",
       token2Img: "/images/tokens/usdc.svg",
-      tvl: "13565",
-      apr: "3758",
+      tvl: "12957",
+      apr: "1604",
       link: "https://aerodrome.finance/pools?token0=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&token1=0xc7Edf7B7b3667a06992508e7B156eff794a9e1c8&type=200",
       linkLable: "Aerodrome"
     },

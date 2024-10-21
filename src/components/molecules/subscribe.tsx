@@ -10,9 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Image from "next/image";
-import TallyForm from "@/components/molecules/tally-form";
 import { useTranslation } from "next-export-i18n";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import axios from "axios";
 
 const Subscribe = () => {
@@ -35,55 +33,9 @@ const Subscribe = () => {
     e.preventDefault();
     try {
       setLoader(true);
-      // const list_id = "c503401e-ab5f-43e3-9d94-b84a3c27468d";
-      // const data = {
-      //   list_ids: ["c503401e-ab5f-43e3-9d94-b84a3c27468d"],
-      //   contacts: [
-      //     {
-      //       email
-      //     }
-      //   ]
-      // };
-      //
-      // const response = await fetch(
-      //   "https://api.sendgrid.com/v3/marketing/contacts",
-      //   {
-      //     method: "PUT",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //       Authorization: `Bearer ${apiKey}` // Bearer token for authorization
-      //     },
-      //     body: JSON.stringify(data)
-      //   }
-      // );
-
-      // if (!response.ok) {
-      //   throw new Error("Network response was not ok");
-      // }
-      //
-      // const responseData = await response.json();
-
-      const response = await axios.post("/api/send-email", {
+      await axios.post("/api/send-email", {
         email
       });
-
-      // const googleScriptURL =
-      //   "https://script.google.com/macros/s/AKfycbxRazvOhSV8XMV_lcfczEQmjlD-dj7wKF0v7LfQN95b3fg6SvZObb-CucZdRcK1xlG-/exec";
-      // const data = { email: email };
-      //
-      // const res = await fetch(googleScriptURL, {
-      //   // redirect: "follow",
-      //   method: "POST",
-      //   body: JSON.stringify(data),
-      //   // mode: "no-cors",
-      //   headers: {
-      //     "Content-Type": "text/plain;charset=utf-8"
-      //   }
-      // });
-      //
-      // console.log("SUCCESSFULLY SUBMITTED", res);
-
-      console.log("SUCCESSFULLY SUBMITTED", response);
       setFormStatus(true);
       setEmail("");
       setTimeout(() => {
@@ -104,7 +56,6 @@ const Subscribe = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover"
       }}
-      // backgroundPosition="bottom right"
     >
       <Container maxW={"1440px"} px={{ base: "20px", md: "100px" }} py={"40px"}>
         <Flex
