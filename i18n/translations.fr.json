@@ -170,7 +170,12 @@
     "DISCLAIMER": "Clause de non-responsabilité",
     "APR_DISCLAIMER_NOTE": "Les chiffres du TAEG peuvent fluctuer, ne pas être précis et/ou sont soumis à plusieurs variables et ne doivent pas être invoqués pour prendre des décisions, financières ou autres. ",
     "APP_BANNER": "Alors que nous entrons dans ce nouveau chapitre, nous vous invitons à célébrer notre identité renouvelée : Fresh Look. ",
+    "COMMUNITY_FORUM": "Community Forum",
 
-    "COMMUNITY_FORUM": "Community Forum"
+    "SIGN_UP": "S'inscrire",
+    "SUBSCRIBE_TITLE": "Abonnez-vous à la newsletter",
+    "SUBSCRIBE_SUB_TITLE": "Recevez les dernières annonces et mises à jour de produits.",
+    "ENTER_EMAIL": "Adresse email",
+    "SUCCESS_SIGNUP_NOTE": "Vous êtes inscrit avec succès !"
   }
 }

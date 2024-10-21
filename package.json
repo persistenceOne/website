@@ -5,6 +5,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
+    "@sendgrid/mail": "^8.1.4",
     "@tanstack/react-table": "^8.20.1",
     "@types/react-lottie": "^1.2.10",
     "dayjs": "^1.11.11",

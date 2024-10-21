@@ -171,6 +171,11 @@
     "APR_DISCLAIMER_NOTE": "Os números da TAEG podem flutuar, podem não ser precisos e/ou estão sujeitos a diversas variáveis ​​e não devem ser utilizados para tomar quaisquer decisões, financeiras ou outras. ",
     "APP_BANNER": "Ao entrarmos neste novo capítulo, convidamos você a celebrar nossa identidade renovada: Fresh Look. ",
 
-    "COMMUNITY_FORUM": "Community Forum"
+    "COMMUNITY_FORUM": "Community Forum",
+    "SIGN_UP": "Inscrever-se",
+    "SUBSCRIBE_TITLE": "Assine o boletim informativo",
+    "SUBSCRIBE_SUB_TITLE": "Receba os últimos anúncios e atualizações de produtos.",
+    "ENTER_EMAIL": "Endereço de email",
+    "SUCCESS_SIGNUP_NOTE": "Você se inscreveu com sucesso!"
   }
 }

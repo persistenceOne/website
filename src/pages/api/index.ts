@@ -265,7 +265,6 @@ export const fetchDexterUsers = async () => {
   try {
     const response = await fetch(`/api/dex-users`);
     const data = await response.json();
-    console.log(data, data.data, "fetchDexterUsers");
     let totalTraders = 0;
     if (data && data.data && data.data.overview_total_info) {
       totalTraders =

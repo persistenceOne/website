@@ -171,6 +171,11 @@
     "APR_DISCLAIMER_NOTE": "年利率数据可能会波动，可能不准确和/或受多个变量的影响，不应依赖其做出任何财务或其他决策。",
     "APP_BANNER": "当我们进入新的篇章时，我们邀请您庆祝我们焕然一新的形象：Fresh Look。",
 
-    "COMMUNITY_FORUM": "Community Forum"
+    "COMMUNITY_FORUM": "Community Forum",
+    "SIGN_UP": "报名",
+    "SUBSCRIBE_TITLE": "订阅时事通讯",
+    "SUBSCRIBE_SUB_TITLE": "接收最新公告和产品更新。",
+    "ENTER_EMAIL": "电子邮件",
+    "SUCCESS_SIGNUP_NOTE": "您已注册成功！"
   }
 }
