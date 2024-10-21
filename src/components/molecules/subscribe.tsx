@@ -99,7 +99,6 @@ const Subscribe = () => {
                   // borderBottomLeftRadius={"34px"}
                   // borderBottomRightRadius={{ base: "34px", md: "0" }}
                   placeholder={t("ENTER_EMAIL")}
-                  autoFocus
                   onChange={onChange}
                   defaultValue={email}
                   // color={`${colorMode}.text.700`}
